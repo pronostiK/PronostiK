@@ -116,3 +116,22 @@ footer p{margin:0 0 6px}
 .cell .k b{color:var(--text)}
 .more{display:block;text-align:right;font-size:11.5px;color:var(--muted);margin-top:8px}
 .head[aria-expanded="true"] .more{opacity:.6}
+
+/* v3 : blasons et face-à-face */
+.card{border-left:4px solid var(--lg,var(--accent));box-shadow:0 10px 30px -18px #000}
+.lgname{display:inline-flex;align-items:center;gap:7px;font-weight:700}
+.lgname i{width:8px;height:8px;border-radius:50%}
+.match{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:8px;align-items:center;margin:8px 0 14px}
+.side{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;min-width:0}
+.side .nm{font-size:15px;font-weight:800;letter-spacing:-.2px;line-height:1.2;overflow-wrap:anywhere}
+.crest,.mono{width:56px;height:56px;flex:none}
+.crest{object-fit:contain;filter:drop-shadow(0 5px 8px rgba(0,0,0,.35))}
+.mono{border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:900;font-size:19px;letter-spacing:-.5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.25),0 5px 10px -4px rgba(0,0,0,.5)}
+.side.fav .crest,.side.fav .mono{filter:drop-shadow(0 0 12px color-mix(in srgb,var(--accent) 70%,transparent))}
+.side.fav .nm{color:var(--accent)}
+.mid{display:flex;flex-direction:column;align-items:center;gap:2px}
+.mid strong{font-size:18px;font-variant-numeric:tabular-nums}
+.mid small{font-size:10.5px;letter-spacing:2px;color:var(--muted);font-weight:800}
+.cell .v{font-size:26px}
+.cell.best{box-shadow:0 0 0 1px var(--best-line),0 8px 20px -10px var(--accent)}
+.teams{display:none}

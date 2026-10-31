@@ -169,7 +169,7 @@ async function main() {
       const home = resolve(rawH, lg.code), away = resolve(rawA, lg.code);
       const id = 'fd' + m.id, old = byId.get(id);
       if (old && NOW >= new Date(old.kickoff) && old.kickoff === m.utcDate) continue; // figé après le coup d'envoi (sauf match reporté)
-      const entry = {id, apiId: m.id, lg: lg.code, date, kickoff: m.utcDate, home: home || rawH, away: away || rawA, p: null, lam: null, score: null, err: null,
+      const entry = {id, apiId: m.id, lg: lg.code, date, kickoff: m.utcDate, home: home || rawH, away: away || rawA, crest: [m.homeTeam?.crest || null, m.awayTeam?.crest || null], p: null, lam: null, score: null, err: null,
         form: {h: [], a: []}, rel: 'ok', savedAt: old?.savedAt || NOW.toISOString(), updatedAt: old?.updatedAt || NOW.toISOString(), res: null, final: null};
       if (!home || !away) entry.err = 'Équipe non reconnue dans l’historique.';
       else {

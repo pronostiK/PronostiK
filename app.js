@@ -30,15 +30,29 @@
   }
   const pc = v => Math.round(v * 100) + ' %';
 
+  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b'};
+  const initials = n => String(n).replace(/\b(FC|AFC|CF|SC|AC|AS|US|SS|RC|CD|UD|SV|VfB|VfL|1\.)\b/gi, '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?';
+  const hue = n => { let h = 0; for (const c of String(n)) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+  const mono = n => `<span class="mono" style="background:linear-gradient(145deg,hsl(${hue(n)} 62% 48%),hsl(${(hue(n) + 40) % 360} 62% 34%))" aria-hidden="true">${esc(initials(n))}</span>`;
+  const crestImg = (url, n) => url && /^https:\/\//.test(url) ? `<img class="crest" src="${esc(url)}" alt="" loading="lazy" data-n="${esc(n)}">` : mono(n);
+  document.addEventListener('error', e => {
+    const t = e.target;
+    if (t && t.tagName === 'IMG' && t.classList.contains('crest')) { const w = document.createElement('span'); w.innerHTML = mono(t.dataset.n || '?'); t.replaceWith(w.firstChild); }
+  }, true);
+
   function cardHTML(p) {
-    const time = fmtTime.format(new Date(p.kickoff)) + ' · ' + (LG_NAME[p.lg] || p.lg || '');
+    const time = LG_NAME[p.lg] || p.lg || '';
     const chip = p.rel === 'limited' ? '<span class="chip warn">Échantillon réduit</span>' : '';
-    const head = `<div class="meta"><span>${time}</span>${chip}</div><div class="teams">${esc(p.home)} <span>contre</span> ${esc(p.away)}</div>`;
+    const topI = p.p ? p.p.indexOf(Math.max(...p.p)) : -1;
+    const cr = p.crest || [];
+    const side = (name, url, fav) => `<div class="side${fav ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span></div>`;
+    const head = `<div class="meta"><span class="lgname"><i style="background:${LG_COLOR[p.lg] || 'var(--accent)'}"></i>${esc(time)}</span>${chip}</div>
+      <div class="match">${side(p.home, cr[0], topI === 0)}<div class="mid"><strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small></div>${side(p.away, cr[1], topI === 2)}</div>`;
     if (!p.p) {
-      return `<article class="card"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${/non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
+      return `<article class="card" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${/non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
     }
     const pcts = pct3(p.p), top = p.p.indexOf(Math.max(...p.p));
-    const labels = [p.home, 'Nul', p.away], tags = ['1', 'N', '2'];
+    const labels = ['Domicile', 'Nul', 'Extérieur'], tags = ['1', 'N', '2'];
     const cells = pcts.map((v, i) => `<div class="cell ${i === top ? 'best' : ''}"><div class="v">${v} %</div><div class="k" title="${esc(labels[i])}"><b>${tags[i]}</b> ${esc(labels[i])}</div></div>`).join('');
     const seg = `<div class="seg" aria-hidden="true">${pcts.map((v, i) => `<span class="s${i}${i === top ? ' lead' : ''}" style="width:${v}%"></span>`).join('')}</div>`;
     const read = pcts[top] >= 60 ? ['Favori net', 'ok'] : pcts[top] < 45 ? ['Match ouvert', ''] : ['Léger favori', ''];
@@ -53,7 +67,7 @@
       }).join('') || '<div class="form-row">Pas de données</div>';
       return `<div class="form-list"><p>${esc(name)}</p>${rows}</div>`;
     };
-    return `<article class="card">
+    return `<article class="card" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}">
       <button class="head" type="button" aria-expanded="false" aria-controls="d-${esc(p.id)}">${head}${sum}${seg}<div class="probs">${cells}</div><span class="more">Détails ▾</span></button>
       <div class="detail" id="d-${esc(p.id)}" hidden>
         <h3>Double chance</h3><div class="kv">${dc}</div>
