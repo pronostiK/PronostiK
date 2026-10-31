@@ -13,6 +13,7 @@
   const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga'};
   let LG_ORDER = ['FL1', 'PL', 'BL1', 'SA', 'PD'];
   let filter = 'all';
+  let day = 'first';
   let cache = null;
 
   async function load(f) {
@@ -49,7 +50,7 @@
     const head = `<div class="meta"><span class="lgname"><i style="background:${LG_COLOR[p.lg] || 'var(--accent)'}"></i>${esc(time)}</span>${chip}</div>
       <div class="match">${side(p.home, cr[0], topI === 0)}<div class="mid"><strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small></div>${side(p.away, cr[1], topI === 2)}</div>`;
     if (!p.p) {
-      return `<article class="card" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${/non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
+      return `<article class="card" id="m-${esc(p.id)}" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${/non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
     }
     const pcts = pct3(p.p), top = p.p.indexOf(Math.max(...p.p));
     const labels = ['Domicile', 'Nul', 'Extérieur'], tags = ['1', 'N', '2'];
@@ -67,7 +68,7 @@
       }).join('') || '<div class="form-row">Pas de données</div>';
       return `<div class="form-list"><p>${esc(name)}</p>${rows}</div>`;
     };
-    return `<article class="card" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}">
+    return `<article class="card" id="m-${esc(p.id)}" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}">
       <button class="head" type="button" aria-expanded="false" aria-controls="d-${esc(p.id)}">${head}${sum}${seg}<div class="probs">${cells}</div><span class="more">Détails ▾</span></button>
       <div class="detail" id="d-${esc(p.id)}" hidden>
         <h3>Double chance</h3><div class="kv">${dc}</div>
@@ -84,7 +85,26 @@
     const counts = {}; all.forEach(p => counts[p.lg] = (counts[p.lg] || 0) + 1);
     $('chips').innerHTML = [['all', 'Tous', all.length]].concat(LG_ORDER.map(c => [c, LG_NAME[c] || c, counts[c] || 0])).map(([c, n, k]) =>
       `<button type="button" class="chip-btn" data-lg="${c}" aria-pressed="${filter === c}">${esc(n)} <i>${k}</i></button>`).join('');
-    const up = all.filter(p => filter === 'all' || p.lg === filter).sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+    const lgAll = all.filter(p => filter === 'all' || p.lg === filter).sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+    const dayOf = p => dayKey(new Date(p.kickoff));
+    const dayList = [...new Set(lgAll.map(dayOf))];
+    if (day === 'first' || (day !== 'all' && !dayList.includes(day))) day = dayList[0] || 'all';
+    const fmtWd = new Intl.DateTimeFormat('fr-FR', {weekday: 'short', timeZone: TZ}), fmtNum = new Intl.DateTimeFormat('fr-FR', {day: 'numeric', timeZone: TZ});
+    const today = dayKey(new Date());
+    $('days').innerHTML = dayList.length > 1 ? [`<button type="button" class="day-btn" data-day="all" aria-pressed="${day === 'all'}"><span>7 jours</span><b>${lgAll.length}</b><i>matchs</i></button>`].concat(dayList.map(k => {
+      const d = new Date(lgAll.find(p => dayOf(p) === k).kickoff), n = lgAll.filter(p => dayOf(p) === k).length;
+      return `<button type="button" class="day-btn" data-day="${k}" aria-pressed="${day === k}"><span>${k === today ? 'Auj.' : esc(fmtWd.format(d))}</span><b>${esc(fmtNum.format(d))}</b><i>${n} match${n > 1 ? 's' : ''}</i></button>`;
+    })).join('') : '';
+    const up = day === 'all' ? lgAll : lgAll.filter(p => dayOf(p) === day);
+    // « À retenir » : le favori le plus net et le match le plus serré parmi ceux affichés.
+    const ranked = up.filter(p => p.p), spot = $('spot');
+    if (ranked.length >= 3) {
+      const top = p => Math.max(...p.p), sure = ranked.reduce((a, b) => top(b) > top(a) ? b : a), open = ranked.reduce((a, b) => top(b) < top(a) ? b : a);
+      const who = p => { const i = p.p.indexOf(top(p)); return (i === 1 ? 'Match nul' : i === 0 ? p.home : p.away) + ' · ' + Math.round(top(p) * 100) + ' %'; };
+      const tile = (lab, p) => `<a class="spot-tile" href="#m-${esc(p.id)}" data-jump="m-${esc(p.id)}"><small>${lab}</small><strong>${esc(p.home)} – ${esc(p.away)}</strong><span>${esc(who(p))}</span></a>`;
+      spot.innerHTML = `<h2 class="section-title" style="margin-top:6px">À retenir</h2><div class="spot-row">${tile('Favori le plus net', sure)}${sure === open ? '' : tile('Match le plus serré', open)}</div>`;
+      spot.hidden = false;
+    } else { spot.innerHTML = ''; spot.hidden = true; }
     const list = $('list');
     if (!up.length) {
       list.innerHTML = '<div class="empty"><strong>Aucun match annoncé' + (filter === 'all' ? '' : ' dans ce championnat') + ' pour le moment.</strong><br>Les matchs des 7 prochains jours s’affichent ici dès la publication du calendrier.</div>';
@@ -175,6 +195,20 @@
     const open = b.getAttribute('aria-expanded') === 'true';
     b.setAttribute('aria-expanded', String(!open));
     d.hidden = open;
+  });
+
+  $('days').addEventListener('click', e => {
+    const b = e.target.closest('button[data-day]');
+    if (!b || !cache) return;
+    day = b.getAttribute('data-day');
+    renderMatches(cache.preds, cache.meta);
+  });
+  $('spot').addEventListener('click', e => {
+    const a = e.target.closest('a[data-jump]');
+    if (!a) return;
+    e.preventDefault();
+    const el = document.getElementById(a.getAttribute('data-jump'));
+    if (el) { el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 1600); }
   });
 
   $('chips').addEventListener('click', e => {

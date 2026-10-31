@@ -135,3 +135,19 @@ footer p{margin:0 0 6px}
 .cell .v{font-size:26px}
 .cell.best{box-shadow:0 0 0 1px var(--best-line),0 8px 20px -10px var(--accent)}
 .teams{display:none}
+
+/* v4 : barre de jours + à retenir */
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin:0 0 12px;scrollbar-width:thin}
+.day-btn{all:unset;box-sizing:border-box;cursor:pointer;flex:none;min-width:64px;display:flex;flex-direction:column;align-items:center;gap:1px;padding:8px 10px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--muted)}
+.day-btn span{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+.day-btn b{font-size:20px;color:var(--text);line-height:1.1}
+.day-btn i{font-style:normal;font-size:10.5px;text-transform:none}
+.day-btn[aria-pressed="true"]{background:linear-gradient(160deg,var(--accent),var(--accent2));border-color:transparent;color:var(--on-accent)}
+.day-btn[aria-pressed="true"] b{color:var(--on-accent)}
+.day-btn:focus-visible,.spot-tile:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.spot-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:14px}
+.spot-tile{display:flex;flex-direction:column;gap:3px;text-decoration:none;padding:12px 14px;border-radius:16px;border:1px solid var(--best-line);background:var(--best-bg)}
+.spot-tile small{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);font-weight:800}
+.spot-tile strong{font-size:15px}
+.spot-tile span{font-size:13px;color:var(--muted)}
+.card.flash{outline:2px solid var(--accent);outline-offset:3px}
