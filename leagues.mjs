@@ -28,12 +28,12 @@ export const ALIASES = {
   },
   SA: {
     'fc internazionale milano': 'Inter', 'internazionale': 'Inter', 'ac milan': 'Milan', 'hellas verona fc': 'Verona',
-    'ssc napoli': 'Napoli', 'as roma': 'Roma', 'ss lazio': 'Lazio',
+    'ssc napoli': 'Napoli', 'as roma': 'Roma', 'ss lazio': 'Lazio', 'us lecce': 'Lecce',
   },
   PD: {
     'club atletico de madrid': 'Ath Madrid', 'atletico madrid': 'Ath Madrid', 'athletic club': 'Ath Bilbao',
     'rcd espanyol de barcelona': 'Espanol', 'rayo vallecano de madrid': 'Vallecano', 'real sociedad de futbol': 'Sociedad',
-    'real betis balompie': 'Betis', 'rc celta de vigo': 'Celta', 'deportivo alaves': 'Alaves', 'ud las palmas': 'Las Palmas',
+    'real betis balompie': 'Betis', 'rc celta de vigo': 'Celta', 'deportivo alaves': 'Alaves', 'ud las palmas': 'Las Palmas', 'villarreal cf': 'Villarreal',
   },
   FL1: {},
 };
