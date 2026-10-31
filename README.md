@@ -49,3 +49,5 @@ node tests/e2e.mjs           # simulation complète : 5 championnats, fausse API
 ## Le modèle
 
 Probabilités calculées avec des forces attaque/défense pondérées par l’ancienneté (modèle v2, `model.mjs`, `createRatings`). Si une équipe manque d’historique, le robot utilise l’ancien calcul (v1). Le champ `model` de chaque pronostic indique lequel a servi. Le bilan par championnat est recalculé avec le même modèle que celui utilisé pour les pronostics.
+
+> Clé football-data.org configurée : le robot tourne toutes les 3 heures.
