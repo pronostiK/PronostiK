@@ -11,6 +11,7 @@ function parseDate(s) {
   const dt = new Date(Date.UTC(y, m - 1, d));
   return Number.isNaN(dt.getTime()) ? null : dt.toISOString().slice(0, 10);
 }
+const n0 = v => { const s = String(v).trim(), x = Number(s); return s !== '' && Number.isFinite(x) && x >= 0 ? x : null; };
 const num = v => { const x = Number(v); return Number.isFinite(x) && x > 0 ? x : null; };
 
 function tokenize(text) {
@@ -27,7 +28,7 @@ function tokenize(text) {
   return rows;
 }
 
-export function parseCSV(text, lg) {
+export function parseCSV(text, lg, opts = {}) {
   const rows = tokenize(text);
   const headers = rows.shift().map(h => h.trim());
   const ix = {}; headers.forEach((h, i) => ix[h] = i);
@@ -40,6 +41,7 @@ export function parseCSV(text, lg) {
     const div = String(get(r, 'Div') || '').trim().toUpperCase();
     out.push({
       date, home, away, hg, ag, lg, division: SECOND_DIVISIONS.has(div) ? 'L2' : 'L1',
+      ...(opts.shots ? {hs: n0(get(r, 'HS')), as: n0(get(r, 'AS')), hst: n0(get(r, 'HST')), ast: n0(get(r, 'AST'))} : {}),
       avgH: num(get(r, 'AvgCH')) || num(get(r, 'AvgH')), avgD: num(get(r, 'AvgCD')) || num(get(r, 'AvgD')), avgA: num(get(r, 'AvgCA')) || num(get(r, 'AvgA')),
     });
   }
