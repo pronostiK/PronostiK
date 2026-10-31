@@ -1,1 +1,1 @@
-{"lastError":"Secret FD_TOKEN manquant : ajoute ta clé football-data.org dans les secrets du dépôt.","lastErrorAt":"2026-10-31T22:18:11.624Z"}
+{"updated":"2026-10-31T22:40:45.681Z","season":2026,"source":"football-data.org","leagues":[{"code":"FL1","name":"Ligue 1"},{"code":"PL","name":"Premier League"},{"code":"BL1","name":"Bundesliga"},{"code":"SA","name":"Serie A"},{"code":"PD","name":"La Liga"}],"errors":{},"lastError":null,"unmapped":[{"lg":"SA","name":"US Lecce"},{"lg":"PD","name":"Villarreal CF"}],"counts":{"history":12303,"predictions":45,"pending":45}}
