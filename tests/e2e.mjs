@@ -48,10 +48,11 @@ for (const lg of Object.keys(TOP)) for (const [yy, y] of [['2324', 2023], ['2425
 }
 
 // ---- faux serveur (API + CSV)
-let state = {}, failLeague = {}, goodToken = 'good';
+let state = {}, failLeague = {}, goodToken = 'good', FIX = null;
 const srv = http.createServer((req, res) => {
   const u = new URL(req.url, 'http://x');
   if (u.pathname.startsWith('/mmz4281/')) { const b = CSV[u.pathname]; res.writeHead(b ? 200 : 404); res.end(b || 'nope'); return; }
+  if (u.pathname === '/fixtures.csv') { res.writeHead(FIX ? 200 : 404); res.end(FIX || 'nope'); return; }
   const m = u.pathname.match(/\/competitions\/(\w+)\/matches/);
   if (!m || req.headers['x-auth-token'] !== goodToken) { res.writeHead(403, {'content-type': 'application/json'}); res.end(JSON.stringify({message: 'Your API token is invalid.'})); return; }
   if (failLeague[m[1]]) { res.writeHead(403, {'content-type': 'application/json'}); res.end(JSON.stringify({message: 'Competition not in your plan.'})); return; }
@@ -78,6 +79,7 @@ state = {
   SA: [T(apiName('Inter'), apiName('Milan'), '2026-11-01T19:45:00Z', 401), T(apiName('Napoli'), apiName('Roma'), '2026-11-01T17:00:00Z', 402), T('Equipe Inconnue FC', apiName('Lazio'), '2026-11-02T19:45:00Z', 403)],
   PD: [T(apiName('Real Madrid'), apiName('Barcelona'), '2026-11-01T20:00:00Z', 501), T(apiName('Ath Madrid'), apiName('Ath Bilbao'), '2026-11-01T17:30:00Z', 502), T(apiName('Espanol'), apiName('Vallecano'), '2026-11-02T18:30:00Z', 503)],
 };
+FIX = ['Div,Date,Time,HomeTeam,AwayTeam,AvgH,AvgD,AvgA', 'F1,01/11/2026,20:45,Marseille,Lyon,2.00,3.50,3.80', 'E0,01/11/2026,16:30,Man City,Arsenal,2.40,3.40,2.90', 'F1,01/11/2026,20:45,Equipe Fantome,Lyon,2,3,4'].join('\n');
 let r = await run('2026-10-31T20:00:00Z'); console.log(r.stdout.trim());
 ok(r.status === 0, 'phase 1 : sortie 0');
 let pred = J('predictions.json');
@@ -93,11 +95,18 @@ ok(J('meta.json').unmapped.some(u => u.name === 'Equipe Inconnue FC'), 'phase 1 
 const sc = J('scorecard.json').leagues;
 ok(['FL1', 'PL', 'BL1', 'SA', 'PD'].every(k => sc[k] && sc[k].n > 100), 'phase 1 : bilan calculé pour les 5 championnats (' + Object.entries(sc).map(([k, v]) => k + ':' + v.n).join(' ') + ')');
 ok(J('history.json').some(m => m.lg === 'FL1' && m.home === 'Lille' && m.away === 'Nice' && m.date === '2026-10-25'), 'phase 1 : résultat récent ajouté à l\'historique de la France');
+{ const a = pred.find(p => p.apiId === 101), b = pred.find(p => p.apiId === 201), m = J('meta.json').odds;
+  ok(a.mk && Math.abs(a.mk.reduce((x, y) => x + y) - 1) < 1e-3 && a.mk[0] > a.mk[2], 'cotes : Marseille–Lyon reçoit les probabilités du marché sans marge');
+  ok(b.mk && b.mk[0] < 0.45 && b.mk[0] > 0.38, 'cotes : Man City–Arsenal reçoit ses probabilités');
+  ok(!pred.find(p => p.apiId === 102).mk, 'cotes : un match absent du fichier reste sans cotes');
+  ok(m.ok && m.rows === 3 && m.matched === 2, 'cotes : meta.odds = lu 3 lignes, 2 appariées'); }
 const frozen = JSON.stringify(pred.find(p => p.apiId === 201).p);
 
 // Relance sans changement
 const before = readFileSync(join(dir, 'predictions.json'), 'utf8');
+FIX = null;
 r = await run('2026-10-31T23:00:00Z');
+ok(r.status === 0 && J('meta.json').odds.ok === false && J('predictions.json').find(p => p.apiId === 101).mk, 'cotes indisponibles : le site continue et garde les dernières cotes');
 ok(readFileSync(join(dir, 'predictions.json'), 'utf8') === before, 'relance sans changement : pronostics identiques');
 ok(!/Historique/.test(r.stdout), 'relance : les CSV ne sont pas retéléchargés avant 6 jours');
 

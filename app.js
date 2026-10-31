@@ -58,6 +58,8 @@
     const seg = `<div class="seg" aria-hidden="true">${pcts.map((v, i) => `<span class="s${i}${i === top ? ' lead' : ''}" style="width:${v}%"></span>`).join('')}</div>`;
     const read = pcts[top] >= 60 ? ['Favori net', 'ok'] : pcts[top] < 45 ? ['Match ouvert', ''] : ['Léger favori', ''];
     const who = top === 1 ? 'un match nul' : 'une victoire de ' + (top === 0 ? p.home : p.away);
+    const mkp = Array.isArray(p.mk) && p.mk.length === 3 ? pct3(p.mk) : null;
+    const mkline = mkp ? `<p class="mkline">Cotes des bookmakers : <b>${mkp[0]} %</b> · <b>${mkp[1]} %</b> · <b>${mkp[2]} %</b></p>` : '';
     const sum = `<p class="read"><span class="tag ${read[1]}">${read[0]}</span> ${pcts[top]} % pour ${esc(who)}</p>`;
     const dc = [['1N', p.p[0] + p.p[1], `${p.home} ou nul`], ['12', p.p[0] + p.p[2], 'Pas de nul'], ['N2', p.p[1] + p.p[2], `${p.away} ou nul`]]
       .map(([k, v, s]) => `<div><small>${k} · ${esc(s)}</small><strong>${pc(v)}</strong></div>`).join('');
@@ -69,9 +71,10 @@
       return `<div class="form-list"><p>${esc(name)}</p>${rows}</div>`;
     };
     return `<article class="card" id="m-${esc(p.id)}" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}">
-      <button class="head" type="button" aria-expanded="false" aria-controls="d-${esc(p.id)}">${head}${sum}${seg}<div class="probs">${cells}</div><span class="more">Détails ▾</span></button>
+      <button class="head" type="button" aria-expanded="false" aria-controls="d-${esc(p.id)}">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}<span class="more">Détails ▾</span></button>
       <div class="detail" id="d-${esc(p.id)}" hidden>
         <h3>Double chance</h3><div class="kv">${dc}</div>
+        ${mkp ? `<h3>Modèle et bookmakers</h3><div class="kv">${[['1 · ' + p.home, 0], ['N · Nul', 1], ['2 · ' + p.away, 2]].map(([l, k]) => { const d = pcts[k] - mkp[k]; return `<div><small>${esc(l)}</small><strong>${pcts[k]} % <span class="muted" style="font-size:12px;font-weight:600">contre ${mkp[k]} %</span></strong><small>${d === 0 ? 'identique' : (d > 0 ? '+' : '−') + Math.abs(d) + ' pt'}</small></div>`; }).join('')}</div><p class="note" style="margin-top:8px">Premier chiffre : notre modèle. Second chiffre : probabilité déduite des cotes moyennes des bookmakers, marge retirée. Sur l’historique, les bookmakers sont un peu plus précis (voir le bilan) : en cas d’écart, ils ont souvent une information que le modèle n’a pas, comme une blessure ou une compo.</p>` : ''}
         <h3>Cote équivalente</h3><div class="kv">${[['1 · ' + p.home, p.p[0]], ['N · Nul', p.p[1]], ['2 · ' + p.away, p.p[2]]].map(([l, v]) => `<div><small>${esc(l)}</small><strong>${fr(1 / v, 2)}</strong></div>`).join('')}</div>
         <p class="note" style="margin-top:8px">C’est la cote qui correspond exactement à la probabilité annoncée, sans marge. Les cotes des bookmakers sont plus basses, car elles incluent leur marge. Information statistique, pas un conseil de pari.</p>
         <h3>Buts attendus</h3><div class="kv"><div><small>${esc(p.home)}</small><strong>${fr(p.lam[0], 1)}</strong></div><div><small>${esc(p.away)}</small><strong>${fr(p.lam[1], 1)}</strong></div><div><small>Score le plus probable</small><strong>${esc(p.score)}</strong></div></div>

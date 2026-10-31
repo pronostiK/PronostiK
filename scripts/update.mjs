@@ -10,7 +10,7 @@ import {fileURLToPath} from 'node:url';
 import {createModel, createRatings} from '../model.mjs';
 import {footballDataDate, resolveName} from '../lib.mjs';
 import {LEAGUES, ALIASES} from '../leagues.mjs';
-import {parseCSV} from '../csv.mjs';
+import {parseCSV, parseFixtures} from '../csv.mjs';
 
 const API = process.env.FD_API_BASE || 'https://api.football-data.org/v4';
 const CSV_BASE = process.env.CSV_BASE || 'https://www.football-data.co.uk';
@@ -182,6 +182,7 @@ async function main() {
       }
       if (old) {
         const same = JSON.stringify([old.p, old.lam, old.kickoff, old.home, old.away]) === JSON.stringify([entry.p, entry.lam, entry.kickoff, entry.home, entry.away]);
+        if (old.mk) entry.mk = old.mk; // on garde les dernières cotes connues si le fichier est momentanément indisponible
         if (same) { entry.updatedAt = old.updatedAt; entry.form = old.form; entry.rel = old.rel; entry.err = old.err; }
         else entry.updatedAt = NOW.toISOString();
         predictions = predictions.filter(p => p.id !== id);
@@ -189,6 +190,24 @@ async function main() {
       predictions.push(entry); byId.set(id, entry);
     }
   }
+
+  // --- 4b. cotes du marché pour les matchs à venir (comparaison affichée sur le site ; jamais bloquant)
+  const oddsInfo = {ok: false, rows: 0, matched: 0, error: null};
+  try {
+    const r = await fetch(CSV_BASE + '/fixtures.csv', {signal: AbortSignal.timeout(20000)});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const fx = parseFixtures(await r.text());
+    oddsInfo.ok = true; oddsInfo.rows = fx.length;
+    const lgByDiv = Object.fromEntries(LEAGUES.map(l => [l.csv[0], l.code]));
+    const dayDiff = (a, b) => Math.abs(new Date(a) - new Date(b)) / 86400000;
+    for (const f of fx) {
+      const lg = lgByDiv[f.div]; if (!lg || !f.mk) continue;
+      const home = resolveName(f.home, known[lg], ALIASES[lg] || {}, lg === 'FL1'), away = resolveName(f.away, known[lg], ALIASES[lg] || {}, lg === 'FL1');
+      if (!home || !away) continue;
+      const p = predictions.find(x => x.lg === lg && x.home === home && x.away === away && !x.res && NOW < new Date(x.kickoff) && dayDiff(x.date, f.date) <= 2);
+      if (p) { p.mk = f.mk.map(r4); oddsInfo.matched++; }
+    }
+  } catch (e) { oddsInfo.error = String(e.message || e).slice(0, 120); }
 
   // --- 5. règlement
   for (const p of predictions) {
@@ -232,6 +251,7 @@ async function main() {
     leagues: LEAGUES.map(l => ({code: l.code, name: l.name})), errors,
     lastError: errKeys.length ? errKeys.map(k => `${k} : ${errors[k]}`).join(' · ') : null,
     unmapped: [...unmapped.values()],
+    odds: oddsInfo,
     counts: {history: history.length, predictions: predictions.length, pending: predictions.filter(p => !p.res).length},
   };
   writeIfChanged('meta.json', meta);
