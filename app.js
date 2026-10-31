@@ -72,6 +72,8 @@
       <button class="head" type="button" aria-expanded="false" aria-controls="d-${esc(p.id)}">${head}${sum}${seg}<div class="probs">${cells}</div><span class="more">Détails ▾</span></button>
       <div class="detail" id="d-${esc(p.id)}" hidden>
         <h3>Double chance</h3><div class="kv">${dc}</div>
+        <h3>Cote équivalente</h3><div class="kv">${[['1 · ' + p.home, p.p[0]], ['N · Nul', p.p[1]], ['2 · ' + p.away, p.p[2]]].map(([l, v]) => `<div><small>${esc(l)}</small><strong>${fr(1 / v, 2)}</strong></div>`).join('')}</div>
+        <p class="note" style="margin-top:8px">C’est la cote qui correspond exactement à la probabilité annoncée, sans marge. Les cotes des bookmakers sont plus basses, car elles incluent leur marge. Information statistique, pas un conseil de pari.</p>
         <h3>Buts attendus</h3><div class="kv"><div><small>${esc(p.home)}</small><strong>${fr(p.lam[0], 1)}</strong></div><div><small>${esc(p.away)}</small><strong>${fr(p.lam[1], 1)}</strong></div><div><small>Score le plus probable</small><strong>${esc(p.score)}</strong></div></div>
         <h3>Cinq derniers matchs</h3><div class="forms">${form(p.home, p.form && p.form.h)}${form(p.away, p.form && p.form.a)}</div>
         <p class="note">Estimation statistique : le modèle ignore compositions et blessures. Un résultat à ${pcts[top]} % échoue encore ${100 - pcts[top]} fois sur 100.</p>
