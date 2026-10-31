@@ -1,0 +1,70 @@
+{
+ "split": "2025-08-01",
+ "leagues": {
+  "FL1": {
+   "n": 366,
+   "marche": 0.5812,
+   "alpha_1": 0.6016,
+   "alpha_0.7": 0.5978,
+   "alpha_0.5": 0.596,
+   "alpha_0.3": 0.5947,
+   "alpha_0": 0.5941
+  },
+  "PL": {
+   "n": 445,
+   "marche": 0.6062,
+   "alpha_1": 0.6212,
+   "alpha_0.7": 0.619,
+   "alpha_0.5": 0.6183,
+   "alpha_0.3": 0.6184,
+   "alpha_0": 0.6198
+  },
+  "BL1": {
+   "n": 354,
+   "marche": 0.5643,
+   "alpha_1": 0.5845,
+   "alpha_0.7": 0.5823,
+   "alpha_0.5": 0.5817,
+   "alpha_0.3": 0.582,
+   "alpha_0": 0.5841
+  },
+  "SA": {
+   "n": 458,
+   "marche": 0.5698,
+   "alpha_1": 0.5831,
+   "alpha_0.7": 0.5842,
+   "alpha_0.5": 0.5861,
+   "alpha_0.3": 0.5892,
+   "alpha_0": 0.5959
+  },
+  "PD": {
+   "n": 457,
+   "marche": 0.565,
+   "alpha_1": 0.5817,
+   "alpha_0.7": 0.5807,
+   "alpha_0.5": 0.5809,
+   "alpha_0.3": 0.5818,
+   "alpha_0": 0.5845
+  }
+ },
+ "notes": [
+  "FL1: 1370 matchs, 1370 avec tirs",
+  "PL: 1600 matchs, 1600 avec tirs",
+  "BL1: 1287 matchs, 1286 avec tirs",
+  "SA: 1610 matchs, 1610 avec tirs",
+  "PD: 1619 matchs, 1619 avec tirs"
+ ],
+ "coef": {
+  "cadre": 0.3394,
+  "nonCadre": -0.0183
+ },
+ "total": {
+  "n": 2080,
+  "marche": 0.5776,
+  "alpha_1": 0.5944,
+  "alpha_0.7": 0.5929,
+  "alpha_0.5": 0.5928,
+  "alpha_0.3": 0.5935,
+  "alpha_0": 0.5962
+ }
+}
