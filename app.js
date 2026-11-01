@@ -57,6 +57,7 @@
     cardr: I('<rect x="7" y="3" width="10" height="16" rx="2" fill="#ef4444" stroke="#ef4444"/>'),
     trophy: I('<path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8"/>'),
     home: I('<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>'),
+    plane: I('<path d="M12 21s-6-5.5-6-10a6 6 0 0 1 12 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2"/>'),
     chart: I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'),
     vs: I('<path d="M4 8h14l-3-3M20 16H6l3 3"/>'),
     info: I('<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.5"/>'),
@@ -153,9 +154,18 @@
         ${H.tout.nc && A.tout.nc ? tile('flag', fr(both(T => (T.tout.cf + T.tout.ca) / T.tout.nc), 1), 'Corners / match', 't5') : ''}
         ${H.tout.nk && A.tout.nk ? tile('card', fr(H.tout.yc / H.tout.nk + A.tout.yc / A.tout.nk, 1), 'Cartons / match', 't6') : ''}
       </div><p class="note">Moyenne des matchs de la saison des deux équipes (observé, pas une prédiction).</p>`;
+      const fmtShort = new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'short', timeZone: TZ});
+      const rowsOf = (T, side) => (T.matchs || []).map(m => { const r = m.f > m.a ? 'w' : m.f === m.a ? 'd' : 'l', L = {w: 'V', d: 'N', l: 'D'}[r];
+        return `<div class="srow" data-side="${side}" data-r="${r}"><span class="dot ${L}">${L}</span><small>${esc(fmtShort.format(new Date(m.d + 'T12:00:00Z')))}</small><span class="sopp">${m.v === 'D' ? ICON.home : ICON.plane}${esc(m.o)}</span><b>${m.f}–${m.a}</b></div>`; }).join('');
+      const seasonList = (H.matchs && H.matchs.length) || (A.matchs && A.matchs.length) ? `<div class="season" data-show="h" data-filter="">
+          <div class="steams"><button type="button" class="steam" data-team="h" aria-pressed="true">${crestImg((p.crest || [])[0], p.home)}${esc(p.home)}</button><button type="button" class="steam" data-team="a" aria-pressed="false">${crestImg((p.crest || [])[1], p.away)}${esc(p.away)}</button></div>
+          <div class="slist">${rowsOf(H, 'h')}${rowsOf(A, 'a')}</div>
+          <p class="sempty muted" hidden>Aucun match pour ce filtre.</p>
+          <p class="note">${ICON.home} domicile · ${ICON.plane} extérieur · touchez une pastille V, N ou D pour filtrer.</p></div>` : '';
       stats = `${apercu}<div class="duel-head"><span>${crestImg((p.crest || [])[0], p.home)}${esc(p.home)}</span><span>${esc(p.away)}${crestImg((p.crest || [])[1], p.away)}</span></div>
         <div class="ranks"><div><b>${rank(H.rang)}</b><small>${H.pts} pts</small></div><span>${ICON.trophy}Classement</span><div><b>${rank(A.rang)}</b><small>${A.pts} pts</small></div></div>
-        <div class="wdl"><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${H.tout[k]}</span>`).join('')}</div><span>V · N · D</span><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${A.tout[k]}</span>`).join('')}</div></div>
+        <div class="wdl"><div>${['w', 'd', 'l'].map(k => `<button type="button" class="pill ${k}" data-team="h" data-f="${k}" aria-label="Voir les ${{w: 'victoires', d: 'nuls', l: 'défaites'}[k]} de ${esc(p.home)}">${H.tout[k]}</button>`).join('')}</div><span>V · N · D</span><div>${['w', 'd', 'l'].map(k => `<button type="button" class="pill ${k}" data-team="a" data-f="${k}" aria-label="Voir les ${{w: 'victoires', d: 'nuls', l: 'défaites'}[k]} de ${esc(p.away)}">${A.tout[k]}</button>`).join('')}</div></div>
+        ${seasonList}
         <h3>${ICON.ball} Buts</h3>
         ${duel('up', 'Marqués / match', av(H.tout.gf, H.tout.p), av(A.tout.gf, A.tout.p), f1, 'high')}
         ${duel('down', 'Encaissés / match', av(H.tout.ga, H.tout.p), av(A.tout.ga, A.tout.p), f1, 'low')}
@@ -333,6 +343,7 @@
     if (!p) { box.innerHTML = '<div class="empty"><strong>Ce match n’est plus disponible.</strong><br><a href="#matchs">Voir les matchs à venir</a></div>'; document.title = 'PronostiK'; return; }
     const cur = box.querySelector('button.tab[aria-selected="true"]')?.dataset.tab;
     box.innerHTML = matchPageHTML(p);
+    box.querySelectorAll('.season').forEach(applySeason);
     if (cur) box.querySelector(`button.tab[data-tab="${cur}"]`)?.click();
     document.title = `${p.home} – ${p.away} · PronostiK`;
   }
@@ -347,6 +358,28 @@
     d.hidden = open;
   });
 
+  // Liste des matchs de la saison : choix de l'équipe et filtre V / N / D
+  function applySeason(box) {
+    const side = box.dataset.show, f = box.dataset.filter;
+    let n = 0;
+    box.querySelectorAll('.srow').forEach(r => { const on = r.dataset.side === side && (!f || r.dataset.r === f); r.hidden = !on; if (on) n++; });
+    box.querySelector('.sempty').hidden = n > 0;
+    box.querySelectorAll('.steam').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.team === side)));
+    box.closest('.tabpanel').querySelectorAll('.wdl .pill').forEach(b => b.classList.toggle('on', b.dataset.team === side && b.dataset.f === f));
+  }
+  $('matchpage').addEventListener('click', e => {
+    const s = e.target.closest('button.steam, .wdl button.pill');
+    if (s) {
+      const box = s.closest('.tabpanel').querySelector('.season');
+      if (!box) return;
+      const side = s.dataset.team, f = s.dataset.f || '';
+      box.dataset.filter = s.classList.contains('pill') ? (box.dataset.show === side && box.dataset.filter === f ? '' : f) : '';
+      box.dataset.show = side;
+      applySeason(box);
+      if (s.classList.contains('pill')) box.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+      return;
+    }
+  });
   $('matchpage').addEventListener('click', e => {
     const b = e.target.closest('button.tab');
     if (!b) return;
@@ -375,7 +408,7 @@
     try {
       const [raw, meta, sc] = await Promise.all([load('predictions.json'), load('meta.json').catch(() => null), load('scorecard.json').catch(() => null)]);
       const preds = raw.map(p => ({...p, home: dn(p.home), away: dn(p.away), form: p.form ? {h: (p.form.h || []).map(m => ({...m, o: dn(m.o)})), a: (p.form.a || []).map(m => ({...m, o: dn(m.o)}))} : p.form,
-        stats: p.stats ? {...p.stats, h2h: (p.stats.h2h || []).map(m => ({...m, h: dn(m.h), a: dn(m.a)}))} : p.stats}));
+        stats: p.stats ? {...p.stats, h2h: (p.stats.h2h || []).map(m => ({...m, h: dn(m.h), a: dn(m.a)})), dom: p.stats.dom && {...p.stats.dom, matchs: (p.stats.dom.matchs || []).map(m => ({...m, o: dn(m.o)}))}, ext: p.stats.ext && {...p.stats.ext, matchs: (p.stats.ext.matchs || []).map(m => ({...m, o: dn(m.o)}))}} : p.stats}));
       const openIds = [...document.querySelectorAll('button.head[aria-expanded="true"]')].map(b => b.getAttribute('aria-controls'));
       cache = {preds, meta, sc};
       renderMatches(preds, meta);

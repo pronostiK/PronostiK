@@ -188,7 +188,9 @@ async function main() {
       }
       return o;
     };
-    const team = (t, venue) => ({rang: order.indexOf(t) + 1 || null, pts: tab[t]?.pts ?? 0,
+    const games = t => S.filter(m => m.home === t || m.away === t).slice().reverse()
+      .map(m => m.home === t ? {d: m.date, o: m.away, v: 'D', f: m.hg, a: m.ag} : {d: m.date, o: m.home, v: 'E', f: m.ag, a: m.hg});
+    const team = (t, venue) => ({rang: order.indexOf(t) + 1 || null, pts: tab[t]?.pts ?? 0, matchs: games(t),
       tout: sum(S.filter(m => m.home === t || m.away === t), t), lieu: sum(S.filter(m => venue === 'dom' ? m.home === t : m.away === t), t)});
     const h2h = history.filter(m => m.lg === lg && m.date < before && ((m.home === home && m.away === away) || (m.home === away && m.away === home)))
       .slice(-5).reverse().map(m => ({d: m.date, h: m.home, a: m.away, hg: m.hg, ag: m.ag}));
