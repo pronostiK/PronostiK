@@ -1,0 +1,259 @@
+{
+ "date": "2026-11-01T01:20:00.143Z",
+ "essais": [
+  {
+   "type": "absences",
+   "lg": "FL1",
+   "season": 2023,
+   "erreurs": [],
+   "paging": {
+    "current": 1,
+    "total": 1
+   },
+   "lignes": 2078,
+   "matchsCouverts": 308,
+   "joueurs": 387,
+   "premiereDate": "2023-08-11T19:00:00+00:00",
+   "derniereDate": "2024-06-02T15:00:00+00:00",
+   "types": [
+    "Missing Fixture",
+    "Questionable"
+   ],
+   "raisons": [
+    [
+     "Injury",
+     764
+    ],
+    [
+     "Knee Injury",
+     346
+    ],
+    [
+     "Muscle Injury",
+     121
+    ],
+    [
+     "National selection",
+     116
+    ],
+    [
+     "Yellow Cards",
+     101
+    ],
+    [
+     "Red Card",
+     86
+    ],
+    [
+     "Ankle Injury",
+     63
+    ],
+    [
+     "Foot Injury",
+     61
+    ],
+    [
+     "Thigh Injury",
+     57
+    ],
+    [
+     "Calf Injury",
+     47
+    ],
+    [
+     "Convalescence",
+     44
+    ],
+    [
+     "Suspended",
+     44
+    ]
+   ]
+  },
+  {
+   "type": "joueurs",
+   "lg": "FL1",
+   "season": 2023,
+   "erreurs": [],
+   "paging": {
+    "current": 1,
+    "total": 43
+   },
+   "lignesPage1": 20,
+   "champsJoueur": [
+    "id",
+    "name",
+    "firstname",
+    "lastname",
+    "age",
+    "birth",
+    "nationality",
+    "height",
+    "weight",
+    "injured",
+    "photo"
+   ],
+   "champsStats": [
+    "team",
+    "league",
+    "games",
+    "substitutes",
+    "shots",
+    "goals",
+    "passes",
+    "tackles",
+    "duels",
+    "dribbles",
+    "fouls",
+    "cards",
+    "penalty"
+   ],
+   "champsMatchs": [
+    "appearences",
+    "lineups",
+    "minutes",
+    "number",
+    "position",
+    "rating",
+    "captain"
+   ],
+   "exemple": {
+    "poste": "Defender",
+    "matchs": 27,
+    "titularisations": 26,
+    "minutes": 2275,
+    "note": "7.181481",
+    "buts": 2
+   }
+  },
+  {
+   "type": "absences",
+   "lg": "PL",
+   "season": 2024,
+   "erreurs": [],
+   "paging": {
+    "current": 1,
+    "total": 1
+   },
+   "lignes": 3168,
+   "matchsCouverts": 371,
+   "joueurs": 403,
+   "premiereDate": "2024-08-16T19:00:00+00:00",
+   "derniereDate": "2025-05-25T15:00:00+00:00",
+   "types": [
+    "Missing Fixture",
+    "Questionable"
+   ],
+   "raisons": [
+    [
+     "Knee Injury",
+     744
+    ],
+    [
+     "Thigh Injury",
+     496
+    ],
+    [
+     "Ankle Injury",
+     317
+    ],
+    [
+     "Muscle Injury",
+     256
+    ],
+    [
+     "Injury",
+     200
+    ],
+    [
+     "Calf Injury",
+     142
+    ],
+    [
+     "Hamstring Injury",
+     137
+    ],
+    [
+     "Groin Injury",
+     78
+    ],
+    [
+     "Red Card",
+     71
+    ],
+    [
+     "Leg Injury",
+     64
+    ],
+    [
+     "Shoulder Injury",
+     56
+    ],
+    [
+     "Knock",
+     53
+    ]
+   ]
+  },
+  {
+   "type": "joueurs",
+   "lg": "PL",
+   "season": 2024,
+   "erreurs": [],
+   "paging": {
+    "current": 1,
+    "total": 57
+   },
+   "lignesPage1": 20,
+   "champsJoueur": [
+    "id",
+    "name",
+    "firstname",
+    "lastname",
+    "age",
+    "birth",
+    "nationality",
+    "height",
+    "weight",
+    "injured",
+    "photo"
+   ],
+   "champsStats": [
+    "team",
+    "league",
+    "games",
+    "substitutes",
+    "shots",
+    "goals",
+    "passes",
+    "tackles",
+    "duels",
+    "dribbles",
+    "fouls",
+    "cards",
+    "penalty"
+   ],
+   "champsMatchs": [
+    "appearences",
+    "lineups",
+    "minutes",
+    "number",
+    "position",
+    "rating",
+    "captain"
+   ],
+   "exemple": {
+    "poste": "Defender",
+    "matchs": 28,
+    "titularisations": 26,
+    "minutes": 2020,
+    "note": "7.000000",
+    "buts": null
+   }
+  }
+ ],
+ "quota": {
+  "utilisees": 9,
+  "limite": 100
+ }
+}
