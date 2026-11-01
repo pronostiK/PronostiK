@@ -86,6 +86,22 @@ for (const lg of LEAGUES) {
 report(JSON.stringify(ELO_PARAMS) === JSON.stringify({K: 20, H: 80, reg: 1, ord: {b: 0.5300431619279119, t1: -0.37603656229315574, t2: 0.8128742251704589}, pool: {wV2: 0.7511677930724845, wElo: 0.3991237434408407, bDom: -0.06568771090046427, bNul: 0.09069661636795369}}),
   'G. tous les réglages de l’hybride figés pendant l’observation (Elo, conversion, mélange)');
 
+// H. Ligue des champions : graine Elo européenne et conversion en probabilités
+{
+  const {uclPredict} = await import('../scripts/ucl-lib.mjs');
+  const seed = load('../data/ucl-seed.json');
+  const r = seed.ratings, P = seed.params;
+  const ok1 = Object.keys(r).length > 400 && r['FRA|Paris SG'] > 1800 && r['ENG|Arsenal'] > 1800;
+  let bad = 0;
+  for (const [h, a] of [['FRA|Paris SG', 'SCO|Celtic'], ['ENG|Arsenal', 'GER|Bayern Munich'], ['CZE|Slavia Praha', 'ESP|Real Madrid']]) for (const neutral of [false, true]) {
+    const x = uclPredict(r[h], r[a], neutral, P);
+    if (Math.abs(x.p[0] + x.p[1] + x.p[2] - 1) > 1e-9 || x.p.some(v => v <= 0 || v >= 1) || !(x.lam[0] > 0 && x.lam[1] > 0)) bad++;
+  }
+  const sym = uclPredict(1700, 1700, true, P);
+  report(ok1 && !bad && Math.abs(sym.p[0] - sym.p[2]) < 0.05, `H. C1 : graine chargée (${Object.keys(r).length} clubs), probabilités cohérentes, terrain neutre équilibré`);
+  report(JSON.stringify([P.Kcl, P.Hcl, P.ord]) === JSON.stringify([67.5, 98.75, {b: 0.5375000000000001, t1: -0.27499999999999997, t2: 0.7875}]), 'H. C1 : réglages figés (Kcl, avantage du terrain, conversion)');
+}
+
 // F. Paramètres de production
 {
   const expected = {span: 550, half: 365, k: 8, minW: 3};

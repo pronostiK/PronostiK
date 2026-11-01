@@ -10,7 +10,7 @@
   const fmtStamp = new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ});
   const dayKey = d => new Intl.DateTimeFormat('en-CA', {timeZone: TZ}).format(d);
 
-  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga'};
+  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', CL: 'Ligue des champions'};
   let LG_ORDER = ['FL1', 'PL', 'BL1', 'SA', 'PD'];
   const LG_EMBLEM = {};
   const emb = (c, cls = 'lg-emb') => LG_EMBLEM[c] && /^https:\/\//.test(LG_EMBLEM[c]) ? `<span class="${cls}"><img src="${esc(LG_EMBLEM[c])}" alt="" loading="lazy"></span>` : '';
@@ -64,7 +64,7 @@
     chat: I('<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'),
   };
 
-  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b'};
+  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b', CL: '#38bdf8'};
   const initials = n => String(n).replace(/\b(FC|AFC|CF|SC|AC|AS|US|SS|RC|CD|UD|SV|VfB|VfL|1\.)\b/gi, '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?';
   const hue = n => { let h = 0; for (const c of String(n)) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
   const mono = n => `<span class="mono" style="background:linear-gradient(145deg,hsl(${hue(n)} 62% 48%),hsl(${(hue(n) + 40) % 360} 62% 34%))" aria-hidden="true">${esc(initials(n))}</span>`;
@@ -95,10 +95,11 @@
   function matchPageHTML(p) {
     const lgc = LG_COLOR[p.lg] || 'var(--accent)';
     const time = (LG_NAME[p.lg] || p.lg || '') + ' · ' + fmtDay.format(new Date(p.kickoff));
-    const chip = p.rel === 'limited' ? '<span class="chip warn">Échantillon réduit</span>' : '';
+    const isCL = p.lg === 'CL';
+    const chip = p.rel === 'test' ? '<span class="chip new">Nouveau · fiabilité en test</span>' : p.rel === 'limited' ? '<span class="chip warn">Échantillon réduit</span>' : '';
     const topI = p.p ? p.p.indexOf(Math.max(...p.p)) : -1;
     const cr = p.crest || [], st = p.stats || null;
-    const rk = r => r ? `<small class="rank">${r}${r === 1 ? 'er' : 'e'} au classement</small>` : '';
+    const rk = r => r ? `<small class="rank">${r}${r === 1 ? 'er' : 'e'} ${isCL ? 'en championnat' : 'au classement'}</small>` : '';
     const side = (name, url, fav, r) => `<div class="side${fav ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span>${rk(r)}</div>`;
     const head = `<div class="meta"><span class="lgname">${emb(p.lg, 'lg-mini') || `<i style="background:${lgc}"></i>`}${esc(time)}</span>${chip}</div>
       <div class="match big">${side(p.home, cr[0], topI === 0, st && st.dom.rang)}<div class="mid"><strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small></div>${side(p.away, cr[1], topI === 2, st && st.ext.rang)}</div>`;
@@ -124,7 +125,7 @@
         ${ins('target', 'Favori', esc(fav), `${pcts[top]} %`)}
         ${ins('ball', 'Buts attendus', `${fr(p.lam[0], 1)} – ${fr(p.lam[1], 1)}`, 'domicile – extérieur')}
         ${ins('score', 'Score probable', esc(p.score), '')}
-        ${mkp ? ins(agreeD <= 5 ? 'check' : 'alert', 'Bookmakers', agreeD <= 5 ? 'D’accord' : 'Désaccord', `écart max ${agreeD} pts`, agreeD <= 5 ? 'ok' : 'warn') : ins('clock', 'Bookmakers', '—', 'cotes pas encore publiées')}
+        ${mkp ? ins(agreeD <= 5 ? 'check' : 'alert', 'Bookmakers', agreeD <= 5 ? 'D’accord' : 'Désaccord', `écart max ${agreeD} pts`, agreeD <= 5 ? 'ok' : 'warn') : ins('clock', 'Bookmakers', '—', isCL ? 'pas de cotes pour la C1' : 'cotes pas encore publiées')}
       </div>
       <h3>${ICON.shield} Double chance</h3>
       <div class="rings">${ring(p.home + ' ou nul', p.p[0] + p.p[1])}${ring('Pas de nul', p.p[0] + p.p[2])}${ring(p.away + ' ou nul', p.p[1] + p.p[2])}</div>
@@ -188,7 +189,7 @@
         <div class="wdl"><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${H.lieu[k]}</span>`).join('')}</div><span>V · N · D</span><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${A.lieu[k]}</span>`).join('')}</div></div>
         ${duel('up', 'Marqués / match', av(H.lieu.gf, H.lieu.p), av(A.lieu.gf, A.lieu.p), f1, 'high')}
         ${duel('down', 'Encaissés / match', av(H.lieu.ga, H.lieu.p), av(A.lieu.ga, A.lieu.p), f1, 'low')}
-        <p class="note">Saison en cours, championnat. Valeurs observées, pas des prédictions.</p>`;
+        <p class="note">${isCL ? 'Saison en cours, championnat national de chaque club (pas la C1).' : 'Saison en cours, championnat.'} Valeurs observées, pas des prédictions.</p>`;
     }
 
     // --- Onglet Forme : pastilles
@@ -214,13 +215,14 @@
     let classement = '<p class="muted">Classement indisponible pour le moment.</p>';
     const SD = cache && cache.stand && cache.stand[p.lg];
     if (SD && SD.rows && SD.rows.length) {
-      const n = SD.rows.length, rel = {FL1: 2, PL: 3, BL1: 2, SA: 3, PD: 3}[p.lg] || 3;
+      const n = SD.rows.length, rel = isCL ? n - 24 : ({FL1: 2, PL: 3, BL1: 2, SA: 3, PD: 3}[p.lg] || 3), topN = isCL ? 8 : 4;
       const raw = {h: p.rawHome || p.home, a: p.rawAway || p.away};
+      const isMe = (r, nm) => r.t === nm || (isCL && r.crest && ((nm === raw.h && r.crest === (p.crest || [])[0]) || (nm === raw.a && r.crest === (p.crest || [])[1])));
       classement = `<div class="table-lg">${SD.rows.map(r => {
-        const me = r.t === raw.h ? ' me-h' : r.t === raw.a ? ' me-a' : '', zone = r.rang <= 4 ? ' z-top' : r.rang > n - rel ? ' z-bot' : '';
+        const me = isMe(r, raw.h) ? ' me-h' : isMe(r, raw.a) ? ' me-a' : '', zone = r.rang <= topN ? ' z-top' : r.rang > n - rel ? ' z-bot' : isCL ? ' z-mid' : '';
         return `<div class="trow${me}${zone}"><span class="tr">${r.rang}</span><span class="tt">${r.crest ? crestImg(r.crest, dn(r.t)) : mono(dn(r.t))}<b>${esc(dn(r.t))}</b></span><span class="tf">${(r.form || '').split('').map(c => `<i class="${c}"></i>`).join('')}</span><span class="tn">${r.p}</span><span class="tn">${r.gf - r.ga > 0 ? '+' : ''}${r.gf - r.ga}</span><span class="tp">${r.pts}</span></div>`;
       }).join('')}</div>
-      <div class="tlegend"><span><i class="lz top"></i>Places européennes (indicatif)</span><span><i class="lz bot"></i>Relégation</span></div>
+      <div class="tlegend">${isCL ? '<span><i class="lz top"></i>Qualifiés pour les 8es</span><span><i class="lz mid"></i>Barrages</span><span><i class="lz bot"></i>Éliminés</span>' : '<span><i class="lz top"></i>Places européennes (indicatif)</span><span><i class="lz bot"></i>Relégation</span>'}</div>
       <p class="note">J : matchs joués · Diff. : différence de buts · pastilles : 5 derniers résultats. Calculé à partir des résultats connus du site.</p>`;
       classement = `<div class="thead"><span>#</span><span>Équipe</span><span>Forme</span><span>J</span><span>Diff.</span><span>Pts</span></div>` + classement;
     }
@@ -232,16 +234,18 @@
       const dnb = p.p[0] + p.p[2] > 0 ? p.p[0] / (p.p[0] + p.p[2]) : 0.5;
       const pair = (a, la, b, lb) => `<div class="mk2"><div class="${a >= b ? 'on' : ''}"><b>${a} %</b><small>${la}</small></div><div class="${b > a ? 'on' : ''}"><b>${b} %</b><small>${lb}</small></div></div>`;
       const hp = pct3(M.ht);
+      const T = isCL ? {o25: 'Testé sur 537 matchs de C1 : à peine mieux que la moyenne des matchs.', btts: 'Testé sur 537 matchs de C1 : pas d’apport démontré.', o15: 'Testé sur 537 matchs de C1 : à peine mieux que la moyenne des matchs.', ht: 'Pas encore testé sur la C1.', sc: 'Pas encore testé sur la C1.', n: '537 matchs de C1 (2023-2026)'}
+        : {o25: 'Testé sur 2 080 matchs : pas d’apport démontré par rapport à la moyenne du championnat, et les bookmakers sont plus précis.', btts: 'Testé sur 2 080 matchs : pas d’apport démontré par rapport à la moyenne du championnat.', o15: 'Testé sur 2 080 matchs : à peine plus précis que la moyenne des matchs.', ht: 'Testé sur 2 080 matchs : bien calibré.', sc: 'Testé sur 2 080 matchs : le score le plus probable sort environ 12 fois sur 100, comme annoncé.', n: '2 080 matchs'};
       marches = `
-        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 2,5 buts</span>${fiab('low', 'Testé sur 2 080 matchs : pas d’apport démontré par rapport à la moyenne du championnat, et les bookmakers sont plus précis.')}</div>${pair(P(M.o25), 'Plus de 2,5', 100 - P(M.o25), 'Moins de 2,5')}<p class="mknote">Indicatif : sur ce marché, les cotes des bookmakers sont plus précises que le modèle.</p></div>
-        ${M.btts != null ? `<div class="mkt"><div class="mkt-h"><span>${ICON.both}Les deux équipes marquent</span>${fiab('low', 'Testé sur 2 080 matchs : pas d’apport démontré par rapport à la moyenne du championnat.')}</div>${pair(P(M.btts), 'Oui', 100 - P(M.btts), 'Non')}<p class="mknote">Indicatif : estimation peu précise sur ce marché.</p></div>` : ''}
-        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 1,5 but</span>${fiab('mid', 'Testé sur 2 080 matchs : à peine plus précis que la moyenne des matchs.')}</div>${pair(P(M.o15), 'Plus de 1,5', 100 - P(M.o15), 'Moins de 1,5')}</div>
-        <div class="mkt"><div class="mkt-h"><span>${ICON.half1}Résultat à la mi-temps</span>${fiab('ok', 'Testé sur 2 080 matchs : bien calibré.')}</div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 2,5 buts</span>${fiab('low', T.o25)}</div>${pair(P(M.o25), 'Plus de 2,5', 100 - P(M.o25), 'Moins de 2,5')}<p class="mknote">${isCL ? 'Indicatif : estimation peu précise sur ce marché.' : 'Indicatif : sur ce marché, les cotes des bookmakers sont plus précises que le modèle.'}</p></div>
+        ${M.btts != null ? `<div class="mkt"><div class="mkt-h"><span>${ICON.both}Les deux équipes marquent</span>${fiab('low', T.btts)}</div>${pair(P(M.btts), 'Oui', 100 - P(M.btts), 'Non')}<p class="mknote">Indicatif : estimation peu précise sur ce marché.</p></div>` : ''}
+        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 1,5 but</span>${fiab('mid', T.o15)}</div>${pair(P(M.o15), 'Plus de 1,5', 100 - P(M.o15), 'Moins de 1,5')}</div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.half1}Résultat à la mi-temps</span>${fiab(isCL ? 'mid' : 'ok', T.ht)}</div>
           <div class="mk3">${[['1', p.home], ['N', 'Nul'], ['2', p.away]].map(([t, l], i) => `<div class="${i === M.ht.indexOf(Math.max(...M.ht)) ? 'on' : ''}"><b>${hp[i]} %</b><small>${t} · ${esc(l)}</small></div>`).join('')}</div></div>
-        <div class="mkt"><div class="mkt-h"><span>${ICON.score}Scores exacts les plus probables</span>${fiab('ok', 'Testé sur 2 080 matchs : le score le plus probable sort environ 12 fois sur 100, comme annoncé.')}</div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.score}Scores exacts les plus probables</span>${fiab(isCL ? 'mid' : 'ok', T.sc)}</div>
           <div class="mk3">${M.scores.map(([s, v], i) => `<div class="${i === 0 ? 'on' : ''}"><b>${esc(s.replace('-', ' – '))}</b><small>${P(v)} %</small></div>`).join('')}</div></div>
         <div class="mkt"><div class="mkt-h"><span>${ICON.shield}Remboursé si match nul</span>${fiab('ok', 'Déduit directement des probabilités 1N2.')}</div>${pair(P(dnb), esc(p.home), 100 - P(dnb), esc(p.away))}</div>
-        <p class="note">${ICON.info} Probabilités statistiques, pas des conseils de pari. Les badges indiquent la fiabilité mesurée sur 2 080 matchs.</p>`;
+        <p class="note">${ICON.info} Probabilités statistiques, pas des conseils de pari. Les badges indiquent la fiabilité mesurée sur ${T.n}.</p>`;
     }
     const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h]];
     return `<article class="mpage card" style="--lg:${lgc}">
@@ -329,7 +333,7 @@
           <div class="stat"><b>${fr(wBK)}</b><span>Erreur des cotes (Brier)</span></div>
         </div>
         <div class="table"><table><thead><tr><th>Championnat</th><th>Matchs</th><th>Modèle</th><th>Cotes</th><th>Juste (mod. / cotes)</th><th>Écart [IC 95 %]</th></tr></thead><tbody>${rows}</tbody></table></div>
-        <p style="margin:10px 0 0">${wBM < wBK ? 'Sur cette période, le modèle est au moins aussi précis que les cotes. À confirmer sur davantage de matchs.' : 'Les cotes des bookmakers sont plus précises que le modèle : ils connaissent les compositions et les blessures, pas lui. Ce site sert à comprendre un match, pas à battre le marché.'} Plus l’erreur est basse, mieux c’est (prédire 1/3 partout donne 0,667). Écart négatif : le modèle fait mieux que les cotes.${sc.total && sc.total.ecartBrier ? ` Sur l’ensemble, l’écart vaut ${sgn(sc.total.ecartBrier.diff)}, avec un intervalle de confiance à 95 % de ${sgn(sc.total.ecartBrier.lo)} à ${sgn(sc.total.ecartBrier.hi)} : ${sc.total.ecartBrier.lo > 0 ? 'les cotes sont significativement plus précises' : sc.total.ecartBrier.hi < 0 ? 'le modèle est significativement plus précis' : 'la différence n’est pas significative'}.` : ''} « En repli » : match d’une équipe sans assez d’historique (souvent un promu), calculé avec la méthode simple.</p>`;
+        <p style="margin:10px 0 0">${wBM < wBK ? 'Sur cette période, le modèle est au moins aussi précis que les cotes. À confirmer sur davantage de matchs.' : 'Les cotes des bookmakers sont plus précises que le modèle : ils connaissent les compositions et les blessures, pas lui. Ce site sert à comprendre un match, pas à battre le marché.'} Plus l’erreur est basse, mieux c’est (prédire 1/3 partout donne 0,667). Écart négatif : le modèle fait mieux que les cotes.${sc.total && sc.total.ecartBrier ? ` Sur l’ensemble, l’écart vaut ${sgn(sc.total.ecartBrier.diff)}, avec un intervalle de confiance à 95 % de ${sgn(sc.total.ecartBrier.lo)} à ${sgn(sc.total.ecartBrier.hi)} : ${sc.total.ecartBrier.lo > 0 ? 'les cotes sont significativement plus précises' : sc.total.ecartBrier.hi < 0 ? 'le modèle est significativement plus précis' : 'la différence n’est pas significative'}.` : ''} « En repli » : match d’une équipe sans assez d’historique (souvent un promu), calculé avec la méthode simple. La Ligue des champions est testée à part (pas de cotes disponibles) : voir la page Méthode.</p>`;
     } else $('backtest').textContent = 'Test indisponible pour le moment.';
 
     const done = preds.filter(p => p.p && ['H', 'D', 'A'].includes(p.res));

@@ -98,9 +98,11 @@ export function ordProbs(x, q) { const pA = sig(q.t1 - q.b * x), pAD = sig(q.t2 
 
 // Probabilités d'un match de C1 à partir des notes : 1N2 (modèle ordonné, testé) et buts attendus (Poisson).
 export function uclPredict(rh, ra, neutral, P) {
-  const x = (rh + (neutral ? 0 : P.Hcl) - ra) / 100;
-  const p = ordProbs(x, P.ord), g = P.goals;
-  return {p, lam: [Math.exp(g.home.a + g.home.b * x), Math.exp(g.away.a - g.away.b * x)], x};
+  const g = P.goals, one = (a, b) => { const x = (a + P.Hcl - b) / 100; return {p: ordProbs(x, P.ord), lam: [Math.exp(g.home.a + g.home.b * x), Math.exp(g.away.a - g.away.b * x)], x}; };
+  if (!neutral) return one(rh, ra);
+  // Terrain neutre (finale) : moyenne des deux situations « à domicile » et « à l'extérieur »
+  const u = one(rh, ra), v = one(ra, rh);
+  return {p: [0, 1, 2].map(k => (u.p[k] + v.p[2 - k]) / 2), lam: [(u.lam[0] + v.lam[1]) / 2, (u.lam[1] + v.lam[0]) / 2], x: (rh - ra) / 100};
 }
 
 // Championnats nationaux hors des 5 suivis (servent uniquement à l'Elo européen).

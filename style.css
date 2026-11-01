@@ -440,3 +440,6 @@ nav a{padding:8px 10px;font-size:13.5px}
 .mk2 small,.mk3 small{display:block;color:var(--muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .fiab.low{color:var(--ko);border-color:var(--ko)}
 .mknote{margin:8px 2px 0;font-size:12px;color:var(--muted)}
+/* Ligue des champions */
+.chip.new{color:#38bdf8;border-color:#38bdf8;font-weight:700}
+.trow.z-mid{border-left-color:#f59e0b}.lz.mid{background:#f59e0b}

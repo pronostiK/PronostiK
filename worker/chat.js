@@ -17,9 +17,10 @@ function sameCode(a, b) { if (typeof a !== 'string' || typeof b !== 'string' || 
 
 const pct = v => Math.round(v * 100) + ' %';
 const paris = iso => new Intl.DateTimeFormat('fr-FR', {weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Paris'}).format(new Date(iso));
+const LGN = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', CL: 'Ligue des champions'};
 function matchContext(p, stand) {
   const L = [];
-  L.push(`Match : ${p.home} (domicile) contre ${p.away} (extérieur), championnat ${p.lg}, coup d'envoi ${paris(p.kickoff)} (heure de Paris).`);
+  L.push(`Match : ${p.home} (domicile) contre ${p.away} (extérieur), compétition ${LGN[p.lg] || p.lg}, coup d'envoi ${paris(p.kickoff)} (heure de Paris).`);
   if (p.p) L.push(`Probabilités du modèle PronostiK : victoire ${p.home} ${pct(p.p[0])}, nul ${pct(p.p[1])}, victoire ${p.away} ${pct(p.p[2])}.`);
   if (p.mk) L.push(`Probabilités déduites des cotes moyennes des bookmakers (marge retirée) : ${pct(p.mk[0])} / ${pct(p.mk[1])} / ${pct(p.mk[2])}.`);
   if (p.lam) L.push(`Buts attendus par le modèle : ${p.home} ${p.lam[0].toFixed(1)}, ${p.away} ${p.lam[1].toFixed(1)}. Score le plus probable : ${p.score}.`);
@@ -28,19 +29,20 @@ function matchContext(p, stand) {
   const s = p.stats;
   if (s) {
     const t = (n, x) => x && x.tout ? `${n} : ${x.rang || '?'}e, ${x.pts} pts, ${x.tout.w}V ${x.tout.d}N ${x.tout.l}D, ${x.tout.gf} buts marqués et ${x.tout.ga} encaissés en ${x.tout.p} matchs` : '';
-    L.push(`Saison en cours : ${t(p.home, s.dom)} ; ${t(p.away, s.ext)}.`);
+    L.push(`Saison en cours${p.lg === 'CL' ? ' (championnat national de chaque club)' : ''} : ${t(p.home, s.dom)} ; ${t(p.away, s.ext)}.`);
     if (s.h2h && s.h2h.length) L.push(`Confrontations récentes : ${s.h2h.map(m => `${m.h} ${m.hg}-${m.ag} ${m.a} (${m.d})`).join(' ; ')}.`);
   }
   const st = stand && stand[p.lg];
-  if (st && st.rows) L.push(`Classement actuel (${st.rows.length} équipes) : ${st.rows.slice(0, 20).map(r => `${r.rang}. ${r.t} ${r.pts} pts`).join(', ')}.`);
+  if (p.lg === 'CL') L.push('Modèle de C1 : Elo européen (tous les clubs sur une même échelle), nouveau, fiabilité en test ; pas de cotes de bookmakers.');
+  if (st && st.rows) L.push(`Classement actuel${p.lg === 'CL' ? ' de la phase de ligue de C1' : ''} (${st.rows.length} équipes) : ${st.rows.slice(0, p.lg === 'CL' ? 36 : 20).map(r => `${r.rang}. ${r.t} ${r.pts} pts`).join(', ')}.`);
   return L.join('\n');
 }
 function listContext(preds) {
   const up = preds.filter(p => !p.res && p.p).sort((a, b) => a.kickoff.localeCompare(b.kickoff)).slice(0, 60);
-  return 'Matchs à venir, heure de Paris (probabilités du modèle 1 / N / 2) :\n' + up.map(p => `- ${paris(p.kickoff)} ${p.lg} : ${p.home} – ${p.away} : ${pct(p.p[0])} / ${pct(p.p[1])} / ${pct(p.p[2])}${p.mk ? ` (bookmakers ${pct(p.mk[0])} / ${pct(p.mk[1])} / ${pct(p.mk[2])})` : ''}`).join('\n');
+  return 'Matchs à venir, heure de Paris (probabilités du modèle 1 / N / 2) :\n' + up.map(p => `- ${paris(p.kickoff)} ${LGN[p.lg] || p.lg} : ${p.home} – ${p.away} : ${pct(p.p[0])} / ${pct(p.p[1])} / ${pct(p.p[2])}${p.mk ? ` (bookmakers ${pct(p.mk[0])} / ${pct(p.mk[1])} / ${pct(p.mk[2])})` : ''}`).join('\n');
 }
 
-const SYSTEM = `Tu es l'assistant de PronostiK, un site français qui publie des probabilités de matchs de football (Ligue 1, Premier League, Bundesliga, Serie A, La Liga).
+const SYSTEM = `Tu es l'assistant de PronostiK, un site français qui publie des probabilités de matchs de football (Ligue 1, Premier League, Bundesliga, Serie A, La Liga et Ligue des champions).
 Règles :
 - Réponds en français, simplement, en 2 à 6 phrases courtes. Pas de tableaux ni de titres ; le gras (**mot**) est permis avec modération.
 - Appuie-toi UNIQUEMENT sur les données fournies ci-dessous. Si une information n'y est pas (blessures, compositions, actualité, joueurs), dis que tu ne l'as pas. N'invente jamais un chiffre, un nom ou un résultat.
