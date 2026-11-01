@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Vérifier l'application Android en ligne
+        run: |
+          curl -s -o /dev/null -w "APK : HTTP %{http_code}, %{size_download} octets, type %{content_type}\n" https://pronostikapp.fr/downloads/pronostik.apk
+          curl -s -w "\nassetlinks : HTTP %{http_code}, type %{content_type}\n" https://pronostikapp.fr/.well-known/assetlinks.json
       - name: Vérifier le relais (sans afficher de secret)
         env:
           CHAT_CODE: ${{ secrets.CHAT_CODE }}
