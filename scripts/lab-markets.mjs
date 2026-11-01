@@ -139,6 +139,53 @@ md += `\n## 4. Ventilation par saison et par championnat (Δ Brier modèle − n
     md += `| ${se} | ${lg === 'ALL' ? '**Tous**' : LGN[lg]} | ${S.length} | ${fci(c15)} | ${fci(c25)} | ${cm ? fci(cm) : '—'} | ${ch ? fci(ch) : '—'} |\n`;
   } }
 md += `\n## Limites\n\n- La validation compte une saison complète plus le début de la suivante : un écart inférieur à environ 0,003 de Brier n'est pas détectable de façon fiable.\n- La « référence naïve » est un plancher : la battre montre que le modèle apporte de l'information, pas qu'il bat les bookmakers.\n- Pas de cotes de bookmakers dans les fichiers pour la mi-temps, le score exact et « les deux équipes marquent » : la comparaison au marché n'est pas possible pour ces marchés.\n- La mi-temps suppose 45 % des buts avant la pause (mesuré : ${(100 * out.partButs1reMT).toFixed(1)} % sur 2024-25) et l'indépendance des deux mi-temps.\n`;
+
+// ================= 5. Contrôle de robustesse demandé par l'audit =================
+// (a) référence naïve propre à chaque championnat (fréquences 2024-25 du championnat) ;
+// (b) intervalles par bootstrap par blocs : on rééchantillonne des SEMAINES entières (lundi→dimanche), 4 000 tirages,
+//     ce qui conserve la dépendance entre matchs d'une même journée et des mêmes équipes.
+{
+  let seed = 20261101; const rnd = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+  const weekOf = d => { const t = new Date(d + 'T12:00:00Z'), day = (t.getUTCDay() + 6) % 7; t.setUTCDate(t.getUTCDate() - day); return t.toISOString().slice(0, 10); };
+  const bootstrap = (S, diffOf, B = 4000) => {
+    const weeks = {}; S.forEach(r => (weeks[weekOf(r.date)] ||= []).push(diffOf(r)));
+    const W = Object.values(weeks).map(a => [a.reduce((x, y) => x + y, 0), a.length]);
+    const tot = W.reduce((x, w) => x + w[0], 0) / W.reduce((x, w) => x + w[1], 0), stats = [];
+    for (let b = 0; b < B; b++) { let s = 0, n = 0; for (let k = 0; k < W.length; k++) { const w = W[Math.floor(rnd() * W.length)]; s += w[0]; n += w[1]; } stats.push(s / n); }
+    stats.sort((a, b) => a - b);
+    return {diff: tot, lo: stats[Math.floor(0.025 * B)], hi: stats[Math.ceil(0.975 * B) - 1], semaines: W.length};
+  };
+  const lgs = Object.keys(LGN);
+  const baseLg = {}; for (const lg of lgs) { const D = dev.filter(r => r.lg === lg), DH = D.filter(r => r.y.ht != null);
+    baseLg[lg] = {o15: mean(D.map(r => r.y.o15)), o25: mean(D.map(r => r.y.o25)), btts: mean(D.map(r => r.y.btts)), ht: [0, 1, 2].map(k => mean(DH.map(r => +(r.y.ht === k))))}; }
+  const keysSc = []; for (let i = 0; i <= 3; i++) for (let j = 0; j <= 3; j++) keysSc.push(`${i}-${j}`); keysSc.push('autre');
+  const scLg = {}; for (const lg of lgs) { const D = dev.filter(r => r.lg === lg); scLg[lg] = Object.fromEntries(keysSc.map(k => [k, Math.max(1e-4, mean(D.map(r => +(r.y.scoreReel === k))))])); }
+  const bri3 = (p, y) => p.reduce((s, v, k) => s + (v - (k === y ? 1 : 0)) ** 2, 0);
+  const baseHTglob = (() => { const D = dev.filter(r => r.y.ht != null); return [0, 1, 2].map(k => mean(D.map(r => +(r.y.ht === k)))); })();
+  const freqDevGlob = Object.fromEntries(keysSc.map(k => [k, mean(dev.map(r => +(r.y.scoreReel === k)))]));
+  const T = test, TH = test.filter(r => r.y.ht != null), TM = test.filter(r => r.p.ouMk != null);
+  const lines = [
+    ['Plus de 1,5 (recalibré) − naïf', T, r => b2(cals.o15(r.p.o15), r.y.o15) - b2(baseOf.o15, r.y.o15), r => b2(cals.o15(r.p.o15), r.y.o15) - b2(baseLg[r.lg].o15, r.y.o15)],
+    ['Plus de 2,5 (recalibré) − naïf', T, r => b2(cals.o25(r.p.o25), r.y.o25) - b2(baseOf.o25, r.y.o25), r => b2(cals.o25(r.p.o25), r.y.o25) - b2(baseLg[r.lg].o25, r.y.o25)],
+    ['Les deux marquent (recalibré) − naïf', T, r => b2(cals.btts(r.p.btts), r.y.btts) - b2(baseOf.btts, r.y.btts), r => b2(cals.btts(r.p.btts), r.y.btts) - b2(baseLg[r.lg].btts, r.y.btts)],
+    ['Mi-temps 1N2 − naïf (Brier)', TH, r => bri3(r.p.ht, r.y.ht) - bri3(baseHTglob, r.y.ht), r => bri3(r.p.ht, r.y.ht) - bri3(baseLg[r.lg].ht, r.y.ht)],
+    ['Score exact − naïf (log-loss)', T, r => -Math.log(Math.max(1e-12, r.p.dist[r.y.scoreReel] || 0)) + Math.log(Math.max(1e-12, freqDevGlob[r.y.scoreReel])), r => -Math.log(Math.max(1e-12, r.p.dist[r.y.scoreReel] || 0)) + Math.log(scLg[r.lg][r.y.scoreReel])],
+  ];
+  const sig2 = c => c.hi < 0 ? '**meilleur**' : c.lo > 0 ? 'moins bon' : 'non significatif';
+  md += `\n## 5. Contrôle de robustesse (demandé par l’audit)\n\n- **Référence naïve par championnat** : fréquences de chaque championnat sur 2024-25 (au lieu d’une moyenne des 5).\n- **Bootstrap par blocs de semaines** : ${Object.keys(T.reduce((a, r) => (a[weekOf(r.date)] = 1, a), {})).length} semaines rééchantillonnées avec remise, 4 000 tirages, IC à 95 % par percentiles. Les matchs d’une même semaine (mêmes équipes, même calendrier) restent ensemble.\n\n| Comparaison | Rapport initial (naïf global, IC indépendants) | Naïf global, bootstrap par semaines | **Naïf par championnat, bootstrap par semaines** | Conclusion inchangée ? |\n|---|---|---|---|---|\n`;
+  const res5 = {};
+  for (const [lab, S, fG, fL] of lines) {
+    const c0 = ci(S.map(fG)), c1 = bootstrap(S, fG), c2 = bootstrap(S, fL);
+    res5[lab] = {initial: c0, globalBloc: c1, parChampBloc: c2};
+    md += `| ${lab} | ${fci(c0)} ${sig2(c0)} | ${fci(c1)} ${sig2(c1)} | ${fci(c2)} ${sig2(c2)} | ${sig2(c0) === sig2(c2) ? 'oui' : '**non**'} |\n`;
+  }
+  { const fM = r => b2(cals.o25(r.p.o25), r.y.o25) - b2(r.p.ouMk, r.y.o25), c0 = ci(TM.map(fM)), c1 = bootstrap(TM, fM);
+    res5['Plus de 2,5 (recalibré) − bookmakers'] = {initial: c0, globalBloc: c1};
+    md += `| Plus de 2,5 (recalibré) − **bookmakers** | ${fci(c0)} ${sig2(c0)} | ${fci(c1)} ${sig2(c1)} | (sans objet : comparaison directe au marché) | ${sig2(c0) === sig2(c1) ? 'oui' : '**non**'} |\n`; }
+  md += `\nFréquences 2024-25 par championnat (référence naïve) : ${lgs.map(lg => `${LGN[lg]} +2,5 = ${(100 * baseLg[lg].o25).toFixed(0)} %, nul à la mi-temps = ${(100 * baseLg[lg].ht[1]).toFixed(0)} %`).join(' ; ')}.\n`;
+  out.robustesse = res5;
+  writeFileSync('lab/markets-result.json', JSON.stringify(out, null, 1));
+}
 writeFileSync('lab/RAPPORT-MARCHES.md', md);
 mkdirSync('lab', {recursive: true});
 writeFileSync('lab/markets-result.json', JSON.stringify(out, null, 1));
