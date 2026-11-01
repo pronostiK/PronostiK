@@ -388,3 +388,13 @@ button.pill:focus-visible,.steam:focus-visible{outline:2px solid var(--accent);o
 .chat-err{color:var(--ko);font-size:13.5px}
 nav{flex-wrap:nowrap}
 nav a{padding:8px 12px}
+
+/* v15 : téléchargement de l'application */
+.get-app{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;margin:0 0 14px;padding:12px 14px;border-radius:16px;border:1px solid var(--best-line);background:linear-gradient(100deg,color-mix(in srgb,var(--accent) 20%,var(--panel)),color-mix(in srgb,var(--accent2) 20%,var(--panel)))}
+.get-app[hidden]{display:none}
+.get-app img{width:40px;height:40px;border-radius:10px;flex:none}
+.get-app b{display:block;font-size:15px}
+.get-app small{color:var(--muted);font-size:12.5px}
+.get-how{text-decoration:underline;color:var(--accent)}
+.get-help{font-size:14px}
+.get-help p{margin:0 0 6px}

@@ -472,6 +472,13 @@
   $('chat-form').addEventListener('submit', e => { e.preventDefault(); const v = $('chat-in').value; $('chat-in').value = ''; chatSend(v); });
   $('chat-sugg').addEventListener('click', e => { const b = e.target.closest('button.sugg'); if (b) chatSend(b.textContent); });
 
+  // Bouton « Installer l'application » : seulement sur Android, et pas déjà dans l'application.
+  (function () {
+    const ua = navigator.userAgent || '', inApp = document.referrer.startsWith('android-app://') || window.matchMedia('(display-mode: standalone)').matches;
+    if (/Android/i.test(ua) && !inApp) $('get-app').hidden = false;
+    $('get-app').addEventListener('click', e => { if (e.target.closest('.get-how')) { e.preventDefault(); $('get-help').hidden = !$('get-help').hidden; } });
+  })();
+
   // Nouvelle version du site publiée ? On recharge une fois (utile pour l'application installée sur l'écran d'accueil).
   async function checkVersion() {
     const cur = document.querySelector('meta[name="build"]')?.content;
