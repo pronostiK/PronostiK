@@ -23,11 +23,19 @@ async function call(path) {
 }
 const tasks = [];
 for (const [lg, id] of Object.entries(LEAGUES)) for (const s of [2023, 2024]) tasks.push({kind: 'inj', lg, id, s});
-for (const [lg, id] of Object.entries(LEAGUES)) for (const s of [2022, 2023]) tasks.push({kind: 'pl', lg, id, s});
+// Joueurs : le plan gratuit limite la pagination à 3 pages par requête « championnat », on passe donc équipe par équipe.
+// Pour chaque saison prédite S (2023, 2024), on prend les équipes présentes cette saison-là (fichier d'absences)
+// et leurs statistiques de la saison précédente S-1 (1re ou 2e division : cas des promus).
+const DIV2 = {FL1: 62, PL: 40, BL1: 79, SA: 136, PD: 141};
+for (const [lg, id] of Object.entries(LEAGUES)) for (const S of [2023, 2024]) {
+  const inj = read(`inj-${lg}-${S}.json`, []);
+  const teams = [...new Map(inj.map(x => [x.teamId, x.team])).entries()].filter(([t]) => t);
+  for (const [teamId, team] of teams) tasks.push({kind: 'team', lg, id, s: S - 1, teamId, team, ids: [id, DIV2[lg]]});
+}
 let stop = null;
 try {
   for (const t of tasks) {
-    const key = `${t.kind}-${t.lg}-${t.s}`;
+    const key = t.kind === 'team' ? `team-${t.lg}-${t.s}-${t.teamId}` : `${t.kind}-${t.lg}-${t.s}`;
     if (state.done[key]) continue;
     if (t.kind === 'inj') {
       const j = await call(`/injuries?league=${t.id}&season=${t.s}`);
@@ -37,22 +45,25 @@ try {
       const rows = read(`${key}.json`, []);
       let page = (state.pages[key] || 0) + 1;
       for (;;) {
-        const j = await call(`/players?league=${t.id}&season=${t.s}&page=${page}`);
+        const j = await call(`/players?team=${t.teamId}&season=${t.s}&page=${page}`);
         for (const p of j.response || []) for (const st of p.statistics || []) {
-          if (st.league?.id !== t.id) continue;
-          rows.push({pid: p.player?.id, name: p.player?.name, team: st.team?.name, teamId: st.team?.id, pos: st.games?.position, apps: st.games?.appearences || 0, starts: st.games?.lineups || 0, min: st.games?.minutes || 0, rating: st.games?.rating ? Number(st.games.rating) : null, goals: st.goals?.total || 0, assists: st.goals?.assists || 0});
+          if (st.team?.id !== t.teamId || !t.ids.includes(st.league?.id)) continue;
+          rows.push({pid: p.player?.id, name: p.player?.name, team: st.team?.name, teamId: st.team?.id, league: st.league?.id, pos: st.games?.position, apps: st.games?.appearences || 0, starts: st.games?.lineups || 0, min: st.games?.minutes || 0, rating: st.games?.rating ? Number(st.games.rating) : null, goals: st.goals?.total || 0, assists: st.goals?.assists || 0});
         }
         write(`${key}.json`, rows); state.pages[key] = page;
-        const total = j.paging?.total || page;
+        const total = Math.min(j.paging?.total || page, 3);
         if (page >= total) { state.done[key] = true; break; }
         page++;
       }
     }
   }
 } catch (e) { stop = String(e.message || e); }
-const remaining = tasks.filter(t => !state.done[`${t.kind}-${t.lg}-${t.s}`]).map(t => `${t.kind}-${t.lg}-${t.s}`);
+const keyOf = t => t.kind === 'team' ? `team-${t.lg}-${t.s}-${t.teamId}` : `${t.kind}-${t.lg}-${t.s}`;
+const remaining = tasks.filter(t => !state.done[keyOf(t)]).map(keyOf);
+state.total = tasks.length; state.restant = remaining.length;
 state.log.push({date: new Date().toISOString(), requetes: used, arret: stop === 'BUDGET' ? 'budget du jour atteint' : stop, restant: remaining.length});
 state.complete = remaining.length === 0;
 write('state.json', state);
 console.log(`Requêtes : ${used} · tâches restantes : ${remaining.length}${stop ? ' · arrêt : ' + stop : ''}`);
-if (stop && stop !== 'BUDGET') process.exitCode = 1;
+// Quota du jour ou limite par minute atteints : arrêt normal, reprise au prochain passage.
+if (stop && stop !== 'BUDGET' && !/limit|too many|requests/i.test(stop)) process.exitCode = 1;
