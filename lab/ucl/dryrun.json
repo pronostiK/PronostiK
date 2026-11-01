@@ -35,6 +35,16 @@
     "emblem": "https://crests.football-data.org/laliga.png"
    },
    {
+    "code": "PPL",
+    "name": "Liga Portugal",
+    "emblem": "https://crests.football-data.org/PPL.png"
+   },
+   {
+    "code": "DED",
+    "name": "Eredivisie",
+    "emblem": "https://crests.football-data.org/ED.png"
+   },
+   {
     "code": "CL",
     "name": "Ligue des champions",
     "emblem": "https://crests.football-data.org/CL.png"
@@ -42,8 +52,6 @@
   ]
  },
  "extra": {
-  "POR": 81,
-  "NED": 90,
   "BEL": 80,
   "SCO": 66,
   "TUR": 81,
@@ -535,19 +543,19 @@
   {
    "d": "2026-11-03T17:45:00Z",
    "h": "Shaktar",
-   "a": "Sporting CP",
+   "a": "Sp Lisbon",
    "elo": [
     1661,
-    1844
+    1847
    ],
    "p": [
-    0.2239,
-    0.2311,
-    0.545
+    0.2213,
+    0.2299,
+    0.5488
    ],
    "lam": [
-    1.4158,
-    1.8178
+    1.4105,
+    1.8263
    ],
    "score": "1–1",
    "form": {
@@ -579,6 +587,14 @@
     ],
     "a": [
      {
+      "d": "2026-10-30",
+      "o": "Casa Pia",
+      "v": "E",
+      "f": 2,
+      "a": 0,
+      "c": ""
+     },
+     {
       "d": "2026-10-25",
       "o": "Academico Viseu",
       "v": "D",
@@ -608,14 +624,6 @@
       "v": "E",
       "f": 3,
       "a": 1,
-      "c": ""
-     },
-     {
-      "d": "2026-09-19",
-      "o": "Arouca",
-      "v": "D",
-      "f": 2,
-      "a": 2,
       "c": ""
      }
     ]
@@ -741,21 +749,29 @@
    "h": "Feyenoord",
    "a": "Inter",
    "elo": [
-    1716,
+    1708,
     1811
    ],
    "p": [
-    0.3166,
-    0.2561,
-    0.4272
+    0.3076,
+    0.2549,
+    0.4375
    ],
    "lam": [
-    1.5898,
-    1.5709
+    1.5735,
+    1.5914
    ],
    "score": "1–1",
    "form": {
     "h": [
+     {
+      "d": "2026-10-31",
+      "o": "For Sittard",
+      "v": "D",
+      "f": 1,
+      "a": 1,
+      "c": ""
+     },
      {
       "d": "2026-10-25",
       "o": "PSV Eindhoven",
@@ -787,14 +803,6 @@
       "f": 3,
       "a": 2,
       "c": "C1"
-     },
-     {
-      "d": "2026-10-10",
-      "o": "AZ Alkmaar",
-      "v": "D",
-      "f": 2,
-      "a": 0,
-      "c": ""
      }
     ],
     "a": [
@@ -840,7 +848,7 @@
      }
     ]
    },
-   "stats": false,
+   "stats": true,
    "crest": [
     "https://crests.football-data.org/675.png",
     "https://crests.football-data.org/108.png"
@@ -1916,24 +1924,32 @@
   },
   {
    "d": "2026-11-04T20:00:00Z",
-   "h": "PSV",
+   "h": "PSV Eindhoven",
    "a": "Club Brugge",
    "elo": [
-    1770,
+    1771,
     1807
    ],
    "p": [
-    0.3877,
-    0.2592,
-    0.3531
+    0.3895,
+    0.2591,
+    0.3514
    ],
    "lam": [
-    1.716,
-    1.4267
+    1.7191,
+    1.4235
    ],
    "score": "1–1",
    "form": {
     "h": [
+     {
+      "d": "2026-10-31",
+      "o": "Willem II",
+      "v": "D",
+      "f": 7,
+      "a": 0,
+      "c": ""
+     },
      {
       "d": "2026-10-25",
       "o": "Feyenoord",
@@ -1965,14 +1981,6 @@
       "f": 0,
       "a": 1,
       "c": "C1"
-     },
-     {
-      "d": "2026-10-09",
-      "o": "Heerenveen",
-      "v": "D",
-      "f": 2,
-      "a": 0,
-      "c": ""
      }
     ],
     "a": [
@@ -2139,21 +2147,29 @@
    "h": "Porto",
    "a": "Napoli",
    "elo": [
-    1711,
+    1714,
     1694
    ],
    "p": [
-    0.4592,
-    0.2515,
-    0.2893
+    0.4634,
+    0.2508,
+    0.2858
    ],
    "lam": [
-    1.8438,
-    1.3034
+    1.8515,
+    1.2966
    ],
    "score": "1–1",
    "form": {
     "h": [
+     {
+      "d": "2026-10-31",
+      "o": "Estoril",
+      "v": "D",
+      "f": 4,
+      "a": 0,
+      "c": ""
+     },
      {
       "d": "2026-10-24",
       "o": "Gil Vicente",
@@ -2183,14 +2199,6 @@
       "o": "Maritimo",
       "v": "E",
       "f": 2,
-      "a": 1,
-      "c": ""
-     },
-     {
-      "d": "2026-09-20",
-      "o": "Benfica",
-      "v": "D",
-      "f": 3,
       "a": 1,
       "c": ""
      }
@@ -2238,7 +2246,7 @@
      }
     ]
    },
-   "stats": false,
+   "stats": true,
    "crest": [
     "https://crests.football-data.org/503.png",
     "https://crests.football-data.org/113.png"
