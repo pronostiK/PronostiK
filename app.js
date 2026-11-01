@@ -225,9 +225,14 @@
     renderMatches(cache.preds, cache.meta);
   });
 
+  // Noms affichés sans ambiguïté (les données gardent les noms des fichiers sources).
+  const DISPLAY = {'Milan': 'AC Milan', 'Inter': 'Inter Milan'};
+  const dn = n => DISPLAY[n] || n;
+
   async function refresh() {
     try {
-      const [preds, meta, sc] = await Promise.all([load('predictions.json'), load('meta.json').catch(() => null), load('scorecard.json').catch(() => null)]);
+      const [raw, meta, sc] = await Promise.all([load('predictions.json'), load('meta.json').catch(() => null), load('scorecard.json').catch(() => null)]);
+      const preds = raw.map(p => ({...p, home: dn(p.home), away: dn(p.away), form: p.form ? {h: (p.form.h || []).map(m => ({...m, o: dn(m.o)})), a: (p.form.a || []).map(m => ({...m, o: dn(m.o)}))} : p.form}));
       const openIds = [...document.querySelectorAll('button.head[aria-expanded="true"]')].map(b => b.getAttribute('aria-controls'));
       cache = {preds, meta, sc};
       renderMatches(preds, meta);
