@@ -1,0 +1,43 @@
+name: Étude absences (collecte quotidienne)
+
+# Les tâches planifiées ne s'exécutent que depuis la branche principale : ce fichier lance chaque jour la collecte
+# sur la branche experience-absences. Il ne touche ni au site, ni au modèle, ni aux données de production.
+on:
+  schedule:
+    - cron: '41 0 * * *'     # 00:41 UTC, juste après la remise à zéro du quota API-Football
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pronostik-absences
+  cancel-in-progress: false
+
+jobs:
+  collecte:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: experience-absences
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Collecter (≤ 90 requêtes), sauf si la collecte est terminée
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: |
+          if [ -f lab/absences/state.json ] && grep -q '"complete":true' lab/absences/state.json; then echo "Collecte terminée."; exit 0; fi
+          node scripts/absences-collect.mjs
+      - name: Enregistrer sur la branche expérimentale
+        if: always()
+        run: |
+          git config user.name "pronostik-bot"
+          git config user.email "pronostik-bot@users.noreply.github.com"
+          git add lab
+          if ! git diff --cached --quiet; then
+            git commit -m "Étude absences : collecte"
+            git pull --rebase origin experience-absences
+            git push origin HEAD:experience-absences
+          fi
