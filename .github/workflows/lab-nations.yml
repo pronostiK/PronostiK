@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 20
       - name: Sonder la source
-        run: node scripts/lab-nations.mjs
+        run: node scripts/lab-nations-fx.mjs
       - name: Enregistrer le résultat
         if: always()
         run: |
