@@ -531,6 +531,10 @@
       const preds = raw.map(p => ({...p, rawHome: p.home, rawAway: p.away, home: dn(p.home), away: dn(p.away), form: p.form ? {h: (p.form.h || []).map(m => ({...m, o: dn(m.o)})), a: (p.form.a || []).map(m => ({...m, o: dn(m.o)}))} : p.form,
         stats: p.stats ? {...p.stats, h2h: (p.stats.h2h || []).map(m => ({...m, h: dn(m.h), a: dn(m.a)})), dom: p.stats.dom && {...p.stats.dom, matchs: (p.stats.dom.matchs || []).map(m => ({...m, o: dn(m.o)}))}, ext: p.stats.ext && {...p.stats.ext, matchs: (p.stats.ext.matchs || []).map(m => ({...m, o: dn(m.o)}))}} : p.stats}));
       const openIds = [...document.querySelectorAll('button.head[aria-expanded="true"]')].map(b => b.getAttribute('aria-controls'));
+      // Blason manquant (pronostic enregistré avant l'ajout des blasons) : on le reprend du classement.
+      const crestOf = (lg, t) => (stand && stand[lg] && stand[lg].rows || []).find(r => r.t === t)?.crest || null;
+      for (const p of preds) { const c = p.crest || [null, null]; if (!c[0] || !c[1]) p.crest = [c[0] || crestOf(p.lg, p.rawHome), c[1] || crestOf(p.lg, p.rawAway)]; }
+      if (resume) for (const k of ['surprises', 'tenus']) for (const x of resume[k] || []) { const c = x.crest || [null, null]; x.crest = [c[0] || crestOf(x.lg, x.home), c[1] || crestOf(x.lg, x.away)]; }
       cache = {preds, meta, sc, stand, resume};
       renderResume(resume);
       renderMatches(preds, meta);
