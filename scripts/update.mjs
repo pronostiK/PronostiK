@@ -11,6 +11,7 @@ import {createModel, createRatings, createElo, hybridProbs, marketsFromLambdas} 
 import {footballDataDate, resolveName} from '../lib.mjs';
 import {LEAGUES, ALIASES} from '../leagues.mjs';
 import {parseCSV, parseFixtures} from '../csv.mjs';
+import {runEuroElo, uclPredict, makeResolver, parseDomesticCSV, countryOfArea, EXTRA_MAIN, EXTRA_NEW, LG_COUNTRY} from './ucl-lib.mjs';
 
 const API = process.env.FD_API_BASE || 'https://api.football-data.org/v4';
 const CSV_BASE = process.env.CSV_BASE || 'https://www.football-data.co.uk';
@@ -234,6 +235,110 @@ async function main() {
     }
   }
 
+  // --- 4c. Ligue des champions : Elo européen (championnats nationaux + C1), voir lab/RAPPORT-C1.md.
+  // Les notes de départ (data/ucl-seed.json, au 1er juillet 2026) sont mises à jour avec tous les matchs joués depuis.
+  let uclStandings = null, uclInfo = {ok: false};
+  try {
+    const seed = readJSON('ucl-seed.json', null);
+    if (!seed) throw new Error('graine Elo absente');
+    if (!seed.publish && !process.env.UCL_FORCE) throw new Error('désactivée (essai en cours)');
+    const P = seed.params, from = seed.asOf;
+    if (API_DELAY) await sleep(API_DELAY);
+    const cm = await api(`/competitions/CL/matches?season=${season}`);
+    const clMatches = cm.matches || [];
+    if (cm.competition?.emblem) emblems.CL = cm.competition.emblem;
+    // Pays des clubs (une requête par semaine)
+    if (!state.uclTeams || state.uclTeamsSeason !== season || (NOW - new Date(state.uclTeamsAt || 0)) > 6 * 86400000) {
+      if (API_DELAY) await sleep(API_DELAY);
+      const tj = await api(`/competitions/CL/teams?season=${season}`);
+      state.uclTeams = Object.fromEntries((tj.teams || []).map(t => [t.id, {c: countryOfArea(t.area), short: t.shortName || t.name, name: t.name}]));
+      state.uclTeamsAt = NOW.toISOString(); state.uclTeamsSeason = season;
+    }
+    // Championnats hors des 5 suivis (une fois par semaine)
+    let extra = readJSON('ucl-domestic.json', null);
+    if (!extra || extra.from !== from || (NOW - new Date(extra.at || 0)) > CSV_REFRESH_DAYS * 86400000) {
+      const rows = [], code = `${String(season).slice(2)}${String(season + 1).slice(2)}`, prevCode = `${String(season - 1).slice(2)}${String(season).slice(2)}`;
+      const got = {};
+      for (const [c, f] of Object.entries(EXTRA_MAIN)) for (const sc of [prevCode, code]) {
+        try { const r = await fetch(`${CSV_BASE}/mmz4281/${sc}/${f}.csv`, {signal: AbortSignal.timeout(20000)}); if (r.ok) { const x = parseDomesticCSV(await r.text(), c, 'main', from); rows.push(...x); got[c] = (got[c] || 0) + x.length; } } catch {}
+      }
+      for (const [c, f] of Object.entries(EXTRA_NEW)) {
+        try { const r = await fetch(`${CSV_BASE}/new/${f}.csv`, {signal: AbortSignal.timeout(20000)}); if (r.ok) { const x = parseDomesticCSV(await r.text(), c, 'new', from); rows.push(...x); got[c] = x.length; } } catch {}
+      }
+      if (rows.length || !extra) { extra = {from, at: NOW.toISOString(), got, rows}; writeIfChanged('ucl-domestic.json', extra); }
+    }
+    // Clubs connus par pays (graine + championnats) pour retrouver les noms de football-data.org
+    const knownBy = {};
+    const addK = (c, n) => { (knownBy[c] ||= new Set()).add(n); };
+    for (const k of Object.keys(seed.ratings)) { const i = k.indexOf('|'); addK(k.slice(0, i), k.slice(i + 1)); }
+    const domRows = [];
+    for (const m of history) { const c = LG_COUNTRY[m.lg]; if (!c || m.division !== 'L1' || m.date < from) continue; domRows.push([m.date, c, m.home, m.away, m.hg, m.ag]); }
+    for (const r of [...domRows, ...(extra?.rows || [])]) { addK(r[1], r[2]); addK(r[1], r[3]); }
+    const resolveCL = makeResolver(Object.fromEntries(Object.entries(knownBy).map(([c, s]) => [c, [...s]])));
+    const teamInfo = t => { const ti = state.uclTeams[t?.id] || {}; const c = ti.c || 'XXX'; return {c, key: resolveCL(t?.name || t?.shortName || '', c), short: ti.short || t?.shortName || t?.name}; };
+    const events = [];
+    for (const [d, c, h, a, hg, ag] of [...domRows, ...(extra?.rows || [])]) events.push({date: d, h: c + '|' + h, a: c + '|' + a, hc: c, ac: c, hg, ag, cl: false});
+    for (const m of clMatches) {
+      statusById.set(m.id, m.status);
+      const hg = m.score?.regularTime?.home ?? m.score?.fullTime?.home, ag = m.score?.regularTime?.away ?? m.score?.fullTime?.away;   // score à 90 minutes
+      if (m.status !== 'FINISHED' || hg == null || ag == null) continue;
+      apiResult.set(m.id, {hg: Number(hg), ag: Number(ag)});   // réglé sur le score à 90 minutes, comme les paris 1N2
+      const H = teamInfo(m.homeTeam), A = teamInfo(m.awayTeam);
+      events.push({date: footballDataDate(m.utcDate), h: H.key, a: A.key, hc: H.c, ac: A.c, hg: Number(hg), ag: Number(ag), cl: true, neutral: m.stage === 'FINAL'});
+    }
+    events.sort((x, y) => x.date.localeCompare(y.date) || (x.cl - y.cl));
+    // Forme toutes compétitions (5 derniers matchs) relevée pendant le calcul
+    const recent = new Map();
+    const disp = k => k.slice(k.indexOf('|') + 1);
+    const push = (t, x) => { const l = recent.get(t) || []; l.push(x); if (l.length > 5) l.shift(); recent.set(t, l); };
+    const {ratings, add} = runEuroElo(events, P, null, seed.ratings, e => { push(e.h, {d: e.date, o: disp(e.a), v: 'D', f: e.hg, a: e.ag, c: e.cl ? 'C1' : ''}); push(e.a, {d: e.date, o: disp(e.h), v: 'E', f: e.ag, a: e.hg, c: e.cl ? 'C1' : ''}); });
+    const LG_OF = Object.fromEntries(Object.entries(LG_COUNTRY).map(([lg, c]) => [c, lg]));
+    const r4b = v => Math.round(v * 10000) / 10000;
+    let n = 0;
+    for (const m of clMatches) {
+      if (!['SCHEDULED', 'TIMED'].includes(m.status) || !m.homeTeam?.id || !m.awayTeam?.id) continue;
+      const date = footballDataDate(m.utcDate);
+      if (!date || date < todayStr || date > end) continue;
+      const id = 'fd' + m.id, old = byId.get(id);
+      if (old && NOW >= new Date(old.kickoff) && old.kickoff === m.utcDate) continue;     // figé après le coup d'envoi
+      const H = teamInfo(m.homeTeam), A = teamInfo(m.awayTeam);
+      add(H.key, H.c); add(A.key, A.c);
+      const rh = ratings.get(H.key), ra = ratings.get(A.key), x = uclPredict(rh, ra, m.stage === 'FINAL', P);
+      const lgH = LG_OF[H.c], lgA = LG_OF[A.c];
+      const nameH = lgH ? disp(H.key) : H.short, nameA = lgA ? disp(A.key) : A.short;
+      const mk2 = marketsFromLambdas(x.lam[0], x.lam[1], false);
+      const pois = (k, l) => { let p = Math.exp(-l); for (let i = 1; i <= k; i++) p *= l / i; return p; };
+      let best = [0, 0, -1]; for (let i = 0; i <= 6; i++) for (let j = 0; j <= 6; j++) { const q = pois(i, x.lam[0]) * pois(j, x.lam[1]); if (q > best[2]) best = [i, j, q]; }
+      let stats = null;
+      if (lgH && lgA) { const a = matchStats(lgH, disp(H.key), disp(H.key), date), b = matchStats(lgA, disp(A.key), disp(A.key), date); if (a.dom.tout.p && b.ext.tout.p) stats = {equipes: null, dom: a.dom, ext: b.ext, h2h: [], national: true}; }
+      const entry = {id, apiId: m.id, lg: 'CL', date, kickoff: m.utcDate, home: nameH, away: nameA, crest: [m.homeTeam?.crest || null, m.awayTeam?.crest || null],
+        p: x.p.map(r4b), lam: x.lam.map(r4b), score: `${best[0]}–${best[1]}`, model: 'euro-elo', elo: [Math.round(rh), Math.round(ra)],
+        markets: {o15: r4b(mk2.o15), o25: r4b(mk2.o25), btts: r4b(mk2.btts), ht: mk2.ht.map(r4b), scores: mk2.scores.map(([sc, v]) => [sc, r4b(v)])},
+        form: {h: (recent.get(H.key) || []).slice().reverse(), a: (recent.get(A.key) || []).slice().reverse()}, stats, stage: m.stage, md: m.matchday ?? null,
+        rel: 'test', err: null, savedAt: old?.savedAt || NOW.toISOString(), updatedAt: old?.updatedAt || NOW.toISOString(), res: null, final: null};
+      if (old) {
+        const same = JSON.stringify([old.p, old.lam, old.kickoff, old.home, old.away]) === JSON.stringify([entry.p, entry.lam, entry.kickoff, entry.home, entry.away]);
+        if (same) { entry.updatedAt = old.updatedAt; entry.form = old.form; } else entry.updatedAt = NOW.toISOString();
+        predictions = predictions.filter(p => p.id !== id);
+      }
+      predictions.push(entry); byId.set(id, entry); n++;
+    }
+    // Classement de la phase de ligue
+    const T = {};
+    const row = (t, crest) => T[t.id] || (T[t.id] = {t: (state.uclTeams[t.id]?.short) || t.shortName || t.name, crest: t.crest || null, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0, form: []});
+    for (const m of clMatches.filter(m => m.stage === 'LEAGUE_STAGE').sort((a, b) => a.utcDate.localeCompare(b.utcDate))) {
+      if (!m.homeTeam?.id || !m.awayTeam?.id) continue;
+      const h = row(m.homeTeam), a = row(m.awayTeam);
+      if (m.status !== 'FINISHED') continue;
+      const hg = m.score.fullTime.home, ag = m.score.fullTime.away;
+      h.p++; a.p++; h.gf += hg; h.ga += ag; a.gf += ag; a.ga += hg;
+      if (hg > ag) { h.w++; h.pts += 3; a.l++; h.form.push('V'); a.form.push('D'); } else if (hg < ag) { a.w++; a.pts += 3; h.l++; h.form.push('D'); a.form.push('V'); } else { h.d++; a.d++; h.pts++; a.pts++; h.form.push('N'); a.form.push('N'); }
+    }
+    const rowsCL = Object.values(T).sort((x, y) => y.pts - x.pts || (y.gf - y.ga) - (x.gf - x.ga) || y.gf - x.gf || x.t.localeCompare(y.t)).map((r, i) => ({rang: i + 1, ...r, form: r.form.slice(-5).join('')}));
+    if (rowsCL.some(r => r.p)) uclStandings = {saison: season, maj: todayStr, phase: 'ligue', rows: rowsCL};
+    uclInfo = {ok: true, matchs: clMatches.length, joues: events.filter(e => e.cl).length, pronostics: n, sansPays: Object.values(state.uclTeams).filter(t => !t.c).length};
+  } catch (e) { if (!/^désactivée/.test(e.message)) { errors.CL = String(e.message || e).slice(0, 160); console.error('C1 :', e.message); } }
+
   // --- 4b. cotes du marché pour les matchs à venir (comparaison affichée sur le site ; jamais bloquant)
   const oddsInfo = {ok: false, rows: 0, matched: 0, error: null};
   try {
@@ -366,6 +471,7 @@ async function main() {
         .map((r, i) => ({rang: i + 1, ...r, form: r.form.slice(-5).join(''), crest: crest[r.t] || null}));
       standings[lg.code] = {saison: season, maj: S[S.length - 1].date, rows};
     }
+    if (uclStandings) standings.CL = uclStandings;
     writeIfChanged('standings.json', standings);
   }
 
@@ -422,7 +528,7 @@ async function main() {
   const errKeys = Object.keys(errors);
   const meta = {
     updated: changed ? NOW.toISOString() : (prevMeta.updated || NOW.toISOString()), season, source: 'football-data.org',
-    leagues: LEAGUES.map(l => ({code: l.code, name: l.name, emblem: emblems[l.code] || (prevMeta.leagues || []).find(x => x.code === l.code)?.emblem || null})), errors,
+    leagues: [...LEAGUES, ...(uclInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'CL') ? [{code: 'CL', name: 'Ligue des champions'}] : [])].map(l => ({code: l.code, name: l.name, emblem: emblems[l.code] || (prevMeta.leagues || []).find(x => x.code === l.code)?.emblem || null})), errors, ucl: uclInfo,
     lastError: errKeys.length ? errKeys.map(k => `${k} : ${errors[k]}`).join(' · ') : null,
     unmapped: [...unmapped.values()],
     odds: oddsInfo,

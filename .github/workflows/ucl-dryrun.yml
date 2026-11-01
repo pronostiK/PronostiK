@@ -1,0 +1,47 @@
+name: Essai C1 (sans publication)
+
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/ucl-lib.mjs', 'scripts/update.mjs', 'data/ucl-seed.json', '.github/workflows/ucl-dryrun.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pronostik-ucl-dryrun
+  cancel-in-progress: true
+
+jobs:
+  essai:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Robot complet sur une copie des données
+        env:
+          FD_TOKEN: ${{ secrets.FD_TOKEN }}
+          DATA_DIR: ${{ runner.temp }}/d/
+          UCL_FORCE: '1'
+        run: |
+          mkdir -p "$DATA_DIR" && cp -r data/. "$DATA_DIR"
+          node scripts/update.mjs 2>&1 | tail -20 | tee lab/ucl/dryrun-log.txt
+          node -e "
+            const d=process.env.DATA_DIR, fs=require('fs');
+            const P=JSON.parse(fs.readFileSync(d+'predictions.json')).filter(p=>p.lg==='CL');
+            const M=JSON.parse(fs.readFileSync(d+'meta.json')), S=JSON.parse(fs.readFileSync(d+'standings.json'));
+            const X=fs.existsSync(d+'ucl-domestic.json')?JSON.parse(fs.readFileSync(d+'ucl-domestic.json')):null;
+            fs.writeFileSync('lab/ucl/dryrun.json', JSON.stringify({meta:{ucl:M.ucl,errors:M.errors,leagues:M.leagues}, extra: X&&X.got, standingsCL: S.CL, preds:P.map(p=>({d:p.kickoff,h:p.home,a:p.away,elo:p.elo,p:p.p,lam:p.lam,score:p.score,form:p.form,stats:!!p.stats,crest:p.crest}))},null,1));"
+      - name: Enregistrer le résultat de l'essai
+        if: always()
+        run: |
+          git config user.name "pronostik-bot"
+          git config user.email "pronostik-bot@users.noreply.github.com"
+          git add lab/ucl/dryrun.json lab/ucl/dryrun-log.txt || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Essai C1 (sans publication)"
+            for i in 1 2 3; do git pull --rebase -X theirs && git push && break; git rebase --abort 2>/dev/null; sleep 5; done
+          fi
