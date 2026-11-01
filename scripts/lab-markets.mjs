@@ -40,10 +40,11 @@ const devHT = dev.filter(r => r.y.htGoals != null); out.partButs1reMT = +(devHT.
 // recalibration logistique p' = σ(a + b·logit p), réglée sur DEV
 const logit = p => Math.log(Math.min(1 - 1e-6, Math.max(1e-6, p)) / (1 - Math.min(1 - 1e-6, Math.max(1e-6, p))));
 const sig = z => 1 / (1 + Math.exp(-z));
-function fitCal(X, Y) { let a = 0, b = 1; for (let it = 0; it < 60; it++) { let ga = 0, gb = 0, haa = 0, hab = 0, hbb = 0; for (let i = 0; i < X.length; i++) { const x = logit(X[i]), p = sig(a + b * x), w = p * (1 - p), e = Y[i] - p; ga += e; gb += e * x; haa += w; hab += w * x; hbb += w * x * x; } const det = haa * hbb - hab * hab; a += (hbb * ga - hab * gb) / det; b += (haa * gb - hab * ga) / det; } return p => sig(a + b * logit(p)); }
+const calParams = {};
+function fitCal(X, Y, key) { let a = 0, b = 1; for (let it = 0; it < 60; it++) { let ga = 0, gb = 0, haa = 0, hab = 0, hbb = 0; for (let i = 0; i < X.length; i++) { const x = logit(X[i]), p = sig(a + b * x), w = p * (1 - p), e = Y[i] - p; ga += e; gb += e * x; haa += w; hab += w * x; hbb += w * x * x; } const det = haa * hbb - hab * hab; a += (hbb * ga - hab * gb) / det; b += (haa * gb - hab * ga) / det; } if (key) calParams[key] = {a, b}; return p => sig(a + b * logit(p)); }
 for (const k of ['o15', 'o25', 'btts']) {
   const base = mean(dev.map(r => r.y[k]));                       // fréquence moyenne (référence naïve), réglée sur DEV
-  const cal = fitCal(dev.map(r => r.p[k]), dev.map(r => r.y[k]));
+  const cal = fitCal(dev.map(r => r.p[k]), dev.map(r => r.y[k]), k);
   const T = test, mod = T.map(r => b2(r.p[k], r.y[k])), calb = T.map(r => b2(cal(r.p[k]), r.y[k])), nai = T.map(r => b2(base, r.y[k]));
   const res = {n: T.length, frequenceReelle: +mean(T.map(r => r.y[k])).toFixed(3), probMoyenneModele: +mean(T.map(r => r.p[k])).toFixed(3),
     brierModele: +mean(mod).toFixed(4), brierRecalibre: +mean(calb).toFixed(4), brierNaif: +mean(nai).toFixed(4),
@@ -59,6 +60,7 @@ for (const k of ['o15', 'o25', 'btts']) {
   const mod = T.map(r => bri(r.p.ht, r.y.ht)), nai = T.map(r => bri(base, r.y.ht));
   out.marches.miTemps = {n: T.length, brierModele: +mean(mod).toFixed(4), brierNaif: +mean(nai).toFixed(4), modeleMoinsNaif: ci(mod.map((v, i) => v - nai[i])), frequenceNulMT: +mean(T.map(r => +(r.y.ht === 1))).toFixed(3), probNulMTModele: +mean(T.map(r => r.p.ht[1])).toFixed(3)}; }
 { const T = test; out.marches.scoreExact = {n: T.length, probMoyenneAnnoncee: +mean(T.map(r => r.p.score)).toFixed(3), tauxReussite: +mean(T.map(r => r.y.score)).toFixed(3), scoresLesPlusProposes: Object.entries(T.reduce((a, r) => (a[r.p.scoreLab] = (a[r.p.scoreLab] || 0) + 1, a), {})).sort((a, b) => b[1] - a[1]).slice(0, 4)}; }
+out.recalibration = calParams;
 mkdirSync('lab', {recursive: true});
 writeFileSync('lab/markets-result.json', JSON.stringify(out, null, 1));
 console.log(JSON.stringify(out, null, 1));
