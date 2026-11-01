@@ -1,0 +1,68 @@
+{
+ "espn_nations": {
+  "status": 400,
+  "n": null,
+  "sample": "{\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+ },
+ "espn_friendly": {
+  "status": 400,
+  "n": null,
+  "sample": "{\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+ },
+ "espn_wcq_uefa": {
+  "status": 400,
+  "n": null,
+  "sample": "{\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+ },
+ "espn_nations_oct": {
+  "status": 400,
+  "n": null,
+  "sample": "{\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+ },
+ "uefa_unl": {
+  "status": 200,
+  "n": 52,
+  "sample": [
+   "2026-11-12T17:00:00Z Türki̇ye - Belgium UPCOMING",
+   "2026-11-12T17:00:00Z Armenia - Cyprus UPCOMING",
+   "2026-11-12T19:45:00Z Czechia - Spain UPCOMING",
+   "2026-11-12T19:45:00Z Albania - Finland UPCOMING",
+   "2026-11-12T19:45:00Z Montenegro - Latvia UPCOMING",
+   "2026-11-12T19:45:00Z San Marino - Belarus UPCOMING",
+   "2026-11-12T19:45:00Z Italy - France UPCOMING",
+   "2026-11-12T19:45:00Z England - Croatia UPCOMING",
+   "2026-11-13T17:00:00Z Moldova - Kazakhstan UPCOMING",
+   "2026-11-13T19:45:00Z Slovakia - Faroe Islands UPCOMING",
+   "2026-11-13T19:45:00Z Luxembourg - Estonia UPCOMING",
+   "2026-11-13T19:45:00Z Bulgaria - Iceland UPCOMING",
+   "2026-11-13T19:45:00Z Andorra - Gibraltar UPCOMING",
+   "2026-11-13T19:45:00Z Liechtenstein - Azerbaijan UPCOMING",
+   "2026-11-13T19:45:00Z Netherlands - Greece UPCOMING",
+   "2026-11-13T19:45:00Z Serbia - Germany UPCOMING",
+   "2026-11-13T19:45:00Z Scotland - North Macedonia UPCOMING",
+   "2026-11-13T19:45:00Z Slovenia - Switzerland UPCOMING",
+   "2026-11-14T14:00:00Z Kosovo - Israel UPCOMING",
+   "2026-11-14T17:00:00Z Norway - Wales UPCOMING",
+   "2026-11-14T17:00:00Z Georgia - Hungary UPCOMING",
+   "2026-11-14T19:45:00Z Sweden - Bosnia and Herzegovina UPCOMING",
+   "2026-11-14T19:45:00Z Romania - Poland UPCOMING",
+   "2026-11-14T19:45:00Z Portugal - Denmark UPCOMING",
+   "2026-11-14T19:45:00Z Austria - Republic of Ireland UPCOMING",
+   "2026-11-14T19:45:00Z Northern Ireland - Ukraine UPCOMING",
+   "2026-11-15T14:00:00Z Latvia - Armenia UPCOMING",
+   "2026-11-15T14:00:00Z Cyprus - Montenegro UPCOMING",
+   "2026-11-15T17:00:00Z Finland - San Marino UPCOMING",
+   "2026-11-15T17:00:00Z Belarus - Albania UPCOMING",
+   "2026-11-15T19:45:00Z France - Türki̇ye UPCOMING",
+   "2026-11-15T19:45:00Z Belgium - Italy UPCOMING",
+   "2026-11-15T19:45:00Z Croatia - Czechia UPCOMING",
+   "2026-11-15T19:45:00Z Spain - England UPCOMING",
+   "2026-11-16T15:00:00Z Faroe Islands - Moldova UPCOMING",
+   "2026-11-16T15:00:00Z Kazakhstan - Slovakia UPCOMING",
+   "2026-11-16T17:00:00Z Iceland - Luxembourg UPCOMING",
+   "2026-11-16T17:00:00Z Estonia - Bulgaria UPCOMING",
+   "2026-11-16T17:00:00Z Lithuania - Liechtenstein UPCOMING",
+   "2026-11-16T19:45:00Z Gibraltar - Malta UPCOMING"
+  ]
+ }
+}
