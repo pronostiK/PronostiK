@@ -1,5 +1,7 @@
 écrit shadow.json
+écrit standings.json
 écrit resume.json
+écrit history.json
 écrit predictions.json
 écrit meta.json
-OK · 152 pronostic(s) en attente · 22 réglé(s)
+OK · 161 pronostic(s) en attente · 23 réglé(s)
