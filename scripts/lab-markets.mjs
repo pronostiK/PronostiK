@@ -27,10 +27,11 @@ for (const lg of LEAGUES) {
     const lh = r.lamH * 0.45, la = r.lamA * 0.45;   // part des buts en 1re mi-temps (≈ 45 %, valeur standard, vérifiée plus bas)
     let ht = [0, 0, 0]; for (let i = 0; i <= 8; i++) for (let j = 0; j <= 8; j++) { const p = pois(i, lh) * pois(j, la); ht[i > j ? 0 : i === j ? 1 : 2] += p; }
     const top = g.slice().sort((a, b) => b.p - a.p)[0];
+    const dist = {}; for (const x of g) { const k = x.i <= 3 && x.j <= 3 ? `${x.i}-${x.j}` : 'autre'; dist[k] = (dist[k] || 0) + x.p; }
     const ou = m.o25 && m.u25 ? (1 / m.o25) / (1 / m.o25 + 1 / m.u25) : null;
     rows.push({lg: lg.code, date: m.date, per: m.date >= TEST ? 'test' : 'dev',
-      p: {o15: S(x => x.i + x.j > 1), o25: S(x => x.i + x.j > 2), btts: S(x => x.i > 0 && x.j > 0), ht, score: top.p, scoreLab: `${top.i}-${top.j}`, ouMk: ou},
-      y: {o15: +(m.hg + m.ag > 1), o25: +(m.hg + m.ag > 2), btts: +(m.hg > 0 && m.ag > 0), ht: m.hthg == null ? null : (m.hthg > m.htag ? 0 : m.hthg === m.htag ? 1 : 2), score: +(`${m.hg}-${m.ag}` === `${top.i}-${top.j}`), htGoals: m.hthg == null ? null : m.hthg + m.htag, goals: m.hg + m.ag}});
+      p: {dist, o15: S(x => x.i + x.j > 1), o25: S(x => x.i + x.j > 2), btts: S(x => x.i > 0 && x.j > 0), ht, score: top.p, scoreLab: `${top.i}-${top.j}`, ouMk: ou},
+      y: {o15: +(m.hg + m.ag > 1), o25: +(m.hg + m.ag > 2), btts: +(m.hg > 0 && m.ag > 0), ht: m.hthg == null ? null : (m.hthg > m.htag ? 0 : m.hthg === m.htag ? 1 : 2), score: +(`${m.hg}-${m.ag}` === `${top.i}-${top.j}`), htGoals: m.hthg == null ? null : m.hthg + m.htag, goals: m.hg + m.ag, scoreReel: m.hg <= 3 && m.ag <= 3 ? `${m.hg}-${m.ag}` : 'autre'}});
   }
 }
 const dev = rows.filter(r => r.per === 'dev'), test = rows.filter(r => r.per === 'test');
@@ -61,6 +62,84 @@ for (const k of ['o15', 'o25', 'btts']) {
   out.marches.miTemps = {n: T.length, brierModele: +mean(mod).toFixed(4), brierNaif: +mean(nai).toFixed(4), modeleMoinsNaif: ci(mod.map((v, i) => v - nai[i])), frequenceNulMT: +mean(T.map(r => +(r.y.ht === 1))).toFixed(3), probNulMTModele: +mean(T.map(r => r.p.ht[1])).toFixed(3)}; }
 { const T = test; out.marches.scoreExact = {n: T.length, probMoyenneAnnoncee: +mean(T.map(r => r.p.score)).toFixed(3), tauxReussite: +mean(T.map(r => r.y.score)).toFixed(3), scoresLesPlusProposes: Object.entries(T.reduce((a, r) => (a[r.p.scoreLab] = (a[r.p.scoreLab] || 0) + 1, a), {})).sort((a, b) => b[1] - a[1]).slice(0, 4)}; }
 out.recalibration = calParams;
+// ================= Rapport détaillé (audit) =================
+const LL = (p, y) => -(y ? Math.log(Math.max(1e-12, p)) : Math.log(Math.max(1e-12, 1 - p)));
+const seasonOf = d => { const y = +d.slice(0, 4), m = +d.slice(5, 7), s0 = m >= 8 ? y : y - 1; return `${s0}-${String(s0 + 1).slice(2)}`; };
+const LGN = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga'};
+const f4 = v => (v < 0 ? '−' : v > 0 ? '+' : '') + Math.abs(v).toFixed(4).replace('.', ','), n4 = v => v.toFixed(4).replace('.', ',');
+const fci = c => `${f4(c.diff)} [${f4(c.lo)} ; ${f4(c.hi)}]`;
+const verdict = c => c.hi < 0 ? 'meilleur' : c.lo > 0 ? 'moins bon' : 'non significatif';
+const cals = {}; for (const k of ['o15', 'o25', 'btts']) cals[k] = (() => { const c = calParams[k]; return p => sig(c.a + c.b * logit(p)); })();
+const baseOf = {}; for (const k of ['o15', 'o25', 'btts']) baseOf[k] = mean(dev.map(r => r.y[k]));
+const NAMES = {o15: 'Plus de 1,5 but', o25: 'Plus de 2,5 buts', btts: 'Les deux équipes marquent'};
+let md = `# Rapport : autres marchés (audit détaillé)
+
+Généré par \`scripts/lab-markets.mjs\`. Le moteur et le site ne sont pas modifiés.
+
+## Protocole
+
+- **Réglage (DEV)** : saison 2024-25, ${dev.length} matchs. Les corrections des marchés de buts et les références naïves (fréquences moyennes) y sont estimées.
+- **Validation (TEST)** : matchs à partir du 2025-08-01, ${test.length} matchs, jamais utilisés pour un réglage. Chaque prédiction n'utilise que les matchs antérieurs.
+- **Mesures** : Brier binaire (ou à 3 issues pour la mi-temps), log-loss, calibration par tranches. Différences appariées modèle − référence sur les mêmes matchs, IC à 95 %. Négatif = le modèle fait mieux.
+- **Marché (bookmakers)** : seulement pour +/- 2,5 buts (cotes moyennes de clôture, marge retirée). Les fichiers ne contiennent pas de cotes pour les autres marchés.
+
+`;
+// 1. Marchés binaires
+md += `## 1. Marchés de buts (TEST, n = ${test.length})
+
+| Marché | Version | Brier | Log-loss | Δ Brier vs naïf [IC 95 %] | Δ log-loss vs naïf [IC 95 %] | Verdict (Brier) |
+|---|---|---|---|---|---|---|
+`;
+for (const k of ['o15', 'o25', 'btts']) for (const [vn, f] of [['brut', p => p], ['recalibré', cals[k]]]) {
+  const b = test.map(r => b2(f(r.p[k]), r.y[k])), l = test.map(r => LL(f(r.p[k]), r.y[k])), bn = test.map(r => b2(baseOf[k], r.y[k])), ln = test.map(r => LL(baseOf[k], r.y[k]));
+  const cb = ci(b.map((v, i) => v - bn[i])), cl = ci(l.map((v, i) => v - ln[i]));
+  md += `| ${NAMES[k]} | ${vn} | ${n4(mean(b))} | ${n4(mean(l))} | ${fci(cb)} | ${fci(cl)} | ${verdict(cb)} |\n`;
+}
+{ const M = test.filter(r => r.p.ouMk != null);
+  md += `\n**Plus de 2,5 buts contre les bookmakers** (n = ${M.length}) :\n\n| Version | Brier modèle | Brier marché | Δ Brier [IC 95 %] | Δ log-loss [IC 95 %] |\n|---|---|---|---|---|\n`;
+  for (const [vn, f] of [['brut', p => p], ['recalibré', cals.o25]]) {
+    const bm = M.map(r => b2(f(r.p.o25), r.y.o25)), bk = M.map(r => b2(r.p.ouMk, r.y.o25)), lm = M.map(r => LL(f(r.p.o25), r.y.o25)), lk = M.map(r => LL(r.p.ouMk, r.y.o25));
+    md += `| ${vn} | ${n4(mean(bm))} | ${n4(mean(bk))} | ${fci(ci(bm.map((v, i) => v - bk[i])))} | ${fci(ci(lm.map((v, i) => v - lk[i])))} |\n`;
+  } }
+md += `\n### Calibration (version affichée sur le site : recalibrée)\n\n| Marché | Tranche | n | Annoncé | Observé | ± (erreur type) |\n|---|---|---|---|---|---|\n`;
+for (const k of ['o15', 'o25']) for (const [lo, hi] of [[0, .4], [.4, .5], [.5, .6], [.6, .7], [.7, .8], [.8, .9], [.9, 1.01]]) {
+  const s = test.filter(r => cals[k](r.p[k]) >= lo && cals[k](r.p[k]) < hi); if (s.length < 20) continue;
+  const o = mean(s.map(r => r.y[k]));
+  md += `| ${NAMES[k]} | ${Math.round(lo * 100)}–${Math.min(100, Math.round(hi * 100))} % | ${s.length} | ${(100 * mean(s.map(r => cals[k](r.p[k])))).toFixed(1)} % | ${(100 * o).toFixed(1)} % | ${(100 * Math.sqrt(o * (1 - o) / s.length)).toFixed(1)} |\n`;
+}
+// 2. Mi-temps
+{ const T = test.filter(r => r.y.ht != null), D = dev.filter(r => r.y.ht != null), base = [0, 1, 2].map(k => mean(D.map(r => +(r.y.ht === k))));
+  const bri = (p, y) => p.reduce((s, v, k) => s + (v - (k === y ? 1 : 0)) ** 2, 0), ll3 = (p, y) => -Math.log(Math.max(1e-12, p[y]));
+  const bm = T.map(r => bri(r.p.ht, r.y.ht)), bn = T.map(r => bri(base, r.y.ht)), lm = T.map(r => ll3(r.p.ht, r.y.ht)), ln = T.map(r => ll3(base, r.y.ht));
+  md += `\n## 2. Résultat à la mi-temps (TEST, n = ${T.length})\n\n| | Brier | Log-loss |\n|---|---|---|\n| Modèle | ${n4(mean(bm))} | ${n4(mean(lm))} |\n| Référence naïve (fréquences 2024-25) | ${n4(mean(bn))} | ${n4(mean(ln))} |\n| Δ modèle − naïf [IC 95 %] | ${fci(ci(bm.map((v, i) => v - bn[i])))} | ${fci(ci(lm.map((v, i) => v - ln[i])))} |\n\n### Calibration de chaque issue\n\n| Issue | Tranche | n | Annoncé | Observé | ± |\n|---|---|---|---|---|---|\n`;
+  for (const [k, lab] of [[0, '1 (domicile mène)'], [1, 'N (égalité)'], [2, '2 (extérieur mène)']]) for (const [lo, hi] of [[0, .2], [.2, .3], [.3, .4], [.4, .5], [.5, .6], [.6, 1.01]]) {
+    const s = T.filter(r => r.p.ht[k] >= lo && r.p.ht[k] < hi); if (s.length < 20) continue;
+    const o = mean(s.map(r => +(r.y.ht === k)));
+    md += `| ${lab} | ${Math.round(lo * 100)}–${Math.min(100, Math.round(hi * 100))} % | ${s.length} | ${(100 * mean(s.map(r => r.p.ht[k]))).toFixed(1)} % | ${(100 * o).toFixed(1)} % | ${(100 * Math.sqrt(o * (1 - o) / s.length)).toFixed(1)} |\n`;
+  }
+  md += `\nMoyennes globales : annoncé ${[0, 1, 2].map(k => (100 * mean(T.map(r => r.p.ht[k]))).toFixed(1) + ' %').join(' / ')} · observé ${[0, 1, 2].map(k => (100 * mean(T.map(r => +(r.y.ht === k)))).toFixed(1) + ' %').join(' / ')}.\n`; }
+// 3. Score exact
+{ const T = test, keys = []; for (let i = 0; i <= 3; i++) for (let j = 0; j <= 3; j++) keys.push(`${i}-${j}`); keys.push('autre');
+  const freqDev = Object.fromEntries(keys.map(k => [k, mean(dev.map(r => +(r.y.scoreReel === k)))]));
+  const lm = T.map(r => -Math.log(Math.max(1e-12, r.p.dist[r.y.scoreReel] || 0))), ln = T.map(r => -Math.log(Math.max(1e-12, freqDev[r.y.scoreReel])));
+  md += `\n## 3. Score exact (TEST, n = ${T.length})\n\nLog-loss sur les 17 catégories (16 scores de 0-0 à 3-3, plus « autre ») : modèle ${n4(mean(lm))}, référence naïve (fréquences 2024-25) ${n4(mean(ln))}, Δ ${fci(ci(lm.map((v, i) => v - ln[i])))}.\n\n### Distribution complète : probabilité moyenne annoncée contre fréquence observée\n\n| Score | Annoncé | Observé | n observés | ± |\n|---|---|---|---|---|\n`;
+  for (const k of keys) { const a = mean(T.map(r => r.p.dist[k] || 0)), o = mean(T.map(r => +(r.y.scoreReel === k))); md += `| ${k} | ${(100 * a).toFixed(1)} % | ${(100 * o).toFixed(1)} % | ${T.filter(r => r.y.scoreReel === k).length} | ${(100 * Math.sqrt(o * (1 - o) / T.length)).toFixed(1)} |\n`; }
+  md += `\n### Le score annoncé comme le plus probable\n\n| Probabilité annoncée du score n°1 | n | Annoncé | Réalisé |\n|---|---|---|---|\n`;
+  for (const [lo, hi] of [[0, .1], [.1, .12], [.12, .14], [.14, 1]]) { const s = T.filter(r => r.p.score >= lo && r.p.score < hi); if (s.length < 20) continue; md += `| ${Math.round(lo * 100)}–${Math.min(100, Math.round(hi * 100))} % | ${s.length} | ${(100 * mean(s.map(r => r.p.score))).toFixed(1)} % | ${(100 * mean(s.map(r => r.y.score))).toFixed(1)} % |\n`; } }
+// 4. Ventilation saison × championnat
+md += `\n## 4. Ventilation par saison et par championnat (Δ Brier modèle − naïf, version affichée)\n\nUne cellule n'est fiable qu'avec un effectif suffisant : avec moins de 150 matchs, l'intervalle est large.\n\n| Saison | Championnat | n | +1,5 recalibré | +2,5 recalibré | +2,5 vs marché | Mi-temps 1N2 |\n|---|---|---|---|---|---|---|\n`;
+{ const D = dev.filter(r => r.y.ht != null), baseHT = [0, 1, 2].map(k => mean(D.map(r => +(r.y.ht === k))));
+  const bri = (p, y) => p.reduce((s, v, k) => s + (v - (k === y ? 1 : 0)) ** 2, 0);
+  const seasons = [...new Set(test.map(r => seasonOf(r.date)))].sort();
+  for (const se of seasons) for (const lg of [...Object.keys(LGN), 'ALL']) {
+    const S = test.filter(r => seasonOf(r.date) === se && (lg === 'ALL' || r.lg === lg)); if (S.length < 30) continue;
+    const c15 = ci(S.map(r => b2(cals.o15(r.p.o15), r.y.o15) - b2(baseOf.o15, r.y.o15))), c25 = ci(S.map(r => b2(cals.o25(r.p.o25), r.y.o25) - b2(baseOf.o25, r.y.o25)));
+    const M = S.filter(r => r.p.ouMk != null), cm = M.length > 1 ? ci(M.map(r => b2(cals.o25(r.p.o25), r.y.o25) - b2(r.p.ouMk, r.y.o25))) : null;
+    const H = S.filter(r => r.y.ht != null), ch = H.length > 1 ? ci(H.map(r => bri(r.p.ht, r.y.ht) - bri(baseHT, r.y.ht))) : null;
+    md += `| ${se} | ${lg === 'ALL' ? '**Tous**' : LGN[lg]} | ${S.length} | ${fci(c15)} | ${fci(c25)} | ${cm ? fci(cm) : '—'} | ${ch ? fci(ch) : '—'} |\n`;
+  } }
+md += `\n## Limites\n\n- La validation compte une saison complète plus le début de la suivante : un écart inférieur à environ 0,003 de Brier n'est pas détectable de façon fiable.\n- La « référence naïve » est un plancher : la battre montre que le modèle apporte de l'information, pas qu'il bat les bookmakers.\n- Pas de cotes de bookmakers dans les fichiers pour la mi-temps, le score exact et « les deux équipes marquent » : la comparaison au marché n'est pas possible pour ces marchés.\n- La mi-temps suppose 45 % des buts avant la pause (mesuré : ${(100 * out.partButs1reMT).toFixed(1)} % sur 2024-25) et l'indépendance des deux mi-temps.\n`;
+writeFileSync('lab/RAPPORT-MARCHES.md', md);
 mkdirSync('lab', {recursive: true});
 writeFileSync('lab/markets-result.json', JSON.stringify(out, null, 1));
 console.log(JSON.stringify(out, null, 1));
