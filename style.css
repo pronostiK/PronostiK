@@ -443,3 +443,19 @@ nav a{padding:8px 10px;font-size:13.5px}
 /* Ligue des champions */
 .chip.new{color:#38bdf8;border-color:#38bdf8;font-weight:700}
 .trow.z-mid{border-left-color:#f59e0b}.lz.mid{background:#f59e0b}
+/* Résultats */
+.mode{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:4px;margin:0 0 12px}
+.mode button{all:unset;box-sizing:border-box;cursor:pointer;flex:1;text-align:center;padding:9px 10px;border-radius:10px;font-weight:800;font-size:14px;color:var(--muted)}
+.mode button[aria-pressed="true"]{background:linear-gradient(100deg,var(--accent),var(--accent2));color:var(--on-accent)}
+.mode button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.fscore{font-size:30px;font-weight:900;letter-spacing:1px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rcells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:2px 0 10px}
+.rc{display:flex;flex-direction:column;align-items:center;gap:1px;padding:7px 4px;border:1px solid var(--line);border-radius:12px;background:var(--panel2)}
+.rc small{font-size:11px;font-weight:800;color:var(--muted)}
+.rc b{font-size:16px}
+.rc em{font-style:normal;font-size:11.5px;color:var(--muted)}
+.rc.hit{border-color:var(--best-line);background:var(--best-bg)}
+.rc.hit small{color:var(--text)}
+.rc.ours b::after{content:" ★";font-size:11px;color:var(--accent)}
+.tag.ko{border-color:#ef444466;color:#fca5a5}
+.poster.result .tag{white-space:nowrap}

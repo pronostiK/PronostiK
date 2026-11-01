@@ -65,12 +65,15 @@ export function parseFixtures(text) {
   for (const r of rows) {
     const date = parseDate(get(r, 'Date')), home = get(r, 'HomeTeam').trim(), away = get(r, 'AwayTeam').trim(), div = String(get(r, 'Div')).trim().toUpperCase();
     if (!date || !home || !away || !div) continue;
-    let mk = norm([num(get(r, 'AvgH')), num(get(r, 'AvgD')), num(get(r, 'AvgA'))]);
+    const avg = [num(get(r, 'AvgH')), num(get(r, 'AvgD')), num(get(r, 'AvgA'))];
+    let mk = norm(avg), od = avg.every(v => v && v > 1) ? avg : null;   // od : cotes moyennes affichées par les bookmakers (avec leur marge)
     if (!mk) {
       const all = BOOKS.map(b => norm([num(get(r, b + 'H')), num(get(r, b + 'D')), num(get(r, b + 'A'))])).filter(Boolean);
       if (all.length) mk = [0, 1, 2].map(k => all.reduce((s, p) => s + p[k], 0) / all.length);
+      const raw = BOOKS.map(b => [num(get(r, b + 'H')), num(get(r, b + 'D')), num(get(r, b + 'A'))]).filter(o => o.every(v => v && v > 1));
+      if (raw.length) od = [0, 1, 2].map(k => raw.reduce((s, o) => s + o[k], 0) / raw.length);
     }
-    out.push({div, date, time: String(get(r, 'Time')).trim() || null, home, away, mk});
+    out.push({div, date, time: String(get(r, 'Time')).trim() || null, home, away, mk, od});
   }
   return out;
 }

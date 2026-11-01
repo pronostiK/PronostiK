@@ -115,10 +115,10 @@ const frozen = JSON.stringify(pred.find(p => p.apiId === 201).p);
 // Relance sans changement
 const before = readFileSync(join(dir, 'predictions.json'), 'utf8');
 FIX = null;
-r = await run('2026-10-31T23:00:00Z');
+r = await run('2026-10-31T23:00:00Z'); if (process.env.DBG) console.log('RELANCE', r.stdout);
 ok(r.status === 0 && J('meta.json').odds.ok === false && J('predictions.json').find(p => p.apiId === 101).mk, 'cotes indisponibles : le site continue et garde les dernières cotes');
 ok(readFileSync(join(dir, 'predictions.json'), 'utf8') === before, 'relance sans changement : pronostics identiques');
-ok(!/Historique/.test(r.stdout), 'relance : les CSV ne sont pas retéléchargés avant 6 jours');
+ok(!/Historique (Ligue 1|Premier League|Bundesliga|Serie A|La Liga)…/.test(r.stdout), 'relance : les CSV ne sont pas retéléchargés avant 6 jours (championnats présents dans le jeu de test)');
 
 // Phase 2 : le match est terminé ; le pronostic ne bouge pas
 state.PL = state.PL.map(m => m.id === 201 ? T(apiName('Man City'), apiName('Arsenal'), '2026-11-01T16:30:00Z', 201, 'FINISHED', {home: 2, away: 2}) : m);

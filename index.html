@@ -48,13 +48,15 @@
         <p><b>2.</b> Ouvrez-le. Android demande d’autoriser l’installation depuis votre navigateur : acceptez (l’application ne vient pas du Play Store, c’est normal).</p>
         <p><b>3.</b> L’icône PronostiK apparaît sur votre écran d’accueil.</p>
       </div>
+      <div id="mode" class="mode" role="group" aria-label="Matchs à venir ou résultats">
+        <button type="button" data-mode="next" aria-pressed="true">À venir</button>
+        <button type="button" data-mode="res" aria-pressed="false">Résultats</button>
+      </div>
       <div id="days" class="days" role="group" aria-label="Choisir un jour"></div>
       <div id="chips" class="chips" role="group" aria-label="Filtrer par championnat"></div>
       <div id="alert" class="alert" hidden></div>
       <div id="spot" hidden></div>
       <div id="list" class="list" aria-live="polite"></div>
-      <h2 class="section-title" id="recent-title" hidden>Derniers résultats</h2>
-      <div id="recent" class="recent"></div>
     </section>
 
     <section id="match" class="view" hidden aria-label="Pronostic du match">

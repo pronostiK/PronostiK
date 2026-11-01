@@ -21,6 +21,7 @@ const LGN = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie
 function matchContext(p, stand) {
   const L = [];
   L.push(`Match : ${p.home} (domicile) contre ${p.away} (extérieur), compétition ${LGN[p.lg] || p.lg}, coup d'envoi ${paris(p.kickoff)} (heure de Paris).`);
+  if (p.final) L.push(`MATCH TERMINÉ. Score final (90 minutes) : ${p.home} ${p.final} ${p.away}. Les probabilités ci-dessous avaient été publiées avant le coup d'envoi.`);
   if (p.p) L.push(`Probabilités du modèle PronostiK : victoire ${p.home} ${pct(p.p[0])}, nul ${pct(p.p[1])}, victoire ${p.away} ${pct(p.p[2])}.`);
   if (p.mk) L.push(`Probabilités déduites des cotes moyennes des bookmakers (marge retirée) : ${pct(p.mk[0])} / ${pct(p.mk[1])} / ${pct(p.mk[2])}.`);
   if (p.lam) L.push(`Buts attendus par le modèle : ${p.home} ${p.lam[0].toFixed(1)}, ${p.away} ${p.lam[1].toFixed(1)}. Score le plus probable : ${p.score}.`);
@@ -40,7 +41,10 @@ function matchContext(p, stand) {
 }
 function listContext(preds) {
   const up = preds.filter(p => !p.res && p.p).sort((a, b) => a.kickoff.localeCompare(b.kickoff)).slice(0, 60);
-  return 'Matchs à venir, heure de Paris (probabilités du modèle 1 / N / 2) :\n' + up.map(p => `- ${paris(p.kickoff)} ${LGN[p.lg] || p.lg} : ${p.home} – ${p.away} : ${pct(p.p[0])} / ${pct(p.p[1])} / ${pct(p.p[2])}${p.mk ? ` (bookmakers ${pct(p.mk[0])} / ${pct(p.mk[1])} / ${pct(p.mk[2])})` : ''}`).join('\n');
+  const since = Date.now() - 4 * 86400000;
+  const done = preds.filter(p => p.p && ['H', 'D', 'A'].includes(p.res) && new Date(p.kickoff).getTime() > since).sort((a, b) => b.kickoff.localeCompare(a.kickoff)).slice(0, 60);
+  const res = done.length ? 'Résultats des 4 derniers jours (score final ; probabilités publiées avant le match, 1 / N / 2) :\n' + done.map(p => `- ${paris(p.kickoff)} ${LGN[p.lg] || p.lg} : ${p.home} ${p.final} ${p.away} (modèle ${pct(p.p[0])} / ${pct(p.p[1])} / ${pct(p.p[2])}${p.od ? ` ; cotes ${p.od.join(' / ')}` : p.mk ? ` ; bookmakers ${pct(p.mk[0])} / ${pct(p.mk[1])} / ${pct(p.mk[2])}` : ''})`).join('\n') + '\n\n' : '';
+  return res + 'Matchs à venir, heure de Paris (probabilités du modèle 1 / N / 2) :\n' + up.map(p => `- ${paris(p.kickoff)} ${LGN[p.lg] || p.lg} : ${p.home} – ${p.away} : ${pct(p.p[0])} / ${pct(p.p[1])} / ${pct(p.p[2])}${p.mk ? ` (bookmakers ${pct(p.mk[0])} / ${pct(p.mk[1])} / ${pct(p.mk[2])})` : ''}`).join('\n');
 }
 
 const SYSTEM = `Tu es l'assistant de PronostiK, un site français qui publie des probabilités de matchs de football (Ligue 1, Premier League, Bundesliga, Serie A, La Liga, Liga Portugal, Eredivisie, Championship, Ligue 2, Ligue des champions et Ligue des nations).

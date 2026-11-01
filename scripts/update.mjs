@@ -93,24 +93,23 @@ async function main() {
   for (const lg of LEAGUES) {
     const count = history.filter(m => m.lg === lg.code).length;
     const last = state.csvAt[lg.code] ? new Date(state.csvAt[lg.code]) : null;
-    const stale = !last || (NOW - last) > (lg.source === 'csv' ? 0.5 : CSV_REFRESH_DAYS) * 86400000 || state.csvVersion !== CSV_VERSION;   // ligue sans API : résultats lus dans le CSV, rafraîchi deux fois par jour // nouveau format : un rechargement complet
+    const stale = !last || (NOW - last) > (lg.source === 'csv' ? 0.5 : CSV_REFRESH_DAYS) * 86400000 || (state.csvVer?.[lg.code] ?? state.csvVersion) !== CSV_VERSION;   // ligue sans API : résultats lus dans le CSV, rafraîchi deux fois par jour // nouveau format : un rechargement complet
     if (!(stale || count < 200 || process.env.FORCE_CSV)) continue;
     console.log(`Historique ${lg.name}…`);
     const rows = await downloadCSVs(lg, season);
     if (!rows.length) {
       if (count < 200) errors[lg.code] = 'Historique introuvable (CSV)';
-      else state.csvAt[lg.code] = NOW.toISOString();   // on retentera dans une semaine
+      else { state.csvAt[lg.code] = NOW.toISOString(); (state.csvVer ||= {})[lg.code] = CSV_VERSION; }   // on retentera plus tard
       continue;
     }
     for (const r of rows) {
       const old = byKey.get(key(r));
       if (old) Object.assign(old, r); else { history.push(r); byKey.set(key(r), r); }
     }
-    state.csvAt[lg.code] = NOW.toISOString(); csvRefreshed.add(lg.code);
+    state.csvAt[lg.code] = NOW.toISOString(); (state.csvVer ||= {})[lg.code] = CSV_VERSION; csvRefreshed.add(lg.code);
   }
 
-  // Tous les championnats ont été (re)tentés avec le nouveau format : on ne recommence pas avant la prochaine semaine.
-  if (!LEAGUES.some(l => errors[l.code] === 'Historique introuvable (CSV)')) state.csvVersion = CSV_VERSION;
+  // Format suivi championnat par championnat (state.csvVer) : un championnat sans fichier ne force plus le rechargement des autres.
 
   // --- 2. API : une requête par championnat
   const apiByLeague = {}, emblems = {};
@@ -234,6 +233,7 @@ async function main() {
       if (old) {
         const same = JSON.stringify([old.p, old.lam, old.kickoff, old.home, old.away]) === JSON.stringify([entry.p, entry.lam, entry.kickoff, entry.home, entry.away]);
         if (old.mk) entry.mk = old.mk;
+        if (old.od) entry.od = old.od;
         if (old.shadow && old.shadow.at && entry.shadow && JSON.stringify(old.shadow.hyb) === JSON.stringify(entry.shadow.hyb)) entry.shadow.at = old.shadow.at; // horodatage de la version en vigueur // on garde les dernières cotes connues si le fichier est momentanément indisponible
         if (same) { entry.updatedAt = old.updatedAt; entry.form = old.form; entry.rel = old.rel; entry.err = old.err; }
         else entry.updatedAt = NOW.toISOString();
@@ -447,6 +447,7 @@ async function main() {
         }
         if (old) {
           if (old.mk) entry.mk = old.mk;
+          if (old.od) entry.od = old.od;
           const same = JSON.stringify([old.p, old.lam, old.kickoff]) === JSON.stringify([entry.p, entry.lam, entry.kickoff]);
           if (same) { entry.updatedAt = old.updatedAt; entry.form = old.form; entry.rel = old.rel; entry.err = old.err; } else entry.updatedAt = NOW.toISOString();
           predictions = predictions.filter(p => p.id !== id);
@@ -461,7 +462,7 @@ async function main() {
       const home = resolveName(f.home, known[lg], ALIASES[lg] || {}, lg === 'FL1'), away = resolveName(f.away, known[lg], ALIASES[lg] || {}, lg === 'FL1');
       if (!home || !away) continue;
       const p = predictions.find(x => x.lg === lg && x.home === home && x.away === away && !x.res && NOW < new Date(x.kickoff) && dayDiff(x.date, f.date) <= 2);
-      if (p) { p.mk = f.mk.map(r4); oddsInfo.matched++; }
+      if (p) { p.mk = f.mk.map(r4); if (f.od) p.od = f.od.map(v => Math.round(v * 100) / 100); oddsInfo.matched++; }
     }
   } catch (e) { oddsInfo.error = String(e.message || e).slice(0, 120); }
 
