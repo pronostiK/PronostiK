@@ -231,8 +231,8 @@
     const ranked = up.filter(p => p.p), spot = $('spot');
     if (ranked.length >= 3) {
       const top = p => Math.max(...p.p), sure = ranked.reduce((a, b) => top(b) > top(a) ? b : a), open = ranked.reduce((a, b) => top(b) < top(a) ? b : a);
-      const who = p => { const i = p.p.indexOf(top(p)); return (i === 1 ? 'Match nul' : i === 0 ? p.home : p.away) + ' · ' + Math.round(top(p) * 100) + ' %'; };
-      const tile = (lab, p) => `<a class="spot-tile" href="#match/${encodeURIComponent(p.id)}"><small>${lab}</small><strong>${esc(p.home)} – ${esc(p.away)}</strong><span>${esc(who(p))}</span></a>`;
+      const who = p => { const i = p.p.indexOf(top(p)); return i === 1 ? 'Match nul' : i === 0 ? p.home : p.away; };
+      const tile = (lab, p) => `<a class="spot-tile" href="#match/${encodeURIComponent(p.id)}"><div class="spot-txt"><small>${lab}</small><strong>${esc(p.home)} – ${esc(p.away)}</strong><span>${esc(who(p))}</span></div><b class="spot-pct">${Math.round(top(p) * 100)}<i>%</i></b></a>`;
       spot.innerHTML = `<h2 class="section-title" style="margin-top:6px">À retenir</h2><div class="spot-row">${tile('Favori le plus net', sure)}${sure === open ? '' : tile('Match le plus serré', open)}</div>`;
       spot.hidden = false;
     } else { spot.innerHTML = ''; spot.hidden = true; }
