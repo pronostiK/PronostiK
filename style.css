@@ -438,3 +438,5 @@ nav a{padding:8px 10px;font-size:13.5px}
 .mk2>div.on,.mk3>div.on{background:var(--best-bg);border-color:var(--best-line)}
 .mk2 b,.mk3 b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
 .mk2 small,.mk3 small{display:block;color:var(--muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fiab.low{color:var(--ko);border-color:var(--ko)}
+.mknote{margin:8px 2px 0;font-size:12px;color:var(--muted)}

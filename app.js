@@ -228,12 +228,12 @@
     let marches = '<p class="muted">Marchés disponibles pour les prochains pronostics.</p>';
     if (p.markets) {
       const M = p.markets, P = v => Math.round(v * 100);
-      const fiab = (lvl, txt) => `<span class="fiab ${lvl}" title="${esc(txt)}">${lvl === 'ok' ? 'Fiabilité bonne' : 'Fiabilité moyenne'}</span>`;
+      const fiab = (lvl, txt) => `<span class="fiab ${lvl}" title="${esc(txt)}">${lvl === 'ok' ? 'Fiabilité bonne' : lvl === 'low' ? 'Fiabilité faible' : 'Fiabilité moyenne'}</span>`;
       const dnb = p.p[0] + p.p[2] > 0 ? p.p[0] / (p.p[0] + p.p[2]) : 0.5;
       const pair = (a, la, b, lb) => `<div class="mk2"><div class="${a >= b ? 'on' : ''}"><b>${a} %</b><small>${la}</small></div><div class="${b > a ? 'on' : ''}"><b>${b} %</b><small>${lb}</small></div></div>`;
       const hp = pct3(M.ht);
       marches = `
-        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 2,5 buts</span>${fiab('mid', 'Testé sur 2 080 matchs : utile, mais les bookmakers sont plus précis sur ce marché.')}</div>${pair(P(M.o25), 'Plus de 2,5', 100 - P(M.o25), 'Moins de 2,5')}</div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 2,5 buts</span>${fiab('low', 'Testé sur 2 080 matchs : pas d’apport démontré par rapport à la moyenne du championnat, et les bookmakers sont plus précis.')}</div>${pair(P(M.o25), 'Plus de 2,5', 100 - P(M.o25), 'Moins de 2,5')}<p class="mknote">Indicatif : sur ce marché, les cotes des bookmakers sont plus précises que le modèle.</p></div>
         <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 1,5 but</span>${fiab('mid', 'Testé sur 2 080 matchs : à peine plus précis que la moyenne des matchs.')}</div>${pair(P(M.o15), 'Plus de 1,5', 100 - P(M.o15), 'Moins de 1,5')}</div>
         <div class="mkt"><div class="mkt-h"><span>${ICON.half1}Résultat à la mi-temps</span>${fiab('ok', 'Testé sur 2 080 matchs : bien calibré.')}</div>
           <div class="mk3">${[['1', p.home], ['N', 'Nul'], ['2', p.away]].map(([t, l], i) => `<div class="${i === M.ht.indexOf(Math.max(...M.ht)) ? 'on' : ''}"><b>${hp[i]} %</b><small>${t} · ${esc(l)}</small></div>`).join('')}</div></div>
