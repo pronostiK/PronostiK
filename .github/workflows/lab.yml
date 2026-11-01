@@ -3,7 +3,7 @@ name: Laboratoire xG
 on:
   push:
     branches: [main]
-    paths: ['scripts/lab-xg.mjs', '.github/workflows/lab.yml']
+    paths: ['scripts/lab-xg.mjs', 'scripts/lab-markets.mjs', '.github/workflows/lab.yml']
   workflow_dispatch:
 
 permissions:
@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 20
       - name: Lancer l'expérience
-        run: node scripts/lab-xg.mjs
+        run: node scripts/lab-markets.mjs
       - name: Enregistrer le résultat
         if: always()
         run: |
