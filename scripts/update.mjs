@@ -7,7 +7,7 @@
 import {readFileSync, writeFileSync, existsSync, mkdirSync} from 'node:fs';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {createModel, createRatings, createElo, hybridProbs} from '../model.mjs';
+import {createModel, createRatings, createElo, hybridProbs, marketsFromLambdas} from '../model.mjs';
 import {footballDataDate, resolveName} from '../lib.mjs';
 import {LEAGUES, ALIASES} from '../leagues.mjs';
 import {parseCSV, parseFixtures} from '../csv.mjs';
@@ -216,6 +216,7 @@ async function main() {
         try {
           const x = predictMatch(lg.code, home, away, date);
           entry.p = x.p.map(r4); entry.lam = x.lam.map(r4); entry.score = x.score; entry.model = x.model;
+          { const mk2 = marketsFromLambdas(x.lam[0], x.lam[1]); entry.markets = {o15: r4(mk2.o15), o25: r4(mk2.o25), ht: mk2.ht.map(r4), scores: mk2.scores.map(([s, p]) => [s, r4(p)])}; }
           // En coulisse (non publié) : hybride Elo + v2, figé au coup d'envoi comme le pronostic publié, pour le comparer sur des matchs neufs.
           if (x.model === 'v2') { const e = models[lg.code].elo.predict(home, away, date); if (e) entry.shadow = {hyb: hybridProbs(x.p, e.p).map(r4), elo: e.p.map(r4), at: NOW.toISOString()}; }
           entry.rel = seasonCount(lg.code, home, date) >= 5 && seasonCount(lg.code, away, date) >= 5 ? 'ok' : 'limited';

@@ -107,6 +107,7 @@ ok(J('history.json').some(m => m.lg === 'FL1' && m.home === 'Lille' && m.away ==
   ok(!pred.find(p => p.apiId === 102).mk, 'cotes : un match absent du fichier reste sans cotes');
   ok(m.ok && m.rows === 3 && m.matched === 2, 'cotes : meta.odds = lu 3 lignes, 2 appariées'); }
 ok(pred.filter(p => p.p && p.model === 'v2').every(p => p.shadow && Math.abs(p.shadow.hyb.reduce((a, b) => a + b) - 1) < 1e-3), 'coulisse : chaque pronostic v2 a un hybride Elo + v2 (non publié), de somme 1');
+ok(pred.filter(p => p.p).every(p => p.markets && p.markets.o25 > 0 && p.markets.o25 < 1 && p.markets.o15 >= p.markets.o25 && Math.abs(p.markets.ht.reduce((a, b) => a + b) - 1) < 1e-3 && p.markets.scores.length === 3), 'marchés : +/-1,5, +/-2,5, mi-temps et scores exacts calculés et cohérents');
 ok(J('shadow.json').debut === '2026-11-01' && J('shadow.json').suivi, 'coulisse : fichier de suivi créé, avec le décompte des matchs');
 ok(pred.filter(p => p.shadow).every(p => p.shadow.at && p.shadow.at < p.kickoff), 'coulisse : chaque prédiction de l’hybride est horodatée avant le coup d’envoi');
 const frozen = JSON.stringify(pred.find(p => p.apiId === 201).p);

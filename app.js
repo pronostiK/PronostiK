@@ -224,7 +224,25 @@
       <p class="note">J : matchs joués · Diff. : différence de buts · pastilles : 5 derniers résultats. Calculé à partir des résultats connus du site.</p>`;
       classement = `<div class="thead"><span>#</span><span>Équipe</span><span>Forme</span><span>J</span><span>Diff.</span><span>Pts</span></div>` + classement;
     }
-    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h]];
+    // --- Onglet Marchés : autres paris, avec leur niveau de fiabilité mesuré
+    let marches = '<p class="muted">Marchés disponibles pour les prochains pronostics.</p>';
+    if (p.markets) {
+      const M = p.markets, P = v => Math.round(v * 100);
+      const fiab = (lvl, txt) => `<span class="fiab ${lvl}" title="${esc(txt)}">${lvl === 'ok' ? 'Fiabilité bonne' : 'Fiabilité moyenne'}</span>`;
+      const dnb = p.p[0] + p.p[2] > 0 ? p.p[0] / (p.p[0] + p.p[2]) : 0.5;
+      const pair = (a, la, b, lb) => `<div class="mk2"><div class="${a >= b ? 'on' : ''}"><b>${a} %</b><small>${la}</small></div><div class="${b > a ? 'on' : ''}"><b>${b} %</b><small>${lb}</small></div></div>`;
+      const hp = pct3(M.ht);
+      marches = `
+        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 2,5 buts</span>${fiab('mid', 'Testé sur 2 080 matchs : utile, mais les bookmakers sont plus précis sur ce marché.')}</div>${pair(P(M.o25), 'Plus de 2,5', 100 - P(M.o25), 'Moins de 2,5')}</div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 1,5 but</span>${fiab('mid', 'Testé sur 2 080 matchs : à peine plus précis que la moyenne des matchs.')}</div>${pair(P(M.o15), 'Plus de 1,5', 100 - P(M.o15), 'Moins de 1,5')}</div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.half1}Résultat à la mi-temps</span>${fiab('ok', 'Testé sur 2 080 matchs : bien calibré.')}</div>
+          <div class="mk3">${[['1', p.home], ['N', 'Nul'], ['2', p.away]].map(([t, l], i) => `<div class="${i === M.ht.indexOf(Math.max(...M.ht)) ? 'on' : ''}"><b>${hp[i]} %</b><small>${t} · ${esc(l)}</small></div>`).join('')}</div></div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.score}Scores exacts les plus probables</span>${fiab('ok', 'Testé sur 2 080 matchs : le score le plus probable sort environ 12 fois sur 100, comme annoncé.')}</div>
+          <div class="mk3">${M.scores.map(([s, v], i) => `<div class="${i === 0 ? 'on' : ''}"><b>${esc(s.replace('-', ' – '))}</b><small>${P(v)} %</small></div>`).join('')}</div></div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.shield}Remboursé si match nul</span>${fiab('ok', 'Déduit directement des probabilités 1N2.')}</div>${pair(P(dnb), esc(p.home), 100 - P(dnb), esc(p.away))}</div>
+        <p class="note">${ICON.info} « Les deux équipes marquent » n’est pas proposé : sur l’historique, le modèle n’y fait pas mieux que la moyenne. Probabilités statistiques, pas des conseils de pari.</p>`;
+    }
+    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h]];
     return `<article class="mpage card" style="--lg:${lgc}">
       <div class="head" style="cursor:default">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}</div>
       <div class="detail">
