@@ -272,7 +272,7 @@
     if (day === 'first' || (day !== 'all' && !dayList.includes(day))) day = dayList[0] || 'all';
     const fmtWd = new Intl.DateTimeFormat('fr-FR', {weekday: 'short', timeZone: TZ}), fmtNum = new Intl.DateTimeFormat('fr-FR', {day: 'numeric', timeZone: TZ});
     const today = dayKey(new Date());
-    $('days').innerHTML = dayList.length > 1 ? [`<button type="button" class="day-btn" data-day="all" aria-pressed="${day === 'all'}"><span>7 jours</span><b>${lgAll.length}</b><i>matchs</i></button>`].concat(dayList.map(k => {
+    $('days').innerHTML = dayList.length > 1 ? [`<button type="button" class="day-btn" data-day="all" aria-pressed="${day === 'all'}"><span>À venir</span><b>${lgAll.length}</b><i>matchs</i></button>`].concat(dayList.map(k => {
       const d = new Date(lgAll.find(p => dayOf(p) === k).kickoff), n = lgAll.filter(p => dayOf(p) === k).length;
       return `<button type="button" class="day-btn" data-day="${k}" aria-pressed="${day === k}"><span>${k === today ? 'Auj.' : esc(fmtWd.format(d))}</span><b>${esc(fmtNum.format(d))}</b><i>${n} match${n > 1 ? 's' : ''}</i></button>`;
     })).join('') : '';
