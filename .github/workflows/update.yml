@@ -55,7 +55,8 @@ jobs:
       - name: Préparer le site
         run: |
           mkdir _site
-          cp index.html style.css app.js _site/
+          cp index.html style.css app.js manifest.webmanifest _site/
+          cp -r assets _site/
           mkdir _site/data
           cp data/predictions.json data/meta.json data/scorecard.json _site/data/
       - uses: actions/configure-pages@v5

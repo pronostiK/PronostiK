@@ -277,3 +277,14 @@ footer p{margin:0 0 6px}
 .tile b{font-size:26px;letter-spacing:-.8px;font-variant-numeric:tabular-nums}
 .tile .tl{white-space:nowrap;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;padding:5px 9px;border-radius:10px;border:1px solid color-mix(in srgb,var(--tc) 55%,transparent);color:color-mix(in srgb,var(--tc) 80%,var(--text))}
 .t1{--tc:#22c55e}.t2{--tc:#14b8a6}.t3{--tc:#3b82f6}.t4{--tc:#a855f7}.t5{--tc:#f59e0b}.t6{--tc:#eab308}
+
+/* v8 : logo et emblèmes des championnats */
+.logo-img{width:44px;height:44px;display:block;filter:drop-shadow(0 4px 10px rgba(71,227,198,.25))}
+.chips{align-items:center}
+.chip-btn.lg-chip,.chip-btn.lg-all{display:inline-flex;align-items:center;gap:8px;height:52px;padding:6px 12px;border-radius:16px}
+.lg-emb{width:40px;height:40px;border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden}
+.lg-emb img{width:32px;height:32px;object-fit:contain}
+.chip-btn[aria-pressed="true"] .lg-emb{box-shadow:0 0 0 2px var(--on-accent)}
+.lg-mini{width:24px;height:24px;border-radius:7px;background:#fff;display:inline-grid;place-items:center;overflow:hidden;flex:none}
+.lg-mini img{width:19px;height:19px;object-fit:contain}
+.lgname{gap:8px}

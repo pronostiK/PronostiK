@@ -105,7 +105,7 @@ async function main() {
   if (!LEAGUES.some(l => errors[l.code] === 'Historique introuvable (CSV)')) state.csvVersion = CSV_VERSION;
 
   // --- 2. API : une requête par championnat
-  const apiByLeague = {};
+  const apiByLeague = {}, emblems = {};
   let apiOk = 0;
   for (const [i, lg] of LEAGUES.entries()) {
     if (errors[lg.code]) continue;
@@ -114,6 +114,8 @@ async function main() {
       const j = await api(`/competitions/${lg.code}/matches?season=${season}`);
       if (!(j.matches || []).length) throw new Error('Aucun match reçu.');
       apiByLeague[lg.code] = j.matches; apiOk++;
+      const em = (j.competition && j.competition.emblem) || (j.matches || []).find(x => x.competition && x.competition.emblem)?.competition.emblem;
+      if (em) emblems[lg.code] = em;
     } catch (e) { errors[lg.code] = e.message; console.error(`API ${lg.code} :`, e.message); }
   }
   if (!apiOk) throw new Error(Object.values(errors)[0] || 'Aucune réponse de l\'API.');
@@ -339,7 +341,7 @@ async function main() {
   const errKeys = Object.keys(errors);
   const meta = {
     updated: changed ? NOW.toISOString() : (prevMeta.updated || NOW.toISOString()), season, source: 'football-data.org',
-    leagues: LEAGUES.map(l => ({code: l.code, name: l.name})), errors,
+    leagues: LEAGUES.map(l => ({code: l.code, name: l.name, emblem: emblems[l.code] || (prevMeta.leagues || []).find(x => x.code === l.code)?.emblem || null})), errors,
     lastError: errKeys.length ? errKeys.map(k => `${k} : ${errors[k]}`).join(' · ') : null,
     unmapped: [...unmapped.values()],
     odds: oddsInfo,
