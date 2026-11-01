@@ -123,10 +123,16 @@ writeFileSync(L('fit-result.json'), JSON.stringify({...out, goals: {home: GH, aw
   const {ratings} = runEuroElo(evs, B.P);
   const recent = evaluate(B.P, s => s >= '2023-24' && s <= '2025-26').rows.filter(r => !r.neutral);
   const GH2 = poisFit(recent, 1, 'hg'), GA2 = poisFit(recent, -1, 'ag');
-  const seed = {asOf: SEED_DATE, note: 'Elo européen (championnats nationaux + C1, 2017-2026). Réglage sur les C1 2018-23, test sur 2023-26 : voir lab/RAPPORT-C1.md.',
+  const seed = {asOf: SEED_DATE, publish: true, note: 'Elo européen (championnats nationaux + C1, 2017-2026). Réglage sur les C1 2018-23, test sur 2023-26 : voir lab/RAPPORT-C1.md.',
     params: {...B.P, goals: {home: GH2, away: GA2}}, ratings: Object.fromEntries([...ratings].map(([k, v]) => [k, Math.round(v * 10) / 10]))};
   writeFileSync(new URL('../data/ucl-seed.json', import.meta.url), JSON.stringify(seed));
   console.log('graine :', ratings.size, 'clubs ; buts 2023-26', GH2, GA2);
   const top = [...ratings].sort((a, b) => b[1] - a[1]).slice(0, 15).map(([k, v]) => k + ' ' + Math.round(v));
   console.log(top.join(' · '));
+}
+
+// ---------- contrôle : favoris très nets (test)
+{
+  const R = tB.rows; const grp = (f, lab) => { const g = R.filter(f); const ann = g.reduce((t, r) => t + Math.max(...r.p), 0) / g.length, obs = g.filter(r => r.p.indexOf(Math.max(...r.p)) === r.i).length / g.length; console.log('favoris forts', lab, 'n', g.length, 'annoncé', (ann * 100).toFixed(0), 'observé', (obs * 100).toFixed(0)); };
+  grp(r => r.p[2] >= 0.7, 'extérieur ≥70 %'); grp(r => r.p[0] >= 0.7, 'domicile ≥70 %'); grp(r => Math.max(...r.p) >= 0.8, 'tous ≥80 %'); grp(r => Math.max(...r.p) >= 0.6 && Math.max(...r.p) < 0.8, 'tous 60-80 %');
 }
