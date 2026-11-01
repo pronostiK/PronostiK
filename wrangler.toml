@@ -5,3 +5,4 @@ workers_dev = true
 
 [vars]
 SITE = "https://pronostikapp.fr"
+
