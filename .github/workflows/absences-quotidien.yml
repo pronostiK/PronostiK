@@ -38,6 +38,6 @@ jobs:
           git add lab
           if ! git diff --cached --quiet; then
             git commit -m "Étude absences : collecte"
-            git pull --rebase origin experience-absences
+            git pull --rebase -X theirs origin experience-absences || { git rebase --abort; exit 0; }
             git push origin HEAD:experience-absences
           fi

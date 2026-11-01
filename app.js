@@ -439,7 +439,7 @@
   }
   function chatRender() {
     const key = chat.matchId || 'general', log = chat.logs[key] || [];
-    $('chat-log').innerHTML = log.length ? log.map(m => `<div class="bubble ${m.role === 'user' ? 'me' : 'ai'}${m.err ? ' err' : ''}">${esc(m.content).replace(/\n/g, '<br>')}</div>`).join('') + (chat.busy ? '<div class="bubble ai typing"><i></i><i></i><i></i></div>' : '')
+    $('chat-log').innerHTML = log.length ? log.map(m => `<div class="bubble ${m.role === 'user' ? 'me' : 'ai'}${m.err ? ' err' : ''}">${esc(m.content).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\n/g, '<br>')}</div>`).join('') + (chat.busy ? '<div class="bubble ai typing"><i></i><i></i><i></i></div>' : '')
       : `<div class="chat-hello">${ICON.chat}<p>${chat.matchId ? 'Posez une question sur ce match : le favori, la forme des équipes, les statistiques…' : 'Posez une question sur les matchs à venir.'}</p></div>`;
     const p = chat.matchId && cache ? cache.preds.find(x => x.id === chat.matchId) : null;
     const sugg = p ? [`Pourquoi ${p.home} ou ${p.away} est favori ?`, 'Comment sont les deux équipes en forme ?', 'Le modèle est-il d’accord avec les bookmakers ?', 'Quel score est le plus probable ?']

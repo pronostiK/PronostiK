@@ -31,6 +31,6 @@ jobs:
           git add lab
           if ! git diff --cached --quiet; then
             git commit -m "Résultats du laboratoire xG"
-            git pull --rebase
+            git pull --rebase -X theirs || { git rebase --abort; echo "Conflit : nouvel essai au prochain passage"; exit 0; }
             git push
           fi
