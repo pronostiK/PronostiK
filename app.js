@@ -418,6 +418,23 @@
   const DISPLAY = {'Milan': 'AC Milan', 'Inter': 'Inter Milan'};
   const dn = n => DISPLAY[n] || n;
 
+  // Nouvelle version du site publiée ? On recharge une fois (utile pour l'application installée sur l'écran d'accueil).
+  async function checkVersion() {
+    const cur = document.querySelector('meta[name="build"]')?.content;
+    if (!cur || cur === 'dev') return;
+    try {
+      const r = await fetch('version.json?t=' + Date.now(), {cache: 'no-store'});
+      if (!r.ok) return;
+      const {v} = await r.json();
+      if (v && v !== cur) {
+        let last = null; try { last = sessionStorage.getItem('pk-reload'); } catch {}
+        if (last === v) return;                         // évite une boucle si le cache résiste
+        try { sessionStorage.setItem('pk-reload', v); } catch {}
+        location.reload();
+      }
+    } catch {}
+  }
+
   async function refresh() {
     try {
       const [raw, meta, sc, stand] = await Promise.all([load('predictions.json'), load('meta.json').catch(() => null), load('scorecard.json').catch(() => null), load('standings.json').catch(() => null)]);
@@ -438,5 +455,6 @@
   route();
   refresh();
   setInterval(refresh, 10 * 60 * 1000);
-  document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) { checkVersion(); refresh(); } });
+  checkVersion();
 })();

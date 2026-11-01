@@ -57,6 +57,10 @@ jobs:
           mkdir _site
           cp index.html style.css app.js manifest.webmanifest _site/
           cp -r assets _site/
+          # numéro de version : force le rechargement du code (application sur l'écran d'accueil comprise)
+          V=$(git rev-parse --short HEAD)
+          sed -i "s/content=\"dev\"/content=\"$V\"/; s/style.css?v=dev/style.css?v=$V/; s/app.js?v=dev/app.js?v=$V/" _site/index.html
+          printf '{"v":"%s"}' "$V" > _site/version.json
           mkdir _site/data
           cp data/predictions.json data/meta.json data/scorecard.json _site/data/
           if [ -f data/standings.json ]; then cp data/standings.json _site/data/; fi
