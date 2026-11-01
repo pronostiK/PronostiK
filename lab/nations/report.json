@@ -1,0 +1,32 @@
+{
+ "at": "2026-11-01T22:09:23.971Z",
+ "results": {
+  "status": 200,
+  "bytes": 3757793
+ },
+ "header": "date,home_team,away_team,home_score,away_score,tournament,city,country,neutral",
+ "rows": 49940,
+ "futurs": 0,
+ "exemplesFuturs": [],
+ "derniers": [
+  "2026-10-06,Scotland,Slovenia,1,2,UEFA Nations League,Glasgow,Scotland,FALSE",
+  "2026-10-06,Switzerland,North Macedonia,3,0,UEFA Nations League,Lucerne,Switzerland,FALSE",
+  "2026-10-06,Albania,San Marino,2,1,UEFA Nations League,Tirana,Albania,FALSE",
+  "2026-10-06,Belarus,Finland,1,0,UEFA Nations League,Budapest,Hungary,TRUE",
+  "2026-10-06,Kazakhstan,Faroe Islands,2,2,UEFA Nations League,Astana,Kazakhstan,FALSE",
+  "2026-10-06,Moldova,Slovakia,0,4,UEFA Nations League,Chișinău,Moldova,FALSE",
+  "2026-10-06,Luxembourg,Bulgaria,0,2,UEFA Nations League,Luxembourg,Luxembourg,FALSE",
+  "2026-10-06,Estonia,Iceland,0,0,UEFA Nations League,Tallinn,Estonia,FALSE",
+  "2026-10-06,Angola,Malawi,3,1,African Cup of Nations qualification,Luanda,Angola,FALSE",
+  "2026-10-06,Saint Vincent and the Grenadines,Sint Maarten,4,0,CONCACAF Nations League,Belmopan,Belize,TRUE",
+  "2026-10-06,Belize,French Guiana,0,1,CONCACAF Nations League,Belmopan,Belize,FALSE",
+  "2026-10-06,Turks and Caicos Islands,Montserrat,1,4,CONCACAF Nations League,Providenciales,Turks and Caicos Islands,FALSE",
+  "2026-10-06,Antigua and Barbuda,Aruba,3,2,CONCACAF Nations League,North Sound,Antigua and Barbuda,FALSE",
+  "2026-10-06,Saint Martin,Bahamas,6,0,CONCACAF Nations League,Saint Croix,United States Virgin Islands,TRUE",
+  "2026-10-06,Saudi Arabia,United Arab Emirates,2,0,Gulf Cup,Jeddah,Saudi Arabia,FALSE"
+ ],
+ "shootouts": {
+  "status": 200,
+  "bytes": 29751
+ }
+}
