@@ -3,7 +3,7 @@ name: Laboratoire Ligue des champions
 on:
   push:
     branches: [main]
-    paths: ['scripts/lab-ucl.mjs', '.github/workflows/lab-ucl.yml']
+    paths: ['scripts/lab-ucl-data.mjs', 'scripts/lab-ucl.mjs', '.github/workflows/lab-ucl.yml']
   workflow_dispatch:
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
       - name: Collecter les données
         env:
           FD_TOKEN: ${{ secrets.FD_TOKEN }}
-        run: node scripts/lab-ucl.mjs
+        run: node scripts/lab-ucl-data.mjs
       - name: Enregistrer le résultat
         if: always()
         run: |
@@ -33,6 +33,6 @@ jobs:
           git config user.email "pronostik-bot@users.noreply.github.com"
           git add lab
           if ! git diff --cached --quiet; then
-            git commit -m "Laboratoire C1 : données"
+            git commit -m "Laboratoire C1 : championnats nationaux"
             for i in 1 2 3; do git pull --rebase -X theirs && git push && break; git rebase --abort 2>/dev/null; sleep 5; done
           fi
