@@ -41,8 +41,14 @@ const parisDate = d => footballDataDate(d.toISOString());
 const addDays = (d, n) => { const t = new Date(d + 'T00:00:00Z'); t.setUTCDate(t.getUTCDate() + n); return t.toISOString().slice(0, 10); };
 const outcome = (hg, ag) => hg > ag ? 'H' : hg < ag ? 'A' : 'D';
 
-async function api(p) {
+async function api(p, tries = 3) {
   const res = await fetch(API + p, {headers: {'X-Auth-Token': TOKEN}});
+  if (res.status === 429 && tries > 1) {   // limite de 10 requêtes par minute (partagée avec les autres tâches) : on attend puis on réessaie
+    let wait = 20;
+    try { const m = ((await res.json()).message || '').match(/Wait (\d+) seconds/); if (m) wait = Number(m[1]) + 2; } catch {}
+    await sleep(Math.min(65, wait) * 1000);
+    return api(p, tries - 1);
+  }
   if (!res.ok) {
     let detail = '';
     try { detail = (await res.json()).message || ''; } catch {}
