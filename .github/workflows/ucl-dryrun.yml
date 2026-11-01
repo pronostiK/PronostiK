@@ -1,9 +1,6 @@
 name: Essai C1 (sans publication) 
 
 on:
-  push:
-    branches: [main]
-    paths: ['scripts/ucl-lib.mjs', 'scripts/update.mjs', 'data/ucl-seed.json', '.github/workflows/ucl-dryrun.yml']
   workflow_dispatch:
 
 permissions:
