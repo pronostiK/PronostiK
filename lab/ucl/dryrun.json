@@ -45,6 +45,16 @@
     "emblem": "https://crests.football-data.org/ED.png"
    },
    {
+    "code": "ELC",
+    "name": "Championship",
+    "emblem": "https://crests.football-data.org/ELC.png"
+   },
+   {
+    "code": "FL2",
+    "name": "Ligue 2",
+    "emblem": "https://crests.football-data.org/FL2.png"
+   },
+   {
     "code": "CL",
     "name": "Ligue des champions",
     "emblem": "https://crests.football-data.org/CL.png"
@@ -2148,16 +2158,16 @@
    "a": "Napoli",
    "elo": [
     1714,
-    1694
+    1684
    ],
    "p": [
-    0.4634,
-    0.2508,
-    0.2858
+    0.4771,
+    0.2482,
+    0.2747
    ],
    "lam": [
-    1.8515,
-    1.2966
+    1.8764,
+    1.2749
    ],
    "score": "1–1",
    "form": {
@@ -2205,6 +2215,14 @@
     ],
     "a": [
      {
+      "d": "2026-11-01",
+      "o": "Juventus",
+      "v": "E",
+      "f": 0,
+      "a": 2,
+      "c": ""
+     },
+     {
       "d": "2026-10-28",
       "o": "Monza",
       "v": "E",
@@ -2235,14 +2253,6 @@
       "f": 0,
       "a": 1,
       "c": ""
-     },
-     {
-      "d": "2026-10-13",
-      "o": "Villarreal",
-      "v": "E",
-      "f": 1,
-      "a": 3,
-      "c": "C1"
      }
     ]
    },
