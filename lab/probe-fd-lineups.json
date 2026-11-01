@@ -1,0 +1,86 @@
+{
+ "date": "2026-11-01T03:44:41.423Z",
+ "etapes": [
+  {
+   "appel": "liste des matchs terminés (Ligue 1)",
+   "http": 200,
+   "matchs": 13,
+   "champsMatch": [
+    "area",
+    "competition",
+    "season",
+    "id",
+    "utcDate",
+    "status",
+    "matchday",
+    "stage",
+    "group",
+    "lastUpdated",
+    "homeTeam",
+    "awayTeam",
+    "score",
+    "odds",
+    "referees"
+   ],
+   "champsEquipe": [
+    "id",
+    "name",
+    "shortName",
+    "tla",
+    "crest"
+   ],
+   "message": null
+  },
+  {
+   "appel": "détail du match ES Troyes AC – Le Mans FC",
+   "http": 200,
+   "message": null,
+   "champsMatch": [
+    "area",
+    "competition",
+    "season",
+    "id",
+    "utcDate",
+    "status",
+    "venue",
+    "matchday",
+    "stage",
+    "group",
+    "lastUpdated",
+    "homeTeam",
+    "awayTeam",
+    "score",
+    "odds",
+    "referees"
+   ],
+   "champsEquipe": [
+    "id",
+    "name",
+    "shortName",
+    "tla",
+    "crest"
+   ],
+   "composition": null,
+   "remplacants": null,
+   "formation": null,
+   "exempleTitulaire": null,
+   "buteurs": null,
+   "remplacements": null,
+   "cartons": null
+  },
+  {
+   "appel": "effectif de ES Troyes AC",
+   "http": 200,
+   "message": null,
+   "joueurs": 28,
+   "champsJoueur": [
+    "id",
+    "name",
+    "position",
+    "dateOfBirth",
+    "nationality"
+   ]
+  }
+ ],
+ "conclusion": "Compositions NON fournies par le plan gratuit (champ absent ou vide)."
+}
