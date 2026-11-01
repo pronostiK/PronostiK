@@ -1,0 +1,32 @@
+name: Test compositions football-data.org (branche expérimentale)
+
+on:
+  push:
+    branches: [experience-compos]
+    paths: ['scripts/probe-fd-lineups.mjs', '.github/workflows/probe-fd.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Interroger football-data.org
+        env:
+          FD_TOKEN: ${{ secrets.FD_TOKEN }}
+        run: node scripts/probe-fd-lineups.mjs
+      - name: Enregistrer le résultat (branche expérimentale uniquement)
+        if: always()
+        run: |
+          git config user.name "pronostik-bot"
+          git config user.email "pronostik-bot@users.noreply.github.com"
+          git add lab
+          if ! git diff --cached --quiet; then
+            git commit -m "Test compositions : résultat"
+            git push origin HEAD:experience-compos
+          fi
