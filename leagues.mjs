@@ -9,6 +9,9 @@ export const LEAGUES = [
   {code: 'PD', name: 'La Liga', csv: ['SP1', 'SP2']},
   {code: 'PPL', name: 'Liga Portugal', csv: ['P1']},     // pas de 2e division dans les fichiers : un promu passe par le calcul simple
   {code: 'DED', name: 'Eredivisie', csv: ['N1']},
+  {code: 'ELC', name: 'Championship', csv: ['E1', 'E2']},
+  // Ligue 2 : absente du plan gratuit de football-data.org. Calendrier et résultats lus dans les fichiers de football-data.co.uk.
+  {code: 'FL2', name: 'Ligue 2', csv: ['F2'], source: 'csv'},
 ];
 // Codes CSV des deuxièmes divisions (servent d'historique pour les équipes promues).
 export const SECOND_DIVISIONS = new Set(['F2', 'E1', 'D2', 'I2', 'SP2']);
@@ -38,6 +41,14 @@ export const ALIASES = {
     'real betis balompie': 'Betis', 'rc celta de vigo': 'Celta', 'deportivo alaves': 'Alaves', 'ud las palmas': 'Las Palmas', 'villarreal cf': 'Villarreal',
   },
   FL1: {},
+  ELC: {
+    'sheffield wednesday': 'Sheffield Weds', 'queens park rangers': 'QPR', 'west bromwich albion': 'West Brom', 'preston north end': 'Preston',
+    'blackburn rovers': 'Blackburn', 'wolverhampton wanderers': 'Wolves', 'nottingham forest': "Nott'm Forest", 'leicester city': 'Leicester', 'ipswich town': 'Ipswich',
+    'luton town': 'Luton', 'leeds united': 'Leeds', 'manchester united': 'Man United', 'manchester city': 'Man City', 'newcastle united': 'Newcastle', 'west ham united': 'West Ham',
+    'tottenham hotspur': 'Tottenham', 'brighton hove albion': 'Brighton', 'afc bournemouth': 'Bournemouth', 'milton keynes dons': 'Milton Keynes Dons', 'peterborough united': 'Peterborough',
+    'oxford united': 'Oxford', 'stoke city': 'Stoke', 'swansea city': 'Swansea', 'hull city': 'Hull', 'norwich city': 'Norwich', 'coventry city': 'Coventry', 'derby county': 'Derby',
+    'birmingham city': 'Birmingham', 'charlton athletic': 'Charlton', 'cardiff city': 'Cardiff', 'plymouth argyle': 'Plymouth', 'huddersfield town': 'Huddersfield', 'rotherham united': 'Rotherham',
+  },
   PPL: {
     'sporting clube de portugal': 'Sp Lisbon', 'sporting cp': 'Sp Lisbon', 'sport lisboa e benfica': 'Benfica', 'sl benfica': 'Benfica', 'fc porto': 'Porto',
     'sporting clube de braga': 'Sp Braga', 'sc braga': 'Sp Braga', 'vitoria sc': 'Guimaraes', 'vitoria guimaraes': 'Guimaraes', 'fc famalicao': 'Famalicao',

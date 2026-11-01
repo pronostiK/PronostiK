@@ -40,7 +40,7 @@ export function parseCSV(text, lg, opts = {}) {
     if (!date || !home || !away || hs === '' || as === '' || !Number.isFinite(hg) || !Number.isFinite(ag)) continue;
     const div = String(get(r, 'Div') || '').trim().toUpperCase();
     out.push({
-      date, home, away, hg, ag, lg, division: SECOND_DIVISIONS.has(div) ? 'L2' : 'L1',
+      date, home, away, hg, ag, lg, division: opts.top ? (div && div !== opts.top ? 'L2' : 'L1') : SECOND_DIVISIONS.has(div) ? 'L2' : 'L1',
       // corners, cartons, score à la mi-temps (null si absent du fichier)
       hc: n0(get(r, 'HC')), ac: n0(get(r, 'AC')), hy: n0(get(r, 'HY')), ay: n0(get(r, 'AY')), hr: n0(get(r, 'HR')), ar: n0(get(r, 'AR')), hthg: n0(get(r, 'HTHG')), htag: n0(get(r, 'HTAG')),
       ...(opts.ou ? {o25: num(get(r, 'AvgC>2.5')) || num(get(r, 'Avg>2.5')), u25: num(get(r, 'AvgC<2.5')) || num(get(r, 'Avg<2.5'))} : {}),
@@ -70,7 +70,7 @@ export function parseFixtures(text) {
       const all = BOOKS.map(b => norm([num(get(r, b + 'H')), num(get(r, b + 'D')), num(get(r, b + 'A'))])).filter(Boolean);
       if (all.length) mk = [0, 1, 2].map(k => all.reduce((s, p) => s + p[k], 0) / all.length);
     }
-    out.push({div, date, home, away, mk});
+    out.push({div, date, time: String(get(r, 'Time')).trim() || null, home, away, mk});
   }
   return out;
 }

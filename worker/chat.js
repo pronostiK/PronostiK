@@ -17,7 +17,7 @@ function sameCode(a, b) { if (typeof a !== 'string' || typeof b !== 'string' || 
 
 const pct = v => Math.round(v * 100) + ' %';
 const paris = iso => new Intl.DateTimeFormat('fr-FR', {weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Paris'}).format(new Date(iso));
-const LGN = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', PPL: 'Liga Portugal', DED: 'Eredivisie', CL: 'Ligue des champions'};
+const LGN = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', PPL: 'Liga Portugal', DED: 'Eredivisie', ELC: 'Championship', FL2: 'Ligue 2', CL: 'Ligue des champions'};
 function matchContext(p, stand) {
   const L = [];
   L.push(`Match : ${p.home} (domicile) contre ${p.away} (extérieur), compétition ${LGN[p.lg] || p.lg}, coup d'envoi ${paris(p.kickoff)} (heure de Paris).`);
@@ -42,7 +42,7 @@ function listContext(preds) {
   return 'Matchs à venir, heure de Paris (probabilités du modèle 1 / N / 2) :\n' + up.map(p => `- ${paris(p.kickoff)} ${LGN[p.lg] || p.lg} : ${p.home} – ${p.away} : ${pct(p.p[0])} / ${pct(p.p[1])} / ${pct(p.p[2])}${p.mk ? ` (bookmakers ${pct(p.mk[0])} / ${pct(p.mk[1])} / ${pct(p.mk[2])})` : ''}`).join('\n');
 }
 
-const SYSTEM = `Tu es l'assistant de PronostiK, un site français qui publie des probabilités de matchs de football (Ligue 1, Premier League, Bundesliga, Serie A, La Liga, Liga Portugal, Eredivisie et Ligue des champions).
+const SYSTEM = `Tu es l'assistant de PronostiK, un site français qui publie des probabilités de matchs de football (Ligue 1, Premier League, Bundesliga, Serie A, La Liga, Liga Portugal, Eredivisie, Championship, Ligue 2 et Ligue des champions).
 Règles :
 - Réponds en français, simplement, en 2 à 6 phrases courtes. Pas de tableaux ni de titres ; le gras (**mot**) est permis avec modération.
 - Appuie-toi UNIQUEMENT sur les données fournies ci-dessous. Si une information n'y est pas (blessures, compositions, actualité, joueurs), dis que tu ne l'as pas. N'invente jamais un chiffre, un nom ou un résultat.

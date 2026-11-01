@@ -66,7 +66,7 @@ async function downloadCSVs(league, seasonStart) {
       try {
         const r = await fetch(url);
         if (!r.ok) { console.log(`  CSV ${c} ${code} : HTTP ${r.status} (ignoré)`); continue; }
-        rows.push(...parseCSV(await r.text(), league.code));
+        rows.push(...parseCSV(await r.text(), league.code, {top: league.csv[0]}));
       } catch (e) { console.log(`  CSV ${c} ${code} : ${e.message} (ignoré)`); }
     }
   }
@@ -92,7 +92,7 @@ async function main() {
   for (const lg of LEAGUES) {
     const count = history.filter(m => m.lg === lg.code).length;
     const last = state.csvAt[lg.code] ? new Date(state.csvAt[lg.code]) : null;
-    const stale = !last || (NOW - last) > CSV_REFRESH_DAYS * 86400000 || state.csvVersion !== CSV_VERSION; // nouveau format : un rechargement complet
+    const stale = !last || (NOW - last) > (lg.source === 'csv' ? 0.5 : CSV_REFRESH_DAYS) * 86400000 || state.csvVersion !== CSV_VERSION;   // ligue sans API : résultats lus dans le CSV, rafraîchi deux fois par jour // nouveau format : un rechargement complet
     if (!(stale || count < 200 || process.env.FORCE_CSV)) continue;
     console.log(`Historique ${lg.name}…`);
     const rows = await downloadCSVs(lg, season);
@@ -115,7 +115,7 @@ async function main() {
   const apiByLeague = {}, emblems = {};
   let apiOk = 0;
   for (const [i, lg] of LEAGUES.entries()) {
-    if (errors[lg.code]) continue;
+    if (errors[lg.code] || lg.source === 'csv') continue;
     if (i > 0 && API_DELAY) await sleep(API_DELAY);
     try {
       const j = await api(`/competitions/${lg.code}/matches?season=${season}`);
@@ -125,6 +125,7 @@ async function main() {
       if (em) emblems[lg.code] = em;
     } catch (e) { errors[lg.code] = e.message; console.error(`API ${lg.code} :`, e.message); }
   }
+  emblems.FL2 = emblems.FL2 || 'https://crests.football-data.org/FL2.png';   // blason public (pas d'accès API pour la Ligue 2)
   if (!apiOk) throw new Error(Object.values(errors)[0] || 'Aucune réponse de l\'API.');
 
   const apiResult = new Map(), statusById = new Map();
@@ -352,6 +353,43 @@ async function main() {
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const fx = parseFixtures(await r.text());
     oddsInfo.ok = true; oddsInfo.rows = fx.length;
+    // Ligues sans API (Ligue 2) : les matchs à venir viennent de ce fichier (heure anglaise convertie en UTC).
+    const londonToUTC = (d, t) => {
+      const [hh, mm] = (t || '12:00').split(':').map(Number), guess = Date.UTC(+d.slice(0, 4), +d.slice(5, 7) - 1, +d.slice(8, 10), hh, mm);
+      const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/London', hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'}).formatToParts(new Date(guess)).map(x => [x.type, x.value]));
+      const shown = Date.UTC(+parts.year, +parts.month - 1, +parts.day, +parts.hour, +parts.minute);
+      return new Date(guess - (shown - guess)).toISOString().replace('.000Z', 'Z');
+    };
+    const slug = x => String(x).toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g, '');
+    for (const lgx of LEAGUES.filter(l => l.source === 'csv')) {
+      for (const f of fx.filter(f => f.div === lgx.csv[0])) {
+        const kickoff = londonToUTC(f.date, f.time), date = parisDate(new Date(kickoff));
+        if (date < todayStr || date > end) continue;
+        const id = `cs${lgx.code}-${f.date}-${slug(f.home)}-${slug(f.away)}`, old = byId.get(id);
+        if (old && NOW >= new Date(old.kickoff) && old.kickoff === kickoff) continue;   // figé après le coup d'envoi
+        const home = known[lgx.code].includes(f.home) ? f.home : resolve(f.home, lgx.code), away = known[lgx.code].includes(f.away) ? f.away : resolve(f.away, lgx.code);
+        const entry = {id, apiId: null, lg: lgx.code, date, kickoff, home: home || f.home, away: away || f.away, crest: [null, null], p: null, lam: null, score: null, err: null,
+          form: {h: [], a: []}, rel: 'ok', savedAt: old?.savedAt || NOW.toISOString(), updatedAt: old?.updatedAt || NOW.toISOString(), res: null, final: null};
+        if (!home || !away) entry.err = 'Équipe non reconnue dans l’historique.';
+        else {
+          entry.form = {h: lastFive(lgx.code, home, date), a: lastFive(lgx.code, away, date)};
+          entry.stats = matchStats(lgx.code, home, away, date);
+          try {
+            const x = predictMatch(lgx.code, home, away, date);
+            entry.p = x.p.map(r4); entry.lam = x.lam.map(r4); entry.score = x.score; entry.model = x.model;
+            const mk2 = marketsFromLambdas(x.lam[0], x.lam[1]); entry.markets = {o15: r4(mk2.o15), o25: r4(mk2.o25), btts: r4(mk2.btts), ht: mk2.ht.map(r4), scores: mk2.scores.map(([sc, v]) => [sc, r4(v)])};
+            entry.rel = seasonCount(lgx.code, home, date) >= 5 && seasonCount(lgx.code, away, date) >= 5 ? 'ok' : 'limited';
+          } catch (e) { entry.err = e.message; }
+        }
+        if (old) {
+          if (old.mk) entry.mk = old.mk;
+          const same = JSON.stringify([old.p, old.lam, old.kickoff]) === JSON.stringify([entry.p, entry.lam, entry.kickoff]);
+          if (same) { entry.updatedAt = old.updatedAt; entry.form = old.form; entry.rel = old.rel; entry.err = old.err; } else entry.updatedAt = NOW.toISOString();
+          predictions = predictions.filter(p => p.id !== id);
+        }
+        predictions.push(entry); byId.set(id, entry);
+      }
+    }
     const lgByDiv = Object.fromEntries(LEAGUES.map(l => [l.csv[0], l.code]));
     const dayDiff = (a, b) => Math.abs(new Date(a) - new Date(b)) / 86400000;
     for (const f of fx) {
@@ -368,6 +406,12 @@ async function main() {
   for (const p of predictions) if (p.markets && p.markets.btts == null && Array.isArray(p.lam)) p.markets.btts = r4(marketsFromLambdas(p.lam[0], p.lam[1]).btts);
 
   // --- 5. règlement
+  const csvLeague = new Set(LEAGUES.filter(l => l.source === 'csv').map(l => l.code));
+  for (const p of predictions) {
+    if (p.res || !csvLeague.has(p.lg) || NOW < new Date(p.kickoff)) continue;   // ligue sans API : résultat lu dans le CSV
+    const m = history.find(h => h.lg === p.lg && h.home === p.home && h.away === p.away && Math.abs(new Date(h.date) - new Date(p.date)) <= 86400000);
+    if (m) { p.res = outcome(m.hg, m.ag); p.final = `${m.hg}–${m.ag}`; }
+  }
   for (const p of predictions) {
     if (p.res) continue;
     const r = apiResult.get(p.apiId);
