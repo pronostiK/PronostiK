@@ -139,6 +139,7 @@
     }).join('');
   }
 
+  const sgn = v => (v > 0 ? '+' : v < 0 ? '−' : '') + fr(Math.abs(v));
   const brier = (p, i) => p.reduce((s, v, k) => s + (v - (k === i ? 1 : 0)) ** 2, 0);
   function renderBilan(preds, sc) {
     const L = sc && sc.leagues ? sc.leagues : (sc && sc.n ? {FL1: sc} : {});
@@ -147,16 +148,17 @@
       const tot = codes.reduce((a, c) => a + L[c].n, 0);
       const wBM = codes.reduce((a, c) => a + L[c].brierModel * L[c].n, 0) / tot, wBK = codes.reduce((a, c) => a + L[c].brierMarket * L[c].n, 0) / tot;
       const rows = codes.map(c => {
-        const x = L[c], d = x.brierModel - x.brierMarket;
-        return `<tr><td>${esc(LG_NAME[c] || c)}</td><td>${x.n}</td><td>${fr(x.brierModel)}</td><td>${fr(x.brierMarket)}</td><td>${Math.round(x.hitModel * 100)} % / ${Math.round(x.hitMarket * 100)} %</td><td class="${d <= 0 ? 'ok' : 'ko'}">${d <= 0 ? '' : '+'}${fr(d)}</td></tr>`;
+        const x = L[c], d = x.ecartBrier ? x.ecartBrier.diff : x.brierModel - x.brierMarket;
+        const ci = x.ecartBrier ? `<br><small class="muted">[${sgn(x.ecartBrier.lo)} ; ${sgn(x.ecartBrier.hi)}]</small>` : '';
+        return `<tr><td>${esc(LG_NAME[c] || c)}</td><td>${x.n}${x.nRepli ? `<br><small class="muted">dont ${x.nRepli} en repli</small>` : ''}</td><td>${fr(x.brierModel)}</td><td>${fr(x.brierMarket)}</td><td>${Math.round(x.hitModel * 100)} % / ${Math.round(x.hitMarket * 100)} %</td><td class="${d <= 0 ? 'ok' : 'ko'}">${sgn(d)}${ci}</td></tr>`;
       }).join('');
       $('backtest').innerHTML = `<p style="margin:0 0 4px">Sur ${tot} matchs depuis août 2025, chaque match est prédit avec les seuls résultats antérieurs, puis comparé aux probabilités déduites des cotes moyennes des bookmakers (marge retirée).</p>
         <div class="stats">
           <div class="stat"><b>${fr(wBM)}</b><span>Erreur du modèle (Brier)</span></div>
           <div class="stat"><b>${fr(wBK)}</b><span>Erreur des cotes (Brier)</span></div>
         </div>
-        <div class="table"><table><thead><tr><th>Championnat</th><th>Matchs</th><th>Modèle</th><th>Cotes</th><th>Juste (mod. / cotes)</th><th>Écart</th></tr></thead><tbody>${rows}</tbody></table></div>
-        <p style="margin:10px 0 0">${wBM < wBK ? 'Sur cette période, le modèle est au moins aussi précis que les cotes. À confirmer sur davantage de matchs.' : 'Les cotes des bookmakers sont plus précises que le modèle : ils connaissent les compositions et les blessures, pas lui. Ce site sert à comprendre un match, pas à battre le marché.'} Plus l’erreur est basse, mieux c’est (prédire 1/3 partout donne 0,667). Écart négatif : le modèle fait mieux que les cotes.</p>`;
+        <div class="table"><table><thead><tr><th>Championnat</th><th>Matchs</th><th>Modèle</th><th>Cotes</th><th>Juste (mod. / cotes)</th><th>Écart [IC 95 %]</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p style="margin:10px 0 0">${wBM < wBK ? 'Sur cette période, le modèle est au moins aussi précis que les cotes. À confirmer sur davantage de matchs.' : 'Les cotes des bookmakers sont plus précises que le modèle : ils connaissent les compositions et les blessures, pas lui. Ce site sert à comprendre un match, pas à battre le marché.'} Plus l’erreur est basse, mieux c’est (prédire 1/3 partout donne 0,667). Écart négatif : le modèle fait mieux que les cotes.${sc.total && sc.total.ecartBrier ? ` Sur l’ensemble, l’écart vaut ${sgn(sc.total.ecartBrier.diff)}, avec un intervalle de confiance à 95 % de ${sgn(sc.total.ecartBrier.lo)} à ${sgn(sc.total.ecartBrier.hi)} : ${sc.total.ecartBrier.lo > 0 ? 'les cotes sont significativement plus précises' : sc.total.ecartBrier.hi < 0 ? 'le modèle est significativement plus précis' : 'la différence n’est pas significative'}.` : ''} « En repli » : match d’une équipe sans assez d’historique (souvent un promu), calculé avec la méthode simple.</p>`;
     } else $('backtest').textContent = 'Test indisponible pour le moment.';
 
     const done = preds.filter(p => p.p && ['H', 'D', 'A'].includes(p.res));

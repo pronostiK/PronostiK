@@ -1,6 +1,6 @@
 # PronostiK — dossier technique (pour relecture)
 
-Dernière mise à jour : 1er novembre 2026. Tout ce qui est décrit ici est dans ce dépôt et tourne automatiquement.
+Dernière mise à jour : 1er novembre 2026 (après audit). Tout ce qui est décrit ici est dans ce dépôt et tourne automatiquement.
 
 ## 1. Objectif et règle du jeu
 
@@ -36,10 +36,37 @@ Méthode **proportionnelle** : p_i = (1/cote_i) / Σ(1/cote_j), sur les cotes **
 
 ## 5. Protocole d'évaluation
 
-- Test chronologique : chaque match est prédit avec un modèle estimé uniquement sur les matchs antérieurs.
-- Période de test : matchs de première division à partir du **2025-08-01**, ayant des cotes de clôture.
-- Mesures : Brier à 3 issues (somme des carrés, 1/3-1/3-1/3 ≈ 0,667), log-loss, taux de l'issue la plus probable.
-- Comparaisons appariées (même ensemble de matchs pour toutes les variantes).
+- **Test chronologique** : chaque match est prédit avec un modèle estimé uniquement sur les matchs antérieurs (`m.date < date`, les matchs du jour même sont exclus). Ce point est vérifié automatiquement (§5.3).
+- **Mesures** : Brier à 3 issues (somme des carrés ; 1/3-1/3-1/3 ≈ 0,667), log-loss, taux de l'issue la plus probable. Les **différences appariées** modèle − marché sont données avec un IC à 95 % (approximation normale).
+
+### 5.1 Les deux échantillons (2 156 et 2 080 matchs)
+
+| | Bilan public (`data/scorecard.json`) | Laboratoire (`scripts/lab-*.mjs`) |
+|---|---|---|
+| Matchs retenus | 1re division, joués depuis le 2025-08-01, cotes de clôture valides, un pronostic | mêmes filtres, **et** pronostic v2 disponible |
+| Prédicteur | celui du site : v2, avec repli v1 si une équipe a moins de 3 matchs-équivalents | v2 seul |
+| Effectif (au 1er novembre 2026) | 2 156 = 2 080 (v2) + 76 (repli v1) | 2 080 |
+
+- Matchs exclus des deux échantillons : ceux sans cotes de clôture (résultats ajoutés par l'API avant la mise à jour du CSV) et ceux qu'aucun modèle ne sait prédire. Le bilan les compte dans `exclus`.
+- Dans chaque comparaison, modèle et marché sont évalués sur **exactement** les mêmes matchs. Le test de bout en bout le vérifie : écart apparié = différence des moyennes.
+
+### 5.2 Provenance des paramètres
+
+- Paramètres v2 (fenêtre 550 jours, demi-vie 365 jours, k = 8, minW = 3) : choisis par recherche sur grille sur la **Ligue 1, saison 2024-25** uniquement, puis appliqués sans changement aux autres championnats et à la période de test. Ils sont figés par le test F de `tests/check-model.mjs`.
+- La période de test (depuis le 2025-08-01) n'a servi à régler aucun paramètre. **Limite** : elle a servi à **décider** d'écarter des variantes (Dixon-Coles, mélange avec le marché, xG-tirs). Ces décisions vont toutes dans le sens « ne rien changer », mais pour une validation entièrement propre, les matchs joués **après le 1er novembre 2026** forment un nouvel échantillon jamais consulté.
+- La saison 2024-25 des quatre autres championnats n'a servi à aucun réglage : c'est un échantillon indépendant, utilisé comme tel dans `lab/RAPPORT-SEGMENTS.md`.
+
+### 5.3 Tests automatiques
+
+`node tests/check-model.mjs` (données figées dans `tests/fixtures/`, indépendantes de l'historique vivant) :
+- A. Le modèle v1 donne les mêmes chiffres que la page d'origine (12 matchs).
+- B. Le modèle v2 retrouve les 13 références de la Ligue 1, sur un historique filtré sur la Ligue 1.
+- C. Pour chacun des 5 championnats, le modèle v2 donne les mêmes chiffres que l'implémentation de laboratoire, écrite séparément (10 matchs par championnat).
+- D. Absence de fuite : les prédictions restent identiques quand on supprime ou falsifie tous les matchs à partir de leur date. Le test est contrôlé par mutation : une fuite volontaire (`<=` au lieu de `<`) le fait échouer.
+- E. Cohérence : probabilités dans [0, 1], de somme 1, et buts attendus positifs.
+- F. Paramètres de production inchangés.
+
+`node tests/e2e.mjs` : robot complet sur 5 championnats fictifs (API et CSV simulés), y compris la cohérence des comptes du bilan.
 
 ## 6. Résultats
 
@@ -53,7 +80,7 @@ Méthode **proportionnelle** : p_i = (1/cote_i) / Σ(1/cote_j), sur les cotes **
 | Serie A | 470 | 0,5877 | 0,5723 | 0,987 | 0,965 | 54,0 % | 55,5 % |
 | La Liga | 479 | 0,5879 | 0,5654 | 0,989 | 0,955 | 53,0 % | 54,9 % |
 
-Écart moyen modèle − marché : environ +0,017 de Brier, stable d'un championnat à l'autre.
+Écart moyen modèle − marché : environ +0,017 de Brier, stable d'un championnat à l'autre. Depuis l'audit, le bilan publie aussi pour chaque championnat le nombre de matchs en repli v1, les exclusions et les IC à 95 % des écarts de Brier et de log-loss (`ecartBrier`, `ecartLog`). Le détail par championnat et par saison est dans `lab/RAPPORT-SEGMENTS.md`.
 
 ### 6.2 Expériences (toutes sur la période de test)
 
@@ -92,4 +119,5 @@ Elle sera mesurée sur les mêmes 2 080 matchs. **Chiffres à battre** : 0,5944 
 - `model.mjs` : modèles v1 et v2.
 - `scripts/update.mjs` : robot de mise à jour (toutes les 3 heures).
 - `csv.mjs`, `lib.mjs`, `leagues.mjs` : lecture des données, noms d'équipes.
-- `tests/check-model.mjs`, `tests/e2e.mjs` : tests automatiques.
+- `tests/check-model.mjs`, `tests/e2e.mjs` : tests automatiques (jeux figés dans `tests/fixtures/`).
+- `scripts/lab-segments.mjs` → `lab/RAPPORT-SEGMENTS.md` : segments, calibration, erreurs, recalibration, saisons.

@@ -27,6 +27,31 @@ Généré par `scripts/lab-segments.mjs` à partir de `data/history.json`. Le mo
 | Test | 2080 | 0,5944 | 0,5776 | +0,0168 [+0,0117 ; +0,0219] | 0,9973 | 0,9714 | +0,0259 [+0,0185 ; +0,0333] |
 | Indépendant (saison 2024-25) | 1698 | 0,5894 | 0,5715 | +0,0179 [+0,0122 ; +0,0236] | 0,9882 | 0,9622 | +0,0260 [+0,0176 ; +0,0344] |
 
+## Par championnat et par saison
+
+La saison 2024-25 est l'échantillon indépendant (période de réglage des paramètres). Les saisons 2025-26 et 2026-27 (en cours) forment la période de test.
+
+| Saison | Championnat | n | Brier modèle | Brier marché | Écart Brier [IC 95 %] | Écart log-loss [IC 95 %] |
+|---|---|---|---|---|---|---|
+| 2024-25 | Ligue 1 | 294 | 0,5770 | 0,5663 | +0,0107 [−0,0044 ; +0,0258] | +0,0130 [−0,0090 ; +0,0351] |
+| 2024-25 | Premier League | 368 | 0,5895 | 0,5773 | +0,0122 [−0,0001 ; +0,0245] | +0,0167 [−0,0015 ; +0,0350] |
+| 2024-25 | Bundesliga | 298 | 0,6147 | 0,5906 | +0,0241 [+0,0108 ; +0,0374] | +0,0369 [+0,0173 ; +0,0565] |
+| 2024-25 | Serie A | 368 | 0,5869 | 0,5672 | +0,0197 [+0,0072 ; +0,0321] | +0,0304 [+0,0124 ; +0,0484] |
+| 2024-25 | La Liga | 370 | 0,5814 | 0,5590 | +0,0225 [+0,0113 ; +0,0337] | +0,0324 [+0,0159 ; +0,0489] |
+| 2024-25 | **Tous** | 1698 | 0,5894 | 0,5715 | +0,0179 [+0,0122 ; +0,0236] | +0,0260 [+0,0176 ; +0,0344] |
+| 2025-26 | Ligue 1 | 302 | 0,6030 | 0,5838 | +0,0193 [+0,0060 ; +0,0325] | +0,0291 [+0,0099 ; +0,0483] |
+| 2025-26 | Premier League | 372 | 0,6194 | 0,6078 | +0,0116 [−0,0013 ; +0,0245] | +0,0204 [+0,0019 ; +0,0389] |
+| 2025-26 | Bundesliga | 302 | 0,5855 | 0,5628 | +0,0227 [+0,0107 ; +0,0347] | +0,0346 [+0,0168 ; +0,0524] |
+| 2025-26 | Serie A | 372 | 0,5959 | 0,5807 | +0,0152 [+0,0027 ; +0,0277] | +0,0237 [+0,0053 ; +0,0421] |
+| 2025-26 | La Liga | 369 | 0,5843 | 0,5721 | +0,0122 [+0,0011 ; +0,0232] | +0,0180 [+0,0018 ; +0,0341] |
+| 2025-26 | **Tous** | 1717 | 0,5979 | 0,5821 | +0,0158 [+0,0103 ; +0,0213] | +0,0246 [+0,0166 ; +0,0327] |
+| 2026-27 | Ligue 1 | 64 | 0,5950 | 0,5690 | +0,0260 [−0,0094 ; +0,0615] | +0,0371 [−0,0128 ; +0,0871] |
+| 2026-27 | Premier League | 73 | 0,6304 | 0,5981 | +0,0322 [+0,0024 ; +0,0620] | +0,0488 [+0,0087 ; +0,0889] |
+| 2026-27 | Bundesliga | 52 | 0,5786 | 0,5725 | +0,0061 [−0,0249 ; +0,0371] | +0,0069 [−0,0368 ; +0,0507] |
+| 2026-27 | Serie A | 86 | 0,5277 | 0,5227 | +0,0050 [−0,0190 ; +0,0291] | +0,0055 [−0,0300 ; +0,0409] |
+| 2026-27 | La Liga | 88 | 0,5707 | 0,5355 | +0,0352 [+0,0069 ; +0,0636] | +0,0551 [+0,0143 ; +0,0958] |
+| 2026-27 | **Tous** | 363 | 0,5779 | 0,5562 | +0,0217 [+0,0085 ; +0,0349] | +0,0320 [+0,0133 ; +0,0507] |
+
 ## 1–3. Segments
 
 Pour chaque segment, l'écart de Brier est donné sur le test et sur l'échantillon indépendant. Un avantage réel devrait être négatif et significatif **dans les deux**.
@@ -148,3 +173,5 @@ Paramètres du premier et du dernier mois : t = 1,187 → 1,180 ; β domicile = 
 - Les segments « désaccord » sont définis à partir du marché lui-même. Ils décrivent où le modèle se trompe, mais ne constituent pas une stratégie utilisable avant le match avec des cotes d'ouverture.
 - Cotes de **clôture** : c'est la référence la plus exigeante. Un éventuel avantage face aux cotes d'ouverture n'est pas mesuré ici.
 - Une seule saison et quelques mois de test : les petits effets (moins de 0,005 de Brier) ne sont pas détectables.
+- La période de test a servi à décider d'écarter des variantes. Elle n'est donc pas totalement « vierge ». Les matchs joués après le 1er novembre 2026 constitueront un échantillon jamais consulté.
+- La saison 2024-25 ne disposait que d'environ un an d'historique (les données commencent en août 2023), au lieu des 550 jours de la fenêtre.

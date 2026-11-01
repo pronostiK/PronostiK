@@ -219,27 +219,48 @@ async function main() {
   }
   predictions.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
 
-  // --- 6. test de fiabilité par championnat (recalculé s'il manque ou si l'historique vient d'être rafraîchi)
+  // --- 6. test de fiabilité par championnat
+  // Échantillon : matchs de 1re division joués depuis BACKTEST_START, avec cotes de clôture valides et un pronostic
+  // (v2, ou repli v1 pour une équipe sans assez d'historique). Modèle et marché sont TOUJOURS comparés sur les mêmes matchs.
+  // Recalculé si le format a changé, si l'historique vient d'être rafraîchi, ou sur demande (FORCE_SCORECARD).
+  const SC_VERSION = 2;
   let sc = readJSON('scorecard.json', null);
-  const leaguesSc = {...(sc?.leagues || {})};
-  for (const lg of LEAGUES) {
-    if (leaguesSc[lg.code] && !csvRefreshed.has(lg.code) && !process.env.FORCE_SCORECARD) continue;
-    let n = 0, bM = 0, bK = 0, lM = 0, lK = 0, hM = 0, hK = 0;
+  const scStale = !sc || sc.version !== SC_VERSION;
+  // Tous les championnats sont recalculés ensemble, pour que le total et son IC portent sur un échantillon cohérent.
+  const scNeeded = scStale || csvRefreshed.size > 0 || !!process.env.FORCE_SCORECARD;
+  const leaguesSc = {};
+  const mean = a => a.reduce((x, y) => x + y, 0) / a.length;
+  const ci95 = d => { if (d.length < 2) return null; const m = mean(d), v = d.reduce((x, y) => x + (y - m) ** 2, 0) / (d.length - 1), e = 1.96 * Math.sqrt(v / d.length); return {diff: r4(m), lo: r4(m - e), hi: r4(m + e)}; };
+  const allB = [], allL = [];
+  for (const lg of scNeeded ? LEAGUES : []) {
+    let played = 0, noOdds = 0, noPred = 0;
+    const R = [];
     for (const m of history.filter(m => m.lg === lg.code && m.division === 'L1' && m.date >= BACKTEST_START)) {
+      played++;
       const odds = [m.avgH, m.avgD, m.avgA].map(Number);
-      if (!odds.every(v => Number.isFinite(v) && v > 1)) continue;
-      let md; try { md = predictMatch(lg.code, m.home, m.away, m.date).p; } catch { continue; }
+      if (!odds.every(v => Number.isFinite(v) && v > 1)) { noOdds++; continue; }
+      let x; try { x = predictMatch(lg.code, m.home, m.away, m.date); } catch { noPred++; continue; }
       const raw = odds.map(v => 1 / v), s = raw.reduce((a, b) => a + b, 0), mk = raw.map(v => v / s);
       const i = m.hg > m.ag ? 0 : m.hg === m.ag ? 1 : 2;
-      const br = p => p.reduce((t, v, k) => t + (v - (k === i ? 1 : 0)) ** 2, 0);
-      n++; bM += br(md); bK += br(mk);
-      lM -= Math.log(Math.max(1e-12, md[i])); lK -= Math.log(Math.max(1e-12, mk[i]));
-      if (md.indexOf(Math.max(...md)) === i) hM++;
-      if (mk.indexOf(Math.max(...mk)) === i) hK++;
+      const br = p => p.reduce((t, v, k) => t + (v - (k === i ? 1 : 0)) ** 2, 0), ll = p => -Math.log(Math.max(1e-12, p[i]));
+      R.push({v2: x.model === 'v2', bM: br(x.p), bK: br(mk), lM: ll(x.p), lK: ll(mk), hM: x.p.indexOf(Math.max(...x.p)) === i, hK: mk.indexOf(Math.max(...mk)) === i});
     }
-    if (n) leaguesSc[lg.code] = {n, brierModel: r4(bM / n), brierMarket: r4(bK / n), logModel: r4(lM / n), logMarket: r4(lK / n), hitModel: r4(hM / n), hitMarket: r4(hK / n)};
+    if (!R.length) continue;
+    const V2 = R.filter(r => r.v2), dB = R.map(r => r.bM - r.bK), dL = R.map(r => r.lM - r.lK);
+    dB.forEach(v => allB.push(v)); dL.forEach(v => allL.push(v));
+    leaguesSc[lg.code] = {
+      n: R.length, nV2: V2.length, nRepli: R.length - V2.length, exclus: {joues: played, sansCotes: noOdds, sansPronostic: noPred},
+      brierModel: r4(mean(R.map(r => r.bM))), brierMarket: r4(mean(R.map(r => r.bK))), logModel: r4(mean(R.map(r => r.lM))), logMarket: r4(mean(R.map(r => r.lK))),
+      hitModel: r4(R.filter(r => r.hM).length / R.length), hitMarket: r4(R.filter(r => r.hK).length / R.length),
+      ecartBrier: ci95(dB), ecartLog: ci95(dL),
+      v2: V2.length ? {n: V2.length, brierModel: r4(mean(V2.map(r => r.bM))), brierMarket: r4(mean(V2.map(r => r.bK))), ecartBrier: ci95(V2.map(r => r.bM - r.bK))} : null,
+    };
   }
-  writeIfChanged('scorecard.json', {start: BACKTEST_START, model: 'ratings-v2', leagues: leaguesSc});
+  const tot = Object.values(leaguesSc).reduce((a, x) => a + x.n, 0);
+  if (scNeeded) writeIfChanged('scorecard.json', {version: SC_VERSION, start: BACKTEST_START, model: 'ratings-v2 (repli v1)',
+    echantillon: 'Matchs de 1re division joués depuis la date de début, avec cotes moyennes de clôture valides et un pronostic. Modèle et marché comparés sur les mêmes matchs. IC à 95 % : différence appariée modèle − marché, approximation normale.',
+    total: tot ? {n: tot, ecartBrier: ci95(allB), ecartLog: ci95(allL)} : null,
+    leagues: leaguesSc});
 
   writeIfChanged('history.json', history);
   writeIfChanged('predictions.json', predictions);

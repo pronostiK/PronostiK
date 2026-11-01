@@ -7,7 +7,7 @@ import {spawn} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const dir = mkdtempSync(join(tmpdir(), 'pk-'));
-copyFileSync(join(root, 'data/history.json'), join(dir, 'history.json'));   // la France est déjà dans l'historique de départ
+copyFileSync(join(root, 'tests/fixtures/history-FL1-seed.json'), join(dir, 'history.json'));   // jeu figé : la France est déjà dans l'historique de départ (le test ne dépend pas des données vivantes)
 
 // ---- données synthétiques (noms au format des CSV)
 const TOP = {
@@ -92,7 +92,13 @@ ok(pred.find(p => p.apiId === 401 && p.home === 'Inter' && p.away === 'Milan'), 
 ok(pred.find(p => p.apiId === 502 && p.home === 'Ath Madrid'), 'phase 1 : Club Atlético de Madrid → Ath Madrid');
 ok(pred.find(p => p.apiId === 403).err, 'phase 1 : équipe inconnue signalée sans chiffre inventé');
 ok(J('meta.json').unmapped.some(u => u.name === 'Equipe Inconnue FC'), 'phase 1 : nom inconnu listé dans meta.unmapped');
-const sc = J('scorecard.json').leagues;
+const scAll = J('scorecard.json'), sc = scAll.leagues;
+ok(scAll.version === 2 && Object.values(sc).every(x => x.n === x.nV2 + x.nRepli && x.exclus.joues === x.n + x.exclus.sansCotes + x.exclus.sansPronostic),
+  'bilan : chaque match joué est compté une fois (pronostiqué = v2 + repli ; joués = pronostiqués + sans cotes + sans pronostic)');
+ok(Object.values(sc).every(x => x.ecartBrier && x.ecartBrier.lo <= x.ecartBrier.diff && x.ecartBrier.diff <= x.ecartBrier.hi && x.ecartLog && x.ecartLog.lo <= x.ecartLog.hi)
+  && scAll.total && scAll.total.n === Object.values(sc).reduce((a, x) => a + x.n, 0) && scAll.total.ecartBrier,
+  'bilan : intervalles de confiance présents et cohérents, total = somme des championnats');
+ok(Object.values(sc).every(x => Math.abs((x.brierModel - x.brierMarket) - x.ecartBrier.diff) < 2e-4), 'bilan : écart apparié = différence des moyennes (mêmes matchs des deux côtés)');
 ok(['FL1', 'PL', 'BL1', 'SA', 'PD'].every(k => sc[k] && sc[k].n > 100), 'phase 1 : bilan calculé pour les 5 championnats (' + Object.entries(sc).map(([k, v]) => k + ':' + v.n).join(' ') + ')');
 ok(J('history.json').some(m => m.lg === 'FL1' && m.home === 'Lille' && m.away === 'Nice' && m.date === '2026-10-25'), 'phase 1 : résultat récent ajouté à l\'historique de la France');
 { const a = pred.find(p => p.apiId === 101), b = pred.find(p => p.apiId === 201), m = J('meta.json').odds;

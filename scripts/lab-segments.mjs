@@ -79,6 +79,17 @@ const crit = (() => { // quantile normal pour 0,05/nTests bilatéral (approximat
 })();
 function erf(x) { const t = 1 / (1 + 0.3275911 * Math.abs(x)), y = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-x * x); return x >= 0 ? y : -y; }
 
+// ---------- 2b. Par championnat et par saison (saison = 1er août → 31 juillet)
+const seasonOf = d => { const y = +d.slice(0, 4), m = +d.slice(5, 7); const s0 = m >= 8 ? y : y - 1; return `${s0}-${String(s0 + 1).slice(2)}`; };
+const SEASONS = [...new Set(rows.map(r => seasonOf(r.date)))].sort();
+const bySeason = [];
+for (const se of SEASONS) {
+  for (const [c, n] of [...Object.entries(LG_NAME), ['ALL', 'Tous']]) {
+    const S = rows.filter(r => seasonOf(r.date) === se && (c === 'ALL' || r.lg === c)); const t = seg(S);
+    if (t) bySeason.push({saison: se, lg: n, ...t});
+  }
+}
+
 // ---------- 3. Calibration (toutes issues confondues) et pente de calibration
 const bins = [[0, .2], [.2, .3], [.3, .4], [.4, .5], [.5, .6], [.6, .7], [.7, 1.01]];
 const calib = (S, who) => bins.map(([lo, hi]) => { let n = 0, sp = 0, so = 0; for (const r of S) r[who].forEach((p, k) => { if (p >= lo && p < hi) { n++; sp += p; so += +(k === r.y); } }); return {lo, hi, n, pred: n ? sp / n : null, obs: n ? so / n : null, se: n ? Math.sqrt((so / n) * (1 - so / n) / n) : null}; });
@@ -140,7 +151,7 @@ const scN = Object.values(scorecard.leagues).reduce((s, v) => s + v.n, 0);
 
 // ---------- Sorties
 const out = {genere: 'scripts/lab-segments.mjs', test: {debut: TEST_START, n: TEST.length}, dev: {debut: DEV_START, n: DEV.length}, seuilBonferroni: {comparaisons: nTests, zCritique: crit},
-  global: seg(TEST), globalDev: seg(DEV), tables, calibration: {modele: calib(TEST, 'md'), marche: calib(TEST, 'mk'), penteModele: slope(TEST, 'md'), penteMarche: slope(TEST, 'mk')},
+  global: seg(TEST), globalDev: seg(DEV), tables, parSaison: bySeason, calibration: {modele: calib(TEST, 'md'), marche: calib(TEST, 'mk'), penteModele: slope(TEST, 'md'), penteMarche: slope(TEST, 'mk')},
   erreurs: errors, recalibration: {resultats: recalRes, contreBrut: recalVsRaw, parametres: params, alignementOK: aligned},
   ecart2080_2156: {lab: TEST.length, bilan: scN, repliV1: fallbackTest}};
 mkdirSync(new URL('lab/', ROOT), {recursive: true});
@@ -180,6 +191,14 @@ Généré par \`scripts/lab-segments.mjs\` à partir de \`data/history.json\`. L
 |---|---|---|---|---|---|---|---|
 | Test | ${out.global.n} | ${f4(out.global.brierModel)} | ${f4(out.global.brierMarket)} | ${ci(out.global.brierDiff)} | ${f4(out.global.logModel)} | ${f4(out.global.logMarket)} | ${ci(out.global.logDiff)} |
 | Indépendant (saison 2024-25) | ${out.globalDev.n} | ${f4(out.globalDev.brierModel)} | ${f4(out.globalDev.brierMarket)} | ${ci(out.globalDev.brierDiff)} | ${f4(out.globalDev.logModel)} | ${f4(out.globalDev.logMarket)} | ${ci(out.globalDev.logDiff)} |
+
+## Par championnat et par saison
+
+La saison 2024-25 est l'échantillon indépendant (période de réglage des paramètres). Les saisons 2025-26 et 2026-27 (en cours) forment la période de test.
+
+| Saison | Championnat | n | Brier modèle | Brier marché | Écart Brier [IC 95 %] | Écart log-loss [IC 95 %] |
+|---|---|---|---|---|---|---|
+${bySeason.map(b => `| ${b.saison} | ${b.lg === 'Tous' ? '**Tous**' : b.lg} | ${b.n} | ${f4(b.brierModel)} | ${f4(b.brierMarket)} | ${ci(b.brierDiff)} | ${ci(b.logDiff)} |`).join('\n')}
 
 ## 1–3. Segments
 
@@ -243,6 +262,8 @@ Paramètres du premier et du dernier mois : t = ${fx3(params[0].t2)} → ${fx3(p
 - Les segments « désaccord » sont définis à partir du marché lui-même. Ils décrivent où le modèle se trompe, mais ne constituent pas une stratégie utilisable avant le match avec des cotes d'ouverture.
 - Cotes de **clôture** : c'est la référence la plus exigeante. Un éventuel avantage face aux cotes d'ouverture n'est pas mesuré ici.
 - Une seule saison et quelques mois de test : les petits effets (moins de 0,005 de Brier) ne sont pas détectables.
+- La période de test a servi à décider d'écarter des variantes. Elle n'est donc pas totalement « vierge ». Les matchs joués après le 1er novembre 2026 constitueront un échantillon jamais consulté.
+- La saison 2024-25 ne disposait que d'environ un an d'historique (les données commencent en août 2023), au lieu des 550 jours de la fenêtre.
 `;
 writeFileSync(new URL('lab/RAPPORT-SEGMENTS.md', ROOT), md);
 console.log(md);

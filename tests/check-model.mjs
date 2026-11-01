@@ -1,26 +1,82 @@
-// Vérifie que le modèle Node donne les mêmes chiffres que la page PronostiK (référence figée).
+// Tests du moteur de calcul, sur des données FIGÉES (tests/fixtures/) pour ne pas dépendre de l'historique vivant,
+// que le robot complète toutes les 3 heures.
+//   A. Modèle v1 (repli) : identique à la page PronostiK d'origine (12 matchs, Ligue 1).
+//   B. Modèle v2 : 13 références Ligue 1 du banc d'essai qui a servi à le choisir.
+//   C. Modèle v2 : 10 références par championnat, calculées par l'implémentation de laboratoire (code indépendant).
+//   D. Absence de fuite : une prédiction ne change pas si l'on supprime ou modifie les matchs à partir de sa date.
+//   E. Cohérence : probabilités dans [0, 1] et de somme 1.
+//   F. Paramètres de production inchangés (toute modification doit passer par une preuve statistique).
 import {readFileSync} from 'node:fs';
-import {createModel, createRatings} from '../model.mjs';
-const history=JSON.parse(readFileSync(new URL('../data/history.json',import.meta.url)));
-const refs=JSON.parse(readFileSync(new URL('./reference.json',import.meta.url)));
-const M=createModel(history);
-let bad=0;
-for(const r of refs){
-  const x=M.getLambdas(r.h,r.a,r.d),p=M.calcProb(x.lamH,x.lamA);
-  const d=Math.max(Math.abs(x.lamH-r.lamH),Math.abs(x.lamA-r.lamA),Math.abs(p.h-r.p[0]),Math.abs(p.d-r.p[1]),Math.abs(p.a-r.p[2]));
-  if(d>1e-12||p.score!==r.score){bad++;console.log('ÉCART',r.h,r.a,r.d,d)}
-}
-console.log(bad?`${bad} écart(s)`:`OK : ${refs.length} matchs identiques à la page`);
-if(bad)process.exit(1);
+import {createModel, createRatings, RATINGS_DEFAULTS} from '../model.mjs';
 
-// Modèle v2 (force attaque/défense) : mêmes chiffres que le banc d'essai qui a servi à le choisir.
-const refs2 = JSON.parse(readFileSync(new URL('./reference-ratings.json', import.meta.url)));
-const R = createRatings(history);
-let bad2 = 0;
-for (const r of refs2) {
-  const x = R.predict(r.h, r.a, r.d);
-  const d = x ? Math.max(...r.p.map((v, i) => Math.abs(v - x.p[i]))) : 1;
-  if (d > 1e-9) { bad2++; console.log('ÉCART v2', r.h, r.a, r.d, d); }
+const load = f => JSON.parse(readFileSync(new URL(f, import.meta.url)));
+const isLg = lg => m => (m.lg || 'FL1') === lg;
+const LEAGUES = ['FL1', 'PL', 'BL1', 'SA', 'PD'];
+let failed = 0;
+const report = (ok, msg) => { console.log((ok ? '  ok  ' : ' FAIL ') + msg); if (!ok) failed++; };
+const maxDiff = (a, b) => Math.max(...a.map((v, i) => Math.abs(v - b[i])));
+
+// A. v1 contre la page d'origine (jeu figé utilisé par la page : Ligue 1 + Ligue 2, jusqu'au 10/10/2026)
+{
+  const seed = load('./fixtures/history-FL1-seed.json').filter(isLg('FL1'));
+  const refs = load('./reference.json'), M = createModel(seed);
+  let bad = 0;
+  for (const r of refs) {
+    const x = M.getLambdas(r.h, r.a, r.d), p = M.calcProb(x.lamH, x.lamA);
+    const d = Math.max(Math.abs(x.lamH - r.lamH), Math.abs(x.lamA - r.lamA), maxDiff([p.h, p.d, p.a], r.p));
+    if (d > 1e-12 || p.score !== r.score) { bad++; console.log('       écart', r.h, r.a, r.d, d); }
+  }
+  report(!bad, `A. v1 : ${refs.length - bad}/${refs.length} matchs identiques à la page d'origine (Ligue 1)`);
 }
-console.log(bad2 ? `${bad2} écart(s) v2` : `OK : ${refs2.length} matchs identiques au banc d'essai (modèle v2)`);
-if (bad2) process.exit(1);
+
+// B. v2, 13 références Ligue 1 (même jeu figé, filtré sur la Ligue 1)
+{
+  const seed = load('./fixtures/history-FL1-seed.json').filter(isLg('FL1'));
+  const refs = load('./reference-ratings.json'), R = createRatings(seed);
+  let bad = 0, worst = 0;
+  for (const r of refs) { const x = R.predict(r.h, r.a, r.d); const d = x ? maxDiff(x.p, r.p) : 1; worst = Math.max(worst, d); if (d > 1e-9) { bad++; console.log('       écart', r.h, r.a, r.d, d); } }
+  report(!bad && refs.length === 13, `B. v2 Ligue 1 : ${refs.length - bad}/${refs.length} références exactes (écart max ${worst.toExponential(1)})`);
+}
+
+// C. v2 par championnat contre l'implémentation de laboratoire
+for (const lg of LEAGUES) {
+  const H = load(`./fixtures/history-${lg}.json`).filter(isLg(lg));
+  const refs = load(`./reference-ratings-${lg}.json`), R = createRatings(H);
+  let bad = 0, worst = 0;
+  for (const r of refs) { const x = R.predict(r.h, r.a, r.d); const d = x ? maxDiff(x.p, r.p) : 1; worst = Math.max(worst, d); if (d > 1e-9) { bad++; console.log('       écart', lg, r.h, r.a, r.d, d); } }
+  report(!bad && refs.length >= 10, `C. v2 ${lg} : ${refs.length - bad}/${refs.length} identiques au laboratoire (écart max ${worst.toExponential(1)})`);
+}
+
+// D. Absence de fuite d'information future
+for (const lg of LEAGUES) {
+  const H = load(`./fixtures/history-${lg}.json`).filter(isLg(lg));
+  const refs = load(`./reference-ratings-${lg}.json`);
+  const full = createRatings(H);
+  let bad = 0;
+  for (const r of refs.slice(0, 4)) {
+    const cut = createRatings(H.filter(m => m.date < r.d));                                         // futur supprimé
+    const fake = createRatings(H.map(m => m.date >= r.d ? {...m, hg: 9, ag: 0} : m));              // futur falsifié
+    const a = full.predict(r.h, r.a, r.d), b = cut.predict(r.h, r.a, r.d), c = fake.predict(r.h, r.a, r.d);
+    if (!a || !b || !c || maxDiff(a.p, b.p) > 1e-12 || maxDiff(a.p, c.p) > 1e-12) { bad++; console.log('       fuite ?', lg, r.h, r.a, r.d); }
+  }
+  report(!bad, `D. ${lg} : aucune fuite (prédictions identiques avec le futur supprimé ou falsifié, 4 dates)`);
+}
+
+// E. Cohérence des probabilités
+{
+  let bad = 0, n = 0;
+  for (const lg of LEAGUES) {
+    const H = load(`./fixtures/history-${lg}.json`).filter(isLg(lg)), R = createRatings(H);
+    for (const r of load(`./reference-ratings-${lg}.json`)) { const x = R.predict(r.h, r.a, r.d); n++; if (!x || x.p.some(v => v < 0 || v > 1) || Math.abs(x.p[0] + x.p[1] + x.p[2] - 1) > 1e-9 || !(x.lamH > 0 && x.lamA > 0)) bad++; }
+  }
+  report(!bad, `E. ${n - bad}/${n} prédictions cohérentes (probabilités dans [0, 1], somme = 1, buts attendus > 0)`);
+}
+
+// F. Paramètres de production
+{
+  const expected = {span: 550, half: 365, k: 8, minW: 3};
+  report(JSON.stringify(RATINGS_DEFAULTS) === JSON.stringify(expected), `F. paramètres v2 inchangés ${JSON.stringify(RATINGS_DEFAULTS)}`);
+}
+
+console.log(failed ? `\n${failed} test(s) en échec` : '\nTous les tests du modèle passent');
+process.exit(failed ? 1 : 0);
