@@ -1,0 +1,87 @@
+name: Application Android (APK)
+
+on:
+  push:
+    branches: [main]
+    paths: ['android/**', '.github/workflows/android.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: pronostik
+  cancel-in-progress: false
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    env:
+      ANDROID_KEY_PASS: ${{ secrets.ANDROID_KEY_PASS }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier le mot de passe de signature
+        run: |
+          if [ -z "$ANDROID_KEY_PASS" ]; then echo "Secret ANDROID_KEY_PASS pas encore ajouté : application non construite."; echo "SKIP=1" >> "$GITHUB_ENV"; exit 0; fi
+          if [ ${#ANDROID_KEY_PASS} -lt 12 ]; then echo "Mot de passe trop court (12 caractères minimum)."; exit 1; fi
+      - uses: actions/setup-java@v4
+        if: env.SKIP != '1'
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+        if: env.SKIP != '1'
+        with:
+          gradle-version: '8.9'
+      - name: Clé de signature (créée une seule fois, conservée chiffrée)
+        if: env.SKIP != '1'
+        run: |
+          KS="$RUNNER_TEMP/pronostik.jks"
+          if [ -f android/keystore.jks.enc ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in android/keystore.jks.enc -out "$KS" -pass env:ANDROID_KEY_PASS
+          else
+            keytool -genkeypair -v -keystore "$KS" -alias pronostik -keyalg RSA -keysize 4096 -validity 10000 \
+              -storepass "$ANDROID_KEY_PASS" -keypass "$ANDROID_KEY_PASS" -dname "CN=PronostiK, O=PronostiK, C=FR"
+            openssl enc -aes-256-cbc -pbkdf2 -iter 200000 -salt -in "$KS" -out android/keystore.jks.enc -pass env:ANDROID_KEY_PASS
+            echo "NEW_KEY=1" >> "$GITHUB_ENV"
+          fi
+          echo "KEYSTORE_PATH=$KS" >> "$GITHUB_ENV"
+          FP=$(keytool -list -v -keystore "$KS" -alias pronostik -storepass "$ANDROID_KEY_PASS" | grep -m1 'SHA256:' | sed 's/.*SHA256: *//')
+          echo "Empreinte : $FP"
+          mkdir -p .well-known
+          printf '[{"relation":["delegate_permission/common.handle_all_urls"],"target":{"namespace":"android_app","package_name":"fr.pronostikapp.app","sha256_cert_fingerprints":["%s"]}}]\n' "$FP" > .well-known/assetlinks.json
+      - name: Construire l'APK et le bundle
+        if: env.SKIP != '1'
+        env:
+          VERSION_CODE: ${{ github.run_number }}
+          VERSION_NAME: 1.0.${{ github.run_number }}
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          gradle -p android --no-daemon assembleRelease bundleRelease
+          mkdir -p downloads
+          cp android/app/build/outputs/apk/release/app-release.apk downloads/pronostik.apk
+          ls -la downloads android/app/build/outputs/bundle/release/
+      - uses: actions/upload-artifact@v4
+        if: env.SKIP != '1'
+        with:
+          name: pronostik-android
+          path: |
+            downloads/pronostik.apk
+            android/app/build/outputs/bundle/release/app-release.aab
+      - name: Publier l'APK et l'empreinte sur le site
+        if: env.SKIP != '1'
+        run: |
+          git config user.name "pronostik-bot"
+          git config user.email "pronostik-bot@users.noreply.github.com"
+          git add downloads/pronostik.apk .well-known/assetlinks.json android/keystore.jks.enc
+          if ! git diff --cached --quiet; then
+            git commit -m "Application Android : nouvelle version"
+            git pull --rebase -X theirs || { git rebase --abort; exit 1; }
+            git push
+          fi
+      - name: Republier le site
+        if: env.SKIP != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run update.yml --ref main

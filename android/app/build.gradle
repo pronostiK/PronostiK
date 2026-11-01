@@ -1,0 +1,38 @@
+plugins { id 'com.android.application' }
+
+def vCode = (System.getenv('VERSION_CODE') ?: '1').toInteger()
+def vName = System.getenv('VERSION_NAME') ?: '1.0.0'
+
+android {
+    namespace 'fr.pronostikapp.app'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'fr.pronostikapp.app'
+        minSdk 21
+        targetSdk 35
+        versionCode vCode
+        versionName vName
+    }
+    signingConfigs {
+        release {
+            storeFile file(System.getenv('KEYSTORE_PATH') ?: 'missing.jks')
+            storePassword System.getenv('ANDROID_KEY_PASS')
+            keyAlias 'pronostik'
+            keyPassword System.getenv('ANDROID_KEY_PASS')
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
+}
