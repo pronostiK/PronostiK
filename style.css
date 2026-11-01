@@ -288,3 +288,10 @@ footer p{margin:0 0 6px}
 .lg-mini{width:24px;height:24px;border-radius:7px;background:#fff;display:inline-grid;place-items:center;overflow:hidden;flex:none}
 .lg-mini img{width:19px;height:19px;object-fit:contain}
 .lgname{gap:8px}
+
+/* v9 : titre lumineux */
+.brand .wordmark{font-family:"Exo 2",Inter,system-ui,sans-serif;font-style:italic;font-weight:900;font-size:26px;letter-spacing:.5px;line-height:1;
+  background:linear-gradient(90deg,#7fe9ff 0%,#3fa2ff 45%,#8d7cff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 6px rgba(63,162,255,.55)) drop-shadow(0 0 16px rgba(141,124,255,.35))}
+.brand small{margin-top:4px;color:#8fb4e8}
+@media (prefers-color-scheme:light){.brand .wordmark{filter:drop-shadow(0 0 4px rgba(63,162,255,.35))}}
