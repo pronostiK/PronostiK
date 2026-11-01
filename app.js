@@ -41,16 +41,33 @@
     if (t && t.tagName === 'IMG' && t.classList.contains('crest')) { const w = document.createElement('span'); w.innerHTML = mono(t.dataset.n || '?'); t.replaceWith(w.firstChild); }
   }, true);
 
-  function cardHTML(p) {
-    const time = LG_NAME[p.lg] || p.lg || '';
+  // Affiche compacte de la liste : un clic ouvre la page du match.
+  function posterHTML(p) {
+    const lgc = LG_COLOR[p.lg] || 'var(--accent)', cr = p.crest || [];
+    const topI = p.p ? p.p.indexOf(Math.max(...p.p)) : -1;
+    const side = (name, url, fav) => `<div class="side${fav ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span></div>`;
+    let foot = '<p class="pfoot muted">Pronostic indisponible</p>';
+    if (p.p) {
+      const v = pct3(p.p), t = topI, lab = t === 1 ? 'Match nul' : t === 0 ? p.home : p.away;
+      const tag = v[t] >= 60 ? ['Favori net', 'ok'] : v[t] < 45 ? ['Match ouvert', ''] : ['Léger favori', ''];
+      foot = `<div class="seg mini" aria-hidden="true">${v.map((x, i) => `<span class="s${i}${i === t ? ' lead' : ''}" style="width:${x}%"></span>`).join('')}</div>
+        <div class="pfoot"><span class="tag ${tag[1]}">${tag[0]}</span><span class="pfav">${esc(lab)} <b>${v[t]} %</b></span></div>`;
+    }
+    return `<a class="poster" href="#match/${encodeURIComponent(p.id)}" style="--lg:${lgc}" aria-label="${esc(p.home)} contre ${esc(p.away)}, voir le pronostic">
+      <div class="meta"><span class="lgname"><i style="background:${lgc}"></i>${esc(LG_NAME[p.lg] || p.lg || '')}</span><span class="ptime">${esc(fmtTime.format(new Date(p.kickoff)))}</span></div>
+      <div class="match">${side(p.home, cr[0], topI === 0)}<div class="mid"><small>VS</small></div>${side(p.away, cr[1], topI === 2)}</div>${foot}</a>`;
+  }
+
+  function matchPageHTML(p) {
+    const time = (LG_NAME[p.lg] || p.lg || '') + ' · ' + fmtDay.format(new Date(p.kickoff));
     const chip = p.rel === 'limited' ? '<span class="chip warn">Échantillon réduit</span>' : '';
     const topI = p.p ? p.p.indexOf(Math.max(...p.p)) : -1;
     const cr = p.crest || [];
     const side = (name, url, fav) => `<div class="side${fav ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span></div>`;
     const head = `<div class="meta"><span class="lgname"><i style="background:${LG_COLOR[p.lg] || 'var(--accent)'}"></i>${esc(time)}</span>${chip}</div>
-      <div class="match">${side(p.home, cr[0], topI === 0)}<div class="mid"><strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small></div>${side(p.away, cr[1], topI === 2)}</div>`;
+      <div class="match big">${side(p.home, cr[0], topI === 0)}<div class="mid"><strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small></div>${side(p.away, cr[1], topI === 2)}</div>`;
     if (!p.p) {
-      return `<article class="card" id="m-${esc(p.id)}" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${/non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
+      return `<article class="mpage card" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${/non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
     }
     const pcts = pct3(p.p), top = p.p.indexOf(Math.max(...p.p));
     const labels = ['Domicile', 'Nul', 'Extérieur'], tags = ['1', 'N', '2'];
@@ -70,11 +87,11 @@
       }).join('') || '<div class="form-row">Pas de données</div>';
       return `<div class="form-list"><p>${esc(name)}</p>${rows}</div>`;
     };
-    return `<article class="card" id="m-${esc(p.id)}" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}">
-      <button class="head" type="button" aria-expanded="false" aria-controls="d-${esc(p.id)}">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}<span class="more">Détails ▾</span></button>
-      <div class="detail" id="d-${esc(p.id)}" hidden>
+    return `<article class="mpage card" style="--lg:${LG_COLOR[p.lg] || 'var(--accent)'}">
+      <div class="head" style="cursor:default">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}</div>
+      <div class="detail">
         <h3>Double chance</h3><div class="kv">${dc}</div>
-        ${mkp ? `<h3>Modèle et bookmakers</h3><div class="kv">${[['1 · ' + p.home, 0], ['N · Nul', 1], ['2 · ' + p.away, 2]].map(([l, k]) => { const d = pcts[k] - mkp[k]; return `<div><small>${esc(l)}</small><strong>${pcts[k]} % <span class="muted" style="font-size:12px;font-weight:600">contre ${mkp[k]} %</span></strong><small>${d === 0 ? 'identique' : (d > 0 ? '+' : '−') + Math.abs(d) + ' pt'}</small></div>`; }).join('')}</div><p class="note" style="margin-top:8px">Premier chiffre : notre modèle. Second chiffre : probabilité déduite des cotes moyennes des bookmakers, marge retirée. Sur l’historique, les bookmakers sont un peu plus précis (voir le bilan) : en cas d’écart, ils ont souvent une information que le modèle n’a pas, comme une blessure ou une compo.</p>` : ''}
+        ${mkp ? `<h3>Modèle et bookmakers</h3><div class="kv">${[['1 · ' + p.home, 0], ['N · Nul', 1], ['2 · ' + p.away, 2]].map(([l, k]) => { const d = pcts[k] - mkp[k]; return `<div><small>${esc(l)}</small><strong>${pcts[k]} %</strong><small>bookmakers ${mkp[k]} % · ${d === 0 ? 'identique' : (d > 0 ? '+' : '−') + Math.abs(d) + ' pt'}</small></div>`; }).join('')}</div><p class="note" style="margin-top:8px">Premier chiffre : notre modèle. Second chiffre : probabilité déduite des cotes moyennes des bookmakers, marge retirée. Sur l’historique, les bookmakers sont un peu plus précis (voir le bilan) : en cas d’écart, ils ont souvent une information que le modèle n’a pas, comme une blessure ou une compo.</p>` : ''}
         <h3>Cote équivalente</h3><div class="kv">${[['1 · ' + p.home, p.p[0]], ['N · Nul', p.p[1]], ['2 · ' + p.away, p.p[2]]].map(([l, v]) => `<div><small>${esc(l)}</small><strong>${fr(1 / v, 2)}</strong></div>`).join('')}</div>
         <p class="note" style="margin-top:8px">C’est la cote qui correspond exactement à la probabilité annoncée, sans marge. Les cotes des bookmakers sont plus basses, car elles incluent leur marge. Information statistique, pas un conseil de pari.</p>
         <h3>Buts attendus</h3><div class="kv"><div><small>${esc(p.home)}</small><strong>${fr(p.lam[0], 1)}</strong></div><div><small>${esc(p.away)}</small><strong>${fr(p.lam[1], 1)}</strong></div><div><small>Score le plus probable</small><strong>${esc(p.score)}</strong></div></div>
@@ -106,7 +123,7 @@
     if (ranked.length >= 3) {
       const top = p => Math.max(...p.p), sure = ranked.reduce((a, b) => top(b) > top(a) ? b : a), open = ranked.reduce((a, b) => top(b) < top(a) ? b : a);
       const who = p => { const i = p.p.indexOf(top(p)); return (i === 1 ? 'Match nul' : i === 0 ? p.home : p.away) + ' · ' + Math.round(top(p) * 100) + ' %'; };
-      const tile = (lab, p) => `<a class="spot-tile" href="#m-${esc(p.id)}" data-jump="m-${esc(p.id)}"><small>${lab}</small><strong>${esc(p.home)} – ${esc(p.away)}</strong><span>${esc(who(p))}</span></a>`;
+      const tile = (lab, p) => `<a class="spot-tile" href="#match/${encodeURIComponent(p.id)}"><small>${lab}</small><strong>${esc(p.home)} – ${esc(p.away)}</strong><span>${esc(who(p))}</span></a>`;
       spot.innerHTML = `<h2 class="section-title" style="margin-top:6px">À retenir</h2><div class="spot-row">${tile('Favori le plus net', sure)}${sure === open ? '' : tile('Match le plus serré', open)}</div>`;
       spot.hidden = false;
     } else { spot.innerHTML = ''; spot.hidden = true; }
@@ -117,10 +134,10 @@
       let html = '', cur = '';
       for (const p of up) {
         const k = dayKey(new Date(p.kickoff));
-        if (k !== cur) { cur = k; html += `<h2 class="day">${esc(fmtDay.format(new Date(p.kickoff)))}</h2>`; }
-        html += cardHTML(p);
+        if (k !== cur) { html += (cur ? '</div>' : '') + `<h2 class="day">${esc(fmtDay.format(new Date(p.kickoff)))}</h2><div class="posters">`; cur = k; }
+        html += posterHTML(p);
       }
-      list.innerHTML = html;
+      list.innerHTML = html + (cur ? '</div>' : '');
     }
     $('freshness').textContent = up.length
       ? `${up.length} match${up.length > 1 ? 's' : ''} à venir · données du ${meta && meta.updated ? fmtStamp.format(new Date(meta.updated)) : '—'}`
@@ -188,10 +205,25 @@
 
   // Navigation par onglets (hash)
   function route() {
-    const tab = ['matchs', 'bilan', 'methode'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'matchs';
+    const h = location.hash.slice(1);
+    if (h.startsWith('match/')) {
+      document.querySelectorAll('.view').forEach(v => v.hidden = v.id !== 'match');
+      document.querySelectorAll('nav a').forEach(a => a.getAttribute('data-tab') === 'matchs' ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
+      renderMatchPage(decodeURIComponent(h.slice(6)));
+      return;
+    }
+    const tab = ['matchs', 'bilan', 'methode'].includes(h) ? h : 'matchs';
     document.querySelectorAll('.view').forEach(v => v.hidden = v.id !== tab);
     document.querySelectorAll('nav a').forEach(a => a.getAttribute('data-tab') === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
     document.title = {matchs: 'PronostiK · Le football en probabilités', bilan: 'Bilan · PronostiK', methode: 'Méthode · PronostiK'}[tab];
+  }
+  function renderMatchPage(id) {
+    const box = $('matchpage');
+    if (!cache) { box.innerHTML = '<p class="muted">Chargement…</p>'; return; }
+    const p = cache.preds.find(x => x.id === id);
+    if (!p) { box.innerHTML = '<div class="empty"><strong>Ce match n’est plus disponible.</strong><br><a href="#matchs">Voir les matchs à venir</a></div>'; document.title = 'PronostiK'; return; }
+    box.innerHTML = matchPageHTML(p);
+    document.title = `${p.home} – ${p.away} · PronostiK`;
   }
   window.addEventListener('hashchange', () => { route(); window.scrollTo(0, 0); });
 
@@ -210,14 +242,6 @@
     day = b.getAttribute('data-day');
     renderMatches(cache.preds, cache.meta);
   });
-  $('spot').addEventListener('click', e => {
-    const a = e.target.closest('a[data-jump]');
-    if (!a) return;
-    e.preventDefault();
-    const el = document.getElementById(a.getAttribute('data-jump'));
-    if (el) { el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 1600); }
-  });
-
   $('chips').addEventListener('click', e => {
     const b = e.target.closest('button[data-lg]');
     if (!b || !cache) return;
@@ -237,6 +261,7 @@
       cache = {preds, meta, sc};
       renderMatches(preds, meta);
       renderBilan(preds, sc);
+      if (location.hash.startsWith('#match/')) renderMatchPage(decodeURIComponent(location.hash.slice(7)));
       openIds.forEach(id => { const d = document.getElementById(id); if (d) { d.hidden = false; d.previousElementSibling.setAttribute('aria-expanded', 'true'); } });
     } catch (e) {
       $('freshness').textContent = '';

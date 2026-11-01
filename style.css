@@ -154,3 +154,27 @@ footer p{margin:0 0 6px}
 
 .mkline{margin:10px 0 0;font-size:12px;color:var(--muted)}
 .mkline b{color:var(--text)}
+
+/* v5 : affiches + page par match */
+.posters{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.poster{display:block;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--lg,var(--accent));border-radius:18px;padding:14px 16px 14px;box-shadow:0 10px 30px -18px #000;transition:transform .15s ease,border-color .15s ease}
+.poster:hover{transform:translateY(-2px);border-color:var(--lg,var(--accent))}
+.poster:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.poster .meta{margin-bottom:4px}
+.ptime{font-weight:800;color:var(--text);font-variant-numeric:tabular-nums}
+.poster .match{margin:10px 0 12px}
+.poster .crest,.poster .mono{width:60px;height:60px}
+.poster .side .nm{font-size:14.5px}
+.poster .mid small{font-size:13px;letter-spacing:2px}
+.seg.mini{height:6px;margin-bottom:10px}
+.pfoot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0;font-size:13px}
+.pfav{color:var(--muted);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pfav b{color:var(--text);font-size:15px}
+.back{display:inline-block;margin:0 0 14px;color:var(--muted);text-decoration:none;font-weight:700;font-size:14px}
+.back:hover{color:var(--text)}
+.mpage{border-left:0;border-top:4px solid var(--lg,var(--accent))}
+.mpage .detail{border-top:1px solid var(--line)}
+.match.big .crest,.match.big .mono{width:88px;height:88px}
+.match.big .side .nm{font-size:18px}
+.match.big .mid strong{font-size:22px}
+@media (max-width:480px){.match.big .crest,.match.big .mono{width:72px;height:72px}}
