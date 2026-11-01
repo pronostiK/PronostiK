@@ -130,3 +130,19 @@ Une cellule n'est fiable qu'avec un effectif suffisant : avec moins de 150 match
 - La « référence naïve » est un plancher : la battre montre que le modèle apporte de l'information, pas qu'il bat les bookmakers.
 - Pas de cotes de bookmakers dans les fichiers pour la mi-temps, le score exact et « les deux équipes marquent » : la comparaison au marché n'est pas possible pour ces marchés.
 - La mi-temps suppose 45 % des buts avant la pause (mesuré : 44.9 % sur 2024-25) et l'indépendance des deux mi-temps.
+
+## 5. Contrôle de robustesse (demandé par l’audit)
+
+- **Référence naïve par championnat** : fréquences de chaque championnat sur 2024-25 (au lieu d’une moyenne des 5).
+- **Bootstrap par blocs de semaines** : 47 semaines rééchantillonnées avec remise, 4 000 tirages, IC à 95 % par percentiles. Les matchs d’une même semaine (mêmes équipes, même calendrier) restent ensemble.
+
+| Comparaison | Rapport initial (naïf global, IC indépendants) | Naïf global, bootstrap par semaines | **Naïf par championnat, bootstrap par semaines** | Conclusion inchangée ? |
+|---|---|---|---|---|
+| Plus de 1,5 (recalibré) − naïf | −0,0021 [−0,0038 ; −0,0003] **meilleur** | −0,0021 [−0,0038 ; −0,0004] **meilleur** | −0,0029 [−0,0046 ; −0,0013] **meilleur** | oui |
+| Plus de 2,5 (recalibré) − naïf | −0,0040 [−0,0074 ; −0,0005] **meilleur** | −0,0040 [−0,0083 ; +0,0003] non significatif | −0,0018 [−0,0056 ; +0,0021] non significatif | **non** |
+| Les deux marquent (recalibré) − naïf | −0,0015 [−0,0031 ; +0,0001] non significatif | −0,0015 [−0,0029 ; −0,0001] **meilleur** | −0,0006 [−0,0018 ; +0,0006] non significatif | oui |
+| Mi-temps 1N2 − naïf (Brier) | −0,0236 [−0,0303 ; −0,0169] **meilleur** | −0,0236 [−0,0306 ; −0,0166] **meilleur** | −0,0236 [−0,0314 ; −0,0163] **meilleur** | oui |
+| Score exact − naïf (log-loss) | −0,0717 [−0,0890 ; −0,0544] **meilleur** | −0,0717 [−0,0866 ; −0,0577] **meilleur** | −0,0817 [−0,1004 ; −0,0631] **meilleur** | oui |
+| Plus de 2,5 (recalibré) − **bookmakers** | +0,0064 [+0,0038 ; +0,0090] moins bon | +0,0064 [+0,0039 ; +0,0088] moins bon | (sans objet : comparaison directe au marché) | oui |
+
+Fréquences 2024-25 par championnat (référence naïve) : Ligue 1 +2,5 = 56 %, nul à la mi-temps = 36 % ; Premier League +2,5 = 57 %, nul à la mi-temps = 35 % ; Bundesliga +2,5 = 60 %, nul à la mi-temps = 34 % ; Serie A +2,5 = 48 %, nul à la mi-temps = 44 % ; La Liga +2,5 = 49 %, nul à la mi-temps = 44 %.
