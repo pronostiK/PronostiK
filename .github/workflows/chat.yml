@@ -1,0 +1,57 @@
+name: Chat PronostiK (relais Cloudflare)
+
+on:
+  push:
+    branches: [main]
+    paths: ['worker/**', 'wrangler.toml', '.github/workflows/chat.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: pronostik
+  cancel-in-progress: false
+
+jobs:
+  deploy-chat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Publier le relais et ses secrets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CHAT_CODE: ${{ secrets.CHAT_CODE }}
+        run: |
+          for s in CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID ANTHROPIC_API_KEY CHAT_CODE; do
+            if [ -z "${!s}" ]; then echo "Secret $s pas encore ajouté dans GitHub : relais non publié pour l'instant."; echo "SKIP=1" >> "$GITHUB_ENV"; exit 0; fi
+          done
+          npx --yes wrangler@3.80.0 deploy 2>&1 | tee deploy.log
+          printf '%s' "$ANTHROPIC_API_KEY" | npx --yes wrangler@3.80.0 secret put ANTHROPIC_API_KEY
+          printf '%s' "$CHAT_CODE" | npx --yes wrangler@3.80.0 secret put CHAT_CODE
+          URL=$(grep -oE 'https://[a-zA-Z0-9.-]+\.workers\.dev' deploy.log | head -1)
+          if [ -z "$URL" ]; then echo "Adresse du relais introuvable dans la sortie."; exit 1; fi
+          mkdir -p data && printf '{"url":"%s"}' "$URL" > data/chat.json
+          echo "Relais en ligne : $URL"
+      - name: Enregistrer l'adresse du relais
+        if: env.SKIP != '1'
+        run: |
+          git config user.name "pronostik-bot"
+          git config user.email "pronostik-bot@users.noreply.github.com"
+          git add data/chat.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Adresse du relais du chat"
+            git pull --rebase
+            git push
+          fi
+      - name: Republier le site avec l'adresse du relais
+        if: env.SKIP != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run update.yml --ref main

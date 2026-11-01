@@ -61,6 +61,7 @@
     chart: I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'),
     vs: I('<path d="M4 8h14l-3-3M20 16H6l3 3"/>'),
     info: I('<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.5"/>'),
+    chat: I('<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'),
   };
 
   const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b'};
@@ -229,6 +230,7 @@
       <div class="detail">
         <div class="tabs" role="tablist">${tabs.map(([k, l], i) => `<button type="button" role="tab" class="tab" data-tab="${k}" aria-selected="${i === 0}">${l}</button>`).join('')}</div>
         ${tabs.map(([k, , html], i) => `<div class="tabpanel" data-panel="${k}" role="tabpanel"${i ? ' hidden' : ''}>${html}</div>`).join('')}
+        <a class="ask" href="#chat/${encodeURIComponent(p.id)}">${ICON.chat}Poser une question sur ce match</a>
         <p class="note">${ICON.info} Le modèle ignore compositions et blessures. Un résultat à ${pcts[top]} % échoue ${100 - pcts[top]} fois sur 100.</p>
       </div></article>`;
   }
@@ -345,6 +347,13 @@
       renderMatchPage(decodeURIComponent(h.slice(6)));
       return;
     }
+    if (h === 'chat' || h.startsWith('chat/')) {
+      document.querySelectorAll('.view').forEach(v => v.hidden = v.id !== 'chat');
+      document.querySelectorAll('nav a').forEach(a => a.getAttribute('data-tab') === 'chat' ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
+      openChat(h.startsWith('chat/') ? decodeURIComponent(h.slice(5)) : null);
+      document.title = 'Chat · PronostiK';
+      return;
+    }
     const tab = ['matchs', 'bilan', 'methode'].includes(h) ? h : 'matchs';
     document.querySelectorAll('.view').forEach(v => v.hidden = v.id !== tab);
     document.querySelectorAll('nav a').forEach(a => a.getAttribute('data-tab') === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
@@ -417,6 +426,51 @@
   // Noms affichés sans ambiguïté (les données gardent les noms des fichiers sources).
   const DISPLAY = {'Milan': 'AC Milan', 'Inter': 'Inter Milan'};
   const dn = n => DISPLAY[n] || n;
+
+
+  // ---------------- Chat (assistant IA, accès par code) ----------------
+  const chat = {url: null, loaded: false, matchId: null, logs: {}, busy: false};
+  const getCode = () => { try { return localStorage.getItem('pk-chat-code') || ''; } catch { return chat.mem || ''; } };
+  const setCode = c => { chat.mem = c; try { c ? localStorage.setItem('pk-chat-code', c) : localStorage.removeItem('pk-chat-code'); } catch {} };
+  async function chatConfig() {
+    if (chat.loaded) return chat.url;
+    try { const j = await load('chat.json'); chat.url = j && /^https:\/\//.test(j.url) ? j.url.replace(/\/$/, '') : null; } catch { chat.url = null; }
+    chat.loaded = true; return chat.url;
+  }
+  function chatRender() {
+    const key = chat.matchId || 'general', log = chat.logs[key] || [];
+    $('chat-log').innerHTML = log.length ? log.map(m => `<div class="bubble ${m.role === 'user' ? 'me' : 'ai'}${m.err ? ' err' : ''}">${esc(m.content).replace(/\n/g, '<br>')}</div>`).join('') + (chat.busy ? '<div class="bubble ai typing"><i></i><i></i><i></i></div>' : '')
+      : `<div class="chat-hello">${ICON.chat}<p>${chat.matchId ? 'Posez une question sur ce match : le favori, la forme des équipes, les statistiques…' : 'Posez une question sur les matchs à venir.'}</p></div>`;
+    const p = chat.matchId && cache ? cache.preds.find(x => x.id === chat.matchId) : null;
+    const sugg = p ? [`Pourquoi ${p.home} ou ${p.away} est favori ?`, 'Comment sont les deux équipes en forme ?', 'Le modèle est-il d’accord avec les bookmakers ?', 'Quel score est le plus probable ?']
+                   : ['Quels sont les matchs les plus serrés ce week-end ?', 'Quel est le favori le plus net ?', 'Comment lire un pourcentage ?'];
+    $('chat-sugg').innerHTML = log.length ? '' : sugg.map(s => `<button type="button" class="sugg">${esc(s)}</button>`).join('');
+    const L = $('chat-log'); L.scrollTop = L.scrollHeight;
+  }
+  async function openChat(matchId) {
+    chat.matchId = matchId;
+    const p = matchId && cache ? cache.preds.find(x => x.id === matchId) : null;
+    $('chat-ctx').innerHTML = p ? `À propos de <b>${esc(p.home)} – ${esc(p.away)}</b> · <a href="#chat">tous les matchs</a>` : 'Questions sur les matchs du site';
+    const url = await chatConfig();
+    $('chat-off').hidden = !!url; $('chat-gate').hidden = !url || !!getCode(); $('chat-box').hidden = !url || !getCode();
+    if (url && getCode()) chatRender();
+  }
+  async function chatSend(text) {
+    if (chat.busy || !text.trim()) return;
+    const key = chat.matchId || 'general', log = chat.logs[key] || (chat.logs[key] = []);
+    log.push({role: 'user', content: text.trim().slice(0, 600)}); chat.busy = true; chatRender();
+    try {
+      const r = await fetch(chat.url + '/chat', {method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({code: getCode(), matchId: chat.matchId, messages: log.filter(m => !m.err).slice(-8).map(m => ({role: m.role, content: m.content}))})});
+      const j = await r.json().catch(() => ({}));
+      if (r.status === 401) { setCode(''); log.pop(); chat.busy = false; $('chat-box').hidden = true; $('chat-gate').hidden = false; $('chat-gate-err').hidden = false; $('chat-gate-err').textContent = j.error || 'Code d’accès incorrect.'; return; }
+      log.push(r.ok ? {role: 'assistant', content: j.reply} : {role: 'assistant', content: j.error || 'Le service est momentanément indisponible.', err: true});
+    } catch { log.push({role: 'assistant', content: 'Connexion impossible. Réessayez dans un instant.', err: true}); }
+    chat.busy = false; chatRender();
+  }
+  $('chat-code-form').addEventListener('submit', e => { e.preventDefault(); const v = $('chat-code').value.trim(); if (!v) return; setCode(v); $('chat-code').value = ''; $('chat-gate-err').hidden = true; openChat(chat.matchId); });
+  $('chat-form').addEventListener('submit', e => { e.preventDefault(); const v = $('chat-in').value; $('chat-in').value = ''; chatSend(v); });
+  $('chat-sugg').addEventListener('click', e => { const b = e.target.closest('button.sugg'); if (b) chatSend(b.textContent); });
 
   // Nouvelle version du site publiée ? On recharge une fois (utile pour l'application installée sur l'écran d'accueil).
   async function checkVersion() {

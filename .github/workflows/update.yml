@@ -64,6 +64,7 @@ jobs:
           mkdir _site/data
           cp data/predictions.json data/meta.json data/scorecard.json _site/data/
           if [ -f data/standings.json ]; then cp data/standings.json _site/data/; fi
+          if [ -f data/chat.json ]; then cp data/chat.json _site/data/; fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

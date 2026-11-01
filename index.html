@@ -28,6 +28,7 @@
       <a href="#matchs" data-tab="matchs">Matchs</a>
       <a href="#bilan" data-tab="bilan">Bilan</a>
       <a href="#methode" data-tab="methode">Méthode</a>
+      <a href="#chat" data-tab="chat">Chat</a>
     </nav>
   </header>
 
@@ -50,6 +51,34 @@
     <section id="match" class="view" hidden aria-label="Pronostic du match">
       <a class="back" href="#matchs">← Tous les matchs</a>
       <div id="matchpage"></div>
+    </section>
+
+    <section id="chat" class="view" hidden aria-labelledby="t-chat">
+      <div class="chat-head">
+        <span class="chat-av" aria-hidden="true"></span>
+        <div><h1 id="t-chat">Assistant PronostiK</h1><p id="chat-ctx" class="muted">Questions sur les matchs du site</p></div>
+      </div>
+      <div id="chat-gate" class="panel" hidden>
+        <h2>Accès réservé</h2>
+        <p class="muted">Le chat est en test. Entrez le code d’accès qui vous a été donné.</p>
+        <form id="chat-code-form" class="chat-form">
+          <label for="chat-code" class="sr-only">Code d’accès</label>
+          <input id="chat-code" type="password" autocomplete="off" placeholder="Code d’accès" required>
+          <button type="submit">Entrer</button>
+        </form>
+        <p id="chat-gate-err" class="chat-err" hidden></p>
+      </div>
+      <div id="chat-box" hidden>
+        <div id="chat-log" class="chat-log" aria-live="polite"></div>
+        <div id="chat-sugg" class="chat-sugg"></div>
+        <form id="chat-form" class="chat-form">
+          <label for="chat-in" class="sr-only">Votre question</label>
+          <input id="chat-in" type="text" maxlength="600" autocomplete="off" placeholder="Posez votre question…" required>
+          <button type="submit" id="chat-send">Envoyer</button>
+        </form>
+        <p class="note">Réponses générées par une IA à partir des données du site : elles peuvent contenir des erreurs. Pas de conseil de pari. 18+.</p>
+      </div>
+      <div id="chat-off" class="empty" hidden><strong>Le chat arrive bientôt.</strong><br>Il est en cours d’installation.</div>
     </section>
 
     <section id="bilan" class="view" hidden aria-labelledby="t-bilan">
