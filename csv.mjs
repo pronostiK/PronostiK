@@ -41,6 +41,8 @@ export function parseCSV(text, lg, opts = {}) {
     const div = String(get(r, 'Div') || '').trim().toUpperCase();
     out.push({
       date, home, away, hg, ag, lg, division: SECOND_DIVISIONS.has(div) ? 'L2' : 'L1',
+      // corners, cartons, score à la mi-temps (null si absent du fichier)
+      hc: n0(get(r, 'HC')), ac: n0(get(r, 'AC')), hy: n0(get(r, 'HY')), ay: n0(get(r, 'AY')), hr: n0(get(r, 'HR')), ar: n0(get(r, 'AR')), hthg: n0(get(r, 'HTHG')), htag: n0(get(r, 'HTAG')),
       ...(opts.shots ? {hs: n0(get(r, 'HS')), as: n0(get(r, 'AS')), hst: n0(get(r, 'HST')), ast: n0(get(r, 'AST'))} : {}),
       avgH: num(get(r, 'AvgCH')) || num(get(r, 'AvgH')), avgD: num(get(r, 'AvgCD')) || num(get(r, 'AvgD')), avgA: num(get(r, 'AvgCA')) || num(get(r, 'AvgA')),
     });

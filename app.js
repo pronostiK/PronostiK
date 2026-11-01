@@ -116,12 +116,23 @@
         ${line('Matchs sans encaisser', per(H.tout.cs, H.tout.p) + ' %', per(A.tout.cs, A.tout.p) + ' %', 'high')}
         ${line('Les deux équipes marquent', per(H.tout.btts, H.tout.p) + ' %', per(A.tout.btts, A.tout.p) + ' %', '')}
         ${line('Plus de 2,5 buts', per(H.tout.o25, H.tout.p) + ' %', per(A.tout.o25, A.tout.p) + ' %', '')}
+        ${H.tout.nc && A.tout.nc ? `<h3>Corners</h3>
+        ${line('Corners obtenus par match', avg(H.tout.cf, H.tout.nc), avg(A.tout.cf, A.tout.nc), 'high')}
+        ${line('Corners concédés par match', avg(H.tout.ca, H.tout.nc), avg(A.tout.ca, A.tout.nc), 'low')}` : ''}
+        ${H.tout.nk && A.tout.nk ? `<h3>Cartons</h3>
+        ${line('Cartons jaunes par match', avg(H.tout.yc, H.tout.nk), avg(A.tout.yc, A.tout.nk), 'low')}
+        ${line('Cartons rouges (saison)', H.tout.rc, A.tout.rc, 'low')}` : ''}
+        ${H.tout.nh && A.tout.nh ? `<h3>Mi-temps</h3>
+        ${line('Buts marqués en 1re mi-temps', avg(H.tout.h1f, H.tout.nh), avg(A.tout.h1f, A.tout.nh), 'high')}
+        ${line('Buts marqués en 2e mi-temps', avg(H.tout.h2f, H.tout.nh), avg(A.tout.h2f, A.tout.nh), 'high')}
+        ${line('Buts encaissés en 1re mi-temps', avg(H.tout.h1a, H.tout.nh), avg(A.tout.h1a, A.tout.nh), 'low')}
+        ${line('Buts encaissés en 2e mi-temps', avg(H.tout.h2a, H.tout.nh), avg(A.tout.h2a, A.tout.nh), 'low')}` : ''}
         <h3>À domicile pour ${esc(p.home)}, à l’extérieur pour ${esc(p.away)}</h3>
         ${line('Matchs', H.lieu.p, A.lieu.p, '')}
         ${line('Victoires / nuls / défaites', `${H.lieu.w}-${H.lieu.d}-${H.lieu.l}`, `${A.lieu.w}-${A.lieu.d}-${A.lieu.l}`, '')}
         ${line('Buts marqués par match', avg(H.lieu.gf, H.lieu.p), avg(A.lieu.gf, A.lieu.p), 'high')}
         ${line('Buts encaissés par match', avg(H.lieu.ga, H.lieu.p), avg(A.lieu.ga, A.lieu.p), 'low')}
-        <p class="note">Saison en cours, championnat uniquement. Pourcentages observés sur les matchs déjà joués (ce ne sont pas des prédictions).</p>`;
+        <p class="note">Saison en cours, championnat uniquement. Moyennes et pourcentages observés sur les matchs déjà joués (ce ne sont pas des prédictions). Corners, cartons et mi-temps : sur les matchs dont le détail est disponible (mis à jour chaque semaine).</p>`;
     }
 
     // --- Onglet Forme : cinq derniers matchs

@@ -17,6 +17,7 @@ const CSV_BASE = process.env.CSV_BASE || 'https://www.football-data.co.uk';
 const TOKEN = process.env.FD_TOKEN;
 const NOW = process.env.NOW ? new Date(process.env.NOW) : new Date();
 const DATA = process.env.DATA_DIR || fileURLToPath(new URL('../data/', import.meta.url));
+const CSV_VERSION = 2;   // 2 : corners, cartons et score à la mi-temps ajoutés à l'historique
 const API_DELAY = Number(process.env.API_DELAY_MS ?? 7000); // plan gratuit : 10 requêtes par minute
 const HORIZON_DAYS = 7;
 const COEFF = 0.72;            // coefficient division inférieure → première division (réglage de la page PronostiK)
@@ -84,7 +85,7 @@ async function main() {
   for (const lg of LEAGUES) {
     const count = history.filter(m => m.lg === lg.code).length;
     const last = state.csvAt[lg.code] ? new Date(state.csvAt[lg.code]) : null;
-    const stale = !last || (NOW - last) > CSV_REFRESH_DAYS * 86400000;
+    const stale = !last || (NOW - last) > CSV_REFRESH_DAYS * 86400000 || state.csvVersion !== CSV_VERSION; // nouveau format : un rechargement complet
     if (!(stale || count < 200 || process.env.FORCE_CSV)) continue;
     console.log(`Historique ${lg.name}…`);
     const rows = await downloadCSVs(lg, season);
@@ -99,6 +100,9 @@ async function main() {
     }
     state.csvAt[lg.code] = NOW.toISOString(); csvRefreshed.add(lg.code);
   }
+
+  // Tous les championnats ont été (re)tentés avec le nouveau format : on ne recommence pas avant la prochaine semaine.
+  if (!LEAGUES.some(l => errors[l.code] === 'Historique introuvable (CSV)')) state.csvVersion = CSV_VERSION;
 
   // --- 2. API : une requête par championnat
   const apiByLeague = {};
@@ -170,11 +174,15 @@ async function main() {
     }
     const order = Object.entries(tab).sort((x, y) => y[1].pts - x[1].pts || (y[1].gf - y[1].ga) - (x[1].gf - x[1].ga) || y[1].gf - x[1].gf).map(([t]) => t);
     const sum = (list, team) => {
-      const o = {p: list.length, w: 0, d: 0, l: 0, gf: 0, ga: 0, cs: 0, btts: 0, o25: 0};
+      const o = {p: list.length, w: 0, d: 0, l: 0, gf: 0, ga: 0, cs: 0, btts: 0, o25: 0, nc: 0, cf: 0, ca: 0, nk: 0, yc: 0, rc: 0, nh: 0, h1f: 0, h1a: 0, h2f: 0, h2a: 0};
       for (const m of list) {
         const f = m.home === team ? m.hg : m.ag, a = m.home === team ? m.ag : m.hg;
         o.gf += f; o.ga += a; if (f > a) o.w++; else if (f < a) o.l++; else o.d++;
         if (a === 0) o.cs++; if (m.hg > 0 && m.ag > 0) o.btts++; if (m.hg + m.ag > 2) o.o25++;
+        const isH = m.home === team;
+        if (m.hc != null && m.ac != null) { o.nc++; o.cf += isH ? m.hc : m.ac; o.ca += isH ? m.ac : m.hc; }
+        if (m.hy != null && m.ay != null) { o.nk++; o.yc += isH ? m.hy : m.ay; o.rc += (isH ? m.hr : m.ar) || 0; }
+        if (m.hthg != null && m.htag != null) { o.nh++; const hf = isH ? m.hthg : m.htag, ha = isH ? m.htag : m.hthg; o.h1f += hf; o.h1a += ha; o.h2f += f - hf; o.h2a += a - ha; }
       }
       return o;
     };
