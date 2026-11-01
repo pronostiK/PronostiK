@@ -1,0 +1,24 @@
+name: Test du chat (manuel)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/chat-test.yml']
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier le relais (sans afficher de secret)
+        env:
+          CHAT_CODE: ${{ secrets.CHAT_CODE }}
+        run: |
+          U=$(python3 -c "import json;print(json.load(open('data/chat.json'))['url'])")
+          echo "Relais : $U"
+          echo "1) santé :"; curl -s -m 20 "$U/health"; echo
+          echo "2) mauvais code (doit refuser) :"; curl -s -m 20 -o /dev/null -w "HTTP %{http_code}\n" -X POST "$U/chat" -H 'Origin: https://pronostikapp.fr' -H 'Content-Type: application/json' -d '{"code":"mauvais","messages":[{"role":"user","content":"test"}]}'
+          echo "3) vraie question avec le bon code :"
+          BODY=$(python3 -c "import json,os;print(json.dumps({'code':os.environ['CHAT_CODE'],'messages':[{'role':'user','content':'Quel est le favori le plus net des prochains matchs, et à combien ?'}]}))")
+          curl -s -m 60 -X POST "$U/chat" -H 'Origin: https://pronostikapp.fr' -H 'Content-Type: application/json' -d "$BODY" | python3 -c "import json,sys;d=json.load(sys.stdin);print('RÉPONSE :',d.get('reply') or d.get('error'));print('jetons :',d.get('usage'))"
