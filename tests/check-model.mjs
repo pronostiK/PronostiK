@@ -102,6 +102,17 @@ report(JSON.stringify(ELO_PARAMS) === JSON.stringify({K: 20, H: 80, reg: 1, ord:
   report(JSON.stringify([P.Kcl, P.Hcl, P.ord]) === JSON.stringify([67.5, 98.75, {b: 0.5375000000000001, t1: -0.27499999999999997, t2: 0.7875}]), 'H. C1 : réglages figés (Kcl, avantage du terrain, conversion)');
 }
 
+// I. Sélections : graine et conversion
+{
+  const {nationsPredict} = await import('../scripts/nations-lib.mjs');
+  const seed = load('../data/nations-seed.json'), r = seed.ratings, P = seed.params;
+  let bad = 0;
+  for (const [h, a] of [['France', 'Italy'], ['Spain', 'San Marino'], ['Gibraltar', 'Malta']]) for (const nt of [false, true]) { const x = nationsPredict(r[h], r[a], nt, P); if (Math.abs(x.p[0] + x.p[1] + x.p[2] - 1) > 1e-9 || x.p.some(v => v <= 0 || v >= 1) || !(x.lam[0] > 0 && x.lam[1] > 0)) bad++; }
+  const sym = nationsPredict(1800, 1800, true, P);
+  report(Object.keys(r).length > 200 && r.Spain > r['San Marino'] + 500 && !bad && Math.abs(sym.p[0] - sym.p[2]) < 1e-9, `I. Sélections : graine chargée (${Object.keys(r).length} équipes), probabilités cohérentes, terrain neutre équilibré`);
+  report(JSON.stringify([P.kMul, P.H, P.init]) === JSON.stringify([0.8, 60, 1500]), 'I. Sélections : réglages figés');
+}
+
 // F. Paramètres de production
 {
   const expected = {span: 550, half: 365, k: 8, minW: 3};

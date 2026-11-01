@@ -10,7 +10,7 @@
   const fmtStamp = new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ});
   const dayKey = d => new Intl.DateTimeFormat('en-CA', {timeZone: TZ}).format(d);
 
-  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', PPL: 'Liga Portugal', DED: 'Eredivisie', ELC: 'Championship', FL2: 'Ligue 2', CL: 'Ligue des champions'};
+  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', PPL: 'Liga Portugal', DED: 'Eredivisie', ELC: 'Championship', FL2: 'Ligue 2', CL: 'Ligue des champions', NL: 'Ligue des nations'};
   let LG_ORDER = ['FL1', 'PL', 'BL1', 'SA', 'PD', 'PPL', 'DED', 'ELC', 'FL2'];
   const LG_EMBLEM = {};
   const emb = (c, cls = 'lg-emb') => LG_EMBLEM[c] && /^https:\/\//.test(LG_EMBLEM[c]) ? `<span class="${cls}"><img src="${esc(LG_EMBLEM[c])}" alt="" loading="lazy"></span>` : '';
@@ -64,7 +64,7 @@
     chat: I('<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'),
   };
 
-  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b', PPL: '#10b981', DED: '#fb923c', ELC: '#c084fc', FL2: '#60a5fa', CL: '#38bdf8'};
+  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b', PPL: '#10b981', DED: '#fb923c', ELC: '#c084fc', FL2: '#60a5fa', CL: '#38bdf8', NL: '#e2e8f0'};
   const initials = n => String(n).replace(/\b(FC|AFC|CF|SC|AC|AS|US|SS|RC|CD|UD|SV|VfB|VfL|1\.)\b/gi, '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?';
   const hue = n => { let h = 0; for (const c of String(n)) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
   const mono = n => `<span class="mono" style="background:linear-gradient(145deg,hsl(${hue(n)} 62% 48%),hsl(${(hue(n) + 40) % 360} 62% 34%))" aria-hidden="true">${esc(initials(n))}</span>`;
@@ -95,14 +95,14 @@
   function matchPageHTML(p) {
     const lgc = LG_COLOR[p.lg] || 'var(--accent)';
     const time = (LG_NAME[p.lg] || p.lg || '') + ' · ' + fmtDay.format(new Date(p.kickoff));
-    const isCL = p.lg === 'CL';
+    const isCL = p.lg === 'CL', isNat = p.lg === 'NL';
     const chip = p.rel === 'test' ? '<span class="chip new">Nouveau · fiabilité en test</span>' : p.rel === 'limited' ? '<span class="chip warn">Échantillon réduit</span>' : '';
     const topI = p.p ? p.p.indexOf(Math.max(...p.p)) : -1;
     const cr = p.crest || [], st = p.stats || null;
     const rk = r => r ? `<small class="rank">${r}${r === 1 ? 'er' : 'e'} ${isCL ? 'en championnat' : 'au classement'}</small>` : '';
     const side = (name, url, fav, r) => `<div class="side${fav ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span>${rk(r)}</div>`;
     const head = `<div class="meta"><span class="lgname">${emb(p.lg, 'lg-mini') || `<i style="background:${lgc}"></i>`}${esc(time)}</span>${chip}</div>
-      <div class="match big">${side(p.home, cr[0], topI === 0, st && st.dom.rang)}<div class="mid"><strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small></div>${side(p.away, cr[1], topI === 2, st && st.ext.rang)}</div>`;
+      <div class="match big">${side(p.home, cr[0], topI === 0, st && st.dom && st.dom.rang)}<div class="mid"><strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small></div>${side(p.away, cr[1], topI === 2, st && st.ext && st.ext.rang)}</div>`;
     if (!p.p) {
       return `<article class="mpage card" style="--lg:${lgc}"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${/non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
     }
@@ -125,7 +125,7 @@
         ${ins('target', 'Favori', esc(fav), `${pcts[top]} %`)}
         ${ins('ball', 'Buts attendus', `${fr(p.lam[0], 1)} – ${fr(p.lam[1], 1)}`, 'domicile – extérieur')}
         ${ins('score', 'Score probable', esc(p.score), '')}
-        ${mkp ? ins(agreeD <= 5 ? 'check' : 'alert', 'Bookmakers', agreeD <= 5 ? 'D’accord' : 'Désaccord', `écart max ${agreeD} pts`, agreeD <= 5 ? 'ok' : 'warn') : ins('clock', 'Bookmakers', '—', isCL ? 'pas de cotes pour la C1' : 'cotes pas encore publiées')}
+        ${mkp ? ins(agreeD <= 5 ? 'check' : 'alert', 'Bookmakers', agreeD <= 5 ? 'D’accord' : 'Désaccord', `écart max ${agreeD} pts`, agreeD <= 5 ? 'ok' : 'warn') : ins('clock', 'Bookmakers', '—', isCL ? 'pas de cotes pour la C1' : isNat ? 'pas de cotes pour les sélections' : 'cotes pas encore publiées')}
       </div>
       <h3>${ICON.shield} Double chance</h3>
       <div class="rings">${ring(p.home + ' ou nul', p.p[0] + p.p[1])}${ring('Pas de nul', p.p[0] + p.p[2])}${ring(p.away + ' ou nul', p.p[1] + p.p[2])}</div>
@@ -135,7 +135,7 @@
 
     // --- Onglet Statistiques : barres en duel
     let stats = '<p class="muted">Statistiques indisponibles pour ce match.</p>';
-    if (st && st.dom.tout.p && st.ext.tout.p) {
+    if (st && st.dom && st.ext && st.dom.tout.p && st.ext.tout.p) {
       const H = st.dom, A = st.ext, per = (x, n) => n ? Math.round(100 * x / n) : 0, av = (x, n) => n ? x / n : null;
       const duel = (ic, lab, a, b, fmt, better) => {
         if (a == null || b == null) return '';
@@ -200,7 +200,7 @@
     const forme = `${formRow(p.home, (p.crest || [])[0], p.form && p.form.h)}${formRow(p.away, (p.crest || [])[1], p.form && p.form.a)}<p class="note">Du plus ancien au plus récent (à droite). Touchez une pastille pour voir l’adversaire.</p>`;
 
     // --- Onglet Face-à-face : barre de bilan + liste
-    let h2h = '<p class="muted">Aucune confrontation récente dans nos données (depuis 2023).</p>';
+    let h2h = `<p class="muted">Aucune confrontation récente dans nos données (depuis ${isNat ? '2016' : '2023'}).</p>`;
     if (st && st.h2h && st.h2h.length) {
       const L = st.h2h; let wh = 0, dr = 0, wa2 = 0;
       for (const m of L) { const hs = m.h === p.home ? m.hg : m.ag, as = m.h === p.home ? m.ag : m.hg; if (hs > as) wh++; else if (hs < as) wa2++; else dr++; }
@@ -234,20 +234,21 @@
       const dnb = p.p[0] + p.p[2] > 0 ? p.p[0] / (p.p[0] + p.p[2]) : 0.5;
       const pair = (a, la, b, lb) => `<div class="mk2"><div class="${a >= b ? 'on' : ''}"><b>${a} %</b><small>${la}</small></div><div class="${b > a ? 'on' : ''}"><b>${b} %</b><small>${lb}</small></div></div>`;
       const hp = pct3(M.ht);
-      const T = isCL ? {o25: 'Testé sur 537 matchs de C1 : à peine mieux que la moyenne des matchs.', btts: 'Testé sur 537 matchs de C1 : pas d’apport démontré.', o15: 'Testé sur 537 matchs de C1 : à peine mieux que la moyenne des matchs.', ht: 'Pas encore testé sur la C1.', sc: 'Pas encore testé sur la C1.', n: '537 matchs de C1 (2023-2026)'}
+      const T = isNat ? {o25: 'Pas encore testé sur les sélections.', btts: 'Pas encore testé sur les sélections.', o15: 'Pas encore testé sur les sélections.', ht: 'Pas encore testé sur les sélections.', sc: 'Pas encore testé sur les sélections.', n: '1 013 matchs européens (1N2 seulement)'}
+        : isCL ? {o25: 'Testé sur 537 matchs de C1 : à peine mieux que la moyenne des matchs.', btts: 'Testé sur 537 matchs de C1 : pas d’apport démontré.', o15: 'Testé sur 537 matchs de C1 : à peine mieux que la moyenne des matchs.', ht: 'Pas encore testé sur la C1.', sc: 'Pas encore testé sur la C1.', n: '537 matchs de C1 (2023-2026)'}
         : {o25: 'Testé sur 2 080 matchs : pas d’apport démontré par rapport à la moyenne du championnat, et les bookmakers sont plus précis.', btts: 'Testé sur 2 080 matchs : pas d’apport démontré par rapport à la moyenne du championnat.', o15: 'Testé sur 2 080 matchs : à peine plus précis que la moyenne des matchs.', ht: 'Testé sur 2 080 matchs : bien calibré.', sc: 'Testé sur 2 080 matchs : le score le plus probable sort environ 12 fois sur 100, comme annoncé.', n: '2 080 matchs'};
       marches = `
-        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 2,5 buts</span>${fiab('low', T.o25)}</div>${pair(P(M.o25), 'Plus de 2,5', 100 - P(M.o25), 'Moins de 2,5')}<p class="mknote">${isCL ? 'Indicatif : estimation peu précise sur ce marché.' : 'Indicatif : sur ce marché, les cotes des bookmakers sont plus précises que le modèle.'}</p></div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 2,5 buts</span>${fiab('low', T.o25)}</div>${pair(P(M.o25), 'Plus de 2,5', 100 - P(M.o25), 'Moins de 2,5')}<p class="mknote">${isCL || isNat ? 'Indicatif : estimation peu précise sur ce marché.' : 'Indicatif : sur ce marché, les cotes des bookmakers sont plus précises que le modèle.'}</p></div>
         ${M.btts != null ? `<div class="mkt"><div class="mkt-h"><span>${ICON.both}Les deux équipes marquent</span>${fiab('low', T.btts)}</div>${pair(P(M.btts), 'Oui', 100 - P(M.btts), 'Non')}<p class="mknote">Indicatif : estimation peu précise sur ce marché.</p></div>` : ''}
         <div class="mkt"><div class="mkt-h"><span>${ICON.plus}Plus / moins de 1,5 but</span>${fiab('mid', T.o15)}</div>${pair(P(M.o15), 'Plus de 1,5', 100 - P(M.o15), 'Moins de 1,5')}</div>
-        <div class="mkt"><div class="mkt-h"><span>${ICON.half1}Résultat à la mi-temps</span>${fiab(isCL ? 'mid' : 'ok', T.ht)}</div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.half1}Résultat à la mi-temps</span>${fiab(isCL || isNat ? 'mid' : 'ok', T.ht)}</div>
           <div class="mk3">${[['1', p.home], ['N', 'Nul'], ['2', p.away]].map(([t, l], i) => `<div class="${i === M.ht.indexOf(Math.max(...M.ht)) ? 'on' : ''}"><b>${hp[i]} %</b><small>${t} · ${esc(l)}</small></div>`).join('')}</div></div>
-        <div class="mkt"><div class="mkt-h"><span>${ICON.score}Scores exacts les plus probables</span>${fiab(isCL ? 'mid' : 'ok', T.sc)}</div>
+        <div class="mkt"><div class="mkt-h"><span>${ICON.score}Scores exacts les plus probables</span>${fiab(isCL || isNat ? 'mid' : 'ok', T.sc)}</div>
           <div class="mk3">${M.scores.map(([s, v], i) => `<div class="${i === 0 ? 'on' : ''}"><b>${esc(s.replace('-', ' – '))}</b><small>${P(v)} %</small></div>`).join('')}</div></div>
         <div class="mkt"><div class="mkt-h"><span>${ICON.shield}Remboursé si match nul</span>${fiab('ok', 'Déduit directement des probabilités 1N2.')}</div>${pair(P(dnb), esc(p.home), 100 - P(dnb), esc(p.away))}</div>
         <p class="note">${ICON.info} Probabilités statistiques, pas des conseils de pari. Les badges indiquent la fiabilité mesurée sur ${T.n}.</p>`;
     }
-    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h]];
+    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h]].filter(([k]) => !(isNat && (k === 'stats' || k === 'classement')));
     return `<article class="mpage card" style="--lg:${lgc}">
       <div class="head" style="cursor:default">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}</div>
       <div class="detail">

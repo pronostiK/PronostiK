@@ -11,6 +11,7 @@ import {createModel, createRatings, createElo, hybridProbs, marketsFromLambdas} 
 import {footballDataDate, resolveName} from '../lib.mjs';
 import {LEAGUES, ALIASES} from '../leagues.mjs';
 import {parseCSV, parseFixtures} from '../csv.mjs';
+import {buildNationsSeed, runNationsElo, nationsPredict, nationName} from './nations-lib.mjs';
 import {runEuroElo, uclPredict, makeResolver, parseDomesticCSV, countryOfArea, EXTRA_MAIN, EXTRA_NEW, LG_COUNTRY, EXTRA_VERSION} from './ucl-lib.mjs';
 
 const API = process.env.FD_API_BASE || 'https://api.football-data.org/v4';
@@ -346,6 +347,69 @@ async function main() {
     uclInfo = {ok: true, matchs: clMatches.length, joues: events.filter(e => e.cl).length, pronostics: n, sansPays: Object.values(state.uclTeams).filter(t => !t.c).length};
   } catch (e) { if (!/^désactivée/.test(e.message)) { errors.CL = String(e.message || e).slice(0, 160); console.error('C1 :', e.message); } }
 
+  // --- 4d. Ligue des nations (sélections) : Elo des sélections (lab/RAPPORT-SELECTIONS.md), calendrier et résultats de l'API publique de l'UEFA.
+  let natInfo = {ok: false};
+  try {
+    let seed = readJSON('nations-seed.json', null);
+    if (!seed) throw new Error('graine absente');
+    // Base de résultats internationaux rafraîchie une fois par semaine (réglages figés)
+    if ((NOW - new Date(state.nationsAt || 0)) > CSV_REFRESH_DAYS * 86400000) {
+      try {
+        const r = await fetch('https://raw.githubusercontent.com/martj42/international_results/master/results.csv', {signal: AbortSignal.timeout(60000)});
+        if (r.ok) { const fresh = buildNationsSeed(await r.text(), seed.params); if (fresh.asOf >= seed.asOf) { seed = fresh; writeIfChanged('nations-seed.json', seed); } }
+        state.nationsAt = NOW.toISOString();
+      } catch (e) { console.error('Sélections (base) :', e.message); }
+    }
+    const P = seed.params, yr = Number(todayStr.slice(0, 4)), seasonYear = Number(todayStr.slice(5, 7)) >= 7 ? yr + 1 : yr;
+    const from = addDays(todayStr, -12);
+    const ur = await fetch(`https://match.uefa.com/v5/matches?competitionId=2014&seasonYear=${seasonYear}&fromDate=${from}&toDate=${end}&limit=200&offset=0&order=ASC`, {signal: AbortSignal.timeout(30000), headers: {'User-Agent': 'Mozilla/5.0 (PronostiK)'}});
+    if (!ur.ok) throw new Error('API UEFA : HTTP ' + ur.status);
+    const UM = await ur.json();
+    if (!Array.isArray(UM)) throw new Error('API UEFA : réponse inattendue');
+    if (UM[0]?.competition?.images?.FULL_LOGO) emblems.NL = UM[0].competition.images.FULL_LOGO;
+    const fr = t => t?.translations?.displayName?.FR || t?.internationalName || '?';
+    const isNeutral = m => !!(m.stadium?.countryCode && m.homeTeam?.countryCode && m.stadium.countryCode !== m.homeTeam.countryCode);
+    // Matchs joués après la date de la base : appliqués aux notes
+    const done = UM.filter(m => m.status === 'FINISHED' && m.score?.regular).map(m => ({date: m.kickOffTime.date, home: nationName(m.homeTeam.internationalName), away: nationName(m.awayTeam.internationalName), hg: m.score.regular.home, ag: m.score.regular.away, t: 'UEFA Nations League', neutral: isNeutral(m)}));
+    const after = done.filter(m => m.date > seed.asOf).sort((a, b) => a.date.localeCompare(b.date));
+    const ratings = runNationsElo(after, P, null, seed.ratings);
+    const recentAll = [...seed.recent, ...after.map(m => [m.date, m.home, m.away, m.hg, m.ag])];
+    const nameFR = {}; for (const m of UM) for (const t of [m.homeTeam, m.awayTeam]) if (t) nameFR[nationName(t.internationalName)] = fr(t);
+    const dispN = n => nameFR[n] || n;
+    for (const m of UM) {   // résultats (score à 90 minutes)
+      if (m.status !== 'FINISHED' || !m.score?.regular) continue;
+      const p = byId.get('uefa' + m.id);
+      if (p && !p.res) { p.res = outcome(m.score.regular.home, m.score.regular.away); p.final = `${m.score.regular.home}–${m.score.regular.away}`; }
+    }
+    let n = 0;
+    for (const m of UM) {
+      if (m.status !== 'UPCOMING' || !m.homeTeam || !m.awayTeam || m.homeTeam.isPlaceHolder || m.awayTeam.isPlaceHolder) continue;
+      const kickoff = m.kickOffTime.dateTime, date = parisDate(new Date(kickoff));
+      if (date < todayStr || date > end) continue;
+      const id = 'uefa' + m.id, old = byId.get(id);
+      if (old && NOW >= new Date(old.kickoff) && old.kickoff === kickoff) continue;
+      const H = nationName(m.homeTeam.internationalName), A = nationName(m.awayTeam.internationalName), neutral = isNeutral(m);
+      const rh = ratings.get(H) ?? P.init, ra = ratings.get(A) ?? P.init, x = nationsPredict(rh, ra, neutral, P);
+      const mk2 = marketsFromLambdas(x.lam[0], x.lam[1], false);
+      const pois = (k, l) => { let q = Math.exp(-l); for (let i = 1; i <= k; i++) q *= l / i; return q; };
+      let best = [0, 0, -1]; for (let i = 0; i <= 6; i++) for (let j = 0; j <= 6; j++) { const q = pois(i, x.lam[0]) * pois(j, x.lam[1]); if (q > best[2]) best = [i, j, q]; }
+      const five = t => recentAll.filter(r => r[0] < date && (r[1] === t || r[2] === t)).slice(-5).reverse().map(r => r[1] === t ? {d: r[0], o: dispN(r[2]), v: 'D', f: r[3], a: r[4]} : {d: r[0], o: dispN(r[1]), v: 'E', f: r[4], a: r[3]});
+      const h2h = recentAll.filter(r => r[0] < date && ((r[1] === H && r[2] === A) || (r[1] === A && r[2] === H))).slice(-5).reverse().map(r => ({d: r[0], h: dispN(r[1]), a: dispN(r[2]), hg: r[3], ag: r[4]}));
+      const entry = {id, apiId: null, uefaId: m.id, lg: 'NL', date, kickoff, home: fr(m.homeTeam), away: fr(m.awayTeam), crest: [m.homeTeam.mediumLogoUrl || m.homeTeam.logoUrl || null, m.awayTeam.mediumLogoUrl || m.awayTeam.logoUrl || null],
+        p: x.p.map(r4), lam: x.lam.map(r4), score: `${best[0]}–${best[1]}`, model: 'elo-selections', elo: [Math.round(rh), Math.round(ra)], neutral,
+        markets: {o15: r4(mk2.o15), o25: r4(mk2.o25), btts: r4(mk2.btts), ht: mk2.ht.map(r4), scores: mk2.scores.map(([sc, v]) => [sc, r4(v)])},
+        form: {h: five(H), a: five(A)}, stats: h2h.length ? {h2h} : null, groupe: m.group?.metaData?.groupName || null,
+        rel: 'test', err: null, savedAt: old?.savedAt || NOW.toISOString(), updatedAt: old?.updatedAt || NOW.toISOString(), res: null, final: null};
+      if (old) {
+        const same = JSON.stringify([old.p, old.lam, old.kickoff]) === JSON.stringify([entry.p, entry.lam, entry.kickoff]);
+        if (same) { entry.updatedAt = old.updatedAt; entry.form = old.form; } else entry.updatedAt = NOW.toISOString();
+        predictions = predictions.filter(p => p.id !== id);
+      }
+      predictions.push(entry); byId.set(id, entry); n++;
+    }
+    natInfo = {ok: true, base: seed.asOf, matchs: UM.length, joues: done.length, pronostics: n};
+  } catch (e) { errors.NL = String(e.message || e).slice(0, 160); console.error('Sélections :', e.message); }
+
   // --- 4b. cotes du marché pour les matchs à venir (comparaison affichée sur le site ; jamais bloquant)
   const oddsInfo = {ok: false, rows: 0, matched: 0, error: null};
   try {
@@ -578,7 +642,7 @@ async function main() {
   const errKeys = Object.keys(errors);
   const meta = {
     updated: changed ? NOW.toISOString() : (prevMeta.updated || NOW.toISOString()), season, source: 'football-data.org',
-    leagues: [...LEAGUES, ...(uclInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'CL') ? [{code: 'CL', name: 'Ligue des champions'}] : [])].map(l => ({code: l.code, name: l.name, emblem: emblems[l.code] || (prevMeta.leagues || []).find(x => x.code === l.code)?.emblem || null})), errors, ucl: uclInfo,
+    leagues: [...LEAGUES, ...(uclInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'CL') ? [{code: 'CL', name: 'Ligue des champions'}] : []), ...(natInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'NL') ? [{code: 'NL', name: 'Ligue des nations'}] : [])].map(l => ({code: l.code, name: l.name, emblem: emblems[l.code] || (prevMeta.leagues || []).find(x => x.code === l.code)?.emblem || null})), errors, ucl: uclInfo, nations: natInfo,
     lastError: errKeys.length ? errKeys.map(k => `${k} : ${errors[k]}`).join(' · ') : null,
     unmapped: [...unmapped.values()],
     odds: oddsInfo,
