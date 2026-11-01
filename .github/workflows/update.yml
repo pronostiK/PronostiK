@@ -58,7 +58,7 @@ jobs:
           cp index.html style.css app.js manifest.webmanifest _site/
           cp -r assets _site/
           # numéro de version : force le rechargement du code (application sur l'écran d'accueil comprise)
-          V=$(git rev-parse --short HEAD)
+          V=$(cat index.html style.css app.js | sha1sum | cut -c1-10)
           sed -i "s/content=\"dev\"/content=\"$V\"/; s/style.css?v=dev/style.css?v=$V/; s/app.js?v=dev/app.js?v=$V/" _site/index.html
           printf '{"v":"%s"}' "$V" > _site/version.json
           mkdir _site/data
