@@ -361,8 +361,8 @@ async function main() {
       } catch (e) { console.error('Sélections (base) :', e.message); }
     }
     const P = seed.params, yr = Number(todayStr.slice(0, 4)), seasonYear = Number(todayStr.slice(5, 7)) >= 7 ? yr + 1 : yr;
-    const from = addDays(todayStr, -12);
-    const ur = await fetch(`https://match.uefa.com/v5/matches?competitionId=2014&seasonYear=${seasonYear}&fromDate=${from}&toDate=${end}&limit=200&offset=0&order=ASC`, {signal: AbortSignal.timeout(30000), headers: {'User-Agent': 'Mozilla/5.0 (PronostiK)'}});
+    const from = addDays(todayStr, -12), endNL = addDays(todayStr, 14);   // sélections : matchs affichés deux semaines à l'avance (trêves)
+    const ur = await fetch(`https://match.uefa.com/v5/matches?competitionId=2014&seasonYear=${seasonYear}&fromDate=${from}&toDate=${endNL}&limit=200&offset=0&order=ASC`, {signal: AbortSignal.timeout(30000), headers: {'User-Agent': 'Mozilla/5.0 (PronostiK)'}});
     if (!ur.ok) throw new Error('API UEFA : HTTP ' + ur.status);
     const UM = await ur.json();
     if (!Array.isArray(UM)) throw new Error('API UEFA : réponse inattendue');
@@ -385,7 +385,7 @@ async function main() {
     for (const m of UM) {
       if (m.status !== 'UPCOMING' || !m.homeTeam || !m.awayTeam || m.homeTeam.isPlaceHolder || m.awayTeam.isPlaceHolder) continue;
       const kickoff = m.kickOffTime.dateTime, date = parisDate(new Date(kickoff));
-      if (date < todayStr || date > end) continue;
+      if (date < todayStr || date > endNL) continue;
       const id = 'uefa' + m.id, old = byId.get(id);
       if (old && NOW >= new Date(old.kickoff) && old.kickoff === kickoff) continue;
       const H = nationName(m.homeTeam.internationalName), A = nationName(m.awayTeam.internationalName), neutral = isNeutral(m);
