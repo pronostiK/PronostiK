@@ -7,7 +7,7 @@
 import {readFileSync, writeFileSync, existsSync, mkdirSync} from 'node:fs';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {createModel, createRatings} from '../model.mjs';
+import {createModel, createRatings, createElo, hybridProbs} from '../model.mjs';
 import {footballDataDate, resolveName} from '../lib.mjs';
 import {LEAGUES, ALIASES} from '../leagues.mjs';
 import {parseCSV, parseFixtures} from '../csv.mjs';
@@ -120,7 +120,7 @@ async function main() {
   const refreshModels = () => {
     for (const lg of LEAGUES) {
       const rows = history.filter(m => m.lg === lg.code).sort((a, b) => a.date.localeCompare(b.date));
-      models[lg.code] = {v1: createModel(rows), v2: createRatings(rows)}; known[lg.code] = [...new Set(rows.flatMap(m => [m.home, m.away]))];
+      models[lg.code] = {v1: createModel(rows), v2: createRatings(rows), elo: createElo(rows)}; known[lg.code] = [...new Set(rows.flatMap(m => [m.home, m.away]))];
     }
   };
   // Modèle principal : forces attaque/défense (v2). Secours : ancien modèle (v1) si une équipe manque d'historique, par exemple un promu.
@@ -177,6 +177,8 @@ async function main() {
         try {
           const x = predictMatch(lg.code, home, away, date);
           entry.p = x.p.map(r4); entry.lam = x.lam.map(r4); entry.score = x.score; entry.model = x.model;
+          // En coulisse (non publié) : hybride Elo + v2, figé au coup d'envoi comme le pronostic publié, pour le comparer sur des matchs neufs.
+          if (x.model === 'v2') { const e = models[lg.code].elo.predict(home, away, date); if (e) entry.shadow = {hyb: hybridProbs(x.p, e.p).map(r4), elo: e.p.map(r4)}; }
           entry.rel = seasonCount(lg.code, home, date) >= 5 && seasonCount(lg.code, away, date) >= 5 ? 'ok' : 'limited';
         } catch (e) { entry.err = e.message; }
       }
@@ -261,6 +263,23 @@ async function main() {
     echantillon: 'Matchs de 1re division joués depuis la date de début, avec cotes moyennes de clôture valides et un pronostic. Modèle et marché comparés sur les mêmes matchs. IC à 95 % : différence appariée modèle − marché, approximation normale.',
     total: tot ? {n: tot, ecartBrier: ci95(allB), ecartLog: ci95(allL)} : null,
     leagues: leaguesSc});
+
+  // --- 6b. suivi « en coulisse » : hybride Elo + v2 contre v2, sur les matchs réglés depuis la mise en place (aucune incidence sur le site)
+  {
+    const SHADOW_START = '2026-11-01';
+    const S = predictions.filter(p => p.shadow && p.p && ['H', 'D', 'A'].includes(p.res) && p.kickoff >= SHADOW_START);
+    const idx = r => 'HDA'.indexOf(r), mean = a => a.reduce((x, y) => x + y, 0) / a.length;
+    const br = (p, i) => p.reduce((t, v, k) => t + (v - (k === i ? 1 : 0)) ** 2, 0), ll = (p, i) => -Math.log(Math.max(1e-12, p[i]));
+    const ci = d => { if (d.length < 2) return null; const m = mean(d), v = d.reduce((x, y) => x + (y - m) ** 2, 0) / (d.length - 1), e = 1.96 * Math.sqrt(v / d.length); return {diff: r4(m), lo: r4(m - e), hi: r4(m + e)}; };
+    const shadow = {debut: SHADOW_START, n: S.length, note: 'Comparaison sur des matchs neufs : hybride Elo + v2 (non publié) contre v2 (publié). Écart négatif = hybride meilleur.'};
+    if (S.length) {
+      shadow.brierV2 = r4(mean(S.map(p => br(p.p, idx(p.res))))); shadow.brierHybride = r4(mean(S.map(p => br(p.shadow.hyb, idx(p.res)))));
+      shadow.ecartBrier = ci(S.map(p => br(p.shadow.hyb, idx(p.res)) - br(p.p, idx(p.res))));
+      shadow.ecartLog = ci(S.map(p => ll(p.shadow.hyb, idx(p.res)) - ll(p.p, idx(p.res))));
+      shadow.parChampionnat = Object.fromEntries(LEAGUES.map(l => { const T = S.filter(p => p.lg === l.code); return [l.code, T.length ? {n: T.length, ecartBrier: ci(T.map(p => br(p.shadow.hyb, idx(p.res)) - br(p.p, idx(p.res))))} : null]; }));
+    }
+    writeIfChanged('shadow.json', shadow);
+  }
 
   writeIfChanged('history.json', history);
   writeIfChanged('predictions.json', predictions);

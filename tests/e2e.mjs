@@ -106,6 +106,8 @@ ok(J('history.json').some(m => m.lg === 'FL1' && m.home === 'Lille' && m.away ==
   ok(b.mk && b.mk[0] < 0.45 && b.mk[0] > 0.38, 'cotes : Man City–Arsenal reçoit ses probabilités');
   ok(!pred.find(p => p.apiId === 102).mk, 'cotes : un match absent du fichier reste sans cotes');
   ok(m.ok && m.rows === 3 && m.matched === 2, 'cotes : meta.odds = lu 3 lignes, 2 appariées'); }
+ok(pred.filter(p => p.p && p.model === 'v2').every(p => p.shadow && Math.abs(p.shadow.hyb.reduce((a, b) => a + b) - 1) < 1e-3), 'coulisse : chaque pronostic v2 a un hybride Elo + v2 (non publié), de somme 1');
+ok(J('shadow.json').debut === '2026-11-01', 'coulisse : fichier de suivi créé');
 const frozen = JSON.stringify(pred.find(p => p.apiId === 201).p);
 
 // Relance sans changement

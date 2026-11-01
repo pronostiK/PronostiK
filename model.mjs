@@ -128,3 +128,55 @@ export function createRatings(allMatches, opts = {}) {
   }
   return {predict};
 }
+
+// ---------------------------------------------------------------------------------------------------------------
+// Hybride Elo + v2 (« en coulisse ») : calculé et suivi, PAS publié. Réglages figés issus de l'étude Elo
+// (branche experience-elo, lab/RAPPORT-ELO.md : réglage sur 2024-25, test 2025-08 → 2026-10).
+export const ELO_PARAMS = {K: 20, H: 80, reg: 1, ord: {b: 0.5300431619279119, t1: -0.37603656229315574, t2: 0.8128742251704589},
+  pool: {wV2: 0.7511677930724845, wElo: 0.3991237434408407, bDom: -0.06568771090046427, bNul: 0.09069661636795369}};
+
+// Notes Elo d'un championnat (matchs de 1re division). predict(home, away, date) n'utilise que les matchs des jours précédents.
+export function createElo(allMatches, P = ELO_PARAMS) {
+  const top = allMatches.filter(m => (m.division || 'L1') === 'L1').sort((a, b) => a.date.localeCompare(b.date) || a.home.localeCompare(b.home));
+  const G = gd => gd <= 1 ? 1 : gd === 2 ? 1.5 : (11 + gd) / 8;
+  const avg = a => a.reduce((s, v) => s + v, 0) / a.length;
+  const sig = z => 1 / (1 + Math.exp(-z));
+  const cache = new Map();
+  const seasonOf = d => +d.slice(5, 7) >= 8 ? d.slice(0, 4) : String(+d.slice(0, 4) - 1);
+  const addTeam = (r, t) => { if (!r.has(t)) { const v = [...r.values()].sort((a, b) => a - b); r.set(t, v.length >= 3 ? avg(v.slice(0, 3)) : 1500); } };
+  function ratingsBefore(date) {
+    if (cache.has(date)) return cache.get(date);
+    const r = new Map(); let season = null, i = 0;
+    while (i < top.length && top[i].date < date) {
+      const d = top[i].date, ms = [];
+      while (i < top.length && top[i].date === d) ms.push(top[i++]);
+      const se = seasonOf(d);
+      if (season !== null && se !== season && r.size) { const mu = avg([...r.values()]); for (const [t, v] of r) r.set(t, mu + P.reg * (v - mu)); }
+      season = se;
+      for (const m of ms) { addTeam(r, m.home); addTeam(r, m.away); }
+      for (const m of ms) {
+        const x = r.get(m.home) + P.H - r.get(m.away), E = 1 / (1 + 10 ** (-x / 400)), S = m.hg > m.ag ? 1 : m.hg === m.ag ? 0.5 : 0, k = P.K * G(Math.abs(m.hg - m.ag));
+        r.set(m.home, r.get(m.home) + k * (S - E)); r.set(m.away, r.get(m.away) - k * (S - E));
+      }
+    }
+    const out = {r, season}; cache.set(date, out); return out;
+  }
+  function predict(home, away, date) {
+    const base = ratingsBefore(date), r = new Map(base.r);
+    if (!r.size) return null;
+    const se = seasonOf(date);
+    if (base.season !== null && se !== base.season) { const mu = avg([...r.values()]); for (const [t, v] of r) r.set(t, mu + P.reg * (v - mu)); }
+    addTeam(r, home); addTeam(r, away);
+    const x = (r.get(home) + P.H - r.get(away)) / 100, q = P.ord;
+    const pA = sig(q.t1 - q.b * x), pAD = sig(q.t2 - q.b * x);
+    return {p: [1 - pAD, Math.max(1e-9, pAD - pA), pA], diff: x * 100};
+  }
+  return {predict};
+}
+
+// Mélange log-linéaire v2 + Elo (réglé sur 2024-25).
+export function hybridProbs(pV2, pElo, P = ELO_PARAMS) {
+  const w = P.pool, z = [0, 1, 2].map(k => w.wV2 * Math.log(Math.max(1e-9, pV2[k])) + w.wElo * Math.log(Math.max(1e-9, pElo[k])) + (k === 0 ? w.bDom : 0) + (k === 1 ? w.bNul : 0));
+  const mx = Math.max(...z), e = z.map(v => Math.exp(v - mx)), s = e[0] + e[1] + e[2];
+  return e.map(v => v / s);
+}

@@ -7,7 +7,7 @@
 //   E. Cohérence : probabilités dans [0, 1] et de somme 1.
 //   F. Paramètres de production inchangés (toute modification doit passer par une preuve statistique).
 import {readFileSync} from 'node:fs';
-import {createModel, createRatings, RATINGS_DEFAULTS} from '../model.mjs';
+import {createModel, createRatings, RATINGS_DEFAULTS, createElo, hybridProbs, ELO_PARAMS} from '../model.mjs';
 
 const load = f => JSON.parse(readFileSync(new URL(f, import.meta.url)));
 const isLg = lg => m => (m.lg || 'FL1') === lg;
@@ -71,6 +71,19 @@ for (const lg of LEAGUES) {
   }
   report(!bad, `E. ${n - bad}/${n} prédictions cohérentes (probabilités dans [0, 1], somme = 1, buts attendus > 0)`);
 }
+
+// G. Hybride Elo + v2 (en coulisse) : pas de fuite, probabilités cohérentes, réglages figés
+for (const lg of LEAGUES) {
+  const H = load(`./fixtures/history-${lg}.json`).filter(isLg(lg)), refs = load(`./reference-ratings-${lg}.json`);
+  const E = createElo(H); let bad = 0;
+  for (const r of refs.slice(0, 4)) {
+    const a = E.predict(r.h, r.a, r.d), b = createElo(H.filter(m => m.date < r.d)).predict(r.h, r.a, r.d), c = createElo(H.map(m => m.date >= r.d ? {...m, hg: 9, ag: 0} : m)).predict(r.h, r.a, r.d);
+    const h = hybridProbs(r.p, a.p);
+    if (maxDiff(a.p, b.p) > 1e-12 || maxDiff(a.p, c.p) > 1e-12 || Math.abs(h[0] + h[1] + h[2] - 1) > 1e-9 || h.some(v => v <= 0 || v >= 1)) bad++;
+  }
+  report(!bad, `G. Elo/hybride ${lg} : aucune fuite, probabilités cohérentes (4 dates)`);
+}
+report(ELO_PARAMS.K === 20 && ELO_PARAMS.H === 80 && ELO_PARAMS.reg === 1, 'G. réglages Elo figés (K = 20, H = 80, rappel = 1)');
 
 // F. Paramètres de production
 {
