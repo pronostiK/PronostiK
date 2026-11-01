@@ -184,16 +184,16 @@ export function hybridProbs(pV2, pElo, P = ELO_PARAMS) {
 // ---------------------------------------------------------------------------------------------------------------
 // Autres marchés, déduits des buts attendus du modèle v2 (lab/markets-result.json, scripts/lab-markets.mjs).
 // +/-1,5 et +/-2,5 buts : recalibrés (réglage figé sur la saison 2024-25). Mi-temps : 45 % des buts en 1re période
-// (mesuré : 44,9 %). Les deux équipes marquent : non publié (pas plus précis que la moyenne).
-export const MARKET_CAL = {o15: {a: 0.5093776584766343, b: 0.6323983533121632}, o25: {a: 0.03789198446053596, b: 0.7503451433469969}};
+// (mesuré : 44,9 %). Les deux équipes marquent : publié avec la mention « fiabilité faible » (pas d'apport démontré).
+export const MARKET_CAL = {o15: {a: 0.5093776584766343, b: 0.6323983533121632}, o25: {a: 0.03789198446053596, b: 0.7503451433469969}, btts: {a: 0.1513227658730888, b: 0.4621706182277953}};
 export function marketsFromLambdas(lamH, lamA) {
   const pois = (k, l) => { let p = Math.exp(-l); for (let i = 1; i <= k; i++) p *= l / i; return p; };
   const lg = p => Math.log(Math.min(1 - 1e-6, Math.max(1e-6, p)) / (1 - Math.min(1 - 1e-6, Math.max(1e-6, p))));
   const cal = (p, c) => 1 / (1 + Math.exp(-(c.a + c.b * lg(p))));
-  let o15 = 0, o25 = 0; const sc = [];
-  for (let i = 0; i <= 10; i++) for (let j = 0; j <= 10; j++) { const p = pois(i, lamH) * pois(j, lamA); if (i + j > 1) o15 += p; if (i + j > 2) o25 += p; if (i <= 6 && j <= 6) sc.push([`${i}-${j}`, p]); }
+  let o15 = 0, o25 = 0, btts = 0; const sc = [];
+  for (let i = 0; i <= 10; i++) for (let j = 0; j <= 10; j++) { const p = pois(i, lamH) * pois(j, lamA); if (i + j > 1) o15 += p; if (i + j > 2) o25 += p; if (i > 0 && j > 0) btts += p; if (i <= 6 && j <= 6) sc.push([`${i}-${j}`, p]); }
   const ht = [0, 0, 0];
   for (let i = 0; i <= 8; i++) for (let j = 0; j <= 8; j++) { const p = pois(i, lamH * 0.45) * pois(j, lamA * 0.45); ht[i > j ? 0 : i === j ? 1 : 2] += p; }
   const hs = ht[0] + ht[1] + ht[2];
-  return {o15: cal(o15, MARKET_CAL.o15), o25: cal(o25, MARKET_CAL.o25), ht: ht.map(v => v / hs), scores: sc.sort((a, b) => b[1] - a[1]).slice(0, 3)};
+  return {o15: cal(o15, MARKET_CAL.o15), o25: cal(o25, MARKET_CAL.o25), btts: cal(btts, MARKET_CAL.btts), ht: ht.map(v => v / hs), scores: sc.sort((a, b) => b[1] - a[1]).slice(0, 3)};
 }
