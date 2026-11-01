@@ -398,3 +398,31 @@ nav a{padding:8px 12px}
 .get-how{text-decoration:underline;color:var(--accent)}
 .get-help{font-size:14px}
 .get-help p{margin:0 0 6px}
+
+/* v16 : résumé de la journée */
+.rkpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:6px}
+.rkpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px;text-align:center}
+.rkpi b{display:block;font-family:"Exo 2",Inter,sans-serif;font-style:italic;font-weight:900;font-size:30px;line-height:1.1;background:linear-gradient(90deg,#7fe9ff,#3fa2ff 55%,#8d7cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rkpi b i{font-size:18px}
+.rkpi span{font-size:12px;color:var(--muted)}
+.rh{display:flex;align-items:center;gap:8px;font-size:17px;margin:22px 0 10px}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.rcard{display:block;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.rcard.sur{border-left:4px solid var(--warn)}.rcard.ok{border-left:4px solid var(--ok)}
+.rtop{display:flex;align-items:center;gap:8px;font-size:12.5px;margin-bottom:8px}
+.rbadge{margin-left:auto;font-size:13px;padding:2px 8px;border-radius:999px;background:var(--panel2);border:1px solid var(--line)}
+.rcard.sur .rbadge{color:var(--warn);border-color:var(--warn)}.rcard.ok .rbadge{color:var(--ok);border-color:var(--ok)}
+.rmatch{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.rmatch span{display:flex;align-items:center;gap:6px;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.rmatch span:last-child{justify-content:flex-end}
+.rmatch .crest,.rmatch .mono,.rteam .crest,.rteam .mono{width:22px;height:22px;font-size:9px;flex:none}
+.rscore{font-size:18px;font-variant-numeric:tabular-nums}
+.rnote{margin:8px 0 0;font-size:13px;color:var(--muted)}
+.rlist{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.rteam{display:flex;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid var(--line);background:var(--panel);font-size:14px}
+.rteam:last-child{border-bottom:0}
+.rteam b{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.rser,.rmv,.rpts{font-weight:800;font-size:13px;white-space:nowrap}
+.rser.good,.rmv.up{color:var(--ok)}.rser.bad,.rmv.down{color:var(--ko)}
+.lgdot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+nav a{padding:8px 10px;font-size:13.5px}

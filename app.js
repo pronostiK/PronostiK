@@ -354,10 +354,10 @@
       document.title = 'Chat · PronostiK';
       return;
     }
-    const tab = ['matchs', 'bilan', 'methode'].includes(h) ? h : 'matchs';
+    const tab = ['matchs', 'resume', 'bilan', 'methode'].includes(h) ? h : 'matchs';
     document.querySelectorAll('.view').forEach(v => v.hidden = v.id !== tab);
     document.querySelectorAll('nav a').forEach(a => a.getAttribute('data-tab') === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
-    document.title = {matchs: 'PronostiK · Le football en probabilités', bilan: 'Bilan · PronostiK', methode: 'Méthode · PronostiK'}[tab];
+    document.title = {matchs: 'PronostiK · Le football en probabilités', resume: 'Résumé · PronostiK', bilan: 'Bilan · PronostiK', methode: 'Méthode · PronostiK'}[tab];
   }
   function renderMatchPage(id) {
     const box = $('matchpage');
@@ -427,6 +427,35 @@
   const DISPLAY = {'Milan': 'AC Milan', 'Inter': 'Inter Milan'};
   const dn = n => DISPLAY[n] || n;
 
+
+
+  // ---------------- Résumé de la journée ----------------
+  function renderResume(R) {
+    const box = $('resume-body');
+    if (!R) { box.innerHTML = '<div class="empty">Le résumé sera disponible après les prochains matchs.</div>'; return; }
+    const fd = d => new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'long', timeZone: TZ}).format(new Date(d + 'T12:00:00Z'));
+    $('resume-dates').textContent = `Du ${fd(R.du)} au ${fd(R.au)}`;
+    const lgDot = c => emb(c, 'lg-mini') || `<i class="lgdot" style="background:${LG_COLOR[c] || 'var(--accent)'}"></i>`;
+    const cr = (url, n) => crestImg(url, n);
+    const card = (x, kind) => `<a class="rcard ${kind}" href="#match/${encodeURIComponent(x.id)}">
+        <div class="rtop">${lgDot(x.lg)}<span class="muted">${esc(fd(x.date))}</span><b class="rbadge">${Math.round((kind === 'sur' ? x.probIssue : x.probFav) * 100)} %</b></div>
+        <div class="rmatch"><span>${cr(x.crest && x.crest[0], dn(x.home))}${esc(dn(x.home))}</span><b class="rscore">${esc(x.score || '')}</b><span>${esc(dn(x.away))}${cr(x.crest && x.crest[1], dn(x.away))}</span></div>
+        <p class="rnote">${kind === 'sur' ? `${esc(dn(x.issue))} : seulement ${Math.round(x.probIssue * 100)} % pour le modèle${x.mk != null ? `, ${Math.round(x.mk * 100)} % pour les bookmakers` : ''}.` : `${esc(dn(x.fav))} favori à ${Math.round(x.probFav * 100)} % : le pronostic a tenu.`}</p></a>`;
+    const team = (x, right) => `<div class="rteam">${lgDot(x.lg)}${cr(x.crest, dn(x.team))}<b>${esc(dn(x.team))}</b>${right}</div>`;
+    const b = R.bilan || {n: 0, favorisJustes: 0};
+    const sections = [];
+    sections.push(`<div class="rkpis">
+      <div class="rkpi"><b>${b.n}</b><span>matchs joués</span></div>
+      <div class="rkpi"><b>${b.favorisJustes}<i>/${b.n}</i></b><span>favoris du modèle qui ont gagné</span></div>
+      <div class="rkpi"><b>${(R.surprises || []).length}</b><span>surprises (moins de 30 %)</span></div></div>`);
+    if ((R.surprises || []).length) sections.push(`<h2 class="rh">${ICON.alert} Les surprises</h2><div class="rgrid">${R.surprises.map(x => card(x, 'sur')).join('')}</div>`);
+    if ((R.tenus || []).length) sections.push(`<h2 class="rh">${ICON.check} Les favoris qui ont tenu</h2><div class="rgrid">${R.tenus.map(x => card(x, 'ok')).join('')}</div>`);
+    if ((R.series || []).length) sections.push(`<h2 class="rh">${ICON.up} Les séries en cours</h2><div class="rlist">${R.series.map(x => team(x, `<span class="rser ${x.type === 'défaites' || x.type === 'sans victoire' ? 'bad' : 'good'}">${x.n} ${esc(x.type)}</span>`)).join('')}</div>`);
+    if ((R.montees || []).length || (R.descentes || []).length) sections.push(`<h2 class="rh">${ICON.trophy} Ça bouge au classement</h2><div class="rlist">${(R.montees || []).map(x => team(x, `<span class="rmv up">▲ ${x.delta} · ${x.apres}<sup>e</sup></span>`)).join('')}${(R.descentes || []).map(x => team(x, `<span class="rmv down">▼ ${-x.delta} · ${x.apres}<sup>e</sup></span>`)).join('')}</div>`);
+    if ((R.leaders || []).length) sections.push(`<h2 class="rh">${ICON.trophy} Les leaders</h2><div class="rlist">${R.leaders.map(x => team(x, `<span class="rpts">${x.pts} pts</span>`)).join('')}</div>`);
+    sections.push('<p class="note">Résumé calculé automatiquement à partir des résultats et des pronostics publiés sur le site. Une journée ne suffit pas à juger un modèle : voir le bilan.</p>');
+    box.innerHTML = sections.join('');
+  }
 
   // ---------------- Chat (assistant IA, accès par code) ----------------
   const chat = {url: null, loaded: false, matchId: null, logs: {}, busy: false};
@@ -498,11 +527,12 @@
 
   async function refresh() {
     try {
-      const [raw, meta, sc, stand] = await Promise.all([load('predictions.json'), load('meta.json').catch(() => null), load('scorecard.json').catch(() => null), load('standings.json').catch(() => null)]);
+      const [raw, meta, sc, stand, resume] = await Promise.all([load('predictions.json'), load('meta.json').catch(() => null), load('scorecard.json').catch(() => null), load('standings.json').catch(() => null), load('resume.json').catch(() => null)]);
       const preds = raw.map(p => ({...p, rawHome: p.home, rawAway: p.away, home: dn(p.home), away: dn(p.away), form: p.form ? {h: (p.form.h || []).map(m => ({...m, o: dn(m.o)})), a: (p.form.a || []).map(m => ({...m, o: dn(m.o)}))} : p.form,
         stats: p.stats ? {...p.stats, h2h: (p.stats.h2h || []).map(m => ({...m, h: dn(m.h), a: dn(m.a)})), dom: p.stats.dom && {...p.stats.dom, matchs: (p.stats.dom.matchs || []).map(m => ({...m, o: dn(m.o)}))}, ext: p.stats.ext && {...p.stats.ext, matchs: (p.stats.ext.matchs || []).map(m => ({...m, o: dn(m.o)}))}} : p.stats}));
       const openIds = [...document.querySelectorAll('button.head[aria-expanded="true"]')].map(b => b.getAttribute('aria-controls'));
-      cache = {preds, meta, sc, stand};
+      cache = {preds, meta, sc, stand, resume};
+      renderResume(resume);
       renderMatches(preds, meta);
       renderBilan(preds, sc);
       if (location.hash.startsWith('#match/')) renderMatchPage(decodeURIComponent(location.hash.slice(7)));

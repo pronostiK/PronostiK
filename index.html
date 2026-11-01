@@ -26,8 +26,8 @@
     </a>
     <nav aria-label="Navigation principale">
       <a href="#matchs" data-tab="matchs">Matchs</a>
+      <a href="#resume" data-tab="resume">Résumé</a>
       <a href="#bilan" data-tab="bilan">Bilan</a>
-      <a href="#methode" data-tab="methode">Méthode</a>
       <a href="#chat" data-tab="chat">Chat</a>
     </nav>
   </header>
@@ -90,6 +90,11 @@
       <div id="chat-off" class="empty" hidden><strong>Le chat arrive bientôt.</strong><br>Il est en cours d’installation.</div>
     </section>
 
+    <section id="resume" class="view" hidden aria-labelledby="t-resume">
+      <div class="hero"><p class="eyebrow">RÉSUMÉ DE LA JOURNÉE</p><h1 id="t-resume">Ce qu’il fallait retenir</h1><p id="resume-dates" class="muted"></p></div>
+      <div id="resume-body"><p class="muted">Chargement…</p></div>
+    </section>
+
     <section id="bilan" class="view" hidden aria-labelledby="t-bilan">
       <div class="hero">
         <p class="eyebrow">TRANSPARENCE</p>
@@ -133,7 +138,7 @@
 
   <footer>
     <p><strong>18+ · Jouer comporte des risques : endettement, isolement, dépendance.</strong> Pour être aidé, appelez le 09 74 75 13 13 (appel non surtaxé).</p>
-    <p>PronostiK fournit des estimations statistiques, pas des conseils de pari.</p>
+    <p>PronostiK fournit des estimations statistiques, pas des conseils de pari. · <a href="#methode">Comment sont calculées les probabilités</a></p>
   </footer>
 </div>
 <script src="app.js?v=dev"></script>

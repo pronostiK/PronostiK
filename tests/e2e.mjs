@@ -129,7 +129,7 @@ ok(pred.find(p => p.apiId === 301).res === 'H', 'phase 2 : Bayern–Dortmund ré
 ok(JSON.stringify(pred.find(p => p.apiId === 201).p) === frozen, 'phase 2 : pronostic identique à celui d\'avant le match');
 ok(J('history.json').some(m => m.lg === 'PL' && m.home === 'Man City' && m.hg === 2 && m.date === '2026-11-01'), 'phase 2 : résultat ajouté à l\'historique anglais');
 
-if (process.env.KEEP_DIR) { const {cpSync, mkdirSync} = await import('node:fs'); mkdirSync(process.env.KEEP_DIR, {recursive: true}); for (const f of ['predictions.json', 'meta.json', 'scorecard.json', 'standings.json']) cpSync(join(dir, f), join(process.env.KEEP_DIR, f)); }
+if (process.env.KEEP_DIR) { const {cpSync, mkdirSync} = await import('node:fs'); mkdirSync(process.env.KEEP_DIR, {recursive: true}); for (const f of ['predictions.json', 'meta.json', 'scorecard.json', 'standings.json', 'resume.json']) cpSync(join(dir, f), join(process.env.KEEP_DIR, f)); }
 
 // Phase 3 : un championnat hors forfait, les autres continuent
 failLeague.BL1 = true;

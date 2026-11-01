@@ -337,8 +337,8 @@ async function main() {
   }
 
   // --- 6c. classements de la saison en cours (1re division), avec les blasons connus par l'API
+  const standings = {};
   {
-    const standings = {};
     for (const lg of LEAGUES) {
       const crest = {};
       for (const m of apiByLeague[lg.code] || []) for (const t of [m.homeTeam, m.awayTeam]) {
@@ -362,6 +362,52 @@ async function main() {
       standings[lg.code] = {saison: season, maj: S[S.length - 1].date, rows};
     }
     writeIfChanged('standings.json', standings);
+  }
+
+  // --- 6d. Résumé de la journée : surprises, favoris tenus, séries, mouvements au classement (données du site uniquement)
+  {
+    const DAYS = 4, from = addDays(todayStr, -DAYS + 1);
+    const done = predictions.filter(p => p.p && ['H', 'D', 'A'].includes(p.res) && p.date >= from && p.date <= todayStr);
+    const lab = (p, i) => i === 1 ? 'Match nul' : (i === 0 ? p.home : p.away);
+    const items = done.map(p => { const i = 'HDA'.indexOf(p.res), t = p.p.indexOf(Math.max(...p.p)); return {id: p.id, lg: p.lg, date: p.date, home: p.home, away: p.away, score: p.final, issue: lab(p, i), probIssue: r4(p.p[i]), fav: lab(p, t), probFav: r4(p.p[t]), favOk: t === i, mk: p.mk ? r4(p.mk[i]) : null, crest: p.crest || null}; });
+    const surprises = items.filter(x => x.probIssue < 0.30).sort((a, b) => a.probIssue - b.probIssue).slice(0, 6);
+    const tenus = items.filter(x => x.favOk && x.probFav >= 0.55).sort((a, b) => b.probFav - a.probFav).slice(0, 6);
+    // séries en cours (saison, 1re division)
+    const series = [];
+    for (const lg of LEAGUES) {
+      const S = history.filter(m => m.lg === lg.code && m.division === 'L1' && m.date >= seasonStart).sort((a, b) => a.date.localeCompare(b.date));
+      const res = {};
+      for (const m of S) { (res[m.home] ||= []).push(m.hg > m.ag ? 'V' : m.hg === m.ag ? 'N' : 'D'); (res[m.away] ||= []).push(m.ag > m.hg ? 'V' : m.ag === m.hg ? 'N' : 'D'); }
+      for (const [t, r] of Object.entries(res)) {
+        const run = f => { let n = 0; for (let i = r.length - 1; i >= 0 && f(r[i]); i--) n++; return n; };
+        const w = run(x => x === 'V'), u = run(x => x !== 'D'), l = run(x => x === 'D'), nw = run(x => x !== 'V');
+        const c = (standings[lg.code]?.rows || []).find(x => x.t === t)?.crest || null;
+        if (w >= 3) series.push({lg: lg.code, team: t, type: 'victoires', n: w, crest: c});
+        else if (u >= 6) series.push({lg: lg.code, team: t, type: 'sans défaite', n: u, crest: c});
+        if (l >= 3) series.push({lg: lg.code, team: t, type: 'défaites', n: l, crest: c});
+        else if (nw >= 6) series.push({lg: lg.code, team: t, type: 'sans victoire', n: nw, crest: c});
+      }
+    }
+    series.sort((a, b) => b.n - a.n);
+    // mouvements au classement sur la période
+    const rankAt = (lg, before) => {
+      const T = {}, row = t => T[t] || (T[t] = {t, pts: 0, gf: 0, ga: 0});
+      for (const m of history.filter(m => m.lg === lg && m.division === 'L1' && m.date >= seasonStart && m.date < before)) {
+        const h = row(m.home), a = row(m.away); h.gf += m.hg; h.ga += m.ag; a.gf += m.ag; a.ga += m.hg;
+        if (m.hg > m.ag) h.pts += 3; else if (m.hg < m.ag) a.pts += 3; else { h.pts++; a.pts++; }
+      }
+      const o = Object.values(T).sort((x, y) => y.pts - x.pts || (y.gf - y.ga) - (x.gf - x.ga) || y.gf - x.gf || x.t.localeCompare(y.t));
+      return Object.fromEntries(o.map((r, i) => [r.t, i + 1]));
+    };
+    const moves = [];
+    for (const lg of LEAGUES) {
+      const before = rankAt(lg.code, from), now = rankAt(lg.code, addDays(todayStr, 1));
+      for (const [t, r] of Object.entries(now)) if (before[t] && before[t] !== r) moves.push({lg: lg.code, team: t, avant: before[t], apres: r, delta: before[t] - r, crest: (standings[lg.code]?.rows || []).find(x => x.t === t)?.crest || null});
+    }
+    const montees = moves.filter(m => m.delta > 0).sort((a, b) => b.delta - a.delta).slice(0, 5);
+    const descentes = moves.filter(m => m.delta < 0).sort((a, b) => a.delta - b.delta).slice(0, 5);
+    const leaders = LEAGUES.map(l => { const r = standings[l.code]?.rows?.[0]; return r ? {lg: l.code, team: r.t, pts: r.pts, crest: r.crest} : null; }).filter(Boolean);
+    writeIfChanged('resume.json', {du: from, au: todayStr, bilan: {n: items.length, favorisJustes: items.filter(x => x.favOk).length}, surprises, tenus, series: series.slice(0, 8), montees, descentes, leaders});
   }
 
   writeIfChanged('history.json', history);
