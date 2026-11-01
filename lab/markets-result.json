@@ -1,0 +1,227 @@
+{
+ "n": {
+  "dev": 1720,
+  "test": 2080
+ },
+ "marches": {
+  "o15": {
+   "n": 2080,
+   "frequenceReelle": 0.773,
+   "probMoyenneModele": 0.755,
+   "brierModele": 0.1749,
+   "brierRecalibre": 0.1734,
+   "brierNaif": 0.1755,
+   "modeleMoinsNaif": {
+    "diff": -0.0006,
+    "lo": -0.0037,
+    "hi": 0.0025
+   },
+   "recalibreMoinsNaif": {
+    "diff": -0.0021,
+    "lo": -0.0038,
+    "hi": -0.0003
+   },
+   "calibration": [
+    {
+     "tranche": "0-40",
+     "n": 0,
+     "annonce": null,
+     "observe": null
+    },
+    {
+     "tranche": "40-50",
+     "n": 0,
+     "annonce": null,
+     "observe": null
+    },
+    {
+     "tranche": "50-60",
+     "n": 68,
+     "annonce": 0.569,
+     "observe": 0.662
+    },
+    {
+     "tranche": "60-70",
+     "n": 438,
+     "annonce": 0.662,
+     "observe": 0.726
+    },
+    {
+     "tranche": "70-80",
+     "n": 913,
+     "annonce": 0.751,
+     "observe": 0.773
+    },
+    {
+     "tranche": "80-100",
+     "n": 661,
+     "annonce": 0.841,
+     "observe": 0.815
+    }
+   ]
+  },
+  "o25": {
+   "n": 2080,
+   "frequenceReelle": 0.543,
+   "probMoyenneModele": 0.52,
+   "brierModele": 0.2459,
+   "brierRecalibre": 0.2443,
+   "brierNaif": 0.2482,
+   "modeleMoinsNaif": {
+    "diff": -0.0023,
+    "lo": -0.0068,
+    "hi": 0.0022
+   },
+   "recalibreMoinsNaif": {
+    "diff": -0.004,
+    "lo": -0.0074,
+    "hi": -0.0005
+   },
+   "marche": {
+    "n": 2080,
+    "brierMarche": 0.2379,
+    "brierModele": 0.2459,
+    "modeleMoinsMarche": {
+     "diff": 0.008,
+     "lo": 0.0051,
+     "hi": 0.011
+    },
+    "recalibreMoinsMarche": {
+     "diff": 0.0064,
+     "lo": 0.0038,
+     "hi": 0.009
+    }
+   },
+   "calibration": [
+    {
+     "tranche": "0-40",
+     "n": 279,
+     "annonce": 0.352,
+     "observe": 0.487
+    },
+    {
+     "tranche": "40-50",
+     "n": 625,
+     "annonce": 0.453,
+     "observe": 0.477
+    },
+    {
+     "tranche": "50-60",
+     "n": 695,
+     "annonce": 0.549,
+     "observe": 0.557
+    },
+    {
+     "tranche": "60-70",
+     "n": 383,
+     "annonce": 0.641,
+     "observe": 0.616
+    },
+    {
+     "tranche": "70-80",
+     "n": 83,
+     "annonce": 0.732,
+     "observe": 0.699
+    },
+    {
+     "tranche": "80-100",
+     "n": 15,
+     "annonce": 0.824,
+     "observe": 0.933
+    }
+   ]
+  },
+  "btts": {
+   "n": 2080,
+   "frequenceReelle": 0.548,
+   "probMoyenneModele": 0.529,
+   "brierModele": 0.2482,
+   "brierRecalibre": 0.2462,
+   "brierNaif": 0.2478,
+   "modeleMoinsNaif": {
+    "diff": 0.0004,
+    "lo": -0.0032,
+    "hi": 0.004
+   },
+   "recalibreMoinsNaif": {
+    "diff": -0.0015,
+    "lo": -0.0031,
+    "hi": 0.0001
+   },
+   "calibration": [
+    {
+     "tranche": "0-40",
+     "n": 112,
+     "annonce": 0.373,
+     "observe": 0.455
+    },
+    {
+     "tranche": "40-50",
+     "n": 653,
+     "annonce": 0.458,
+     "observe": 0.504
+    },
+    {
+     "tranche": "50-60",
+     "n": 906,
+     "annonce": 0.549,
+     "observe": 0.564
+    },
+    {
+     "tranche": "60-70",
+     "n": 389,
+     "annonce": 0.636,
+     "observe": 0.614
+    },
+    {
+     "tranche": "70-80",
+     "n": 20,
+     "annonce": 0.717,
+     "observe": 0.45
+    },
+    {
+     "tranche": "80-100",
+     "n": 0,
+     "annonce": null,
+     "observe": null
+    }
+   ]
+  },
+  "miTemps": {
+   "n": 2080,
+   "brierModele": 0.6322,
+   "brierNaif": 0.6557,
+   "modeleMoinsNaif": {
+    "diff": -0.0236,
+    "lo": -0.0303,
+    "hi": -0.0169
+   },
+   "frequenceNulMT": 0.404,
+   "probNulMTModele": 0.405
+  },
+  "scoreExact": {
+   "n": 2080,
+   "probMoyenneAnnoncee": 0.12,
+   "tauxReussite": 0.122,
+   "scoresLesPlusProposes": [
+    [
+     "1-1",
+     1169
+    ],
+    [
+     "1-0",
+     378
+    ],
+    [
+     "0-1",
+     167
+    ],
+    [
+     "2-1",
+     136
+    ]
+   ]
+  }
+ },
+ "partButs1reMT": 0.449
+}
