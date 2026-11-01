@@ -1,0 +1,348 @@
+{
+ "date": "2026-11-01T01:07:01.074Z",
+ "requetes": 15,
+ "statut": {
+  "plan": "Free",
+  "fin": "2027-10-11T00:00:00+00:00",
+  "actif": true,
+  "limiteJour": 100,
+  "utiliseesJour": 0
+ },
+ "ligues": {
+  "FL1": [
+   {
+    "saison": 2022,
+    "debut": "2022-08-05",
+    "fin": "2023-06-03",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2023,
+    "debut": "2023-08-11",
+    "fin": "2024-06-02",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2024,
+    "debut": "2024-08-16",
+    "fin": "2025-05-29",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2025,
+    "debut": "2025-08-15",
+    "fin": "2026-05-29",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2026,
+    "debut": "2026-08-21",
+    "fin": "2027-05-29",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   }
+  ],
+  "PL": [
+   {
+    "saison": 2022,
+    "debut": "2022-08-05",
+    "fin": "2023-05-28",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2023,
+    "debut": "2023-08-11",
+    "fin": "2024-05-19",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2024,
+    "debut": "2024-08-16",
+    "fin": "2025-05-25",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2025,
+    "debut": "2025-08-15",
+    "fin": "2026-05-24",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2026,
+    "debut": "2026-08-21",
+    "fin": "2027-05-30",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   }
+  ],
+  "BL1": [
+   {
+    "saison": 2022,
+    "debut": "2022-08-05",
+    "fin": "2023-06-05",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2023,
+    "debut": "2023-08-18",
+    "fin": "2024-05-27",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2024,
+    "debut": "2024-08-23",
+    "fin": "2025-05-26",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2025,
+    "debut": "2025-08-22",
+    "fin": "2026-05-25",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2026,
+    "debut": "2026-08-28",
+    "fin": "2027-05-22",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   }
+  ],
+  "SA": [
+   {
+    "saison": 2022,
+    "debut": "2022-08-13",
+    "fin": "2023-06-11",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2023,
+    "debut": "2023-08-19",
+    "fin": "2024-05-26",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2024,
+    "debut": "2024-08-17",
+    "fin": "2025-05-25",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2025,
+    "debut": "2025-08-23",
+    "fin": "2026-05-24",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2026,
+    "debut": "2026-08-22",
+    "fin": "2027-05-30",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   }
+  ],
+  "PD": [
+   {
+    "saison": 2022,
+    "debut": "2022-08-12",
+    "fin": "2023-06-04",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2023,
+    "debut": "2023-08-11",
+    "fin": "2024-05-26",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2024,
+    "debut": "2024-08-15",
+    "fin": "2025-05-25",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2025,
+    "debut": "2025-08-15",
+    "fin": "2026-05-24",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   },
+   {
+    "saison": 2026,
+    "debut": "2026-08-15",
+    "fin": "2027-05-30",
+    "blessures": true,
+    "compositions": true,
+    "statsJoueursMatch": true,
+    "evenements": true
+   }
+  ]
+ },
+ "saisons": {
+  "FL1-2022": {
+   "matchs": 380,
+   "termines": 380,
+   "message": null
+  },
+  "FL1-2023": {
+   "matchs": 308,
+   "termines": 307,
+   "message": null
+  },
+  "FL1-2024": {
+   "matchs": 308,
+   "termines": 307,
+   "message": null
+  },
+  "FL1-2025": {
+   "matchs": 0,
+   "termines": 0,
+   "message": "Free plans do not have access to this season, try from 2022 to 2024."
+  },
+  "FL1-2026": {
+   "matchs": 0,
+   "termines": 0,
+   "message": "Free plans do not have access to this season, try from 2022 to 2024."
+  }
+ },
+ "exemples": {
+  "absencesMatch": {
+   "n": 4,
+   "champs": [
+    "player",
+    "team",
+    "fixture",
+    "league"
+   ],
+   "champsJoueur": [
+    "id",
+    "name",
+    "photo",
+    "type",
+    "reason"
+   ],
+   "champsMatch": [
+    "id",
+    "timezone",
+    "date",
+    "timestamp"
+   ],
+   "exemple": {
+    "type": "Missing Fixture",
+    "raison": "Suspended",
+    "dateMatch": "2022-08-07T13:00:00+00:00",
+    "horodatageInfo": null
+   }
+  },
+  "absencesSaison": {
+   "saison": 2022,
+   "n": 0,
+   "paging": {
+    "current": 1,
+    "total": 1
+   },
+   "types": [],
+   "raisons": [],
+   "matchsCouverts": 0
+  }
+ },
+ "erreurs": [
+  {
+   "path": "/fixtures?league=61&season=2025",
+   "erreurs": [
+    "Free plans do not have access to this season, try from 2022 to 2024."
+   ]
+  },
+  {
+   "path": "/fixtures?league=61&season=2026",
+   "erreurs": [
+    "Free plans do not have access to this season, try from 2022 to 2024."
+   ]
+  },
+  {
+   "path": "/fixtures?ids=871475-871843",
+   "erreurs": [
+    "Free plans do not have access to the Ids parameter."
+   ]
+  },
+  {
+   "path": "/injuries?league=61&season=2022",
+   "erreurs": [
+    "Too many requests. You have reached your per-minute request limit. Please wait a few seconds before retrying or upgrade your plan for higher limits."
+   ]
+  },
+  {
+   "path": "/status",
+   "erreurs": [
+    "Too many requests. You have reached your per-minute request limit. Please wait a few seconds before retrying or upgrade your plan for higher limits."
+   ]
+  }
+ ]
+}
