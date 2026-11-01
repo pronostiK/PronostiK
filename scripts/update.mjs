@@ -252,6 +252,10 @@ async function main() {
     }
   } catch (e) { oddsInfo.error = String(e.message || e).slice(0, 120); }
 
+  // Marchés manquants (pronostic figé avant l'ajout des marchés) : calculés à partir des buts attendus figés avant le match.
+  for (const p of predictions) if (p.p && Array.isArray(p.lam) && !p.markets) { const mk2 = marketsFromLambdas(p.lam[0], p.lam[1]); p.markets = {o15: r4(mk2.o15), o25: r4(mk2.o25), btts: r4(mk2.btts), ht: mk2.ht.map(r4), scores: mk2.scores.map(([s, v]) => [s, r4(v)])}; }
+  for (const p of predictions) if (p.markets && p.markets.btts == null && Array.isArray(p.lam)) p.markets.btts = r4(marketsFromLambdas(p.lam[0], p.lam[1]).btts);
+
   // --- 5. règlement
   for (const p of predictions) {
     if (p.res) continue;

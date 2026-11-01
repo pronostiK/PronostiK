@@ -225,7 +225,7 @@
       classement = `<div class="thead"><span>#</span><span>Équipe</span><span>Forme</span><span>J</span><span>Diff.</span><span>Pts</span></div>` + classement;
     }
     // --- Onglet Marchés : autres paris, avec leur niveau de fiabilité mesuré
-    let marches = '<p class="muted">Marchés disponibles pour les prochains pronostics.</p>';
+    let marches = '<p class="muted">Marchés indisponibles pour ce match.</p>';
     if (p.markets) {
       const M = p.markets, P = v => Math.round(v * 100);
       const fiab = (lvl, txt) => `<span class="fiab ${lvl}" title="${esc(txt)}">${lvl === 'ok' ? 'Fiabilité bonne' : lvl === 'low' ? 'Fiabilité faible' : 'Fiabilité moyenne'}</span>`;
