@@ -1,11 +1,5 @@
-Historique Championship…
-Historique Ligue 2…
-écrit scorecard.json
 écrit shadow.json
-écrit standings.json
-écrit resume.json
-écrit history.json
 écrit predictions.json
 écrit state.json
 écrit meta.json
-OK · 118 pronostic(s) en attente · 18 réglé(s)
+OK · 121 pronostic(s) en attente · 19 réglé(s)

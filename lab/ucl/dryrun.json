@@ -58,6 +58,11 @@
     "code": "CL",
     "name": "Ligue des champions",
     "emblem": "https://crests.football-data.org/CL.png"
+   },
+   {
+    "code": "NL",
+    "name": "Ligue des nations",
+    "emblem": null
    }
   ]
  },
