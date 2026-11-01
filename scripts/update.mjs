@@ -158,6 +158,32 @@ async function main() {
   // --- 4. pronostics des matchs à venir
   const lastFive = (lg, team, before) => history.filter(m => m.lg === lg && m.date < before && (m.home === team || m.away === team)).slice(-5).reverse()
     .map(m => m.home === team ? {d: m.date, o: m.away, v: 'D', f: m.hg, a: m.ag} : {d: m.date, o: m.home, v: 'E', f: m.ag, a: m.hg});
+  // Statistiques de la saison en cours (1re division, matchs joués AVANT le match) : classement, bilans, face-à-face.
+  const matchStats = (lg, home, away, before) => {
+    const S = history.filter(m => m.lg === lg && m.division === 'L1' && m.date >= seasonStart && m.date < before);
+    const tab = {};
+    const row = t => tab[t] || (tab[t] = {p: 0, pts: 0, gf: 0, ga: 0});
+    for (const m of S) {
+      const h = row(m.home), a = row(m.away);
+      h.p++; a.p++; h.gf += m.hg; h.ga += m.ag; a.gf += m.ag; a.ga += m.hg;
+      if (m.hg > m.ag) h.pts += 3; else if (m.hg < m.ag) a.pts += 3; else { h.pts++; a.pts++; }
+    }
+    const order = Object.entries(tab).sort((x, y) => y[1].pts - x[1].pts || (y[1].gf - y[1].ga) - (x[1].gf - x[1].ga) || y[1].gf - x[1].gf).map(([t]) => t);
+    const sum = (list, team) => {
+      const o = {p: list.length, w: 0, d: 0, l: 0, gf: 0, ga: 0, cs: 0, btts: 0, o25: 0};
+      for (const m of list) {
+        const f = m.home === team ? m.hg : m.ag, a = m.home === team ? m.ag : m.hg;
+        o.gf += f; o.ga += a; if (f > a) o.w++; else if (f < a) o.l++; else o.d++;
+        if (a === 0) o.cs++; if (m.hg > 0 && m.ag > 0) o.btts++; if (m.hg + m.ag > 2) o.o25++;
+      }
+      return o;
+    };
+    const team = (t, venue) => ({rang: order.indexOf(t) + 1 || null, pts: tab[t]?.pts ?? 0,
+      tout: sum(S.filter(m => m.home === t || m.away === t), t), lieu: sum(S.filter(m => venue === 'dom' ? m.home === t : m.away === t), t)});
+    const h2h = history.filter(m => m.lg === lg && m.date < before && ((m.home === home && m.away === away) || (m.home === away && m.away === home)))
+      .slice(-5).reverse().map(m => ({d: m.date, h: m.home, a: m.away, hg: m.hg, ag: m.ag}));
+    return {equipes: order.length, dom: team(home, 'dom'), ext: team(away, 'ext'), h2h};
+  };
   const seasonCount = (lg, team, before) => history.filter(m => m.lg === lg && m.division === 'L1' && m.date >= seasonStart && m.date < before && (m.home === team || m.away === team)).length;
   const byId = new Map(predictions.map(p => [p.id, p]));
   for (const lg of LEAGUES) {
@@ -174,6 +200,7 @@ async function main() {
       if (!home || !away) entry.err = 'Équipe non reconnue dans l’historique.';
       else {
         entry.form = {h: lastFive(lg.code, home, date), a: lastFive(lg.code, away, date)};
+        entry.stats = matchStats(lg.code, home, away, date);
         try {
           const x = predictMatch(lg.code, home, away, date);
           entry.p = x.p.map(r4); entry.lam = x.lam.map(r4); entry.score = x.score; entry.model = x.model;
