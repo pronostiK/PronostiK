@@ -336,6 +336,34 @@ async function main() {
     writeIfChanged('shadow.json', shadow);
   }
 
+  // --- 6c. classements de la saison en cours (1re division), avec les blasons connus par l'API
+  {
+    const standings = {};
+    for (const lg of LEAGUES) {
+      const crest = {};
+      for (const m of apiByLeague[lg.code] || []) for (const t of [m.homeTeam, m.awayTeam]) {
+        if (!t || !t.crest) continue;
+        const n = resolveName(t.name || t.shortName, known[lg.code], ALIASES[lg.code] || {}, lg.code === 'FL1');
+        if (n) crest[n] = t.crest;
+      }
+      const S = history.filter(m => m.lg === lg.code && m.division === 'L1' && m.date >= seasonStart).sort((a, b) => a.date.localeCompare(b.date));
+      if (!S.length) continue;
+      const T = {};
+      const row = t => T[t] || (T[t] = {t, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0, form: []});
+      for (const m of S) {
+        const h = row(m.home), a = row(m.away);
+        h.p++; a.p++; h.gf += m.hg; h.ga += m.ag; a.gf += m.ag; a.ga += m.hg;
+        const r = m.hg > m.ag ? ['V', 'D'] : m.hg < m.ag ? ['D', 'V'] : ['N', 'N'];
+        h.form.push(r[0]); a.form.push(r[1]);
+        if (r[0] === 'V') { h.w++; h.pts += 3; a.l++; } else if (r[1] === 'V') { a.w++; a.pts += 3; h.l++; } else { h.d++; a.d++; h.pts++; a.pts++; }
+      }
+      const rows = Object.values(T).sort((x, y) => y.pts - x.pts || (y.gf - y.ga) - (x.gf - x.ga) || y.gf - x.gf || x.t.localeCompare(y.t))
+        .map((r, i) => ({rang: i + 1, ...r, form: r.form.slice(-5).join(''), crest: crest[r.t] || null}));
+      standings[lg.code] = {saison: season, maj: S[S.length - 1].date, rows};
+    }
+    writeIfChanged('standings.json', standings);
+  }
+
   writeIfChanged('history.json', history);
   writeIfChanged('predictions.json', predictions);
   writeIfChanged('state.json', state);

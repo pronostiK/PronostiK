@@ -209,7 +209,21 @@
         <div class="h2h">${L.map(m => `<div class="hrow"><small>${esc(new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'short', year: 'numeric'}).format(new Date(m.d + 'T12:00:00Z')))}</small><span>${esc(m.h)}</span><b>${m.hg} – ${m.ag}</b><span>${esc(m.a)}</span></div>`).join('')}</div>`;
     }
 
-    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['stats', ICON.chart + 'Stats', stats], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h]];
+    // --- Onglet Classement : championnat en cours, les deux équipes surlignées
+    let classement = '<p class="muted">Classement indisponible pour le moment.</p>';
+    const SD = cache && cache.stand && cache.stand[p.lg];
+    if (SD && SD.rows && SD.rows.length) {
+      const n = SD.rows.length, rel = {FL1: 2, PL: 3, BL1: 2, SA: 3, PD: 3}[p.lg] || 3;
+      const raw = {h: p.rawHome || p.home, a: p.rawAway || p.away};
+      classement = `<div class="table-lg">${SD.rows.map(r => {
+        const me = r.t === raw.h ? ' me-h' : r.t === raw.a ? ' me-a' : '', zone = r.rang <= 4 ? ' z-top' : r.rang > n - rel ? ' z-bot' : '';
+        return `<div class="trow${me}${zone}"><span class="tr">${r.rang}</span><span class="tt">${r.crest ? crestImg(r.crest, dn(r.t)) : mono(dn(r.t))}<b>${esc(dn(r.t))}</b></span><span class="tf">${(r.form || '').split('').map(c => `<i class="${c}"></i>`).join('')}</span><span class="tn">${r.p}</span><span class="tn">${r.gf - r.ga > 0 ? '+' : ''}${r.gf - r.ga}</span><span class="tp">${r.pts}</span></div>`;
+      }).join('')}</div>
+      <div class="tlegend"><span><i class="lz top"></i>Places européennes (indicatif)</span><span><i class="lz bot"></i>Relégation</span></div>
+      <p class="note">J : matchs joués · Diff. : différence de buts · pastilles : 5 derniers résultats. Calculé à partir des résultats connus du site.</p>`;
+      classement = `<div class="thead"><span>#</span><span>Équipe</span><span>Forme</span><span>J</span><span>Diff.</span><span>Pts</span></div>` + classement;
+    }
+    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h]];
     return `<article class="mpage card" style="--lg:${lgc}">
       <div class="head" style="cursor:default">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}</div>
       <div class="detail">
@@ -406,11 +420,11 @@
 
   async function refresh() {
     try {
-      const [raw, meta, sc] = await Promise.all([load('predictions.json'), load('meta.json').catch(() => null), load('scorecard.json').catch(() => null)]);
-      const preds = raw.map(p => ({...p, home: dn(p.home), away: dn(p.away), form: p.form ? {h: (p.form.h || []).map(m => ({...m, o: dn(m.o)})), a: (p.form.a || []).map(m => ({...m, o: dn(m.o)}))} : p.form,
+      const [raw, meta, sc, stand] = await Promise.all([load('predictions.json'), load('meta.json').catch(() => null), load('scorecard.json').catch(() => null), load('standings.json').catch(() => null)]);
+      const preds = raw.map(p => ({...p, rawHome: p.home, rawAway: p.away, home: dn(p.home), away: dn(p.away), form: p.form ? {h: (p.form.h || []).map(m => ({...m, o: dn(m.o)})), a: (p.form.a || []).map(m => ({...m, o: dn(m.o)}))} : p.form,
         stats: p.stats ? {...p.stats, h2h: (p.stats.h2h || []).map(m => ({...m, h: dn(m.h), a: dn(m.a)})), dom: p.stats.dom && {...p.stats.dom, matchs: (p.stats.dom.matchs || []).map(m => ({...m, o: dn(m.o)}))}, ext: p.stats.ext && {...p.stats.ext, matchs: (p.stats.ext.matchs || []).map(m => ({...m, o: dn(m.o)}))}} : p.stats}));
       const openIds = [...document.querySelectorAll('button.head[aria-expanded="true"]')].map(b => b.getAttribute('aria-controls'));
-      cache = {preds, meta, sc};
+      cache = {preds, meta, sc, stand};
       renderMatches(preds, meta);
       renderBilan(preds, sc);
       if (location.hash.startsWith('#match/')) renderMatchPage(decodeURIComponent(location.hash.slice(7)));
