@@ -106,9 +106,10 @@ export function uclPredict(rh, ra, neutral, P) {
 }
 
 // Championnats nationaux hors des 5 suivis (servent uniquement à l'Elo européen).
-export const EXTRA_MAIN = {POR: 'P1', NED: 'N1', BEL: 'B1', SCO: 'SC0', TUR: 'T1', GRE: 'G1'};
+export const EXTRA_MAIN = {BEL: 'B1', SCO: 'SC0', TUR: 'T1', GRE: 'G1'};
 export const EXTRA_NEW = {AUT: 'AUT', SUI: 'SWZ', DEN: 'DNK', NOR: 'NOR', SWE: 'SWE', POL: 'POL', ROU: 'ROU'};
-export const LG_COUNTRY = {FL1: 'FRA', PL: 'ENG', BL1: 'GER', SA: 'ITA', PD: 'ESP'};
+export const LG_COUNTRY = {FL1: 'FRA', PL: 'ENG', BL1: 'GER', SA: 'ITA', PD: 'ESP', PPL: 'POR', DED: 'NED'};
+export const EXTRA_VERSION = 2;   // 2 : Portugal et Pays-Bas viennent désormais de l'historique principal
 const splitCSV = l => { const o = []; let c = '', q = false; for (const ch of l) { if (ch === '"') q = !q; else if (ch === ',' && !q) { o.push(c); c = ''; } else c += ch; } o.push(c); return o.map(x => x.trim()); };
 const isoDate = d => { const m = String(d).match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/); if (!m) return null; let y = +m[3]; if (y < 100) y += 2000; return `${y}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`; };
 // Renvoie [date, pays, domicile, extérieur, buts dom, buts ext] pour les matchs joués à partir de « from ».

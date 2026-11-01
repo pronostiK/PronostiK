@@ -7,6 +7,8 @@ export const LEAGUES = [
   {code: 'BL1', name: 'Bundesliga', csv: ['D1', 'D2']},
   {code: 'SA', name: 'Serie A', csv: ['I1', 'I2']},
   {code: 'PD', name: 'La Liga', csv: ['SP1', 'SP2']},
+  {code: 'PPL', name: 'Liga Portugal', csv: ['P1']},     // pas de 2e division dans les fichiers : un promu passe par le calcul simple
+  {code: 'DED', name: 'Eredivisie', csv: ['N1']},
 ];
 // Codes CSV des deuxièmes divisions (servent d'historique pour les équipes promues).
 export const SECOND_DIVISIONS = new Set(['F2', 'E1', 'D2', 'I2', 'SP2']);
@@ -36,4 +38,18 @@ export const ALIASES = {
     'real betis balompie': 'Betis', 'rc celta de vigo': 'Celta', 'deportivo alaves': 'Alaves', 'ud las palmas': 'Las Palmas', 'villarreal cf': 'Villarreal',
   },
   FL1: {},
+  PPL: {
+    'sporting clube de portugal': 'Sp Lisbon', 'sporting cp': 'Sp Lisbon', 'sport lisboa e benfica': 'Benfica', 'sl benfica': 'Benfica', 'fc porto': 'Porto',
+    'sporting clube de braga': 'Sp Braga', 'sc braga': 'Sp Braga', 'vitoria sc': 'Guimaraes', 'vitoria guimaraes': 'Guimaraes', 'fc famalicao': 'Famalicao',
+    'gil vicente fc': 'Gil Vicente', 'rio ave fc': 'Rio Ave', 'cd santa clara': 'Santa Clara', 'casa pia ac': 'Casa Pia', 'moreirense fc': 'Moreirense',
+    'fc arouca': 'Arouca', 'gd estoril praia': 'Estoril', 'estoril praia': 'Estoril', 'cd nacional': 'Nacional', 'avs futebol sad': 'AVS', 'afs': 'AVS',
+    'cf estrela da amadora': 'Estrela', 'fc alverca': 'Alverca', 'cd tondela': 'Tondela', 'boavista fc': 'Boavista', 'sc farense': 'Farense',
+  },
+  DED: {
+    'psv': 'PSV Eindhoven', 'psv eindhoven': 'PSV Eindhoven', 'afc ajax': 'Ajax', 'feyenoord rotterdam': 'Feyenoord', 'az': 'AZ Alkmaar', 'az alkmaar': 'AZ Alkmaar',
+    'fc twente 65': 'Twente', 'fc twente': 'Twente', 'fc utrecht': 'Utrecht', 'sc heerenveen': 'Heerenveen', 'nec': 'Nijmegen', 'nec nijmegen': 'Nijmegen',
+    'go ahead eagles': 'Go Ahead Eagles', 'sparta rotterdam': 'Sparta Rotterdam', 'fc groningen': 'Groningen', 'pec zwolle': 'Zwolle', 'heracles almelo': 'Heracles',
+    'nac breda': 'NAC Breda', 'fortuna sittard': 'For Sittard', 'sbv excelsior': 'Excelsior', 'excelsior': 'Excelsior', 'fc volendam': 'Volendam', 'sc telstar': 'Telstar', 'telstar': 'Telstar',
+    'willem ii': 'Willem II', 'rkc waalwijk': 'Waalwijk', 'almere city fc': 'Almere City',
+  },
 };

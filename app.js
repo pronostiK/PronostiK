@@ -10,8 +10,8 @@
   const fmtStamp = new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ});
   const dayKey = d => new Intl.DateTimeFormat('en-CA', {timeZone: TZ}).format(d);
 
-  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', CL: 'Ligue des champions'};
-  let LG_ORDER = ['FL1', 'PL', 'BL1', 'SA', 'PD'];
+  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', PPL: 'Liga Portugal', DED: 'Eredivisie', CL: 'Ligue des champions'};
+  let LG_ORDER = ['FL1', 'PL', 'BL1', 'SA', 'PD', 'PPL', 'DED'];
   const LG_EMBLEM = {};
   const emb = (c, cls = 'lg-emb') => LG_EMBLEM[c] && /^https:\/\//.test(LG_EMBLEM[c]) ? `<span class="${cls}"><img src="${esc(LG_EMBLEM[c])}" alt="" loading="lazy"></span>` : '';
   let filter = 'all';
@@ -64,7 +64,7 @@
     chat: I('<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'),
   };
 
-  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b', CL: '#38bdf8'};
+  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b', PPL: '#10b981', DED: '#fb923c', CL: '#38bdf8'};
   const initials = n => String(n).replace(/\b(FC|AFC|CF|SC|AC|AS|US|SS|RC|CD|UD|SV|VfB|VfL|1\.)\b/gi, '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?';
   const hue = n => { let h = 0; for (const c of String(n)) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
   const mono = n => `<span class="mono" style="background:linear-gradient(145deg,hsl(${hue(n)} 62% 48%),hsl(${(hue(n) + 40) % 360} 62% 34%))" aria-hidden="true">${esc(initials(n))}</span>`;
@@ -215,7 +215,7 @@
     let classement = '<p class="muted">Classement indisponible pour le moment.</p>';
     const SD = cache && cache.stand && cache.stand[p.lg];
     if (SD && SD.rows && SD.rows.length) {
-      const n = SD.rows.length, rel = isCL ? n - 24 : ({FL1: 2, PL: 3, BL1: 2, SA: 3, PD: 3}[p.lg] || 3), topN = isCL ? 8 : 4;
+      const n = SD.rows.length, rel = isCL ? n - 24 : ({FL1: 2, PL: 3, BL1: 2, SA: 3, PD: 3, PPL: 2, DED: 2}[p.lg] || 3), topN = isCL ? 8 : 4;
       const raw = {h: p.rawHome || p.home, a: p.rawAway || p.away};
       const isMe = (r, nm) => r.t === nm || (isCL && r.crest && ((nm === raw.h && r.crest === (p.crest || [])[0]) || (nm === raw.a && r.crest === (p.crest || [])[1])));
       classement = `<div class="table-lg">${SD.rows.map(r => {

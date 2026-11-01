@@ -11,7 +11,7 @@ import {createModel, createRatings, createElo, hybridProbs, marketsFromLambdas} 
 import {footballDataDate, resolveName} from '../lib.mjs';
 import {LEAGUES, ALIASES} from '../leagues.mjs';
 import {parseCSV, parseFixtures} from '../csv.mjs';
-import {runEuroElo, uclPredict, makeResolver, parseDomesticCSV, countryOfArea, EXTRA_MAIN, EXTRA_NEW, LG_COUNTRY} from './ucl-lib.mjs';
+import {runEuroElo, uclPredict, makeResolver, parseDomesticCSV, countryOfArea, EXTRA_MAIN, EXTRA_NEW, LG_COUNTRY, EXTRA_VERSION} from './ucl-lib.mjs';
 
 const API = process.env.FD_API_BASE || 'https://api.football-data.org/v4';
 const CSV_BASE = process.env.CSV_BASE || 'https://www.football-data.co.uk';
@@ -262,7 +262,7 @@ async function main() {
     }
     // Championnats hors des 5 suivis (une fois par semaine)
     let extra = readJSON('ucl-domestic.json', null);
-    if (!extra || extra.from !== from || (NOW - new Date(extra.at || 0)) > CSV_REFRESH_DAYS * 86400000) {
+    if (!extra || extra.from !== from || extra.v !== EXTRA_VERSION || (NOW - new Date(extra.at || 0)) > CSV_REFRESH_DAYS * 86400000) {
       const rows = [], code = `${String(season).slice(2)}${String(season + 1).slice(2)}`, prevCode = `${String(season - 1).slice(2)}${String(season).slice(2)}`;
       const got = {};
       for (const [c, f] of Object.entries(EXTRA_MAIN)) for (const sc of [prevCode, code]) {
@@ -271,7 +271,7 @@ async function main() {
       for (const [c, f] of Object.entries(EXTRA_NEW)) {
         try { const r = await fetch(`${CSV_BASE}/new/${f}.csv`, {signal: AbortSignal.timeout(20000)}); if (r.ok) { const x = parseDomesticCSV(await r.text(), c, 'new', from); rows.push(...x); got[c] = x.length; } } catch {}
       }
-      if (rows.length || !extra) { extra = {from, at: NOW.toISOString(), got, rows}; writeIfChanged('ucl-domestic.json', extra); }
+      if (rows.length || !extra) { extra = {from, v: EXTRA_VERSION, at: NOW.toISOString(), got, rows}; writeIfChanged('ucl-domestic.json', extra); }
     }
     // Clubs connus par pays (graine + championnats) pour retrouver les noms de football-data.org
     const knownBy = {};
