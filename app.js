@@ -31,6 +31,35 @@
   }
   const pc = v => Math.round(v * 100) + ' %';
 
+
+  // Icônes (traits simples, couleur du texte)
+  const I = d => `<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+  const ICON = {
+    target: I('<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>'),
+    ball: I('<circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 4.5h-5L8 10z"/><path d="M12 3v4M21 10l-5 0M3 10l5 0M8.5 19.5l1-5M15.5 19.5l-1-5"/>'),
+    score: I('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14M7 10v4M17 10v4"/>'),
+    check: I('<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/>'),
+    alert: I('<path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/>'),
+    clock: I('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
+    shield: I('<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>'),
+    scale: I('<path d="M12 4v16M5 20h14M6 8h12M6 8l-3 6h6zM18 8l-3 6h6z"/>'),
+    coin: I('<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.7 0-3 1-3 2.2 0 2.8 6 1.4 6 4.3 0 1.2-1.3 2.2-3 2.2-1.1 0-2.1-.5-2.6-1.5M12 6v2M12 16.5v1.5"/>'),
+    up: I('<path d="M4 17l6-6 4 4 6-7"/><path d="M15 8h5v5"/>'),
+    down: I('<path d="M4 7l6 6 4-4 6 7"/><path d="M15 16h5v-5"/>'),
+    both: I('<circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/>'),
+    plus: I('<circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/>'),
+    half1: I('<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/>'),
+    half2: I('<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>'),
+    flag: I('<path d="M6 21V4"/><path d="M6 4l11 4-11 4"/>'),
+    card: I('<rect x="7" y="3" width="10" height="16" rx="2" fill="#f6c76b" stroke="#f6c76b"/>'),
+    cardr: I('<rect x="7" y="3" width="10" height="16" rx="2" fill="#ef4444" stroke="#ef4444"/>'),
+    trophy: I('<path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8"/>'),
+    home: I('<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>'),
+    chart: I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'),
+    vs: I('<path d="M4 8h14l-3-3M20 16H6l3 3"/>'),
+    info: I('<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.5"/>'),
+  };
+
   const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b'};
   const initials = n => String(n).replace(/\b(FC|AFC|CF|SC|AC|AS|US|SS|RC|CD|UD|SV|VfB|VfL|1\.)\b/gi, '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?';
   const hue = n => { let h = 0; for (const c of String(n)) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
@@ -81,80 +110,99 @@
     const mkline = mkp ? `<p class="mkline">Cotes des bookmakers : <b>${mkp[0]} %</b> · <b>${mkp[1]} %</b> · <b>${mkp[2]} %</b></p>` : '';
     const sum = `<p class="read"><span class="tag ${read[1]}">${read[0]}</span> ${pcts[top]} % pour ${esc(who)}</p>`;
 
-    // --- Onglet Analyse : lecture du match générée à partir des chiffres (aucune information inventée)
-    const fav = top === 0 ? p.home : top === 2 ? p.away : null;
-    const recap = arr => { const r = (arr || []).map(m => m.f > m.a ? 'V' : m.f === m.a ? 'N' : 'D'); return r.length ? `${r.filter(x => x === 'V').length} victoire${r.filter(x => x === 'V').length > 1 ? 's' : ''}, ${r.filter(x => x === 'N').length} nul${r.filter(x => x === 'N').length > 1 ? 's' : ''} et ${r.filter(x => x === 'D').length} défaite${r.filter(x => x === 'D').length > 1 ? 's' : ''} sur les ${r.length} derniers matchs` : null; };
-    const txt = [];
-    txt.push(fav ? `${esc(fav)} est ${pcts[top] >= 60 ? 'nettement favori' : pcts[top] >= 45 ? 'légèrement favori' : 'à peine favori'} avec ${pcts[top]} % de chances de victoire, contre ${pcts[top === 0 ? 2 : 0]} % pour ${esc(top === 0 ? p.away : p.home)} et ${pcts[1]} % pour le match nul.` : `Le match nul est l’issue la plus probable (${pcts[1]} %), devant ${esc(p.home)} (${pcts[0]} %) et ${esc(p.away)} (${pcts[2]} %).`);
-    txt.push(`Le modèle attend ${fr(p.lam[0], 1)} but${p.lam[0] >= 1.5 ? 's' : ''} pour ${esc(p.home)} et ${fr(p.lam[1], 1)} pour ${esc(p.away)} ; le score le plus probable est ${esc(p.score)}.`);
-    if (st && st.dom.rang && st.ext.rang) txt.push(`Au classement, ${esc(p.home)} est ${st.dom.rang}${st.dom.rang === 1 ? 'er' : 'e'} (${st.dom.pts} pts) et ${esc(p.away)} ${st.ext.rang}${st.ext.rang === 1 ? 'er' : 'e'} (${st.ext.pts} pts).`);
-    const fh = recap(p.form && p.form.h), fa = recap(p.form && p.form.a);
-    if (fh && fa) txt.push(`Forme : ${esc(p.home)} compte ${fh} ; ${esc(p.away)} compte ${fa}.`);
-    if (mkp) { const d = Math.max(...[0, 1, 2].map(k => Math.abs(pcts[k] - mkp[k]))); txt.push(d <= 5 ? 'Les bookmakers voient le match de la même façon (écart de 5 points au plus).' : `Les bookmakers voient le match différemment (jusqu’à ${d} points d’écart) : en cas de désaccord, ils ont souvent une information que le modèle n’a pas, comme une blessure ou une composition.`); }
-    txt.push('Le modèle ne connaît ni les compositions ni les blessures : un favori peut perdre.');
-    const dc = [['1N', p.p[0] + p.p[1], `${p.home} ou nul`], ['12', p.p[0] + p.p[2], 'Pas de nul'], ['N2', p.p[1] + p.p[2], `${p.away} ou nul`]]
-      .map(([k, v, s2]) => `<div><small>${k} · ${esc(s2)}</small><strong>${pc(v)}</strong></div>`).join('');
-    const analyse = `<p class="lecture">${txt.join(' ')}</p>
-      <h3>Double chance</h3><div class="kv">${dc}</div>
-      ${mkp ? `<h3>Modèle et bookmakers</h3><div class="kv">${[['1 · ' + p.home, 0], ['N · Nul', 1], ['2 · ' + p.away, 2]].map(([l, k]) => { const d = pcts[k] - mkp[k]; return `<div><small>${esc(l)}</small><strong>${pcts[k]} %</strong><small>bookmakers ${mkp[k]} % · ${d === 0 ? 'identique' : (d > 0 ? '+' : '−') + Math.abs(d) + ' pt'}</small></div>`; }).join('')}</div>` : ''}
-      <h3>Cote équivalente</h3><div class="kv">${[['1 · ' + p.home, p.p[0]], ['N · Nul', p.p[1]], ['2 · ' + p.away, p.p[2]]].map(([l, v]) => `<div><small>${esc(l)}</small><strong>${fr(1 / v, 2)}</strong></div>`).join('')}</div>
-      <p class="note" style="margin-top:8px">Cote qui correspond exactement à la probabilité annoncée, sans marge. Information statistique, pas un conseil de pari.</p>
-      <h3>Buts attendus</h3><div class="kv"><div><small>${esc(p.home)}</small><strong>${fr(p.lam[0], 1)}</strong></div><div><small>${esc(p.away)}</small><strong>${fr(p.lam[1], 1)}</strong></div><div><small>Score le plus probable</small><strong>${esc(p.score)}</strong></div></div>`;
+    // --- Onglet Analyse : cartes visuelles
+    const fav = top === 0 ? p.home : top === 2 ? p.away : 'Match nul';
+    const agreeD = mkp ? Math.max(...[0, 1, 2].map(k => Math.abs(pcts[k] - mkp[k]))) : null;
+    const ins = (ic, lab, val, sub, cls = '') => `<div class="ins ${cls}"><span class="ic">${ICON[ic]}</span><small>${lab}</small><b>${val}</b>${sub ? `<em>${sub}</em>` : ''}</div>`;
+    const ring = (lab, v) => `<div class="ring" style="--v:${Math.round(v * 100)}"><div class="ring-in"><b>${Math.round(v * 100)}%</b></div><small>${esc(lab)}</small></div>`;
+    const analyse = `<div class="insights">
+        ${ins('target', 'Favori', esc(fav), `${pcts[top]} %`)}
+        ${ins('ball', 'Buts attendus', `${fr(p.lam[0], 1)} – ${fr(p.lam[1], 1)}`, 'domicile – extérieur')}
+        ${ins('score', 'Score probable', esc(p.score), '')}
+        ${mkp ? ins(agreeD <= 5 ? 'check' : 'alert', 'Bookmakers', agreeD <= 5 ? 'D’accord' : 'Désaccord', `écart max ${agreeD} pts`, agreeD <= 5 ? 'ok' : 'warn') : ins('clock', 'Bookmakers', '—', 'cotes pas encore publiées')}
+      </div>
+      <h3>${ICON.shield} Double chance</h3>
+      <div class="rings">${ring(p.home + ' ou nul', p.p[0] + p.p[1])}${ring('Pas de nul', p.p[0] + p.p[2])}${ring(p.away + ' ou nul', p.p[1] + p.p[2])}</div>
+      ${mkp ? `<h3>${ICON.scale} Modèle et bookmakers</h3><div class="vs3">${[0, 1, 2].map(k => `<div><small>${['1', 'N', '2'][k]}</small><div class="mini2"><span style="width:${pcts[k]}%"></span></div><div class="mini2 mk"><span style="width:${mkp[k]}%"></span></div><em>${pcts[k]} % · ${mkp[k]} %</em></div>`).join('')}</div><p class="legend"><i class="lg-a"></i>Notre modèle <i class="lg-b"></i>Bookmakers</p>` : ''}
+      <h3>${ICON.coin} Cote équivalente</h3>
+      <div class="odds3">${[['1', p.p[0]], ['N', p.p[1]], ['2', p.p[2]]].map(([l, v]) => `<div><small>${l}</small><b>${fr(1 / v, 2)}</b></div>`).join('')}</div>`;
 
-    // --- Onglet Statistiques : saison en cours, matchs déjà joués
+    // --- Onglet Statistiques : barres en duel
     let stats = '<p class="muted">Statistiques indisponibles pour ce match.</p>';
     if (st && st.dom.tout.p && st.ext.tout.p) {
-      const H = st.dom, A = st.ext, per = (x, n) => n ? Math.round(100 * x / n) : 0, avg = (x, n) => n ? fr(x / n, 1) : '—';
-      const line = (lab, a, b, better) => { const na = parseFloat(String(a).replace(',', '.')), nb = parseFloat(String(b).replace(',', '.')); const wa = better === 'high' ? na > nb : better === 'low' ? na < nb : false, wb = better === 'high' ? nb > na : better === 'low' ? nb < na : false; return `<div class="cmp"><b class="${wa ? 'win' : ''}">${a}</b><span>${lab}</span><b class="${wb ? 'win' : ''}">${b}</b></div>`; };
-      stats = `<div class="cmp-head"><span>${esc(p.home)}</span><span></span><span>${esc(p.away)}</span></div>
-        ${line('Classement', H.rang ? H.rang + (H.rang === 1 ? 'er' : 'e') : '—', A.rang ? A.rang + (A.rang === 1 ? 'er' : 'e') : '—', '')}
-        ${line('Points', H.pts, A.pts, 'high')}
-        ${line('Matchs joués', H.tout.p, A.tout.p, '')}
-        ${line('Victoires / nuls / défaites', `${H.tout.w}-${H.tout.d}-${H.tout.l}`, `${A.tout.w}-${A.tout.d}-${A.tout.l}`, '')}
-        ${line('Buts marqués par match', avg(H.tout.gf, H.tout.p), avg(A.tout.gf, A.tout.p), 'high')}
-        ${line('Buts encaissés par match', avg(H.tout.ga, H.tout.p), avg(A.tout.ga, A.tout.p), 'low')}
-        ${line('Matchs sans encaisser', per(H.tout.cs, H.tout.p) + ' %', per(A.tout.cs, A.tout.p) + ' %', 'high')}
-        ${line('Les deux équipes marquent', per(H.tout.btts, H.tout.p) + ' %', per(A.tout.btts, A.tout.p) + ' %', '')}
-        ${line('Plus de 2,5 buts', per(H.tout.o25, H.tout.p) + ' %', per(A.tout.o25, A.tout.p) + ' %', '')}
-        ${H.tout.nc && A.tout.nc ? `<h3>Corners</h3>
-        ${line('Corners obtenus par match', avg(H.tout.cf, H.tout.nc), avg(A.tout.cf, A.tout.nc), 'high')}
-        ${line('Corners concédés par match', avg(H.tout.ca, H.tout.nc), avg(A.tout.ca, A.tout.nc), 'low')}` : ''}
-        ${H.tout.nk && A.tout.nk ? `<h3>Cartons</h3>
-        ${line('Cartons jaunes par match', avg(H.tout.yc, H.tout.nk), avg(A.tout.yc, A.tout.nk), 'low')}
-        ${line('Cartons rouges (saison)', H.tout.rc, A.tout.rc, 'low')}` : ''}
-        ${H.tout.nh && A.tout.nh ? `<h3>Mi-temps</h3>
-        ${line('Buts marqués en 1re mi-temps', avg(H.tout.h1f, H.tout.nh), avg(A.tout.h1f, A.tout.nh), 'high')}
-        ${line('Buts marqués en 2e mi-temps', avg(H.tout.h2f, H.tout.nh), avg(A.tout.h2f, A.tout.nh), 'high')}
-        ${line('Buts encaissés en 1re mi-temps', avg(H.tout.h1a, H.tout.nh), avg(A.tout.h1a, A.tout.nh), 'low')}
-        ${line('Buts encaissés en 2e mi-temps', avg(H.tout.h2a, H.tout.nh), avg(A.tout.h2a, A.tout.nh), 'low')}` : ''}
-        <h3>À domicile pour ${esc(p.home)}, à l’extérieur pour ${esc(p.away)}</h3>
-        ${line('Matchs', H.lieu.p, A.lieu.p, '')}
-        ${line('Victoires / nuls / défaites', `${H.lieu.w}-${H.lieu.d}-${H.lieu.l}`, `${A.lieu.w}-${A.lieu.d}-${A.lieu.l}`, '')}
-        ${line('Buts marqués par match', avg(H.lieu.gf, H.lieu.p), avg(A.lieu.gf, A.lieu.p), 'high')}
-        ${line('Buts encaissés par match', avg(H.lieu.ga, H.lieu.p), avg(A.lieu.ga, A.lieu.p), 'low')}
-        <p class="note">Saison en cours, championnat uniquement. Moyennes et pourcentages observés sur les matchs déjà joués (ce ne sont pas des prédictions). Corners, cartons et mi-temps : sur les matchs dont le détail est disponible (mis à jour chaque semaine).</p>`;
+      const H = st.dom, A = st.ext, per = (x, n) => n ? Math.round(100 * x / n) : 0, av = (x, n) => n ? x / n : null;
+      const duel = (ic, lab, a, b, fmt, better) => {
+        if (a == null || b == null) return '';
+        const t = a + b, wa = t ? 100 * a / t : 50;
+        const wA = better === 'high' ? a > b : better === 'low' ? a < b : false, wB = better === 'high' ? b > a : better === 'low' ? b < a : false;
+        return `<div class="duel"><b class="${wA ? 'win' : ''}">${fmt(a)}</b><span class="dl">${ICON[ic]}${lab}</span><b class="r ${wB ? 'win' : ''}">${fmt(b)}</b>
+          <div class="dbar"><span class="da${wA ? ' win' : ''}" style="width:${wa}%"></span><span class="db${wB ? ' win' : ''}" style="width:${100 - wa}%"></span></div></div>`;
+      };
+      const f1 = v => fr(v, 1), pct = v => v + ' %', int = v => String(v);
+      const rank = r => r ? `${r}<sup>${r === 1 ? 'er' : 'e'}</sup>` : '—';
+      const both = (f) => (f(H) + f(A)) / 2;
+      const tile = (ic, val, lab, cls) => `<div class="tile ${cls}"><b>${val}</b><span class="tl">${lab}${ICON[ic]}</span></div>`;
+      const apercu = `<h3>${ICON.chart} Aperçu des deux équipes</h3><div class="tiles">
+        ${tile('plus', Math.round(both(T => per(T.tout.o25, T.tout.p))) + '%', '+2,5 buts', 't1')}
+        ${tile('plus', Math.round(both(T => per(T.tout.o15 || 0, T.tout.p))) + '%', '+1,5 but', 't2')}
+        ${tile('both', Math.round(both(T => per(T.tout.btts, T.tout.p))) + '%', 'Les 2 marquent', 't3')}
+        ${tile('ball', fr(both(T => (T.tout.gf + T.tout.ga) / T.tout.p), 1), 'Buts / match', 't4')}
+        ${H.tout.nc && A.tout.nc ? tile('flag', fr(both(T => (T.tout.cf + T.tout.ca) / T.tout.nc), 1), 'Corners / match', 't5') : ''}
+        ${H.tout.nk && A.tout.nk ? tile('card', fr(H.tout.yc / H.tout.nk + A.tout.yc / A.tout.nk, 1), 'Cartons / match', 't6') : ''}
+      </div><p class="note">Moyenne des matchs de la saison des deux équipes (observé, pas une prédiction).</p>`;
+      stats = `${apercu}<div class="duel-head"><span>${crestImg((p.crest || [])[0], p.home)}${esc(p.home)}</span><span>${esc(p.away)}${crestImg((p.crest || [])[1], p.away)}</span></div>
+        <div class="ranks"><div><b>${rank(H.rang)}</b><small>${H.pts} pts</small></div><span>${ICON.trophy}Classement</span><div><b>${rank(A.rang)}</b><small>${A.pts} pts</small></div></div>
+        <div class="wdl"><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${H.tout[k]}</span>`).join('')}</div><span>V · N · D</span><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${A.tout[k]}</span>`).join('')}</div></div>
+        <h3>${ICON.ball} Buts</h3>
+        ${duel('up', 'Marqués / match', av(H.tout.gf, H.tout.p), av(A.tout.gf, A.tout.p), f1, 'high')}
+        ${duel('down', 'Encaissés / match', av(H.tout.ga, H.tout.p), av(A.tout.ga, A.tout.p), f1, 'low')}
+        ${duel('shield', 'Sans encaisser', per(H.tout.cs, H.tout.p), per(A.tout.cs, A.tout.p), pct, 'high')}
+        ${duel('both', 'Les 2 marquent', per(H.tout.btts, H.tout.p), per(A.tout.btts, A.tout.p), pct, '')}
+        ${duel('plus', '+2,5 buts', per(H.tout.o25, H.tout.p), per(A.tout.o25, A.tout.p), pct, '')}
+        ${H.tout.nh && A.tout.nh ? `<h3>${ICON.clock} Mi-temps</h3>
+        ${duel('half1', 'Marqués 1re MT', av(H.tout.h1f, H.tout.nh), av(A.tout.h1f, A.tout.nh), f1, 'high')}
+        ${duel('half2', 'Marqués 2e MT', av(H.tout.h2f, H.tout.nh), av(A.tout.h2f, A.tout.nh), f1, 'high')}
+        ${duel('half1', 'Encaissés 1re MT', av(H.tout.h1a, H.tout.nh), av(A.tout.h1a, A.tout.nh), f1, 'low')}
+        ${duel('half2', 'Encaissés 2e MT', av(H.tout.h2a, H.tout.nh), av(A.tout.h2a, A.tout.nh), f1, 'low')}` : ''}
+        ${H.tout.nc && A.tout.nc ? `<h3>${ICON.flag} Corners</h3>
+        ${duel('flag', 'Obtenus / match', av(H.tout.cf, H.tout.nc), av(A.tout.cf, A.tout.nc), f1, 'high')}
+        ${duel('flag', 'Concédés / match', av(H.tout.ca, H.tout.nc), av(A.tout.ca, A.tout.nc), f1, 'low')}` : ''}
+        ${H.tout.nk && A.tout.nk ? `<h3>${ICON.card} Cartons</h3>
+        ${duel('card', 'Jaunes / match', av(H.tout.yc, H.tout.nk), av(A.tout.yc, A.tout.nk), f1, 'low')}
+        ${duel('cardr', 'Rouges (saison)', H.tout.rc, A.tout.rc, int, 'low')}` : ''}
+        <h3>${ICON.home} ${esc(p.home)} à domicile · ${esc(p.away)} à l’extérieur</h3>
+        <div class="wdl"><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${H.lieu[k]}</span>`).join('')}</div><span>V · N · D</span><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${A.lieu[k]}</span>`).join('')}</div></div>
+        ${duel('up', 'Marqués / match', av(H.lieu.gf, H.lieu.p), av(A.lieu.gf, A.lieu.p), f1, 'high')}
+        ${duel('down', 'Encaissés / match', av(H.lieu.ga, H.lieu.p), av(A.lieu.ga, A.lieu.p), f1, 'low')}
+        <p class="note">Saison en cours, championnat. Valeurs observées, pas des prédictions.</p>`;
     }
 
-    // --- Onglet Forme : cinq derniers matchs
-    const form = (name, arr) => {
-      const rows = (arr || []).map(m => {
-        const r = m.f > m.a ? 'V' : m.f === m.a ? 'N' : 'D';
-        return `<div class="form-row"><span class="dot ${r}" title="${r === 'V' ? 'Victoire' : r === 'N' ? 'Nul' : 'Défaite'}">${r}</span><span>${m.v === 'D' ? 'contre' : 'à'} ${esc(m.o)} ${m.f}–${m.a}</span></div>`;
-      }).join('') || '<div class="form-row">Pas de données</div>';
-      return `<div class="form-list"><p>${esc(name)}</p>${rows}</div>`;
+    // --- Onglet Forme : pastilles
+    const formRow = (name, url, arr) => {
+      const r = (arr || []).slice().reverse();
+      return `<div class="frow"><div class="fteam">${crestImg(url, name)}<b>${esc(name)}</b></div><div class="fdots">${r.map(m => { const k = m.f > m.a ? 'V' : m.f === m.a ? 'N' : 'D'; return `<div class="fd"><span class="dot ${k}" title="${m.v === 'D' ? 'contre' : 'à'} ${esc(m.o)}">${k}</span><small>${m.f}-${m.a}</small></div>`; }).join('') || '<small class="muted">Pas de données</small>'}</div></div>`;
     };
-    const forme = `<div class="forms">${form(p.home, p.form && p.form.h)}${form(p.away, p.form && p.form.a)}</div>`;
+    const forme = `${formRow(p.home, (p.crest || [])[0], p.form && p.form.h)}${formRow(p.away, (p.crest || [])[1], p.form && p.form.a)}<p class="note">Du plus ancien au plus récent (à droite). Touchez une pastille pour voir l’adversaire.</p>`;
 
-    // --- Onglet Face-à-face
-    const h2h = st && st.h2h && st.h2h.length ? `<div class="h2h">${st.h2h.map(m => `<div class="rrow"><span>${esc(fmtDay.format(new Date(m.d + 'T12:00:00Z')))}</span><span>${esc(m.h)} <b class="sc">${m.hg}–${m.ag}</b> ${esc(m.a)}</span></div>`).join('')}</div><p class="note">Dernières confrontations en championnat disponibles dans nos données (depuis 2023).</p>` : '<p class="muted">Aucune confrontation récente dans nos données (depuis 2023).</p>';
+    // --- Onglet Face-à-face : barre de bilan + liste
+    let h2h = '<p class="muted">Aucune confrontation récente dans nos données (depuis 2023).</p>';
+    if (st && st.h2h && st.h2h.length) {
+      const L = st.h2h; let wh = 0, dr = 0, wa2 = 0;
+      for (const m of L) { const hs = m.h === p.home ? m.hg : m.ag, as = m.h === p.home ? m.ag : m.hg; if (hs > as) wh++; else if (hs < as) wa2++; else dr++; }
+      const n = L.length, w = x => Math.max(4, 100 * x / n);
+      h2h = `<div class="h2h-sum"><span>${crestImg((p.crest || [])[0], p.home)}</span><b>${n} match${n > 1 ? 's' : ''}</b><span>${crestImg((p.crest || [])[1], p.away)}</span></div>
+        <div class="h2h-bar"><span class="a" style="flex:${w(wh)}"></span><span class="d" style="flex:${w(dr)}"></span><span class="b" style="flex:${w(wa2)}"></span></div>
+        <div class="h2h-leg"><span class="a">${wh} victoire${wh > 1 ? 's' : ''}</span><span>${dr} nul${dr > 1 ? 's' : ''}</span><span class="b">${wa2} victoire${wa2 > 1 ? 's' : ''}</span></div>
+        <div class="h2h">${L.map(m => `<div class="hrow"><small>${esc(new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'short', year: 'numeric'}).format(new Date(m.d + 'T12:00:00Z')))}</small><span>${esc(m.h)}</span><b>${m.hg} – ${m.ag}</b><span>${esc(m.a)}</span></div>`).join('')}</div>`;
+    }
 
-    const tabs = [['analyse', 'Analyse', analyse], ['stats', 'Statistiques', stats], ['forme', 'Forme', forme], ['h2h', 'Face-à-face', h2h]];
+    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['stats', ICON.chart + 'Stats', stats], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h]];
     return `<article class="mpage card" style="--lg:${lgc}">
       <div class="head" style="cursor:default">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}</div>
       <div class="detail">
         <div class="tabs" role="tablist">${tabs.map(([k, l], i) => `<button type="button" role="tab" class="tab" data-tab="${k}" aria-selected="${i === 0}">${l}</button>`).join('')}</div>
         ${tabs.map(([k, , html], i) => `<div class="tabpanel" data-panel="${k}" role="tabpanel"${i ? ' hidden' : ''}>${html}</div>`).join('')}
-        <p class="note">Estimation statistique : le modèle ignore compositions et blessures. Un résultat à ${pcts[top]} % échoue encore ${100 - pcts[top]} fois sur 100.</p>
+        <p class="note">${ICON.info} Le modèle ignore compositions et blessures. Un résultat à ${pcts[top]} % échoue ${100 - pcts[top]} fois sur 100.</p>
       </div></article>`;
   }
 

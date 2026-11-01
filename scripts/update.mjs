@@ -174,11 +174,11 @@ async function main() {
     }
     const order = Object.entries(tab).sort((x, y) => y[1].pts - x[1].pts || (y[1].gf - y[1].ga) - (x[1].gf - x[1].ga) || y[1].gf - x[1].gf).map(([t]) => t);
     const sum = (list, team) => {
-      const o = {p: list.length, w: 0, d: 0, l: 0, gf: 0, ga: 0, cs: 0, btts: 0, o25: 0, nc: 0, cf: 0, ca: 0, nk: 0, yc: 0, rc: 0, nh: 0, h1f: 0, h1a: 0, h2f: 0, h2a: 0};
+      const o = {p: list.length, w: 0, d: 0, l: 0, gf: 0, ga: 0, cs: 0, btts: 0, o25: 0, o15: 0, nc: 0, cf: 0, ca: 0, nk: 0, yc: 0, rc: 0, nh: 0, h1f: 0, h1a: 0, h2f: 0, h2a: 0};
       for (const m of list) {
         const f = m.home === team ? m.hg : m.ag, a = m.home === team ? m.ag : m.hg;
         o.gf += f; o.ga += a; if (f > a) o.w++; else if (f < a) o.l++; else o.d++;
-        if (a === 0) o.cs++; if (m.hg > 0 && m.ag > 0) o.btts++; if (m.hg + m.ag > 2) o.o25++;
+        if (a === 0) o.cs++; if (m.hg > 0 && m.ag > 0) o.btts++; if (m.hg + m.ag > 2) o.o25++; if (m.hg + m.ag > 1) o.o15++;
         const isH = m.home === team;
         if (m.hc != null && m.ac != null) { o.nc++; o.cf += isH ? m.hc : m.ac; o.ca += isH ? m.ac : m.hc; }
         if (m.hy != null && m.ay != null) { o.nk++; o.yc += isH ? m.hy : m.ay; o.rc += (isH ? m.hr : m.ar) || 0; }
