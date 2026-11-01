@@ -178,13 +178,14 @@ async function main() {
           const x = predictMatch(lg.code, home, away, date);
           entry.p = x.p.map(r4); entry.lam = x.lam.map(r4); entry.score = x.score; entry.model = x.model;
           // En coulisse (non publié) : hybride Elo + v2, figé au coup d'envoi comme le pronostic publié, pour le comparer sur des matchs neufs.
-          if (x.model === 'v2') { const e = models[lg.code].elo.predict(home, away, date); if (e) entry.shadow = {hyb: hybridProbs(x.p, e.p).map(r4), elo: e.p.map(r4)}; }
+          if (x.model === 'v2') { const e = models[lg.code].elo.predict(home, away, date); if (e) entry.shadow = {hyb: hybridProbs(x.p, e.p).map(r4), elo: e.p.map(r4), at: NOW.toISOString()}; }
           entry.rel = seasonCount(lg.code, home, date) >= 5 && seasonCount(lg.code, away, date) >= 5 ? 'ok' : 'limited';
         } catch (e) { entry.err = e.message; }
       }
       if (old) {
         const same = JSON.stringify([old.p, old.lam, old.kickoff, old.home, old.away]) === JSON.stringify([entry.p, entry.lam, entry.kickoff, entry.home, entry.away]);
-        if (old.mk) entry.mk = old.mk; // on garde les dernières cotes connues si le fichier est momentanément indisponible
+        if (old.mk) entry.mk = old.mk;
+        if (old.shadow && entry.shadow && JSON.stringify(old.shadow.hyb) === JSON.stringify(entry.shadow.hyb)) entry.shadow.at = old.shadow.at; // horodatage de la version en vigueur // on garde les dernières cotes connues si le fichier est momentanément indisponible
         if (same) { entry.updatedAt = old.updatedAt; entry.form = old.form; entry.rel = old.rel; entry.err = old.err; }
         else entry.updatedAt = NOW.toISOString();
         predictions = predictions.filter(p => p.id !== id);
@@ -267,16 +268,31 @@ async function main() {
   // --- 6b. suivi « en coulisse » : hybride Elo + v2 contre v2, sur les matchs réglés depuis la mise en place (aucune incidence sur le site)
   {
     const SHADOW_START = '2026-11-01';
-    const S = predictions.filter(p => p.shadow && p.p && ['H', 'D', 'A'].includes(p.res) && p.kickoff >= SHADOW_START);
+    const since = predictions.filter(p => p.kickoff >= SHADOW_START && p.res);
+    const played = since.filter(p => ['H', 'D', 'A'].includes(p.res));
+    // Évaluable : pronostic v2 publié ET hybride calculé, tous deux figés avant le coup d'envoi.
+    const S = played.filter(p => p.shadow && p.p && p.model === 'v2' && p.shadow.at && p.shadow.at < p.kickoff);
     const idx = r => 'HDA'.indexOf(r), mean = a => a.reduce((x, y) => x + y, 0) / a.length;
     const br = (p, i) => p.reduce((t, v, k) => t + (v - (k === i ? 1 : 0)) ** 2, 0), ll = (p, i) => -Math.log(Math.max(1e-12, p[i]));
     const ci = d => { if (d.length < 2) return null; const m = mean(d), v = d.reduce((x, y) => x + (y - m) ** 2, 0) / (d.length - 1), e = 1.96 * Math.sqrt(v / d.length); return {diff: r4(m), lo: r4(m - e), hi: r4(m + e)}; };
-    const shadow = {debut: SHADOW_START, n: S.length, note: 'Comparaison sur des matchs neufs : hybride Elo + v2 (non publié) contre v2 (publié). Écart négatif = hybride meilleur.'};
+    const shadow = {debut: SHADOW_START, majA: NOW.toISOString(), note: 'Hybride Elo + v2 (non publié) contre v2 (publié), sur les mêmes matchs, prédictions figées avant le coup d’envoi. Écart négatif = hybride meilleur. Réglages figés pendant l’observation.',
+      suivi: {matchsRegles: since.length, annules: since.filter(p => p.res === 'void').length, joues: played.length, evaluables: S.length,
+        sansPronostic: played.filter(p => !p.p).length, repliV1: played.filter(p => p.p && p.model !== 'v2').length,
+        sansHybride: played.filter(p => p.p && p.model === 'v2' && !(p.shadow && p.shadow.at && p.shadow.at < p.kickoff)).length,
+        avecCotes: S.filter(p => Array.isArray(p.mk)).length}};
     if (S.length) {
-      shadow.brierV2 = r4(mean(S.map(p => br(p.p, idx(p.res))))); shadow.brierHybride = r4(mean(S.map(p => br(p.shadow.hyb, idx(p.res)))));
-      shadow.ecartBrier = ci(S.map(p => br(p.shadow.hyb, idx(p.res)) - br(p.p, idx(p.res))));
-      shadow.ecartLog = ci(S.map(p => ll(p.shadow.hyb, idx(p.res)) - ll(p.p, idx(p.res))));
-      shadow.parChampionnat = Object.fromEntries(LEAGUES.map(l => { const T = S.filter(p => p.lg === l.code); return [l.code, T.length ? {n: T.length, ecartBrier: ci(T.map(p => br(p.shadow.hyb, idx(p.res)) - br(p.p, idx(p.res))))} : null]; }));
+      const block = T => {
+        const o = {n: T.length, brierV2: r4(mean(T.map(p => br(p.p, idx(p.res))))), brierHybride: r4(mean(T.map(p => br(p.shadow.hyb, idx(p.res))))),
+          logV2: r4(mean(T.map(p => ll(p.p, idx(p.res))))), logHybride: r4(mean(T.map(p => ll(p.shadow.hyb, idx(p.res))))),
+          ecartBrier: ci(T.map(p => br(p.shadow.hyb, idx(p.res)) - br(p.p, idx(p.res)))), ecartLog: ci(T.map(p => ll(p.shadow.hyb, idx(p.res)) - ll(p.p, idx(p.res))))};
+        const M = T.filter(p => Array.isArray(p.mk));
+        if (M.length) o.marche = {n: M.length, brierMarche: r4(mean(M.map(p => br(p.mk, idx(p.res))))), brierV2: r4(mean(M.map(p => br(p.p, idx(p.res))))), brierHybride: r4(mean(M.map(p => br(p.shadow.hyb, idx(p.res))))), note: 'cotes publiées quelques jours avant le match (pas de clôture)'};
+        return o;
+      };
+      shadow.global = block(S);
+      shadow.parChampionnat = Object.fromEntries(LEAGUES.map(l => { const T = S.filter(p => p.lg === l.code); return [l.code, T.length ? block(T) : null]; }));
+      const bins = [[0, .2], [.2, .3], [.3, .4], [.4, .5], [.5, .6], [.6, .7], [.7, 1.01]];
+      shadow.calibration = Object.fromEntries([['v2', p => p.p], ['hybride', p => p.shadow.hyb]].map(([k, f]) => [k, bins.map(([lo, hi]) => { let n = 0, sp = 0, so = 0; for (const p of S) f(p).forEach((v, j) => { if (v >= lo && v < hi) { n++; sp += v; so += +(j === idx(p.res)); } }); return {tranche: `${Math.round(lo * 100)}-${Math.min(100, Math.round(hi * 100))}`, n, annonce: n ? r4(sp / n) : null, observe: n ? r4(so / n) : null}; })]));
     }
     writeIfChanged('shadow.json', shadow);
   }

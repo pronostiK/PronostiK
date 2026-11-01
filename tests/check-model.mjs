@@ -83,7 +83,8 @@ for (const lg of LEAGUES) {
   }
   report(!bad, `G. Elo/hybride ${lg} : aucune fuite, probabilités cohérentes (4 dates)`);
 }
-report(ELO_PARAMS.K === 20 && ELO_PARAMS.H === 80 && ELO_PARAMS.reg === 1, 'G. réglages Elo figés (K = 20, H = 80, rappel = 1)');
+report(JSON.stringify(ELO_PARAMS) === JSON.stringify({K: 20, H: 80, reg: 1, ord: {b: 0.5300431619279119, t1: -0.37603656229315574, t2: 0.8128742251704589}, pool: {wV2: 0.7511677930724845, wElo: 0.3991237434408407, bDom: -0.06568771090046427, bNul: 0.09069661636795369}}),
+  'G. tous les réglages de l’hybride figés pendant l’observation (Elo, conversion, mélange)');
 
 // F. Paramètres de production
 {
