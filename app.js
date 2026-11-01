@@ -447,7 +447,8 @@
   });
 
   // Noms affichés sans ambiguïté (les données gardent les noms des fichiers sources).
-  const DISPLAY = {'Milan': 'AC Milan', 'Inter': 'Inter Milan'};
+  const DISPLAY = {'Milan': 'AC Milan', 'Inter': 'Inter Milan', 'Sp Lisbon': 'Sporting CP', 'Sp Braga': 'SC Braga', 'Guimaraes': 'Vitória Guimarães', 'Maritimo': 'Marítimo', 'Academico Viseu': 'Académico Viseu',
+    'For Sittard': 'Fortuna Sittard', 'Den Haag': 'ADO Den Haag', 'Nijmegen': 'NEC Nimègue', 'AZ Alkmaar': 'AZ Alkmaar', 'Zwolle': 'PEC Zwolle'};
   const dn = n => DISPLAY[n] || n;
 
 
