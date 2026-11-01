@@ -1,0 +1,38 @@
+name: Laboratoire Ligue des champions
+
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/lab-ucl.mjs', '.github/workflows/lab-ucl.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pronostik-lab-ucl
+  cancel-in-progress: false
+
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Collecter les données
+        env:
+          FD_TOKEN: ${{ secrets.FD_TOKEN }}
+        run: node scripts/lab-ucl.mjs
+      - name: Enregistrer le résultat
+        if: always()
+        run: |
+          git config user.name "pronostik-bot"
+          git config user.email "pronostik-bot@users.noreply.github.com"
+          git add lab
+          if ! git diff --cached --quiet; then
+            git commit -m "Laboratoire C1 : données"
+            for i in 1 2 3; do git pull --rebase -X theirs && git push && break; git rebase --abort 2>/dev/null; sleep 5; done
+          fi
