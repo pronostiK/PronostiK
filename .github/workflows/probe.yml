@@ -24,7 +24,7 @@ jobs:
       - name: Sonder API-Football
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-        run: node scripts/probe-apifootball.mjs
+        run: node scripts/absences-probe2.mjs
       - name: Enregistrer le résultat (branche expérimentale uniquement)
         if: always()
         run: |
