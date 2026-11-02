@@ -124,6 +124,7 @@ writeFileSync(L('fit-result.json'), JSON.stringify({...out, goals: {home: GH, aw
   const recent = evaluate(B.P, s => s >= '2023-24' && s <= '2025-26').rows.filter(r => !r.neutral);
   const GH2 = poisFit(recent, 1, 'hg'), GA2 = poisFit(recent, -1, 'ag');
   const seed = {asOf: SEED_DATE, publish: true, note: 'Elo européen (championnats nationaux + C1, 2017-2026). Réglage sur les C1 2018-23, test sur 2023-26 : voir lab/RAPPORT-C1.md.',
+    cl: evs.filter(e => e.cl).map(e => [e.date, e.h, e.a, e.hg, e.ag]),   // historique C1 (face-à-face)
     params: {...B.P, goals: {home: GH2, away: GA2}}, ratings: Object.fromEntries([...ratings].map(([k, v]) => [k, Math.round(v * 10) / 10]))};
   writeFileSync(new URL('../data/ucl-seed.json', import.meta.url), JSON.stringify(seed));
   console.log('graine :', ratings.size, 'clubs ; buts 2023-26', GH2, GA2);

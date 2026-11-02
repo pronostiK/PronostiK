@@ -173,8 +173,9 @@ async function main() {
   const lastFive = (lg, team, before) => history.filter(m => m.lg === lg && m.date < before && (m.home === team || m.away === team)).slice(-5).reverse()
     .map(m => m.home === team ? {d: m.date, o: m.away, v: 'D', f: m.hg, a: m.ag} : {d: m.date, o: m.home, v: 'E', f: m.ag, a: m.hg});
   // Statistiques de la saison en cours (1re division, matchs joués AVANT le match) : classement, bilans, face-à-face.
-  const matchStats = (lg, home, away, before) => {
-    const S = history.filter(m => m.lg === lg && m.division === 'L1' && m.date >= seasonStart && m.date < before);
+  // rows (facultatif) : matchs de la saison d'un autre championnat (clubs de C1 hors championnats suivis).
+  const matchStats = (lg, home, away, before, rows = null) => {
+    const S = rows ? rows.filter(m => m.date < before) : history.filter(m => m.lg === lg && m.division === 'L1' && m.date >= seasonStart && m.date < before);
     const tab = {};
     const row = t => tab[t] || (tab[t] = {p: 0, pts: 0, gf: 0, ga: 0});
     for (const m of S) {
@@ -295,6 +296,7 @@ async function main() {
       events.push({date: footballDataDate(m.utcDate), h: H.key, a: A.key, hc: H.c, ac: A.c, hg: Number(hg), ag: Number(ag), cl: true, neutral: m.stage === 'FINAL'});
     }
     events.sort((x, y) => x.date.localeCompare(y.date) || (x.cl - y.cl));
+    const clDone = events.filter(e => e.cl).map(e => [e.date, e.h, e.a, e.hg, e.ag]);
     // Forme toutes compétitions (5 derniers matchs) relevée pendant le calcul
     const recent = new Map();
     const disp = k => k.slice(k.indexOf('|') + 1);
@@ -318,7 +320,14 @@ async function main() {
       const pois = (k, l) => { let p = Math.exp(-l); for (let i = 1; i <= k; i++) p *= l / i; return p; };
       let best = [0, 0, -1]; for (let i = 0; i <= 6; i++) for (let j = 0; j <= 6; j++) { const q = pois(i, x.lam[0]) * pois(j, x.lam[1]); if (q > best[2]) best = [i, j, q]; }
       let stats = null;
-      if (lgH && lgA) { const a = matchStats(lgH, disp(H.key), disp(H.key), date), b = matchStats(lgA, disp(A.key), disp(A.key), date); if (a.dom.tout.p && b.ext.tout.p) stats = {equipes: null, dom: a.dom, ext: b.ext, h2h: [], national: true}; }
+      // Statistiques : saison en cours du championnat national de chaque club (suivi ou fichier hors-suivi) ; face-à-face : C1 depuis 2017.
+      const natRows = c => { const y0 = ['NOR', 'SWE'].includes(c) ? `${todayStr.slice(0, 4)}-01-01` : seasonStart;   // saisons sur l'année civile
+        return (extra?.rows || []).filter(r => r[1] === c && r[0] >= y0).map(r => ({date: r[0], home: r[2], away: r[3], hg: r[4], ag: r[5]})); };
+      const side = (c, key, venue) => { const lg = LG_OF[c], n = disp(key), st = lg ? matchStats(lg, n, n, date) : matchStats(null, n, n, date, natRows(c)); return venue === 'dom' ? st.dom : st.ext; };
+      const sd = side(H.c, H.key, 'dom'), se = side(A.c, A.key, 'ext');
+      const nm = k => k === H.key ? nameH : k === A.key ? nameA : disp(k);
+      const h2h = [...(seed.cl || []), ...clDone].filter(r => r[0] < date && ((r[1] === H.key && r[2] === A.key) || (r[1] === A.key && r[2] === H.key))).slice(-5).reverse().map(r => ({d: r[0], h: nm(r[1]), a: nm(r[2]), hg: r[3], ag: r[4]}));
+      if ((sd.tout.p && se.tout.p) || h2h.length) stats = {equipes: null, dom: sd.tout.p && se.tout.p ? sd : null, ext: sd.tout.p && se.tout.p ? se : null, h2h, national: true};
       const entry = {id, apiId: m.id, lg: 'CL', date, kickoff: m.utcDate, home: nameH, away: nameA, crest: [m.homeTeam?.crest || null, m.awayTeam?.crest || null],
         p: x.p.map(r4b), lam: x.lam.map(r4b), score: `${best[0]}–${best[1]}`, model: 'euro-elo', elo: [Math.round(rh), Math.round(ra)],
         markets: {o15: r4b(mk2.o15), o25: r4b(mk2.o25), btts: r4b(mk2.btts), ht: mk2.ht.map(r4b), scores: mk2.scores.map(([sc, v]) => [sc, r4b(v)])},

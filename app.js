@@ -215,7 +215,7 @@
     const forme = `${formRow(p.home, (p.crest || [])[0], p.form && p.form.h)}${formRow(p.away, (p.crest || [])[1], p.form && p.form.a)}<p class="note">Du plus ancien au plus récent (à droite). Touchez une pastille pour voir l’adversaire.</p>`;
 
     // --- Onglet Face-à-face : barre de bilan + liste
-    let h2h = `<p class="muted">Aucune confrontation récente dans nos données (depuis ${isNat ? '2016' : '2023'}).</p>`;
+    let h2h = `<p class="muted">Aucune confrontation récente dans nos données (depuis ${isNat ? '2016' : isCL ? '2017, en C1' : '2023'}).</p>`;
     if (st && st.h2h && st.h2h.length) {
       const L = st.h2h; let wh = 0, dr = 0, wa2 = 0;
       for (const m of L) { const hs = m.h === p.home ? m.hg : m.ag, as = m.h === p.home ? m.ag : m.hg; if (hs > as) wh++; else if (hs < as) wa2++; else dr++; }
