@@ -1,0 +1,338 @@
+{
+ "tsdb_l2": {
+  "status": 200,
+  "out": [
+   [
+    "Annecy",
+    "https://r2.thesportsdb.com/images/media/team/badge/h6981f1655120883.png"
+   ],
+   [
+    "Boulogne",
+    "https://r2.thesportsdb.com/images/media/team/badge/c7p39l1754278109.png"
+   ],
+   [
+    "Clermont Foot",
+    "https://r2.thesportsdb.com/images/media/team/badge/4os8c01788968260.png"
+   ],
+   [
+    "Dijon",
+    "https://r2.thesportsdb.com/images/media/team/badge/viin5f1547898121.png"
+   ],
+   [
+    "Dunkerque",
+    "https://r2.thesportsdb.com/images/media/team/badge/3s4ne51750879372.png"
+   ],
+   [
+    "Grenoble",
+    "https://r2.thesportsdb.com/images/media/team/badge/x2hcpg1488227785.png"
+   ],
+   [
+    "Guingamp",
+    "https://r2.thesportsdb.com/images/media/team/badge/5iihrp1590259631.png"
+   ],
+   [
+    "Laval",
+    "https://r2.thesportsdb.com/images/media/team/badge/s6g8y81580152463.png"
+   ],
+   [
+    "Metz",
+    "https://r2.thesportsdb.com/images/media/team/badge/1iuew61688452857.png"
+   ],
+   [
+    "Montpellier",
+    "https://r2.thesportsdb.com/images/media/team/badge/8wn9x31750879448.png"
+   ]
+  ]
+ },
+ "tsdb_l2b": {
+  "status": 200,
+  "out": [
+   [
+    "Wigan Athletic",
+    "https://r2.thesportsdb.com/images/media/team/badge/wtxwyw1448759640.png"
+   ],
+   [
+    "Blackpool",
+    "https://r2.thesportsdb.com/images/media/team/badge/utywru1448754934.png"
+   ],
+   [
+    "Doncaster Rovers",
+    "https://r2.thesportsdb.com/images/media/team/badge/ssvpvx1424033260.png"
+   ],
+   [
+    "Leicester City",
+    "https://r2.thesportsdb.com/images/media/team/badge/xtxwtu1448813356.png"
+   ],
+   [
+    "Barnsley",
+    "https://r2.thesportsdb.com/images/media/team/badge/glbmdm1781719675.png"
+   ],
+   [
+    "Peterborough United",
+    "https://r2.thesportsdb.com/images/media/team/badge/p14ltc1779778820.png"
+   ],
+   [
+    "Reading",
+    "https://r2.thesportsdb.com/images/media/team/badge/tprvtu1448811527.png"
+   ],
+   [
+    "Plymouth Argyle",
+    "https://r2.thesportsdb.com/images/media/team/badge/wod5cj1689630278.png"
+   ],
+   [
+    "Sheffield Wednesday",
+    "https://r2.thesportsdb.com/images/media/team/badge/m3km7p1781284189.png"
+   ],
+   [
+    "Luton Town",
+    "https://r2.thesportsdb.com/images/media/team/badge/v977eh1681319466.png"
+   ],
+   [
+    "Huddersfield Town",
+    "https://r2.thesportsdb.com/images/media/team/badge/y11fin1677527513.png"
+   ],
+   [
+    "Bradford City",
+    "https://r2.thesportsdb.com/images/media/team/badge/ebl8zx1781737432.png"
+   ],
+   [
+    "AFC Wimbledon",
+    "https://r2.thesportsdb.com/images/media/team/badge/md7iqx1684129667.png"
+   ],
+   [
+    "Stockport County",
+    "https://r2.thesportsdb.com/images/media/team/badge/jcsz9k1594450753.png"
+   ],
+   [
+    "Oxford United",
+    "https://r2.thesportsdb.com/images/media/team/badge/hgpm6u1781718489.png"
+   ],
+   [
+    "Leyton Orient",
+    "https://r2.thesportsdb.com/images/media/team/badge/g4d9bi1688678797.png"
+   ],
+   [
+    "Milton Keynes Dons",
+    "https://r2.thesportsdb.com/images/media/team/badge/9hx41b1748524969.png"
+   ],
+   [
+    "Notts County",
+    "https://r2.thesportsdb.com/images/media/team/badge/utqwvp1424032678.png"
+   ],
+   [
+    "Burton Albion",
+    "https://r2.thesportsdb.com/images/media/team/badge/dfjbwe1781738043.png"
+   ],
+   [
+    "Stevenage",
+    "https://r2.thesportsdb.com/images/media/team/badge/o4m2ci1596480474.png"
+   ],
+   [
+    "Mansfield Town",
+    "https://r2.thesportsdb.com/images/media/team/badge/c1fpes1761709071.png"
+   ],
+   [
+    "Wycombe Wanderers",
+    "https://r2.thesportsdb.com/images/media/team/badge/avi3bu1688678934.png"
+   ],
+   [
+    "Cambridge United",
+    "https://r2.thesportsdb.com/images/media/team/badge/ggihm61750279411.png"
+   ],
+   [
+    "Bromley",
+    "https://r2.thesportsdb.com/images/media/team/badge/qq7kzz1661950278.png"
+   ]
+  ]
+ },
+ "espn_l2": {
+  "status": 200,
+  "out": [
+   [
+    "AS Nancy Lorraine",
+    "Nancy",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/3267.png"
+   ],
+   [
+    "Annecy",
+    "Annecy",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/18066.png"
+   ],
+   [
+    "Boulogne",
+    "Boulogne",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/7869.png"
+   ],
+   [
+    "Clermont Foot",
+    "Clermont Foot",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/3171.png"
+   ],
+   [
+    "Dijon FCO",
+    "Dijon FCO",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/3170.png"
+   ],
+   [
+    "Dunkerque",
+    "Dunkerque",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/7732.png"
+   ],
+   [
+    "Grenoble",
+    "Grenoble",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/6994.png"
+   ],
+   [
+    "Guingamp",
+    "Guingamp",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/171.png"
+   ],
+   [
+    "Metz",
+    "Metz",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/177.png"
+   ],
+   [
+    "Montpellier",
+    "Montpellier",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/274.png"
+   ],
+   [
+    "Nantes",
+    "Nantes",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/165.png"
+   ],
+   [
+    "Pau",
+    "Pau",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/10678.png"
+   ],
+   [
+    "Red Star FC 93",
+    "Red Star FC ",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/11884.png"
+   ],
+   [
+    "Rodez Aveyron",
+    "Rodez Aveyron",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/7719.png"
+   ],
+   [
+    "Saint-Étienne",
+    "St. Étienne",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/178.png"
+   ],
+   [
+    "Sochaux",
+    "Sochaux",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/272.png"
+   ],
+   [
+    "Stade Laval",
+    "Stade Laval",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/3266.png"
+   ],
+   [
+    "Stade de Reims",
+    "Reims",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/3243.png"
+   ]
+  ]
+ },
+ "espn_l1": {
+  "status": 200,
+  "out": [
+   [
+    "AJ Auxerre",
+    "Auxerre",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/172.png"
+   ],
+   [
+    "AS Monaco",
+    "Monaco",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/174.png"
+   ],
+   [
+    "Angers",
+    "Angers",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png"
+   ],
+   [
+    "Brest",
+    "Brest",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png"
+   ],
+   [
+    "Le Havre AC",
+    "Le Havre AC",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png"
+   ],
+   [
+    "Le Mans",
+    "Le Mans",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png"
+   ],
+   [
+    "Lens",
+    "Lens",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/175.png"
+   ],
+   [
+    "Lille",
+    "Lille",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/166.png"
+   ],
+   [
+    "Lorient",
+    "Lorient",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/273.png"
+   ],
+   [
+    "Lyon",
+    "Lyon",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/167.png"
+   ],
+   [
+    "Marseille",
+    "Marseille",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/176.png"
+   ],
+   [
+    "Nice",
+    "Nice",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png"
+   ],
+   [
+    "Paris FC",
+    "Paris FC",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png"
+   ],
+   [
+    "Paris Saint-Germain",
+    "PSG",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/160.png"
+   ],
+   [
+    "Stade Rennais",
+    "Rennes",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/169.png"
+   ],
+   [
+    "Strasbourg",
+    "Strasbourg",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/180.png"
+   ],
+   [
+    "Toulouse",
+    "Toulouse",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/179.png"
+   ],
+   [
+    "Troyes",
+    "Troyes",
+    "https://a.espncdn.com/i/teamlogos/soccer/500/170.png"
+   ]
+  ]
+ }
+}
