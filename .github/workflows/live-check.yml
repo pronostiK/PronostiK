@@ -1,0 +1,59 @@
+name: Vérification du site en ligne
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/live-check.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier le site, les données, les logos et l'assistant
+        env:
+          CHAT_CODE: ${{ secrets.CHAT_CODE }}
+        run: |
+          mkdir -p lab
+          {
+            echo "Vérification : $(date -u +%FT%TZ)"
+            for p in "" index.html app.js style.css version.json data/predictions.json data/meta.json data/standings.json data/resume.json data/scorecard.json downloads/pronostik.apk; do
+              curl -s -o /dev/null -w "$p : HTTP %{http_code}, %{size_download} octets\n" "https://pronostikapp.fr/$p"
+            done
+            curl -s https://pronostikapp.fr/data/predictions.json -o p.json
+            python3 - <<'PY'
+          import json, urllib.request
+          P = json.load(open('p.json'))
+          up = [p for p in P if not p.get('res')]
+          print('pronostics en ligne :', len(up), '· résultats :', len([p for p in P if p.get('res') in ('H','D','A')]))
+          urls = []
+          for lg in ['FL2','CL','NL','ELC','PPL']:
+              for p in [x for x in up if x['lg'] == lg][:2]:
+                  urls += [u for u in (p.get('crest') or []) if u]
+          for u in urls[:12]:
+              try:
+                  r = urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0'}), timeout=20)
+                  print('logo', r.status, r.headers.get('content-type'), u)
+              except Exception as e:
+                  print('logo ÉCHEC', u, e)
+          PY
+            U=$(python3 -c "import json;print(json.load(open('data/chat.json'))['url'])")
+            echo "assistant santé : $(curl -s -m 20 "$U/health")"
+            BODY=$(python3 -c "import json,os;print(json.dumps({'code':os.environ['CHAT_CODE'],'messages':[{'role':'user','content':'Quel a été le résultat de Marseille contre Toulouse ?'}]}))")
+            curl -s -m 60 -X POST "$U/chat" -H 'Origin: https://pronostikapp.fr' -H 'Content-Type: application/json' -d "$BODY" | python3 -c "import json,sys;d=json.load(sys.stdin);print('assistant :',d.get('reply') or d.get('error'))"
+          } > lab/live-check.txt 2>&1
+          cat lab/live-check.txt
+      - name: Enregistrer
+        if: always()
+        run: |
+          git config user.name "pronostik-bot"
+          git config user.email "pronostik-bot@users.noreply.github.com"
+          git add lab/live-check.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Vérification du site en ligne"
+            for i in 1 2 3; do git pull --rebase -X theirs && git push && break; git rebase --abort 2>/dev/null; sleep 5; done
+          fi
