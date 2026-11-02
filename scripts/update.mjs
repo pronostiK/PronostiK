@@ -410,6 +410,27 @@ async function main() {
     natInfo = {ok: true, base: seed.asOf, matchs: UM.length, joues: done.length, pronostics: n};
   } catch (e) { errors.NL = String(e.message || e).slice(0, 160); console.error('Sélections :', e.message); }
 
+  // --- 4a'. Logos des clubs des ligues sans API (Ligue 2) : liste publique des équipes d'ESPN, une fois par semaine.
+  const ESPN_SLUG = {FL2: 'fra.2'};
+  state.crests ||= {};
+  for (const lgx of LEAGUES.filter(l => l.source === 'csv' && ESPN_SLUG[l.code])) {
+    const cur = state.crests[lgx.code];
+    if (cur && Object.keys(cur.map || {}).length >= 10 && (NOW - new Date(cur.at)) < 6 * 86400000) continue;
+    try {
+      const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${ESPN_SLUG[lgx.code]}/teams`, {signal: AbortSignal.timeout(20000), headers: {'User-Agent': 'Mozilla/5.0 (PronostiK)'}});
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const j = await r.json(), map = {};
+      for (const x of j.sports?.[0]?.leagues?.[0]?.teams || []) {
+        const t = x.team || {}, url = (t.logos || [])[0]?.href;
+        const n = resolveName(t.displayName, known[lgx.code], ALIASES[lgx.code] || {}, true) || resolveName(t.shortDisplayName, known[lgx.code], ALIASES[lgx.code] || {}, true);
+        if (n && url && /^https:\/\//.test(url)) map[n] = url;
+      }
+      if (Object.keys(map).length) state.crests[lgx.code] = {at: NOW.toISOString(), map};
+    } catch (e) { console.error('Logos', lgx.code, ':', e.message); }
+  }
+  const crestOf = (lg, n) => state.crests?.[lg]?.map?.[n] || null;
+  for (const p of predictions) if (state.crests[p.lg] && (!p.crest || !p.crest[0] || !p.crest[1])) p.crest = [p.crest?.[0] || crestOf(p.lg, p.home), p.crest?.[1] || crestOf(p.lg, p.away)];
+
   // --- 4b. cotes du marché pour les matchs à venir (comparaison affichée sur le site ; jamais bloquant)
   const oddsInfo = {ok: false, rows: 0, matched: 0, error: null};
   try {
@@ -432,7 +453,7 @@ async function main() {
         const id = `cs${lgx.code}-${f.date}-${slug(f.home)}-${slug(f.away)}`, old = byId.get(id);
         if (old && NOW >= new Date(old.kickoff) && old.kickoff === kickoff) continue;   // figé après le coup d'envoi
         const home = known[lgx.code].includes(f.home) ? f.home : resolve(f.home, lgx.code), away = known[lgx.code].includes(f.away) ? f.away : resolve(f.away, lgx.code);
-        const entry = {id, apiId: null, lg: lgx.code, date, kickoff, home: home || f.home, away: away || f.away, crest: [null, null], p: null, lam: null, score: null, err: null,
+        const entry = {id, apiId: null, lg: lgx.code, date, kickoff, home: home || f.home, away: away || f.away, crest: [crestOf(lgx.code, home || f.home), crestOf(lgx.code, away || f.away)], p: null, lam: null, score: null, err: null,
           form: {h: [], a: []}, rel: 'ok', savedAt: old?.savedAt || NOW.toISOString(), updatedAt: old?.updatedAt || NOW.toISOString(), res: null, final: null};
         if (!home || !away) entry.err = 'Équipe non reconnue dans l’historique.';
         else {
@@ -571,6 +592,7 @@ async function main() {
         const n = resolveName(t.name || t.shortName, known[lg.code], ALIASES[lg.code] || {}, lg.code === 'FL1');
         if (n) crest[n] = t.crest;
       }
+      Object.assign(crest, Object.fromEntries(Object.entries(state.crests?.[lg.code]?.map || {}).filter(([k]) => !crest[k])));
       const S = history.filter(m => m.lg === lg.code && m.division === 'L1' && m.date >= seasonStart).sort((a, b) => a.date.localeCompare(b.date));
       if (!S.length) continue;
       const T = {};
