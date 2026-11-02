@@ -1,4 +1,4 @@
-name: Vérification du site en ligne
+name: Vérification du site en ligne 
 
 on:
   workflow_dispatch:
