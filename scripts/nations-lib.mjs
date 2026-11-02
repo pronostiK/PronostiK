@@ -50,3 +50,10 @@ export function buildNationsSeed(csv, P) {
   const recent = all.filter(m => m.date >= '2016-01-01' && (UEFA.has(m.home) || UEFA.has(m.away))).map(m => [m.date, m.home, m.away, m.hg, m.ag]);
   return {asOf: all[all.length - 1].date, params: P, ratings: Object.fromEntries([...ratings].map(([k, v]) => [k, Math.round(v * 10) / 10])), recent};
 }
+
+// Drapeaux : flagcdn.com (codes UEFA à 3 lettres → codes ISO à 2 lettres ; nations britanniques à part).
+const ISO2 = {ALB: 'al', AND: 'ad', ARM: 'am', AUT: 'at', AZE: 'az', BLR: 'by', BEL: 'be', BIH: 'ba', BUL: 'bg', CRO: 'hr', CYP: 'cy', CZE: 'cz', DEN: 'dk', ENG: 'gb-eng', EST: 'ee',
+  FRO: 'fo', FIN: 'fi', FRA: 'fr', GEO: 'ge', GER: 'de', GIB: 'gi', GRE: 'gr', HUN: 'hu', ISL: 'is', IRL: 'ie', ISR: 'il', ITA: 'it', KAZ: 'kz', KOS: 'xk', LVA: 'lv', LIE: 'li',
+  LTU: 'lt', LUX: 'lu', MLT: 'mt', MDA: 'md', MNE: 'me', NED: 'nl', MKD: 'mk', NIR: 'gb-nir', NOR: 'no', POL: 'pl', POR: 'pt', ROU: 'ro', RUS: 'ru', SMR: 'sm', SCO: 'gb-sct',
+  SRB: 'rs', SVK: 'sk', SVN: 'si', ESP: 'es', SWE: 'se', SUI: 'ch', TUR: 'tr', UKR: 'ua', WAL: 'gb-wls'};
+export const flagUrl = (code, fallback = null) => ISO2[code] ? `https://flagcdn.com/w160/${ISO2[code]}.png` : fallback;

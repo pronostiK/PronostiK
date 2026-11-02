@@ -31,7 +31,7 @@ jobs:
           up = [p for p in P if not p.get('res')]
           print('pronostics en ligne :', len(up), '· résultats :', len([p for p in P if p.get('res') in ('H','D','A')]))
           urls = []
-          for lg in ['FL2','CL','NL','ELC','PPL']:
+          for lg in ['FL2','NL','CL','ELC','PPL']:
               for p in [x for x in up if x['lg'] == lg][:2]:
                   urls += [u for u in (p.get('crest') or []) if u]
           for u in urls[:12]:
@@ -55,5 +55,5 @@ jobs:
           git add lab/live-check.txt
           if ! git diff --cached --quiet; then
             git commit -m "Vérification du site en ligne"
-            for i in 1 2 3; do git pull --rebase -X theirs && git push && break; git rebase --abort 2>/dev/null; sleep 5; done
+            for i in 1 2 3 4 5; do git pull --rebase -X theirs origin main && git push origin HEAD:main && break; git rebase --abort 2>/dev/null; sleep 8; done
           fi

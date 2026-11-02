@@ -68,7 +68,7 @@
   const initials = n => String(n).replace(/\b(FC|AFC|CF|SC|AC|AS|US|SS|RC|CD|UD|SV|VfB|VfL|1\.)\b/gi, '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?';
   const hue = n => { let h = 0; for (const c of String(n)) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
   const mono = n => `<span class="mono" style="background:linear-gradient(145deg,hsl(${hue(n)} 62% 48%),hsl(${(hue(n) + 40) % 360} 62% 34%))" aria-hidden="true">${esc(initials(n))}</span>`;
-  const crestImg = (url, n) => url && /^https:\/\//.test(url) ? `<img class="crest" src="${esc(url)}" alt="" loading="lazy" data-n="${esc(n)}">` : mono(n);
+  const crestImg = (url, n) => url && /^https:\/\//.test(url) ? `<img class="crest${/flagcdn\.com|imgml\/flags/.test(url) ? ' flag' : ''}" src="${esc(url)}" alt="" loading="lazy" data-n="${esc(n)}">` : mono(n);
   document.addEventListener('error', e => {
     const t = e.target;
     if (t && t.tagName === 'IMG' && t.parentElement && /lg-(emb|mini)/.test(t.parentElement.className)) { const btn = t.closest('[title]'); t.parentElement.outerHTML = `<span>${esc(btn ? btn.getAttribute('title') : '')}</span>`; return; }

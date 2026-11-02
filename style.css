@@ -459,3 +459,4 @@ nav a{padding:8px 10px;font-size:13.5px}
 .rc.ours b::after{content:" ★";font-size:11px;color:var(--accent)}
 .tag.ko{border-color:#ef444466;color:#fca5a5}
 .poster.result .tag{white-space:nowrap}
+.crest.flag{object-fit:cover;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.18),0 6px 14px rgba(0,0,0,.35);filter:none}

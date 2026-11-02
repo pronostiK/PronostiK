@@ -11,7 +11,7 @@ import {createModel, createRatings, createElo, hybridProbs, marketsFromLambdas} 
 import {footballDataDate, resolveName} from '../lib.mjs';
 import {LEAGUES, ALIASES} from '../leagues.mjs';
 import {parseCSV, parseFixtures} from '../csv.mjs';
-import {buildNationsSeed, runNationsElo, nationsPredict, nationName} from './nations-lib.mjs';
+import {buildNationsSeed, runNationsElo, nationsPredict, nationName, flagUrl} from './nations-lib.mjs';
 import {runEuroElo, uclPredict, makeResolver, parseDomesticCSV, countryOfArea, EXTRA_MAIN, EXTRA_NEW, LG_COUNTRY, EXTRA_VERSION} from './ucl-lib.mjs';
 
 const API = process.env.FD_API_BASE || 'https://api.football-data.org/v4';
@@ -395,7 +395,7 @@ async function main() {
       let best = [0, 0, -1]; for (let i = 0; i <= 6; i++) for (let j = 0; j <= 6; j++) { const q = pois(i, x.lam[0]) * pois(j, x.lam[1]); if (q > best[2]) best = [i, j, q]; }
       const five = t => recentAll.filter(r => r[0] < date && (r[1] === t || r[2] === t)).slice(-5).reverse().map(r => r[1] === t ? {d: r[0], o: dispN(r[2]), v: 'D', f: r[3], a: r[4]} : {d: r[0], o: dispN(r[1]), v: 'E', f: r[4], a: r[3]});
       const h2h = recentAll.filter(r => r[0] < date && ((r[1] === H && r[2] === A) || (r[1] === A && r[2] === H))).slice(-5).reverse().map(r => ({d: r[0], h: dispN(r[1]), a: dispN(r[2]), hg: r[3], ag: r[4]}));
-      const entry = {id, apiId: null, uefaId: m.id, lg: 'NL', date, kickoff, home: fr(m.homeTeam), away: fr(m.awayTeam), crest: [m.homeTeam.mediumLogoUrl || m.homeTeam.logoUrl || null, m.awayTeam.mediumLogoUrl || m.awayTeam.logoUrl || null],
+      const entry = {id, apiId: null, uefaId: m.id, lg: 'NL', date, kickoff, home: fr(m.homeTeam), away: fr(m.awayTeam), crest: [flagUrl(m.homeTeam.countryCode, m.homeTeam.mediumLogoUrl || null), flagUrl(m.awayTeam.countryCode, m.awayTeam.mediumLogoUrl || null)],
         p: x.p.map(r4), lam: x.lam.map(r4), score: `${best[0]}–${best[1]}`, model: 'elo-selections', elo: [Math.round(rh), Math.round(ra)], neutral,
         markets: {o15: r4(mk2.o15), o25: r4(mk2.o25), btts: r4(mk2.btts), ht: mk2.ht.map(r4), scores: mk2.scores.map(([sc, v]) => [sc, r4(v)])},
         form: {h: five(H), a: five(A)}, stats: h2h.length ? {h2h} : null, groupe: m.group?.metaData?.groupName || null,
