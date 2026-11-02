@@ -502,6 +502,28 @@ async function main() {
 
   // --- 5. règlement
   const csvLeague = new Set(LEAGUES.filter(l => l.source === 'csv').map(l => l.code));
+  // Ligues sans API : score final lu dès la fin du match sur le tableau des scores public d'ESPN (le CSV arrive plus tard).
+  for (const lgx of LEAGUES.filter(l => l.source === 'csv' && ESPN_SLUG[l.code])) {
+    const pend = predictions.filter(p => p.lg === lgx.code && !p.res && NOW - new Date(p.kickoff) > 100 * 60000);
+    for (const d of [...new Set(pend.map(p => p.kickoff.slice(0, 10).replace(/-/g, '')))]) {
+      try {
+        const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${ESPN_SLUG[lgx.code]}/scoreboard?dates=${d}`, {signal: AbortSignal.timeout(20000), headers: {'User-Agent': 'Mozilla/5.0 (PronostiK)'}});
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        for (const ev of (await r.json()).events || []) {
+          const c = ev.competitions?.[0]; if (!c?.status?.type?.completed) continue;
+          const side = h => c.competitors.find(x => x.homeAway === h), nm = t => resolveName(t.team?.displayName, known[lgx.code], ALIASES[lgx.code] || {}, true) || resolveName(t.team?.shortDisplayName, known[lgx.code], ALIASES[lgx.code] || {}, true);
+          const H = side('home'), A = side('away'); if (!H || !A) continue;
+          const p = pend.find(x => x.home === nm(H) && x.away === nm(A));
+          const hg = Number(H.score), ag = Number(A.score);
+          if (p && Number.isFinite(hg) && Number.isFinite(ag)) {
+            p.res = outcome(hg, ag); p.final = `${hg}–${ag}`;
+            const row = {date: p.date, home: p.home, away: p.away, hg, ag, lg: lgx.code, division: 'L1', avgH: null, avgD: null, avgA: null};   // remplacé par la ligne du CSV à sa parution
+            if (!byKey.has(key(row))) { history.push(row); byKey.set(key(row), row); }
+          }
+        }
+      } catch (e) { console.error('Scores', lgx.code, ':', e.message); }
+    }
+  }
   for (const p of predictions) {
     if (p.res || !csvLeague.has(p.lg) || NOW < new Date(p.kickoff)) continue;   // ligue sans API : résultat lu dans le CSV
     const m = history.find(h => h.lg === p.lg && h.home === p.home && h.away === p.away && Math.abs(new Date(h.date) - new Date(p.date)) <= 86400000);

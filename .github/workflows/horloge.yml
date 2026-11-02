@@ -1,0 +1,59 @@
+name: Horloge du robot
+
+# GitHub ne garantit pas les déclenchements programmés (souvent une fois par heure au lieu de toutes les 30 minutes).
+# Cette horloge tourne en continu (jusqu'à ~5 h 50 par passage, relancée chaque heure) et déclenche la mise à jour :
+#   - toutes les 5 minutes quand un match est en cours ou vient de se terminer (résultat attendu) ;
+#   - toutes les 30 minutes sinon.
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/horloge.yml']
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: pronostik-horloge
+  cancel-in-progress: false
+
+jobs:
+  tic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - name: Déclencher la mise à jour au bon rythme
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          end=$(( $(date +%s) + 345*60 ))
+          last=0
+          while [ $(date +%s) -lt $end ]; do
+            now=$(date +%s)
+            # Matchs en cours ou terminés sans résultat (coup d'envoi il y a moins de 4 h) ?
+            busy=$(curl -s -m 30 "https://raw.githubusercontent.com/$REPO/main/data/predictions.json" | python3 -c "
+          import json, sys, time, datetime
+          try:
+              P = json.load(sys.stdin)
+          except Exception:
+              print(0); sys.exit()
+          now = time.time()
+          n = 0
+          for p in P:
+              if p.get('res'): continue
+              t = datetime.datetime.fromisoformat(p['kickoff'].replace('Z', '+00:00')).timestamp()
+              if now - 4*3600 < t < now + 60: n += 1
+          print(n)")
+            gap=1800; [ "${busy:-0}" -gt 0 ] && gap=300
+            if [ $(( now - last )) -ge $gap ]; then
+              running=$(gh run list -R "$REPO" --workflow update.yml --limit 5 --json status -q '[.[] | select(.status=="in_progress" or .status=="queued")] | length' 2>/dev/null || echo 0)
+              if [ "${running:-0}" -eq 0 ]; then
+                gh workflow run update.yml -R "$REPO" --ref main && echo "$(date -u +%H:%M) mise à jour lancée (matchs en cours ou à régler : ${busy:-0})" && last=$now
+              else echo "$(date -u +%H:%M) une mise à jour tourne déjà"; last=$now; fi
+            fi
+            sleep 60
+          done
