@@ -1,10 +1,10 @@
-Vérification : 2026-11-02T07:43:20Z
+Vérification : 2026-11-02T07:45:12Z
  : HTTP 200, 10957 octets
 index.html : HTTP 200, 10957 octets
-app.js : HTTP 200, 57147 octets
-style.css : HTTP 200, 35645 octets
+app.js : HTTP 200, 57202 octets
+style.css : HTTP 200, 35775 octets
 version.json : HTTP 200, 18 octets
-data/predictions.json : HTTP 200, 495758 octets
+data/predictions.json : HTTP 200, 494286 octets
 data/meta.json : HTTP 200, 1409 octets
 data/standings.json : HTTP 200, 30274 octets
 data/resume.json : HTTP 200, 5467 octets
@@ -15,13 +15,13 @@ logo 200 image/png https://a.espncdn.com/i/teamlogos/soccer/500/11884.png
 logo 200 image/png https://a.espncdn.com/i/teamlogos/soccer/500/3267.png
 logo 200 image/png https://a.espncdn.com/i/teamlogos/soccer/500/3243.png
 logo 200 image/png https://a.espncdn.com/i/teamlogos/soccer/500/272.png
-logo ÉCHEC https://img.uefa.com/imgml/flags/240x240/TUR.png The read operation timed out
-logo ÉCHEC https://img.uefa.com/imgml/flags/240x240/BEL.png The read operation timed out
-logo ÉCHEC https://img.uefa.com/imgml/flags/240x240/ARM.png The read operation timed out
-logo ÉCHEC https://img.uefa.com/imgml/flags/240x240/CYP.png The read operation timed out
+logo 200 image/png https://flagcdn.com/w160/tr.png
+logo 200 image/png https://flagcdn.com/w160/be.png
+logo 200 image/png https://flagcdn.com/w160/am.png
+logo 200 image/png https://flagcdn.com/w160/cy.png
 logo 200 image/png https://crests.football-data.org/1887.png
 logo 200 image/png https://crests.football-data.org/498.png
 logo 200 image/png https://crests.football-data.org/610.png
 logo 200 image/png https://crests.football-data.org/10.png
 assistant santé : {"ok":true}
-assistant : Marseille a battu Toulouse 2–1, le dimanche 1er novembre (Ligue 1). Le modèle PronostiK donnait Marseille favori à 55 % (contre 21 % pour le nul et 24 % pour Toulouse), une victoire de Marseille restait donc loin d'être garantie : un favori à 55 % perd ou fait nul environ 45 fois sur 100.
+assistant : Marseille a battu Toulouse 2–1, dimanche 1er novembre à 20h45 (Ligue 1). Avant le match, PronostiK donnait 55 % de chances de victoire à Marseille, 21 % pour le nul et 24 % pour Toulouse. Un favori à 55 % perd encore régulièrement, mais ici le résultat correspond au scénario le plus probable.
