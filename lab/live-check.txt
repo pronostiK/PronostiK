@@ -1,4 +1,4 @@
-Vérification : 2026-11-02T07:45:12Z
+Vérification : 2026-11-02T07:47:20Z
  : HTTP 200, 10957 octets
 index.html : HTTP 200, 10957 octets
 app.js : HTTP 200, 57202 octets
@@ -24,4 +24,4 @@ logo 200 image/png https://crests.football-data.org/498.png
 logo 200 image/png https://crests.football-data.org/610.png
 logo 200 image/png https://crests.football-data.org/10.png
 assistant santé : {"ok":true}
-assistant : Marseille a battu Toulouse 2–1, dimanche 1er novembre à 20h45 (Ligue 1). Avant le match, PronostiK donnait 55 % de chances de victoire à Marseille, 21 % pour le nul et 24 % pour Toulouse. Un favori à 55 % perd encore régulièrement, mais ici le résultat correspond au scénario le plus probable.
+assistant : Marseille a battu Toulouse **2 à 1** le dimanche 1er novembre, lors du match de Ligue 1 disputé à 20h45. Le modèle PronostiK donnait Marseille favori à 55 %, contre 21 % pour le nul et 24 % pour Toulouse. Un favori à 55 % perd tout de même environ 45 fois sur 100, donc ce succès ne prouve pas à lui seul que la prédiction était juste.
