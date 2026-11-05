@@ -50,6 +50,10 @@ jobs:
     needs: update
     if: always()
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -78,4 +82,18 @@ jobs:
         with:
           path: _site
       - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      # Publication bloquée par une publication précédente restée « en cours » : on l'annule puis on republie.
+      - name: Débloquer la publication si besoin
+        if: steps.deployment.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for sha in $(git log -n 40 --format=%H); do
+            gh api -X POST "repos/${{ github.repository }}/pages/deployments/$sha/cancel" >/dev/null 2>&1 && echo "publication $sha annulée" || true
+          done
+          sleep 15
+      - id: deployment2
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
