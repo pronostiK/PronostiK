@@ -27,8 +27,12 @@ export function parseOpenfootball(txt) {
 // Noms de C1 → noms des fichiers nationaux, quand la recherche approchée ne suffit pas.
 export const CL_ALIASES = {
   POR: {'sport lisboa e benfica': 'Benfica', 'sl benfica': 'Benfica', 'sporting clube de portugal': 'Sp Lisbon', 'sporting cp': 'Sp Lisbon', 'fc porto': 'Porto', 'sporting braga': 'Sp Braga', 'sporting clube de braga': 'Sp Braga', 'sc braga': 'Sp Braga'},
-  NED: {'psv': 'PSV Eindhoven', 'psv eindhoven': 'PSV Eindhoven', 'feyenoord rotterdam': 'Feyenoord', 'afc ajax': 'Ajax', 'az alkmaar': 'AZ Alkmaar', 'fc twente': 'Twente'},
-  BEL: {'club brugge kv': 'Club Brugge', 'club brugge': 'Club Brugge', 'krc genk': 'Genk', 'kaa gent': 'Gent', 'royale union saint gilloise': 'St. Gilloise', 'union saint gilloise': 'St. Gilloise', 'rsc anderlecht': 'Anderlecht', 'royal antwerp fc': 'Antwerp'},
+  NED: {'n e c': 'Nijmegen', 'nec': 'Nijmegen', 'nec nijmegen': 'Nijmegen', 'psv': 'PSV Eindhoven', 'psv eindhoven': 'PSV Eindhoven', 'feyenoord rotterdam': 'Feyenoord', 'afc ajax': 'Ajax', 'az alkmaar': 'AZ Alkmaar', 'fc twente': 'Twente'},
+  BEL: {'union sg': 'St. Gilloise', 'club brugge kv': 'Club Brugge', 'club brugge': 'Club Brugge', 'krc genk': 'Genk', 'kaa gent': 'Gent', 'royale union saint gilloise': 'St. Gilloise', 'union saint gilloise': 'St. Gilloise', 'rsc anderlecht': 'Anderlecht', 'royal antwerp fc': 'Antwerp'},
+  CRO: {'gnk dinamo': 'Dinamo Zagreb', 'gnk dinamo zagreb': 'Dinamo Zagreb', 'dinamo zagreb': 'Dinamo Zagreb'},
+  UKR: {'dynamo kyiv': 'Dinamo Kiev', 'fc dynamo kyiv': 'Dinamo Kiev', 'shakhtar donetsk': 'Shakhtar Donetsk', 'fc shakhtar donetsk': 'Shakhtar Donetsk'},
+  CYP: {'pafos': 'Paphos FC', 'pafos fc': 'Paphos FC', 'apoel': 'APOEL Nikosia'},
+  HUN: {'ferencvaros': 'Ferencvárosi TC'},
   SCO: {'celtic fc': 'Celtic', 'rangers fc': 'Rangers'},
   TUR: {'galatasaray': 'Galatasaray', 'galatasaray sk': 'Galatasaray', 'fenerbahce': 'Fenerbahce', 'besiktas': 'Besiktas', 'besiktas jk': 'Besiktas', 'istanbul basaksehir': 'Buyuksehyr'},
   GRE: {'olympiacos': 'Olympiakos', 'olympiacos fc': 'Olympiakos', 'olympiakos': 'Olympiakos', 'aek athens': 'AEK', 'aek athens fc': 'AEK', 'paok': 'PAOK', 'panathinaikos': 'Panathinaikos'},

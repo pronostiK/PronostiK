@@ -416,7 +416,7 @@ async function main() {
     for (const [code, list] of Object.entries(cupMatches)) {
       const T2 = {};
       const row2 = t => T2[t.id] || (T2[t.id] = {t: t.translations?.displayName?.FR || t.internationalName, crest: fdCrest[uefaTeam(t).key] || cupCrest(code, t) || t.mediumLogoUrl || null, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0, form: []});
-      for (const m of list.filter(m => m.round?.metaData?.name === 'League phase')) {
+      for (const m of list.filter(m => m.round?.metaData?.type === 'GROUP_STANDINGS' || /league phase/i.test(m.round?.metaData?.name || ''))) {
         if (!m.homeTeam?.id || !m.awayTeam?.id) continue;
         const h = row2(m.homeTeam), a = row2(m.awayTeam);
         if (m.status !== 'FINISHED' || !m.score?.total) continue;
