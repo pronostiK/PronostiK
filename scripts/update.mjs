@@ -286,7 +286,7 @@ async function main() {
     const resolveCL = makeResolver(Object.fromEntries(Object.entries(knownBy).map(([c, s]) => [c, [...s]])));
     const teamInfo = t => { const ti = state.uclTeams[t?.id] || {}; const c = ti.c || 'XXX'; return {c, key: resolveCL(t?.name || t?.shortName || '', c), short: ti.short || t?.shortName || t?.name}; };
     // Ligue Europa : calendrier et résultats de l'API publique de l'UEFA (absente du plan gratuit de football-data.org).
-    const UEFA_CUPS = [{code: 'EL', id: 14, name: 'Ligue Europa'}];
+    const UEFA_CUPS = [{code: 'EL', id: 14, name: 'Ligue Europa'}, {code: 'ECL', id: 2019, name: 'Ligue Conférence'}];
     const cupMatches = {};
     for (const cup of UEFA_CUPS) {
       try {
@@ -308,7 +308,7 @@ async function main() {
       return {c, key, short: t?.translations?.displayName?.FR || t?.internationalName || '?'}; };
     for (const list of Object.values(cupMatches)) for (const m of list) { const k = `${m.round?.metaData?.name}/${m.round?.metaData?.type}/${m.status}`; roundNames[k] = (roundNames[k] || 0) + 1; }
     // Logos des clubs de Ligue Europa : liste publique d'ESPN (une fois par semaine), associée aux noms UEFA.
-    const ESPN_CUP = {EL: 'uefa.europa'};
+    const ESPN_CUP = {EL: 'uefa.europa', ECL: 'uefa.europa.conf'};
     for (const [code, list] of Object.entries(cupMatches)) {
       const cur = state.crests?.[code];
       if (cur && (NOW - new Date(cur.at)) < 6 * 86400000 && Object.keys(cur.map || {}).length >= 20) continue;
@@ -427,7 +427,7 @@ async function main() {
       const rows2 = Object.values(T2).sort((x, y) => y.pts - x.pts || (y.gf - y.ga) - (x.gf - x.ga) || y.gf - x.gf || x.t.localeCompare(y.t)).map((r, i) => ({rang: i + 1, ...r, form: r.form.slice(-5).join('')}));
       if (rows2.some(r => r.p)) (uclStandings ||= {}).__cups = {...(uclStandings.__cups || {}), [code]: {saison: season, maj: todayStr, phase: 'ligue', rows: rows2}};
     }
-    uclInfo = {ok: true, europa: (cupMatches.EL || []).length, inconnus: [...unknownCup], tours: roundNames, matchs: clMatches.length, joues: events.filter(e => e.cl).length, pronostics: n, sansPays: Object.values(state.uclTeams).filter(t => !t.c).length};
+    uclInfo = {ok: true, europa: (cupMatches.EL || []).length, conference: (cupMatches.ECL || []).length, inconnus: [...unknownCup], tours: roundNames, matchs: clMatches.length, joues: events.filter(e => e.cl).length, pronostics: n, sansPays: Object.values(state.uclTeams).filter(t => !t.c).length};
   } catch (e) { if (!/^désactivée/.test(e.message)) { errors.CL = String(e.message || e).slice(0, 160); console.error('C1 :', e.message); } }
 
   // --- 4d. Ligue des nations (sélections) : Elo des sélections (lab/RAPPORT-SELECTIONS.md), calendrier et résultats de l'API publique de l'UEFA.
@@ -799,7 +799,7 @@ async function main() {
   const errKeys = Object.keys(errors);
   const meta = {
     updated: changed ? NOW.toISOString() : (prevMeta.updated || NOW.toISOString()), season, source: 'football-data.org',
-    leagues: [...LEAGUES, ...(uclInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'CL') ? [{code: 'CL', name: 'Ligue des champions'}] : []), ...(uclInfo.europa || (prevMeta.leagues || []).some(x => x.code === 'EL') ? [{code: 'EL', name: 'Ligue Europa'}] : []), ...(natInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'NL') ? [{code: 'NL', name: 'Ligue des nations'}] : [])].map(l => ({code: l.code, name: l.name, emblem: emblems[l.code] || (prevMeta.leagues || []).find(x => x.code === l.code)?.emblem || null})), errors, ucl: uclInfo, nations: natInfo,
+    leagues: [...LEAGUES, ...(uclInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'CL') ? [{code: 'CL', name: 'Ligue des champions'}] : []), ...(uclInfo.europa || (prevMeta.leagues || []).some(x => x.code === 'EL') ? [{code: 'EL', name: 'Ligue Europa'}] : []), ...(uclInfo.conference || (prevMeta.leagues || []).some(x => x.code === 'ECL') ? [{code: 'ECL', name: 'Ligue Conférence'}] : []), ...(natInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'NL') ? [{code: 'NL', name: 'Ligue des nations'}] : [])].map(l => ({code: l.code, name: l.name, emblem: emblems[l.code] || (prevMeta.leagues || []).find(x => x.code === l.code)?.emblem || null})), errors, ucl: uclInfo, nations: natInfo,
     lastError: errKeys.length ? errKeys.map(k => `${k} : ${errors[k]}`).join(' · ') : null,
     unmapped: [...unmapped.values()],
     odds: oddsInfo,

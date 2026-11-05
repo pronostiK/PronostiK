@@ -10,7 +10,7 @@
   const fmtStamp = new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ});
   const dayKey = d => new Intl.DateTimeFormat('en-CA', {timeZone: TZ}).format(d);
 
-  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', PPL: 'Liga Portugal', DED: 'Eredivisie', ELC: 'Championship', FL2: 'Ligue 2', CL: 'Ligue des champions', EL: 'Ligue Europa', NL: 'Ligue des nations'};
+  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', PPL: 'Liga Portugal', DED: 'Eredivisie', ELC: 'Championship', FL2: 'Ligue 2', CL: 'Ligue des champions', EL: 'Ligue Europa', ECL: 'Ligue Conférence', NL: 'Ligue des nations'};
   let LG_ORDER = ['FL1', 'PL', 'BL1', 'SA', 'PD', 'PPL', 'DED', 'ELC', 'FL2'];
   const LG_EMBLEM = {};
   const emb = (c, cls = 'lg-emb') => LG_EMBLEM[c] && /^https:\/\//.test(LG_EMBLEM[c]) ? `<span class="${cls}"><img src="${esc(LG_EMBLEM[c])}" alt="" loading="lazy"></span>` : '';
@@ -64,7 +64,7 @@
     chat: I('<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'),
   };
 
-  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b', PPL: '#10b981', DED: '#fb923c', ELC: '#c084fc', FL2: '#60a5fa', CL: '#38bdf8', EL: '#f97316', NL: '#e2e8f0'};
+  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b', PPL: '#10b981', DED: '#fb923c', ELC: '#c084fc', FL2: '#60a5fa', CL: '#38bdf8', EL: '#f97316', ECL: '#22c55e', NL: '#e2e8f0'};
   const initials = n => String(n).replace(/\b(FC|AFC|CF|SC|AC|AS|US|SS|RC|CD|UD|SV|VfB|VfL|1\.)\b/gi, '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?';
   const hue = n => { let h = 0; for (const c of String(n)) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
   const mono = n => `<span class="mono" style="background:linear-gradient(145deg,hsl(${hue(n)} 62% 48%),hsl(${(hue(n) + 40) % 360} 62% 34%))" aria-hidden="true">${esc(initials(n))}</span>`;
@@ -110,7 +110,7 @@
   function matchPageHTML(p) {
     const lgc = LG_COLOR[p.lg] || 'var(--accent)';
     const time = (LG_NAME[p.lg] || p.lg || '') + ' · ' + fmtDay.format(new Date(p.kickoff));
-    const isCL = p.lg === 'CL' || p.lg === 'EL', isEL = p.lg === 'EL', isNat = p.lg === 'NL';
+    const isCL = ['CL', 'EL', 'ECL'].includes(p.lg), isEL = p.lg === 'EL' || p.lg === 'ECL', cupName = LG_NAME[p.lg] || '', isNat = p.lg === 'NL';
     const chip = p.rel === 'test' ? '<span class="chip new">Nouveau · fiabilité en test</span>' : p.rel === 'limited' ? '<span class="chip warn">Échantillon réduit</span>' : '';
     const topI = p.p ? p.p.indexOf(Math.max(...p.p)) : -1;
     const cr = p.crest || [], st = p.stats || null;
@@ -249,7 +249,7 @@
       const dnb = p.p[0] + p.p[2] > 0 ? p.p[0] / (p.p[0] + p.p[2]) : 0.5;
       const pair = (a, la, b, lb) => `<div class="mk2"><div class="${a >= b ? 'on' : ''}"><b>${a} %</b><small>${la}</small></div><div class="${b > a ? 'on' : ''}"><b>${b} %</b><small>${lb}</small></div></div>`;
       const hp = pct3(M.ht);
-      const T = isEL ? {o25: 'Pas encore testé sur la Ligue Europa.', btts: 'Pas encore testé sur la Ligue Europa.', o15: 'Pas encore testé sur la Ligue Europa.', ht: 'Pas encore testé sur la Ligue Europa.', sc: 'Pas encore testé sur la Ligue Europa.', n: '537 matchs de C1 (modèle appliqué à la Ligue Europa, non testé sur elle)'}
+      const T = isEL ? {o25: `Pas encore testé sur la ${cupName}.`, btts: `Pas encore testé sur la ${cupName}.`, o15: `Pas encore testé sur la ${cupName}.`, ht: `Pas encore testé sur la ${cupName}.`, sc: `Pas encore testé sur la ${cupName}.`, n: `537 matchs de C1 (modèle appliqué à la ${cupName}, non testé sur elle)`}
         : isNat ? {o25: 'Pas encore testé sur les sélections.', btts: 'Pas encore testé sur les sélections.', o15: 'Pas encore testé sur les sélections.', ht: 'Pas encore testé sur les sélections.', sc: 'Pas encore testé sur les sélections.', n: '1 013 matchs européens (1N2 seulement)'}
         : isCL ? {o25: 'Testé sur 537 matchs de C1 : à peine mieux que la moyenne des matchs.', btts: 'Testé sur 537 matchs de C1 : pas d’apport démontré.', o15: 'Testé sur 537 matchs de C1 : à peine mieux que la moyenne des matchs.', ht: 'Pas encore testé sur la C1.', sc: 'Pas encore testé sur la C1.', n: '537 matchs de C1 (2023-2026)'}
         : {o25: 'Testé sur 2 080 matchs : pas d’apport démontré par rapport à la moyenne du championnat, et les bookmakers sont plus précis.', btts: 'Testé sur 2 080 matchs : pas d’apport démontré par rapport à la moyenne du championnat.', o15: 'Testé sur 2 080 matchs : à peine plus précis que la moyenne des matchs.', ht: 'Testé sur 2 080 matchs : bien calibré.', sc: 'Testé sur 2 080 matchs : le score le plus probable sort environ 12 fois sur 100, comme annoncé.', n: '2 080 matchs'};
