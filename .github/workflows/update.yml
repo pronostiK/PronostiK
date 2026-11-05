@@ -37,8 +37,13 @@ jobs:
           git add data
           if ! git diff --cached --quiet; then
             git commit -m "Mise à jour des données"
-            git pull --rebase -X theirs || { git rebase --abort; echo "Conflit : nouvel essai au prochain passage"; exit 0; }
-            git push
+            # Panne passagère de GitHub ou conflit : 4 essais espacés, sinon les données repartent au passage suivant (pas d'alerte inutile).
+            for i in 1 2 3 4; do
+              if git pull --rebase -X theirs && git push; then exit 0; fi
+              git rebase --abort 2>/dev/null || true
+              echo "Envoi impossible (essai $i), nouvel essai dans 15 s"; sleep 15
+            done
+            echo "::warning::Envoi des données reporté au prochain passage"
           fi
 
   deploy:
