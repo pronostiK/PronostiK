@@ -383,11 +383,21 @@ async function main() {
       // Statistiques : saison en cours du championnat national de chaque club (suivi ou fichier hors-suivi) ; face-à-face : C1 depuis 2017.
       const natRows = c => { const y0 = ['NOR', 'SWE'].includes(c) ? `${todayStr.slice(0, 4)}-01-01` : seasonStart;   // saisons sur l'année civile
         return (extra?.rows || []).filter(r => r[1] === c && r[0] >= y0).map(r => ({date: r[0], home: r[2], away: r[3], hg: r[4], ag: r[5]})); };
-      const side = (c, key, venue) => { const lg = LG_OF[c], n = disp(key), st = lg ? matchStats(lg, n, n, date) : matchStats(null, n, n, date, natRows(c)); return venue === 'dom' ? st.dom : st.ext; };
+      // Repli : sans championnat disponible, les matchs de Coupe d'Europe de la saison (tours préliminaires compris).
+      const src = {};
+      const side = (c, key, venue) => {
+        const lg = LG_OF[c], n = disp(key);
+        let st = lg ? matchStats(lg, n, n, date) : matchStats(null, n, n, date, natRows(c)), b = venue === 'dom' ? st.dom : st.ext;
+        if (!b.tout.p) {
+          const rows = events.filter(e => e.cl && e.date >= seasonStart && (e.h === key || e.a === key)).map(e => ({date: e.date, home: e.h === key ? n : disp(e.h), away: e.a === key ? n : disp(e.a), hg: e.hg, ag: e.ag}));
+          st = matchStats(null, n, n, date, rows); b = venue === 'dom' ? st.dom : st.ext; b.rang = null; src[venue] = 'coupe';
+        }
+        return b;
+      };
       const sd = side(H.c, H.key, 'dom'), se = side(A.c, A.key, 'ext');
       const nm = k => k === H.key ? nameH : k === A.key ? nameA : disp(k);
       const h2h = [...(seed.cl || []), ...clDone].filter(r => r[0] < date && ((r[1] === H.key && r[2] === A.key) || (r[1] === A.key && r[2] === H.key))).slice(-5).reverse().map(r => ({d: r[0], h: nm(r[1]), a: nm(r[2]), hg: r[3], ag: r[4]}));
-      if ((sd.tout.p && se.tout.p) || h2h.length) stats = {equipes: null, dom: sd.tout.p && se.tout.p ? sd : null, ext: sd.tout.p && se.tout.p ? se : null, h2h, national: true};
+      if ((sd.tout.p && se.tout.p) || h2h.length) stats = {equipes: null, dom: sd.tout.p && se.tout.p ? sd : null, ext: sd.tout.p && se.tout.p ? se : null, h2h, national: true, src};
       const entry = {id, apiId: u.apiId, ...(u.uefaId ? {uefaId: u.uefaId} : {}), lg: u.lg, date, kickoff: u.kickoff, home: nameH, away: nameA, crest: u.crest,
         p: x.p.map(r4b), lam: x.lam.map(r4b), score: `${best[0]}–${best[1]}`, model: 'euro-elo', elo: [Math.round(rh), Math.round(ra)],
         markets: {o15: r4b(mk2.o15), o25: r4b(mk2.o25), btts: r4b(mk2.btts), ht: mk2.ht.map(r4b), scores: mk2.scores.map(([sc, v]) => [sc, r4b(v)])},

@@ -204,7 +204,7 @@
         <div class="wdl"><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${H.lieu[k]}</span>`).join('')}</div><span>V · N · D</span><div>${['w', 'd', 'l'].map(k => `<span class="pill ${k}">${A.lieu[k]}</span>`).join('')}</div></div>
         ${duel('up', 'Marqués / match', av(H.lieu.gf, H.lieu.p), av(A.lieu.gf, A.lieu.p), f1, 'high')}
         ${duel('down', 'Encaissés / match', av(H.lieu.ga, H.lieu.p), av(A.lieu.ga, A.lieu.p), f1, 'low')}
-        <p class="note">${isCL ? 'Saison en cours, championnat national de chaque club (pas la C1).' : 'Saison en cours, championnat.'} Valeurs observées, pas des prédictions.</p>`;
+        <p class="note">${isCL ? `Saison en cours, championnat national de chaque club${st.src && (st.src.dom || st.src.ext) ? ` (Coupe d’Europe pour ${[st.src.dom ? p.home : null, st.src.ext ? p.away : null].filter(Boolean).join(' et ')}, faute de données sur son championnat)` : ''}.` : 'Saison en cours, championnat.'} Valeurs observées, pas des prédictions.</p>`;
     }
 
     // --- Onglet Forme : pastilles
