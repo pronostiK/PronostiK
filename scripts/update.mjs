@@ -456,7 +456,36 @@ async function main() {
     };
     const slug = x => String(x).toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g, '');
     for (const lgx of LEAGUES.filter(l => l.source === 'csv')) {
-      for (const f of fx.filter(f => f.div === lgx.csv[0])) {
+      // Calendrier : fichier fixtures.csv (avec cotes, publié le mardi et le vendredi) complété par le calendrier public d'ESPN.
+      const rowsCsv = fx.filter(f => f.div === lgx.csv[0]);
+      const espnRows = [];
+      if (ESPN_SLUG[lgx.code]) {
+        state.espnFx ||= {};
+        const cur = state.espnFx[lgx.code];
+        if (!cur || (NOW - new Date(cur.at)) > 2 * 3600000) {
+          const rows = []; let ok = 0;
+          for (let k = 0; k <= HORIZON_DAYS; k++) {
+            const d = addDays(todayStr, k).replace(/-/g, '');
+            try {
+              const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${ESPN_SLUG[lgx.code]}/scoreboard?dates=${d}`, {signal: AbortSignal.timeout(20000), headers: {'User-Agent': 'Mozilla/5.0 (PronostiK)'}});
+              if (!r.ok) continue; ok++;
+              for (const ev of (await r.json()).events || []) {
+                const c = ev.competitions?.[0]; if (!c || c.status?.type?.completed || !ev.date) continue;
+                const side = h => c.competitors?.find(x => x.homeAway === h)?.team;
+                const nm = t => t && (resolveName(t.displayName, known[lgx.code], ALIASES[lgx.code] || {}, true) || resolveName(t.shortDisplayName, known[lgx.code], ALIASES[lgx.code] || {}, true));
+                const H = nm(side('home')), A = nm(side('away')); if (!H || !A) continue;
+                const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/London', hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'}).formatToParts(new Date(ev.date)).map(x => [x.type, x.value]));
+                rows.push({div: lgx.csv[0], date: `${p.year}-${p.month}-${p.day}`, time: `${p.hour}:${p.minute}`, home: H, away: A, mk: null, od: null, src: 'espn'});
+              }
+            } catch {}
+          }
+          if (ok) state.espnFx[lgx.code] = {at: NOW.toISOString(), rows};
+        }
+        espnRows.push(...(state.espnFx[lgx.code]?.rows || []));
+      }
+      const seen = new Set(rowsCsv.map(f => f.home + '|' + f.away));
+      const allRows = [...rowsCsv, ...espnRows.filter(f => !seen.has(f.home + '|' + f.away))];
+      for (const f of allRows) {
         const kickoff = londonToUTC(f.date, f.time), date = parisDate(new Date(kickoff));
         if (date < todayStr || date > end) continue;
         const id = `cs${lgx.code}-${f.date}-${slug(f.home)}-${slug(f.away)}`, old = byId.get(id);
