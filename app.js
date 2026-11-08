@@ -266,15 +266,26 @@
     }
     // Compositions : onze aligné au dernier match de championnat (ESPN)
     const cmp = cache && cache.compos ? [p.rawHome, p.rawAway].map(n => cache.compos[p.lg + '|' + n] || cache.composByName[n] || null) : [null, null];
-    const ligne = pos => { const x = String(pos || '').toUpperCase(); return x === 'G' || x === 'GK' ? 0 : /^(CD|SW)|B/.test(x) ? 1 : /M/.test(x) ? 2 : 3; };
-    const LIG = ['Gardien', 'Défense', 'Milieu', 'Attaque'];
     const fmtD = d => new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'short'}).format(new Date(d + 'T12:00:00Z'));
+    // Terrain : profondeur (gardien → attaque) et côté (gauche → droite) déduits du poste ESPN
+    const depth = q => { const x = String(q || '').toUpperCase(); if (x === 'G' || x === 'GK') return 0; if (/WB$/.test(x)) return 1.5; if (/^(CD|SW)|B$|^CB/.test(x)) return 1; if (/^DM|^CDM/.test(x)) return 2; if (/^AM|^CAM/.test(x)) return 4; if (/M/.test(x)) return 3; if (/W$/.test(x)) return 4.5; return 5; };
+    const lat = q => { const x = String(q || '').toUpperCase(); if (/-L$/.test(x)) return -1; if (/-R$/.test(x)) return 1; if (/^L/.test(x)) return -2; if (/^R/.test(x)) return 2; return 0; };
+    const lastName = n => String(n).replace(/^[A-ZÀ-Ý]\.\s*/, '');
+    const pitch = (c, color) => {
+      const pl = c.xi.map(([n, nom, q], i) => ({n, nom, q, d: depth(q), s: lat(q), i})).sort((a, b) => a.d - b.d || a.i - b.i);
+      const gk = pl.filter(x => x.d === 0).slice(0, 1), rest = pl.filter(x => !gk.includes(x));
+      let counts = String(c.f || '').split('-').map(Number).filter(v => v > 0);
+      if (counts.reduce((a, b) => a + b, 0) !== rest.length) { const g = {}; rest.forEach(x => g[x.d] = (g[x.d] || 0) + 1); counts = Object.keys(g).sort((a, b) => a - b).map(k => g[k]); }
+      const lines = [gk]; let k = 0; for (const n of counts) { lines.push(rest.slice(k, k + n)); k += n; }
+      const L = lines.length, col = color ? '#' + color : 'var(--accent, #0d9488)';
+      return `<div class="pitch" style="--tc:${col}"><div class="pt-box b"></div><div class="pt-box t"></div><div class="pt-mid"></div><div class="pt-circle"></div>
+        ${lines.map((line, li) => { const y = li === 0 ? 91 : 76 - (li - 1) * (64 / Math.max(1, L - 2)); return line.sort((a, b) => a.s - b.s).map((x, j) => `<div class="pl" style="left:${(100 * (j + 1) / (line.length + 1)).toFixed(1)}%;top:${y.toFixed(1)}%"><span class="pl-n">${esc(x.n)}</span><span class="pl-name">${esc(lastName(x.nom))}</span></div>`).join(''); }).join('')}</div>`;
+    };
     const oneXI = (c, name, crest) => {
       if (!c) return `<div class="xi"><div class="xi-h">${crestImg(crest, name)}<b>${esc(name)}</b></div><p class="muted">Composition non disponible.</p></div>`;
-      const g = [[], [], [], []]; c.xi.forEach(([n, nom, pos]) => g[ligne(pos)].push(esc(nom)));
       return `<div class="xi"><div class="xi-h">${crestImg(crest, name)}<b>${esc(name)}</b>${c.f ? `<span class="xi-f">${esc(c.f)}</span>` : ''}</div>
         <small class="muted">Dernier match : ${esc(fmtD(c.d))} · ${c.v === 'D' ? 'contre' : 'à'} ${esc(dn(c.o))} · ${esc(c.s.replace('-', ' – '))}</small>
-        ${g.map((L, i) => L.length ? `<div class="xi-l"><span>${LIG[i]}</span><p>${L.join(', ')}</p></div>` : '').join('')}</div>`;
+        ${pitch(c, c.c)}</div>`;
     };
     const compos = isNat ? '' : `${oneXI(cmp[0], p.home, (p.crest || [])[0])}${oneXI(cmp[1], p.away, (p.crest || [])[1])}
       <p class="note">${ICON.info} Onze de départ aligné lors du dernier match de championnat de chaque équipe. La composition officielle de ce match est publiée environ 1 h avant le coup d’envoi.</p>`;

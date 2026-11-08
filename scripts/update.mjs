@@ -806,6 +806,7 @@ async function main() {
   // --- Compositions : onze de départ du dernier match de championnat de chaque équipe (ESPN, une fois par heure).
   try {
     state.compos ||= {at: null, days: {}, names: {}, lu: {}};
+    if (state.compos.v !== 2) state.compos = {v: 2, at: null, days: {}, names: state.compos.names || {}, lu: state.compos.lu || {}};
     const C = state.compos;
     if (!process.env.FD_API_BASE && (!C.at || NOW - new Date(C.at) >= 55 * 60000)) {
       const out = {};
@@ -822,7 +823,7 @@ async function main() {
           const side = e.home === n ? 'home' : 'away', L = C.lu[e.id][side];
           if (!L) continue;
           const opp = side === 'home' ? e.away : e.home;
-          out[lg + '|' + ours] = {d: e.date, o: C.names[lg][opp] || opp, v: side === 'home' ? 'D' : 'E', s: side === 'home' ? `${e.hs}-${e.as}` : `${e.as}-${e.hs}`, f: L.formation, xi: L.xi};
+          out[lg + '|' + ours] = {d: e.date, o: C.names[lg][opp] || opp, v: side === 'home' ? 'D' : 'E', s: side === 'home' ? `${e.hs}-${e.as}` : `${e.as}-${e.hs}`, f: L.formation, xi: L.xi, c: /^[0-9a-f]{6}$/i.test(side === 'home' ? e.hc : e.ac) ? (side === 'home' ? e.hc : e.ac) : ''};
         }
       }
       for (const [id, v] of Object.entries(C.lu)) if (v.d < addDays(todayStr, -35)) delete C.lu[id];

@@ -29,7 +29,7 @@ export async function espnRecent(slug, cache = {}, now = new Date()) {
       const c = e.competitions?.[0]; if (!c || !c.status?.type?.completed) continue;
       const h = c.competitors.find(x => x.homeAway === 'home'), a = c.competitors.find(x => x.homeAway === 'away');
       if (!h || !a) continue;
-      day.push({id: String(e.id), date: parisDate(e.date), home: h.team.displayName, away: a.team.displayName, hs: +h.score, as: +a.score});
+      day.push({id: String(e.id), date: parisDate(e.date), home: h.team.displayName, away: a.team.displayName, hs: +h.score, as: +a.score, hc: h.team.color || '', ac: a.team.color || ''});
     }
     keep[d] = day; out.push(...day);
   }
