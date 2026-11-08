@@ -15,18 +15,26 @@ async function getJSON(url) {
 const parisDate = iso => new Intl.DateTimeFormat('en-CA', {timeZone: 'Europe/Paris'}).format(new Date(iso));
 const dayDiff = (a, b) => Math.abs(Date.parse(a) - Date.parse(b)) / 864e5;
 
-// Lit le tableau des scores des 28 derniers jours : matchs terminés {id, date, home, away, hs, as}
-export async function espnRecent(slug, now = new Date()) {
-  const from = new Date(now.getTime() - 28 * 864e5);
-  const j = await getJSON(`https://site.api.espn.com/apis/site/v2/sports/soccer/${slug}/scoreboard?dates=${ymd(from)}-${ymd(now)}&limit=400`);
-  if (!j) return null;
-  const out = [];
-  for (const e of j.events || []) {
-    const c = e.competitions?.[0]; if (!c || !c.status?.type?.completed) continue;
-    const h = c.competitors.find(x => x.homeAway === 'home'), a = c.competitors.find(x => x.homeAway === 'away');
-    if (!h || !a) continue;
-    out.push({id: String(e.id), date: parisDate(e.date), home: h.team.displayName, away: a.team.displayName, hs: +h.score, as: +a.score});
+// Lit le tableau des scores jour par jour (21 derniers jours ; les jours de plus de 2 jours sont gardés en cache).
+// Renvoie les matchs terminés {id, date, home, away, hs, as}. cache : {AAAAMMJJ: [matchs]} (modifié sur place).
+export async function espnRecent(slug, cache = {}, now = new Date()) {
+  const out = [], keep = {};
+  for (let k = 0; k <= 21; k++) {
+    const d = ymd(new Date(now.getTime() - k * 864e5));
+    if (k > 2 && cache[d]) { keep[d] = cache[d]; out.push(...cache[d]); continue; }
+    const j = await getJSON(`https://site.api.espn.com/apis/site/v2/sports/soccer/${slug}/scoreboard?dates=${d}`);
+    if (!j) continue;
+    const day = [];
+    for (const e of j.events || []) {
+      const c = e.competitions?.[0]; if (!c || !c.status?.type?.completed) continue;
+      const h = c.competitors.find(x => x.homeAway === 'home'), a = c.competitors.find(x => x.homeAway === 'away');
+      if (!h || !a) continue;
+      day.push({id: String(e.id), date: parisDate(e.date), home: h.team.displayName, away: a.team.displayName, hs: +h.score, as: +a.score});
+    }
+    keep[d] = day; out.push(...day);
   }
+  for (const d of Object.keys(cache)) delete cache[d];
+  Object.assign(cache, keep);
   return out;
 }
 // Relie les noms ESPN aux noms du site (matchs de l'historique du même championnat)
