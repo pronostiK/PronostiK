@@ -54,6 +54,7 @@ export function mapNames(events, hist, known = {}) {
     if (byNorm[norm(n)]) { map[n] = byNorm[norm(n)]; continue; }
     const s = Object.entries(score[n] || {}).sort((a, b) => b[1] - a[1]);
     if (s.length && s[0][1] >= 2 && (!s[1] || s[0][1] >= 2 * s[1][1])) map[n] = s[0][0];
+    else { const c = [...ours].filter(o => norm(o).length >= 4 && (norm(n).includes(norm(o)) || norm(o).includes(norm(n)))); if (c.length === 1) map[n] = c[0]; }
   }
   return map;
 }

@@ -460,3 +460,10 @@ nav a{padding:8px 10px;font-size:13.5px}
 .tag.ko{border-color:#ef444466;color:#fca5a5}
 .poster.result .tag{white-space:nowrap}
 .crest.flag{object-fit:cover;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.18),0 6px 14px rgba(0,0,0,.35);filter:none}
+
+.xi{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.xi-h{display:flex;align-items:center;gap:8px;margin-bottom:2px}
+.xi-f{margin-left:auto;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;border:1px solid var(--line)}
+.xi-l{display:grid;grid-template-columns:72px 1fr;gap:8px;margin-top:6px;font-size:13.5px}
+.xi-l span{color:var(--muted);font-size:12px;padding-top:1px}
+.xi-l p{margin:0}

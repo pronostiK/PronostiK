@@ -264,7 +264,21 @@
         <div class="mkt"><div class="mkt-h"><span>${ICON.shield}Remboursé si match nul</span>${fiab('ok', 'Déduit directement des probabilités 1N2.')}</div>${pair(P(dnb), esc(p.home), 100 - P(dnb), esc(p.away))}</div>
         <p class="note">${ICON.info} Probabilités statistiques, pas des conseils de pari. Les badges indiquent la fiabilité mesurée sur ${T.n}.</p>`;
     }
-    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h]].filter(([k]) => !(isNat && (k === 'stats' || k === 'classement')));
+    // Compositions : onze aligné au dernier match de championnat (ESPN)
+    const cmp = cache && cache.compos ? [p.rawHome, p.rawAway].map(n => cache.compos[p.lg + '|' + n] || cache.composByName[n] || null) : [null, null];
+    const ligne = pos => { const x = String(pos || '').toUpperCase(); return x === 'G' || x === 'GK' ? 0 : /^(CD|SW)|B/.test(x) ? 1 : /M/.test(x) ? 2 : 3; };
+    const LIG = ['Gardien', 'Défense', 'Milieu', 'Attaque'];
+    const fmtD = d => new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'short'}).format(new Date(d + 'T12:00:00Z'));
+    const oneXI = (c, name, crest) => {
+      if (!c) return `<div class="xi"><div class="xi-h">${crestImg(crest, name)}<b>${esc(name)}</b></div><p class="muted">Composition non disponible.</p></div>`;
+      const g = [[], [], [], []]; c.xi.forEach(([n, nom, pos]) => g[ligne(pos)].push(esc(nom)));
+      return `<div class="xi"><div class="xi-h">${crestImg(crest, name)}<b>${esc(name)}</b>${c.f ? `<span class="xi-f">${esc(c.f)}</span>` : ''}</div>
+        <small class="muted">Dernier match : ${esc(fmtD(c.d))} · ${c.v === 'D' ? 'contre' : 'à'} ${esc(dn(c.o))} · ${esc(c.s.replace('-', ' – '))}</small>
+        ${g.map((L, i) => L.length ? `<div class="xi-l"><span>${LIG[i]}</span><p>${L.join(', ')}</p></div>` : '').join('')}</div>`;
+    };
+    const compos = isNat ? '' : `${oneXI(cmp[0], p.home, (p.crest || [])[0])}${oneXI(cmp[1], p.away, (p.crest || [])[1])}
+      <p class="note">${ICON.info} Onze de départ aligné lors du dernier match de championnat de chaque équipe. La composition officielle de ce match est publiée environ 1 h avant le coup d’envoi.</p>`;
+    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h], ['compos', ICON.ball + 'Compos', compos]].filter(([k]) => !(isNat && (k === 'stats' || k === 'classement' || k === 'compos')));
     return `<article class="mpage card" style="--lg:${lgc}">
       <div class="head" style="cursor:default">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}</div>
       <div class="detail">
@@ -572,6 +586,7 @@
   async function refresh() {
     try {
       const [raw, meta, sc, stand, resume] = await Promise.all([load('predictions.json'), load('meta.json').catch(() => null), load('scorecard.json').catch(() => null), load('standings.json').catch(() => null), load('resume.json').catch(() => null)]);
+      const compos = await load('compos.json').catch(() => null);
       const preds = raw.map(p => ({...p, rawHome: p.home, rawAway: p.away, home: dn(p.home), away: dn(p.away), form: p.form ? {h: (p.form.h || []).map(m => ({...m, o: dn(m.o)})), a: (p.form.a || []).map(m => ({...m, o: dn(m.o)}))} : p.form,
         stats: p.stats ? {...p.stats, h2h: (p.stats.h2h || []).map(m => ({...m, h: dn(m.h), a: dn(m.a)})), dom: p.stats.dom && {...p.stats.dom, matchs: (p.stats.dom.matchs || []).map(m => ({...m, o: dn(m.o)}))}, ext: p.stats.ext && {...p.stats.ext, matchs: (p.stats.ext.matchs || []).map(m => ({...m, o: dn(m.o)}))}} : p.stats}));
       const openIds = [...document.querySelectorAll('button.head[aria-expanded="true"]')].map(b => b.getAttribute('aria-controls'));
@@ -579,7 +594,9 @@
       const crestOf = (lg, t) => (stand && stand[lg] && stand[lg].rows || []).find(r => r.t === t)?.crest || null;
       for (const p of preds) { const c = p.crest || [null, null]; if (!c[0] || !c[1]) p.crest = [c[0] || crestOf(p.lg, p.rawHome), c[1] || crestOf(p.lg, p.rawAway)]; }
       if (resume) for (const k of ['surprises', 'tenus']) for (const x of resume[k] || []) { const c = x.crest || [null, null]; x.crest = [c[0] || crestOf(x.lg, x.home), c[1] || crestOf(x.lg, x.away)]; }
-      cache = {preds, meta, sc, stand, resume};
+      const byName = {};
+      for (const [k, v] of Object.entries(compos || {})) { const n = k.slice(k.indexOf('|') + 1); if (!byName[n] || byName[n].d < v.d) byName[n] = v; }
+      cache = {preds, meta, sc, stand, resume, compos: compos || {}, composByName: byName};
       renderResume(resume);
       renderMatches(preds, meta);
       renderBilan(preds, sc);

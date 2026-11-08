@@ -12,6 +12,7 @@ import {footballDataDate, resolveName} from '../lib.mjs';
 import {LEAGUES, ALIASES} from '../leagues.mjs';
 import {parseCSV, parseFixtures} from '../csv.mjs';
 import {buildNationsSeed, runNationsElo, nationsPredict, nationName, flagUrl} from './nations-lib.mjs';
+import {ESPN_LG, espnRecent, mapNames, espnLineup} from './compos-lib.mjs';
 import {runEuroElo, uclPredict, makeResolver, parseDomesticCSV, countryOfArea, EXTRA_MAIN, EXTRA_NEW, LG_COUNTRY, EXTRA_VERSION} from './ucl-lib.mjs';
 
 const API = process.env.FD_API_BASE || 'https://api.football-data.org/v4';
@@ -801,6 +802,33 @@ async function main() {
     const leaders = LEAGUES.map(l => { const r = standings[l.code]?.rows?.[0]; return r ? {lg: l.code, team: r.t, pts: r.pts, crest: r.crest} : null; }).filter(Boolean);
     writeIfChanged('resume.json', {du: from, au: todayStr, bilan: {n: items.length, favorisJustes: items.filter(x => x.favOk).length}, surprises, tenus, series: series.slice(0, 8), montees, descentes, leaders});
   }
+
+  // --- Compositions : onze de départ du dernier match de championnat de chaque équipe (ESPN, une fois par heure).
+  try {
+    state.compos ||= {at: null, days: {}, names: {}, lu: {}};
+    const C = state.compos;
+    if (!process.env.FD_API_BASE && (!C.at || NOW - new Date(C.at) >= 55 * 60000)) {
+      const out = {};
+      for (const [lg, slug] of Object.entries(ESPN_LG)) {
+        C.days[lg] ||= {}; C.names[lg] ||= {};
+        const ev = await espnRecent(slug, C.days[lg], NOW);
+        const recent = history.filter(m => m.lg === lg && m.date >= addDays(todayStr, -30));
+        C.names[lg] = mapNames(ev, recent, C.names[lg]);
+        const last = {};
+        for (const e of ev.sort((a, b) => a.date.localeCompare(b.date))) { last[e.home] = e; last[e.away] = e; }
+        for (const [n, e] of Object.entries(last)) {
+          const ours = C.names[lg][n]; if (!ours) continue;
+          if (!(e.id in C.lu)) { const lu = await espnLineup(slug, e.id); if (lu) C.lu[e.id] = {d: e.date, ...lu}; else continue; }
+          const side = e.home === n ? 'home' : 'away', L = C.lu[e.id][side];
+          if (!L) continue;
+          const opp = side === 'home' ? e.away : e.home;
+          out[lg + '|' + ours] = {d: e.date, o: C.names[lg][opp] || opp, v: side === 'home' ? 'D' : 'E', s: side === 'home' ? `${e.hs}-${e.as}` : `${e.as}-${e.hs}`, f: L.formation, xi: L.xi};
+        }
+      }
+      for (const [id, v] of Object.entries(C.lu)) if (v.d < addDays(todayStr, -35)) delete C.lu[id];
+      if (Object.keys(out).length) { writeIfChanged('compos.json', out); C.at = NOW.toISOString(); }
+    }
+  } catch (e) { console.log('compositions :', e.message); }
 
   writeIfChanged('history.json', history);
   writeIfChanged('predictions.json', predictions);
