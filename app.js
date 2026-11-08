@@ -278,7 +278,8 @@
       if (counts.reduce((a, b) => a + b, 0) !== rest.length) { const g = {}; rest.forEach(x => g[x.d] = (g[x.d] || 0) + 1); counts = Object.keys(g).sort((a, b) => a - b).map(k => g[k]); }
       const lines = [gk]; let k = 0; for (const n of counts) { lines.push(rest.slice(k, k + n)); k += n; }
       const L = lines.length, col = color ? '#' + color : 'var(--accent, #0d9488)';
-      return `<div class="pitch" style="--tc:${col}"><div class="pt-box b"></div><div class="pt-box t"></div><div class="pt-mid"></div><div class="pt-circle"></div>
+      const light = color && (() => { const v = parseInt(color, 16); return (0.299 * (v >> 16) + 0.587 * ((v >> 8) & 255) + 0.114 * (v & 255)) > 170; })();
+      return `<div class="pitch" style="--tc:${col};--tt:${light ? '#111' : '#fff'}"><div class="pt-box b"></div><div class="pt-box t"></div><div class="pt-mid"></div><div class="pt-circle"></div>
         ${lines.map((line, li) => { const y = li === 0 ? 91 : 76 - (li - 1) * (64 / Math.max(1, L - 2)); return line.sort((a, b) => a.s - b.s).map((x, j) => `<div class="pl" style="left:${(100 * (j + 1) / (line.length + 1)).toFixed(1)}%;top:${y.toFixed(1)}%"><span class="pl-n">${esc(x.n)}</span><span class="pl-name">${esc(lastName(x.nom))}</span></div>`).join(''); }).join('')}</div>`;
     };
     const oneXI = (c, name, crest) => {
