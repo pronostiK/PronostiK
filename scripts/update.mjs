@@ -759,7 +759,7 @@ async function main() {
 
   // --- 6d. Résumé de la journée : surprises, favoris tenus, séries, mouvements au classement (données du site uniquement)
   {
-    const DAYS = 4, from = addDays(todayStr, -DAYS + 1);
+    const DAYS = 30, from = addDays(todayStr, -DAYS + 1);   // bilan sur 30 jours glissants (plus stable)
     const done = predictions.filter(p => p.p && ['H', 'D', 'A'].includes(p.res) && p.date >= from && p.date <= todayStr);
     const lab = (p, i) => i === 1 ? 'Match nul' : (i === 0 ? p.home : p.away);
     const items = done.map(p => { const i = 'HDA'.indexOf(p.res), t = p.p.indexOf(Math.max(...p.p)); return {id: p.id, lg: p.lg, date: p.date, home: p.home, away: p.away, score: p.final, issue: lab(p, i), probIssue: r4(p.p[i]), fav: lab(p, t), probFav: r4(p.p[t]), favOk: t === i, mk: p.mk ? r4(p.mk[i]) : null, crest: p.crest || null}; });
