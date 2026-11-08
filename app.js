@@ -519,6 +519,8 @@
       <div class="rkpi"><b>${b.n}</b><span>matchs joués</span></div>
       <div class="rkpi"><b>${b.favorisJustes}<i>/${b.n}</i></b><span>favoris du modèle qui ont gagné</span></div>
       <div class="rkpi"><b>${(R.surprises || []).length}</b><span>surprises (moins de 30 %)</span></div></div>`);
+    if (b.nCotes) { const pc = v => (100 * v / b.nCotes).toLocaleString('fr-FR', {maximumFractionDigits: 1}); sections.push(`<div class="rvs"><div><b>${pc(b.nousCotes)} %</b><span>PronostiK</span></div><em>contre</em><div><b>${pc(b.bookCotes)} %</b><span>Bookmakers</span></div></div>
+      <p class="note">${ICON.info} Pourcentage de bons favoris sur les ${b.nCotes} matchs où les cotes étaient disponibles. En football, le niveau normal se situe autour de 50 à 55 %, à cause des matchs nuls.</p>`); }
     if ((R.surprises || []).length) sections.push(`<h2 class="rh">${ICON.alert} Les surprises</h2><div class="rgrid">${R.surprises.map(x => card(x, 'sur')).join('')}</div>`);
     if ((R.tenus || []).length) sections.push(`<h2 class="rh">${ICON.check} Les favoris qui ont tenu</h2><div class="rgrid">${R.tenus.map(x => card(x, 'ok')).join('')}</div>`);
     if ((R.series || []).length) sections.push(`<h2 class="rh">${ICON.up} Les séries en cours</h2><div class="rlist">${R.series.map(x => team(x, `<span class="rser ${x.type === 'défaites' || x.type === 'sans victoire' ? 'bad' : 'good'}">${x.n} ${esc(x.type)}</span>`)).join('')}</div>`);

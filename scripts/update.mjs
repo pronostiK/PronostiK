@@ -800,7 +800,7 @@ async function main() {
     const montees = moves.filter(m => m.delta > 0).sort((a, b) => b.delta - a.delta).slice(0, 5);
     const descentes = moves.filter(m => m.delta < 0).sort((a, b) => a.delta - b.delta).slice(0, 5);
     const leaders = LEAGUES.map(l => { const r = standings[l.code]?.rows?.[0]; return r ? {lg: l.code, team: r.t, pts: r.pts, crest: r.crest} : null; }).filter(Boolean);
-    writeIfChanged('resume.json', {du: from, au: todayStr, bilan: {n: items.length, favorisJustes: items.filter(x => x.favOk).length}, surprises, tenus, series: series.slice(0, 8), montees, descentes, leaders});
+    writeIfChanged('resume.json', {du: from, au: todayStr, bilan: {n: items.length, favorisJustes: items.filter(x => x.favOk).length, ...(() => { const C = done.filter(p => Array.isArray(p.mk) && p.mk.length === 3 && p.lg !== 'NL'), top = v => 'HDA'[v.indexOf(Math.max(...v))]; return {nCotes: C.length, nousCotes: C.filter(p => top(p.p) === p.res).length, bookCotes: C.filter(p => top(p.mk) === p.res).length}; })()}, surprises, tenus, series: series.slice(0, 8), montees, descentes, leaders});
   }
 
   // --- Compositions : onze de départ du dernier match de championnat de chaque équipe (ESPN, une fois par heure).

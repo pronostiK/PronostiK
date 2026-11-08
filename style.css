@@ -479,3 +479,7 @@ nav a{padding:8px 10px;font-size:13.5px}
 
 a.pl{text-decoration:none;color:inherit}
 a.pl:active .pl-n{transform:scale(.92)}
+
+.rvs{display:flex;align-items:center;justify-content:center;gap:14px;margin:12px 0 4px;background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:12px}
+.rvs div{display:flex;flex-direction:column;align-items:center;min-width:110px}
+.rvs b{font-size:26px;font-variant-numeric:tabular-nums}.rvs span{color:var(--muted);font-size:12.5px}.rvs em{font-style:normal;color:var(--muted);font-size:13px}
