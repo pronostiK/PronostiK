@@ -806,7 +806,7 @@ async function main() {
   // --- Compositions : onze de départ du dernier match de championnat de chaque équipe (ESPN, une fois par heure).
   try {
     state.compos ||= {at: null, days: {}, names: {}, lu: {}};
-    if (state.compos.v !== 2) state.compos = {v: 2, at: null, days: {}, names: state.compos.names || {}, lu: state.compos.lu || {}};
+    if (state.compos.v !== 3) state.compos = {v: 3, at: null, days: {}, names: state.compos.names || {}, lu: {}};
     const C = state.compos;
     if (!process.env.FD_API_BASE && (!C.at || NOW - new Date(C.at) >= 55 * 60000)) {
       const out = {};

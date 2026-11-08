@@ -64,8 +64,8 @@ export async function espnLineup(slug, id) {
   if (!j) return null;
   const out = {};
   for (const r of j.rosters || []) {
-    const xi = (r.roster || []).filter(p => p.starter).map(p => [p.jersey || '', p.athlete?.shortName || p.athlete?.displayName || '', p.position?.abbreviation || '', +p.formationPlace || 0])
-      .sort((a, b) => (a[3] || 99) - (b[3] || 99)).map(p => p.slice(0, 3));
+    const xi = (r.roster || []).filter(p => p.starter).map(p => [p.jersey || '', p.athlete?.shortName || p.athlete?.displayName || '', p.position?.abbreviation || '', +p.formationPlace || 0, p.athlete?.displayName || ''])
+      .sort((a, b) => (a[3] || 99) - (b[3] || 99)).map(p => [p[0], p[1], p[2], p[4]]);
     if (xi.length >= 10) out[r.homeAway] = {formation: r.formation || '', xi};
   }
   return out.home || out.away ? out : {};

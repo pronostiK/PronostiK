@@ -273,7 +273,7 @@
     const lastName = n => String(n).replace(/^[A-ZÀ-Ý]\.\s*/, '');
     // Une équipe sur une moitié de terrain : top = true pour l'équipe à domicile (en haut, attaque vers le bas)
     const half = (c, top) => {
-      const pl = c.xi.map(([n, nom, q], i) => ({n, nom, q, d: depth(q), s: lat(q), i})).sort((a, b) => a.d - b.d || a.i - b.i);
+      const pl = c.xi.map(([n, nom, q, full], i) => ({n, nom, q, full: full || nom, d: depth(q), s: lat(q), i})).sort((a, b) => a.d - b.d || a.i - b.i);
       const gk = pl.filter(x => x.d === 0).slice(0, 1), rest = pl.filter(x => !gk.includes(x));
       let counts = String(c.f || '').split('-').map(Number).filter(v => v > 0);
       if (counts.reduce((a, b) => a + b, 0) !== rest.length) { const g = {}; rest.forEach(x => g[x.d] = (g[x.d] || 0) + 1); counts = Object.keys(g).sort((a, b) => a - b).map(k => g[k]); }
@@ -282,7 +282,7 @@
       const light = color && (() => { const v = parseInt(color, 16); return (0.299 * (v >> 16) + 0.587 * ((v >> 8) & 255) + 0.114 * (v & 255)) > 170; })();
       return lines.map((line, li) => {
         const dy = li === 0 ? 4.5 : 14 + (li - 1) * (29 / Math.max(1, L - 2)), y = top ? dy : 100 - dy;
-        return line.sort((a, b) => top ? b.s - a.s : a.s - b.s).map((x, j) => `<div class="pl" style="left:${(100 * (j + 1) / (line.length + 1)).toFixed(1)}%;top:${y.toFixed(1)}%;--tc:${col};--tt:${light ? '#111' : '#fff'}"><span class="pl-n">${esc(x.n)}</span><span class="pl-name">${esc(lastName(x.nom))}</span></div>`).join('');
+        return line.sort((a, b) => top ? b.s - a.s : a.s - b.s).map((x, j) => `<a class="pl" href="https://fr.wikipedia.org/w/index.php?search=${encodeURIComponent(x.full)}&go=Go" target="_blank" rel="noopener" title="${esc(x.full)} sur Wikipédia" style="left:${(100 * (j + 1) / (line.length + 1)).toFixed(1)}%;top:${y.toFixed(1)}%;--tc:${col};--tt:${light ? '#111' : '#fff'}"><span class="pl-n">${esc(x.n)}</span><span class="pl-name">${esc(lastName(x.nom))}</span></a>`).join('');
       }).join('');
     };
     const teamBar = (c, name, crest) => `<div class="xi-h">${crestImg(crest, name)}<b>${esc(name)}</b>${c && c.f ? `<span class="xi-f">${esc(c.f)}</span>` : ''}</div>
@@ -290,7 +290,7 @@
     const compos = isNat ? '' : `<div class="xi">${teamBar(cmp[0], p.home, (p.crest || [])[0])}
         <div class="pitch"><div class="pt-box t"></div><div class="pt-box b"></div><div class="pt-mid"></div><div class="pt-circle"></div>${cmp[0] ? half(cmp[0], true) : ''}${cmp[1] ? half(cmp[1], false) : ''}</div>
         ${teamBar(cmp[1], p.away, (p.crest || [])[1])}</div>
-      <p class="note">${ICON.info} Onze de départ aligné lors du dernier match de championnat de chaque équipe. La composition officielle de ce match est publiée environ 1 h avant le coup d’envoi.</p>`;
+      <p class="note">${ICON.info} Onze de départ aligné lors du dernier match de championnat de chaque équipe. Touchez un joueur pour ouvrir sa fiche Wikipédia. La composition officielle de ce match est publiée environ 1 h avant le coup d’envoi.</p>`;
     const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h], ['compos', ICON.ball + 'Compos', compos]].filter(([k]) => !(isNat && (k === 'stats' || k === 'classement' || k === 'compos')));
     return `<article class="mpage card" style="--lg:${lgc}">
       <div class="head" style="cursor:default">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}</div>
