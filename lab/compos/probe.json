@@ -1,29 +1,1228 @@
 {
  "FL1": {
-  "err": "scoreboard"
+  "events": 31,
+  "teams": 18,
+  "mapped": 18,
+  "unmapped": [],
+  "sample": {
+   "id": "401876406",
+   "date": "2026-11-08",
+   "home": "Stade Rennais",
+   "away": "Lille",
+   "hs": 1,
+   "as": 2,
+   "lineup": {
+    "home": {
+     "formation": "3-5-2",
+     "xi": [
+      [
+       "30",
+       "B. Samba",
+       "G"
+      ],
+      [
+       "14",
+       "B. Reynolds",
+       "RM"
+      ],
+      [
+       "18",
+       "M. Nagida",
+       "LM"
+      ],
+      [
+       "5",
+       "G. Oliveira",
+       "CD-L"
+      ],
+      [
+       "4",
+       "C. Cresswell",
+       "CD"
+      ],
+      [
+       "48",
+       "A. Aït Boudlal",
+       "CD-R"
+      ],
+      [
+       "28",
+       "A. Thomasson",
+       "CM-R"
+      ],
+      [
+       "45",
+       "M. Camara",
+       "CM-L"
+      ],
+      [
+       "12",
+       "E. Mayenda",
+       "CF-L"
+      ],
+      [
+       "22",
+       "B. Dia",
+       "CF-R"
+      ],
+      [
+       "21",
+       "V. Rongier",
+       "AM"
+      ]
+     ]
+    },
+    "away": {
+     "formation": "4-3-3",
+     "xi": [
+      [
+       "1",
+       "B. Özer",
+       "G"
+      ],
+      [
+       "3",
+       "N. Ngoy",
+       "RB"
+      ],
+      [
+       "24",
+       "C. Verdonk",
+       "LB"
+      ],
+      [
+       "6",
+       "N. Bentaleb",
+       "CM"
+      ],
+      [
+       "23",
+       "T. Nianzou",
+       "CD-R"
+      ],
+      [
+       "4",
+       "Alexsandro",
+       "CD-L"
+      ],
+      [
+       "17",
+       "N. Mukau",
+       "RM"
+      ],
+      [
+       "21",
+       "B. André",
+       "LM"
+      ],
+      [
+       "10",
+       "H. Haraldsson",
+       "F"
+      ],
+      [
+       "8",
+       "E. Mbappé",
+       "RF"
+      ],
+      [
+       "35",
+       "S. Diaoune",
+       "LF"
+      ]
+     ]
+    }
+   }
+  }
  },
  "PL": {
-  "err": "scoreboard"
+  "events": 35,
+  "teams": 20,
+  "mapped": 20,
+  "unmapped": [],
+  "sample": {
+   "id": "401879244",
+   "date": "2026-11-08",
+   "home": "Brighton & Hove Albion",
+   "away": "Brentford",
+   "hs": 2,
+   "as": 0,
+   "lineup": {
+    "home": {
+     "formation": "4-2-3-1",
+     "xi": [
+      [
+       "1",
+       "B. Verbruggen",
+       "G"
+      ],
+      [
+       "20",
+       "Costinha",
+       "RB"
+      ],
+      [
+       "21",
+       "O. Boscagli",
+       "LB"
+      ],
+      [
+       "14",
+       "C. Andrés",
+       "LM"
+      ],
+      [
+       "44",
+       "L. Vuskovic",
+       "CD-R"
+      ],
+      [
+       "5",
+       "L. Dunk",
+       "CD-L"
+      ],
+      [
+       "25",
+       "D. Gómez",
+       "AM-R"
+      ],
+      [
+       "13",
+       "P. Gross",
+       "RM"
+      ],
+      [
+       "19",
+       "C. Kostoulas",
+       "F"
+      ],
+      [
+       "26",
+       "Y. Ayari",
+       "AM"
+      ],
+      [
+       "29",
+       "M. De Cuyper",
+       "AM-L"
+      ]
+     ]
+    },
+    "away": {
+     "formation": "4-4-2",
+     "xi": [
+      [
+       "1",
+       "C. Kelleher",
+       "G"
+      ],
+      [
+       "33",
+       "M. Kayode",
+       "RB"
+      ],
+      [
+       "2",
+       "A. Hickey",
+       "LB"
+      ],
+      [
+       "18",
+       "M. Sangare",
+       "CM-R"
+      ],
+      [
+       "20",
+       "K. Ajer",
+       "CD-R"
+      ],
+      [
+       "4",
+       "S. van den Berg",
+       "CD-L"
+      ],
+      [
+       "11",
+       "D. Ouattara",
+       "RM"
+      ],
+      [
+       "27",
+       "V. Janelt",
+       "CM-L"
+      ],
+      [
+       "7",
+       "K. Schade",
+       "CF-L"
+      ],
+      [
+       "9",
+       "I. Thiago",
+       "CF-R"
+      ],
+      [
+       "23",
+       "K. Lewis-Potter",
+       "LM"
+      ]
+     ]
+    }
+   }
+  }
  },
  "BL1": {
-  "err": "scoreboard"
+  "events": 28,
+  "teams": 18,
+  "mapped": 17,
+  "unmapped": [
+   "TSG Hoffenheim"
+  ],
+  "sample": {
+   "id": "401884738",
+   "date": "2026-11-08",
+   "home": "FC Cologne",
+   "away": "Bayer Leverkusen",
+   "hs": 1,
+   "as": 2,
+   "lineup": {
+    "home": {
+     "formation": "3-5-2",
+     "xi": [
+      [
+       "1",
+       "M. Schwäbe",
+       "G"
+      ],
+      [
+       "28",
+       "S. Sebulonsen",
+       "RM"
+      ],
+      [
+       "3",
+       "B. Sosa",
+       "LM"
+      ],
+      [
+       "5",
+       "T. Krauss",
+       "CD-L"
+      ],
+      [
+       "22",
+       "J. Simpson-Pusey",
+       "CD"
+      ],
+      [
+       "2",
+       "J. Schmied",
+       "CD-R"
+      ],
+      [
+       "37",
+       "L. Maina",
+       "CM-R"
+      ],
+      [
+       "47",
+       "M. Moore",
+       "CM-L"
+      ],
+      [
+       "10",
+       "S. El Mala",
+       "CF-L"
+      ],
+      [
+       "30",
+       "M. Bulter",
+       "CF-R"
+      ],
+      [
+       "23",
+       "P. Okon-Engstler",
+       "AM"
+      ]
+     ]
+    },
+    "away": {
+     "formation": "4-2-3-1",
+     "xi": [
+      [
+       "1",
+       "M. Flekken",
+       "G"
+      ],
+      [
+       "4",
+       "J. Quansah",
+       "RB"
+      ],
+      [
+       "3",
+       "M. Gutiérrez",
+       "LB"
+      ],
+      [
+       "24",
+       "A. García",
+       "LM"
+      ],
+      [
+       "12",
+       "E. Tapsoba",
+       "CD-R"
+      ],
+      [
+       "2",
+       "F. Medina",
+       "CD-L"
+      ],
+      [
+       "9",
+       "A. Moreira",
+       "AM-R"
+      ],
+      [
+       "6",
+       "E. Fernández",
+       "RM"
+      ],
+      [
+       "14",
+       "P. Schick",
+       "F"
+      ],
+      [
+       "10",
+       "M. Tillman",
+       "AM"
+      ],
+      [
+       "30",
+       "I. Maza",
+       "AM-L"
+      ]
+     ]
+    }
+   }
+  }
  },
  "SA": {
-  "err": "scoreboard"
+  "events": 45,
+  "teams": 20,
+  "mapped": 20,
+  "unmapped": [],
+  "sample": {
+   "id": "401874810",
+   "date": "2026-11-08",
+   "home": "Napoli",
+   "away": "Lazio",
+   "hs": 1,
+   "as": 1,
+   "lineup": {
+    "home": {
+     "formation": "3-4-2-1",
+     "xi": [
+      [
+       "32",
+       "V. Milinkovic-Savic",
+       "G"
+      ],
+      [
+       "26",
+       "A. Vergara",
+       "RM"
+      ],
+      [
+       "17",
+       "M. Olivera",
+       "LM"
+      ],
+      [
+       "16",
+       "R. Marín",
+       "CD-L"
+      ],
+      [
+       "13",
+       "A. Rrahmani",
+       "CD"
+      ],
+      [
+       "31",
+       "S. Beukema",
+       "CD-R"
+      ],
+      [
+       "6",
+       "B. Gilmour",
+       "CM-R"
+      ],
+      [
+       "8",
+       "S. McTominay",
+       "CM-L"
+      ],
+      [
+       "19",
+       "R. Højlund",
+       "F"
+      ],
+      [
+       "11",
+       "K. De Bruyne",
+       "CF-R"
+      ],
+      [
+       "70",
+       "N. Lang",
+       "CF-L"
+      ]
+     ]
+    },
+    "away": {
+     "formation": "4-3-3",
+     "xi": [
+      [
+       "35",
+       "C. Mandas",
+       "G"
+      ],
+      [
+       "15",
+       "R. Floriani",
+       "RB"
+      ],
+      [
+       "17",
+       "N. Tavares",
+       "LB"
+      ],
+      [
+       "21",
+       "R. Belahyane",
+       "CM"
+      ],
+      [
+       "37",
+       "J. Sutalo",
+       "CD-R"
+      ],
+      [
+       "25",
+       "O. Provstgaard",
+       "CD-L"
+      ],
+      [
+       "16",
+       "D. Frattesi",
+       "RM"
+      ],
+      [
+       "24",
+       "K. Taylor",
+       "LM"
+      ],
+      [
+       "9",
+       "A. Pinamonti",
+       "F"
+      ],
+      [
+       "11",
+       "G. Isaksen",
+       "RF"
+      ],
+      [
+       "14",
+       "T. Noslin",
+       "LF"
+      ]
+     ]
+    }
+   }
+  }
  },
  "PD": {
-  "err": "scoreboard"
+  "events": 35,
+  "teams": 20,
+  "mapped": 20,
+  "unmapped": [],
+  "sample": {
+   "id": "401882814",
+   "date": "2026-11-08",
+   "home": "Elche",
+   "away": "Real Betis",
+   "hs": 0,
+   "as": 2,
+   "lineup": {
+    "home": {
+     "formation": "4-3-3",
+     "xi": [
+      [
+       "1",
+       "M. Dituro",
+       "G"
+      ],
+      [
+       "22",
+       "R. Sánchez",
+       "RB"
+      ],
+      [
+       "3",
+       "R. Revivo",
+       "LB"
+      ],
+      [
+       "47",
+       "J. Morcillo",
+       "CM"
+      ],
+      [
+       "5",
+       "F. Redondo",
+       "CD-R"
+      ],
+      [
+       "23",
+       "V. Chust",
+       "CD-L"
+      ],
+      [
+       "16",
+       "M. Neto",
+       "RM"
+      ],
+      [
+       "29",
+       "A. Houary",
+       "LM"
+      ],
+      [
+       "14",
+       "F. Niño",
+       "F"
+      ],
+      [
+       "21",
+       "L. Cepeda",
+       "RF"
+      ],
+      [
+       "11",
+       "G. Valera",
+       "LF"
+      ]
+     ]
+    },
+    "away": {
+     "formation": "4-2-3-1",
+     "xi": [
+      [
+       "1",
+       "Á. Valles",
+       "G"
+      ],
+      [
+       "2",
+       "H. Bellerín",
+       "RB"
+      ],
+      [
+       "11",
+       "F. García",
+       "LB"
+      ],
+      [
+       "21",
+       "M. Roca",
+       "LM"
+      ],
+      [
+       "5",
+       "M. Bartra",
+       "CD-R"
+      ],
+      [
+       "4",
+       "Natan",
+       "CD-L"
+      ],
+      [
+       "7",
+       "Antony",
+       "AM-R"
+      ],
+      [
+       "8",
+       "P. Fornals",
+       "RM"
+      ],
+      [
+       "19",
+       "T. Parrott",
+       "F"
+      ],
+      [
+       "22",
+       "Isco",
+       "AM"
+      ],
+      [
+       "10",
+       "A. Ezzalzouli",
+       "AM-L"
+      ]
+     ]
+    }
+   }
+  }
  },
  "PPL": {
-  "err": "scoreboard"
+  "events": 24,
+  "teams": 18,
+  "mapped": 18,
+  "unmapped": [],
+  "sample": {
+   "id": "401885398",
+   "date": "2026-11-08",
+   "home": "C.D. Nacional",
+   "away": "Académico de Viseu",
+   "hs": 1,
+   "as": 0,
+   "lineup": {
+    "home": {
+     "formation": "4-3-3",
+     "xi": [
+      [
+       "1",
+       "R. Marin",
+       "G"
+      ],
+      [
+       "7",
+       "M. Jensen",
+       "RB"
+      ],
+      [
+       "21",
+       "W. Kokolo",
+       "LB"
+      ],
+      [
+       "6",
+       "M. Dias",
+       "CM"
+      ],
+      [
+       "33",
+       "C. Gonçalves",
+       "CD-R"
+      ],
+      [
+       "38",
+       "Zé Vitor",
+       "CD-L"
+      ],
+      [
+       "8",
+       "M. Baeza",
+       "RM"
+      ],
+      [
+       "15",
+       "C. Labidi",
+       "LM"
+      ],
+      [
+       "29",
+       "N. Kader",
+       "F"
+      ],
+      [
+       "11",
+       "S. Gavriel",
+       "RF"
+      ],
+      [
+       "12",
+       "S. Min-Kyu",
+       "LF"
+      ]
+     ]
+    },
+    "away": {
+     "formation": "4-3-3",
+     "xi": [
+      [
+       "98",
+       "Ewerton",
+       "G"
+      ],
+      [
+       "75",
+       "Robinho",
+       "RB"
+      ],
+      [
+       "3",
+       "M. Brau",
+       "LB"
+      ],
+      [
+       "7",
+       "L. Silva",
+       "CM"
+      ],
+      [
+       "41",
+       "A. Correia",
+       "CD-R"
+      ],
+      [
+       "2",
+       "N. Michelis",
+       "CD-L"
+      ],
+      [
+       "14",
+       "S. Messeguem",
+       "RM"
+      ],
+      [
+       "8",
+       "C. Kahraman",
+       "LM"
+      ],
+      [
+       "33",
+       "A. Clóvis",
+       "F"
+      ],
+      [
+       "22",
+       "N. Mortimer",
+       "RF"
+      ],
+      [
+       "31",
+       "João Guilherme",
+       "LF"
+      ]
+     ]
+    }
+   }
+  }
  },
  "DED": {
-  "err": "scoreboard"
+  "events": 31,
+  "teams": 18,
+  "mapped": 18,
+  "unmapped": [],
+  "sample": {
+   "id": "401875551",
+   "date": "2026-11-08",
+   "home": "Heerenveen",
+   "away": "Feyenoord Rotterdam",
+   "hs": 5,
+   "as": 3,
+   "lineup": {
+    "home": {
+     "formation": "4-2-3-1",
+     "xi": [
+      [
+       "1",
+       "B. Klaverboer",
+       "G"
+      ],
+      [
+       "45",
+       "O. Braude",
+       "RB"
+      ],
+      [
+       "19",
+       "V. Zagaritis",
+       "LB"
+      ],
+      [
+       "8",
+       "N. Courtens",
+       "LM"
+      ],
+      [
+       "4",
+       "S. Kersten",
+       "CD-R"
+      ],
+      [
+       "3",
+       "M. Willemsen",
+       "CD-L"
+      ],
+      [
+       "20",
+       "J. Trenskow",
+       "AM-R"
+      ],
+      [
+       "16",
+       "M. Linday",
+       "RM"
+      ],
+      [
+       "9",
+       "D. Vente",
+       "F"
+      ],
+      [
+       "14",
+       "L. Smans",
+       "AM"
+      ],
+      [
+       "7",
+       "M. Rivera",
+       "AM-L"
+      ]
+     ]
+    },
+    "away": {
+     "formation": "4-3-3",
+     "xi": [
+      [
+       "1",
+       "T. Ernst",
+       "G"
+      ],
+      [
+       "26",
+       "G. Read",
+       "RB"
+      ],
+      [
+       "16",
+       "J. López",
+       "LB"
+      ],
+      [
+       "34",
+       "C. Vanhoutte",
+       "CM"
+      ],
+      [
+       "4",
+       "T. Watanabe",
+       "CD-R"
+      ],
+      [
+       "35",
+       "M. Mármol",
+       "CD-L"
+      ],
+      [
+       "8",
+       "G. Zechiël",
+       "RM"
+      ],
+      [
+       "28",
+       "O. Targhaline",
+       "LM"
+      ],
+      [
+       "19",
+       "Nacho Ferri",
+       "F"
+      ],
+      [
+       "23",
+       "A. Hadj Moussa",
+       "RF"
+      ],
+      [
+       "10",
+       "L. Valente",
+       "LF"
+      ]
+     ]
+    }
+   }
+  }
  },
  "ELC": {
-  "err": "scoreboard"
+  "events": 49,
+  "teams": 24,
+  "mapped": 24,
+  "unmapped": [],
+  "sample": {
+   "id": "401880170",
+   "date": "2026-11-07",
+   "home": "Bristol City",
+   "away": "Norwich City",
+   "hs": 0,
+   "as": 5,
+   "lineup": {
+    "home": {
+     "formation": "4-2-3-1",
+     "xi": [
+      [
+       "40",
+       "B. Collins",
+       "G"
+      ],
+      [
+       "19",
+       "G. Tanner",
+       "RB"
+      ],
+      [
+       "3",
+       "C. Pring",
+       "LB"
+      ],
+      [
+       "4",
+       "A. Randell",
+       "LM"
+      ],
+      [
+       "16",
+       "R. Dickie",
+       "CD-R"
+      ],
+      [
+       "2",
+       "L. Eissat",
+       "CD-L"
+      ],
+      [
+       "21",
+       "R. Cardines",
+       "AM-R"
+      ],
+      [
+       "8",
+       "J. Williams",
+       "RM"
+      ],
+      [
+       "9",
+       "L. Tolaj",
+       "F"
+      ],
+      [
+       "12",
+       "J. Knight",
+       "AM"
+      ],
+      [
+       "10",
+       "S. Twine",
+       "AM-L"
+      ]
+     ]
+    },
+    "away": {
+     "formation": "4-2-3-1",
+     "xi": [
+      [
+       "32",
+       "D. Grimshaw",
+       "G"
+      ],
+      [
+       "3",
+       "J. Stacey",
+       "RB"
+      ],
+      [
+       "14",
+       "B. Chrisene",
+       "LB"
+      ],
+      [
+       "16",
+       "J. Wright",
+       "LM"
+      ],
+      [
+       "15",
+       "R. McConville",
+       "CD-R"
+      ],
+      [
+       "6",
+       "H. Darling",
+       "CD-L"
+      ],
+      [
+       "11",
+       "A. Brooks",
+       "AM-R"
+      ],
+      [
+       "26",
+       "S. Field",
+       "RM"
+      ],
+      [
+       "30",
+       "M. Kvistgaarden",
+       "F"
+      ],
+      [
+       "25",
+       "P. Maghoma",
+       "AM"
+      ],
+      [
+       "49",
+       "A. Musaba",
+       "AM-L"
+      ]
+     ]
+    }
+   }
+  }
  },
  "FL2": {
-  "err": "scoreboard"
+  "events": 28,
+  "teams": 18,
+  "mapped": 18,
+  "unmapped": [],
+  "sample": {
+   "id": "401876699",
+   "date": "2026-11-07",
+   "home": "Clermont Foot",
+   "away": "Rodez Aveyron",
+   "hs": 1,
+   "as": 0,
+   "lineup": {
+    "home": {
+     "formation": "3-4-3",
+     "xi": [
+      [
+       "30",
+       "T. Guivarch",
+       "G"
+      ],
+      [
+       "93",
+       "I. Coulibaly",
+       "RM"
+      ],
+      [
+       "12",
+       "V. N'Simba",
+       "LM"
+      ],
+      [
+       "4",
+       "E. Kabeya",
+       "CD-L"
+      ],
+      [
+       "21",
+       "Y. Salmier",
+       "CD"
+      ],
+      [
+       "28",
+       "I. M'Bahia",
+       "CD-R"
+      ],
+      [
+       "26",
+       "R. Kouamé",
+       "CM-R"
+      ],
+      [
+       "10",
+       "J. Sambia",
+       "CM-L"
+      ],
+      [
+       "7",
+       "F. Bianchini",
+       "F"
+      ],
+      [
+       "23",
+       "A. Hunou",
+       "CF-R"
+      ],
+      [
+       "11",
+       "M. Douane",
+       "CF-L"
+      ]
+     ]
+    },
+    "away": {
+     "formation": "5-3-2",
+     "xi": [
+      [
+       "1",
+       "Q. Braat",
+       "G"
+      ],
+      [
+       "28",
+       "S. Luyambulabiwa",
+       "RB"
+      ],
+      [
+       "20",
+       "R. Ponti",
+       "LB"
+      ],
+      [
+       "3",
+       "R. Lipinski",
+       "CD-L"
+      ],
+      [
+       "4",
+       "M. Magnin",
+       "CD"
+      ],
+      [
+       "24",
+       "L. Quenabio",
+       "CD-R"
+      ],
+      [
+       "29",
+       "A. Cartillier",
+       "CM-R"
+      ],
+      [
+       "6",
+       "J. Mendes",
+       "CM"
+      ],
+      [
+       "21",
+       "Kelian Nsona",
+       "CF-L"
+      ],
+      [
+       "7",
+       "K. Nagera",
+       "CF-R"
+      ],
+      [
+       "10",
+       "M. Saka",
+       "CM-L"
+      ]
+     ]
+    }
+   }
+  }
  }
 }
