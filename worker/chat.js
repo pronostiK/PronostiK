@@ -4,7 +4,7 @@
 // - répond uniquement à partir des données publiées par le site (data/*.json) ;
 // - limites : messages courts, réponses courtes, quota par visiteur et quota global par jour (mémoire de l'instance).
 const MODEL = 'claude-haiku-5-5';
-const ORIGINS = ['https://pronostikapp.fr', 'https://www.pronostikapp.fr', 'https://pronostik.github.io'];
+const ORIGINS = ['https://pronostikapp.fr', 'https://www.pronostikapp.fr', 'https://pronostik.github.io', 'https://pronostik.pages.dev'];
 const PER_IP_DAY = 40, GLOBAL_DAY = 400, MAX_TURNS = 8, MAX_CHARS = 600;
 const counters = {day: '', ip: new Map(), total: 0};
 

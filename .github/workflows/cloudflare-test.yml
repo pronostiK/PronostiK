@@ -1,6 +1,7 @@
 name: Essai Cloudflare Pages
 
 # Essai de publication du site sur Cloudflare Pages (adresse pronostik.pages.dev), sans toucher au site actuel.
+# (+ état du DNS du domaine)
 # Le rapport est enregistré dans lab/cf/rapport.txt.
 on:
   push:
@@ -45,6 +46,12 @@ jobs:
           for p in "" version.json data/predictions.json .well-known/assetlinks.json downloads/pronostik.apk assets/; do
             echo "https://pronostik.pages.dev/$p -> $(curl -s -o /dev/null -w '%{http_code} %{content_type} %{size_download}' https://pronostik.pages.dev/$p)" >> $R
           done
+          echo "--- DNS actuel de pronostikapp.fr" >> $R
+          for t in NS A AAAA MX TXT; do echo "$t: $(dig +short pronostikapp.fr $t | tr '\n' ' ')" >> $R; done
+          echo "www CNAME: $(dig +short www.pronostikapp.fr CNAME | tr '\n' ' ') A: $(dig +short www.pronostikapp.fr A | tr '\n' ' ')" >> $R
+          echo "--- Zone pronostikapp.fr chez Cloudflare ?" >> $R
+          curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/zones?name=pronostikapp.fr" | python3 -c "import json,sys; j=json.load(sys.stdin); print('succès API:', j.get('success'), '| zones:', [(z['name'], z['status'], z.get('name_servers')) for z in j.get('result') or []], '| erreurs:', [e.get('message') for e in j.get('errors') or []])" >> $R 2>&1
+          curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/user/tokens/verify" | python3 -c "import json,sys; j=json.load(sys.stdin); print('jeton:', j.get('result',{}).get('status'))" >> $R 2>&1
           sed -i -E 's/[0-9a-f]{32}/[id]/g' $R
       - name: Enregistrer le rapport
         if: always()

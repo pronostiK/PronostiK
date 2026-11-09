@@ -79,6 +79,16 @@ jobs:
           if [ -f data/chat.json ]; then cp data/chat.json _site/data/; fi
           if [ -d .well-known ]; then cp -r .well-known _site/; fi
           if [ -d downloads ]; then cp -r downloads _site/; fi
+      # Copie sur Cloudflare Pages (pronostik.pages.dev ; migration de l'hébergement). Jamais bloquant pour la publication GitHub.
+      - name: Publier aussi sur Cloudflare Pages
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Pas de jeton Cloudflare : publication Cloudflare ignorée."; exit 0; fi
+          for i in 1 2 3; do npx --yes wrangler@3.80.0 pages deploy _site --project-name=pronostik --branch=main --commit-dirty=true && exit 0; sleep 15; done
+          echo "::warning::Publication Cloudflare impossible (nouvel essai au prochain passage)"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
