@@ -1,74 +1,2037 @@
 {
- "at": "2026-11-09T19:40:33.069Z",
- "seasons": {
-  "2022": {
-   "n": 0,
-   "matches": []
+ "at": "2026-11-09T19:46:00.541Z",
+ "tests": {
+  "sans_parametre": {
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard",
+   "http": 200,
+   "n": 6,
+   "keys": [
+    "leagues",
+    "season",
+    "day",
+    "events",
+    "provider"
+   ],
+   "body": null,
+   "calendar": [
+    {
+     "label": "Spanish Copa del Rey",
+     "startDate": "2026-07-01T04:00Z",
+     "endDate": "2027-07-01T03:59Z",
+     "entries": [
+      {
+       "label": "Qualifying Round",
+       "detail": "Sep 26-Oct 11",
+       "value": "1",
+       "startDate": "2026-07-01T07:00Z",
+       "endDate": "2026-10-12T06:59Z"
+      },
+      {
+       "label": "First Round",
+       "detail": "Oct 27-Nov 18",
+       "value": "2",
+       "startDate": "2026-10-12T07:00Z",
+       "endDate": "2026-11-16T07:59Z"
+      },
+      {
+       "label": "Second Round",
+       "detail": "Nov 16-Dec 15",
+       "value": "3",
+       "startDate": "2026-11-16T08:00Z",
+       "endDate": "2026-12-16T07:59Z"
+      },
+      {
+       "label": "Round of 32",
+       "detail": "Dec 16-31",
+       "value": "4",
+       "startDate": "2026-12-16T08:00Z",
+       "endDate": "2027-01-01T07:59Z"
+      },
+      {
+       "label": "Rd of 16",
+       "detail": "Jan 1-12",
+       "value": "5",
+       "startDate": "2027-01-01T08:00Z",
+       "endDate": "2027-01-13T07:59Z"
+      },
+      {
+       "label": "Quarterfinals",
+       "detail": "Jan 13-31",
+       "value": "6",
+       "startDate": "2027-01-13T08:00Z",
+       "endDate": "2027-02-01T07:59Z"
+      },
+      {
+       "label": "Semifinals",
+       "detail": "Feb 1-Mar 31",
+       "value": "7",
+       "startDate": "2027-02-01T08:00Z",
+       "endDate": "2027-04-01T06:59Z"
+      },
+      {
+       "label": "Final",
+       "detail": "Apr 1-Jun 30",
+       "value": "8",
+       "startDate": "2027-04-01T07:00Z",
+       "endDate": "2027-07-01T06:59Z"
+      }
+     ]
+    }
+   ],
+   "season": {
+    "year": 2026,
+    "startDate": "2026-07-01T04:00Z",
+    "endDate": "2027-07-01T03:59Z",
+    "displayName": "2026-27 Spanish Copa del Rey",
+    "type": {
+     "id": "2",
+     "type": 14558,
+     "name": "First Round",
+     "abbreviation": "First Round"
+    }
+   },
+   "events": [
+    {
+     "date": "2026-11-10T18:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 1:00 PM EST",
+     "home": "Anaitasuna",
+     "away": "Alavés",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T18:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 1:00 PM EST",
+     "home": "CD Pamplona",
+     "away": "Eibar",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T19:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 2:00 PM EST",
+     "home": "Amorebieta",
+     "away": "UD Logroñés",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T19:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 2:00 PM EST",
+     "home": "Mijas Las Lagunas",
+     "away": "Real Jaen CF",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T19:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 2:00 PM EST",
+     "home": "Trival Valderas",
+     "away": "Leganés",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T20:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 3:00 PM EST",
+     "home": "Tavernes de la Valldigna",
+     "away": "Valencia",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    }
+   ]
   },
-  "2023": {
-   "n": 0,
-   "matches": []
+  "un_jour_20261029": {
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20261029",
+   "http": 200,
+   "n": 22,
+   "keys": [
+    "leagues",
+    "events",
+    "provider"
+   ],
+   "body": null,
+   "calendar": [
+    {
+     "label": "Spanish Copa del Rey",
+     "startDate": "2026-07-01T04:00Z",
+     "endDate": "2027-07-01T03:59Z",
+     "entries": [
+      {
+       "label": "Qualifying Round",
+       "detail": "Sep 26-Oct 11",
+       "value": "1",
+       "startDate": "2026-07-01T07:00Z",
+       "endDate": "2026-10-12T06:59Z"
+      },
+      {
+       "label": "First Round",
+       "detail": "Oct 27-Nov 18",
+       "value": "2",
+       "startDate": "2026-10-12T07:00Z",
+       "endDate": "2026-11-16T07:59Z"
+      },
+      {
+       "label": "Second Round",
+       "detail": "Nov 16-Dec 15",
+       "value": "3",
+       "startDate": "2026-11-16T08:00Z",
+       "endDate": "2026-12-16T07:59Z"
+      },
+      {
+       "label": "Round of 32",
+       "detail": "Dec 16-31",
+       "value": "4",
+       "startDate": "2026-12-16T08:00Z",
+       "endDate": "2027-01-01T07:59Z"
+      },
+      {
+       "label": "Rd of 16",
+       "detail": "Jan 1-12",
+       "value": "5",
+       "startDate": "2027-01-01T08:00Z",
+       "endDate": "2027-01-13T07:59Z"
+      },
+      {
+       "label": "Quarterfinals",
+       "detail": "Jan 13-31",
+       "value": "6",
+       "startDate": "2027-01-13T08:00Z",
+       "endDate": "2027-02-01T07:59Z"
+      },
+      {
+       "label": "Semifinals",
+       "detail": "Feb 1-Mar 31",
+       "value": "7",
+       "startDate": "2027-02-01T08:00Z",
+       "endDate": "2027-04-01T06:59Z"
+      },
+      {
+       "label": "Final",
+       "detail": "Apr 1-Jun 30",
+       "value": "8",
+       "startDate": "2027-04-01T07:00Z",
+       "endDate": "2027-07-01T06:59Z"
+      }
+     ]
+    }
+   ],
+   "season": {
+    "year": 2026,
+    "startDate": "2026-07-01T04:00Z",
+    "endDate": "2027-07-01T03:59Z",
+    "displayName": "2026-27 Spanish Copa del Rey",
+    "type": {
+     "id": "2",
+     "type": 14558,
+     "name": "First Round",
+     "abbreviation": "First Round"
+    }
+   },
+   "events": [
+    {
+     "date": "2026-10-29T17:00Z",
+     "status": "STATUS_FINAL_PEN",
+     "detail": "FT-Pens",
+     "home": "Numancia",
+     "away": "Real Oviedo",
+     "hs": "3",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": 4,
+     "aso": 2,
+     "winner": "H",
+     "note": "Numancia win 4-2 on penalties",
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T17:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Peña Sport",
+     "away": "Huesca",
+     "hs": "1",
+     "as": "5",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T18:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Atlético Baleares",
+     "away": "Eldense",
+     "hs": "0",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T18:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Atlético Calatayud",
+     "away": "Osasuna",
+     "hs": "0",
+     "as": "6",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T18:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Coruxo",
+     "away": "Zamora CF",
+     "hs": "0",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T18:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Poblense",
+     "away": "Ceuta",
+     "hs": "1",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T18:00Z",
+     "status": "STATUS_FINAL_AET",
+     "detail": "AET",
+     "home": "San Sebastián de los Reyes",
+     "away": "Coria",
+     "hs": "1",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T18:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "UB Lebrijana",
+     "away": "Getafe",
+     "hs": "2",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T18:30Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Cieza",
+     "away": "Granada",
+     "hs": "0",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Antequera CF",
+     "away": "Aguilas",
+     "hs": "2",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "CD Laredo",
+     "away": "Burgos",
+     "hs": "2",
+     "as": "4",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "CD Varea",
+     "away": "FC Andorra",
+     "hs": "0",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Conquense",
+     "away": "Castellón",
+     "hs": "0",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Covadonga",
+     "away": "Real Valladolid",
+     "hs": "0",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Guijuelo",
+     "away": "Sporting Gijón",
+     "hs": "1",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T19:00Z",
+     "status": "STATUS_FINAL_AET",
+     "detail": "AET",
+     "home": "Real Ávila",
+     "away": "Unionistas de Salamanca",
+     "hs": "1",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T19:30Z",
+     "status": "STATUS_FINAL_AET",
+     "detail": "AET",
+     "home": "Gimnástica Torrelavega",
+     "away": "UD Ourense",
+     "hs": "3",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "AE Prat",
+     "away": "Athletic Club",
+     "hs": "1",
+     "as": "6",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Auriense Cented Academy",
+     "away": "Deportivo",
+     "hs": "0",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Ribadesella",
+     "away": "Racing Santander",
+     "hs": "0",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Sporting Hortaleza",
+     "away": "Sevilla",
+     "hs": "0",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-10-29T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Xerez",
+     "away": "Cádiz",
+     "hs": "1",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    }
+   ]
   },
-  "2024": {
-   "n": 0,
-   "matches": []
+  "un_jour_20251029": {
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20251029",
+   "http": 200,
+   "n": 25,
+   "keys": [
+    "leagues",
+    "events",
+    "provider"
+   ],
+   "body": null,
+   "calendar": [
+    {
+     "label": "Spanish Copa del Rey",
+     "startDate": "2025-07-01T04:00Z",
+     "endDate": "2026-07-01T03:59Z",
+     "entries": [
+      {
+       "label": "Qualifying Round",
+       "detail": "Sep 27-Oct 4",
+       "value": "1",
+       "startDate": "2025-07-01T07:00Z",
+       "endDate": "2025-10-06T06:59Z"
+      },
+      {
+       "label": "First Round",
+       "detail": "Oct 28-30",
+       "value": "2",
+       "startDate": "2025-10-06T07:00Z",
+       "endDate": "2025-11-01T06:59Z"
+      },
+      {
+       "label": "Second Round",
+       "detail": "Dec 2-4",
+       "value": "3",
+       "startDate": "2025-11-01T07:00Z",
+       "endDate": "2025-12-07T07:59Z"
+      },
+      {
+       "label": "Round of 32",
+       "detail": "Dec 16-Jan 6",
+       "value": "4",
+       "startDate": "2025-12-07T08:00Z",
+       "endDate": "2025-12-31T07:59Z"
+      },
+      {
+       "label": "Rd of 16",
+       "detail": "Jan 13-15",
+       "value": "5",
+       "startDate": "2025-12-31T08:00Z",
+       "endDate": "2026-02-01T07:59Z"
+      },
+      {
+       "label": "Quarterfinals",
+       "detail": "Feb 3-5",
+       "value": "6",
+       "startDate": "2026-02-01T08:00Z",
+       "endDate": "2026-02-08T07:59Z"
+      },
+      {
+       "label": "Semifinals",
+       "detail": "Feb 11-Mar 4",
+       "value": "7",
+       "startDate": "2026-02-08T08:00Z",
+       "endDate": "2026-04-01T06:59Z"
+      },
+      {
+       "label": "Final",
+       "detail": "Apr 18",
+       "value": "8",
+       "startDate": "2026-04-01T07:00Z",
+       "endDate": "2026-07-01T06:59Z"
+      }
+     ]
+    }
+   ],
+   "season": {
+    "year": 2025,
+    "startDate": "2025-07-01T04:00Z",
+    "endDate": "2026-07-01T03:59Z",
+    "displayName": "2025-26 Spanish Copa del Rey",
+    "type": {
+     "id": "8",
+     "type": 13729,
+     "name": "Final",
+     "abbreviation": "Final"
+    }
+   },
+   "events": [
+    {
+     "date": "2025-10-29T17:00Z",
+     "status": "STATUS_FINAL_AET",
+     "detail": "AET",
+     "home": "Poblense",
+     "away": "CD Sabadell",
+     "hs": "1",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T18:00Z",
+     "status": "STATUS_FINAL_PEN",
+     "detail": "FT-Pens",
+     "home": "CD Ebro",
+     "away": "Tarazona",
+     "hs": "1",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": 4,
+     "aso": 3,
+     "winner": "H",
+     "note": "CD Ebro advance 4-3 on penalties",
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T18:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "CE Sant Jordi",
+     "away": "Osasuna",
+     "hs": "0",
+     "as": "5",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T18:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Mutilvera",
+     "away": "Real Zaragoza",
+     "hs": "1",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T18:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Unión Deportiva Los Garres",
+     "away": "Elche",
+     "hs": "0",
+     "as": "4",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T18:30Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "La Unión Atlético",
+     "away": "Ceuta",
+     "hs": "0",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Atlètic Sant Just",
+     "away": "Mallorca",
+     "hs": "0",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FINAL_PEN",
+     "detail": "FT-Pens",
+     "home": "Atletico Astorga",
+     "away": "Mirandés",
+     "hs": "1",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": 3,
+     "aso": 4,
+     "winner": "A",
+     "note": "Mirandés advance 4-3 on penalties",
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Azuaga",
+     "away": "Leganés",
+     "hs": "1",
+     "as": "4",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Caudal Deportivo",
+     "away": "Sporting Gijón",
+     "hs": "0",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "CD Artistico Navalcarnero",
+     "away": "Mérida",
+     "hs": "2",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Cieza",
+     "away": "Córdoba",
+     "hs": "1",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Lorca Deportiva",
+     "away": "Almería",
+     "hs": "0",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Naxara",
+     "away": "Eibar",
+     "hs": "2",
+     "as": "4",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Numancia",
+     "away": "Arenas Club",
+     "hs": "3",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Portugalete",
+     "away": "Real Valladolid",
+     "hs": "1",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FINAL_AET",
+     "detail": "AET",
+     "home": "Sant Andreu",
+     "away": "Teruel",
+     "hs": "2",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Torrent",
+     "away": "Juventud Torremolinos",
+     "hs": "3",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:30Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Puente Genil",
+     "away": "FC Cartagena",
+     "hs": "0",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:30Z",
+     "status": "STATUS_FINAL_PEN",
+     "detail": "FT-Pens",
+     "home": "Reus FC Reddis",
+     "away": "CE Europa",
+     "hs": "2",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": 4,
+     "aso": 3,
+     "winner": "H",
+     "note": "Reus FC Reddis advance 4-3 on penalties",
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T19:30Z",
+     "status": "STATUS_FINAL_PEN",
+     "detail": "FT-Pens",
+     "home": "UD Ourense",
+     "away": "Pontevedra",
+     "hs": "1",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": 0,
+     "aso": 3,
+     "winner": "A",
+     "note": "Pontevedra advance 3-0 on penalties",
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Lucena CF",
+     "away": "Villarreal",
+     "hs": "0",
+     "as": "6",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T20:00Z",
+     "status": "STATUS_FINAL_PEN",
+     "detail": "FT-Pens",
+     "home": "Quintanar del Rey",
+     "away": "UD Ibiza",
+     "hs": "1",
+     "as": "1",
+     "hl": [],
+     "al": [],
+     "hso": 4,
+     "aso": 3,
+     "winner": "H",
+     "note": "Quintanar del Rey advance 4-3 on penalties",
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Real Jaen CF",
+     "away": "Eldense",
+     "hs": "1",
+     "as": "3",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2025-10-29T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Yuncos",
+     "away": "Rayo Vallecano",
+     "hs": "1",
+     "as": "6",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": null
+    }
+   ]
   },
-  "2025": {
+  "plage_sans_limit": {
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20251201-20251231",
+   "http": 400,
    "n": 0,
-   "matches": []
+   "keys": [
+    "code",
+    "message"
+   ],
+   "body": null,
+   "calendar": null,
+   "season": null,
+   "events": []
   },
-  "2026": {
+  "plage_courte": {
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20260115-20260116",
+   "http": 400,
    "n": 0,
-   "matches": []
+   "keys": [
+    "code",
+    "message"
+   ],
+   "body": null,
+   "calendar": null,
+   "season": null,
+   "events": []
+  },
+  "finale_2025": {
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20250426",
+   "http": 200,
+   "n": 1,
+   "keys": [
+    "leagues",
+    "events",
+    "provider"
+   ],
+   "body": null,
+   "calendar": [
+    {
+     "label": "Spanish Copa del Rey",
+     "startDate": "2024-07-01T04:00Z",
+     "endDate": "2025-07-01T03:59Z",
+     "entries": [
+      {
+       "label": "Qualifying Round",
+       "detail": "Oct 9",
+       "value": "1",
+       "startDate": "2024-07-01T07:00Z",
+       "endDate": "2024-10-14T06:59Z"
+      },
+      {
+       "label": "First Round",
+       "detail": "Oct 29-Nov 26",
+       "value": "2",
+       "startDate": "2024-10-14T07:00Z",
+       "endDate": "2024-11-27T07:59Z"
+      },
+      {
+       "label": "Second Round",
+       "detail": "Dec 3-5",
+       "value": "3",
+       "startDate": "2024-11-27T08:00Z",
+       "endDate": "2024-12-09T07:59Z"
+      },
+      {
+       "label": "Round of 32",
+       "detail": "Jan 3-7",
+       "value": "4",
+       "startDate": "2024-12-09T08:00Z",
+       "endDate": "2025-01-08T07:59Z"
+      },
+      {
+       "label": "Rd of 16",
+       "detail": "Jan 14-16",
+       "value": "5",
+       "startDate": "2025-01-08T08:00Z",
+       "endDate": "2025-01-20T07:59Z"
+      },
+      {
+       "label": "Quarterfinals",
+       "detail": "Feb 4-6",
+       "value": "6",
+       "startDate": "2025-01-20T08:00Z",
+       "endDate": "2025-02-10T07:59Z"
+      },
+      {
+       "label": "Semifinals",
+       "detail": "Feb 25-Apr 2",
+       "value": "7",
+       "startDate": "2025-02-10T08:00Z",
+       "endDate": "2025-04-07T06:59Z"
+      },
+      {
+       "label": "Final",
+       "detail": "Apr 26",
+       "value": "8",
+       "startDate": "2025-04-07T07:00Z",
+       "endDate": "2025-07-01T06:59Z"
+      }
+     ]
+    }
+   ],
+   "season": {
+    "year": 2024,
+    "startDate": "2024-07-01T04:00Z",
+    "endDate": "2025-07-01T03:59Z",
+    "displayName": "2024-25 Spanish Copa del Rey",
+    "type": {
+     "id": "8",
+     "type": 12916,
+     "name": "Final",
+     "abbreviation": "Final"
+    }
+   },
+   "events": [
+    {
+     "date": "2025-04-26T20:00Z",
+     "status": "STATUS_FINAL_AET",
+     "detail": "AET",
+     "home": "Barcelona",
+     "away": "Real Madrid",
+     "hs": "3",
+     "as": "2",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": null
+    }
+   ]
+  },
+  "saison_2025": {
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?season=2025",
+   "http": 200,
+   "n": 6,
+   "keys": [
+    "leagues",
+    "season",
+    "day",
+    "events",
+    "provider"
+   ],
+   "body": null,
+   "calendar": [
+    {
+     "label": "Spanish Copa del Rey",
+     "startDate": "2026-07-01T04:00Z",
+     "endDate": "2027-07-01T03:59Z",
+     "entries": [
+      {
+       "label": "Qualifying Round",
+       "detail": "Sep 26-Oct 11",
+       "value": "1",
+       "startDate": "2026-07-01T07:00Z",
+       "endDate": "2026-10-12T06:59Z"
+      },
+      {
+       "label": "First Round",
+       "detail": "Oct 27-Nov 18",
+       "value": "2",
+       "startDate": "2026-10-12T07:00Z",
+       "endDate": "2026-11-16T07:59Z"
+      },
+      {
+       "label": "Second Round",
+       "detail": "Nov 16-Dec 15",
+       "value": "3",
+       "startDate": "2026-11-16T08:00Z",
+       "endDate": "2026-12-16T07:59Z"
+      },
+      {
+       "label": "Round of 32",
+       "detail": "Dec 16-31",
+       "value": "4",
+       "startDate": "2026-12-16T08:00Z",
+       "endDate": "2027-01-01T07:59Z"
+      },
+      {
+       "label": "Rd of 16",
+       "detail": "Jan 1-12",
+       "value": "5",
+       "startDate": "2027-01-01T08:00Z",
+       "endDate": "2027-01-13T07:59Z"
+      },
+      {
+       "label": "Quarterfinals",
+       "detail": "Jan 13-31",
+       "value": "6",
+       "startDate": "2027-01-13T08:00Z",
+       "endDate": "2027-02-01T07:59Z"
+      },
+      {
+       "label": "Semifinals",
+       "detail": "Feb 1-Mar 31",
+       "value": "7",
+       "startDate": "2027-02-01T08:00Z",
+       "endDate": "2027-04-01T06:59Z"
+      },
+      {
+       "label": "Final",
+       "detail": "Apr 1-Jun 30",
+       "value": "8",
+       "startDate": "2027-04-01T07:00Z",
+       "endDate": "2027-07-01T06:59Z"
+      }
+     ]
+    }
+   ],
+   "season": {
+    "year": 2026,
+    "startDate": "2026-07-01T04:00Z",
+    "endDate": "2027-07-01T03:59Z",
+    "displayName": "2026-27 Spanish Copa del Rey",
+    "type": {
+     "id": "2",
+     "type": 14558,
+     "name": "First Round",
+     "abbreviation": "First Round"
+    }
+   },
+   "events": [
+    {
+     "date": "2026-11-10T18:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 1:00 PM EST",
+     "home": "Anaitasuna",
+     "away": "Alavés",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T18:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 1:00 PM EST",
+     "home": "CD Pamplona",
+     "away": "Eibar",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T19:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 2:00 PM EST",
+     "home": "Amorebieta",
+     "away": "UD Logroñés",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T19:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 2:00 PM EST",
+     "home": "Mijas Las Lagunas",
+     "away": "Real Jaen CF",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T19:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 2:00 PM EST",
+     "home": "Trival Valderas",
+     "away": "Leganés",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "date": "2026-11-10T20:00Z",
+     "status": "STATUS_SCHEDULED",
+     "detail": "Tue, November 10th at 3:00 PM EST",
+     "home": "Tavernes de la Valldigna",
+     "away": "Valencia",
+     "hs": "0",
+     "as": "0",
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    }
+   ]
+  },
+  "core_events": {
+   "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/esp.copa_del_rey/events?dates=20251201-20251231&limit=100",
+   "http": 200,
+   "n": 43,
+   "keys": [
+    "count",
+    "pageIndex",
+    "pageSize",
+    "pageCount",
+    "items"
+   ],
+   "body": null,
+   "calendar": null,
+   "season": null,
+   "events": [
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    },
+    {
+     "hs": null,
+     "as": null,
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": null,
+     "note": null,
+     "neutral": null
+    }
+   ]
+  },
+  "equipe_real": {
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/teams/86/schedule",
+   "http": 200,
+   "n": 0,
+   "keys": [
+    "timestamp",
+    "status",
+    "season",
+    "team",
+    "events"
+   ],
+   "body": null,
+   "calendar": null,
+   "season": null,
+   "events": []
+  },
+  "equipe_real_2025": {
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/teams/86/schedule?season=2025",
+   "http": 200,
+   "n": 2,
+   "keys": [
+    "timestamp",
+    "status",
+    "season",
+    "team",
+    "events",
+    "requestedSeason"
+   ],
+   "body": null,
+   "calendar": null,
+   "season": null,
+   "events": [
+    {
+     "date": "2026-01-14T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Albacete",
+     "away": "Real Madrid",
+     "hs": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.copa_del_rey/events/401846963/competitions/401846963/competitors/2737/scores/38?lang=en&region=us",
+      "value": 3,
+      "displayValue": "3",
+      "winner": true,
+      "source": {
+       "id": "38",
+       "description": "SA.ENVOY"
+      }
+     },
+     "as": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.copa_del_rey/events/401846963/competitions/401846963/competitors/86/scores/38?lang=en&region=us",
+      "value": 2,
+      "displayValue": "2",
+      "winner": false,
+      "source": {
+       "id": "38",
+       "description": "SA.ENVOY"
+      }
+     },
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "H",
+     "note": null,
+     "neutral": false
+    },
+    {
+     "date": "2025-12-17T20:00Z",
+     "status": "STATUS_FULL_TIME",
+     "detail": "FT",
+     "home": "Talavera",
+     "away": "Real Madrid",
+     "hs": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.copa_del_rey/events/762543/competitions/762543/competitors/5428/scores/38?lang=en&region=us",
+      "value": 2,
+      "displayValue": "2",
+      "winner": false,
+      "source": {
+       "id": "38",
+       "description": "SA.ENVOY"
+      }
+     },
+     "as": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.copa_del_rey/events/762543/competitions/762543/competitors/86/scores/38?lang=en&region=us",
+      "value": 3,
+      "displayValue": "3",
+      "winner": true,
+      "source": {
+       "id": "38",
+       "description": "SA.ENVOY"
+      }
+     },
+     "hl": [],
+     "al": [],
+     "hso": null,
+     "aso": null,
+     "winner": "A",
+     "note": null,
+     "neutral": false
+    }
+   ]
   }
- },
- "sample": null,
- "errors": [
-  "2026 20260901-20260930: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20260901-20260930&limit=300",
-  "2026 20261001-20261031: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20261001-20261031&limit=300",
-  "2026 20261101-20261130: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20261101-20261130&limit=300",
-  "2026 20261201-20261231: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20261201-20261231&limit=300",
-  "2026 20270101-20270131: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20270101-20270131&limit=300",
-  "2026 20270201-20270228: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20270201-20270228&limit=300",
-  "2026 20270301-20270331: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20270301-20270331&limit=300",
-  "2026 20270401-20270430: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20270401-20270430&limit=300",
-  "2026 20270501-20270531: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20270501-20270531&limit=300",
-  "2025 20250901-20250930: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20250901-20250930&limit=300",
-  "2025 20251001-20251031: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20251001-20251031&limit=300",
-  "2025 20251101-20251130: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20251101-20251130&limit=300",
-  "2025 20251201-20251231: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20251201-20251231&limit=300",
-  "2025 20260101-20260131: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20260101-20260131&limit=300",
-  "2025 20260201-20260228: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20260201-20260228&limit=300",
-  "2025 20260301-20260331: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20260301-20260331&limit=300",
-  "2025 20260401-20260430: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20260401-20260430&limit=300",
-  "2025 20260501-20260531: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20260501-20260531&limit=300",
-  "2024 20240901-20240930: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20240901-20240930&limit=300",
-  "2024 20241001-20241031: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20241001-20241031&limit=300",
-  "2024 20241101-20241130: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20241101-20241130&limit=300",
-  "2024 20241201-20241231: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20241201-20241231&limit=300",
-  "2024 20250101-20250131: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20250101-20250131&limit=300",
-  "2024 20250201-20250228: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20250201-20250228&limit=300",
-  "2024 20250301-20250331: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20250301-20250331&limit=300",
-  "2024 20250401-20250430: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20250401-20250430&limit=300",
-  "2024 20250501-20250531: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20250501-20250531&limit=300",
-  "2023 20230901-20230930: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20230901-20230930&limit=300",
-  "2023 20231001-20231031: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20231001-20231031&limit=300",
-  "2023 20231101-20231130: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20231101-20231130&limit=300",
-  "2023 20231201-20231231: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20231201-20231231&limit=300",
-  "2023 20240101-20240131: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20240101-20240131&limit=300",
-  "2023 20240201-20240229: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20240201-20240229&limit=300",
-  "2023 20240301-20240331: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20240301-20240331&limit=300",
-  "2023 20240401-20240430: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20240401-20240430&limit=300",
-  "2023 20240501-20240531: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20240501-20240531&limit=300",
-  "2022 20220901-20220930: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20220901-20220930&limit=300",
-  "2022 20221001-20221031: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20221001-20221031&limit=300",
-  "2022 20221101-20221130: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20221101-20221130&limit=300",
-  "2022 20221201-20221231: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20221201-20221231&limit=300",
-  "2022 20230101-20230131: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20230101-20230131&limit=300",
-  "2022 20230201-20230228: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20230201-20230228&limit=300",
-  "2022 20230301-20230331: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20230301-20230331&limit=300",
-  "2022 20230401-20230430: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20230401-20230430&limit=300",
-  "2022 20230501-20230531: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20230501-20230531&limit=300"
- ],
- "teams": 122
+ }
 }
