@@ -1,0 +1,30 @@
+name: Laboratoire Coupe du Roi
+
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/lab-cdr.mjs', '.github/workflows/lab-cdr.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/lab-cdr.mjs
+      - name: Enregistrer
+        if: always()
+        run: |
+          git config user.name "pronostik-bot"
+          git config user.email "pronostik-bot@users.noreply.github.com"
+          git add lab/cdr
+          if ! git diff --cached --quiet; then
+            git commit -m "Laboratoire Coupe du Roi : sondage"
+            for i in 1 2 3; do git pull --rebase -X theirs && git push && break; git rebase --abort 2>/dev/null; sleep 5; done
+          fi
