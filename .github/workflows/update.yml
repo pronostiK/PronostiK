@@ -10,8 +10,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: pronostik
@@ -51,12 +49,7 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     permissions:
-      pages: write
-      id-token: write
       contents: read
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -79,33 +72,12 @@ jobs:
           if [ -f data/chat.json ]; then cp data/chat.json _site/data/; fi
           if [ -d .well-known ]; then cp -r .well-known _site/; fi
           if [ -d downloads ]; then cp -r downloads _site/; fi
-      # Copie sur Cloudflare Pages (pronostik.pages.dev ; migration de l'hébergement). Jamais bloquant pour la publication GitHub.
-      - name: Publier aussi sur Cloudflare Pages
-        continue-on-error: true
+      # Hébergement : Cloudflare Pages (projet « pronostik », domaines pronostikapp.fr et www), envoi direct (pas de liaison Git : trop de publications par jour).
+      - name: Publier sur Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Pas de jeton Cloudflare : publication Cloudflare ignorée."; exit 0; fi
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "::error::Secret CLOUDFLARE_API_TOKEN manquant : site non publié."; exit 1; fi
           for i in 1 2 3; do npx --yes wrangler@3.80.0 pages deploy _site --project-name=pronostik --branch=main --commit-dirty=true && exit 0; sleep 15; done
-          echo "::warning::Publication Cloudflare impossible (nouvel essai au prochain passage)"
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-      - id: deployment
-        uses: actions/deploy-pages@v4
-        continue-on-error: true
-      # Publication bloquée par une publication précédente restée « en cours » : on l'annule puis on republie.
-      - name: Débloquer la publication si besoin
-        if: steps.deployment.outcome == 'failure'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          for sha in $( (git log -n 40 --format=%H; gh api "repos/${{ github.repository }}/deployments?environment=github-pages&per_page=20" --jq '.[].sha') | sort -u); do
-            gh api -X POST "repos/${{ github.repository }}/pages/deployments/$sha/cancel" >/dev/null 2>&1 && echo "publication $sha annulée" || true
-          done
-          sleep 15
-      - id: deployment2
-        if: steps.deployment.outcome == 'failure'
-        uses: actions/deploy-pages@v4
+          echo "::error::Publication Cloudflare impossible (nouvel essai au prochain passage)"; exit 1

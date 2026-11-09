@@ -7,7 +7,7 @@ Règles : ne jamais demander de secret dans la conversation (tout est dans les s
 ne jamais modifier model.mjs sans preuve statistique (réglage sur une période, test unique sur une autre, IC 95 %).
 
 ## Architecture
-- Site statique (index.html, app.js, style.css) lisant data/*.json ; hébergé sur GitHub Pages (pronostikapp.fr, DNS chez Amen).
+- Site statique (index.html, app.js, style.css) lisant data/*.json ; hébergé sur Cloudflare Pages (pronostikapp.fr, DNS chez Cloudflare, domaine acheté chez Amen).
 - Robot : scripts/update.mjs lancé par .github/workflows/update.yml ; horloge.yml le relance toutes les 5 min pendant les matchs, 30 min sinon.
 - Chat : worker Cloudflare (worker/chat.js). Appli Android : android/.
 - Compétitions : FL1, PL, BL1, SA, PD, PPL, DED, ELC, FL2, CL, EL, ECL, NL (Ligue des nations), CDR (Coupe du Roi).
@@ -23,14 +23,11 @@ ne jamais modifier model.mjs sans preuve statistique (réglage sur une période,
 Absences (lab/RAPPORT-ABSENCES.md), Dixon-Coles (lab/RAPPORT-DIXON.md), xG (lab/xg-result.json) : aucun gain significatif.
 
 ## À faire
-1. Migration Cloudflare Pages EN COURS (9 nov. soir) :
-   - FAIT : le robot publie aussi sur Cloudflare Pages (projet « pronostik », pronostik.pages.dev, envoi direct par wrangler depuis update.yml :
-     PAS de liaison GitHub→Cloudflare, car 100-200 publications/jour > 500 builds/mois). Testé : pages, data, assetlinks, APK OK. Chat autorisé depuis pages.dev.
-   - FAIT : zone pronostikapp.fr créée chez Cloudflare (enregistrements importés, tous en « DNS uniquement », A → GitHub Pages pour l'instant),
-     serveurs de noms changés chez Amen (armando/veda.ns.cloudflare.com), DNSSEC désactivé par Amen. Aucune boîte mail utilisée.
-   - À FAIRE : quand la zone est « Active » chez Cloudflare : projet pronostik → Domaines personnalisés → pronostikapp.fr puis www.pronostikapp.fr.
-     Puis vérifier site/assetlinks/APK/chat/version.json sur pronostikapp.fr, puis retirer la publication GitHub Pages de update.yml et le CNAME GitHub.
-     Plus tard (facultatif) : réactiver DNSSEC côté Cloudflare + DS chez Amen ; enregistrements mail non importés (DKIM key-amfr001/002, SRV _autodiscover, pim) si une boîte mail est créée.
+1. (FAIT 9 nov. 2026) Hébergement migré sur Cloudflare Pages : projet « pronostik », domaines pronostikapp.fr + www (zone DNS chez Cloudflare,
+   serveurs armando/veda.ns.cloudflare.com, domaine toujours acheté chez Amen). Publication par wrangler dans update.yml (job deploy), GitHub Pages retiré.
+   Vérifié : site, data, assetlinks, APK, version.json, CORS du chat, certificat. Contrôle : workflow verif-domaine.yml (rapport lab/cf/verif.txt).
+   Facultatif : réactiver DNSSEC (Cloudflare → DNS → DNSSEC, puis DS chez Amen) ; désactiver GitHub Pages dans les réglages du dépôt ;
+   enregistrements mail non importés (DKIM key-amfr001/002, SRV _autodiscover, pim) à ajouter si une boîte mail est créée chez Amen.
 2. Applications (Android / autres) : à discuter avec l'utilisateur.
 3. Idée en attente : afficher la liste des absents (ESPN) sur la page match, à titre d'info.
 4. Rapport hybride Elo prévu le 4 janvier 2027.
