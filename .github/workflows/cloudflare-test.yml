@@ -1,0 +1,54 @@
+name: Essai Cloudflare Pages
+
+# Essai de publication du site sur Cloudflare Pages (adresse pronostik.pages.dev), sans toucher au site actuel.
+# Le rapport est enregistré dans lab/cf/rapport.txt.
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/cloudflare-test.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  essai:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Préparer le site (comme la publication actuelle)
+        run: |
+          mkdir _site
+          cp index.html style.css app.js manifest.webmanifest _site/
+          cp -r assets _site/
+          V=$(cat index.html style.css app.js | sha1sum | cut -c1-10)
+          sed -i "s/content=\"dev\"/content=\"$V\"/; s/style.css?v=dev/style.css?v=$V/; s/app.js?v=dev/app.js?v=$V/" _site/index.html
+          printf '{"v":"%s"}' "$V" > _site/version.json
+          mkdir _site/data
+          for f in predictions meta scorecard standings resume compos chat; do [ -f data/$f.json ] && cp data/$f.json _site/data/; done
+          [ -d .well-known ] && cp -r .well-known _site/
+          [ -d downloads ] && cp -r downloads _site/
+          du -sh _site; find _site -type f | wc -l
+      - name: Publier sur Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          mkdir -p lab/cf; R=lab/cf/rapport.txt; date -u > $R
+          { [ -n "$CLOUDFLARE_API_TOKEN" ] && echo "jeton: présent" || echo "jeton: ABSENT"; } >> $R
+          npx --yes wrangler@3.80.0 pages project create pronostik --production-branch=main >> $R 2>&1 || echo "(création : déjà existant ou refus, voir ci-dessus)" >> $R
+          npx --yes wrangler@3.80.0 pages deploy _site --project-name=pronostik --branch=main --commit-dirty=true >> $R 2>&1 && echo "PUBLICATION: OK" >> $R || echo "PUBLICATION: ÉCHEC" >> $R
+          sleep 20
+          for p in "" version.json data/predictions.json .well-known/assetlinks.json downloads/pronostik.apk assets/; do
+            echo "https://pronostik.pages.dev/$p -> $(curl -s -o /dev/null -w '%{http_code} %{content_type} %{size_download}' https://pronostik.pages.dev/$p)" >> $R
+          done
+          sed -i -E 's/[0-9a-f]{32}/[id]/g' $R
+      - name: Enregistrer le rapport
+        if: always()
+        run: |
+          git config user.name "pronostik-bot"; git config user.email "pronostik-bot@users.noreply.github.com"
+          git add lab/cf
+          if ! git diff --cached --quiet; then git commit -m "Essai Cloudflare Pages : rapport"; for i in 1 2 3; do git pull --rebase -X theirs && git push && break; git rebase --abort 2>/dev/null; sleep 5; done; fi
