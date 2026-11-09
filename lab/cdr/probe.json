@@ -1,0 +1,12 @@
+{
+ "at": "2026-11-09T19:39:50.043Z",
+ "seasons": {},
+ "sample": null,
+ "errors": [
+  "2026: HTTP 502 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20260801-20270630&limit=1000",
+  "2025: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20250801-20260630&limit=1000",
+  "2024: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20240801-20250630&limit=1000",
+  "2023: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20230801-20240630&limit=1000",
+  "2022: HTTP 400 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20220801-20230630&limit=1000"
+ ]
+}
