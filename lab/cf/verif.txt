@@ -1,0 +1,15 @@
+Mon Nov  9 21:42:11 UTC 2026
+Servi par Cloudflare après 1 essai(s)
+NS: armando.ns.cloudflare.com. veda.ns.cloudflare.com. 
+--- pronostikapp.fr : HTTP/2 200  server: cloudflare 
+--- www.pronostikapp.fr : HTTP/2 200  server: cloudflare 
+https://pronostikapp.fr/ -> 200 text/html; charset=utf-8 11039
+https://pronostikapp.fr/version.json -> 200 application/json 18
+https://pronostikapp.fr/data/predictions.json -> 200 application/json 667506
+https://pronostikapp.fr/data/meta.json -> 200 application/json 4152
+https://pronostikapp.fr/.well-known/assetlinks.json -> 200 application/json 263
+https://pronostikapp.fr/downloads/pronostik.apk -> 200 application/vnd.android.package-archive 1722267
+version GitHub (dernier envoi): {"v":"284f2743c2"} | domaine: {"v":"284f2743c2"}
+chat: https://pronostik-chat.hitch-legende.workers.dev
+chat CORS depuis pronostikapp.fr: 204 access-control-allow-origin: https://pronostikapp.fr
+certificat: issuer=C=US, O=Google Trust Services, CN=WE1 notAfter=Feb  7 21:41:05 2027 GMT 
