@@ -1,0 +1,344 @@
+{
+ "date": "2026-11-09T20:03:37.797Z",
+ "reglage": [
+  "2021-22",
+  "2022-23",
+  "2023-24",
+  "2024-25"
+ ],
+ "test": [
+  "2025-26",
+  "2026-27"
+ ],
+ "nReglage": 458,
+ "nTest": 156,
+ "parametres": {
+  "divisions": {
+   "D2": -0.859,
+   "D3": -1.044,
+   "D4": -1.396,
+   "D5": -2.308,
+   "D6": -5.044
+  },
+  "beta": 0.404,
+  "terrain": -0.053,
+  "nul": 0.629
+ },
+ "test_": {
+  "n": 156,
+  "perteModele": 0.8747,
+  "perteDivisionsSeules": 0.8794,
+  "perteReference": 0.9848,
+  "ecartModeleReference": {
+   "m": -0.11,
+   "lo": -0.1631,
+   "hi": -0.057
+  },
+  "ecartModeleDivisions": {
+   "m": -0.0047,
+   "lo": -0.0323,
+   "hi": 0.023
+  },
+  "favori": {
+   "annonce": 0.595,
+   "gagne": 0.5641,
+   "ecart": {
+    "m": 0.0309,
+    "lo": -0.0407,
+    "hi": 0.1025
+   }
+  },
+  "tranches": [
+   {
+    "de": 0,
+    "a": 0.5,
+    "n": 70,
+    "annonce": 0.43,
+    "observe": 0.4
+   },
+   {
+    "de": 0.5,
+    "a": 0.6,
+    "n": 20,
+    "annonce": 0.535,
+    "observe": 0.55
+   },
+   {
+    "de": 0.6,
+    "a": 0.7,
+    "n": 25,
+    "annonce": 0.649,
+    "observe": 0.52
+   },
+   {
+    "de": 0.7,
+    "a": 0.8,
+    "n": 13,
+    "annonce": 0.746,
+    "observe": 0.769
+   },
+   {
+    "de": 0.8,
+    "a": 0.9,
+    "n": 9,
+    "annonce": 0.829,
+    "observe": 0.778
+   },
+   {
+    "de": 0.9,
+    "a": 1.01,
+    "n": 19,
+    "annonce": 0.982,
+    "observe": 1
+   }
+  ]
+ },
+ "reglage_": {
+  "n": 458,
+  "perteModele": 0.8787,
+  "perteDivisionsSeules": 0.8987,
+  "perteReference": 0.987,
+  "ecartModeleReference": {
+   "m": -0.1083,
+   "lo": -0.1399,
+   "hi": -0.0767
+  },
+  "ecartModeleDivisions": {
+   "m": -0.02,
+   "lo": -0.0378,
+   "hi": -0.0022
+  },
+  "favori": {
+   "annonce": 0.5766,
+   "gagne": 0.5721,
+   "ecart": {
+    "m": 0.0046,
+    "lo": -0.0372,
+    "hi": 0.0463
+   }
+  },
+  "tranches": [
+   {
+    "de": 0,
+    "a": 0.5,
+    "n": 212,
+    "annonce": 0.427,
+    "observe": 0.415
+   },
+   {
+    "de": 0.5,
+    "a": 0.6,
+    "n": 81,
+    "annonce": 0.553,
+    "observe": 0.543
+   },
+   {
+    "de": 0.6,
+    "a": 0.7,
+    "n": 62,
+    "annonce": 0.644,
+    "observe": 0.661
+   },
+   {
+    "de": 0.7,
+    "a": 0.8,
+    "n": 39,
+    "annonce": 0.75,
+    "observe": 0.795
+   },
+   {
+    "de": 0.8,
+    "a": 0.9,
+    "n": 23,
+    "annonce": 0.839,
+    "observe": 0.739
+   },
+   {
+    "de": 0.9,
+    "a": 1.01,
+    "n": 41,
+    "annonce": 0.984,
+    "observe": 1
+   }
+  ]
+ },
+ "criteres": {
+  "battreReference": true,
+  "calibrage": true
+ },
+ "verdict": "VALIDÉ",
+ "parSaison": {
+  "2025-26": {
+   "n": 116,
+   "perteModele": 0.9149,
+   "perteReference": 1.0083,
+   "ecart": {
+    "m": -0.0934,
+    "lo": -0.1567,
+    "hi": -0.0301
+   },
+   "favori": {
+    "annonce": 0.5876,
+    "gagne": 0.5431,
+    "ecart": {
+     "m": 0.0445,
+     "lo": -0.0397,
+     "hi": 0.1288
+    }
+   }
+  },
+  "2026-27": {
+   "n": 40,
+   "perteModele": 0.7581,
+   "perteReference": 0.9165,
+   "ecart": {
+    "m": -0.1584,
+    "lo": -0.2531,
+    "hi": -0.0637
+   },
+   "favori": {
+    "annonce": 0.6164,
+    "gagne": 0.625,
+    "ecart": {
+     "m": -0.0086,
+     "lo": -0.1445,
+     "hi": 0.1272
+    }
+   }
+  }
+ },
+ "surprises": [],
+ "nomsNonReconnus": [],
+ "exemples": [
+  {
+   "date": "2025-10-28",
+   "match": "Ourense CF (D3) – Oviedo (D1)",
+   "p": [
+    25,
+    29,
+    46
+   ],
+   "resultat": "N"
+  },
+  {
+   "date": "2025-10-28",
+   "match": "Inter de Valdemoro (D6) – Getafe (D1)",
+   "p": [
+    0,
+    1,
+    99
+   ],
+   "resultat": "2"
+  },
+  {
+   "date": "2025-10-29",
+   "match": "Poblense (D4) – Sabadell (D3)",
+   "p": [
+    26,
+    29,
+    44
+   ],
+   "resultat": "N"
+  },
+  {
+   "date": "2025-10-29",
+   "match": "Puente Genil (D4) – Cartagena (D3)",
+   "p": [
+    26,
+    29,
+    44
+   ],
+   "resultat": "2"
+  },
+  {
+   "date": "2025-10-30",
+   "match": "Valle de Egüés (D5) – Andorra (D2)",
+   "p": [
+    13,
+    22,
+    65
+   ],
+   "resultat": "2"
+  },
+  {
+   "date": "2025-12-02",
+   "match": "Guadalajara (D3) – Ceuta (D2)",
+   "p": [
+    27,
+    30,
+    43
+   ],
+   "resultat": "1"
+  },
+  {
+   "date": "2025-12-03",
+   "match": "Quintanar del Rey (D4) – Elche (D1)",
+   "p": [
+    15,
+    23,
+    62
+   ],
+   "resultat": "N"
+  },
+  {
+   "date": "2025-12-16",
+   "match": "Eibar (D2) – Elche (D1)",
+   "p": [
+    20,
+    27,
+    53
+   ],
+   "resultat": "2"
+  },
+  {
+   "date": "2025-12-18",
+   "match": "Burgos (D2) – Getafe (D1)",
+   "p": [
+    25,
+    29,
+    46
+   ],
+   "resultat": "1"
+  },
+  {
+   "date": "2026-02-03",
+   "match": "Albacete (D2) – Barcelona (D1)",
+   "p": [
+    6,
+    12,
+    82
+   ],
+   "resultat": "2"
+  },
+  {
+   "date": "2026-10-27",
+   "match": "Cuarte (D5) – Girona (D2)",
+   "p": [
+    6,
+    12,
+    82
+   ],
+   "resultat": "2"
+  },
+  {
+   "date": "2026-10-27",
+   "match": "Don Benito (D4) – Extremadura (D3)",
+   "p": [
+    26,
+    29,
+    44
+   ],
+   "resultat": "N"
+  },
+  {
+   "date": "2026-10-29",
+   "match": "Atlético Calatayud (D6) – Osasuna (D1)",
+   "p": [
+    0,
+    1,
+    98
+   ],
+   "resultat": "2"
+  }
+ ]
+}
