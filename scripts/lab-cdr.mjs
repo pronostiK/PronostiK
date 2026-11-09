@@ -1,38 +1,35 @@
-// Laboratoire Coupe du Roi : sondage du calendrier public d'ESPN (esp.copa_del_rey).
-// Saison en cours (calendrier, tours, équipes) + saisons passées (format des scores : prolongation, tirs au but).
+// Laboratoire Coupe du Roi : quel format de requête ESPN fonctionne pour le calendrier ?
 // Résultat : lab/cdr/probe.json. Ne touche pas au site.
 import {writeFileSync, mkdirSync} from 'node:fs';
 
 const BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey';
 const H = {'User-Agent': 'Mozilla/5.0 (PronostiK)'};
-const get = async u => { const r = await fetch(u, {signal: AbortSignal.timeout(30000), headers: H}); if (!r.ok) throw new Error(`HTTP ${r.status} ${u}`); return r.json(); };
-
-const out = {at: new Date().toISOString(), seasons: {}, sample: null, errors: []};
-// Une requête par mois (ESPN refuse les plages trop longues), de septembre à mai.
-const months = y => [9, 10, 11, 12, 1, 2, 3, 4, 5].map(m => { const yy = m >= 9 ? y : y + 1, mm = String(m).padStart(2, '0'), last = new Date(Date.UTC(yy, m, 0)).getUTCDate(); return `${yy}${mm}01-${yy}${mm}${last}`; });
-try { const t = await get(`${BASE}/teams`); out.teams = (t.sports?.[0]?.leagues?.[0]?.teams || []).length; } catch (e) { out.errors.push('teams: ' + e.message); }
-for (const s of ['2026', '2025', '2024', '2023', '2022']) {
+const out = {at: new Date().toISOString(), tests: {}};
+const brief = e => { const c = e.competitions?.[0] || {}, s = h => c.competitors?.find(x => x.homeAway === h) || {};
+  const h = s('home'), a = s('away');
+  return {date: e.date, status: c.status?.type?.name, detail: c.status?.type?.detail, home: h.team?.displayName, away: a.team?.displayName,
+    hs: h.score ?? null, as: a.score ?? null, hl: (h.linescores || []).map(x => x.value), al: (a.linescores || []).map(x => x.value),
+    hso: h.shootoutScore ?? null, aso: a.shootoutScore ?? null, winner: h.winner ? 'H' : a.winner ? 'A' : null, note: c.notes?.[0]?.headline || null, neutral: c.neutralSite ?? null}; };
+async function test(name, url) {
   try {
-    const ev = [];
-    for (const range of months(Number(s))) {
-      for (let k = 0; k < 3; k++) {
-        try { const j = await get(`${BASE}/scoreboard?dates=${range}&limit=300`); ev.push(...(j.events || [])); break; }
-        catch (e) { if (k === 2) out.errors.push(`${s} ${range}: ${e.message}`); else await new Promise(r => setTimeout(r, 3000)); }
-      }
-    }
-    if (s === '2026' && ev[0]) out.sample = ev.find(e => e.competitions?.[0]?.status?.type?.completed) || ev[0];
-    out.seasons[s] = {n: ev.length, matches: ev.map(e => {
-      const c = e.competitions?.[0] || {}, side = h => c.competitors?.find(x => x.homeAway === h) || {};
-      const h = side('home'), a = side('away');
-      return {date: e.date, round: c.type?.abbreviation || c.notes?.[0]?.headline || e.season?.slug || null, status: c.status?.type?.name, detail: c.status?.type?.detail,
-        period: c.status?.period, neutral: c.neutralSite ?? null,
-        home: h.team?.displayName, homeShort: h.team?.shortDisplayName, away: a.team?.displayName, awayShort: a.team?.shortDisplayName,
-        hs: h.score ?? null, as: a.score ?? null, hl: (h.linescores || []).map(x => x.value), al: (a.linescores || []).map(x => x.value),
-        hso: h.shootoutScore ?? null, aso: a.shootoutScore ?? null, winner: h.winner ? 'H' : a.winner ? 'A' : null,
-        logoH: h.team?.logo || null, logoA: a.team?.logo || null};
-    })};
-  } catch (e) { out.errors.push(`${s}: ${e.message}`); }
+    const r = await fetch(url, {signal: AbortSignal.timeout(30000), headers: H});
+    const t = await r.text(); let j = null; try { j = JSON.parse(t); } catch {}
+    const ev = j?.events || j?.items || [];
+    out.tests[name] = {url, http: r.status, n: ev.length, keys: j ? Object.keys(j).slice(0, 12) : null, body: j ? null : t.slice(0, 200),
+      calendar: j?.leagues?.[0]?.calendar?.slice?.(0, 40) || null, season: j?.leagues?.[0]?.season || null, events: ev.slice(0, 60).map(brief)};
+  } catch (e) { out.tests[name] = {url, error: String(e.message || e)}; }
 }
+await test('sans_parametre', `${BASE}/scoreboard`);
+await test('un_jour_20261029', `${BASE}/scoreboard?dates=20261029`);
+await test('un_jour_20251029', `${BASE}/scoreboard?dates=20251029`);
+await test('plage_sans_limit', `${BASE}/scoreboard?dates=20251201-20251231`);
+await test('plage_courte', `${BASE}/scoreboard?dates=20260115-20260116`);
+await test('finale_2025', `${BASE}/scoreboard?dates=20250426`);
+await test('saison_2025', `${BASE}/scoreboard?season=2025`);
+await test('core_events', `https://sports.core.api.espn.com/v2/sports/soccer/leagues/esp.copa_del_rey/events?dates=20251201-20251231&limit=100`);
+// calendrier d'une équipe (Real Madrid id 86 chez ESPN), filtré sur la coupe
+await test('equipe_real', `https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/teams/86/schedule`);
+await test('equipe_real_2025', `https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/teams/86/schedule?season=2025`);
 mkdirSync('lab/cdr', {recursive: true});
 writeFileSync('lab/cdr/probe.json', JSON.stringify(out, null, 1));
-console.log(Object.entries(out.seasons).map(([s, v]) => `${s}: ${v.n} matchs`).join(' | '), out.errors);
+for (const [k, v] of Object.entries(out.tests)) console.log(k, v.http, v.n, v.error || '');
