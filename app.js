@@ -10,7 +10,7 @@
   const fmtStamp = new Intl.DateTimeFormat('fr-FR', {day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ});
   const dayKey = d => new Intl.DateTimeFormat('en-CA', {timeZone: TZ}).format(d);
 
-  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', PPL: 'Liga Portugal', DED: 'Eredivisie', ELC: 'Championship', FL2: 'Ligue 2', CL: 'Ligue des champions', EL: 'Ligue Europa', ECL: 'Ligue Conférence', NL: 'Ligue des nations'};
+  const LG_NAME = {FL1: 'Ligue 1', PL: 'Premier League', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', PPL: 'Liga Portugal', DED: 'Eredivisie', ELC: 'Championship', FL2: 'Ligue 2', CL: 'Ligue des champions', EL: 'Ligue Europa', ECL: 'Ligue Conférence', NL: 'Ligue des nations', CDR: 'Coupe du Roi'};
   let LG_ORDER = ['FL1', 'PL', 'BL1', 'SA', 'PD', 'PPL', 'DED', 'ELC', 'FL2'];
   const LG_EMBLEM = {};
   const emb = (c, cls = 'lg-emb') => LG_EMBLEM[c] && /^https:\/\//.test(LG_EMBLEM[c]) ? `<span class="${cls}"><img src="${esc(LG_EMBLEM[c])}" alt="" loading="lazy"></span>` : '';
@@ -64,7 +64,7 @@
     chat: I('<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'),
   };
 
-  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b', PPL: '#10b981', DED: '#fb923c', ELC: '#c084fc', FL2: '#60a5fa', CL: '#38bdf8', EL: '#f97316', ECL: '#22c55e', NL: '#e2e8f0'};
+  const LG_COLOR = {FL1: '#3b82f6', PL: '#a855f7', BL1: '#ef4444', SA: '#22c55e', PD: '#f59e0b', PPL: '#10b981', DED: '#fb923c', ELC: '#c084fc', FL2: '#60a5fa', CL: '#38bdf8', EL: '#f97316', ECL: '#22c55e', NL: '#e2e8f0', CDR: '#dc2626'};
   const initials = n => String(n).replace(/\b(FC|AFC|CF|SC|AC|AS|US|SS|RC|CD|UD|SV|VfB|VfL|1\.)\b/gi, '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?';
   const hue = n => { let h = 0; for (const c of String(n)) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
   const mono = n => `<span class="mono" style="background:linear-gradient(145deg,hsl(${hue(n)} 62% 48%),hsl(${(hue(n) + 40) % 360} 62% 34%))" aria-hidden="true">${esc(initials(n))}</span>`;
@@ -94,6 +94,13 @@
 
   // Carte d'un match joué : score, nos probabilités et les cotes d'avant-match, issue réelle surlignée.
   function resultHTML(p) {
+    if (!p.p) {   // match affiché sans pronostic (Coupe du Roi, club hors Liga) : score seul
+      const lgc0 = LG_COLOR[p.lg] || 'var(--accent)', cr0 = p.crest || [], w = 'HDA'.indexOf(p.res), sd = (name, url, win) => `<div class="side${win ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span></div>`;
+      return `<a class="poster result" href="#match/${encodeURIComponent(p.id)}" style="--lg:${lgc0}" aria-label="${esc(p.home)} ${esc(p.final || '')} ${esc(p.away)}">
+      <div class="meta"><span class="lgname" title="${esc(LG_NAME[p.lg] || p.lg || '')}">${emb(p.lg, 'lg-mini') || `<i style="background:${lgc0}"></i>${esc(LG_NAME[p.lg] || p.lg || '')}`}</span><span class="ptime">${esc(fmtTime.format(new Date(p.kickoff)))}</span></div>
+      <div class="match">${sd(p.home, cr0[0], w === 0)}<div class="mid"><strong class="fscore">${esc((p.final || '').replace('–', ' – '))}</strong></div>${sd(p.away, cr0[1], w === 2)}</div>
+      <p class="pfoot muted">${p.fin ? esc(p.fin) + ' · ' : ''}Sans pronostic</p></a>`;
+    }
     const lgc = LG_COLOR[p.lg] || 'var(--accent)', cr = p.crest || [], i = 'HDA'.indexOf(p.res), t = p.p.indexOf(Math.max(...p.p));
     const v = pct3(p.p), side = (name, url, win) => `<div class="side${win ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span></div>`;
     const od = Array.isArray(p.od) && p.od.length === 3 ? p.od : Array.isArray(p.mk) && p.mk.length === 3 ? p.mk.map(x => 1 / x) : null;
@@ -104,22 +111,22 @@
       <div class="meta"><span class="lgname" title="${esc(LG_NAME[p.lg] || p.lg || '')}">${emb(p.lg, 'lg-mini') || `<i style="background:${lgc}"></i>${esc(LG_NAME[p.lg] || p.lg || '')}`}</span><span class="ptime">${esc(fmtTime.format(new Date(p.kickoff)))}</span></div>
       <div class="match">${side(p.home, cr[0], i === 0)}<div class="mid"><strong class="fscore">${esc((p.final || '').replace('–', ' – '))}</strong></div>${side(p.away, cr[1], i === 2)}</div>
       <div class="rcells">${cells}</div>
-      <div class="pfoot"><span class="tag ${tag[1]}">${tag[0]}</span><span class="pfav">${od ? 'Cotes d’avant-match' : 'Sans cotes'}</span></div></a>`;
+      <div class="pfoot"><span class="tag ${tag[1]}">${tag[0]}</span><span class="pfav">${p.fin ? esc(p.fin) : od ? 'Cotes d’avant-match' : 'Sans cotes'}</span></div></a>`;
   }
 
   function matchPageHTML(p) {
     const lgc = LG_COLOR[p.lg] || 'var(--accent)';
-    const time = (LG_NAME[p.lg] || p.lg || '') + ' · ' + fmtDay.format(new Date(p.kickoff));
-    const isCL = ['CL', 'EL', 'ECL'].includes(p.lg), isEL = p.lg === 'EL' || p.lg === 'ECL', cupName = LG_NAME[p.lg] || '', isNat = p.lg === 'NL';
-    const chip = p.rel === 'test' ? '<span class="chip new">Nouveau · fiabilité en test</span>' : p.rel === 'limited' ? '<span class="chip warn">Échantillon réduit</span>' : '';
+    const time = (LG_NAME[p.lg] || p.lg || '') + (p.tour ? ' · ' + p.tour : '') + ' · ' + fmtDay.format(new Date(p.kickoff));
+    const isCL = ['CL', 'EL', 'ECL'].includes(p.lg), isEL = ['EL', 'ECL', 'CDR'].includes(p.lg), isCDR = p.lg === 'CDR', cupName = LG_NAME[p.lg] || '', isNat = p.lg === 'NL';
+    const chip = !p.p ? '' : p.rel === 'test' ? '<span class="chip new">Nouveau · fiabilité en test</span>' : p.rel === 'limited' ? '<span class="chip warn">Échantillon réduit</span>' : '';
     const topI = p.p ? p.p.indexOf(Math.max(...p.p)) : -1;
     const cr = p.crest || [], st = p.stats || null;
-    const rk = r => r ? `<small class="rank">${r}${r === 1 ? 'er' : 'e'} ${isCL ? 'en championnat' : 'au classement'}</small>` : '';
+    const rk = r => r ? `<small class="rank">${r}${r === 1 ? 'er' : 'e'} ${isCDR ? 'en Liga' : isCL ? 'en championnat' : 'au classement'}</small>` : '';
     const side = (name, url, fav, r) => `<div class="side${fav ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span>${rk(r)}</div>`;
     const head = `<div class="meta"><span class="lgname">${emb(p.lg, 'lg-mini') || `<i style="background:${lgc}"></i>`}${esc(time)}</span>${chip}</div>
-      <div class="match big">${side(p.home, cr[0], topI === 0, st && st.dom && st.dom.rang)}<div class="mid">${p.final ? `<strong class="fscore">${esc(p.final.replace('–', ' – '))}</strong><small>TERMINÉ</small>` : `<strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small>`}</div>${side(p.away, cr[1], topI === 2, st && st.ext && st.ext.rang)}</div>`;
+      <div class="match big">${side(p.home, cr[0], topI === 0, st && st.dom && st.dom.rang)}<div class="mid">${p.final ? `<strong class="fscore">${esc(p.final.replace('–', ' – '))}</strong><small>${p.fin ? esc(p.fin.replace('Après prolongation', 'A.P.')) : 'TERMINÉ'}</small>` : `<strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small>`}</div>${side(p.away, cr[1], topI === 2, st && st.ext && st.ext.rang)}</div>`;
     if (!p.p) {
-      return `<article class="mpage card" style="--lg:${lgc}"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${/non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
+      return `<article class="mpage card" style="--lg:${lgc}"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${p.why ? esc(p.why) : /non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
     }
     const pcts = pct3(p.p), top = topI;
     const labels = ['Domicile', 'Nul', 'Extérieur'], tags = ['1', 'N', '2'];
@@ -228,9 +235,10 @@
 
     // --- Onglet Classement : championnat en cours, les deux équipes surlignées
     let classement = '<p class="muted">Classement indisponible pour le moment.</p>';
-    const SD = cache && cache.stand && cache.stand[p.lg];
+    const lgT = isCDR ? 'PD' : p.lg;   // Coupe du Roi : classement de Liga
+    const SD = cache && cache.stand && cache.stand[lgT];
     if (SD && SD.rows && SD.rows.length) {
-      const n = SD.rows.length, rel = isCL ? n - 24 : ({FL1: 2, PL: 3, BL1: 2, SA: 3, PD: 3, PPL: 2, DED: 2, ELC: 3, FL2: 2}[p.lg] || 3), div2 = p.lg === 'ELC' || p.lg === 'FL2', topN = isCL ? 8 : p.lg === 'ELC' ? 6 : p.lg === 'FL2' ? 5 : 4;
+      const n = SD.rows.length, rel = isCL ? n - 24 : ({FL1: 2, PL: 3, BL1: 2, SA: 3, PD: 3, PPL: 2, DED: 2, ELC: 3, FL2: 2}[lgT] || 3), div2 = lgT === 'ELC' || lgT === 'FL2', topN = isCL ? 8 : lgT === 'ELC' ? 6 : lgT === 'FL2' ? 5 : 4;
       const raw = {h: p.rawHome || p.home, a: p.rawAway || p.away};
       const isMe = (r, nm) => r.t === nm || (isCL && r.crest && ((nm === raw.h && r.crest === (p.crest || [])[0]) || (nm === raw.a && r.crest === (p.crest || [])[1])));
       classement = `<div class="table-lg">${SD.rows.map(r => {
@@ -307,9 +315,11 @@
     if (meta && meta.leagues) { meta.leagues.forEach(l => { LG_NAME[l.code] = l.name; if (l.emblem) LG_EMBLEM[l.code] = l.emblem; }); LG_ORDER = meta.leagues.map(l => l.code); }
     document.querySelectorAll('#mode button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
     const isRes = mode === 'res';
-    const all = isRes ? preds.filter(p => p.p && ['H', 'D', 'A'].includes(p.res) && new Date(p.kickoff).getTime() > now - 7 * 86400e3)
+    const bare = p => p.lg === 'CDR' && !p.p;   // Coupe du Roi sans pronostic : visible seulement dans son onglet
+    const base = isRes ? preds.filter(p => (p.p || bare(p)) && ['H', 'D', 'A'].includes(p.res) && new Date(p.kickoff).getTime() > now - 7 * 86400e3)
       : preds.filter(p => !p.res && new Date(p.kickoff).getTime() > now - 3 * 3600e3);
-    const counts = {}; all.forEach(p => counts[p.lg] = (counts[p.lg] || 0) + 1);
+    const counts = {}; base.forEach(p => counts[p.lg] = (counts[p.lg] || 0) + 1);
+    const all = base.filter(p => !bare(p) || filter === 'CDR');
     $('chips').innerHTML = [`<button type="button" class="chip-btn lg-all" data-lg="all" aria-pressed="${filter === 'all'}" aria-label="Tous les championnats">${ICON.ball}<span>Tous</span></button>`]
       .concat(LG_ORDER.filter(c => counts[c]).map(c => `<button type="button" class="chip-btn lg-chip" data-lg="${c}" aria-pressed="${filter === c}" aria-label="${esc(LG_NAME[c] || c)}" title="${esc(LG_NAME[c] || c)}">${emb(c) || `<span>${esc(LG_NAME[c] || c)}</span>`}</button>`)).join('');
     const lgAll = all.filter(p => filter === 'all' || p.lg === filter).sort((a, b) => isRes ? b.kickoff.localeCompare(a.kickoff) : a.kickoff.localeCompare(b.kickoff));
