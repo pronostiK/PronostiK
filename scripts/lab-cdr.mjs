@@ -8,11 +8,18 @@ const H = {'User-Agent': 'Mozilla/5.0 (PronostiK)'};
 const get = async u => { const r = await fetch(u, {signal: AbortSignal.timeout(30000), headers: H}); if (!r.ok) throw new Error(`HTTP ${r.status} ${u}`); return r.json(); };
 
 const out = {at: new Date().toISOString(), seasons: {}, sample: null, errors: []};
-const SEASONS = [['2026', '20260801-20270630'], ['2025', '20250801-20260630'], ['2024', '20240801-20250630'], ['2023', '20230801-20240630'], ['2022', '20220801-20230630']];
-for (const [s, range] of SEASONS) {
+// Une requête par mois (ESPN refuse les plages trop longues), de septembre à mai.
+const months = y => [9, 10, 11, 12, 1, 2, 3, 4, 5].map(m => { const yy = m >= 9 ? y : y + 1, mm = String(m).padStart(2, '0'), last = new Date(Date.UTC(yy, m, 0)).getUTCDate(); return `${yy}${mm}01-${yy}${mm}${last}`; });
+try { const t = await get(`${BASE}/teams`); out.teams = (t.sports?.[0]?.leagues?.[0]?.teams || []).length; } catch (e) { out.errors.push('teams: ' + e.message); }
+for (const s of ['2026', '2025', '2024', '2023', '2022']) {
   try {
-    const j = await get(`${BASE}/scoreboard?dates=${range}&limit=1000`);
-    const ev = j.events || [];
+    const ev = [];
+    for (const range of months(Number(s))) {
+      for (let k = 0; k < 3; k++) {
+        try { const j = await get(`${BASE}/scoreboard?dates=${range}&limit=300`); ev.push(...(j.events || [])); break; }
+        catch (e) { if (k === 2) out.errors.push(`${s} ${range}: ${e.message}`); else await new Promise(r => setTimeout(r, 3000)); }
+      }
+    }
     if (s === '2026' && ev[0]) out.sample = ev.find(e => e.competitions?.[0]?.status?.type?.completed) || ev[0];
     out.seasons[s] = {n: ev.length, matches: ev.map(e => {
       const c = e.competitions?.[0] || {}, side = h => c.competitors?.find(x => x.homeAway === h) || {};
