@@ -121,10 +121,11 @@
     const chip = !p.p ? '' : p.rel === 'test' ? '<span class="chip new">Nouveau · fiabilité en test</span>' : p.rel === 'limited' ? '<span class="chip warn">Échantillon réduit</span>' : '';
     const topI = p.p ? p.p.indexOf(Math.max(...p.p)) : -1;
     const cr = p.crest || [], st = p.stats || null;
-    const rk = r => r ? `<small class="rank">${r}${r === 1 ? 'er' : 'e'} ${isCDR ? 'en Liga' : isCL ? 'en championnat' : 'au classement'}</small>` : '';
+    const dv = p.divName || [];
+    const rk = r => (isCDR && typeof r === 'string') ? `<small class="rank">${esc(r)}</small>` : r ? `<small class="rank">${r}${r === 1 ? 'er' : 'e'} ${isCDR ? 'en Liga' : isCL ? 'en championnat' : 'au classement'}</small>` : '';
     const side = (name, url, fav, r) => `<div class="side${fav ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span>${rk(r)}</div>`;
     const head = `<div class="meta"><span class="lgname">${emb(p.lg, 'lg-mini') || `<i style="background:${lgc}"></i>`}${esc(time)}</span>${chip}</div>
-      <div class="match big">${side(p.home, cr[0], topI === 0, st && st.dom && st.dom.rang)}<div class="mid">${p.final ? `<strong class="fscore">${esc(p.final.replace('–', ' – '))}</strong><small>${p.fin ? esc(p.fin.replace('Après prolongation', 'A.P.')) : 'TERMINÉ'}</small>` : `<strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small>`}</div>${side(p.away, cr[1], topI === 2, st && st.ext && st.ext.rang)}</div>`;
+      <div class="match big">${side(p.home, cr[0], topI === 0, isCDR ? dv[0] : st && st.dom && st.dom.rang)}<div class="mid">${p.final ? `<strong class="fscore">${esc(p.final.replace('–', ' – '))}</strong><small>${p.fin ? esc(p.fin.replace('Après prolongation', 'A.P.')) : 'TERMINÉ'}</small>` : `<strong>${esc(fmtTime.format(new Date(p.kickoff)))}</strong><small>VS</small>`}</div>${side(p.away, cr[1], topI === 2, isCDR ? dv[1] : st && st.ext && st.ext.rang)}</div>`;
     if (!p.p) {
       return `<article class="mpage card" style="--lg:${lgc}"><div class="head" style="cursor:default">${head}<p class="muted" style="margin:0;font-size:13px">${p.why ? esc(p.why) : /non reconnue/.test(p.err || '') ? 'Pronostic indisponible : une des équipes n’est pas encore reconnue.' : 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.'}</p></div></article>`;
     }
@@ -145,9 +146,9 @@
     const ring = (lab, v) => `<div class="ring" style="--v:${Math.round(v * 100)}"><div class="ring-in"><b>${Math.round(v * 100)}%</b></div><small>${esc(lab)}</small></div>`;
     const analyse = `<div class="insights">
         ${ins('target', 'Favori', esc(fav), `${pcts[top]} %`)}
-        ${ins('ball', 'Buts attendus', `${fr(p.lam[0], 1)} – ${fr(p.lam[1], 1)}`, 'domicile – extérieur')}
-        ${ins('score', 'Score probable', esc(p.score), '')}
-        ${mkp ? ins(agreeD <= 5 ? 'check' : 'alert', 'Bookmakers', agreeD <= 5 ? 'D’accord' : 'Désaccord', `écart max ${agreeD} pts`, agreeD <= 5 ? 'ok' : 'warn') : ins('clock', 'Bookmakers', '—', isCL ? 'pas de cotes pour cette coupe' : isNat ? 'pas de cotes pour les sélections' : 'cotes pas encore publiées')}
+        ${isCDR ? ins('trophy', 'Niveaux', (p.div || []).map(d => d === 1 ? 'Liga' : d === 6 ? 'Rég.' : d ? 'D' + d : '?').join(' – '), 'domicile – extérieur') : ins('ball', 'Buts attendus', `${fr(p.lam[0], 1)} – ${fr(p.lam[1], 1)}`, 'domicile – extérieur')}
+        ${isCDR ? ins('shield', 'Testé sur', '156 matchs', 'de Coupe du Roi') : ins('score', 'Score probable', esc(p.score), '')}
+        ${mkp ? ins(agreeD <= 5 ? 'check' : 'alert', 'Bookmakers', agreeD <= 5 ? 'D’accord' : 'Désaccord', `écart max ${agreeD} pts`, agreeD <= 5 ? 'ok' : 'warn') : ins('clock', 'Bookmakers', '—', isCL || isCDR ? 'pas de cotes pour cette coupe' : isNat ? 'pas de cotes pour les sélections' : 'cotes pas encore publiées')}
       </div>
       <h3>${ICON.shield} Double chance</h3>
       <div class="rings">${ring(p.home + ' ou nul', p.p[0] + p.p[1])}${ring('Pas de nul', p.p[0] + p.p[2])}${ring(p.away + ' ou nul', p.p[1] + p.p[2])}</div>
@@ -299,7 +300,8 @@
         <div class="pitch"><div class="pt-box t"></div><div class="pt-box b"></div><div class="pt-mid"></div><div class="pt-circle"></div>${cmp[0] ? half(cmp[0], true) : ''}${cmp[1] ? half(cmp[1], false) : ''}</div>
         ${teamBar(cmp[1], p.away, (p.crest || [])[1])}</div>
       <p class="note">${ICON.info} Onze de départ aligné lors du dernier match de championnat de chaque équipe. Touchez un joueur pour ouvrir sa fiche Wikipédia. La composition officielle de ce match est publiée environ 1 h avant le coup d’envoi.</p>`;
-    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h], ['compos', ICON.ball + 'Compos', compos]].filter(([k]) => !(isNat && (k === 'stats' || k === 'classement' || k === 'compos')));
+    const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h], ['compos', ICON.ball + 'Compos', compos]].filter(([k]) => !(isNat && (k === 'stats' || k === 'classement' || k === 'compos')) && !(isCDR && k !== 'analyse' && !(k === 'forme' && p.form && p.form.h && p.form.h.length && p.form.a && p.form.a.length)));
+    if (isCDR) tabs[0][2] += `<p class="note">${ICON.info} Coupe du Roi : pronostic fondé sur la division de chaque club et, pour la Liga et la 2e division, sur leur forme récente (Elo). Testé sur 156 matchs de coupe (2025-2027) : favoris annoncés à 59 %, gagnants à 56 %. Résultat à 90 minutes : une prolongation compte comme un nul.</p>`;
     return `<article class="mpage card" style="--lg:${lgc}">
       <div class="head" style="cursor:default">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}</div>
       <div class="detail">

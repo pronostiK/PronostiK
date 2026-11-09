@@ -4,7 +4,7 @@
 // 3. pronostics des 7 prochains jours, figés au coup d'envoi puis réglés à la fin du match
 // 4. test de fiabilité par championnat (modèle contre cotes du marché)
 // Les fichiers écrits sont dans data/ ; le site ne fait que les lire.
-import {readFileSync, writeFileSync, existsSync, mkdirSync} from 'node:fs';
+import {readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync} from 'node:fs';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createModel, createRatings, createElo, hybridProbs, marketsFromLambdas} from '../model.mjs';
@@ -13,6 +13,7 @@ import {LEAGUES, ALIASES} from '../leagues.mjs';
 import {parseCSV, parseFixtures} from '../csv.mjs';
 import {buildNationsSeed, runNationsElo, nationsPredict, nationName, flagUrl} from './nations-lib.mjs';
 import {ESPN_LG, espnRecent, mapNames, espnLineup} from './compos-lib.mjs';
+import {cdrProbs, cdrElo, parseCdrWiki, matchCdrClub, CDR_ALIASES} from './cdr-lib.mjs';
 import {runEuroElo, uclPredict, makeResolver, parseDomesticCSV, countryOfArea, EXTRA_MAIN, EXTRA_NEW, LG_COUNTRY, EXTRA_VERSION} from './ucl-lib.mjs';
 
 const API = process.env.FD_API_BASE || 'https://api.football-data.org/v4';
@@ -614,15 +615,12 @@ async function main() {
   for (const p of predictions) if (p.p && Array.isArray(p.lam) && !p.markets) { const mk2 = marketsFromLambdas(p.lam[0], p.lam[1]); p.markets = {o15: r4(mk2.o15), o25: r4(mk2.o25), btts: r4(mk2.btts), ht: mk2.ht.map(r4), scores: mk2.scores.map(([s, v]) => [s, r4(v)])}; }
   for (const p of predictions) if (p.markets && p.markets.btts == null && Array.isArray(p.lam)) p.markets.btts = r4(marketsFromLambdas(p.lam[0], p.lam[1]).btts);
 
-  // --- 4e. Coupe du Roi (Espagne) : calendrier et scores publics d'ESPN (esp.copa_del_rey), une requête par jour.
-  // Pronostic UNIQUEMENT si les deux clubs jouent en Liga cette saison : modèle La Liga v2, inchangé (finale sur terrain neutre : moyenne des deux sens).
-  // Les autres matchs (clubs de divisions inférieures) sont affichés sans pronostic : données insuffisantes.
-  // Les matchs de coupe n'entrent PAS dans l'historique : le modèle de Liga n'est pas modifié.
-  // Score ESPN = score final, prolongation comprise. Réglage 1N2 sur 90 minutes : prolongation ou tirs au but = nul à la 90e
-  // (match sec) ; demi-finale retour allée en prolongation = score à 90 min inconnu → pronostic annulé.
-  // EN PAUSE (décision de l'utilisateur, 9 nov. 2026 : « tout ou rien ») : retirée du site tant que la version complète n'est pas prête
-  // (pronostic pour tous les matchs, validé par un test sur les éditions passées, et logos de tous les clubs). Passer CDR_PUBLIC à true pour la remettre.
-  const CDR_PUBLIC = false;
+  // --- 4e. Coupe du Roi (Espagne) : pronostic pour TOUS les matchs, modèle validé au laboratoire (lab/RAPPORT-CDR.md, scripts/cdr-lib.mjs).
+  // Calendrier et scores : ESPN (esp.copa_del_rey, une requête par jour). Division de chaque club et logos des petits clubs : page Wikipédia de l'édition.
+  // Force des clubs de Liga / 2e division : Elo (anciens fichiers lab/cdr/csv + historique du site). Les matchs de coupe n'entrent PAS dans l'historique.
+  // Score ESPN = prolongation comprise. Réglage 1N2 sur 90 minutes : prolongation ou tirs au but = nul (match sec) ;
+  // demi-finale retour allée en prolongation = score à 90 min inconnu → pronostic annulé. Marchés (buts, score exact) non testés : non publiés.
+  const CDR_PUBLIC = true;
   let cdrInfo = {ok: false};
   if (!CDR_PUBLIC) predictions = predictions.filter(p => p.lg !== 'CDR');
   if (CDR_PUBLIC) try {
@@ -656,11 +654,63 @@ async function main() {
     const TOUR = l => /qualif/i.test(l) ? 'Tour préliminaire' : /first/i.test(l) ? '1er tour' : /second/i.test(l) ? '2e tour' : /32/.test(l) ? '16es de finale' : /16/.test(l) ? '8es de finale'
       : /quarter/i.test(l) ? 'Quarts de finale' : /semi/i.test(l) ? 'Demi-finales' : /final/i.test(l) ? 'Finale' : l;
     const tourOf = ko => { const e = (S.cal || []).find(x => x.s <= ko && ko <= x.e); return e ? TOUR(e.l) : null; };
-    // Clubs de Liga : noms ESPN → noms du site (table des compositions, reliée par les résultats communs), et au moins un match de Liga cette saison.
+    // Divisions des clubs (Wikipédia, toutes les 6 h ; en cas d'échec on garde la dernière version)
+    const WH = {headers: {'User-Agent': 'PronostiK/1.0 (https://pronostikapp.fr)'}, signal: AbortSignal.timeout(30000)};
+    const edition = `${season}–${String(season + 1).slice(2)} Copa del Rey`;
+    if (!S.wiki || S.wiki.title !== edition || NOW - new Date(S.wiki.at) > 6 * 3600000) {
+      try {
+        const j = await (await fetch(`https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(edition)}&prop=wikitext&redirects=1&format=json&formatversion=2`, WH)).json();
+        if (!j.parse?.wikitext) throw new Error(j.error?.info || 'page vide');
+        const clubs = parseCdrWiki(j.parse.wikitext);
+        if (Object.keys(clubs).length >= 20) S.wiki = {title: edition, at: NOW.toISOString(), clubs};
+      } catch (e) { console.error('Coupe du Roi, Wikipédia :', e.message); }
+    }
+    const clubs = S.wiki?.clubs || {};
+    // Logos des clubs (image principale de leur page Wikipédia) : clubs nouveaux, et nouvel essai chaque semaine pour ceux sans image
+    S.logos ||= {at: null, map: {}};
+    const weekly = !S.logos.at || NOW - new Date(S.logos.at) > 7 * 86400000;
+    const need = Object.keys(clubs).filter(t => !(t in S.logos.map) || (weekly && !S.logos.map[t]));
+    for (let i = 0; i < need.length; i += 50) {
+      const batch = need.slice(i, i + 50);
+      try {
+        const j = await (await fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&piprop=thumbnail&pithumbsize=200&pilicense=any&redirects=1&format=json&formatversion=2&titles=${encodeURIComponent(batch.join('|'))}`, WH)).json();
+        const back = {}; for (const r of [...(j.query?.normalized || []), ...(j.query?.redirects || [])]) back[r.to] = back[r.from] || r.from;
+        for (const t of batch) S.logos.map[t] = null;
+        for (const pg of j.query?.pages || []) { const t = back[pg.title] || pg.title; if (pg.thumbnail?.source && /^https:\/\//.test(pg.thumbnail.source)) S.logos.map[t] = pg.thumbnail.source; }
+      } catch (e) { console.error('Coupe du Roi, logos :', e.message); }
+    }
+    if (need.length && weekly) S.logos.at = NOW.toISOString();
+    // Elo Liga + 2e division (calculé seulement s'il y a des matchs à pronostiquer)
+    const inSeason = div => [...new Set(history.filter(m => m.lg === 'PD' && m.division === div && m.date >= seasonStart).flatMap(m => [m.home, m.away]))];
+    const L1 = inSeason('L1'), L2 = inSeason('L2');
+    let E = null;
+    const eloOf = () => {
+      if (E) return E;
+      const pd = history.filter(m => m.lg === 'PD').map(m => ({date: m.date, home: m.home, away: m.away, hg: m.hg, ag: m.ag, div: m.division === 'L2' ? 2 : 1}));
+      const first = pd.reduce((a, m) => m.date < a ? m.date : a, '9999');
+      const old = [];
+      const dir = fileURLToPath(new URL('../lab/cdr/csv/', import.meta.url));
+      if (existsSync(dir)) for (const f of readdirSync(dir).filter(f => /^SP[12]-\d{4}\.csv$/.test(f)))
+        for (const r of parseCSV(readFileSync(join(dir, f), 'utf8'), 'PD', {top: 'SP1'})) if (r.date < first) old.push({date: r.date, home: r.home, away: r.away, hg: r.hg, ag: r.ag, div: f.startsWith('SP1') ? 1 : 2});
+      E = cdrElo([...old, ...pd].sort((a, b) => a.date.localeCompare(b.date)));
+      return E;
+    };
+    const zOf = (csvName, div) => { const pool = div === 1 ? L1 : L2; if (!csvName || !pool.length) return 0; const e = eloOf(), m = pool.reduce((s, t) => s + e(t), 0) / pool.length; return (e(csvName) - m) / 100; };
+    // Identification d'un club : Liga (table des compositions + match de Liga cette saison) > 2e division (historique) > Wikipédia
     const ligaMap = state.compos?.names?.PD || {};
-    const liga = n => { const o = ligaMap[n]; return o && seasonCount('PD', o, '9999-12-31') > 0 ? o : null; };
+    const club = (n, espnLogo) => {
+      const title = matchCdrClub(n, clubs), w = title ? clubs[title] : null;
+      const AL = {...ALIASES.PD, ...CDR_ALIASES};
+      // Liga : nom ESPN du championnat, sinon recherche parmi les clubs de Liga (la feuille de match Wikipédia ne doit pas dire autre chose)
+      const o = (ligaMap[n] && L1.includes(ligaMap[n]) ? ligaMap[n] : null) || ((!w?.tier || w.tier === 1 || w.src !== 'match') ? resolveName(n, L1, AL) || (title && resolveName(title, L1, AL)) || (w && resolveName(w.disp, L1, AL)) : null);
+      if (o && L1.includes(o)) return {name: o, tier: 1, csv: o, logo: espnLogo || (title && S.logos.map[title]) || null};
+      const s2 = resolveName(n, L2, AL) || (title && resolveName(title, L2, AL));
+      if (s2 && (!w?.tier || w.tier === 2 || w.src !== 'match')) return {name: w?.disp || n, tier: 2, csv: s2, logo: espnLogo || (title && S.logos.map[title]) || null};
+      return {name: w?.disp || n, tier: w?.tier && w.tier > 2 ? w.tier : null, csv: null, logo: espnLogo || (title && S.logos.map[title]) || null, title};
+    };
+    const DIV = ['', 'Liga', '2e division', '3e division', '4e division', '5e division', 'Division régionale'];
     const all = Object.values(S.days).flat();
-    let nPron = 0, nMatch = 0;
+    let nPron = 0, nMatch = 0, sansDiv = [];
     for (const ev of all) {
       if (ev.done) continue;
       const date = parisDate(new Date(ev.ko));
@@ -668,27 +718,22 @@ async function main() {
       nMatch++;
       const id = 'cdr' + ev.id, old = byId.get(id);
       if (old && NOW >= new Date(old.kickoff) && old.kickoff === ev.ko) continue;   // figé après le coup d'envoi
-      const H = liga(ev.h), A = liga(ev.a);
-      const entry = {id, apiId: null, lg: 'CDR', date, kickoff: ev.ko, home: H || ev.h, away: A || ev.a, crest: [ev.lh, ev.la], p: null, lam: null, score: null, err: null, why: null,
-        tour: tourOf(ev.ko), form: {h: [], a: []}, rel: 'test', savedAt: old?.savedAt || NOW.toISOString(), updatedAt: old?.updatedAt || NOW.toISOString(), res: null, final: null};
-      let x = null;
-      if (H && A) try {
-        const a = predictMatch('PD', H, A, date);
-        if (a.model === 'v2') {
-          if (!ev.neutral) x = a;
-          else { const b = predictMatch('PD', A, H, date); if (b.model === 'v2') x = {p: [(a.p[0] + b.p[2]) / 2, (a.p[1] + b.p[1]) / 2, (a.p[2] + b.p[0]) / 2], lam: [(a.lam[0] + b.lam[1]) / 2, (a.lam[1] + b.lam[0]) / 2], score: null, model: 'v2'}; }
-        }
-      } catch (e) { entry.err = e.message; }
-      if (x) {
-        const mk2 = marketsFromLambdas(x.lam[0], x.lam[1]);
-        entry.p = x.p.map(r4); entry.lam = x.lam.map(r4); entry.score = x.score || mk2.scores[0][0]; entry.model = 'v2';
-        entry.markets = {o15: r4(mk2.o15), o25: r4(mk2.o25), btts: r4(mk2.btts), ht: mk2.ht.map(r4), scores: mk2.scores.map(([sc, v]) => [sc, r4(v)])};
-        entry.form = {h: lastFive('PD', H, date), a: lastFive('PD', A, date)};
-        entry.stats = matchStats('PD', H, A, date);
+      const H = club(ev.h, ev.lh), A = club(ev.a, ev.la);
+      const entry = {id, apiId: null, lg: 'CDR', date, kickoff: ev.ko, home: H.name, away: A.name, crest: [H.logo, A.logo], p: null, lam: null, score: null, err: null, why: null,
+        tour: tourOf(ev.ko), div: [H.tier, A.tier], divName: [DIV[H.tier] || null, DIV[A.tier] || null], form: {h: [], a: []}, rel: 'test', model: 'cdr',
+        savedAt: old?.savedAt || NOW.toISOString(), updatedAt: old?.updatedAt || NOW.toISOString(), res: null, final: null};
+      if (H.tier && A.tier) {
+        const zh = H.tier <= 2 ? zOf(H.csv, H.tier) : 0, za = A.tier <= 2 ? zOf(A.csv, A.tier) : 0;
+        entry.p = cdrProbs(H.tier, A.tier, zh, za, ev.neutral).map(r4); entry.z = [Math.round(zh * 100) / 100, Math.round(za * 100) / 100];
+        if (H.tier === 1) entry.form.h = lastFive('PD', H.csv, date);
+        if (A.tier === 1) entry.form.a = lastFive('PD', A.csv, date);
         nPron++;
-      } else entry.why = H && A ? 'Pronostic indisponible : pas assez de matchs récents pour une de ces équipes.' : 'Pas de pronostic : un des deux clubs ne joue pas en Liga. Nos données sur ce club sont insuffisantes pour un pronostic fiable.';
+      } else {
+        entry.why = 'Pronostic indisponible : division d’un des clubs inconnue pour le moment.';
+        for (const [x, n] of [[H, ev.h], [A, ev.a]]) if (!x.tier) sansDiv.push(n);
+      }
       if (old) {
-        const same = JSON.stringify([old.p, old.lam, old.kickoff, old.home, old.away]) === JSON.stringify([entry.p, entry.lam, entry.kickoff, entry.home, entry.away]);
+        const same = JSON.stringify([old.p, old.kickoff, old.home, old.away, old.crest]) === JSON.stringify([entry.p, entry.kickoff, entry.home, entry.away, entry.crest]);
         if (same) entry.updatedAt = old.updatedAt; else entry.updatedAt = NOW.toISOString();
         predictions = predictions.filter(p => p.id !== id);
       }
@@ -706,7 +751,8 @@ async function main() {
       p.fin = ev.pen ? `Après prolongation · tirs au but ${ev.pen[0]}–${ev.pen[1]}` : 'Après prolongation';
       p.res = (p.tour || tourOf(ev.ko)) === 'Demi-finales' ? 'void' : 'D';   // match sec : prolongation = nul à la 90e
     }
-    cdrInfo = {ok: okDays > 0 || all.length > 0, matchs: nMatch, pronostics: nPron, jours: okDays};
+    cdrInfo = {ok: okDays > 0 || all.length > 0, matchs: nMatch, pronostics: nPron, jours: okDays, clubsWiki: Object.keys(clubs).length, sansDivision: sansDiv};
+    for (const n of sansDiv) unmapped.set('CDR|' + n, {lg: 'CDR', name: n});
   } catch (e) { errors.CDR = String(e.message || e).slice(0, 160); console.error('Coupe du Roi :', e.message); }
 
   // --- 5. règlement
