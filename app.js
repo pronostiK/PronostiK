@@ -32,6 +32,8 @@
     return fl;
   }
   const pc = v => Math.round(v * 100) + ' %';
+  // Pourcentage entier affiché : jamais « 0 % » ni « 100 % » (une surprise n'est jamais impossible)
+  const shown = n => n <= 0 ? '< 1' : n >= 100 ? '> 99' : String(n);
 
 
   // Icônes (traits simples, couleur du texte)
@@ -105,7 +107,7 @@
     const v = pct3(p.p), side = (name, url, win) => `<div class="side${win ? ' fav' : ''}">${crestImg(url, name)}<span class="nm">${esc(name)}</span></div>`;
     const od = Array.isArray(p.od) && p.od.length === 3 ? p.od : Array.isArray(p.mk) && p.mk.length === 3 ? p.mk.map(x => 1 / x) : null;
     const odLab = Array.isArray(p.od) ? 'cote' : 'cote ≈';
-    const cells = [0, 1, 2].map(k => `<div class="rc${k === i ? ' hit' : ''}${k === t ? ' ours' : ''}"><small>${['1', 'N', '2'][k]}</small><b>${v[k]} %</b>${od ? `<em>${odLab} ${fr(od[k], 2)}</em>` : ''}</div>`).join('');
+    const cells = [0, 1, 2].map(k => `<div class="rc${k === i ? ' hit' : ''}${k === t ? ' ours' : ''}"><small>${['1', 'N', '2'][k]}</small><b>${shown(v[k])} %</b>${od ? `<em>${odLab} ${fr(od[k], 2)}</em>` : ''}</div>`).join('');
     const tag = t === i ? ['Favori ✓', 'ok'] : p.p[i] < 0.3 ? ['Surprise', 'ko'] : ['Favori battu', 'ko'];
     return `<a class="poster result" href="#match/${encodeURIComponent(p.id)}" style="--lg:${lgc}" aria-label="${esc(p.home)} ${esc(p.final || '')} ${esc(p.away)}">
       <div class="meta"><span class="lgname" title="${esc(LG_NAME[p.lg] || p.lg || '')}">${emb(p.lg, 'lg-mini') || `<i style="background:${lgc}"></i>${esc(LG_NAME[p.lg] || p.lg || '')}`}</span><span class="ptime">${esc(fmtTime.format(new Date(p.kickoff)))}</span></div>
@@ -131,7 +133,7 @@
     }
     const pcts = pct3(p.p), top = topI;
     const labels = ['Domicile', 'Nul', 'Extérieur'], tags = ['1', 'N', '2'];
-    const cells = pcts.map((v, i) => `<div class="cell ${i === top ? 'best' : ''}"><div class="v">${v} %</div><div class="k" title="${esc(labels[i])}"><b>${tags[i]}</b> ${esc(labels[i])}</div></div>`).join('');
+    const cells = pcts.map((v, i) => `<div class="cell ${i === top ? 'best' : ''}"><div class="v">${shown(v)} %</div><div class="k" title="${esc(labels[i])}"><b>${tags[i]}</b> ${esc(labels[i])}</div></div>`).join('');
     const seg = `<div class="seg" aria-hidden="true">${pcts.map((v, i) => `<span class="s${i}${i === top ? ' lead' : ''}" style="width:${v}%"></span>`).join('')}</div>`;
     const read = pcts[top] >= 60 ? ['Favori net', 'ok'] : pcts[top] < 45 ? ['Match ouvert', ''] : ['Léger favori', ''];
     const who = top === 1 ? 'un match nul' : 'une victoire de ' + (top === 0 ? p.home : p.away);
@@ -143,7 +145,7 @@
     const fav = top === 0 ? p.home : top === 2 ? p.away : 'Match nul';
     const agreeD = mkp ? Math.max(...[0, 1, 2].map(k => Math.abs(pcts[k] - mkp[k]))) : null;
     const ins = (ic, lab, val, sub, cls = '') => `<div class="ins ${cls}"><span class="ic">${ICON[ic]}</span><small>${lab}</small><b>${val}</b>${sub ? `<em>${sub}</em>` : ''}</div>`;
-    const ring = (lab, v) => `<div class="ring" style="--v:${Math.round(v * 100)}"><div class="ring-in"><b>${Math.round(v * 100)}%</b></div><small>${esc(lab)}</small></div>`;
+    const ring = (lab, v) => `<div class="ring" style="--v:${Math.round(v * 100)}"><div class="ring-in"><b>${shown(Math.round(v * 100))}%</b></div><small>${esc(lab)}</small></div>`;
     const analyse = `<div class="insights">
         ${ins('target', 'Favori', esc(fav), `${pcts[top]} %`)}
         ${isCDR ? ins('trophy', 'Niveaux', (p.div || []).map(d => d === 1 ? 'Liga' : d === 6 ? 'Rég.' : d ? 'D' + d : '?').join(' – '), 'domicile – extérieur') : ins('ball', 'Buts attendus', `${fr(p.lam[0], 1)} – ${fr(p.lam[1], 1)}`, 'domicile – extérieur')}
@@ -301,6 +303,7 @@
         ${teamBar(cmp[1], p.away, (p.crest || [])[1])}</div>
       <p class="note">${ICON.info} Onze de départ aligné lors du dernier match de championnat de chaque équipe. Touchez un joueur pour ouvrir sa fiche Wikipédia. La composition officielle de ce match est publiée environ 1 h avant le coup d’envoi.</p>`;
     const tabs = [['analyse', ICON.target + 'Analyse', analyse], ['marches', ICON.coin + 'Marchés', marches], ['stats', ICON.chart + 'Stats', stats], ['classement', ICON.trophy + 'Classement', classement], ['forme', ICON.up + 'Forme', forme], ['h2h', ICON.vs + 'Face-à-face', h2h], ['compos', ICON.ball + 'Compos', compos]].filter(([k]) => !(isNat && (k === 'stats' || k === 'classement' || k === 'compos')) && !(isCDR && k !== 'analyse' && !(k === 'forme' && p.form && p.form.h && p.form.h.length && p.form.a && p.form.a.length)));
+    if (isCDR && Math.min(...p.p) < 0.01) tabs[0][2] += `<p class="note">${ICON.info} ${(p.div || []).includes(6) && (p.div || []).includes(1) ? 'Une surprise reste possible, mais elle n’est jamais arrivée sur 57 matchs de ce type depuis 2021 (club régional contre club de Liga : 57 victoires du club de Liga dès le temps réglementaire).' : 'Une surprise reste possible, même si elle est très rare entre clubs aussi éloignés.'}</p>`;
     if (isCDR) tabs[0][2] += `<p class="note">${ICON.info} Coupe du Roi : pronostic fondé sur la division de chaque club et, pour la Liga et la 2e division, sur leur forme récente (Elo). Testé sur 156 matchs de coupe (2025-2027) : favoris annoncés à 59 %, gagnants à 56 %. Résultat à 90 minutes : une prolongation compte comme un nul.</p>`;
     return `<article class="mpage card" style="--lg:${lgc}">
       <div class="head" style="cursor:default">${head}${sum}${seg}<div class="probs">${cells}</div>${mkline}</div>
