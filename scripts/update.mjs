@@ -620,8 +620,12 @@ async function main() {
   // Les matchs de coupe n'entrent PAS dans l'historique : le modèle de Liga n'est pas modifié.
   // Score ESPN = score final, prolongation comprise. Réglage 1N2 sur 90 minutes : prolongation ou tirs au but = nul à la 90e
   // (match sec) ; demi-finale retour allée en prolongation = score à 90 min inconnu → pronostic annulé.
+  // EN PAUSE (décision de l'utilisateur, 9 nov. 2026 : « tout ou rien ») : retirée du site tant que la version complète n'est pas prête
+  // (pronostic pour tous les matchs, validé par un test sur les éditions passées, et logos de tous les clubs). Passer CDR_PUBLIC à true pour la remettre.
+  const CDR_PUBLIC = false;
   let cdrInfo = {ok: false};
-  try {
+  if (!CDR_PUBLIC) predictions = predictions.filter(p => p.lg !== 'CDR');
+  if (CDR_PUBLIC) try {
     const CDR_URL = d => `https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=${d}`;
     const ymdUTC = iso => new Date(iso).toISOString().slice(0, 10).replace(/-/g, '');
     const S = state.cdr ||= {at: null, days: {}, cal: [], logo: null};
@@ -929,7 +933,7 @@ async function main() {
   const errKeys = Object.keys(errors);
   const meta = {
     updated: changed ? NOW.toISOString() : (prevMeta.updated || NOW.toISOString()), season, source: 'football-data.org',
-    leagues: [...LEAGUES, ...(uclInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'CL') ? [{code: 'CL', name: 'Ligue des champions'}] : []), ...(uclInfo.europa || (prevMeta.leagues || []).some(x => x.code === 'EL') ? [{code: 'EL', name: 'Ligue Europa'}] : []), ...(uclInfo.conference || (prevMeta.leagues || []).some(x => x.code === 'ECL') ? [{code: 'ECL', name: 'Ligue Conférence'}] : []), ...(natInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'NL') ? [{code: 'NL', name: 'Ligue des nations'}] : []), ...(cdrInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'CDR') ? [{code: 'CDR', name: 'Coupe du Roi'}] : [])].map(l => ({code: l.code, name: l.name, emblem: emblems[l.code] || (prevMeta.leagues || []).find(x => x.code === l.code)?.emblem || null})), errors, ucl: uclInfo, nations: natInfo, cdr: cdrInfo,
+    leagues: [...LEAGUES, ...(uclInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'CL') ? [{code: 'CL', name: 'Ligue des champions'}] : []), ...(uclInfo.europa || (prevMeta.leagues || []).some(x => x.code === 'EL') ? [{code: 'EL', name: 'Ligue Europa'}] : []), ...(uclInfo.conference || (prevMeta.leagues || []).some(x => x.code === 'ECL') ? [{code: 'ECL', name: 'Ligue Conférence'}] : []), ...(natInfo.ok || (prevMeta.leagues || []).some(x => x.code === 'NL') ? [{code: 'NL', name: 'Ligue des nations'}] : []), ...(cdrInfo.ok ? [{code: 'CDR', name: 'Coupe du Roi'}] : [])].map(l => ({code: l.code, name: l.name, emblem: emblems[l.code] || (prevMeta.leagues || []).find(x => x.code === l.code)?.emblem || null})), errors, ucl: uclInfo, nations: natInfo, cdr: cdrInfo,
     lastError: errKeys.length ? errKeys.map(k => `${k} : ${errors[k]}`).join(' · ') : null,
     unmapped: [...unmapped.values()],
     odds: oddsInfo,
