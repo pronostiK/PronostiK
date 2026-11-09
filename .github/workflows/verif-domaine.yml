@@ -33,6 +33,7 @@ jobs:
             echo "https://pronostikapp.fr/$p -> $(curl -s -o /dev/null -m 30 -w '%{http_code} %{content_type} %{size_download}' https://pronostikapp.fr/$p)" >> $R
           done
           echo "version GitHub (dernier envoi): $(curl -s https://pronostik.pages.dev/version.json) | domaine: $(curl -s https://pronostikapp.fr/version.json)" >> $R
+          echo "données à jour ? dépôt: $(python3 -c "import json;print(json.load(open('data/meta.json'))['updated'])") | site: $(curl -s https://pronostikapp.fr/data/meta.json | python3 -c "import json,sys;print(json.load(sys.stdin)['updated'])")" >> $R
           CHAT=$(python3 -c "import json;print(json.load(open('data/chat.json'))['url'])" 2>/dev/null)
           echo "chat: $CHAT" >> $R
           [ -n "$CHAT" ] && echo "chat CORS depuis pronostikapp.fr: $(curl -s -o /dev/null -w '%{http_code}' -X OPTIONS -H 'Origin: https://pronostikapp.fr' -H 'Access-Control-Request-Method: POST' $CHAT) $(curl -sI -X OPTIONS -H 'Origin: https://pronostikapp.fr' -H 'Access-Control-Request-Method: POST' $CHAT | tr -d '\r' | grep -i '^access-control-allow-origin')" >> $R
