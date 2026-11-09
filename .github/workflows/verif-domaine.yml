@@ -1,0 +1,45 @@
+name: Vérification du domaine (Cloudflare)
+
+# Attend que pronostikapp.fr soit servi par Cloudflare Pages puis contrôle site, données, appli Android et chat.
+# Rapport : lab/cf/verif.txt
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verif-domaine.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verif:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Contrôler
+        run: |
+          mkdir -p lab/cf; R=lab/cf/verif.txt; date -u > $R
+          for i in $(seq 1 60); do
+            h=$(curl -sI -m 20 https://pronostikapp.fr/ | tr -d '\r'); w=$(curl -sI -m 20 https://www.pronostikapp.fr/ | tr -d '\r')
+            if echo "$h" | grep -qi '^server: cloudflare' && echo "$w" | grep -qi '^server: cloudflare'; then echo "Servi par Cloudflare après $i essai(s)" >> $R; break; fi
+            sleep 30
+          done
+          echo "NS: $(dig +short pronostikapp.fr NS | tr '\n' ' ')" >> $R
+          for host in pronostikapp.fr www.pronostikapp.fr; do
+            echo "--- $host : $(curl -sI -m 20 https://$host/ | tr -d '\r' | grep -iE '^(HTTP|server|location)' | tr '\n' ' ')" >> $R
+          done
+          for p in "" version.json data/predictions.json data/meta.json .well-known/assetlinks.json downloads/pronostik.apk; do
+            echo "https://pronostikapp.fr/$p -> $(curl -s -o /dev/null -m 30 -w '%{http_code} %{content_type} %{size_download}' https://pronostikapp.fr/$p)" >> $R
+          done
+          echo "version GitHub (dernier envoi): $(curl -s https://pronostik.pages.dev/version.json) | domaine: $(curl -s https://pronostikapp.fr/version.json)" >> $R
+          CHAT=$(python3 -c "import json;print(json.load(open('data/chat.json'))['url'])" 2>/dev/null)
+          echo "chat: $CHAT" >> $R
+          [ -n "$CHAT" ] && echo "chat CORS depuis pronostikapp.fr: $(curl -s -o /dev/null -w '%{http_code}' -X OPTIONS -H 'Origin: https://pronostikapp.fr' -H 'Access-Control-Request-Method: POST' $CHAT) $(curl -sI -X OPTIONS -H 'Origin: https://pronostikapp.fr' -H 'Access-Control-Request-Method: POST' $CHAT | tr -d '\r' | grep -i '^access-control-allow-origin')" >> $R
+          echo "certificat: $(echo | openssl s_client -connect pronostikapp.fr:443 -servername pronostikapp.fr 2>/dev/null | openssl x509 -noout -issuer -enddate 2>/dev/null | tr '\n' ' ')" >> $R
+      - name: Enregistrer
+        if: always()
+        run: |
+          git config user.name "pronostik-bot"; git config user.email "pronostik-bot@users.noreply.github.com"
+          git add lab/cf
+          if ! git diff --cached --quiet; then git commit -m "Vérification du domaine : rapport"; for i in 1 2 3; do git pull --rebase -X theirs && git push && break; git rebase --abort 2>/dev/null; sleep 5; done; fi
