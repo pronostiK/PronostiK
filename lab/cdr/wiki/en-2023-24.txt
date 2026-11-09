@@ -1,0 +1,3077 @@
+{{Infobox football tournament season
+| title           = [[Copa del Rey]]
+| year            = 2023–24
+| image           = 
+| image_size      = 
+| caption         = 
+| country         = Spain
+| venue           = 
+| date            = 11 October 2023 – 6 April 2024
+| num_teams       = 125
+| winners         = [[Athletic Bilbao]]
+| count           = 24
+| second          = [[RCD Mallorca|Mallorca]]
+| matches         = 126
+| goals           = 362
+| scoring_leader = [[Abdón Prats|Abdón]]<br>[[Anastasios Douvikas]]<br>[[Asier Villalibre]]<br>(6 goals each)
+| prev_season     = [[2022–23 Copa del Rey|2022–23]]
+| next_season     = [[2024–25 Copa del Rey|2024–25]]
+| updated         = 
+}}
+
+The '''2023–24 Copa del Rey''' was the 122nd edition of the [[Copa del Rey]] (including two seasons where two rival editions were played). The winners were assured a place in the [[2024–25 UEFA Europa League#League phase|2024–25 UEFA Europa League league phase]]. Both the winners and the runners-up qualified for the four-team [[2025 Supercopa de España]].
+
+[[Real Madrid CF|Real Madrid]] were the defending champions, having beaten [[CA Osasuna|Osasuna]] in the [[2023 Copa del Rey final|final of the previous edition]], but were eliminated in the round of 16 by [[Atlético Madrid]].
+
+The [[2024 Copa del Rey final|final]] was held at [[Estadio de La Cartuja]] in [[Seville]] on 6 April 2024, between [[Athletic Bilbao]] and [[RCD Mallorca|Mallorca]].<ref>{{cite web |title=LaLiga 2023-24 fixtures: opening weekend, El Clásico... |url=https://en.as.com/soccer/laliga-2023-24-fixtures-opening-weekend-el-clasico-n/ |website=Diario AS |date=22 June 2023}}</ref> Following a 1–1 draw, Athletic Bilbao won the match 4–2 on [[Penalty shoot-out (association football)|penalties]], securing a 25th Copa del Rey title and their first since [[1983–84 Copa del Rey|1984]].
+
+As across Spain, match times up to 28 October 2023 and from 27 March 2024 were [[Central European Summer Time|CEST]] ([[UTC+02:00|UTC+2]]). Times on interim ("winter") days were [[Central European Time|CET]] ([[UTC+01:00|UTC+1]]). Matches played in the Canary Islands used the [[Western European Time|WET]] ([[UTC±00:00]]).
+
+==Schedule and format==
+In the summer of 2023, the RFEF released the calendar of the competition and confirmed the format of the previous season would remain.<ref>{{cite web|url=https://www.relevo.com/futbol/calendario-20232024-fechas-temporada-vuelta-20230627172331-nt.html|title=Así queda el calendario de partidos de la 2023–2024: LaLiga, Copa del Rey, Champions League y Europa League|trans-title=This is how the calendar of the 2023–2024 matches ends up: LaLiga, Copa del Rey, Champions League and Europa League|publisher=[[Relevo]]|language=es|date=27 June 2023|access-date=19 September 2023}}</ref>
+{|class="wikitable" style="font-size:90%"
+|-
+!Round
+!Draw date
+!Date
+!Fixtures
+!Clubs
+!Format details
+|-
+|Preliminary round
+|style="text-align:left;"|
+{{Nowrap|27 September 2023}}
+|style="text-align:left;"|{{nowrap|11–12 October 2023}}
+|style="text-align:center;"|10
+|style="text-align:center;"|{{nowrap|125 → 115}}
+|'''New entries:''' Clubs qualified through the 2022–23 sixth tier.<br />'''[[Seed (sports)|Opponents seeding]]:''' Teams faced each other according to proximity criteria.<br />'''[[Seed (sports)|Local team seeding]]:''' Luck of the draw.<br />'''[[Knock-out tournament]] type:''' [[Single-elimination tournament|Single match]].
+|-
+|First round
+|style="text-align:left;"|{{nowrap|17 October 2023}}
+|style="text-align:left;"|{{nowrap|31 October – 2 November 2023}}
+|style="text-align:center;"|55
+|style="text-align:center;"|115 → 60
+|'''New entries:''' All qualified teams except for the four participants in the [[2024 Supercopa de España|Supercopa de España]] and champions of the [[2022–23 Primera Federación]].<br />'''Opponents seeding:''' Teams from lowest divisions face La Liga teams.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|{{Nowrap|Second round}}
+|style="text-align:left;"|{{nowrap|15 November 2023}}
+|style="text-align:left;"|{{nowrap|22 November and 5–7 December 2023}}
+|style="text-align:center;"|28
+|style="text-align:center;"|60 → 32
+|'''New entries:''' [[2022–23 Primera Federación]] champions entered at this stage.<br />'''Opponents seeding:''' Teams from lowest divisions faced La Liga teams.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br/>'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|Round of 32
+|style="text-align:left;"|{{nowrap|12 December 2023}}
+|style="text-align:left;"|{{nowrap|6–8 January 2024}}
+|style="text-align:center;"|16
+|style="text-align:center;"|32 → 16
+|'''New entries:''' Clubs participating in the [[2024 Supercopa de España|Supercopa de España]] entered at this stage.<br />'''Opponents seeding:''' Teams from lowest divisions faced La Liga teams.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|Round of 16
+|style="text-align:left;"|{{nowrap|8 January 2024}}
+|style="text-align:left;"|{{nowrap|16–18 January 2024}}
+|style="text-align:center;"|8
+|style="text-align:center;"|16 → 8
+|'''Opponents seeding:''' Teams from lowest divisions faced La Liga teams.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|Quarter-finals
+|style="text-align:left;"|{{nowrap|19 January 2024}}
+|style="text-align:left;"|{{nowrap|23–25 January 2024}}
+|style="text-align:center;"|4
+|style="text-align:center;"|8 → 4
+|'''Opponents seeding:''' Luck of the draw.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|rowspan=2|Semi-finals
+|rowspan=3 style="text-align:left;"|{{Nowrap|26 January 2024}}
+|style="text-align:left;"|{{nowrap|6–7 February 2024}}
+|rowspan=2 style="text-align:center;"|2
+|rowspan=2 style="text-align:center;"|4 → 2
+|rowspan=2|'''Opponents seeding:''' Luck of the draw.<br/>'''Local team seeding:''' Luck of the draw.<br />'''Knock-out tournament type:''' [[Two-legged tie|Double match]].
+|-
+|style="text-align:left;"|{{Nowrap|27–29 February 2024}}
+|-
+|'''[[2024 Copa del Rey final|Final]]'''
+|style="text-align:left;"|6 April 2024
+|style="text-align:center;"|1
+|style="text-align:center;"|2 → 1
+|[[Single-elimination tournament|Single match]] at [[Estadio de La Cartuja|La Cartuja]], [[Seville]]. Both teams qualified for the [[2025 Supercopa de España]].<br />'''[[UEFA Europa League]] qualification:''' winners qualified for the [[2024–25 UEFA Europa League#League phase|2024–25 UEFA Europa League league phase]].
+|}
+;Notes
+*Matches ending in a draw were decided in extra time and, if still level, by a penalty shoot-out.
+
+==Qualified teams==
+The following teams qualified for the competition. Reserve teams were not allowed to enter.
+{| class="wikitable" style="font-size:90%"
+|- style="background-color:#d6e2b3; text-align:center; vertical-align:top"
+| style="width:14%" | '''La Liga'''<br /><small>All 20 teams of the [[2022–23 La Liga|2022–23 season]]</small>
+| style="width:14%" | '''Segunda División'''<br /><small>All 21 non-reserve teams of the [[2022–23 Segunda División|2022–23 season]]</small>
+| style="width:14%" | '''Primera Federación'''<br /><small>Top five non-reserve teams of the two groups of the [[2022–23 Primera Federación|2022–23 season]]</small>
+| style="width:14%" | '''Segunda Federación'''<br /><small>Top five non-reserve teams of the five groups of the [[2022–23 Segunda Federación|2022–23 season]]</small>
+| style="width:14%" | '''Tercera Federación'''<br /><small>The best non-reserve teams plus the best seven non-reserve runners-up of each one of the eighteen groups of the [[2022–23 Tercera Federación|2022–23 season]]</small>
+| style="width:14%" | '''Copa Federación'''<br /><small>The four semi-finalists of the [[2023 Copa Federación de España]]</small>
+| style="width:14%" | '''Regional leagues'''<br /><small>The best non-promoted teams of the twenty groups of the [[Divisiones Regionales de Fútbol|sixth tier]] in the 2022–23 season </small>
+|- style="vertical-align:top"
+|
+* [[UD Almería|Almería]]
+* [[Athletic Bilbao]]
+* [[Atlético Madrid]]{{efn|name=SC|Atlético Madrid, Barcelona, Osasuna and Real Madrid joined the tournament in the round of 32 as participants of the [[2024 Supercopa de España|Supercopa de España]].}}
+* [[FC Barcelona|Barcelona]]{{efn|name=SC}}
+* [[Cádiz CF|Cádiz]]
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[Elche CF|Elche]]
+* [[RCD Espanyol|Espanyol]]
+* [[Getafe CF|Getafe]]
+* [[Girona FC|Girona]]
+* [[RCD Mallorca|Mallorca]]
+* [[CA Osasuna|Osasuna]]{{efn|name=SC}}
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Real Madrid CF|Real Madrid]]<sup>[[2022–23 Copa del Rey|TH]]</sup>{{efn|name=SC}}
+* [[Real Sociedad]]
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Villarreal CF|Villarreal]]
+* [[Real Valladolid|Valladolid]]
+|
+* [[Deportivo Alavés|Alavés]]
+* [[Albacete Balompié|Albacete]]
+* [[FC Andorra|Andorra]]
+* [[Burgos CF|Burgos]]
+* [[FC Cartagena|Cartagena]]
+* [[SD Eibar|Eibar]]
+* [[Granada CF|Granada]]
+* [[SD Huesca|Huesca]]
+* [[UD Ibiza|Ibiza]]
+* [[UD Las Palmas|Las Palmas]]
+* [[CD Leganés|Leganés]]
+* [[Levante UD|Levante]]
+* [[CD Lugo|Lugo]]
+* [[Málaga CF|Málaga]]
+* [[CD Mirandés|Mirandés]]
+* [[Real Oviedo|Oviedo]]
+* [[SD Ponferradina|Ponferradina]]
+* [[Racing de Santander|Racing Santander]]
+* [[Sporting de Gijón|Sporting Gijón]]
+* [[CD Tenerife|Tenerife]]
+* [[Real Zaragoza|Zaragoza]]
+|
+* [[AD Alcorcón|Alcorcón]]
+* [[SD Amorebieta|Amorebieta]]{{efn|name=PF|Amorebieta joined the tournament in the second round as champions of the [[2022–23 Primera Federación]].}}
+* [[CD Castellón|Castellón]]
+* [[Deportivo de La Coruña|Deportivo La Coruña]]
+* [[CD Eldense|Eldense]]
+* [[Gimnàstic de Tarragona|Gimnàstic]]
+* [[Linares Deportivo|Linares]]
+* [[Real Murcia|Murcia]]
+* [[Racing de Ferrol|Racing Ferrol]]
+* [[Unionistas de Salamanca CF|Unionistas]]
+|
+* [[Antequera CF|Antequera]]
+* [[CD Arenteiro|Arenteiro]]
+* [[Atlético Sanluqueño CF|Atlético Sanluqueño]]
+* [[Real Avilés CF|Avilés]]
+* [[CP Cacereño|Cacereño]]
+* [[SD Compostela|Compostela]]
+* [[Gernika Club|Gernika]]
+* [[Gimnástica Segoviana CF|Gimnástica Segoviana]]
+* [[CD Guijuelo|Guijuelo]]
+* [[Hércules CF|Hércules]]
+* [[CE Manresa|Manresa]]
+* [[UD Melilla|Melilla]]
+* [[CDA Navalcarnero|Navalcarnero]]
+* [[SCR Peña Deportiva|Peña Deportiva]]
+* [[Recreativo de Huelva|Recreativo Huelva]]
+* [[Sestao River Club|Sestao River]]
+* [[SD Tarazona|Tarazona]]
+* [[CD Teruel|Teruel]]
+* [[Terrassa FC|Terrassa]]
+* [[CD Tudelano|Tudelano]]
+* [[UCAM Murcia CF|UCAM Murcia]]
+* [[Utebo FC|Utebo]]
+* [[CF Villanovense|Villanovense]]
+* [[Yeclano Deportivo|Yeclano]]
+* [[Zamora CF|Zamora]]
+|
+* [[Águilas FC|Águilas]]
+* [[CE Andratx|Andratx]]
+* [[Arandina CF|Arandina]]
+* [[Arosa SC|Arosa]]
+* [[CA Antoniano|Atlético Antoniano]]
+* [[Atlético Astorga FC|Atlético Astorga]]
+* [[Atzeneta UE|Atzeneta]]
+* [[CD Azuaga|Azuaga]]
+* [[Barakaldo CF|Barakaldo]]
+* [[UD Barbastro|Barbastro]]
+* [[CD Cayón|Cayón]]
+* [[CD Covadonga|Covadonga]]
+* [[CE Europa|Europa]]
+* [[Real Jaén|Jaén]]
+* [[AD Llerenense|Llerenense]]
+* [[CF Lorca Deportiva|Lorca Deportiva]]
+* [[CD Manacor|Manacor]]
+* [[CD Manchego Ciudad Real|Manchego]]
+* [[Marbella FC|Marbella]]
+* [[CD Mensajero|Mensajero]]
+* [[Náxara CD|Náxara]]
+* [[Orihuela CF|Orihuela]]
+* [[CDE Ursaria|Ursaria]]
+* [[CD Valle de Egüés|Valle de Egüés]]
+* [[CD Varea|Varea]]
+|
+* [[CF Badalona Futur|Badalona Futur]]
+* [[CD San Roque de Lepe|San Roque Lepe]]
+* [[CF Talavera de la Reina|Talavera de la Reina]]
+* [[UD Logroñés]]
+|
+* [[Atlético de Lugones SD|Atlético Lugones]]<!--ASTURIAS--><ref name=Marca>{{cite web|url=https://www.marca.com/futbol/copa-rey/2023/09/04/64f5d06d22601d30498b45b0.html|title=La Copa del Rey ya conoce a los 20 equipos modestos que jugarán la previa|trans-title=Copa del Rey already know the 20 modest teams which will play in the preliminary round|publisher=[[Marca (newspaper)|Marca]]|language=es|date=4 September 2023|accessdate=15 September 2023}}</ref>
+* [[CD Boiro|Boiro]]<!--GALICIA--><ref name=Marca/>
+* [[CD Buñol|Buñol]]<!--VALENCIAN COMMUNITY--><ref name=Marca/>
+* [[CD Ceuta 6 de Junio|Ceuta 6 de Junio]]<!--CEUTA--><ref name=Marca/>
+* [[Chiclana CF|Chiclana]]<!--WESTERN ANDALUSIA--><ref name=Marca/>
+* [[Deportivo Murcia FC|Deportivo Murcia]]<!--REGION OF MURCIA--><ref name=Marca/>
+* [[CD Hernán Cortés|Hernán Cortés]]<!--EXTREMADURA--><ref name=Marca/>
+* [[CP Mijas-Las Lagunas|Mijas-Las Lagunas]]<!--EASTERN ANDALUSIA--><ref name=Marca/>
+* [[Melilla CD]]<!--MELILLA--><ref name=Marca/>
+* [[CD Monte|Monte]]<!--CANTABRIA--><ref name=Marca/>
+* [[CD Pradejón|Pradejón]]<!--LA RIOJA--><ref name=Marca/>
+* [[CD Quintanar|Quintanar]]<!--CASTILLA-LA MANCHA--><ref name=Marca/>
+* [[UD Rotlet Molinar|Rotlet Molinar]]<!--BALEARIC ISLANDS--><ref name=Marca/>
+* [[UE Rubí|Rubí]]<!--CATALONIA--><ref name=Marca/>
+* [[CD Santurtzi|Santurtzi]]<!--BASQUE COUNTRY--><ref name=Marca/>
+* [[CD Sauzal|Sauzal]]<!--CANARY ISLANDS--><ref name=Marca/>
+* [[CF Tardienta|Tardienta]]<!--ARAGON--><ref name=Marca/>
+* [[Turégano CF|Turégano]]<!--CASTILE AND LEÓN--><ref name=Marca/>
+* [[CU Zona Norte|Unión Zona Norte]]<!--COMMUNITY OF MADRID--><ref name=Marca/>
+* [[CD Zirauki|Zirauki]]<!--NAVARRE--><ref name=Marca/>
+|}
+;Notes
+{{notelist}}
+
+==Preliminary round==
+===Draw===
+Teams were divided into four groups according to geographical criteria.<ref>{{cite web|url=https://rfef.es/es/noticias/licencia-para-sonar-conoce-los-emparejamientos-de-la-eliminatoria-previa-de-la-copa-de-s-m|publisher=RFEF|date=27 September 2023|language=es|title=Licencia para soñar. Conoce los emparejamientos de la eliminatoria previa de la Copa de S.M. el Rey
+}}</ref>
+{|class="wikitable"
+|-
+! Group 1 !! Group 2 !! Group 3 !! Group 4
+|- valign=top
+|
+* [[Atlético de Lugones SD|Atlético Lugones]]
+* [[CD Boiro|Boiro]]
+* [[CD Monte|Monte]]
+* [[CD Pradejón|Pradejón]]
+* [[CD Santurtzi|Santurtzi]]
+* [[Turégano CF|Turégano]]
+|
+* [[UD Rotlet Molinar|Rotlet Molinar]]
+* [[UE Rubí|Rubí]]
+* [[Tardienta CF|Tardienta]]
+* [[CD Zirauki|Zirauki]]
+|
+* [[CD Buñol|Buñol]]
+* [[CD Ceuta 6 de Junio|Ceuta 6 de Junio]]
+* [[Chiclana CF|Chiclana]]
+* [[Deportivo Murcia FC|Deportivo Murcia]]
+* [[Melilla CD]]
+* [[CP Mijas-Las Lagunas|Mijas-Las Lagunas]]
+|
+* [[CD Hernán Cortés|Hernán Cortés]]
+* [[CD Quintanar|Quintanar]]
+* [[CD Sauzal|Sauzal]]
+* [[CU Zona Norte|Unión Zona Norte]]
+|}
+
+===Matches===
+{{football box collapsible
+|id=
+|date=11 October 2023
+|time=19:30
+|team1='''[[CD Pradejón|Pradejón]] (6)'''
+|score=1–2
+|report=https://www.futbolasturiano.es/noticias14/0438.htm
+|team2=[[Atlético de Lugones SD|Atlético Lugones]] (6)
+|goals1=
+*[[David Cordón Saenz|Cordón]] {{goal|40}}
+|goals2=
+*[[Lucas Fernández Fernández|Fernández]] {{goal|25}}
+*[[Rodrigo Álvarez García|Pibe]] {{goal|52}}
+|stadium=[[Polideportivo Municipal de Pradejón|Municipal]]
+|location=[[Pradejón]]
+|attendance=800
+|referee=Berrade Aísa (Navarre)
+}}
+{{football box collapsible
+|id=
+|date=11 October 2023
+|time=20:00
+|team1='''[[CP Mijas-Las Lagunas|Mijas-Las Lagunas]] (6)'''
+|score=0–1
+|report=https://mijascomunicacion.com/actualidad/28840/el-chiclana-acaba-con-el-sueno-de-la-copa-del-cpm-las-lagunas-0-1/
+|team2=[[Chiclana CF|Chiclana]] (6)
+|goals1=
+|goals2=
+* [[Walter Leonel Milano|Milano]] {{goal|57|o.g.}}
+|stadium=[[Campo Municipal Juan Gambero Culebra|Juan Gambero Culebra]]
+|location=[[Mijas]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=11 October 2023
+|time=21:00
+|team1='''[[CD Ceuta 6 de Junio|Ceuta 6 de Junio]] (6)'''
+|score=0–3
+|report=https://elfarodeceuta.es/ceuta-6-junio-dice-adios-copa-bunol/
+|team2=[[CD Buñol|Buñol]] (6)
+|goals1=
+|goals2=
+*[[César Cervera Cajas|Cajas]] {{goal|2}}
+*[[Albert Valero Fortea|Valero]] {{goal|54}}
+*[[Tobías Plá|Plá]] {{goal|88}}
+|stadium=[[Estadio José Martínez Pirri|José Martínez Pirri]]
+|location=[[Ceuta]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=12 October 2023
+|time=12:00
+|team1=[[CD Hernán Cortés|Hernán Cortés]] (6)
+|score=3–1
+|report=https://eldeportivo.es/futbol/202310/aunque-se-adelanto-en-el-marcador-el-sauzal-cayo-en-la-copa-del-rey/
+|team2='''[[CD Sauzal|Sauzal]] (6)'''
+|goals1=
+* [[Juan José Moruno Barroso|Moruno]] {{goal|22||29}}
+* [[Enrique Márquez Nieto|Márquez]] {{goal|54}}
+|goals2=
+* [[Luis Enrique Bethencourt Montelongo|Bethencourt]] {{goal|17}}
+|stadium=[[Campo Municipal de Hernán Cortés|Municipal]]
+|location=[[Don Benito]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=12 October 2023
+|time=16:30
+|team1=[[Turégano CF|Turégano]] (6)
+|score=3–1
+|report=https://www.elcorreo.com/deportes/futbol/copa-del-rey/sueno-morado-acaba-pesadilla-20231012184056-nt.html
+|team2='''[[CD Santurtzi|Santurtzi]] (6)'''
+|goals1=
+* [[David Cotrina Vinagre|Cotrina]] {{goal|40}}
+* [[Guillermo Martín Duque|Guille Duque]] {{goal|50|pen.}}
+* [[Miguel Pérez García|Miguel Pérez]] {{goal|83}}
+|goals2=
+* [[Unai Matey Monge|Matey]] {{goal|47}}
+|stadium=[[Estadio El Burgo (Turégano)|El Burgo]]
+|location=[[Turégano]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=12 October 2023
+|time=17:00
+|team1=[[Tardienta CF|Tardienta]] (6)
+|score=2–1
+|report=https://www.diariodenavarra.es/noticias/deportes/futbol/2023/10/12/el-zirauki-sigue-vivo-eliminatoria-descanso-585605-1022.html
+|team2='''[[CD Zirauki|Zirauki]] (7)'''
+|goals1=
+* [[Javier Fraile Carrey|Fraile]] {{goal|4}}
+* [[Sergio Mercadal Camisón|Mercadal]] {{goal|29}}
+|goals2=
+* [[Iñigo Ruiz de las Heras Iturgaiz|Ruiz de las Heras]] {{goal|56|pen.}}
+|stadium=[[Campo Municipal de Deportes Santa Quiteria|Santa Quiteria]]
+|location=[[Tardienta]]
+|attendance=725
+|referee=Martínez Alonso
+}}
+{{football box collapsible
+|id=
+|date=12 October 2023
+|time=17:00
+|team1=[[UE Rubí|Rubí]] (6)
+|score=0–0
+|aet=yes
+|penaltyscore=4–2
+|report=https://www.diariodemallorca.es/deportes/2023/10/12/rotlet-molinar-dice-adios-copa-93271823.html
+|team2='''[[UD Rotlet Molinar|Rotlet Molinar]] (6)'''
+|goals1=
+|goals2=
+|penalties1 = 
+* [[Mario Hervías Martínez|Hervías]] {{pengoal}}
+* [[Óscar Morell Bono|Morell]] {{pengoal}}
+* [[Daniel Muela Ayo|Muela]] {{pengoal}}
+* [[Rafael Leva Molano|Rafa Leva]] {{pengoal}}
+|penalties2 = 
+* {{penmiss}}
+* [[José Joaquín Gori Pérez|Gori]] {{pengoal}}
+* [[Pere Pons Pons|Pons]] {{pengoal}}
+* {{penmiss}}
+|stadium=[[Municipal de Can Rosés|Can Rosés]]
+|location=[[Rubí, Barcelona|Rubí]]
+|attendance=
+|referee=Mihaita Marius Haghiac
+}}
+{{football box collapsible
+|id=
+|date=12 October 2023
+|time=17:30
+|team1='''[[CD Monte|Monte]] (6)'''
+|score=0–1
+|report=https://www.lavozdegalicia.es/retransmision/barbanza/boiro/2023/10/12/directo-copa-rey-cd-monte-boiro/01071697121691002893932.htm
+|team2=[[CD Boiro|Boiro]] (6)
+|goals1=
+|goals2=
+* [[Emilio José Carril Moure|Carril]] {{goal|39}}
+|stadium=[[Campos de Fútbol de Monte|Monte 1]]
+|location=[[Santander, Spain|Santander]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=12 October 2023
+|time=17:30
+|team1='''[[Melilla CD]] (6)'''
+|score=1–3
+|report=https://murciaplaza.com/el-deportivo-murcia-fc-gana-en-melilla-y-recibira-a-un-rival-de-primera-en-la-copa-del-rey
+|team2=[[Deportivo Murcia FC|Deportivo Murcia]] (7)
+|goals1=
+* [[Daniel González Morente|González]] {{goal|51}}
+|goals2=
+* [[Mario Minguela Sastre|Minguela]] {{goal|9}}
+* [[Cristóbal Soto Acosta|Soto]] {{goal|23}}
+* [[Adrián Lorenzo Pérez|Adri Lorenzo]] {{goal|77}}
+|stadium=[[Estadio La Espiguera|La Espiguera]]
+|location=[[Melilla]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=12 October 2023
+|time=17:30
+|team1=[[CD Quintanar|Quintanar]] (6)
+|score=1–0
+|report=https://cadenaser.com/castillalamancha/2023/10/12/que-pase-un-primera-radio-azul/
+|team2='''[[CU Zona Norte|Unión Zona Norte]] (6)'''
+|goals1=
+* [[José Luis Moreno Nieto|Joselu]] {{goal|13}}
+|goals2=
+|stadium=[[Estadio Los Molinos|Los Molinos]]
+|location=[[Quintanar de la Orden]]
+|attendance=
+|referee=
+}}
+
+==First round==
+The first round was played by 110 of the 115 qualified teams, with the exceptions being the four participants of the [[2024 Supercopa de España]], and the Primera RFEF champions. The ten winners from the previous preliminary round were paired with ten teams from La Liga. The four Copa Federación semi-finalists were drawn with the other four teams from La Liga, and the last two La Liga teams were drawn with two teams from the Tercera RFEF. The last six teams from the Tercera RFEF were paired with six teams from the Segunda División. The last fourteen teams from Segunda División were paired with fourteen teams from the Segunda RFEF. Then, eighteen teams from the Segunda RFEF were paired with the eighteen teams from the Primera RFEF. Finally, two teams from Segunda RFEF were paired each other.
+
+A total of 55 matches were played between 31 October and 2 November 2023, as well as two postponed matches on 8 and 14 November, respectively.
+
+===Draw===
+The draw for the first round was held on 17 October 2023. Teams were divided into seven pots.<ref>{{cite news|url=https://rfef.es/sites/default/files/circular_no_29_-_sorteo_primera_eliminatoria_0.pdf|title=CAMPEONATO DE ESPAÑA / COPA DE S.M. EL REY Sorteo Primera Eliminatoria|publisher=RFEF|language=es|access-date=6 October 2023}}</ref>
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|16 teams of [[2023–24 La Liga|La Liga]]}} || width=15%|'''Pot 2'''<br/>{{small|20 teams of [[2023–24 Segunda División|Segunda División]]}} || width=15%|'''Pot 3'''<br/>{{small|18 teams of [[2023–24 Primera Federación|Primera Federación]]}} || width=15%|'''Pot 4'''<br/>{{small|34 teams of [[2023–24 Segunda Federación|Segunda Federación]]}} || width=15%|'''Pot 5'''<br/>{{small|8 teams of [[2023–24 Tercera Federación|Tercera Federación]]}} || width=15%|'''Pot 6'''<br/>{{small|4 teams qualified through the [[2023 Copa Federación de España|Copa Federación]]}} || width=15%|'''Pot 7'''<br/>{{small|10 winners of the preliminary round}}
+|- valign=top
+|
+* [[Deportivo Alavés|Alavés]]
+* [[UD Almería|Almería]]
+* [[Athletic Bilbao]]
+* [[Cádiz CF|Cádiz]]
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[Getafe CF|Getafe]]
+* [[Girona FC|Girona]]
+* [[Granada CF|Granada]]
+* [[UD Las Palmas|Las Palmas]]
+* [[RCD Mallorca|Mallorca]]
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Real Sociedad]]
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Villarreal CF|Villarreal]]
+|
+* [[Albacete Balompié|Albacete]]
+* [[AD Alcorcón|Alcorcón]]
+* [[FC Andorra|Andorra]]
+* [[Burgos CF|Burgos]]
+* [[FC Cartagena|Cartagena]]
+* [[SD Eibar|Eibar]]
+* [[Elche CF|Elche]]
+* [[CD Eldense|Eldense]]
+* [[RCD Espanyol|Espanyol]]
+* [[SD Huesca|Huesca]]
+* [[CD Leganés|Leganés]]
+* [[Levante UD|Levante]]
+* [[CD Mirandés|Mirandés]]
+* [[Real Oviedo|Oviedo]]
+* [[Racing de Ferrol|Racing Ferrol]]
+* [[Racing de Santander|Racing Santander]]
+* [[Sporting de Gijón|Sporting Gijón]]
+* [[CD Tenerife|Tenerife]]
+* [[Real Valladolid|Valladolid]]
+* [[Real Zaragoza|Zaragoza]]
+|
+* [[Antequera CF|Antequera]]
+* [[CD Arenteiro|Arenteiro]]
+* [[Atlético Sanluqueño CF|Atlético Sanluqueño]]
+* [[CD Castellón|Castellón]]
+* [[Deportivo de La Coruña|Deportivo La Coruña]]
+* [[Gimnàstic de Tarragona|Gimnàstic]]
+* [[UD Ibiza|Ibiza]]
+* [[Linares Deportivo|Linares]]
+* [[CD Lugo|Lugo]]
+* [[Málaga CF|Málaga]]
+* [[UD Melilla|Melilla]]
+* [[Real Murcia|Murcia]]
+* [[SD Ponferradina|Ponferradina]]
+* [[Recreativo de Huelva|Recreativo Huelva]]
+* [[Sestao River Club|Sestao River]]
+* [[SD Tarazona|Tarazona]]
+* [[CD Teruel|Teruel]]
+* [[Unionistas de Salamanca CF|Unionistas]]
+|
+* [[Águilas FC|Águilas]]
+* [[CE Andratx|Andratx]]
+* [[Arandina CF|Arandina]]
+* [[CA Antoniano|Atlético Antoniano]]
+* [[Real Avilés CF|Avilés]]
+* [[Barakaldo CF|Barakaldo]]
+* [[UD Barbastro|Barbastro]]
+* [[CP Cacereño|Cacereño]]
+* [[CD Cayón|Cayón]]
+* [[SD Compostela|Compostela]]
+* [[CD Covadonga|Covadonga]]
+* [[CE Europa|Europa]]
+* [[Gernika Club|Gernika]]
+* [[Gimnástica Segoviana CF|Gimnástica Segoviana]]
+* [[CD Guijuelo|Guijuelo]]
+* [[Hércules CF|Hércules]]
+* [[AD Llerenense|Llerenense]]
+* [[CD Manchego Ciudad Real|Manchego]]
+* [[CE Manresa|Manresa]]
+* [[Marbella FC|Marbella]]
+* [[CD Mensajero|Mensajero]]
+* [[CDA Navalcarnero|Navalcarnero]]
+* [[Náxara CD|Náxara]]
+* [[Orihuela CF|Orihuela]]
+* [[SCR Peña Deportiva|Peña Deportiva]]
+* [[Terrassa FC|Terrassa]]
+* [[CD Tudelano|Tudelano]]
+* [[UCAM Murcia CF|UCAM Murcia]]
+* [[CDE Ursaria|Ursaria]]
+* [[Utebo FC|Utebo]]
+* [[CD Valle de Egüés|Valle de Egüés]]
+* [[CF Villanovense|Villanovense]]
+* [[Yeclano Deportivo|Yeclano]]
+* [[Zamora CF|Zamora]]
+|
+* [[Arosa SC|Arosa]]
+* [[Atlético Astorga FC|Atlético Astorga]]
+* [[Atzeneta UE|Atzeneta]]
+* [[CD Azuaga|Azuaga]]
+* [[Real Jaén|Jaén]]
+* [[CF Lorca Deportiva|Lorca Deportiva]]
+* [[CD Manacor|Manacor]]
+* [[CD Varea|Varea]]
+|
+* [[CF Badalona Futur|Badalona Futur]]
+* [[CD San Roque de Lepe|San Roque Lepe]]
+* [[CF Talavera de la Reina|Talavera de la Reina]]
+* [[UD Logroñés]]
+|
+* [[Atlético de Lugones SD|Atlético Lugones]]
+* [[CD Boiro|Boiro]]
+* [[CD Buñol|Buñol]]
+* [[Chiclana CF|Chiclana]]
+* [[Deportivo Murcia FC|Deportivo Murcia]]
+* [[CD Hernán Cortés|Hernán Cortés]]
+* [[CD Quintanar|Quintanar]]
+* [[UE Rubí|Rubí]]
+* [[CF Tardienta|Tardienta]]
+* [[Turégano CF|Turégano]]
+|}
+
+===Matches===
+{{football box collapsible
+|id=
+|date=31 October 2023
+|time=19:00 [[Western European Time|WET]]
+|team1='''[[CD Mensajero|Mensajero]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-mensajero-rcd-espanyol-de-barcelona-2
+|team2=[[RCD Espanyol|Espanyol]] (2)
+|goals1=
+|goals2=
+*[[Salvi (footballer)|Salvi]] {{goal|36||38}}
+|stadium=[[Nuevo Estadio Silvestre Carrillo|Silvestre Carrillo]]
+|location=[[Santa Cruz de la Palma|Santa Cruz]]
+|attendance=
+|referee=Manuel Jesús Orellana Cid
+}}
+{{football box collapsible
+|id=
+|date=31 October 2023
+|time=20:00
+|team1='''[[CD Varea|Varea]] (5)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-varea-levante-ud-2
+|team2=[[Levante UD|Levante]] (2)
+|goals1=
+|goals2=
+*[[Carlos Álvarez (footballer, born 2003)|Álvarez]] {{goal|51}}
+*[[Robert Ibáñez|Rober]] {{goal|60}}
+*[[Dani Gómez (footballer, born 1998)|Gómez]] {{goal|77}}
+|stadium=[[Estadio Las Gaunas|Las Gaunas]]
+|location=[[Logroño]]{{efn|Varea did not play the match in their main stadium Municipal de Varea, [[Varea, La Rioja|Varea]], as it did not meet the broadcasting requirements.<ref>[https://nuevecuatrouno.com/2023/10/24/deportes-copa-rey-varea-levante-adelanta-martes/] NueveCuatroUno.com . 24 October 2023. (in Spanish)</ref>}} 
+|attendance=
+|referee=Jon Ander González Esteban
+}}
+{{football box collapsible
+|id=
+|date=31 October 2023
+|time=20:45
+|team1='''[[CP Cacereño|Cacereño]] (4)'''
+|score=2–3
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cp-cacereno-cd-castellon-2
+|team2=[[CD Castellón|Castellón]] (3)
+|goals1=
+*[[Iván Fernández Tamayo|Fernández]] {{goal|22}}
+*[[Lolo (footballer, born 1993)|Lolo]] {{goal|95|pen.}}
+|goals2=
+*[[Israel Suero Fernández|Suero]] {{goal|56}}
+*[[Mamadou Traoré (footballer, born 2002)|Traoré]] {{goal|101}}
+*[[Sebastian Grønning|Grønning]] {{goal|103}}
+|stadium=[[Estadio Príncipe Felipe|Príncipe Felipe]]
+|location=[[Cáceres, Spain|Cáceres]]
+|attendance=2,389
+|referee=Daniel Palencia Caballero
+}}
+{{football box collapsible
+|id=
+|date=31 October 2023
+|time=21:00
+|team1='''[[CF Talavera de la Reina|Talavera de la Reina]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-talavera-ud-almeria-2
+|team2=[[UD Almería|Almería]] (1)
+|goals1=
+|goals2=
+*[[Largie Ramazani|Ramazani]] {{goal|14}}
+*[[Marko Milovanović (footballer, born 2003)|Milovanović]] {{goal|45}}
+|stadium=[[Estadio El Prado|El Prado]]
+|location=[[Talavera de la Reina]]
+|attendance=3,118
+|referee=Mateo Busquets Ferrer
+}}
+{{football box collapsible
+|id=
+|date=31 October 2023
+|time=21:00
+|team1='''[[CD Manacor|Manacor]] (5)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-manacor-ud-las-palmas-2
+|team2=[[UD Las Palmas|Las Palmas]] (1)
+|goals1=
+|goals2=
+*[[Julián Araujo|Araujo]] {{goal|68}}
+*[[Alberto Moleiro|Moleiro]] {{goal|76}}
+*[[Pau Ferrer Besalduch|Ferrer]] {{goal|86}}
+|stadium=[[Estadi Na Capellera|Na Capellera]]
+|location=[[Manacor]]
+|attendance=2,600
+|referee=Jorge Figueroa Vázquez
+}}
+{{football box collapsible
+|id=
+|date=31 October 2023
+|time=21:00
+|team1='''[[CF Lorca Deportiva|Lorca Deportiva]] (5)'''
+|score=0–4
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cf-lorca-dep-sd-eibar-2
+|team2=[[SD Eibar|Eibar]] (2)
+|goals1=
+|goals2=
+*[[Ángel Troncho|Troncho]] {{goal|68}}
+*[[Konrad de la Fuente|De la Fuente]] {{goal|80}}
+*[[Ager Aketxe|Aketxe]] {{goal|83||90|pen.}}
+|stadium=[[Estadio Francisco Artés Carrasco|Francisco Artés Carrasco]]
+|location=[[Lorca, Spain|Lorca]]
+|attendance=
+|referee=Iván Caparrós Hernández
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[Atlético de Lugones SD|Atlético Lugones]] (6)'''
+|score=0–6
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-atletico-lugones-rayo-vallecano-2
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+|goals2=
+*[[Radamel Falcao|Falcao]] {{goal|8|pen.|16}}
+*[[Sergio Camello|Camello]] {{goal|40}}
+*[[Bebé]] {{goal|62||79}}
+*[[Andrei Rațiu|Rațiu]] {{goal|68}}
+|stadium=Santa Bárbara
+|location=[[Lugones, Siero|Lugones]]
+|attendance=1,800
+|referee=Alejandro Muñiz Ruiz
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[CD San Roque de Lepe|San Roque Lepe]] (4)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-san-roque-de-lepe-girona-fc-2
+|team2=[[Girona FC|Girona]] (1)
+|goals1=
+*[[Mohamed Mizzian Salmi|Mizzian]] {{goal|51}}
+|goals2=
+*[[Valery Fernández|Valery]] {{goal|48}}
+*[[Sávio (footballer, born 2004)|Sávio]] {{goal|90+8}}
+|stadium=Ciudad de Lepe
+|location=[[Lepe]]
+|attendance=3,000
+|referee=Francisco José Hernández Maeso
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[CF Badalona Futur|Badalona Futur]] (4)'''
+|score=0–0
+|aet=yes
+|penaltyscore=2–4
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cf-badalona-cadiz-cf-2
+|team2=[[Cádiz CF|Cádiz]] (1)
+|goals1=
+|goals2=
+|penalties1=
+*[[Carlos Javier Polo Jiménez|Peque]] {{pengoal}}
+*[[Zourdine Thior|Thior]] {{penmiss}}
+*[[Isaiah Jerónimo Navarro Díaz|Navarro]] {{pengoal}}
+*[[Xiker]] {{penmiss}}
+|penalties2=
+*{{pengoal}} [[Maxi Gómez|Gómez]]
+*{{pengoal}} [[Robert Navarro (footballer)|Navarro]]
+*{{pengoal}} [[Rominigue Kouamé|Kouamé]]
+*{{pengoal}} [[Lucas Pires (footballer)|Lucas Pires]]
+|stadium=Estadi ZEM Hipòlit Planàs
+|location=[[Vic, Spain|Vic]]
+|attendance=3,770
+|referee=Miguel Ángel Ortiz Arias
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[CD Azuaga|Azuaga]] (5)'''
+|score=0–0
+|aet=yes
+|penaltyscore=2–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-azuaga-fc-cartagena-2
+|team2=[[FC Cartagena|Cartagena]] (2)
+|goals1=
+|goals2=
+|penalties1=
+*[[Gabriel Jesús Lorente Navarro|Gabi]] {{pengoal}}
+*[[Carlos López Soriano|López]] {{penmiss}}
+*[[Emilio Vaca Blanco|Vaca]] {{pengoal}}
+*[[Larry Kelechi Opara Opara|Opara]] {{penmiss}}
+*[[Javier Sánchez Expósito|Sánchez]] {{penmiss}}
+*[[Diego Domínguez Barbosa|Domínguez]] {{penmiss}}
+|penalties2=
+*{{penmiss}} [[David Ferreiro|Ferreiro]]
+*{{penmiss}} [[Luis Muñoz (footballer, born 1997)|Muñoz]]
+*{{pengoal}} [[José Fontán|Fontán]]
+*{{penmiss}} [[Damián Musto|Musto]]
+*{{pengoal}} [[Alfredo Ortuño|Ortuño]]
+*{{pengoal}} [[Gonzalo Verdú|Gonzalo]]
+|stadium=[[Estadio Municipal de Deportes de Azuaga|Municipal]]
+|location=[[Azuaga]]
+|attendance=
+|referee=Dámaso Arcediano Monescillo
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[SCR Peña Deportiva|Peña Deportiva]] (4)'''
+|score=1–5
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-scr-pena-deportiva-real-valladolid-cf-2
+|team2=[[Real Valladolid|Valladolid]] (2)
+|goals1=
+*[[Jaume Tovar Seguí|Tovar]] {{goal|84}}
+|goals2=
+*[[Víctor Meseguer|Meseguer]] {{goal|17||69||71}}
+*[[César de la Hoz|De la Hoz]] {{goal|50}}
+*[[Alberto Quintana (footballer, born 2001)|Quintana]] {{goal|78}}
+|stadium=[[Estadio Municipal de Santa Eulària des Riu|Estadio Municipal]]
+|location=[[Santa Eulària des Riu|Santa Eulària]]
+|attendance=2,000
+|referee=Rubén Ávalos Barrera
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[CDA Navalcarnero|Navalcarnero]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cda-navalcarnero-ad-alcorcon-2
+|team2=[[AD Alcorcón|Alcorcón]] (2)
+|goals1=
+|goals2=
+*[[Javi Lara|Lara]] {{goal|21}}
+|stadium=[[Estadio Mariano González|Mariano González]]
+|location=[[Navalcarnero]]
+|attendance=
+|referee=Luis Mario Milla Alvendiz
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[AD Llerenense|Llerenense]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-ad-llerenense-cd-leganes-2
+|team2=[[CD Leganés|Leganés]] (2)
+|goals1=
+|goals2=
+*[[Allan Nyom|Nyom]] {{goal|9}}
+*[[Lalo Aguilar|Aguilar]] {{goal|61}}
+|stadium=Vicente Sanz
+|location=[[Don Benito]]{{efn|Llerenense did not play the match in their main stadium Fernando Robina, [[Llerena, Badajoz|Llerena]], as it did not meet the broadcasting requirements.<ref>[https://twitter.com/adllerenenseof/status/1715320541052096614](in Spanish)</ref>}}
+|attendance=
+|referee=Óliver de la Fuente Ramos
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[SD Compostela|Compostela]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-sd-compostela-cd-tenerife-2
+|team2=[[CD Tenerife|Tenerife]] (2)
+|goals1=
+|goals2=
+*[[Ángel Rodríguez (footballer, born 1987)|Ángel]] {{goal|10}}
+|stadium=[[Estadio Vero Boquete de San Lázaro|San Lázaro]]
+|location=[[Santiago de Compostela]]
+|attendance=2,503
+|referee=Germán Cid Camacho
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[Náxara CD|Náxara]] (4)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-naxara-melilla-2
+|team2=[[UD Melilla|Melilla]] (3)
+|goals1=
+*[[Aitor Amarildo Só Lorá|Lorá]] {{goal|90+1}}
+|goals2=
+*[[José Antonio González (footballer)|González]] {{goal|1}}
+*[[Daniel García Beltrán|García]] {{goal|49}}
+|stadium=[[La Salera]]
+|location=[[Nájera]]
+|attendance=1,114
+|referee=Pablo Monterrubio Torres
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1=[[UD Barbastro|Barbastro]] (4)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-barbastro-sd-ponferradina-2
+|team2='''[[SD Ponferradina|Ponferradina]] (3)'''
+|goals1=
+*[[Adrià de Mesa Garrido|De Mesa]] {{goal|44}}
+|goals2=
+|stadium=[[Estadio Municipal de Deportes de Barbastro|Municipal de Deportes]]
+|location=[[Barbastro]]
+|attendance=
+|referee=Pol Gòdia Solé
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=12:00
+|team1='''[[UCAM Murcia CF|UCAM Murcia]] (4)'''
+|score=0–0
+|aet=yes
+|penaltyscore=6–7
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-ucam-murcia-cf-linares-deportivo-2
+|team2=[[Linares Deportivo|Linares]] (3)
+|goals1=
+|goals2=
+|penalties1=
+*[[Albert Ramis Luque|Ramis]] {{pengoal}}
+*[[Yasser El Arbaoui|Yasser]] {{pengoal}}
+*[[Arturo Rodríguez (footballer, born 1989)|Arturo]] {{pengoal}}
+*[[Sergio Chinchilla Ballesteros|Chinchilla]] {{penmiss}}
+*[[Javier Ramírez Romero|Ramírez]] {{pengoal}}
+*[[Víctor Sánchez Morales|Sánchez]] {{pengoal}}
+*[[José Manuel Alonso Domínguez|Alonso]] {{pengoal}}
+*[[Marcos Pérez Sevila|Pérez]] {{penmiss}}
+|penalties2=
+*{{pengoal}} [[Alberto Moreno Rebanal|Moreno]]
+*{{pengoal}} [[Rafa Llorente|Llorente]]
+*{{pengoal}} [[Francisco Varela (footballer, born 1994)|Varela]]
+*{{penmiss}} [[Lucas Suárez Estrada|Suárez]]
+*{{pengoal}} [[Antonio Luis Díaz Sánchez|Díaz]]
+*{{pengoal}} [[Álex Oyón|Oyón]]
+*{{pengoal}} [[Manuel Molina Barrancos|Molina]]
+*{{pengoal}} [[Javier Rentero|Rentero]]
+|stadium=[[Estadio de La Condomina|La Condomina]]
+|location=[[Murcia]]
+|attendance=1,460
+|referee=David Cambronero González
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=15:30
+|team1='''[[CD Quintanar|Quintanar]] (6)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-quintanar-de-la-orden-sevilla-fc-2
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+|goals2=
+*[[Rafa Mir|Mir]] {{goal|22}}
+*[[Youssef En-Nesyri|En-Nesyri]] {{goal|40}}
+*[[Adrià Pedrosa|Pedrosa]] {{goal|90+2}}
+|stadium=[[Alfonso Viller García]]
+|location=[[Quintanar de la Orden]]
+|attendance=4,500
+|referee=[[Juan Martínez Munuera]]
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=15:30
+|team1='''[[Turégano CF|Turégano]] (6)'''
+|score=0–4
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-turegano-rc-celta-2
+|team2=[[RC Celta de Vigo|Celta Vigo]] (1)
+|goals1=
+|goals2=
+*[[Jonathan Bamba|Bamba]] {{goal|12||33}}
+*[[Carles Pérez|Pérez]] {{goal|61||71}}
+|stadium=[[Estadio La Albuera|La Albuera]]
+|location=[[Segovia]]{{efn|Turégano did not play the match in their main stadium El Burgo, [[Turégano]], as it did not meet the broadcasting requirements.<ref>[https://www.eldiasegovia.es/noticia/zd8abfa49-ae57-489d-7b5543e124e30c49/202310/los-no-socios-del-turegano-pagaran-20-euros-contra-el-celta] El Día de Segovia. 20 October 2023. (in Spanish)</ref>}} 
+|attendance=2,200
+|referee=Mario Melero López
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=16:00
+|team1=[[Atlético Astorga FC|Atlético Astorga]] (5)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-atl-astorga-fc-andorra-2
+|team2='''[[FC Andorra|Andorra]] (2)'''
+|goals1=
+*[[Ivi Vales|Vales]] {{goal|22}}
+|goals2=
+|stadium=[[Estadio La Eragudina|La Eragudina]]
+|location=[[Astorga, Spain|Astorga]]
+|attendance=1,000
+|referee=Álvaro Moreno Aragón
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=16:00
+|team1=[[CD Valle de Egüés|Valle de Egüés]] (4)
+|score=1–0
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-valle-de-egues-cd-teruel-2
+|team2='''[[CD Teruel|Teruel]] (3)'''
+|goals1=
+*[[Miguel Díaz (Spanish footballer)|Díaz]] {{goal|110|pen.}}
+|goals2=
+|stadium=Estadio Valle Araguren
+|location=[[Aranguren]]{{efn|Valle de Egüés did not play the match in their main stadium Sarriguren, [[Egüés]], as it did not meet the broadcasting requirements.<ref>[https://ecodeteruel.tv/el-cd-teruel-jugara-la-copa-en-el-polideportivo-valle-de-aranguren-el-dia-1-de-noviembre-a-las-16-horas/] Eco de Teruel. 26 October 2023. (in Spanish)</ref>}} 
+|attendance=
+|referee=Fernando Román Román
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=16:00
+|team1='''[[CA Antoniano|Atlético Antoniano]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-club-atletico-antoniano-cd-lugo-2
+|team2=[[CD Lugo|Lugo]] (3)
+|goals1=
+|goals2=
+*[[Leandro Antonetti|Antonetti]] {{goal|80}}
+|stadium=[[Estadio Municipal de Lebrija|Municipal de Lebrija]]
+|location=[[Lebrija]]
+|attendance=
+|referee=Álvaro Rodríguez Recio
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=16:30
+|team1='''[[Real Jaén|Jaén]] (5)'''
+|score=2–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-jaen-cd-eldense-2
+|team2=[[CD Eldense|Eldense]] (2)
+|goals1=
+*[[Brian Triviño Escribano|Triviño]] {{goal|24}}
+*[[Mario Martos|Martos]] {{goal|62}}
+|goals2=
+*[[Miguel Marí|Marí]] {{goal|45+1}}
+*[[Derick Poloni|Poloni]] {{goal|87}}
+*[[Juanto Ortuño|Ortuño]] {{goal|90+1|pen.}}
+|stadium=[[Nuevo Estadio de La Victoria|Nuevo La Victoria]]
+|location=[[Jaén, Spain|Jaén]]
+|attendance=12,569
+|referee=Rafael Sánchez López
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=16:30
+|team1='''[[Real Avilés CF|Avilés]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-real-aviles-arenteiro-2
+|team2=[[CD Arenteiro|Arenteiro]] (3)
+|goals1=
+|goals2=
+*[[Marcos Alonso Rodríguez|Marquitos]] {{goal|32}}
+|stadium=[[Estadio Román Suárez Puerta|Román Suárez Puerta]]
+|location=[[Avilés]]
+|attendance=1,243
+|referee=José Alberto Pardeiro Puente
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=17:00
+|team1='''[[CD Covadonga|Covadonga]] (4)'''
+|score=1–3
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-covadonga-rc-deportivo-2
+|team2=[[Deportivo de La Coruña|Deportivo La Coruña]] (3)
+|goals1=
+*[[Iván Fernández Álvarez|Fernández]] {{goal|32}}
+|goals2=
+*[[Pablo Vázquez (footballer, born 1994)|Vázquez]] {{goal|89}}
+*[[Lucas Pérez|Pérez]] {{goal|115}}
+*[[David Mella Boullón|Mella]] {{goal|117}}
+|stadium=[[Estadio Ganzábal]]
+|location=[[Langreo]]{{efn|Covadonga did not play the match in their main stadium Juan Antonio Álvarez Rabanal, [[Oviedo]], as it did not meet the broadcasting requirements.<ref>[https://www.rcdeportivo.es/noticias/el-campo-de-ganzabal-en-langreo-acogera-el-partido-de-la-primera-ronda-de-copa-del-rey-entre-cd-covadonga-y-depor] Deportivo de la Coruña. 24 October 2023. (in Spanish)</ref>}}
+|attendance=2,500
+|referee=Imanol Irurtzun Artola
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=17:00
+|team1='''[[CDE Ursaria|Ursaria]] (4)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-ursaria-cayon-2
+|team2=[[CD Cayón|Cayón]] (4)
+|goals1=
+*[[Christian Díaz Flores|Díaz]] {{goal|29}}
+|goals2=
+*[[David Sanz Oti|Sanz]] {{goal|22}}
+*[[Héctor Alonso Cosío|Alonso]] {{goal|72}}
+|stadium=[[Estadio Polideportivo La Dehesa|La Dehesa]]
+|location=[[Cobeña]]
+|attendance=300
+|referee=Fernando Moreno Osuna
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=17:30
+|team1='''[[CD Guijuelo|Guijuelo]] (4)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-guijuelo-real-sporting-2
+|team2=[[Sporting de Gijón|Sporting Gijón]] (2)
+|goals1=
+|goals2=
+*[[Asiel Mateo|Mateo]] {{goal|59|o.g.}}
+*[[Haissem Hassan|Hassan]] {{goal|67}}
+*[[Marcos Fernández Segado|Fernández]] {{goal|86}}
+|stadium=[[Estadio Municipal de Guijuelo|Estadio Municipal]]
+|location=[[Guijuelo]]
+|attendance=
+|referee=José Antonio López Toca
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=17:30
+|team1=[[Zamora CF|Zamora]] (4)
+|score=2–2
+|aet=yes
+|penaltyscore=4–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-zamora-cf-r-racing-club-2
+|team2='''[[Racing de Santander|Racing Santander]] (2)'''
+|goals1=
+*[[Luismi Luengo|Luismi]] {{goal|45+1}}
+*[[Carlos Ramos Blanco|Ramos]] {{goal|120+2}}
+|goals2=
+*[[Andrés Martín (footballer)|Martín]] {{goal|90+3}}
+*[[Gerard Fernández|Peque]] {{goal|108|pen.}}
+|penalties1=
+*[[Carlos Ramos Blanco|Ramos]] {{pengoal}}
+*[[Antonio Jesús Camacho Díaz|Camacho]] {{pengoal}}
+*[[Theo García Otero|García]] {{pengoal}}
+*[[Asier Etxaburu|Etxaburu]] {{pengoal}}
+|penalties2=
+*{{penmiss}} [[Iñigo Vicente|Vicente]]
+*{{pengoal}} [[Clément Grenier|Grenier]]
+*{{pengoal}} [[Iván Morante|Morante]]
+*{{pengoal}} [[Andrés Martín (footballer)|Martín]]
+*{{penmiss}} [[Gerard Fernández|Peque]]
+|stadium=[[Estadio Ruta de la Plata|Ruta de la Plata]]
+|location=[[Zamora, Spain|Zamora]]
+|attendance=3,405
+|referee=Miguel González Díaz
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=17:30
+|team1='''[[CD Manchego Ciudad Real|Manchego]] (4)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-manchego-ciudad-real-antequera-cf-2
+|team2=[[Antequera CF|Antequera]] (3)
+|goals1=
+*[[Carlos Jiménez de los Galanes Villar|Jiménez]] {{goal|61}}
+|goals2=
+*[[Chema (footballer, born 1997)|Chema]] {{goal|44}}
+*[[Alejandro Marín Díaz|Marín]] {{goal|51||59}}
+|stadium=Rey Juan Carlos I 
+|location=[[Ciudad Real]]
+|attendance=
+|referee=Jorge Díaz Escudero
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=17:30
+|team1=[[Arandina CF|Arandina]] (4)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-arandina-murcia-2
+|team2='''[[Real Murcia|Murcia]] (3)'''
+|goals1=
+*[[Ayoub El Battioui|El Battioui]] {{goal|43}}
+|goals2=
+|stadium=[[Estadio El Montecillo|El Montecillo]]
+|location=[[Aranda de Duero]]
+|attendance=
+|referee=Guillermo Conejero Sánchez
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:00
+|team1=[[Terrassa FC|Terrassa]] (4)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-terrassa-fc-albacete-bp-2
+|team2='''[[Albacete Balompié|Albacete]] (2)'''
+|goals1=
+*[[Jordi Cano|Cano]] {{goal|49}}
+|goals2=
+|stadium=[[Estadi Olímpic de Terrassa|Estadi Olímpic]]
+|location=[[Terrassa]]
+|attendance=
+|referee=Andrés Fuentes Molina
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:00
+|team1='''[[Utebo FC|Utebo]] (4)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-utebo-cd-mirandes-2
+|team2=[[CD Mirandés|Mirandés]] (2)
+|goals1=
+*[[Diego Moreno (footballer, born 2001)|Moreno]] {{goal|42|o.g.}}
+|goals2=
+*[[Pablo Tomeo|Tomeo]] {{goal|53}}
+*[[Ivan Durdov|Durdov]] {{goal|94}}
+|stadium=[[Estadio Santa Ana|Santa Ana]]
+|location=[[Utebo]]
+|attendance=
+|referee=Adrián Cordero Vega
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:00
+|team1='''[[CE Europa|Europa]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-europa-elche-cf-2
+|team2=[[Elche CF|Elche]] (2)
+|goals1=
+|goals2=
+*[[Mourad Daoudi|Mourad]] {{goal|43}}
+*[[Rodri Mendoza|Mendoza]] {{goal|82}}
+|stadium=[[Nou Sardenya]]
+|location=[[Barcelona]]
+|attendance=4,032
+|referee=Salvador Lax Franco
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:00
+|team1='''[[Barakaldo CF|Barakaldo]] (4)'''
+|score=0–0
+|aet=yes
+|penaltyscore=2–4
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-barakaldo-malaga-cf-2
+|team2=[[Málaga CF|Málaga]] (3)
+|goals1=
+|goals2=
+|penalties1=
+*[[Antonio Jesús Salado Góngora|Salado]] {{pengoal}}
+*[[Imanol Torre Bediaga|Torre]] {{pengoal}}
+*[[Markel Artetxe Artetxe|Artetxe]] {{penmiss}}
+*[[Unai Vélez Galván|Vélez]] {{penmiss}}
+|penalties2=
+*{{pengoal}} [[Antonio José Cordero Campillo|Cordero]]
+*{{penmiss}} [[Dioni]]
+*{{pengoal}} [[Roberto Fernández (footballer, born 2002)|Roberto]]
+*{{pengoal}} [[Juanpe (footballer, born 1996)|Juanpe]]
+*{{pengoal}} [[Dani Lorenzo|Lorenzo]]
+|stadium=[[Campo de Lasesarre|Lasesarre]]
+|location=[[Barakaldo]]
+|attendance=7,600
+|referee=Manuel Pozueta Rodríguez
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:00
+|team1=[[CD Tudelano|Tudelano]] (4)
+|score=1–0
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-tudelano-recreativo-2
+|team2='''[[Recreativo de Huelva|Recreativo Huelva]] (3)'''
+|goals1=
+*[[Iván Martínez de Lizarrondo Lacalle|Martínez]] {{goal|106}}
+|goals2=
+|stadium=[[Estadio Ciudad de Tudela|Ciudad de Tudela]]
+|location=[[Tudela, Navarre|Tudela]]
+|attendance=
+|referee=Sergio Usón Rosel
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:00
+|team1='''[[Gernika Club|Gernika]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-gernika-unionistas-2
+|team2=[[Unionistas de Salamanca CF|Unionistas]] (3)
+|goals1=
+|goals2=
+*[[Mario Losada (footballer)|Losada]] {{goal|70}}
+*[[Alfred Planas|Planas]] {{goal|73}}
+|stadium=[[Estadio Urbieta|Urbieta]]
+|location=[[Gernika]]
+|attendance=
+|referee=Alejandro Morilla Turrión
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:00
+|team1=[[Yeclano Deportivo|Yeclano]] (4)
+|score=2–0
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-yeclano-deportivo-atletico-sanluqueno-2
+|team2='''[[Atlético Sanluqueño CF|Atlético Sanluqueño]] (3)'''
+|goals1=
+*[[Serpeta]] {{goal|114||122}}
+|goals2=
+|stadium=[[Estadio de La Constitución|La Constitución]]
+|location=[[Yecla]]
+|attendance=
+|referee=Francisco José Ortega Herrera
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:00
+|team1=[[Orihuela CF|Orihuela]] (4)
+|score=0–0
+|aet=yes
+|penaltyscore=6–5
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-orihuela-cf-nastic-2
+|team2='''[[Gimnàstic de Tarragona|Gimnàstic]] (3)'''
+|goals1=
+|goals2=
+|penalties1=
+*[[Brian Pallarés Blasco|Pallarés]] {{pengoal}}
+*[[Francisco Martínez Gómez|Martínez]] {{penmiss}}
+*[[Jamie Yayi Mpie|Mpie]] {{pengoal}}
+*[[Armando Ortiz Abellán|Ortiz]] {{pengoal}}
+*[[Juanmi Callejón|Callejón]] {{pengoal}}
+*[[Marcos Sirera Miramón|Sirera]] {{pengoal}}
+*[[Sergio Mendinueta Bellón|Mendinueta]] {{pengoal}}
+|penalties2=
+*{{pengoal}} [[Joan Oriol|Oriol]]
+*{{penmiss}} [[Marc Montalvo|Montalvo]]
+*{{pengoal}} [[Óscar Sanz|Sanz]]
+*{{pengoal}} [[David Concha|Concha]]
+*{{pengoal}} [[Pablo Fernández (footballer)|Fernández]]
+*{{pengoal}} [[Pablo Trigueros|Trigueros]]
+*{{penmiss}} [[Andy Escudero|Escudero]]
+|stadium=[[Estadio Municipal Los Arcos|Los Arcos]]
+|location=[[Orihuela]]
+|attendance=
+|referee=Juan Antonio Manrique Antequera
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:30
+|team1='''[[CF Tardienta|Tardienta]] (6)'''
+|score=0–12
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-ad-tardienta-getafe-cf-2
+|team2=[[Getafe CF|Getafe]] (1)
+|goals1=
+|goals2=
+*[[John Patrick (footballer, born 2003)|Patrick]] {{goal|7}}
+*[[Mason Greenwood|Greenwood]] {{goal|15||54}}
+*[[Anthony Lozano|Lozano]] {{goal|30}}
+*[[Jorge Martín Camuñas|Martín]] {{goal|33}}
+*[[Óscar Rodríguez (footballer, born 1998)|Óscar]] {{goal|35||56||63}}
+*[[Domingos Duarte|Duarte]] {{goal|68}}
+*[[Juanmi Latasa|Latasa]] {{goal|73}}
+*[[Borja Mayoral|Mayoral]] {{goal|78||85}}
+|stadium=[[Estadio El Alcoraz|El Alcoraz]]
+|location=[[Huesca]]{{efn|Tardienta did not play the match in their main stadium Santa Quiteria, [[Tardienta]], as it did not meet the broadcasting requirements.<ref>[https://www.eldiariodehuesca.com/deportes/huesca-anuncia-cedera-alcoraz-tardienta-jugar-copa-rey_13944_102.html] El Diario de Huesca. 16 October 2023. (in Spanish)</ref>}} 
+|attendance=1,200
+|referee=Víctor García Verdura
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:30
+|team1='''[[CD Buñol|Buñol]] (6)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-bunol-real-sociedad-2
+|team2=[[Real Sociedad]] (1)
+|goals1=
+|goals2=
+*[[Carlos Fernández (footballer, born 1996)|Fernández]] {{goal|67}}
+|stadium=Tomás Berlanga
+|location=[[Requena, Valencia|Requena]]{{efn|Buñol did not play the match in their main stadium Beltrán Báguena, [[Buñol]], as it did not meet the broadcasting requirements.<ref>[https://golsmedia.com/comunidad-valenciana/futbol/cd-bunol/2023/10/24/cd-bunol-vs-real-sociedad-parece-tener-campo-aceptado-por-rfef/] Golsmedia. 24 October 2023. (in Spanish)</ref>}} 
+|attendance=4,000
+|referee=[[Guillermo Cuadra Fernández]]
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=18:30
+|team1='''[[CD Boiro|Boiro]] (6)'''
+|score=0–4
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-boiro-rcd-mallorca-2
+|team2=[[RCD Mallorca|Mallorca]] (1)
+|goals1=
+|goals2=
+*[[Abdón Prats|Abdón]] {{goal|25||33|pen.|76|pen.}}
+*[[Cyle Larin|Larin]] {{goal|46}}
+|stadium=[[Campo de Barraña|Barraña]]
+|location=[[Boiro]]
+|attendance=
+|referee=Javier Alberola Rojas
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=19:00
+|team1='''[[Águilas FC|Águilas]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-aguilas-sd-huesca-2
+|team2=[[SD Huesca|Huesca]] (2)
+|goals1=
+|goals2=
+*[[Juanjo Nieto|Nieto]] {{goal|25}}
+|stadium=[[Estadio El Rubial|El Rubial]]
+|location=[[Águilas]]
+|attendance=
+|referee=Saúl Ais Reig
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=19:30
+|team1=[[CE Andratx|Andratx]] (4)
+|score=3–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-andratx-sd-tarazona-2
+|team2='''[[SD Tarazona|Tarazona]] (3)'''
+|goals1=
+*[[Javier Castedo Castillejo|Castedo]] {{goal|15}}
+*[[Alberto Fernández Broens|Fernández]] {{goal|92}}
+*[[Adrián Garrido Martínez|Garrido]] {{goal|102}}
+|goals2=
+*[[Mounir Errahaly|Errahaly]] {{goal|28}}
+*[[Fernando Cano Alcantarilla|Cano]] {{goal|70}}
+|stadium=[[Estadi de Sa Plana|Sa Plana]]
+|location=[[Andratx]]
+|attendance=1,200
+|referee=Sergiu Claudiu Muresan
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=20:00
+|team1='''[[Marbella FC|Marbella]] (4)'''
+|score=1–3
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-marbella-fc-racing-club-ferrol-2
+|team2=[[Racing de Ferrol|Racing Ferrol]] (2)
+|goals1=
+*[[Marco Túlio (footballer, born May 1998)|Marco Túlio]] {{goal|71}}
+|goals2=
+*[[Sabin Merino|Merino]] {{goal|43}}
+*[[Álvaro Giménez|Giménez]] {{goal|103||116}}
+|stadium=[[Estadio Municipal de Marbella]]
+|location=[[Marbella]]
+|attendance=1,000
+|referee=Daniel Jesús Trujillo Suárez
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=20:00
+|team1='''[[CE Manresa|Manresa]] (4)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-manresa-real-oviedo-2
+|team2=[[Real Oviedo|Oviedo]] (2)
+|goals1=
+*[[Enric Baquero Pintor|Baquero]] {{goal|24}}
+|goals2=
+*[[Francisco Mascarenhas (footballer)|Masca]] {{goal|3||112}}
+|stadium=Nou Estadi Municipal Congost
+|location=[[Manresa]]
+|attendance=3,117
+|referee=Iosu Galech Apezteguía
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=20:30
+|team1='''[[CD Hernán Cortés|Hernán Cortés]] (6)'''
+|score=1–12
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-hernan-cortes-real-betis-2
+|team2=[[Real Betis]] (1)
+|goals1=
+*[[Enrique Marquez Nieto|Márquez]] {{goal|55}}
+|goals2=
+*[[Rodri (footballer, born 2000)|Rodri]] {{goal|4||20||37}}
+*[[Willian José]] {{goal|6||33||40||43}}
+*[[Luiz Henrique (footballer, born 2001)|Luiz Henrique]] {{goal|9}}
+*[[Abde Ezzalzouli|Ezzalzouli]] {{goal|16||50}}
+*[[Marc Roca|Roca]] {{goal|86|pen.}}
+*[[Assane Diao|Diao]] {{goal|90}}
+|stadium=[[Estadio Francisco de la Hera|Francisco de la Hera]]
+|location=[[Almendralejo]]{{efn|Hernán Cortés did not play the match in their main stadium Municipal, Hernán Cortés, [[Don Benito]], as it did not meet the broadcasting requirements.<ref>[https://www.marca.com/futbol/betis/2023/10/18/652ff801e2704e9bbd8b45cc.html] MARCA. 18 October 2023. (in Spanish)</ref>}} 
+|attendance=11,580
+|referee=Isidro Díaz de Mera Escuderos
+}}
+{{football box collapsible
+|id=
+|date=1 November 2023
+|time=21:30
+|team1='''[[UE Rubí|Rubí]] (6)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-rubi-athletic-club-2
+|team2=[[Athletic Bilbao]] (1)
+|goals1=
+*[[Marc Rodríguez Cañero|Rodríguez]] {{goal|86}}
+|goals2=
+*[[Malcom Adu Ares|Ares]] {{goal|50||57}}
+|stadium=[[Municipal de Can Rosés|Can Rosés]]
+|location=[[Rubí, Barcelona|Rubí]]
+|attendance=4,000
+|referee=César Soto Grado
+}}
+{{football box collapsible
+|id=
+|date=2 November 2023
+|time=19:00
+|team1='''[[Chiclana CF|Chiclana]] (6)'''
+|score=0–5
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-chiclana-cf-villarreal-cf-2
+|team2=[[Villarreal CF|Villarreal]] (1)
+|goals1=
+|goals2=
+*[[Manu Trigueros|Trigueros]] {{goal|19||43||72|pen.}}
+*[[Jorge Pascual|Pascual]] {{goal|31}}
+*[[Álex Baena|Baena]] {{goal|74}}
+|stadium=[[Estadio Municipal de Chiclana|Estadio Municipal]]
+|location=[[Chiclana de la Frontera]]
+|attendance=5,520
+|referee=Juan Luis Pulido Santana
+}}
+{{football box collapsible
+|id=
+|date=2 November 2023
+|time=19:00
+|team1=[[Arosa SC|Arosa]] (5)
+|score=3–0 <small>([[Walkover|awd.]])</small>{{efn|Arosa were awarded a 3–0 win after Granada fielded ineligible player [[Adri López]] during the match. Granada originally won the match 3–0.<ref>[https://www.marca.com/futbol/copa-rey/2023/11/07/654a220a268e3e2d068b45ad.html] MARCA. 7 November 2023. (in Spanish)</ref>}} 
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-arosa-granada-cf-2
+|team2='''[[Granada CF|Granada]] (1)'''
+|goals1=
+|goals2=
+*[[José Callejón|Callejón]] {{goal|19}}
+*[[Shon Weissman|Weissman]] {{goal|88}}
+*[[Famara Diédhiou|Diédhiou]] {{goal|90}}
+|stadium=[[Estadio A Lomba|A Lomba]]
+|location=[[Vilagarcía de Arousa]]
+|attendance=3,100
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|id=
+|date=2 November 2023
+|time=20:00
+|team1='''[[UD Logroñés]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-ud-logrones-valencia-cf-2
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+|goals2=
+*[[Pablo Gozálbez|Gozálbez]] {{goal|45+1}}
+*[[Diego López (footballer, born May 2002)|López]] {{goal|88}}
+|stadium=[[Estadio Las Gaunas|Las Gaunas]]
+|location=[[Logroño]]
+|attendance=8,010
+|referee=Javier Iglesias Villanueva
+}}
+{{football box collapsible
+|id=
+|date=2 November 2023
+|time=20:30
+|team1='''[[Hércules CF|Hércules]] (4)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-hercules-burgos-cf-2
+|team2=[[Burgos CF|Burgos]] (2)
+|goals1=
+*[[Grego (footballer)|Grego]] {{goal|35|o.g.}}
+|goals2=
+*[[Fer Niño|Niño]] {{goal|19}}
+*[[Javi López-Pinto|López-Pinto]] {{goal|51}}
+|stadium=[[Estadio José Rico Pérez|José Rico Pérez]]
+|location=[[Alicante]]
+|attendance=8,567
+|referee=Raúl Martín González Francés
+}}
+{{football box collapsible
+|id=
+|date=2 November 2023
+|time=20:30
+|team1=[[CF Villanovense|Villanovense]] (4)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-villanovense-ud-ibiza-2
+|team2='''[[UD Ibiza|Ibiza]] (3)'''
+|goals1=
+*[[Mario González Casado|González]] {{goal|62}}
+*[[José Manuel Bermúdez Ortega|Bermúdez]] {{goal|67}}
+|goals2=
+*[[Nikolay Obolskiy|Obolskiy]] {{goal|42}}
+|stadium=Estadio Romero Cuerda
+|location=[[Villanueva de la Serena]]
+|attendance=
+|referee=Abraham Domínguez Cervantes
+}}
+{{football box collapsible
+|id=
+|date=2 November 2023
+|time=21:00
+|team1='''[[Deportivo Murcia FC|Deportivo Murcia]] (7)'''
+|score=0–10
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-deportivo-murcia-deportivo-alaves-2
+|team2=[[Deportivo Alavés|Alavés]] (1)
+|goals1=
+|goals2=
+*[[Abde Rebbach|Abde]] {{goal|7||38}}
+*[[Rubén Duarte|Duarte]] {{goal|13}}
+*[[Xeber Alkain|Alkain]] {{goal|52||60}}
+*[[Ianis Hagi|Hagi]] {{goal|63||80}}
+*[[Jon Karrikaburu|Karrikaburu]] {{goal|68||75||89}}
+|stadium=[[Estadio Nueva Condomina|Nueva Condomina]]{{efn|Deportivo Murcia did not play the match in their main stadium Campo Municipal José Manuel Aroca, as it did not meet the broadcasting requirements.<ref>[https://www.noticiasdealava.eus/alaves/2023/10/24/deportivo-murcia-alaves-disputara-besoccer-7423311.html] Noticias de Álava. 24 October 2023. (in Spanish)</ref>}} 
+|location=[[Murcia]]
+|attendance=2,500
+|referee=[[José Luis Munuera Montero]]
+}}
+{{football box collapsible
+|id=
+|date=8 November 2023
+|time=18:00
+|team1='''[[Gimnástica Segoviana CF|Gimnástica Segoviana]] (4)'''
+|score=3–4
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-gimnastica-segoviana-cf-sestao-2
+|team2=[[Sestao River Club|Sestao River]] (3)
+|goals1=
+*[[Juan Silva Pajín|Silva]] {{goal|12}}
+*[[Dani Segovia|Segovia]] {{goal|90+3}}
+*[[Hugo Díaz (footballer, born 1997)|Díaz]] {{goal|90+7}}
+|goals2=
+*[[Leandro Martínez Ortiz|L. Martínez]] {{goal|38}}
+*[[Jon Cabo|Cabo]] {{goal|52||98}}
+*[[Álvaro Gutiérrez Gete|Gutiérrez]] {{goal|73}}
+|stadium=[[Estadio La Albuera|La Albuera]]
+|location=[[Segovia]]
+|attendance=6,000
+|referee=Alexandre Alemán Pérez
+}}
+{{football box collapsible
+|id=
+|date=14 November 2023
+|time=20:00
+|team1=[[Atzeneta UE|Atzeneta]] (5)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-atzeneta-real-zaragoza-2
+|team2='''[[Real Zaragoza|Zaragoza]] (2)'''
+|goals1=
+*[[Brandon Yarce|Yarce]] {{goal|24}}
+*[[Mario Uclés|Uclés]] {{goal|69}}
+|goals2=
+*[[Víctor Mollejo|Mollejo]] {{goal|21}}
+|stadium=[[Estadio El Clariano|El Clariano]]
+|location=[[Ontinyent]]{{efn|Atzeneta did not play the match in their main stadium El Regit, [[Atzeneta d'Albaida|Atzeneta]], as it did not meet the broadcasting requirements.<ref>[https://www.heraldo.es/noticias/deportes/futbol/real-zaragoza/2023/10/24/definitivo-onteniente-sede-del-partido-de-copa-atzeneta-ue-real-zaragoza-1686384.html] Heraldo de Aragón. 24 October 2023. (in Spanish)</ref>}} 
+|attendance=2,100
+|referee=José Luis Guzmán Mansilla
+}}
+;Notes
+{{notelist}}
+
+==Second round==
+The second round was played by 56 teams, with the four participants of the [[2023–24 Supercopa de España]] having a bye. The Primera RFEF champions entered in this round.
+The three Tercera RFEF teams were paired with three teams from La Liga. The eleven Segunda RFEF teams were drawn with eleven teams from La Liga, and the last La Liga team were drawn with one team from the Primera RFEF. The last nine teams from the Primera RFEF were paired with nine teams from the Segunda División. Finally, eight teams from Segunda División were paired each other.
+
+A total of 28 matches were played between 22 November and 7 December 2023.
+
+===Draw===
+The draw for the second round was held on 15 November 2023. Teams were divided into five pots.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|15 teams of [[2023–24 La Liga|La Liga]]}} || width=15%|'''Pot 2'''<br/>{{small|17 teams of [[2023–24 Segunda División|Segunda División]]}} || width=15%|'''Pot 3'''<br/>{{small|10 teams of [[2023–24 Primera Federación|Primera Federación]]}} || width=15%|'''Pot 4'''<br/>{{small|11 teams of [[2023–24 Segunda Federación|Segunda Federación]]}} || width=15%|'''Pot 5'''<br/>{{small|3 teams of [[2023–24 Tercera Federación|Tercera Federación]]}}
+|- valign=top
+|
+* [[Deportivo Alavés|Alavés]]
+* [[UD Almería|Almería]]
+* [[Athletic Bilbao]]
+* [[Cádiz CF|Cádiz]]
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[Getafe CF|Getafe]]
+* [[Girona FC|Girona]]
+* [[UD Las Palmas|Las Palmas]]
+* [[RCD Mallorca|Mallorca]]
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Real Sociedad]]
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Villarreal CF|Villarreal]]
+|
+* [[AD Alcorcón|Alcorcón]]
+* [[SD Amorebieta|Amorebieta]]
+* [[Burgos CF|Burgos]]
+* [[FC Cartagena|Cartagena]]
+* [[SD Eibar|Eibar]]
+* [[Elche CF|Elche]]
+* [[CD Eldense|Eldense]]
+* [[RCD Espanyol|Espanyol]]
+* [[SD Huesca|Huesca]]
+* [[CD Leganés|Leganés]]
+* [[Levante UD|Levante]]
+* [[CD Mirandés|Mirandés]]
+* [[Real Oviedo|Oviedo]]
+* [[Racing de Ferrol|Racing Ferrol]]
+* [[Sporting de Gijón|Sporting Gijón]]
+* [[CD Tenerife|Tenerife]]
+* [[Real Valladolid|Valladolid]]
+|
+* [[CD Arenteiro|Arenteiro]]
+* [[Antequera CF|Antequera]]
+* [[CD Castellón|Castellón]]
+* [[Deportivo de La Coruña|Deportivo La Coruña]]
+* [[Linares Deportivo|Linares]]
+* [[CD Lugo|Lugo]]
+* [[Málaga CF|Málaga]]
+* [[UD Melilla|Melilla]]
+* [[Sestao River Club|Sestao River]]
+* [[Unionistas de Salamanca CF|Unionistas]]
+|
+* [[CE Andratx|Andratx]]
+* [[Arandina CF|Arandina]]
+* [[UD Barbastro|Barbastro]]
+* [[CD Cayón|Cayón]]
+* [[Orihuela CF|Orihuela]]
+* [[Terrassa FC|Terrassa]]
+* [[CD Tudelano|Tudelano]]
+* [[CD Valle de Egüés|Valle de Egüés]]
+* [[CF Villanovense|Villanovense]]
+* [[Yeclano Deportivo|Yeclano]]
+* [[Zamora CF|Zamora]]
+|
+* [[Arosa SC|Arosa]]
+* [[Atlético Astorga FC|Atlético Astorga]]
+* [[Atzeneta UE|Atzeneta]]
+|}
+
+===Matches===
+{{football box collapsible
+|id=
+|date=22 November 2023
+|time=21:00
+|team1='''[[Zamora CF|Zamora]] (4)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-zamora-cf-villarreal-cf-3
+|team2=[[Villarreal CF|Villarreal]] (1)
+|goals1=
+*[[Asier Etxaburu|Etxaburu]] {{goal|49}}
+|goals2=
+*[[José Luis Morales (footballer, born 1987)|Morales]] {{goal|88||96}}
+|stadium=[[Estadio Ruta de la Plata|Ruta de la Plata]]
+|location=[[Zamora, Spain|Zamora]]
+|attendance=4,600
+|referee=Miguel Ángel Ortiz Arias
+}}
+{{football box collapsible
+|id=
+|date=5 December 2023
+|time=19:00
+|team1='''[[Atzeneta UE|Atzeneta]] (5)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-atzeneta-getafe-cf-3
+|team2=[[Getafe CF|Getafe]] (1)
+|goals1=
+*[[Josep Seguí Escrivá|Seguí]] {{goal|56}}
+|goals2=
+*[[Juanmi Latasa|Latasa]] {{goal|53||74}}
+|stadium=[[Estadio El Clariano|El Clariano]]
+|location=[[Ontinyent]]{{efn|Atzeneta did not play the match in their main stadium El Regit, [[Atzeneta d'Albaida|Atzeneta]], as it did not meet the broadcasting requirements.<ref>[https://www.infobae.com/espana/agencias/2023/11/16/el-estadio-de-el-clariano-en-ontinyent-acogera-tambien-el-atzeneta-getafe/] Infobae. 16 November 2023. (in Spanish)</ref>}} 
+|attendance=5,000
+|referee=[[José Luis Munuera Montero]]
+}}
+{{football box collapsible
+|id=
+|date=5 December 2023
+|time=21:00
+|team1='''[[Arosa SC|Arosa]] (5)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-arosa-valencia-cf-3
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+|goals2=
+*[[Roman Yaremchuk|Yaremchuk]] {{goal|8}}
+|stadium=[[Estadio A Lomba|A Lomba]]
+|location=[[Vilagarcía de Arousa]]
+|attendance=4,253
+|referee=Isidro Díaz de Mera Escuderos
+}}
+{{football box collapsible
+|id=
+|date=5 December 2023
+|time=21:00
+|team1=[[RCD Espanyol|Espanyol]] (2)
+|score=3–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-rcd-espanyol-de-barcelona-real-valladolid-cf-3
+|team2='''[[Real Valladolid|Valladolid]] (2)'''
+|goals1=
+*[[Jofre Carreras|Carreras]] {{goal|24||43}}
+*[[Javi Puado|Puado]] {{goal|90+6}}
+|goals2=
+*[[Israel Salazar (footballer)|Salazar]] {{goal|82}}
+|stadium=[[Stage Front Stadium]]
+|location=[[Cornellà de Llobregat]]
+|attendance=15,464
+|referee=Salvador Lax Franco
+}}
+{{football box collapsible
+|id=
+|date=5 December 2023
+|time=21:00
+|team1=[[CD Castellón|Castellón]] (3)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-castellon-real-oviedo-3
+|team2='''[[Real Oviedo|Oviedo]] (2)'''
+|goals1=
+*[[Israel Suero|Suero]] {{goal|40}}
+*[[Sebastian Grønning|Grønning]] {{goal|49}}
+|goals2=
+*[[Alexandre Alemão|Alemão]] {{goal|56}}
+|stadium=[[Nou Estadi Castàlia]]
+|location=[[Castellón de la Plana]]
+|attendance=11,258
+|referee=Óliver de la Fuente Ramos
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=12:00
+|team1=[[UD Barbastro|Barbastro]] (4)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-barbastro-ud-almeria-3
+|team2='''[[UD Almería|Almería]] (1)'''
+|goals1=
+*[[Franc Carbonell|Carbonell]] {{goal|28}}
+|goals2=
+|stadium=[[Estadio Municipal de Deportes de Barbastro|Municipal de Deportes]]
+|location=[[Barbastro]]
+|attendance=3,000
+|referee=Víctor García Verdura
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=12:00
+|team1='''[[Yeclano Deportivo|Yeclano]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-yeclano-deportivo-rayo-vallecano-3
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+|goals2=
+*[[Radamel Falcao|Falcao]] {{goal|89}}
+*[[Raúl de Tomás|De Tomás]] {{goal|90+4}}
+|stadium=[[Estadio de La Constitución|La Constitución]]
+|location=[[Yecla]]
+|attendance=4,700
+|referee=Mario Melero López
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=12:00
+|team1='''[[Antequera CF|Antequera]] (3)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-antequera-cf-sd-huesca-3
+|team2=[[SD Huesca|Huesca]] (2)
+|goals1=
+|goals2=
+*[[Enzo Lombardo|Lombardo]] {{goal|36}}
+*[[Iker Kortajarena|Kortajarena]] {{goal|90+6}}
+|stadium=[[Estadio El Maulí|El Maulí]]
+|location=[[Antequera]]
+|attendance=2,590
+|referee=Dámaso Arcediano Monescillo
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=12:00
+|team1='''[[Deportivo de La Coruña|Deportivo La Coruña]] (3)'''
+|score=2–3
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-rc-deportivo-cd-tenerife-3
+|team2=[[CD Tenerife|Tenerife]] (2)
+|goals1=
+*[[David Mella|Mella]] {{goal|10}}
+*[[Kevin Sánchez|Sánchez]] {{goal|106}}
+|goals2=
+*[[Nacho (footballer, born 1989)|Nacho]] {{goal|60}}
+*[[Álvaro Romero|Romero]] {{goal|101}}
+*[[Sergio González (footballer, born 1997)|González]] {{goal|120+2}}
+|stadium=[[Estadio Riazor|Riazor]]
+|location=[[A Coruña]]
+|attendance=18,549
+|referee=Luis Mario Milla Alvéndiz
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=12:00
+|team1='''[[AD Alcorcón|Alcorcón]] (2)'''
+|score=0–0
+|aet=yes
+|penalties1=
+*[[Dyego Sousa|Sousa]] {{pengoal}}
+*[[Xavi Quintillà|Quintillà]] {{pengoal}}
+*[[Javi Lara|Lara]] {{pengoal}}
+*[[Jacobo González|Jacobo]] {{penmiss}}
+*[[Pedro Mosquera|Mosquera]] {{penmiss}}
+*[[Javi Pérez (footballer, born 1995)|Pérez]] {{pengoal}}
+*[[Víctor García (footballer, born 1997)|García]] {{penmiss}}
+|penaltyscore=4–5
+|penalties2=
+*{{pengoal}} [[Alfredo Ortuño|Ortuño]]
+*{{pengoal}} [[Hector Hevel|Hevel]]
+*{{penmiss}} [[Luis Muñoz (footballer, born 1997)|Muñoz]]
+*{{pengoal}} [[José Fontán|Fontán]]
+*{{penmiss}} [[Juan Carlos Real|Juan Carlos]]
+*{{pengoal}} [[Tomás Alarcón|Alarcón]]
+*{{pengoal}} [[Iván Calero|Calero]]
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-ad-alcorcon-fc-cartagena-3
+|team2=[[FC Cartagena|Cartagena]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal de Santo Domingo (Alcorcón)|Santo Domingo]]
+|location=[[Alcorcón]]
+|attendance=
+|referee=Andrés Fuentes Molina
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=16:00
+|team1='''[[Terrassa FC|Terrassa]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-terrassa-fc-deportivo-alaves-3
+|team2=[[Deportivo Alavés|Alavés]] (1)
+|goals1=
+|goals2=
+*[[Xeber Alkain|Alkain]] {{goal|21}}
+|stadium=[[Estadi Olímpic de Terrassa|Estadi Olímpic]]
+|location=[[Terrassa]]
+|attendance=7,000
+|referee=[[Jesús Gil Manzano]]
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=16:00
+|team1='''[[CE Andratx|Andratx]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-andratx-real-sociedad-3
+|team2=[[Real Sociedad]] (1)
+|goals1=
+|goals2=
+*[[André Silva (footballer, born 1995)|Silva]] {{goal|56}}
+|stadium=[[Estadi de Sa Plana|Sa Plana]]
+|location=[[Andratx]]
+|attendance=1,233
+|referee=[[José María Sánchez Martínez]]
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=16:00
+|team1='''[[CD Arenteiro|Arenteiro]] (3)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-arenteiro-burgos-cf-3
+|team2=[[Burgos CF|Burgos]] (2)
+|goals1=
+*[[Iván Ramos|Ramos]] {{goal|20}}
+|goals2=
+*[[Álex Bermejo|Bermejo]] {{goal|8||44}}
+*[[Kévin Appin|Appin]] {{goal|54}}
+|stadium=[[Estadio Municipal de Espiñedo|Espiñedo]]
+|location=[[O Carballiño]]
+|attendance=
+|referee=José Antonio López Toca
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=16:00
+|team1=[[Unionistas de Salamanca CF|Unionistas]] (3)
+|score=2–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-unionistas-real-sporting-3
+|team2='''[[Sporting de Gijón|Sporting Gijón]] (2)'''
+|goals1=
+*[[Alfred Planas|Planas]] {{goal|7}}
+*[[Sergio Camus|Camus]] {{goal|53}}
+|goals2=
+|stadium=Reina Sofía
+|location=[[Salamanca]]
+|attendance=4,896
+|referee=Adrián Cordero Vega
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=17:00
+|team1=[[Málaga CF|Málaga]] (3)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-malaga-cf-cd-eldense-3
+|team2='''[[CD Eldense|Eldense]] (2)'''
+|goals1=
+*[[Juanpe (footballer, born 1996)|Juanpe]] {{goal|41}}
+|goals2=
+|stadium=[[La Rosaleda Stadium|La Rosaleda]]
+|location=[[Málaga]]
+|attendance=12,720
+|referee=Iosu Galech Apezteguía
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=19:00
+|team1='''[[CF Villanovense|Villanovense]] (4)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-villanovense-real-betis-3
+|team2=[[Real Betis]] (1)
+|goals1=
+*[[Isra Cano|Cano]] {{goal|63}}
+|goals2=
+*[[Abde Ezzalzouli|Ezzalzouli]] {{goal|89}}
+*[[Borja Iglesias|Iglesias]] {{goal|90+3}}
+|stadium=Estadio Romero Cuerda
+|location=[[Villanueva de la Serena]]
+|attendance=8,000
+|referee=Javier Alberola Rojas
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=19:00
+|team1='''[[CD Valle de Egüés|Valle de Egüés]] (4)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-valle-de-egues-rcd-mallorca-3
+|team2=[[RCD Mallorca|Mallorca]] (1)
+|goals1=
+|goals2=
+*[[Dani Rodríguez (footballer, born 1988)|Rodríguez]] {{goal|39}}
+*[[Javier Llabrés|Llabrés]] {{goal|56||62}}
+|stadium=Estadio Valle Araguren
+|location=[[Aranguren]]{{efn|Valle de Egüés did not play the match in their main stadium Sarriguren, [[Egüés]], as it did not meet the broadcasting requirements.<ref>[https://www.futnavarra.es/pnfg/NNws_ShwNewDup?codigo=1036394&cod_primaria=1000057&cod_secundaria=1000057] Federación Navarra de Fútbol. 15 November 2023. (in Spanish)</ref>}} 
+|attendance=1,400
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=19:00
+|team1=[[CD Lugo|Lugo]] (3)
+|score=2–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-lugo-cd-mirandes-3
+|team2='''[[CD Mirandés|Mirandés]] (2)'''
+|goals1=
+*[[Leandro Antonetti|Antonetti]] {{goal|87}}
+*[[Adrián Fuentes|Fuentes]] {{goal|90+2}}
+|goals2=
+|stadium=[[Estadio Anxo Carro|Anxo Carro]]
+|location=[[Lugo]]
+|attendance=
+|referee=Alejandro Quintero González
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=19:00
+|team1='''[[Levante UD|Levante]] (2)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-levante-ud-sd-amorebieta-3
+|team2=[[SD Amorebieta|Amorebieta]] (2)
+|goals1=
+|goals2=
+*[[Javier Eraso|Eraso]] {{goal|71}}
+|stadium=[[Estadi Ciutat de València|Ciutat de València]]
+|location=[[Valencia]]
+|attendance=11,216
+|referee=Miguel Sesma Espinosa
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=21:00
+|team1='''[[Atlético Astorga FC|Atlético Astorga]] (5)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-atl-astorga-sevilla-fc-3
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+|goals2=
+*[[Sergio Ramos|Ramos]] {{goal|28|pen.}}
+*[[Federico Gattoni|Gattoni]] {{goal|68}}
+|stadium=[[Estadio La Eragudina|La Eragudina]]
+|location=[[Astorga, Spain|Astorga]]
+|attendance=2,050
+|referee=Alejandro Muñiz Ruiz
+}}
+{{football box collapsible
+|id=
+|date=6 December 2023
+|time=21:00
+|team1='''[[CD Tudelano|Tudelano]] (4)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-tudelano-ud-las-palmas-3
+|team2=[[UD Las Palmas|Las Palmas]] (1)
+|goals1=
+*[[Joel Rodríguez (footballer)|Rodríguez]] {{goal|42|pen.}}
+|goals2=
+*[[Sory Kaba|Kaba]] {{goal|38}}
+*[[Munir El Haddadi|Munir]] {{goal|120+4}}
+|stadium=[[Estadio Ciudad de Tudela|Ciudad de Tudela]]
+|location=[[Tudela, Navarre|Tudela]]
+|attendance=
+|referee=[[Juan Martínez Munuera]]
+}}
+{{football box collapsible
+|id=
+|date=7 December 2023
+|time=19:00
+|team1=[[Arandina CF|Arandina]] (4)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-arandina-cadiz-cf-3
+|team2='''[[Cádiz CF|Cádiz]] (1)'''
+|goals1=
+*[[Hajimari Ceesay|Ceesay]] {{goal|5}}
+*[[Pesca (footballer)|Pesca]] {{goal|65}}
+|goals2=
+*[[Fede San Emeterio|San Emeterio]] {{goal|34}}
+|stadium=[[Estadio El Montecillo|El Montecillo]]
+|location=[[Aranda de Duero]]
+|attendance=
+|referee=Francisco José Hernández Maeso
+}}
+{{football box collapsible
+|id=
+|date=7 December 2023
+|time=20:00
+|team1='''[[Linares Deportivo|Linares]] (3)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-linares-deportivo-elche-cf-3
+|team2=[[Elche CF|Elche]] (2)
+|goals1=
+*[[Samuel Corral|Corral]] {{goal|61}}
+|goals2=
+*[[Borja Garcés|Garcés]] {{goal|58}}
+*[[Aleix Febas|Febas]] {{goal|83}}
+*[[Sergio León|León]] {{goal|89}}
+|stadium=[[Estadio de Linarejos|Linarejos]]
+|location=[[Linares, Jaén|Linares]]
+|attendance=
+|referee=Germán Cid Camacho
+}}
+{{football box collapsible
+|id=
+|date=7 December 2023
+|time=20:00
+|team1=[[Racing de Ferrol|Racing Ferrol]] (2)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-racing-club-ferrol-cd-leganes-3
+|team2='''[[CD Leganés|Leganés]] (2)'''
+|goals1=
+*[[Nacho (footballer, born 1993)|Nacho]] {{goal|56}}
+|goals2=
+|stadium=[[Estadio de A Malata|A Malata]]
+|location=[[Ferrol, Galicia|Ferrol]]
+|attendance=
+|referee=Rubén Ávalos Barrera
+}}
+{{football box collapsible
+|id=
+|date=7 December 2023
+|time=20:00
+|team1='''[[UD Melilla|Melilla]] (3)'''
+|score=1–1
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-melilla-sd-eibar-3
+|team2=[[SD Eibar|Eibar]] (2)
+|goals1=
+*[[José Enrique (footballer, born 1995)|Enrique]] {{goal|22}}
+|goals2=
+*[[Quique González (footballer)|Quique]] {{goal|54|pen.}}
+|penalties1=
+*[[José Antonio Caro (footballer, born 1993)|Caro]] {{penmiss}}
+*[[Álvaro Yuste|Yuste]] {{penmiss}}
+*[[Dani García (footballer, born 1998)|García]] {{pengoal}}
+|penaltyscore=1–4
+|penalties2=
+*{{pengoal}} [[José Corpas|Corpas]]
+*{{pengoal}} [[Quique González (footballer)|Quique]]
+*{{pengoal}} [[Álvaro Tejero|Tejero]]
+*{{pengoal}} [[Aritz Muguruza|Muguruza]]
+|stadium=[[Estadio Municipal Álvarez Claro|Álvarez Claro]]
+|location=[[Melilla]]
+|attendance=
+|referee=José Luis Guzmán Mansilla
+}}
+{{football box collapsible
+|id=
+|date=7 December 2023
+|time=21:00
+|team1='''[[Orihuela CF|Orihuela]] (4)'''
+|score=2–5
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-orihuela-cf-girona-fc-3
+|team2=[[Girona FC|Girona]] (1)
+|goals1=
+*[[Sergio Mendinueta|Mendinueta]] {{goal|27}}
+*[[Louis Booker|Booker]] {{goal|45+3}}
+|goals2=
+*[[Pablo Torre (footballer)|Torre]] {{goal|7}}
+*[[Cristhian Stuani|Stuani]] {{goal|66||74}}
+*[[Portu]] {{goal|82}}
+*[[Valery Fernández|Valery]] {{goal|87}}
+|stadium=[[Estadio Municipal Los Arcos|Los Arcos]]
+|location=[[Orihuela]]
+|attendance=7,000
+|referee=Mateo Busquets Ferrer
+}}
+{{football box collapsible
+|id=
+|date=7 December 2023
+|time=21:00
+|team1='''[[CD Cayón|Cayón]] (4)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cayon-athletic-club-3
+|team2=[[Athletic Bilbao]] (1)
+|goals1=
+|goals2=
+*[[Asier Villalibre|Villalibre]] {{goal|22||26|pen.}}
+*[[Nico Williams|N. Williams]] {{goal|85}}
+|stadium=[[Campos de Sport de El Sardinero]]
+|location=[[Santander, Spain|Santander]]{{efn|Cayón did not play the match in their main stadium Fernando Astobiza, [[Santa María de Cayón|Cayón]], as it did not meet the broadcasting requirements.<ref>[https://www.deia.eus/athletic/2023/11/16/cayon-athletic-copa-sardinero-7526352.html] Deia. 16 November 2023. (in Spanish)</ref>}} 
+|attendance=12,295
+|referee=Javier Iglesias Villanueva
+}}
+{{football box collapsible
+|id=
+|date=7 December 2023
+|time=21:00
+|team1='''[[Sestao River Club|Sestao River]] (3)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-sestao-rc-celta-3
+|team2=[[RC Celta de Vigo|Celta Vigo]] (1)
+|goals1=
+*[[Unai Núñez|Núñez]] {{goal|73|o.g.}}
+|goals2=
+*[[Anastasios Douvikas|Douvikas]] {{goal|17||78|pen.}}
+|stadium=Las Llanas
+|location=[[Sestao]]
+|attendance=3,365
+|referee=Pablo González Fuertes
+}}
+;Notes
+{{notelist}}
+
+==Round of 32==
+===Draw===
+The draw for the round of 32 was held on 12 December 2023 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]]. The four participant teams of the [[2024 Supercopa de España]] were drawn with the teams from the lowest category. The remaining teams from the lowest categories faced the rest of La Liga teams. Matches were played at stadiums of lower-ranked teams.
+
+A total of sixteen matches were played between 6 and 8 January 2024.
+
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|4 participants in [[2024 Supercopa de España]]}} || width=15%|'''Pot 2'''<br/>{{small|13 teams of [[2023–24 La Liga|La Liga]]}} || width=15%|'''Pot 3'''<br/>{{small|9 teams of [[2023–24 Segunda División|Segunda División]]}} || width=15%|'''Pot 4'''<br/>{{small|4 teams of [[2023–24 Primera Federación|Primera Federación]]}} || width=15%|'''Pot 5'''<br/>{{small|2 teams of [[2023–24 Segunda Federación|Segunda Federación]]}}
+|- valign=top 
+|
+* [[Atlético Madrid]]
+* [[FC Barcelona|Barcelona]]
+* [[CA Osasuna|Osasuna]]
+* [[Real Madrid CF|Real Madrid]]
+|
+* [[Deportivo Alavés|Alavés]]
+* [[Athletic Bilbao]]
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[Getafe CF|Getafe]]
+* [[Girona FC|Girona]]
+* [[UD Las Palmas|Las Palmas]]
+* [[RCD Mallorca|Mallorca]]
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Real Sociedad]]
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Villarreal CF|Villarreal]]
+|
+* [[SD Amorebieta|Amorebieta]]
+* [[Burgos CF|Burgos]]
+* [[FC Cartagena|Cartagena]]
+* [[SD Eibar|Eibar]]
+* [[Elche CF|Elche]]
+* [[RCD Espanyol|Espanyol]]
+* [[SD Huesca|Huesca]]
+* [[Racing de Ferrol|Racing Ferrol]]
+* [[CD Tenerife|Tenerife]]
+|
+* [[CD Castellón|Castellón]]
+* [[CD Lugo|Lugo]]
+* [[Málaga CF|Málaga]]
+* [[Unionistas de Salamanca CF|Unionistas]]
+|
+* [[Arandina CF|Arandina]]
+* [[UD Barbastro|Barbastro]]
+|}
+
+===Matches===
+{{football box collapsible
+|id=
+|date=6 January 2024
+|time=16:00
+|team1='''[[CD Lugo|Lugo]] (3)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-lugo-atletico-de-madrid-4
+|team2=[[Atlético Madrid]] (1)
+|goals1=
+*[[Leandro Antonetti|Antonetti]] {{goal|39}}
+|goals2=
+*[[Ángel Correa|Correa]] {{goal|2}}
+*[[Memphis Depay|Depay]] {{goal|66||74}}
+|stadium=[[Estadio Anxo Carro|Anxo Carro]]
+|location=[[Lugo]]
+|attendance=8,168
+|referee=Pablo González Fuertes
+}}
+{{football box collapsible
+|id=
+|date=6 January 2024
+|time=17:00
+|team1='''[[RCD Espanyol|Espanyol]] (2)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-rcd-espanyol-de-barcelona-getafe-cf-4
+|team2=[[Getafe CF|Getafe]] (1)
+|goals1=
+|goals2=
+*[[Luis Milla (footballer, born 1994)|Milla]] {{goal|87}}
+|stadium=[[Stage Front Stadium]]
+|location=[[Cornellà de Llobregat]]
+|attendance=15,197
+|referee=Mario Melero López
+}}
+{{football box collapsible
+|id=
+|date=6 January 2024
+|time=18:00
+|team1='''[[Elche CF|Elche]] (2)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-elche-cf-girona-fc-4
+|team2=[[Girona FC|Girona]] (1)
+|goals1=
+|goals2=
+*[[Daley Blind|Blind]] {{goal|37}}
+*[[Yan Couto|Couto]] {{goal|67}}
+|stadium=[[Estadio Manuel Martínez Valero|Martínez Valero]]
+|location=[[Elche]]
+|attendance=15,518
+|referee=Javier Alberola Rojas
+}}
+{{football box collapsible
+|id=
+|date=6 January 2024
+|time=19:00
+|team1='''[[SD Huesca|Huesca]] (2)'''
+|score=0–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-sd-huesca-rayo-vallecano-4
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+|goals2=
+*[[Óscar Valentín|Valentín]] {{goal|118}}
+*[[Isi Palazón|Palazón]] {{goal|120+2}}
+|stadium=[[Estadio El Alcoraz|El Alcoraz]]
+|location=[[Huesca]]
+|attendance=2,629
+|referee=César Soto Grado
+}}
+{{football box collapsible
+|id=
+|date=6 January 2024
+|time=20:00
+|team1=[[Deportivo Alavés|Alavés]] (1)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-deportivo-alaves-real-betis-4
+|team2='''[[Real Betis]] (1)'''
+|goals1=
+*[[Carlos Benavídez|Benavídez]] {{goal|57}}
+|goals2=
+|stadium=[[Mendizorrotza Stadium|Mendizorrotza]]
+|location=[[Vitoria-Gasteiz]]
+|attendance=13,567
+|referee=Javier Iglesias Villanueva
+}}
+{{football box collapsible
+|id=
+|date=6 January 2024
+|time=21:30
+|team1='''[[Arandina CF|Arandina]] (4)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-arandina-real-madrid-4
+|team2=[[Real Madrid CF|Real Madrid]] (1)
+|goals1=
+*[[Nacho (footballer, born 1990)|Nacho]] {{goal|90+3|o.g.}}
+|goals2=
+*[[Joselu]] {{goal|54|pen.}}
+*[[Brahim Díaz|Brahim]] {{goal|55}}
+*[[Rodrygo]] {{goal|90+1}}
+|stadium=[[Estadio El Montecillo|Juan Carlos Higuero]]
+|location=[[Aranda de Duero]]
+|attendance=10,000
+|referee=Víctor García Verdura
+}}
+{{football box collapsible
+|id=
+|date=7 January 2024
+|time=12:00
+|team1='''[[SD Amorebieta|Amorebieta]] (2)'''
+|score=2–4
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-sd-amorebieta-rc-celta-4
+|team2=[[RC Celta de Vigo|Celta Vigo]] (1)
+|goals1=
+*[[Eneko Jauregi|Jauregi]] {{goal|30}}
+*[[Rayco Rodríguez|Rayco]] {{goal|35}}
+|goals2=
+*[[Miguel Rodríguez (footballer, born April 2003)|Rodríguez]] {{goal|6}}
+*[[Jailson (footballer, born 1995)|Jailson]] {{goal|49}}
+*[[Anastasios Douvikas|Douvikas]] {{goal|52||75}}
+|stadium=[[Lezama Facilities|Instalaciones de Lezama Campo 2]]
+|location=[[Lezama]]
+|attendance=1,300
+|referee=[[José Luis Munuera Montero]]
+}}
+{{football box collapsible
+|id=
+|date=7 January 2024
+|time=12:00
+|team1='''[[Burgos CF|Burgos]] (2)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-burgos-cf-rcd-mallorca-4
+|team2=[[RCD Mallorca|Mallorca]] (1)
+|goals1=
+|goals2=
+*[[Giovanni González|González]] {{goal|63}}
+*[[Cyle Larin|Larin]] {{goal|74}}
+*[[Abdón Prats|Abdón]] {{goal|81}}
+|stadium=[[Estadio El Plantío|El Plantío]]
+|location=[[Burgos]]
+|attendance=10,653
+|referee=Isidro Díaz de Mera Escuderos
+}}
+{{football box collapsible
+|id=
+|date=7 January 2024
+|time=16:00
+|team1='''[[CD Castellón|Castellón]] (3)'''
+|score=0–1
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-castellon-ca-osasuna-4
+|team2=[[CA Osasuna|Osasuna]] (1)
+|goals1=
+|goals2=
+*[[José Arnaiz|Arnaiz]] {{goal|108}}
+|stadium=[[Nou Estadi Castàlia]]
+|location=[[Castellón de la Plana]]
+|attendance=14,182
+|referee=[[José María Sánchez Martínez]]
+}}
+{{football box collapsible
+|id=
+|date=7 January 2024
+|time=16:00
+|team1='''[[Racing de Ferrol|Racing Ferrol]] (2)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-racing-club-ferrol-sevilla-fc-4
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+*[[Fran Manzanara|Manzanara]] {{goal|50}}
+|goals2=
+*[[Marcão (footballer, born 1996)|Marcão]] {{goal|30}}
+*[[Juanlu Sánchez|Juanlu]] {{goal|87}}
+|stadium=[[Estadio de A Malata|A Malata]]
+|location=[[Ferrol, Galicia|Ferrol]]
+|attendance=11,011
+|referee=[[Guillermo Cuadra Fernández]]
+}}
+{{football box collapsible
+|id=
+|date=7 January 2024
+|time=19:00
+|team1='''[[SD Eibar|Eibar]] (2)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-sd-eibar-athletic-club-4
+|team2=[[Athletic Bilbao]] (1)
+|goals1=
+|goals2=
+*[[Asier Villalibre|Villalibre]] {{goal|17||40}}
+*[[Iker Muniain|Muniain]] {{goal|33}}
+|stadium=[[Ipurua Municipal Stadium|Ipurua]]
+|location=[[Eibar]]
+|attendance=7,499
+|referee=[[Alejandro Hernández Hernández]]
+}}
+{{football box collapsible
+|id=
+|date=7 January 2024
+|time=19:00
+|team1='''[[FC Cartagena|Cartagena]] (2)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-fc-cartagena-valencia-cf-4
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+*[[Alfredo Ortuño|Ortuño]] {{goal|4}}
+|goals2=
+*[[Sergi Canós|Canós]] {{goal|73}}
+*[[José Gayà|Gayà]] {{goal|106}}
+|stadium=[[Estadio Cartagonova|Cartagonova]]
+|location=[[Cartagena, Spain|Cartagena]]
+|attendance=8,000
+|referee=Jorge Figueroa Vázquez
+}}
+{{football box collapsible
+|id=
+|date=7 January 2024
+|time=21:00
+|team1='''[[UD Barbastro|Barbastro]] (4)'''
+|score=2–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-barbastro-fc-barcelona-4
+|team2=[[FC Barcelona|Barcelona]] (1)
+|goals1=
+*[[Adria de Mesa|De Mesa]] {{goal|60}}
+*[[Marc Prat|Prat]] {{goal|90+3|pen.}}
+|goals2=
+*[[Fermín López|López]] {{goal|18}}
+*[[Raphinha]] {{goal|51}}
+*[[Robert Lewandowski|Lewandowski]] {{goal|88|pen.}}
+|stadium=[[Estadio Municipal de Deportes de Barbastro|Municipal de Deportes]]
+|location=[[Barbastro]]
+|attendance=5,600
+|referee=Juan Luis Pulido Santana
+}}
+{{football box collapsible
+|id=
+|date=7 January 2024
+|time=21:00
+|team1='''[[Málaga CF|Málaga]] (3)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-malaga-cf-real-sociedad-4
+|team2=[[Real Sociedad]] (1)
+|goals1=
+|goals2=
+*[[Einar Galilea|Galilea]] {{goal|49|o.g.}}
+|stadium=[[La Rosaleda Stadium|La Rosaleda]]
+|location=[[Málaga]]
+|attendance=22,111
+|referee=[[Jesús Gil Manzano]]
+}}
+{{football box collapsible
+|id=
+|date=7 January 2024
+|time=20:00 [[Western European Time|WET]]
+|team1=[[CD Tenerife|Tenerife]] (2)
+|score=2–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-tenerife-ud-las-palmas-4
+|team2='''[[UD Las Palmas|Las Palmas]] (1)'''
+|goals1=
+*[[José María Amo|Amo]] {{goal|4}}
+*[[Luismi Cruz|Luismi]] {{goal|21}}
+|goals2=
+|stadium=[[Estadio Heliodoro Rodríguez López|Heliodoro Rodríguez López]]
+|location=[[Santa Cruz de Tenerife]]
+|attendance=21,417
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|id=
+|date=8 January 2024{{efn|The match was originally played on 7 January 2024, but was suspended and postponed until the following day at the beginning of extra time due to lighting problems in the stadium.<ref>[https://www.marca.com/futbol/copa-rey/2024/01/07/659b05abe2704e7c4c8b45ab.html] Marca. 7 January 2024. (in Spanish)</ref>}} 
+|time=16:30
+|team1=[[Unionistas de Salamanca CF|Unionistas]] (3)
+|score=1–1
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-unionistas-villarreal-cf-4
+|team2='''[[Villarreal CF|Villarreal]] (1)'''
+|goals1=
+*[[Alfred Planas|Planas]] {{goal|87|pen.}}
+|goals2=
+*[[Ilias Akhomach|Akhomach]] {{goal|82}}
+|stadium=Reina Sofía
+|location=[[Salamanca]]
+|attendance=5,710
+|referee=Mateo Busquets Ferrer
+|penalties1=
+*[[Ramiro Mayor|Mayor]] {{pengoal}}
+*[[Héctor Nespral|Héctor]] {{pengoal}}
+*[[Erik Ruiz Álvarez|Ruiz]] {{pengoal}}
+*[[Alfred Planas|Planas]] {{penmiss}}
+*[[Manu Ramírez|Ramírez]] {{pengoal}}
+*[[Álvaro Gómez (footballer)|Al. Gómez]] {{pengoal}}
+*[[Carlos Giménez (footballer)|Giménez]] {{pengoal}}
+*[[Adri Gómez|Ad. Gómez]] {{pengoal}}
+|penaltyscore=7–6
+|penalties2=
+*{{pengoal}} [[Gerard Moreno|Gerard]]
+*{{penmiss}} [[Alberto Moreno|Moreno]]
+*{{pengoal}} [[Francis Coquelin|Coquelin]]
+*{{pengoal}} [[Manu Trigueros|Trigueros]]
+*{{pengoal}} [[Alexander Sørloth|Sørloth]]
+*{{pengoal}} [[Ramon Terrats|Terrats]]
+*{{pengoal}} [[Santi Comesaña|Comesaña]]
+*{{penmiss}} [[Kiko Femenía|Femenía]]
+}}
+;Notes
+{{notelist}}
+
+==Round of 16==
+
+=== Draw ===
+The draw for the round of 16 was held on 8 January 2024 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]]. The qualified teams were split up into three groups based on their division in the 2023–24 season. When possible, matches were played at the stadiums of the lower-ranked teams, otherwise the first team drawn played at home. 
+
+A total of eight matches were played between 16 and 18 January 2024.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|14 teams of [[2023–24 La Liga|La Liga]]}}|| width="15%" |'''Pot 2'''<br/>{{small|1 team of [[2023–24 Segunda División|Segunda División]]}} || width=15%|'''Pot 3'''<br/>{{small|1 team of [[2023–24 Primera Federación|Primera Federación]]}}
+|- valign=top
+|
+*[[Deportivo Alavés|Alavés]]
+*[[Athletic Bilbao]]
+*[[Atlético Madrid]]
+*[[FC Barcelona|Barcelona]]
+*[[RC Celta de Vigo|Celta Vigo]]
+*[[Getafe CF|Getafe]]
+*[[Girona FC|Girona]]
+*[[RCD Mallorca|Mallorca]]
+*[[CA Osasuna|Osasuna]]
+*[[Rayo Vallecano]]
+*[[Real Madrid CF|Real Madrid]]
+*[[Real Sociedad]]
+*[[Sevilla FC|Sevilla]]
+*[[Valencia CF|Valencia]]
+|
+* [[CD Tenerife|Tenerife]]
+|
+*[[Unionistas de Salamanca CF|Unionistas]]
+|}
+
+===Matches===
+{{football box collapsible
+|date=16 January 2024
+|time=20:00
+|team1='''[[Getafe CF|Getafe]] (1)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-getafe-cf-sevilla-fc-4
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+*[[Jaime Mata|Mata]] {{goal|23}}
+|goals2=
+*[[Sergio Ramos|Ramos]] {{goal|8}}
+*[[Isaac Romero|Romero]] {{goal|48||55}}
+|stadium=[[Estadio Coliseum|Coliseum]]
+|location=[[Getafe]]
+|attendance=12,581
+|referee=Alejandro Muñiz Ruiz
+}}
+{{football box collapsible
+|date=16 January 2024
+|time=21:00
+|team1=[[Athletic Bilbao]] (1)
+|score=2–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-athletic-club-deportivo-alaves-4
+|team2='''[[Deportivo Alavés|Alavés]] (1)'''
+|goals1=
+*[[Asier Villalibre|Villalibre]] {{goal|28||60}}
+|goals2=
+|stadium=[[San Mamés Stadium (2013)|San Mamés]]
+|location=[[Bilbao]]
+|attendance=45,233
+|referee=César Soto Grado
+}}
+{{football box collapsible
+|date=16 January 2024
+|time=20:00 [[Western European Time|WET]]
+|team1='''[[CD Tenerife|Tenerife]] (2)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-cd-tenerife-rcd-mallorca-4
+|team2=[[RCD Mallorca|Mallorca]] (1)
+|aet=yes
+|goals1=
+|goals2=
+*[[Cyle Larin|Larin]] {{goal|120}}
+|stadium=[[Estadio Heliodoro Rodríguez López|Heliodoro Rodríguez López]]
+|location=[[Santa Cruz de Tenerife]]
+|attendance=20,176
+|referee=Mario Melero López
+}}
+{{football box collapsible
+|date=17 January 2024
+|time=20:00
+|team1='''[[Valencia CF|Valencia]] (1)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-valencia-cf-rc-celta-4
+|team2=[[RC Celta de Vigo|Celta Vigo]] (1)
+|goals1=
+*[[Pepelu]] {{goal|29|pen.}}
+|goals2=
+*[[Luca de la Torre|De la Torre]] {{goal|13}}
+*[[Anastasios Douvikas|Douvikas]] {{goal|18|pen.|80}}
+|stadium=[[Mestalla Stadium|Mestalla]]
+|location=[[Valencia]]
+|attendance=44,456
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|date=17 January 2024
+|time=21:00
+|team1='''[[CA Osasuna|Osasuna]] (1)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-ca-osasuna-real-sociedad-4
+|team2=[[Real Sociedad]] (1)
+|goals1=
+|goals2=
+*[[Mikel Oyarzabal|Oyarzabal]] {{goal|57|pen.}}
+*[[Mikel Merino|Merino]] {{goal|90+7}}
+|stadium=[[El Sadar Stadium|El Sadar]]
+|location=[[Pamplona]]
+|attendance=21,116
+|referee=[[Alejandro Hernández Hernández]]
+}}
+{{football box collapsible
+|date=17 January 2024
+|time=21:30
+|team1=[[Girona FC|Girona]] (1)
+|score=3–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-girona-fc-rayo-vallecano-4
+|team2='''[[Rayo Vallecano]] (1)'''
+|goals1=
+*[[Cristhian Stuani|Stuani]] {{goal|15||19|pen.}}
+*[[Daley Blind|Blind]] {{goal|26}}
+|goals2=
+*[[Randy Nteka|Nteka]] {{goal|36}}
+|stadium=[[Estadi Montilivi|Montilivi]]
+|location=[[Girona]]
+|attendance=7,911
+|referee=Jorge Figueroa Vázquez
+}}
+{{football box collapsible
+|date=18 January 2024
+|time=19:30
+|team1='''[[Unionistas de Salamanca CF|Unionistas]] (3)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-unionistas-fc-barcelona-4
+|team2=[[FC Barcelona|Barcelona]] (1)
+|goals1=
+*[[Álvaro Gómez (footballer)|Al. Gómez]] {{goal|31}}
+|goals2=
+*[[Ferran Torres|Torres]] {{goal|45}}
+*[[Jules Koundé|Koundé]] {{goal|69}}
+*[[Alejandro Balde|Balde]] {{goal|73}}
+|stadium=Reina Sofía
+|location=[[Salamanca]]
+|attendance=6,246
+|referee=Francisco José Hernández Maeso
+}}
+{{football box collapsible
+|date=18 January 2024
+|time=21:30
+|team1=[[Atlético Madrid]] (1)
+|score=4–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-atletico-de-madrid-real-madrid-4
+|team2='''[[Real Madrid CF|Real Madrid]] (1)'''
+|goals1=
+*[[Samuel Lino|Lino]] {{goal|39}}
+*[[Álvaro Morata|Morata]] {{goal|57}}
+*[[Antoine Griezmann|Griezmann]] {{goal|100}}
+*[[Rodrigo Riquelme (footballer, born 2000)|Riquelme]] {{goal|119}}
+|goals2=
+*[[Jan Oblak|Oblak]] {{goal|45+1|o.g.}}
+*[[Joselu]] {{goal|82}}
+|stadium=[[Metropolitano Stadium|Metropolitano]]
+|location=[[Madrid]]
+|attendance=67,623
+|referee=[[Guillermo Cuadra Fernández]]
+}}
+
+==Quarter-finals==
+
+===Draw===
+The draw for the quarter-finals was held on 19 January 2024, 13:00 [[UTC+01:00|UTC+1 CET]], in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]].<ref>[https://rfef.es/es/noticias/este-viernes-sorteo-de-cuartos-de-final-de-la-copa-del-rey/ Este viernes, sorteo de cuartos de final de la Copa del Rey]</ref><ref>[https://www.youtube.com/watch?v=NNaRZqLlXWA (YouTube) 🚨DIRECTO🚨 Sorteo Campeonato de España Copa de S.M. El Rey. Temporada 2023/2024 | 🔴 RFEF]</ref> As there were no remaining teams from the lower divisions, home teams were determined by luck of the draw.
+
+A total of four matches were played between 23 and 25 January 2024.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+|'''Pot 1'''<br/> {{small|8 teams of [[2023–24 La Liga|La Liga]]}}
+|- valign=top
+|
+*[[Athletic Bilbao]]
+*[[Atlético Madrid]]
+*[[FC Barcelona|Barcelona]]
+*[[RC Celta de Vigo|Celta Vigo]]
+*[[Girona FC|Girona]]
+*[[RCD Mallorca|Mallorca]]
+*[[Real Sociedad]]
+*[[Sevilla FC|Sevilla]]
+|}
+
+===Matches===
+{{football box collapsible
+|date=23 January 2024
+|time=21:30
+|team1='''[[RC Celta de Vigo|Celta Vigo]] (1)'''
+|score=1–2
+|team2=[[Real Sociedad]] (1)
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-rc-celta-real-sociedad-5
+|goals1=
+*[[Luca de la Torre|De la Torre]] {{goal|90+2}}
+|goals2=
+*[[Mikel Oyarzabal|Oyarzabal]] {{goal|2}}
+*[[Sheraldo Becker|Becker]] {{goal|66}}
+|location=[[Vigo]]
+|stadium=[[Balaídos]]
+|attendance=20,903
+|referee=César Soto Grado
+}}
+{{football box collapsible
+|date=24 January 2024
+|time=19:30
+|team1=[[RCD Mallorca|Mallorca]] (1)
+|score=3–2
+|team2='''[[Girona FC|Girona]] (1)'''
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-rcd-mallorca-girona-fc-5
+|goals1=
+*[[Cyle Larin|Larin]] {{goal|21}}
+*[[Abdón Prats|Abdón]] {{goal|28||35|pen.}}
+|goals2=
+*[[Cristhian Stuani|Stuani]] {{goal|68|pen.}}
+*[[Sávio (footballer, born 2004)|Sávio]] {{goal|90+6}}
+|location=[[Palma de Mallorca|Palma]]
+|stadium=[[Estadi Mallorca Son Moix]]
+|attendance=19,950
+|referee=[[José Luis Munuera Montero]]
+}}
+{{football box collapsible
+|date=24 January 2024
+|time=21:30
+|team1=[[Athletic Bilbao]] (1)
+|score=4–2
+|aet = y
+|team2='''[[FC Barcelona|Barcelona]] (1)'''
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-athletic-club-fc-barcelona-5
+|goals1=
+*[[Gorka Guruzeta|Guruzeta]] {{goal|1}}
+*[[Oihan Sancet|Sancet]] {{goal|49}}
+*[[Iñaki Williams|I. Williams]] {{goal|105+2}}
+*[[Nico Williams|N. Williams]] {{goal|120+1}}
+|goals2=
+*[[Robert Lewandowski|Lewandowski]] {{goal|26}}
+*[[Lamine Yamal|Yamal]] {{goal|32}}
+|location=[[Bilbao]]
+|stadium=[[San Mamés Stadium (2013)|San Mamés]]
+|attendance=50,403
+|referee=[[José María Sánchez Martínez]]
+}}
+{{football box collapsible
+|date=25 January 2024
+|time=21:00
+|team1=[[Atlético Madrid]] (1)
+|score=1–0
+|team2='''[[Sevilla FC|Sevilla]] (1)'''
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-atletico-de-madrid-sevilla-fc-5
+|goals1=
+*[[Memphis Depay|Depay]] {{goal|79}}
+|goals2=
+|location=[[Madrid]]
+|stadium=[[Metropolitano Stadium|Metropolitano]]
+|attendance=60,169
+|referee=[[Jesús Gil Manzano]]
+}}
+
+==Semi-finals==
+===Draw===
+The draw for the semi-finals was held on 26 January 2024, 13:00 [[UTC+01:00|UTC+1 CET]], in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]].<ref>[https://rfef.es/es/noticias/las-semifinales-de-la-copa-se-sortearan-este-viernes-las-1300-h Las semifinales de la Copa se sortearán este viernes a las 13:00 h]</ref><ref>[https://www.youtube.com/watch?v=zvyAHqVIc9k (YouTube) 🚨DIRECTO🚨 Sorteo semifinales Campeonato de España Copa de S.M. El Rey. Temporada 2023/2024 | 🔴 RFEF]</ref>
+
+First leg matches were played on 6 and 7 February, and second leg matches were played between 27 and 29 February 2024.
+{|class="wikitable" style="font-size:90%" width=200
+|- bgcolor=#efefef align=center
+|'''Qualified teams'''<br/>{{small|4 teams of [[2023–24 La Liga|La Liga]]}} 
+|- valign=top
+|
+*[[Athletic Bilbao]]
+*[[Atlético Madrid]]
+*[[RCD Mallorca|Mallorca]]  
+*[[Real Sociedad]]
+|}
+
+===Summary===
+{{TwoLegStart}}
+{{TwoLegResult|'''[[RCD Mallorca|Mallorca]] (1)'''||1–1 {{pso|5–4}}|[[Real Sociedad]] (1)||0–0|1–1 {{aet}}}}
+{{TwoLegResult|[[Atlético Madrid]] (1)||0–4|'''[[Athletic Bilbao]] (1)'''||0–1|0–3}}
+|}
+
+===Matches===
+{{Football box
+|id=
+|date=6 February 2024
+|time=21:00
+|team1=[[RCD Mallorca|Mallorca]]
+|score=0–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-rcd-mallorca-real-sociedad-6
+|team2=[[Real Sociedad]]
+|goals1=
+|goals2=
+|stadium=[[Estadi Mallorca Son Moix]], [[Palma de Mallorca|Palma]]
+|attendance= 22,051
+|referee=Alejandro Muñiz Ruiz
+}}
+{{Football box
+|id=
+|date= 27 February 2024
+|time=21:30
+|team1=[[Real Sociedad]]
+|score=1–1
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-real-sociedad-rcd-mallorca-7
+|team2=[[RCD Mallorca|Mallorca]]
+|goals1=
+*[[Mikel Oyarzabal|Oyarzabal]] {{goal|71}}
+|goals2=
+*[[Giovanni González|González]] {{goal|50}}
+|stadium=[[Anoeta Stadium|Anoeta]], [[San Sebastián]]
+|attendance= 35,781
+|referee=[[Jesús Gil Manzano]]
+|penalties1=
+*[[Mikel Oyarzabal|Oyarzabal]] {{penmiss}}
+*[[Beñat Turrientes|Turrientes]] {{pengoal}}
+*[[Jon Ander Olasagasti|Olasagasti]] {{pengoal}}
+*[[Martín Zubimendi|Zubimendi]] {{pengoal}}
+*[[Sheraldo Becker|Becker]] {{pengoal}}
+|penaltyscore=4–5
+|penalties2=
+*{{pengoal}} [[Vedat Muriqi|Muriqi]]
+*{{pengoal}} [[Manu Morlanes|Morlanes]]
+*{{pengoal}} [[Omar Mascarell|Mascarell]]
+*{{pengoal}} [[Nemanja Radonjić|Radonjić]]
+*{{pengoal}} [[Sergi Darder|Darder]]
+}}
+''1–1 on aggregate. Mallorca won 5–4 on penalties.''
+----
+{{Football box
+|id=
+|date=7 February 2024
+|time=21:30
+|team1=[[Atlético Madrid]]
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-atletico-de-madrid-athletic-club-6
+|team2=[[Athletic Bilbao]]
+|goals1=
+|goals2=
+*[[Álex Berenguer|Berenguer]] {{goal|25|pen.}}
+|stadium=[[Metropolitano Stadium|Metropolitano]], [[Madrid]]
+|attendance= 65,029
+|referee=[[Alejandro Hernández Hernández]]
+}}
+{{Football box
+|id=
+|date=29 February 2024
+|time=21:30
+|team1=[[Athletic Bilbao]]
+|score=3–0
+|report=https://www.laliga.com/en-GB/match/temporada-2023-2024-copa-del-rey-athletic-club-atletico-de-madrid-7
+|team2=[[Atlético Madrid]]
+|goals1=
+*[[Iñaki Williams|I. Williams]] {{goal|13}}
+*[[Nico Williams|N. Williams]] {{goal|42}}
+*[[Gorka Guruzeta|Guruzeta]] {{goal|61}}
+|goals2=
+|stadium=[[San Mamés Stadium (2013)|San Mamés]], [[Bilbao]]
+|attendance= 52,061
+|referee=[[Juan Martínez Munuera]]
+}}
+''Athletic Bilbao won 4–0 on aggregate.''
+
+==Final==
+{{Main|2024 Copa del Rey final}}
+{{:2024 Copa del Rey final}}
+
+==Top scorers==
+{|class="wikitable"
+!Rank 
+!Player 
+!Club 
+!Goals
+|-
+|rowspan=3|{{center|1}}
+|{{flagicon|ESP}} [[Abdón Prats|Abdón]]
+|[[RCD Mallorca|Mallorca]]
+|rowspan=3|{{center|6}}
+|-
+|{{flagicon|GRE}} [[Anastasios Douvikas]]
+|[[RC Celta de Vigo|Celta Vigo]]
+|-
+|{{flagicon|ESP}} [[Asier Villalibre]]
+|[[Athletic Bilbao]]
+|-
+|{{center|4}}
+|{{flagicon|URU}} [[Cristhian Stuani]]
+|[[Girona FC|Girona]]
+|{{center|5}}
+|-
+|rowspan=2|{{center|5}}
+|{{flagicon|CAN}} [[Cyle Larin]]
+|[[RCD Mallorca|Mallorca]]
+|rowspan=2|{{center|4}}
+|-
+|{{flagicon|BRA}} [[Willian José]]
+|[[Real Betis]]
+|-
+|rowspan=15|{{center|7}}
+|{{flagicon|ESP}} [[Xeber Alkain]]
+|[[Deportivo Alavés|Alavés]]
+|rowspan=15|{{center|3}}
+|-
+|{{flagicon|PRI}} [[Leandro Antonetti]]
+|[[CD Lugo|Lugo]]
+|-
+|{{flagicon|NED}} [[Memphis Depay]]
+|[[Atlético Madrid]]
+|-
+|{{flagicon|MAR}} [[Abde Ezzalzouli]]
+|[[Real Betis]]
+|-
+|{{flagicon|COL}} [[Radamel Falcao]]
+|[[Rayo Vallecano]]
+|-
+|{{flagicon|ESP}} [[Jon Karrikaburu]]
+|[[Deportivo Alavés|Alavés]]
+|-
+|{{flagicon|ESP}} Kike
+|[[CD Hernán Cortés|Hernán Cortés]]
+|-
+|{{flagicon|ESP}} [[Juanmi Latasa]]
+|[[Getafe CF|Getafe]]
+|-
+|{{flagicon|ESP}} [[Víctor Meseguer]]
+|[[Real Valladolid|Valladolid]]
+|-
+|{{flagicon|ESP}} [[Óscar Rodríguez (footballer, born 1998)|Óscar]]
+|[[Getafe CF|Getafe]]
+|-
+|{{flagicon|ESP}} [[Mikel Oyarzabal]]
+|[[Real Sociedad]]
+|-
+|{{flagicon|ESP}} [[Alfred Planas]]
+|[[Unionistas de Salamanca CF|Unionistas]]
+|-
+|{{flagicon|ESP}} [[Rodri (footballer, born 2000)|Rodri]]
+|[[Real Betis]]
+|-
+|{{flagicon|ESP}} [[Manu Trigueros]]
+|[[Villarreal CF|Villarreal]]
+|-
+|{{flagicon|ESP}} [[Nico Williams]]
+|[[Athletic Bilbao]]
+|}
+
+== References ==
+{{reflist}}
+
+{{Copa del Rey seasons}}
+{{2023–24 in Spanish football}}
+{{2023–24 in European football (UEFA)}}
+
+{{DEFAULTSORT:Copa Del Rey 2023-24}}
+[[Category:Copa del Rey seasons|2023-24]]
+[[Category:2023–24 in Spanish football cups|1]]

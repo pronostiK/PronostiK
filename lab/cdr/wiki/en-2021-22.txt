@@ -1,0 +1,3025 @@
+{{infobox football tournament season
+|title= [[Copa del Rey]]
+|year= 2021–22
+|other_title=
+|image= 
+|imagesize=
+|caption=
+|country= Spain
+|date= 17 November 2021 – 23 April 2022
+|num_teams= 126
+|champions= [[Real Betis]]
+|count = 3
+|runner-up= [[Valencia CF|Valencia]]
+|matches= 121
+|goals= 369
+|top goal scorer = [[Borja Iglesias]] (5 goals)
+|prevseason = [[2020–21 Copa del Rey|2020–21]]
+|nextseason = [[2022–23 Copa del Rey|2022–23]]
+}}
+
+The '''2021–22 Copa del Rey''' was the 120th staging of the [[Copa del Rey]] (including two seasons where two rival editions were played). The winners were assured a place in the [[2022–23 UEFA Europa League#Group stage|2022–23 UEFA Europa League group stage]]. Both the winners and the runners-up qualified for the four-team [[2023 Supercopa de España]].
+
+[[FC Barcelona|Barcelona]] were the defending champions, but they were eliminated by previous two seasons' runners-up [[Athletic Bilbao|Athletic Club]] in the round of 16. [[Real Betis]] won [[2022 Copa del Rey Final|the final]] 5–4 over [[Valencia CF|Valencia]] on [[Penalty shoot-out (association football)|penalties]] following a 1–1 draw after [[Overtime (sports)#Association football|extra time]] for their third Copa del Rey title.<ref>{{cite web|url=https://www.bbc.com/sport/football/61202911|title=Real Betis win Copa del Rey after beating Valencia on penalties|website=BBC Sport|date=23 April 2022|access-date=23 April 2022}}</ref><ref>{{cite web |url=https://www.theguardian.com/football/2022/apr/24/real-betis-valencia-copa-del-rey-final-match-report |title=Joaquín joy as Real Betis beat Valencia on penalties to lift Copa del Rey|first=Sid|last=Lowe|work=The Guardian|date=23 April 2022|access-date=24 April 2022}}</ref>
+
+As across Spain, match times up to 31 October 2021 and from 27 March 2022 were [[Central European Summer Time|CEST]] ([[UTC+02:00|UTC+2]]). Times on interim ("winter") days were [[Central European Time|CET]] ([[UTC+01:00|UTC+1]]). Matches played in the Canary Islands used the [[Western European Time|WET]] ([[UTC±00:00]]).
+
+==Schedule and format==
+In August 2021, the RFEF released the calendar of the competition and confirmed the format of the previous season would remain.<ref>{{cite web|url=https://www.rfef.es/sites/default/files/images19/005_torneos_rfef.pdf|publisher=[[Royal Spanish Football Federation|RFEF]]|language=es|title=Aprobadas las Normas y bases de competición de la Copa del Rey, la Supercopa de España y la Copa RFEF}}</ref>
+{|class="wikitable" style="font-size:90%"
+|-
+!Round
+!Draw date
+!Date
+!Fixtures
+!Clubs
+!Format details
+|-
+|Preliminary
+|style="text-align:left;"|
+{{Nowrap|28 October 2021}}
+|style="text-align:left;"|{{Nowrap|17 November 2021}}
+|style="text-align:center;"|10
+|style="text-align:center;"|{{Nowrap|126 → 116}}
+|'''New entries:''' Clubs qualify through the 2020–21 fifth tier.<br />'''[[Seed (sports)|Opponents seeding]]:''' Teams faced each other according to proximity criteria.<br />'''[[Seed (sports)|Local team seeding]]:''' Luck of the draw.<br />'''[[Knock-out tournament]] type:''' [[Single-elimination tournament|Single match]]
+|-
+|First round
+|style="text-align:left;"|
+{{Nowrap|18 November 2021}}
+|style="text-align:left;"|{{Nowrap|30 November – 2 December 2021}}
+|style="text-align:center;"|56
+|style="text-align:center;"|116 → 60
+|'''New entries:''' All qualified teams except the four participants in the [[2022 Supercopa de España|Supercopa de España]].<br />'''Opponents seeding:''' Teams from La Liga faced teams from the lowest divisions. The four remaining teams faced teams from Segunda División B.<br />'''Local team seeding:''' Match played at home of team in lower division.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|{{Nowrap|Second round}}
+|style="text-align:left;"|{{Nowrap|3 December 2021}}
+|style="text-align:left;"|{{Nowrap|14–16 December 2021}}
+|style="text-align:center;"|28
+|style="text-align:center;"|60 → 32
+|'''Opponents seeding:''' Teams from lowest divisions faced La Liga teams.<br />'''Local team seeding:''' Match played at home of team in lower division.<br/>'''Knock-out tournament type:''' Single match
+|-
+|Round of 32
+|style="text-align:left;"|{{Nowrap|17 December 2021}}
+|style="text-align:left;"|{{Nowrap|4–6 January 2022}}
+|style="text-align:center;"|16
+|style="text-align:center;"|32 → 16
+|'''New entries:''' Clubs participating in the [[2022 Supercopa de España|Supercopa de España]] gained entry.<br />'''Opponents seeding:''' Teams from lowest divisions faced La Liga teams.<br />'''Local team seeding:''' Match played at home of team in lower division.<br />'''Knock-out tournament type:''' Single match.
+|-
+|Round of 16
+|style="text-align:left;"|{{Nowrap|7 January 2022}}
+|style="text-align:left;"|{{Nowrap|15, 16, 19 & 20 January 2022}}
+|style="text-align:center;"|8
+|style="text-align:center;"|16 → 8
+|'''Opponents seeding:''' Teams from lowest divisions faced La Liga teams.<br />'''Local team seeding:''' Match played at home of team in lower division.<br />'''Knock-out tournament type:''' Single match.
+|-
+|Quarter-finals
+|style="text-align:left;"|{{Nowrap|21 January 2022}}
+|style="text-align:left;"|{{Nowrap|2 & 3 February 2022}}
+|style="text-align:center;"|4
+|style="text-align:center;"|8 → 4
+|'''Opponents seeding:''' Luck of the draw.<br />'''Local team seeding:''' Match played at home of team in lower division.<br />'''Knock-out tournament type:''' Single match.
+|-
+|rowspan=2|Semi-finals
+|rowspan=3 style="text-align:left;"|{{Nowrap|4 February 2022}}
+|style="text-align:left;"|{{Nowrap|9 & 10 February 2022}}
+|rowspan=2 style="text-align:center;"|2
+|rowspan=2 style="text-align:center;"|4 → 2
+|rowspan=2|'''Opponents seeding:''' Luck of the draw.<br/>'''Local team seeding:''' Luck of the draw.<br />'''Knock-out tournament type:''' [[Two-legged tie|Double match]].
+|-
+|style="text-align:left;"|{{Nowrap|2 & 3 March 2022}}
+|-
+|'''Final'''
+|style="text-align:left;"|23 April 2022
+|style="text-align:center;"|1
+|style="text-align:center;"|2 → 1
+|Single match at [[Estadio de La Cartuja]], [[Seville]]. Both teams qualify for the [[2023 Supercopa de España]].<br />'''[[UEFA Europa League]] qualification:''' winners qualify for the [[2022–23 UEFA Europa League#Group stage|2022–23 UEFA Europa League group stage]].**
+|}
+;Notes
+*From this season on, the [[away goals rule]] in the semi-finals was abolished.
+*Games ending in a draw were decided in extra time, and if still level, by a penalty shoot-out.
+
+==Qualified teams==
+The following teams qualified for the competition. Reserve teams were excluded.
+{| class="wikitable" style="font-size:90%"
+|- style="background-color:#d6e2b3; text-align:center; vertical-align:top"
+| style="width:16.67%" | '''La Liga'''<br /><small>All 20 teams of the [[2020–21 La Liga|2020–21 season]]</small>
+| style="width:16.67%" | '''Segunda División'''<br /><small>All 22 teams of the [[2020–21 Segunda División|2020–21 season]]</small>
+| style="width:16.67%" | '''Segunda División B'''<br /><small>All teams of each one of the five promotion groups (C), all winning teams and the two second-placed teams of each one of the five promotion groups (D) of the [[2020–21 Segunda División B|2020–21 season]]</small>
+| style="width:16.67%" | '''Tercera División'''<br /><small>The best teams plus the best fourteen runners-up of each one of the thirty-six promotion groups (A) and (B) of the [[2020–21 Tercera División|2020–21 season]]</small>
+| style="width:16.67%" | '''Copa Federación'''<br /><small>The four semifinalists of the [[2021 Copa Federación de España]]</small>
+| style="width:16.67%" | '''Regional leagues'''<br /><small>The best non-promoted teams of the twenty groups of the [[Divisiones Regionales de Fútbol|fifth tier]] in the 2020–21 season </small>
+|- style="vertical-align:top"
+|
+* [[Deportivo Alavés|Alavés]]
+* [[Athletic Bilbao]]{{efn|name=SC|Athletic Bilbao, Atlético Madrid, Barcelona and Real Madrid joined the tournament in the round of 32, as participants of the [[2022 Supercopa de España|Supercopa de España]].}}
+* [[Atlético Madrid]]{{efn|name=SC}}
+* [[FC Barcelona|Barcelona]]<sup>[[2020–21 Copa del Rey|TH]]</sup>{{efn|name=SC}}
+* [[Cádiz CF|Cádiz]]
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[SD Eibar|Eibar]]
+* [[Elche CF|Elche]]
+* [[Getafe CF|Getafe]]
+* [[Granada CF|Granada]]
+* [[SD Huesca|Huesca]]
+* [[Levante UD|Levante]]
+* [[CA Osasuna|Osasuna]]
+* [[Real Betis]]
+* [[Real Madrid CF|Real Madrid]]{{efn|name=SC}}
+* [[Real Sociedad]]
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Real Valladolid|Valladolid]]
+* [[Villarreal CF|Villarreal]]
+|
+* [[Albacete Balompié|Albacete]]
+* [[AD Alcorcón|Alcorcón]]
+* [[UD Almería|Almería]]
+* [[FC Cartagena|Cartagena]]
+* [[CD Castellón|Castellón]]
+* [[RCD Espanyol|Espanyol]]
+* [[CF Fuenlabrada|Fuenlabrada]]
+* [[Girona FC|Girona]]
+* [[UD Las Palmas|Las Palmas]]
+* [[CD Leganés|Leganés]]
+* [[CD Lugo|Lugo]]
+* [[Málaga CF|Málaga]]
+* [[RCD Mallorca|Mallorca]]
+* [[CD Mirandés|Mirandés]]
+* [[SD Ponferradina|Ponferradina]]
+* [[Rayo Vallecano]]
+* [[Real Oviedo|Oviedo]]
+* [[CE Sabadell FC|Sabadell]]
+* [[Sporting de Gijón|Sporting Gijón]]
+* [[CD Tenerife|Tenerife]]
+* [[UD Logroñés]]
+* [[Real Zaragoza|Zaragoza]]
+|
+* [[CD Alcoyano|Alcoyano]]
+* [[Algeciras CF|Algeciras]]
+* [[SD Amorebieta|Amorebieta]]
+* [[FC Andorra|Andorra]]
+* [[CD Atlético Baleares|Atlético Baleares]]
+* [[Atlético Sanluqueño CF|Atlético Sanluqueño]]
+* [[CD Badajoz|Badajoz]]
+* [[Burgos CF|Burgos]]
+* [[CD Calahorra|Calahorra]]
+* [[UE Cornellà|Cornellà]]
+* [[Cultural y Deportiva Leonesa|Cultural Leonesa]]
+* [[Deportivo de La Coruña|Deportivo La Coruña]]
+* [[Extremadura UD|Extremadura]]
+* [[Gimnàstic de Tarragona|Gimnàstic]]
+* [[UD Ibiza|Ibiza]]
+* [[Internacional de Madrid|Internacional]]
+* [[Linares Deportivo|Linares]]
+* [[Racing de Ferrol|Racing Ferrol]]
+* [[CF Rayo Majadahonda|Rayo Majadahonda]]
+* [[Real Unión Club|Real Unión]]
+* [[San Fernando CD|San Fernando]]
+* [[UD San Sebastián de los Reyes|San Sebastián de los Reyes]]
+* [[SD Logroñés]]
+* [[CF Talavera de la Reina|Talavera]]
+* [[CD Tudelano|Tudelano]]
+* [[UCAM Murcia CF|UCAM Murcia]]
+* [[Unionistas de Salamanca|Unionistas]]
+* [[Zamora CF|Zamora]]
+|
+* [[Águilas FC|Águilas]]
+* [[UD Alzira|Alzira]]
+* [[CE Andratx|Andratx]]
+* [[CD Arenteiro|Arenteiro]]
+* [[Atlético Mancha Real]]
+* [[CA Pulpileño|Atlético Pulpileño]]
+* [[Bergantiños FC|Bergantiños]]
+* [[CD Brea|Brea]]
+* [[CP Cacereño|Cacereño]]
+* [[Calvo Sotelo de Puertollano CF|Calvo Sotelo]]
+* [[CD Cayón|Cayón]]
+* [[UC Ceares|Ceares]]
+* [[CD Palencia Cristo Atlético|Cristo Atlético]]
+* [[CD Eldense|Eldense]]
+* [[CE Europa|Europa]]
+* [[Gernika Club|Gernika]]
+* [[Gimnástica Segoviana CF|Gimnástica Segoviana]]
+* [[CD Ibiza Islas Pitiusas|Ibiza Islas Pitiusas]]
+* [[UD Llanera|Llanera]]
+* [[CD Marchamalo|Marchamalo]]
+* [[CD Mensajero|Mensajero]]
+* [[UD Montijo|Montijo]]
+* [[Náxara CD|Náxara]]
+* [[CF Panadería Pulido|Panadería Pulido]]
+* [[Peña Sport FC|Peña Sport]]
+* [[Racing Rioja CF|Racing Rioja]]
+* [[AD San Juan|San Juan]]
+* [[CD San Roque de Lepe|San Roque de Lepe]]
+* [[CD Teruel|Teruel]]
+* [[AD Unión Adarve|Unión Adarve]]
+* [[Vélez CF|Vélez]]
+* [[Xerez Deportivo FC|Xerez Deportivo]]
+|
+* [[Córdoba CF|Córdoba]]
+* [[CD Ebro|Ebro]]
+* [[CD Guijuelo|Guijuelo]]
+* [[SD Leioa|Leioa]]
+|
+*[[CD Aldeano|Aldeano]]
+*[[Atarfe Industrial CF|Atarfe Industrial]]
+*[[CA Espeleño|Atlético Espeleño]]
+*[[CD Ceuta 6 de Junio|Ceuta 6 de Junio]]
+*[[CD Hernani|Hernani]]
+*[[CD Huracán Melilla|Huracán Melilla]]
+*[[CFI Alicante|Alicante]]
+*[[CD Injerto|Injerto]]
+*[[CF Jaraíz|Jaraíz]]
+*[[CD Laguna de Tenerife|Laguna]]
+*[[CFJ Mollerussa|Mollerussa]]
+*[[Mora CF|Mora]]
+*[[Nalón CF|Nalón]]
+*[[SE Penya Independent|Penya Independent]]
+*[[CF San Agustín del Guadalix|San Agustín del Guadalix]]
+*[[SD Solares-Medio Cudeyo|Solares]]
+*[[Unami CP|Unami]]
+*[[CD Utrillas|Utrillas]]
+*[[Victoria CF|Victoria]]
+*[[CD Villa de Fortuna|Villa de Fortuna]]
+|}
+{{notelist}}
+
+==Preliminary round==
+===Draw===
+Teams were divided into four groups according to geographical criteria.<ref>{{cite web|url=https://www.marca.com/futbol/copa-rey/2021/09/16/61438997e2704ed6228b45b8.html|publisher=MARCA|date=16 September 2021|language=es|title=Veinte equipos de Regional que viven el sueño de la Copa del Rey.}}</ref><ref>{{cite web|url=https://www.rfef.es/noticias/este-jueves-20-equipos-conoceran-su-suerte-eliminatoria-previa-copa-del-rey|publisher=RFEF|date=28 October 2021|language=es|title=Este jueves, 20 equipos conocerán su suerte en la Eliminatoria Previa de la Copa del Rey}}</ref>
+{|class="wikitable"
+|-
+! Group 1 !! Group 2 !! Group 3 !! Group 4
+|- valign=top
+|
+[[CD Aldeano|Aldeano]]<br/>
+[[CD Hernani|Hernani]]<br/>
+[[Nalón CF|Nalón]]<br/>
+[[SD Solares-Medio Cudeyo|Solares]]<br/>
+[[Unami CP|Unami]]<br/>
+[[Victoria CF|Victoria]]
+|
+[[CD Injerto|Injerto]]<br/>
+[[CFJ Mollerussa|Mollerussa]]<br/>
+[[SE Penya Independent|Penya Independent]]<br/>
+[[CD Utrillas|Utrillas]]
+|
+[[CFI Alicante|Alicante]]<br/>
+[[Atarfe Industrial CF|Atarfe Industrial]]<br/>
+[[CA Espeleño|Atlético Espeleño]]<br/>
+[[CD Ceuta 6 de Junio|Ceuta 6 de Junio]]<br/>
+[[CD Huracán Melilla|Huracán Melilla]]<br/>
+[[CD Villa de Fortuna|Villa de Fortuna]]
+|
+[[CF Jaraíz|Jaraíz]]<br/>
+[[CD Laguna de Tenerife|Laguna]]<br/>
+[[Mora CF|Mora]]<br/>
+[[CF San Agustín del Guadalix|San Agustín del Guadalix]]
+|}
+
+===Matches===
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 15:00
+|team1='''[[Nalón CF|Nalón]] (6)'''
+|round=
+|score= 1–1
+|penaltyscore=3–4
+|report=
+|team2=[[SD Solares-Medio Cudeyo|Solares]] (6)
+|goals1=[[Luis Olay|Olay]] {{goal|88}}
+|goals2=[[Jorge Iglesias Fortuoso|Pepo]] {{goal|19}}
+|penalties1=
+*[[Alex Corzo|Corzo]] {{pengoal}}
+*[[Luis Olay|Olay]] {{pengoal}}
+*[[José Armando Alvarez Vicente|Mandi]] {{penmiss}}
+*[[Sergio Rodríguez (footballer, born 2002)|Rodríguez]] {{pengoal}}
+*[[Samuel Prieto Arguelles|Samuel]] {{penmiss}}
+|penalties2=
+*[[Jorge Iglesias Fortuoso|Pepo]] {{pengoal}}
+*[[Javier Bada|Bada]] {{pengoal}}
+*[[Pablo Raba|Raba]] {{pengoal}}
+*[[Álvaro León Varela|León]] {{pengoal}}
+|stadium=[[Fumea-Lolo Rodríguez]]
+|location=[[Olloniego]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 19:00
+|team1=[[CD Utrillas|Utrillas]] (6)
+|round=
+|score= 2–0
+|report=
+|team2='''[[CD Injerto|Injerto]] (7)'''
+|goals1=[[Adrián Hernández Martínez|Hernández]] {{goal|15||57}}
+|goals2=
+|stadium=[[Estadio La Vega|La Vega]]
+|location=[[Utrillas]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 19:30
+|team1='''[[CD Aldeano|Aldeano]] (6)'''
+|round=
+|score= 1–3
+|report=
+|team2=[[Unami CP|Unami]] (6)
+|goals1=[[Boujemaa Abouzahr|Abouzahr]] {{goal|52}}
+|goals2=
+* [[Rubén Peréz Calle|Peréz]] {{goal|12}}
+* [[Jesus Horcajo De Miguel|Chechu]] {{goal|75}}
+* [[Héctor Álvarez Álvarez|Koby]] {{goal|88|pen.}}
+|stadium=[[Estadio San Bartolomé|San Bartolomé]]
+|location=[[Aldeanueva de Ebro]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 19:30
+|team1=[[Victoria CF|Victoria]] (6)
+|round=
+|score= 1–0
+|report=
+|team2='''[[CD Hernani|Hernani]] (6)'''
+|goals1=[[Iago Pérez Ferreiro|Pérez]] {{goal|47}}
+|goals2=
+|stadium=[[A Grela]]
+|location=[[La Coruña]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 20:00
+|team1=[[CF San Agustín del Guadalix|San Agustín del Guadalix]] (6)
+|round=
+|score= 6–2
+|report=
+|team2='''[[Mora CF|Mora]] (6)'''
+|goals1=
+*[[Ricardo Larrode Backer|Riki]] {{goal|6||11||16}}
+*[[Jesus Sánchez Jiménez|Sánchez]] {{goal|45}}
+*[[Rubén Bas Duque|Bas]] {{goal|75}}
+*[[Jose Luis Cano Monasterio|Cano]] {{goal|78}}
+|goals2=[[Óscar Guijarro|Guijarro]] {{goal|34||60}}
+|stadium=[[Campo de Fútbol San Agustín del Guadalix]]
+|location=[[San Agustín del Guadalix]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 20:30
+|team1=[[CFJ Mollerussa|Mollerussa]] (6)
+|round=
+|score= 1–0
+|report=
+|team2='''[[SE Penya Independent|Penya Independent]] (6)'''
+|goals1=[[Guillem Porta Aparicio|Guillem]] {{goal|79}}
+|goals2=
+|stadium=[[Camp Municipal]]
+|location=[[Mollerussa]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 20:30
+|team1=[[CFI Alicante|Alicante]] (6)
+|round=
+|score= 7–1
+|report=
+|team2='''[[CD Ceuta 6 de Junio|Ceuta 6 de Junio]] (6)'''
+|goals1=
+*[[Javier Heredia García|Heredia]] {{goal|22||71}}
+*[[Carlos Israel Pérez Ferrando|Pérez]] {{goal|28}}
+*[[José Gregorio Piña Flores|Piña]] {{goal|61}}
+*[[Pedro Chinchilla|Chinchilla]] {{goal|81||83}}
+*[[Yvan Yannick Gombo|Gombo]] {{goal|89}}
+|goals2=[[Jesús García Villatoro|Villatoro]] {{goal|57}}
+|stadium=[[Antonio Valls]]
+|location=[[Alicante]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 20:30
+|team1=[[CD Villa de Fortuna|Villa de Fortuna]] (6)
+|round=
+|score= 1–0
+|report=
+|team2='''[[CA Espeleño|Atlético Espeleño]] (6)'''
+|goals1=[[Jonatan Martinez Ramirez|Jony]] {{goal|90}}
+|goals2=
+|stadium=[[Estadio José Luis Belda|José Luis Belda]]
+|location=[[Fortuna, Murcia|Fortuna]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 20:30
+|team1=[[CD Laguna de Tenerife|Laguna]] (6)
+|round=
+|score= 4–1
+|report=
+|team2='''[[CF Jaraíz|Jaraíz]] (6)'''
+|goals1=
+*[[Mehdi Leonard Hallam|Mehdi]] {{goal|7}}
+*[[Gianlucas Gabriel Colángelo Pérez|Luca]] {{goal|19||39}}
+*[[Alexis Cabrera Díaz|Alexis]] {{goal|52}}
+|goals2=[[David Elena Arjona|Elena]] {{goal|30}}
+|stadium=[[Ciudad Deportiva Los Laureles|Los Laureles]]
+|location=[[Tegueste]]{{efn|Laguna did not play its game in its main stadium Francisco Peraza, in [[San Cristóbal de La Laguna]], as it did not meet the requirements to broadcast the match.}}
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=17 November 2021
+|time= 21:00
+|team1=[[CD Huracán Melilla|Huracán Melilla]] (6)
+|round=
+|score= 2–1
+|report=
+|team2='''[[Atarfe Industrial CF|Atarfe Industrial]] (6)'''
+|goals1=
+*[[Yosef Hamed García|Yosef]] {{goal|2}}
+*[[José Luis Fernández Chaparro|Joselu]] {{goal|81|pen.}}
+|goals2=[[Diego Agudo Hoces|Diego]] {{goal|7}}
+|stadium=[[La Espiguera]]
+|location=[[Melilla]]
+|attendance=
+|referee=
+}}
+;Notes
+{{notelist}}
+
+==First round==
+The first round was played by 112 of the 116 qualified teams, with the exceptions being the four participants of the [[2022 Supercopa de España]]. The ten winners from the previous preliminary round were paired with ten teams from [[2021–22 La Liga|La Liga]]. The four [[2021 Copa Federación de España|Copa Federación]] semi-finalists with another four teams from [[2021–22 La Liga|La Liga]] and the last two [[2021–22 La Liga|La Liga]] teams with two teams from [[2021–22 Segunda División RFEF|Segunda RFEF]]. Twenty-one teams from [[2021–22 Segunda División RFEF|Segunda RFEF]] were paired with the twenty-one [[2021–22 Segunda División|Segunda División]] teams, the last nine teams from [[2021–22 Segunda División RFEF|Segunda RFEF]] were paired with nine [[2021–22 Primera División RFEF|Primera RFEF]] teams. Finally, the remaining twenty teams from [[2021–22 Primera División RFEF|Primera RFEF]] were paired between them. In the case of opponents from the same division, the home advantage was decided by whichever team was drawn first; otherwise, the match was held in the stadium of the lower division team. A total of 56 games were played from 30 November to 2 December 2021.
+
+===Draw===
+The draw was held on 18 November 2021. Teams were divided into six pots.<ref name=rfef>{{cite web|url=https://rfef.es/sites/default/files/pdf/circulares/circular_no_46_-_sorteo_primera_eliminatoria_copa_de_s.m._el_rey.pdf|publisher=RFEF|date=15 November 2021|language=es|title=Circular nº 46, Sorteo Primera Eliminatoria Campeonato de España / Copa de S. M. El Rey}}</ref>
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|16 teams of [[2021–22 La Liga|La Liga]]}} || width=15%|'''Pot 2'''<br/>{{small|21 teams of [[2021–22 Segunda División|Segunda División]]}} || width=15%|'''Pot 3'''<br/>{{small|29 teams of [[2021–22 Primera División RFEF|Primera RFEF]]}} || width=15%|'''Pot 4'''<br/>{{small|32 teams of [[2021-22 Segunda División RFEF|Segunda RFEF]]}} || width=15%|'''Pot 5'''<br/>{{small|4 teams qualified through the [[2021 Copa Federación de España|Copa Federación]]}} || width=15%|'''Pot 6'''<br/>{{small|10 winners of the preliminary round}}
+|- valign=top
+|
+[[Deportivo Alavés|Alavés]]<br>
+[[Cádiz CF|Cádiz]]<br>
+[[RC Celta de Vigo|Celta Vigo]]<br>
+[[Elche CF|Elche]]<br>
+[[RCD Espanyol|Espanyol]]<br>
+[[Getafe CF|Getafe]]<br>
+[[Granada CF|Granada]]<br>
+[[Levante UD|Levante]]<br>
+[[RCD Mallorca|Mallorca]]<br>
+[[CA Osasuna|Osasuna]]<br>
+[[Rayo Vallecano]]<br>
+[[Real Betis]]<br>
+[[Real Sociedad]]<br>
+[[Sevilla FC|Sevilla]]<br>
+[[Valencia CF|Valencia]]<br>
+[[Villarreal CF|Villarreal]]
+|
+[[AD Alcorcón|Alcorcón]]<br>
+[[UD Almería|Almería]]<br>
+[[SD Amorebieta|Amorebieta]]<br>
+[[Burgos CF|Burgos]]<br>
+[[FC Cartagena|Cartagena]]<br>
+[[SD Eibar|Eibar]]<br>
+[[CF Fuenlabrada|Fuenlabrada]]<br>
+[[Girona FC|Girona]]<br>
+[[SD Huesca|Huesca]]<br>
+[[UD Ibiza|Ibiza]]<br>
+[[UD Las Palmas|Las Palmas]]<br>
+[[CD Leganés|Leganés]]<br>
+[[CD Lugo|Lugo]]<br>
+[[Málaga CF|Málaga]]<br>
+[[CD Mirandés|Mirandés]]<br>
+[[SD Ponferradina|Ponferradina]]<br>
+[[Real Oviedo]]<br>
+[[Sporting de Gijón|Sporting Gijón]]<br>
+[[CD Tenerife|Tenerife]]<br>
+[[Real Valladolid|Valladolid]]<br>
+[[Real Zaragoza|Zaragoza]]
+|
+[[Albacete Balompié|Albacete]]<br>
+[[CD Alcoyano|Alcoyano]]<br>
+[[Algeciras CF|Algeciras]]<br>
+[[FC Andorra|Andorra]]<br>
+[[CD Atlético Baleares|Atlético Baleares]]<br>
+[[Atlético Sanluqueño CF|Atlético Sanluqueño]]<br>
+[[CD Badajoz|Badajoz]]<br>
+[[CD Calahorra|Calahorra]]<br>
+[[CD Castellón|Castellón]]<br>
+[[UE Cornellà|Cornellà]]<br>
+[[Cultural y Deportiva Leonesa|Cultural Leonesa]]<br>
+[[Deportivo de La Coruña|Deportivo La Coruña]]<br>
+[[Extremadura UD|Extremadura]]<br>
+[[Gimnàstic de Tarragona|Gimnàstic]]<br>
+[[Internacional de Madrid|Internacional]]<br>
+[[Linares Deportivo|Linares]]<br>
+[[Racing de Ferrol|Racing Ferrol]]<br>
+[[CF Rayo Majadahonda|Rayo Majadahonda]]<br>
+[[Real Unión Club|Real Unión]]<br>
+[[CE Sabadell FC|Sabadell]]<br>
+[[San Fernando CD|San Fernando]]<br>
+[[UD San Sebastián de los Reyes|San Sebastián de los Reyes]]<br>
+[[SD Logroñés]]<br>
+[[CF Talavera de la Reina|Talavera]]<br>
+[[CD Tudelano|Tudelano]]<br>
+[[UCAM Murcia CF|UCAM Murcia]]<br>
+[[UD Logroñés]]<br>
+[[Unionistas de Salamanca|Unionistas]]<br>
+[[Zamora CF|Zamora]]
+|
+[[Águilas FC|Águilas]]<br>
+[[UD Alzira|Alzira]]<br>
+[[CE Andratx|Andratx]]<br>
+[[CD Arenteiro|Arenteiro]]<br>
+[[Atlético Mancha Real]]<br>
+[[CA Pulpileño|Atlético Pulpileño]]<br>
+[[Bergantiños FC|Bergantiños]]<br>
+[[CD Brea|Brea]]<br>
+[[CP Cacereño|Cacereño]]<br>
+[[Calvo Sotelo de Puertollano CF|Calvo Sotelo]]<br>
+[[CD Cayón|Cayón]]<br>
+[[UC Ceares|Ceares]]<br>
+[[CD Palencia Cristo Atlético|Cristo Atlético]]<br>
+[[CD Eldense|Eldense]]<br>
+[[CE Europa|Europa]]<br>
+[[Gernika Club|Gernika]]<br>
+[[Gimnástica Segoviana CF|Gimnástica Segoviana]]<br>
+[[CD Ibiza Islas Pitiusas|Ibiza Islas Pitiusas]]<br>
+[[UD Llanera|Llanera]]<br>
+[[CD Marchamalo|Marchamalo]]<br>
+[[CD Mensajero|Mensajero]]<br>
+[[UD Montijo|Montijo]]<br>
+[[Náxara CD|Náxara]]<br>
+[[CF Panadería Pulido|Panadería Pulido]]<br>
+[[Peña Sport FC|Peña Sport]]<br>
+[[Racing Rioja CF|Racing Rioja]]<br>
+[[AD San Juan|San Juan]]<br>
+[[CD San Roque de Lepe|San Roque de Lepe]]<br>
+[[CD Teruel|Teruel]]<br>
+[[AD Unión Adarve|Unión Adarve]]<br>
+[[Vélez CF|Vélez]]<br>
+[[Xerez Deportivo FC|Xerez Deportivo]]
+|
+[[Córdoba CF|Córdoba]]<br>
+[[CD Ebro|Ebro]]<br>
+[[CD Guijuelo|Guijuelo]]<br>
+[[SD Leioa|Leioa]]
+|
+[[CFI Alicante|Alicante]]<br>
+[[CD Huracán Melilla|Huracán Melilla]]<br>
+[[CD Laguna de Tenerife|Laguna]]<br>
+[[CFJ Mollerussa|Mollerussa]]<br>
+[[CF San Agustín del Guadalix|San Agustín del Guadalix]]<br>
+[[SD Solares-Medio Cudeyo|Solares]]<br>
+[[Unami CP|Unami]]<br>
+[[CD Utrillas|Utrillas]]<br>
+[[Victoria CF|Victoria]]<br>
+[[CD Villa de Fortuna|Villa de Fortuna]]
+|}
+
+===Matches===
+{{football box collapsible
+|date=30 November 2021
+|time=16:00
+|team1='''[[CD Cayón|Cayón]] (4)'''
+|score= 0–2
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/cd-cayon/sd-huesca/3699970/
+|team2=[[SD Huesca|Huesca]] (2)
+|goals1=
+|goals2=
+*[[Marc Mateu|Mateu]] {{goal|59}}
+*[[Kevin Carlos Omoruyi|Omoruyi]] {{goal|90+4}}
+|stadium=[[Estadio Fernando Astobiza|Fernando Astobiza]]
+|location=[[Santa María de Cayón|Cayón]]
+|attendance=
+|referee=Óliver de la Fuente Ramos
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=16:00
+|team1='''[[CD Marchamalo|Marchamalo]] (4)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/cd-marchamalo/real-valladolid-club-de-futbol/3699978/
+|team2=[[Real Valladolid|Valladolid]] (2)
+|goals1=
+|goals2=
+*[[Roque Mesa|Mesa]] {{goal|89|pen.}}
+|stadium=[[Estadio La Solana|La Solana]]
+|location=[[Marchamalo]]
+|attendance=
+|referee=David Gálvez Rascón  
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=18:30
+|team1='''[[Náxara CD|Náxara]] (4)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/naxara-cd/fc-andorra/3699988/
+|team2=[[FC Andorra|Andorra]] (3)
+|goals1=
+|goals2=
+*[[Marc Fernández (footballer)|Fernández]] {{goal|42|pen.}}
+|stadium=[[Estadio La Salera|La Salera]]
+|location=[[Nájera]]
+|attendance=
+|referee=David Recio Moreno
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=19:00
+|team1='''[[Victoria CF|Victoria]] (6)'''
+|score= 0–8
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/spain-victoria-cf-a-coruna/villarreal-club-de-futbol/3699952/
+|team2=[[Villarreal CF|Villarreal]] (1)
+|goals1=
+|goals2=
+*[[Alberto Moreno|Moreno]] {{goal|17||22}}
+*[[Aïssa Mandi|Mandi]] {{goal|28}}
+*[[Paco Alcácer|Alcácer]] {{goal|37}}
+*[[Samuel Chukwueze|Chukwueze]] {{goal|50}}
+*[[Gerard Moreno|Gerard]] {{goal|73}}
+*[[Boulaye Dia|Dia]] {{goal|82}}
+*[[Nikita Iosifov|Iosifov]] {{goal|87}}
+|stadium=[[Riazor]]
+|location=[[La Coruña]]{{efn|Victoria played its game at Riazor, in [[La Coruña]] instead of their regular stadium San Pedro de Visma as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=Pablo González Fuertes
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=18:00 [[Western European Time|WET]]
+|team1='''[[CD Laguna de Tenerife|Laguna]] (6)'''
+|score= 0–7
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/cd-laguna/granada-club-de-futbol/3699955/
+|team2=[[Granada CF|Granada]] (1)
+|goals1=
+|goals2=
+*[[Carlos Bacca|Bacca]] {{goal|9}}
+*[[Adrián Butzke|Butzke]] {{goal|32||44||54}}
+*[[Antonio Puertas|Puertas]] {{goal|41}}
+*[[Jorge Molina (footballer, born 1982)|Molina]] {{goal|67||76}}
+|stadium=[[Estadio Heliodoro Rodríguez López|Heliodoro Rodríguez López]]
+|location=[[Santa Cruz de Tenerife]]{{efn|Laguna played its game at Heliodoro Rodríguez López, in [[Santa Cruz de Tenerife]] instead of their regular stadium Francisco Peraza in [[San Cristóbal de La Laguna]] as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=Valentín Pizarro Gómez
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=19:00
+|team1='''[[Unami CP|Unami]] (6)'''
+|score= 0–3
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/unami-club-polideportivo/deportivo-alaves/3699956/
+|team2=[[Deportivo Alavés|Alavés]] (1)
+|goals1=
+|goals2=
+*[[John Guidetti|Guidetti]] {{goal|66}}
+*[[Mamadou Sylla (footballer, born 1994)|Sylla]] {{goal|82}}
+*[[Luis Rioja|Rioja]] {{goal|90+1}}
+|stadium=[[Estadio La Albuera|La Albuera]]
+|location=[[Segovia]]
+|attendance=
+|referee=Miguel Ángel Ortiz Arias
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=20:00
+|team1='''[[CD Teruel|Teruel]] (4)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/club-deportivo-teruel/agrupacion-deportiva-alcorcon/3699965/
+|team2=[[AD Alcorcón|Alcorcón]] (2)
+|goals1=
+|goals2=
+*[[Hugo Fraile|Fraile]] {{goal|28|pen.}}
+|stadium=[[Estadio Pinilla|Pinilla]]
+|location=[[Teruel]]
+|attendance=
+|referee=Rubén Ávalos Barrera
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=20:00
+|team1='''[[Racing Rioja CF|Racing Rioja]] (4)'''
+|score= 0–2
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/racing-rioja/futbol-club-cartagena/3699976/
+|team2=[[FC Cartagena|Cartagena]] (2)
+|goals1=
+|goals2=
+*[[Alfredo Ortuño|Ortuño]] {{goal|65||81}}
+|stadium=[[Estadio Las Gaunas|Las Gaunas]]
+|location=[[Logroño]]{{efn|Racing Rioja played its game at Las Gaunas, in [[Logroño]] instead of their regular stadium El Salvador as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=José Antonio López Toca
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=20:00
+|team1='''[[UC Ceares|Ceares]] (4)'''
+|score= 0–1
+|report=https://www.laliga.com/partido/temporada-2021-2022-copa-del-rey-union-ceares-real-sporting-1
+|team2=[[Sporting de Gijón|Sporting Gijón]] (2)
+|goals1=
+|goals2=
+*[[César García Menéndez|César]] {{goal|38}}
+|stadium=[[El Molinón]]
+|location=[[Gijón]]{{efn|Ceares played its game at El Molinón, in [[Gijón]] instead of their regular stadium La Cruz as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=Javier Iglesias Villanueva
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=20:30
+|team1=[[Atlético Sanluqueño CF|Atlético Sanluqueño]] (3)
+|score= 2–0
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/atletico-sanluqueno-club-de-futbol/ce-sabadell/3699997/
+|team2='''[[CE Sabadell FC|Sabadell]] (3)'''
+|goals1=
+*[[Miguel Ángel Ramírez Carrasco|Miguelete]] {{goal|65}}
+*[[Adrián Armental|Armental]] {{goal|76}}
+|goals2=
+|stadium=[[Estadio El Palmar|El Palmar]]
+|location=[[Sanlúcar de Barrameda]]
+|attendance=
+|referee=Alejandro Lucena Perdomo
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=21:00
+|team1='''[[CD Ebro|Ebro]] (4)'''
+|score= 0–5
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/cd-ebro/real-club-celta-de-vigo/3699959/
+|team2=[[RC Celta de Vigo|Celta Vigo]] (1)
+|goals1=
+|goals2=
+*[[Santi Mina|Mina]] {{goal|32}}
+*[[Augusto Solari|Solari]] {{goal|43}}
+*[[Franco Cervi|Cervi]] {{goal|55||58}}
+*[[José Fontán|Fontán]] {{goal|90+2}}
+|stadium=[[La Romareda]]
+|location=[[Zaragoza]]{{efn|Ebro played its game at La Romareda, in [[Zaragoza]] instead of their regular stadium La Almozara as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=[[Antonio Mateu Lahoz]]
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=21:00
+|team1='''[[CFJ Mollerussa|Mollerussa]] (6)'''
+|score= 1–5
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/mollerussa/getafe-club-de-futbol/3699954/
+|team2=[[Getafe CF|Getafe]] (1)
+|goals1=
+*[[Xavier Puiggròs Ruiz|Putxi]] {{goal|4}}
+|goals2=
+*[[Jaime Mata|Mata]] {{goal|19|pen.|52|pen.|57}}
+*[[Sandro Ramírez|Sandro]] {{goal|58}}
+*[[Darío Poveda|Poveda]] {{goal|75}}
+|stadium=[[Camp Municipal d'Esports|Camp Municipal]]
+|location=[[Mollerussa]]
+|attendance=
+|referee=Alejandro Hernández Hernández
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=21:00
+|team1='''[[Águilas FC|Águilas]] (4)'''
+|score=1–1
+|aet=yes
+|penaltyscore=3–5
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/cd-aguilas/union-deportiva-almeria/3699975/
+|team2=[[UD Almería|Almería]] (2)
+|goals1=
+*[[Kalu Uche|Uche]] {{goal|58}}
+|goals2=
+*[[Juan Villar|Villar]] {{goal|32}}
+|penalties1= 
+*[[Dinko Trebotić|Trebotić]] {{pengoal}}
+*[[Alejandro José Pérez López|Álex López]] {{pengoal}}
+*[[Ramón Arcas|Arcas]] {{pengoal}}
+*[[Javier Pérez Carabe|Javi Pérez]] {{penmiss}}
+|penalties2= 
+*[[Largie Ramazani|Ramazani]] {{pengoal}}
+*[[Curro Sánchez|Curro]] {{pengoal}}
+*[[Francisco Portillo (footballer, born 1990)|Portillo]] {{pengoal}}
+*[[Samuel Costa (footballer)|Samú]] {{pengoal}}
+*[[César de la Hoz|de la Hoz]] {{pengoal}}
+|stadium=[[Estadio El Rubial|El Rubial]]
+|location=[[Águilas]]
+|attendance=
+|referee=Saúl Ais Reig
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=21:00
+|team1='''[[UD Montijo|Montijo]] (4)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/montijo/burgos-club-de-futbol/3699969/
+|team2=[[Burgos CF|Burgos]] (2)
+|goals1=
+|goals2=
+*[[Riki (footballer, born 1997)|Riki]] {{goal|90+4}}
+|stadium=[[Estadio Municipal Emilio Macarro Rodríguez|Emilio Macarro Rodríguez]]
+|location=[[Montijo, Spain|Montijo]]
+|attendance=
+|referee=Álvaro Moreno Aragón
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=21:00
+|team1=[[Albacete Balompié|Albacete]] (3)
+|score= 2–1
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/albacete-balompie/racing-club-de-ferrol/3699995/
+|team2='''[[Racing de Ferrol|Racing Ferrol]] (3)'''
+|goals1=
+*[[Eric Montes|Montes]] {{goal|61|pen.}}
+*[[Daniel González Flores|Dani González]] {{goal|117}}
+|goals2=
+*[[Álex López (footballer, born 1988)|Álex López]] {{goal|43}}
+|stadium=[[Estadio Carlos Belmonte|Carlos Belmonte]]
+|location=[[Albacete]]
+|attendance=
+|referee=Sergiu Claudiu Mureșan
+}}
+{{football box collapsible
+|date=30 November 2021
+|time=21:00
+|team1='''[[CD Badajoz|Badajoz]] (3)'''
+|score= 0–3
+|report=https://int.soccerway.com/matches/2021/11/30/spain/copa-del-rey/club-deportivo-badajoz/club-deportivo-alcoyano/3699998/
+|team2=[[CD Alcoyano|Alcoyano]] (3)
+|goals1=
+|goals2=
+*[[Mourad Daoudi El Ghezouani|Mourad]] {{goal|3}}
+*[[Jona (footballer)|Jona]] {{goal|77|pen.}}
+*[[Ángel López (footballer, born 1997)|Ángel López]] {{goal|87}}
+|stadium=[[Estadio Nuevo Vivero|Nuevo Vivero]]
+|location=[[Badajoz]]
+|attendance=
+|referee=Manuel Ángel Pérez Hernández 
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=15:30 [[Western European Time|WET]]
+|team1='''[[CD Mensajero|Mensajero]] (4)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/cd-mensajero/real-zaragoza/3699964/
+|team2=[[Real Zaragoza|Zaragoza]] (2)
+|goals1=
+|goals2=
+*[[Enrique Clemente|Clemente]] {{goal|80}}
+|stadium=[[Nuevo Estadio Silvestre Carrillo|Silvestre Carrillo]]
+|location=[[Santa Cruz de La Palma]]
+|attendance=
+|referee=Gorka Sagués Oscoz
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=18:30
+|team1=[[Bergantiños FC|Bergantiños]] (4)
+|score= 2–0
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/bergantinos-cf/club-deportivo-tudelano/3699986/
+|team2='''[[CD Tudelano|Tudelano]] (3)'''
+|goals1=
+*[[Uxío da Pena|Uxío]] {{goal|33}}
+*[[Yelco Alfaya|Alfaya]] {{goal|90+3}}
+|goals2=
+|stadium=[[Estadio As Eiroas|As Eiroas]]
+|location=[[Carballo]]
+|attendance=
+|referee=Alfonso Vicente Moral
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=19:00
+|team1='''[[Córdoba CF|Córdoba]] (4)'''
+|score= 0–1
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/cordoba-cf/sevilla-futbol-club/3699957/
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+|goals2=
+*[[Lucas Ocampos|Ocampos]] {{goal|108}}
+|stadium=[[Estadio Nuevo Arcángel|Nuevo Arcángel]]
+|location=[[Córdoba, Spain|Córdoba]]
+|attendance=
+|referee=[[Jesús Gil Manzano]]
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=19:00
+|team1='''[[SD Solares-Medio Cudeyo|Solares]] (6)'''
+|score= 2–3
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/sd-solares/reial-club-deportiu-espanyol/3699953/
+|team2=[[RCD Espanyol|Espanyol]] (1)
+|goals1=
+*[[Ángel Oslé|Oslé]] {{goal|75}}
+*[[Enrique Gutiérrez|Gutiérrez]] {{goal|83}}
+|goals2=
+*[[Loren Morón (footballer, born 1993)|Loren]] {{goal|15||23||50|pen.}}
+|stadium=[[Estadio La Estación|La Estación]]
+|location=[[Solares]]
+|attendance=
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=19:00
+|team1='''[[Gimnástica Segoviana CF|Gimnástica Segoviana]] (4)'''
+|score= 0–2
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/gimnastica-segoviana-club-de-futbol/real-club-deportivo-mallorca/3699962/
+|team2=[[RCD Mallorca|Mallorca]] (1)
+|goals1=
+|goals2=
+*[[Ángel Rodríguez (footballer, born 1987)|Ángel]] {{goal|94||105+3}}
+|stadium=[[Estadio La Albuera|La Albuera]]
+|location=[[Segovia]]
+|attendance=
+|referee=Javier Alberola Rojas
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=19:00
+|team1='''[[CD Brea|Brea]] (4)'''
+|score= 0–2
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/cd-brea/ud-ibiza/3699983/
+|team2=[[UD Ibiza|Ibiza]] (2)
+|goals1=
+|goals2=
+*[[David Álvarez (footballer, born 1994)|Davo]] {{goal|32||76}}
+|stadium=[[Municipal de Piedrabuena|Piedrabuena]]
+|location=[[Brea de Aragón]]
+|attendance=
+|referee=Iosu Galech Apezteguía
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=19:00
+|team1='''[[Algeciras CF|Algeciras]] (3)'''
+|score= 1–2
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/algeciras-cf/unionistas-de-salamanca/3700002/
+|team2=[[Unionistas de Salamanca|Unionistas]] (3)
+|goals1=
+*[[Álvaro Romero Morillo|Álvaro Romero]] {{goal|90+4}}
+|goals2=
+*[[Rayco Rodríguez|Rayco]] {{goal|8||18}}
+|stadium=[[Estadio Nuevo Mirador|Nuevo Mirador]]
+|location=[[Algeciras]]
+|attendance=
+|referee=Antonio Sánchez Sánchez
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:00
+|team1=[[CE Andratx|Andratx]] (4)
+|score= 2–1
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/ce-andratx/real-oviedo/3699981/
+|team2='''[[Real Oviedo]] (2)'''
+|goals1=
+*[[Pau Pomar|Pomar]] {{goal|25}}
+*[[Miquel Llabrés|Llabrés]] {{goal|31}}
+|goals2=
+*[[Erik Jirka|Jirka]] {{goal|39}}
+|stadium=[[Estadi de Sa Plana|Sa Plana]]
+|location=[[Andratx]]
+|attendance=
+|referee=Iván Caparrós Hernández
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:00
+|team1=[[Atlético Mancha Real]] (4)
+|score= 2–1
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/atletico-mancha-real-cf/cf-internacional/3699991/
+|team2='''[[Internacional de Madrid|Internacional]] (3)'''
+|goals1=
+*[[José Enrique Rodríguez|José Enrique]] {{goal|84}}
+*[[Rafael Vega Pérez|Rafilla]] {{goal|89}}
+|goals2=
+*[[Sergio Orejas Revilla|Pitu]] {{goal|74}}
+|stadium=[[Estadio Polideportivo Municipal de La Juventud|La Juventud]]
+|location=[[Mancha Real]]
+|attendance=
+|referee=Antonio Alberola Rojas
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:00
+|team1='''[[UD Alzira|Alzira]] (4)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/ud-alzira/cd-fuenlabrada/3699972/
+|team2=[[CF Fuenlabrada|Fuenlabrada]] (2)
+|goals1=
+|goals2=
+*[[Franco Soldano|Soldano]] {{goal|55}}
+|stadium=[[Estadio Luis Suñer Picó|Luis Suñer Picó]]
+|location=[[Alzira, Valencia|Alzira]]
+|attendance=
+|referee=Dámaso Arcediano Monescillo
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:00
+|team1='''[[AD San Juan|San Juan]] (4)'''
+|score= 1–2
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/ad-san-juan/ud-san-sebastian-de-los-reyes/3699989/
+|team2=[[UD San Sebastián de los Reyes|San Sebastián de los Reyes]] (3)
+|goals1=
+*[[Iñigo Burusco|Burusco]] {{goal|36}}
+|goals2=
+*[[Eneko Jauregi|Jauregi]] {{goal|28}}
+*[[Oier Retegui|Retegui]] {{goal|73|o.g.}}
+|stadium=[[Estadio San Juan|San Juan]]
+|location=[[Pamplona]]
+|attendance=
+|referee=Sergio Usón Rosel
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:00
+|team1='''[[UCAM Murcia CF|UCAM Murcia]] (3)'''
+|score= 3–4
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/costa-calida-cf/real-club-deportivo-de-la-coruna/3699996/
+|team2=[[Deportivo de La Coruña|Deportivo La Coruña]] (3)
+|goals1=
+*[[Johan Terranova|Terranova]] {{goal|41}}
+*[[José Manuel Raigal|Raigal]] {{goal|66}}
+*[[Manu Garrido|Garrido]] {{goal|116}}
+|goals2=
+*[[William de Camargo|William]] {{goal|40}}
+*[[Alberto Quiles|Quiles]] {{goal|72||109}}
+*[[Yeremay Hernández Cubas|Peke]] {{goal|105+2}}
+|stadium=[[Estadio de La Condomina|La Condomina]]
+|location=[[Murcia]]
+|attendance=
+|referee=Lluís Bestard Servera
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:00 [[Western European Time|WET]]
+|team1='''[[CF Panadería Pulido|Panadería Pulido]] (4)'''
+|score= 0–4
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/panaderia-pulido/real-sociedad-de-futbol/3699961/
+|team2=[[Real Sociedad]] (1)
+|goals1=
+|goals2=
+*[[Portu]] {{goal|6}}
+*[[Aihen Muñoz|Muñoz]] {{goal|7}}
+*[[Alexander Sørloth|Sørloth]] {{goal|60}}
+*[[Naïs Djouahra|Djouahra]] {{goal|71}}
+|stadium=[[Estadio Gran Canaria|Gran Canaria]]
+|location=[[Las Palmas de Gran Canaria]]{{efn|Panadería Pulido played its game at Gran Canaria, in [[Las Palmas de Gran Canaria]] instead of their regular stadium San Mateo in [[Vega de San Mateo]] as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=Jorge Figueroa Vázquez
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:15
+|team1=[[CF Talavera de la Reina|Talavera]] (3)
+|score= 2–0
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/talavera-cf/ue-cornella/3700001/
+|team2='''[[UE Cornellà|Cornellà]] (3)'''
+|goals1=
+*[[Rodrigo Antonio Rodrigues|Rodrigo]] {{goal|15}}
+*[[Christian Perales|Perales]] {{goal|20}}
+|goals2=
+|stadium=[[Estadio El Prado|El Prado]]
+|location=[[Talavera de la Reina]]
+|attendance=
+|referee=Armando Ramo Andrés
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:30
+|team1='''[[CP Cacereño|Cacereño]] (4)'''
+|score= 1–2
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/club-polideportivo-cacereno/sociedad-deportiva-ponferradina/3699979/
+|team2=[[SD Ponferradina|Ponferradina]] (2)
+|goals1=
+*[[Jorge Barba González|Barba]] {{goal|75}}
+|goals2=
+*[[Kuki Zalazar|Zalazar]] {{goal|67}}
+*[[Agus Medina|Medina]] {{goal|87}}
+|stadium=[[Estadio Príncipe Felipe|Príncipe Felipe]]
+|location=[[Cáceres, Spain|Cáceres]]
+|attendance=
+|referee=Alejandro Quintero González
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:30
+|team1=[[CD Arenteiro|Arenteiro]] (4)
+|score= 2–1
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/arenteiro/sd-logrones/3699992/
+|team2='''[[SD Logroñés]] (3)'''
+|goals1=
+*[[Renan Zanelli|Zanelli]] {{goal|36}}
+*[[Alassane Sylla|Sylla]] {{goal|39}}
+|goals2=
+*[[Daniel Portela Iglesias|Portela]] {{goal|51|o.g.}}
+|stadium=[[Estadio Espiñedo|Espiñedo]]
+|location=[[O Carballiño]]
+|attendance=
+|referee=Jaime Ruiz Álvarez
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:30
+|team1='''[[CE Europa|Europa]] (4)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/ce-europa/sd-amorebieta/3699968/
+|team2=[[SD Amorebieta|Amorebieta]] (2)
+|goals1=
+|goals2=
+*[[Iker Amorrortu|Amorrortu]] {{goal|35}}
+|stadium=[[Nou Sardenya]]
+|location=[[Barcelona]]
+|attendance=
+|referee=Raúl Martín González Francés
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:30
+|team1='''[[Extremadura UD|Extremadura]] (3)'''
+|score= 1–4
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/extremadura-ud/zamora-cf/3699994/
+|team2=[[Zamora CF|Zamora]] (3)
+|goals1=
+*[[Musa Drammeh|Drammeh]] {{goal|80}}
+|goals2=
+*[[Carlos Cordero Pérez|Cordero]] {{goal|2}}
+*[[Mario Losada (footballer)|Losada]] {{goal|11||65}}
+*[[Carlos Parra (footballer, born 1996)|Parra]] {{goal|48}}
+|stadium=[[Estadio Francisco de la Hera|Francisco de la Hera]]
+|location=[[Almendralejo]]
+|attendance=
+|referee=Daniel Palencia Caballero
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:30
+|team1='''[[San Fernando CD|San Fernando]] (3)'''
+|score= 2–3
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/club-deportivo-san-fernando/cultural-y-deportiva-leonesa/3700000/
+|team2=[[Cultural y Deportiva Leonesa|Cultural Leonesa]] (3)
+|goals1=
+*[[Jon Ander González Dopico|Dopi]] {{goal|42}}
+*[[Francis Ferrón|Francis]] {{goal|85}}
+|goals2=
+*[[Jonan Amelibia|Amelibia]] {{goal|6}}
+*[[Alberto Solís|Solís]] {{goal|24}}
+*[[Kalvin Ketu Jih|Ketu]] {{goal|56}}
+|stadium=[[Estadio Bahía Sur|Bahía Sur]]
+|location=[[San Fernando, Cádiz|San Fernando]]
+|attendance=
+|referee=Alexandre Alemán Pérez
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:30
+|team1='''[[CD Calahorra|Calahorra]] (3)'''
+|score= 1–1
+|aet=yes
+|penaltyscore= 4–5
+|report=
+|team2=[[CD Atlético Baleares|Atlético Baleares]] (3)
+|goals1=
+*[[Lander Yurrebaso|Yurrebaso]] {{goal|25}}
+|goals2=
+*[[Xavi Ginard|Ginard]] {{goal|90+4}}
+|penalties1=
+*[[Manu Ramirez|Ramirez]] {{pengoal}}
+*[[Jesús Álvarez Aguado|Jesús Álvarez]] {{pengoal}}
+*[[Imanol Sarriegi|Sarriegi]] {{pengoal}}
+*[[David Grande]] {{penmiss}}
+*[[David Soto]] {{pengoal}}
+*[[Eneko Zabaleta|Zabaleta]] {{penmiss}}
+|penalties2=
+*[[Alberto Castaño|Castaño]]  {{pengoal}} 
+*[[Vinicius Tanque]] {{pengoal}} 
+*[[Manel Martínez|Martínez]] {{pengoal}} 
+*[[Armando Shashoua|Shashoua]] {{penmiss}} 
+*[[Ignasi Vilarrasa|Vilarrasa]] {{pengoal}} 
+*[[Luca Ferrone|Ferrone]] {{pengoal}} 
+|stadium=[[Estadio La Planilla|La Planilla]]
+|location=[[Calahorra]]
+|attendance=
+|referee=Albert Catalá Ferrán
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=20:30
+|team1=[[Linares Deportivo|Linares]] (3)
+|score= 0–0
+|aet=yes
+|penaltyscore= 6–5
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/linares-deportivo/club-gimnastic-de-tarragona/3699999/
+|team2='''[[Gimnàstic de Tarragona|Gimnàstic]] (3)'''
+|goals1=
+|goals2=
+|penalties1=
+*[[Alejandro Meléndez Ruiz|Meléndez]] {{pengoal}}
+*[[Fran Lara]] {{pengoal}}
+*[[Nando Copete|Copete]] {{penmiss}}
+*[[Álvaro Barbosa|Barbosa]] {{pengoal}}
+*[[Hugo Díaz (footballer, born 1988)|Díaz]] {{pengoal}}
+*[[José Manuel Gomes Meneses|Josema]] {{pengoal}}
+*[[Rubén Sanchidrián|Sanchidrián]] {{pengoal}}
+|penalties2=
+*[[Carlos Albarrán|Albarrán]] {{pengoal}}
+*[[Aythami Artiles|Aythami]] {{penmiss}}
+*[[Pol Ballesteros|Ballesteros]] {{pengoal}}
+*[[Joan Oriol|Oriol]] {{pengoal}}
+*[[Édgar Hernández (footballer, born 1987)|Edgar]] {{pengoal}}
+*[[Jannick Buyla|Buyla]] {{pengoal}}
+*[[Javier Ribelles|Ribelles]] {{penmiss}}
+|stadium=[[Estadio Municipal de Linarejos|Linarejos]]
+|location=[[Linares, Jaén|Linares]]
+|attendance=
+|referee=José David Martínez Montalbán
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=21:00
+|team1='''[[CFI Alicante|Alicante]] (6)'''
+|score= 0–4
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/cfi-alicante/real-betis/3699949/
+|team2=[[Real Betis]] (1)
+|goals1=
+|goals2=
+*[[Cristian Tello|Tello]] {{goal|7}}
+*[[Diego Lainez|Lainez]] {{goal|28}}
+*[[Joaquín (footballer, born 1981)|Joaquín]] {{goal|47}}
+*[[Marc Bartra|Bartra]] {{goal|52}}
+|stadium=[[Estadio El Collao|El Collao]]
+|location=[[Alcoy]]{{efn|Alicante played its game at El Collao, in [[Alcoy]] instead of their regular stadium Antonio Solana in [[Alicante]] as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=[[Carlos del Cerro Grande]]
+}}
+{{football box collapsible
+|date=1 December 2021
+|time=21:00
+|team1='''[[CD San Roque de Lepe|San Roque de Lepe]] (4)'''
+|score= 0–3
+|report=https://int.soccerway.com/matches/2021/12/01/spain/copa-del-rey/cd-san-roque/cd-mirandes/3699967/
+|team2=[[CD Mirandés|Mirandés]] (2)
+|goals1=
+|goals2=
+*[[Marcos Olguín|Olguín]] {{goal|13}}
+*[[Alejandro Marqués|Marqués]] {{goal|59||75}}
+|stadium=[[Estadio Ciudad de Lepe|Ciudad de Lepe]]
+|location=[[Lepe]]
+|attendance=
+|referee=Francisco Hernández Maeso
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=16:00
+|team1='''[[Vélez CF|Vélez]] (4)'''
+|score= 2–3
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/velez-club-de-futbol/union-deportiva-las-palmas/3699982/
+|team2=[[UD Las Palmas|Las Palmas]] (2)
+|goals1=
+*[[José Miguel González Barranco|Joselinho]] {{goal|10}}
+*[[Unai Veiga|Veiga]] {{goal|33|o.g.}}
+|goals2=
+*[[Benito Ramírez|Benito]] {{goal|27}}
+*[[Armando Sadiku|Sadiku]] {{goal|43}}
+*[[Ale García (footballer)|Ale García]] {{goal|83}}
+|stadium=[[Estadio Vivar Téllez|Vivar Téllez]]
+|location=[[Vélez-Málaga]]
+|attendance=
+|referee=Rafael Sánchez López
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=19:00
+|team1='''[[CF San Agustín del Guadalix|San Agustín del Guadalix]] (6)'''
+|score= 0–4
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/san-agustin-del-guadalix/club-atletico-osasuna/3699950/
+|team2=[[CA Osasuna|Osasuna]] (1)
+|goals1=
+|goals2=
+*[[Iván Barbero|Barbero]] {{goal|50}}
+*[[Roberto Torres (footballer, born 1989)|Torres]] {{goal|61}}
+*[[Javier Ontiveros|Ontiveros]] {{goal|72}}
+*[[Ezequiel Ávila|Ávila]] {{goal|90+1}}
+|stadium=[[Campo de Fútbol San Agustín del Guadalix]]
+|location=[[San Agustín del Guadalix]]
+|attendance=
+|referee=Santiago Jaime Latre
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=19:00
+|team1='''[[CD Huracán Melilla|Huracán Melilla]] (6)'''
+|score= 0–8
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/huracan-melilla/levante-union-deportiva/3699947/
+|team2=[[Levante UD|Levante]] (1)
+|goals1=
+|goals2=
+*[[Roberto Soldado|Soldado]] {{goal|2||22}}
+*[[Álex Blesa|Blesa]] {{goal|29||30||63}}
+*[[Mickaël Malsa|Malsa]] {{goal|51}}
+*[[Dani Gómez (footballer, born 1998)|Gómez]] {{goal|52||58}}
+|stadium=[[Estadio Álvarez Claro|Álvarez Claro]]
+|location=[[Melilla]]{{efn|Huracán Melilla played its game at Álvarez Claro, in [[Melilla]] instead of their regular stadium La Espiguera as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=Mario Melero López
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=19:00
+|team1='''[[CD Guijuelo|Guijuelo]] (5)'''
+|score= 1–1
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/cd-guijuelo/rayo-vallecano/3699958/
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+*[[Toti (footballer, born 1987)|Toti]] {{goal|19}}
+|goals2=
+*[[José Ángel Pozo|Pozo]] {{goal|5}}
+|penalties1=
+*[[Alberto Rodríguez Ramos|Rodríguez]] {{penmiss}}
+*[[Alex Caramelo Carrasco|Caramelo]] {{pengoal}}
+*[[Carlos Rubén|Rubén]] {{pengoal}}
+*[[Toti (footballer, born 1987)|Toti]] {{pengoal}}
+*[[Cristóbal Gil|Cristóbal]] {{penmiss}}
+|penaltyscore= 3–4
+|penalties2=
+*[[Mario Suárez (footballer)|Suárez]] {{penmiss}} 
+*[[Isi Palazón|Palazón]] {{pengoal}}
+*[[Óscar Trejo|Trejo]] {{pengoal}}
+*[[Santi Comesaña|Comesaña]] {{pengoal}}
+*[[Sergi Guardiola|Guardiola]] {{pengoal}}
+|stadium=[[Estadio Municipal de Guijuelo|Municipal]]
+|location=[[Guijuelo]]
+|attendance=
+|referee=Alejandro Muñiz Ruiz
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=19:00
+|team1='''[[Gernika Club|Gernika]] (4)'''
+|score= 1–2
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/sd-gernika-club/sociedad-deportiva-eibar/3699963/
+|team2=[[SD Eibar|Eibar]] (2)
+|goals1=
+*[[Asier Arana|Arana]] {{goal|71}}
+|goals2=
+*[[Quique González (footballer)|Quique]] {{goal|36}}
+*[[Gustavo Blanco Leschuk|Blanco]] {{goal|62}}
+|stadium=[[Estadio Urbieta|Urbieta]]
+|location=[[Gernika]]
+|attendance=
+|referee=Eduardo Prieto Iglesias
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=19:30
+|team1='''[[CD Utrillas|Utrillas]] (6)'''
+|score= 0–3
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/utrillas/valencia-club-de-futbol/3699948/
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+|goals2=
+*[[Marcos André]] {{goal|27}}
+*[[Yunus Musah|Musah]] {{goal|52}}
+*[[Koba Koindredi|Koindredi]] {{goal|70}}
+|stadium=[[Estadio La Vega|La Vega]]
+|location=[[Utrillas]]
+|attendance=
+|referee=César Soto Grado
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=19:30
+|team1='''[[Peña Sport FC|Peña Sport]] (4)'''
+|score= 0–3
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/cd-pena-sport/malaga-club-de-futbol/3699973/
+|team2=[[Málaga CF|Málaga]] (2)
+|goals1=
+|goals2=
+*[[Paulino de la Fuente|Paulino]] {{goal|32}}
+*[[David Lombán|Lombán]] {{goal|45+2|pen.}}
+*[[Roberto Fernández (footballer, born 2002)|Roberto]] {{goal|74}}
+|stadium=[[Campo de San Francisco|San Francisco]]
+|location=[[Tafalla]]
+|attendance=
+|referee=Aitor Gorostegui Fernández 
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=20:00
+|team1=[[UD Llanera|Llanera]] (4)
+|score= 2–1
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/llanera/ud-logrones/3699990/
+|team2='''[[UD Logroñés]] (3)'''
+|goals1=
+*[[Martín Pérez López|Martín Pérez]] {{goal|41}}
+*[[Francisco Javier Sánchez González|Javi Sánchez]] {{goal|87}}
+|goals2=
+*[[Jonathan Dubasin|Dubasin]] {{goal|62}}
+|stadium=[[Estadio Ganzábal|Ganzábal]]
+|location=[[Langreo]]{{efn|Llanera played its game at Ganzábal, in [[Langreo]] instead of their regular stadium Pepe Quimarán in [[Llanera, Asturias|Posada de Llanera]] as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=José Pardeiro Puente
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=20:00
+|team1=[[CD Palencia Cristo Atlético|Cristo Atlético]] (4)
+|score= 2–0
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/cf-cristo-atletico/real-union-club-de-irun/3699984/
+|team2='''[[Real Unión Club|Real Unión]] (3)'''
+|goals1=
+*[[Álvaro Gómez Martín|Álvaro Gómez]] {{goal|2|pen.}}
+*[[Abel Pascual|Pascual]] {{goal|45+1}}
+|goals2=
+|stadium=[[Estadio Nueva Balastera|Nueva Balastera]]
+|location=[[Palencia]]
+|attendance=
+|referee=Miguel González Díaz
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=20:00
+|team1='''[[Calvo Sotelo de Puertollano CF|Calvo Sotelo]] (4)'''
+|score= 1–5
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/calvo-sotelo/girona-fc/3699971/
+|team2=[[Girona FC|Girona]] (2)
+|goals1=
+*[[Abraham Arcos|Arcos]] {{goal|24}}
+|goals2=
+*[[Samuel Sáiz|Sáiz]] {{goal|19|pen.}}
+*[[Eric Monjonell|Monjonell]] {{goal|34}}
+*[[Ricard Artero|Artero]] {{goal|50}}
+*[[Dawda Camara|Camara]] {{goal|61}}
+*[[Aleix García|García]] {{goal|67}}
+|stadium=[[Estadio Ciudad de Puertollano|Ciudad de Puertollano]]
+|location=[[Puertollano]]
+|attendance=
+|referee=Luis Milla Alvéndiz
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=20:00
+|team1='''[[CA Pulpileño|Atlético Pulpileño]] (4)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/ca-pulpileno/club-deportivo-castellon/3699985/
+|team2=[[CD Castellón|Castellón]] (3)
+|goals1=
+|goals2=
+*[[Vicente Esquerdo|Esquerdo]] {{goal|27}}
+|stadium=[[Estadio San Miguel|San Miguel]]
+|location=[[Pulpí]]
+|attendance=
+|referee=David Cambronero González
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=20:00
+|team1='''[[SD Leioa|Leioa]] (5)'''
+|score= 0–2
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/sd-leioa/elche-club-de-futbol/3699960/
+|team2=[[Elche CF|Elche]] (1)
+|goals1=
+|goals2=[[Guido Carrillo|Carrillo]] {{goal|43||56}}
+|stadium=[[Estadio Sarriena|Sarriena]]
+|location=[[Leioa]]
+|attendance=
+|referee=Adrián Cordero Vega
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=20:15
+|team1='''[[AD Unión Adarve|Unión Adarve]] (4)'''
+|score= 2–2
+|aet=yes
+|penaltyscore= 3–4
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/ad-union-adarve/club-deportivo-lugo/3699977/
+|team2=[[CD Lugo|Lugo]] (2)
+|goals1=[[Álvaro Portero|Portero]] {{goal|29||49}}
+|goals2=
+*[[Joselu (footballer, born 1991)|Joselu]] {{goal|34}}
+*[[Manu Barreiro|Barreiro]] {{goal|40|pen.}}
+|penalties1=
+*[[Julio Cidoncha|Cidoncha]] {{penmiss}}
+*[[Daniel Ramos Cruz|Dani Ramos]] {{penmiss}}
+*[[Álvaro Mayorga|Mayorga]] {{pengoal}}
+*[[Alberto Albuquerque Reus|Albur]] {{pengoal}}
+*[[Fernando Calleja Revilla|Calleja]] {{pengoal}}
+|penalties2=
+*[[Manu Barreiro|Barreiro]] {{pengoal}}
+*[[Carlos Pita (footballer)|Pita]] {{penmiss}}
+*[[Joselu (footballer, born 1991)|Joselu]] {{pengoal}}
+*[[Hugo Rama|Rama]] {{pengoal}}
+*[[Eduard Campabadal|Campabadal]] {{pengoal}}
+|stadium=[[Centro Deportivo Municipal Vicente del Bosque|Vicente del Bosque]]
+|location=[[Madrid]]
+|attendance=
+|referee=Daniel Trujillo Suárez
+}} 
+{{football box collapsible
+|date=2 December 2021
+|time=20:30
+|team1='''[[CD Eldense|Eldense]] (4)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/club-deportivo-eldense/rayo-majadahonda/3699987/
+|team2=[[CF Rayo Majadahonda|Rayo Majadahonda]] (3)
+|goals1=
+|goals2=
+*[[Javier Gómez López|Javi Gómez]] {{goal|10}}
+|stadium=[[Estadio Municipal Nuevo Pepico Amat|Nuevo Pepico Amat]]
+|location=[[Elda]]
+|attendance=
+|referee=Juan Antonio Campos Salinas
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=20:45
+|team1='''[[Xerez Deportivo FC|Xerez Deportivo]] (4)'''
+|score= 1–2
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/xerez-deportivo/club-deportivo-leganes-sad/3699980/
+|team2=[[CD Leganés|Leganés]] (2)
+|goals1=
+*[[Antonio Bello Moscoso|Bello]] {{goal|53|pen.}}
+|goals2=
+*[[Naim García|Naim]] {{goal|45+1}}
+*[[Cheick Doukouré|Doukouré]] {{goal|87}}
+|stadium=[[Estadio Municipal de Chapín|Chapín]]
+|location=[[Jerez de la Frontera]]
+|attendance=
+|referee=Juan Pulido Santana
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=21:00
+|team1='''[[CD Ibiza Islas Pitiusas|Ibiza Islas Pitiusas]] (4)'''
+|score= 1–2
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/ibiza-islas-pitiusas/club-deportivo-tenerife/3699974/
+|team2=[[CD Tenerife|Tenerife]] (2)
+|goals1=
+*[[Samuel Álex Pinto|Samu Pinto]] {{goal|57}}
+|goals2=
+*[[Míchel (footballer, born 1988)|Míchel]] {{goal|65|pen.}}
+*[[Víctor Mollejo|Mollejo]] {{goal|103}}
+|stadium=[[Can Misses III]]
+|location=[[Ibiza (town)|Ibiza]]
+|attendance=
+|referee=Víctor García Verdura
+}}
+{{football box collapsible
+|date=2 December 2021
+|time=21:00
+|team1='''[[CD Villa de Fortuna|Villa de Fortuna]] (6)'''
+|score= 0–7
+|report=https://int.soccerway.com/matches/2021/12/02/spain/copa-del-rey/villa-de-fortuna/cadiz-club-de-futbol/3699951/
+|team2=[[Cádiz CF|Cádiz]] (1) 
+|goals1=
+|goals2=
+*[[Álvaro Negredo|Negredo]] {{goal|3||52||90}}
+*[[Álvaro Jiménez (Spanish footballer)|Álvaro Jiménez]] {{goal|13}}
+*[[Marcos Mauro]] {{goal|79}}
+*[[Martín Calderón (footballer, born 1999)|Calderón]] {{goal|81}}
+*[[Milutin Osmajić|Osmajić]] {{goal|86}}
+|stadium=[[Estadio Nueva Condomina|Nueva Condomina]]
+|location=[[Murcia]]{{efn|Villa de Fortuna played its game at Nueva Condomina, in [[Murcia]] instead of their regular stadium José Luis Belda in [[Fortuna, Murcia|Fortuna]] as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=Juan Martínez Munuera
+}}
+;Notes
+{{notelist}}
+
+==Second round==
+===Draw===
+The draw was held on 3 December 2021 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]]. Teams were divided into 4 pots according to their division in the 2021–22 season. Matches were played at the stadiums of lower-ranked teams. A total of 28 games were played from 14 to 16 December 2021.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|16 teams of [[2021–22 La Liga|La Liga]]}} || width=15%|'''Pot 2'''<br/>{{small|20 teams of [[2021–22 Segunda División|Segunda División]]}} || width=15%|'''Pot 3'''<br/>{{small|14 teams of [[2021–22 Primera División RFEF|Primera RFEF]]}} || width=15%|'''Pot 4'''<br/>{{small|6 teams of [[2021-22 Segunda División RFEF|Segunda RFEF]]}}
+|- valign=top
+|
+[[Deportivo Alavés|Alavés]]<br>
+[[Cádiz CF|Cádiz]]<br>
+[[RC Celta de Vigo|Celta Vigo]]<br>
+[[Elche CF|Elche]]<br>
+[[RCD Espanyol|Espanyol]]<br>
+[[Getafe CF|Getafe]]<br>
+[[Granada CF|Granada]]<br>
+[[Levante UD|Levante]]<br>
+[[RCD Mallorca|Mallorca]]<br>
+[[CA Osasuna|Osasuna]]<br>
+[[Rayo Vallecano]]<br>
+[[Real Betis]]<br>
+[[Real Sociedad]]<br>
+[[Sevilla FC|Sevilla]]<br>
+[[Valencia CF|Valencia]]<br>
+[[Villarreal CF|Villarreal]]
+|
+[[AD Alcorcón|Alcorcón]]<br>
+[[UD Almería|Almería]]<br>
+[[SD Amorebieta|Amorebieta]]<br>
+[[Burgos CF|Burgos]]<br>
+[[FC Cartagena|Cartagena]]<br>
+[[SD Eibar|Eibar]]<br>
+[[CF Fuenlabrada|Fuenlabrada]]<br>
+[[Girona FC|Girona]]<br>
+[[SD Huesca|Huesca]]<br>
+[[UD Ibiza|Ibiza]]<br>
+[[UD Las Palmas|Las Palmas]]<br>
+[[CD Leganés|Leganés]]<br>
+[[CD Lugo|Lugo]]<br>
+[[Málaga CF|Málaga]]<br>
+[[CD Mirandés|Mirandés]]<br>
+[[SD Ponferradina|Ponferradina]]<br>
+[[Sporting de Gijón|Sporting Gijón]]<br>
+[[CD Tenerife|Tenerife]]<br>
+[[Real Valladolid|Valladolid]]<br>
+[[Real Zaragoza|Zaragoza]]
+|
+[[Albacete Balompié|Albacete]]<br>
+[[CD Alcoyano|Alcoyano]]<br>
+[[FC Andorra|Andorra]]<br>
+[[CD Atlético Baleares|Atlético Baleares]]<br>
+[[Atlético Sanluqueño CF|Atlético Sanluqueño]]<br>
+[[CD Castellón|Castellón]]<br>
+[[Cultural y Deportiva Leonesa|Cultural Leonesa]]<br>
+[[Deportivo de La Coruña|Deportivo La Coruña]]<br>
+[[Linares Deportivo|Linares]]<br>
+[[CF Rayo Majadahonda|Rayo Majadahonda]]<br>
+[[UD San Sebastián de los Reyes|San Sebastián de los Reyes]]<br>
+[[CF Talavera de la Reina|Talavera]]<br>
+[[Unionistas de Salamanca|Unionistas]]<br>
+[[Zamora CF|Zamora]]
+|
+[[CE Andratx|Andratx]]<br>
+[[CD Arenteiro|Arenteiro]]<br>
+[[Atlético Mancha Real]]<br>
+[[Bergantiños FC|Bergantiños]]<br>
+[[CD Palencia Cristo Atlético|Cristo Atlético]]<br>
+[[UD Llanera|Llanera]]
+|}
+
+===Matches===
+{{football box collapsible
+|date=14 December 2021
+|time=19:00
+|team1='''[[FC Andorra|Andorra]] (3)'''
+|score= 1–2
+|aet=yes
+|report=[https://int.soccerway.com/matches/2021/12/14/spain/copa-del-rey/fc-andorra/real-club-celta-de-vigo/3705467/ Report]
+|team2=[[RC Celta de Vigo|Celta Vigo]] (1)
+|goals1=
+*[[Adrià Vilanova|Vilanova]] {{goal|39}}
+|goals2=
+*[[José Fontán|Fontán]] {{goal|14}}
+*[[Santi Mina|Mina]] {{goal|118}}
+|stadium=[[Estadi Nacional]]
+|location=[[Andorra la Vella]]
+|attendance=
+|referee=Santiago Jaime Latre
+}}
+{{football box collapsible
+|date=14 December 2021
+|time=19:00
+|team1='''[[UD San Sebastián de los Reyes|San Sebastián de los Reyes]] (3)'''
+|score= 0–0
+|aet=yes
+|penaltyscore= 4–5
+|report=[https://int.soccerway.com/matches/2021/12/14/spain/copa-del-rey/ud-san-sebastian-de-los-reyes/cd-fuenlabrada/3705469/ Report]
+|team2=[[CF Fuenlabrada|Fuenlabrada]] (2)
+|goals1=
+|goals2=
+|penalties1=
+*[[Arturo Rodríguez (footballer, born 1989)|Arturo]] {{pengoal}}
+*[[Dani Molina|Molina]] {{penmiss}}
+*[[Jorge Jiménez (Spanish footballer)|Jimé]] {{pengoal}}
+*[[Mario González Casado|González]] {{pengoal}}
+*[[Borja Martínez (footballer, born 1994)|Martínez]] {{penmiss}}
+*[[Fer Ruiz|Ruiz]] {{pengoal}}
+*[[Álvaro Moreno|Moreno]] {{penmiss}}
+|penalties2=
+*{{pengoal}} [[Mikel Iribas|Iribas]]
+*{{penmiss}} [[Franco Soldano|Soldano]]
+*{{penmiss}} [[Iban Salvador|Salvador]]
+*{{pengoal}} [[Anderson Cordeiro Costa|Anderson]]
+*{{pengoal}} [[Adrián Diéguez|Diéguez]]
+*{{pengoal}} [[Rubén Pulido (footballer, born 2000)|Pulido]]
+*{{pengoal}} [[Cheick Timité|Timité]]
+|stadium=[[Municipal Nuevo Matapiñonera|Nuevo Matapiñonera]]
+|location=[[San Sebastián de los Reyes]]
+|attendance=
+|referee=Óliver de la Fuente Ramos
+}}
+{{football box collapsible
+|date=14 December 2021
+|time=20:00
+|team1='''[[SD Huesca|Huesca]] (2)'''
+|score=0–1
+|report=[https://int.soccerway.com/matches/2021/12/14/spain/copa-del-rey/sd-huesca/girona-fc/3705472/ Report]
+|team2=[[Girona FC|Girona]] (2)
+|goals1=
+|goals2=
+*[[Jordi Calavera|Calavera]] {{goal|22}}
+|stadium=[[Estadio El Alcoraz|El Alcoraz]]
+|location=[[Huesca]]
+|attendance=
+|referee=Iosu Galech Apezteguía
+}}
+{{football box collapsible
+|date=14 December 2021
+|time=20:00
+|team1=[[Real Zaragoza|Zaragoza]] (2)
+|score=2–0
+|report=[https://int.soccerway.com/matches/2021/12/14/spain/copa-del-rey/real-zaragoza/burgos-club-de-futbol/3705476/ Report]
+|team2='''[[Burgos CF|Burgos]] (2)'''
+|goals1=
+*[[Íñigo Eguaras|Eguaras]] {{goal|34}}
+*[[Adrián González (footballer, born 1988)|González]] {{goal|51}}
+|goals2=
+|stadium=[[Estadio La Romareda|La Romareda]]
+|location=[[Zaragoza]]
+|attendance=
+|referee=Aitor Gorostegui Fernández
+}}
+{{football box collapsible
+|date=14 December 2021
+|time=20:00
+|team1=[[CF Rayo Majadahonda|Rayo Majadahonda]] (3)
+|score=1–0
+|report=[https://int.soccerway.com/matches/2021/12/14/spain/copa-del-rey/rayo-majadahonda/malaga-club-de-futbol/3705468/ Report]
+|team2='''[[Málaga CF|Málaga]] (2)'''
+|goals1=
+*[[Rubén Sánchez (footballer, born 1994)|Sánchez]] {{goal|60}}
+|goals2=
+|stadium=[[Estadio Cerro del Espino|Cerro del Espino]]
+|location=[[Majadahonda]]
+|attendance=
+|referee=Dámaso Arcediano Monescillo
+}}
+{{football box collapsible
+|date=14 December 2021
+|time=21:00
+|team1='''[[CD Palencia Cristo Atlético|Cristo Atlético]] (4)'''
+|score= 1–2
+|report=[https://int.soccerway.com/matches/2021/12/14/spain/copa-del-rey/cf-cristo-atletico/reial-club-deportiu-espanyol/3705454/ Report]
+|team2=[[RCD Espanyol|Espanyol]] (1)
+|goals1=
+*[[Fredi Sualdea|Sualdea]] {{goal|6}}
+|goals2=
+*[[Wu Lei]] {{goal|46}}
+*[[Sergi Gómez|Gómez]] {{goal|88}}
+|stadium=[[Estadio Nueva Balastera|Nueva Balastera]]
+|location=[[Palencia]]
+|attendance=
+|referee=Alejandro Muñiz Ruiz
+}}
+{{football box collapsible
+|date=14 December 2021
+|time=21:00
+|team1=[[CD Alcoyano|Alcoyano]] (3)
+|score= 3–3
+|aet=yes
+|penaltyscore= 3–1
+|report=[https://int.soccerway.com/matches/2021/12/14/spain/copa-del-rey/club-deportivo-alcoyano/levante-union-deportiva/3705463/ Report]
+|team2='''[[Levante UD|Levante]] (1)'''
+|goals1=
+*[[Mourad Daoudi El Ghezouani|Mourad]] {{goal|5||44}}
+*[[Carlos Blanco (footballer, born 1996)|Blanco]] {{goal|55}}
+|goals2=
+*[[Dani Gómez (footballer, born 1998)|Gómez]] {{goal|23||68}}
+*[[Roberto Soldado|Soldado]] {{goal|61}}
+|penalties1=
+*[[Lillo (footballer)|Lillo]] {{penmiss}}
+*[[Andy Escudero|Andy]] {{pengoal}}
+*[[Imanol García|García]] {{pengoal}}
+*[[Carlos Blanco (footballer, born 1996)|Blanco]] {{pengoal}}
+|penalties2=
+*{{penmiss}} [[Pepelu]]
+*{{pengoal}} [[José Luis Morales (footballer, born 1987)|Morales]]
+*{{penmiss}} [[Roger Martí|Roger]]
+*{{penmiss}} [[Enis Bardhi|Bardhi]]
+|stadium=[[Estadio El Collao|El Collao]]
+|location=[[Alcoy]]
+|attendance=
+|referee=Jorge Figueroa Vázquez
+}}
+{{football box collapsible
+|date=14 December 2021
+|time=21:00
+|team1=[[Linares Deportivo|Linares]] (3)
+|score= 2–1
+|report=https://int.soccerway.com/matches/2021/12/14/spain/copa-del-rey/linares-deportivo/deportivo-alaves/3705466/
+|team2='''[[Deportivo Alavés|Alavés]] (1)'''
+|goals1=
+*[[Jon Etxaniz|Etxaniz]] {{goal|19}}
+*[[Nando Copete|Copete]] {{goal|73}}
+|goals2=
+*[[Mamadou Sylla (footballer, born 1994)|Sylla]] {{goal|67}}
+|stadium=[[Estadio Municipal de Linarejos|Linarejos]]
+|location=[[Linares, Jaén|Linares]]
+|attendance=
+|referee=Isidro Díaz de Mera Escuderos
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=19:00
+|team1='''[[Bergantiños FC|Bergantiños]] (4)'''
+|score= 1–3
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/bergantinos-cf/rayo-vallecano/3705453/
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+*[[Jorge Cano|Cano]] {{goal|77}}
+|goals2=
+*[[Mario Suárez (footballer)|Suárez]] {{goal|37}}
+*[[Pathé Ciss|Ciss]] {{goal|67}}
+*[[Sergio Moreno (footballer, born 1999)|Moreno]] {{goal|90+1}}
+|stadium=[[Estadio As Eiroas|As Eiroas]]
+|location=[[Carballo]]
+|attendance=
+|referee=Pablo González Fuertes
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=19:00
+|team1='''[[CE Andratx|Andratx]] (4)'''
+|score= 1–1
+|aet=yes
+|penaltyscore= 5–6
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/ce-andratx/sevilla-futbol-club/3705456/
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+*[[Miquel Llabrés|Llabrés]] {{goal|65}}
+|goals2=
+*[[Rafa Mir|Mir]] {{goal|57}}
+|penalties1 =
+*[[Carlos Lorente Álvarez|Lorente]] {{penmiss}}
+*[[Gerardo Bonet|Bonet]] {{pengoal}}
+*[[Pau Pomar|Pomar]] {{pengoal}}
+*[[Pepelu Vidal|Vidal]] {{pengoal}}
+*[[Fernando Carrasco Vargas|Carrasco]] {{pengoal}}
+*[[Damià Ramos Buades|Buades]] {{pengoal}}
+*[[Gaspar Alemany Alorda|Alorda]] {{penmiss}}
+|penalties2 =
+*{{pengoal}} [[Rafa Mir|Mir]]
+*{{pengoal}} [[Nemanja Gudelj|Gudelj]]
+*{{penmiss}} [[Óscar Rodríguez (footballer, born 1998)|Óscar]]
+*{{pengoal}} [[Iván Romero (footballer, born 2001)|Romero]]
+*{{pengoal}} [[Luismi Cruz|Luismi]]
+*{{pengoal}} [[Papu Gómez|Gómez]]
+*{{pengoal}} [[Thomas Delaney|Delaney]]
+|stadium=[[Estadi de Sa Plana|Sa Plana]]
+|location=[[Andratx]]
+|attendance=
+|referee=[[Juan Martínez Munuera]]
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=19:00
+|team1='''[[Zamora CF|Zamora]] (3)'''
+|score= 0–3
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/zamora-cf/real-sociedad-de-futbol/3705460/
+|team2=[[Real Sociedad]] (1)
+|goals1=
+|goals2=
+*[[Jon Guridi|Guridi]] {{goal|47}}
+*[[Beñat Turrientes|Turrientes]] {{goal|70}}
+*[[Mikel Oyarzabal|Oyarzabal]] {{goal|90+2}}
+|stadium=[[Estadio Ruta de la Plata|Ruta de la Plata]]
+|location=[[Zamora, Spain|Zamora]]
+|attendance=
+|referee=Valentín Pizarro Gómez
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=19:30
+|team1='''[[Cultural y Deportiva Leonesa|Cultural Leonesa]] (3)'''
+|score= 2–3
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/cultural-y-deportiva-leonesa/club-deportivo-leganes-sad/3705470/
+|team2=[[CD Leganés|Leganés]] (2)
+|goals1=
+*[[Sergio Buenacasa|Buenacasa]] {{goal|37|pen.}}
+*[[Jon Gaztañaga|Gaztañaga]] {{goal|105+1}}
+|goals2=
+*[[Javier Eraso|Eraso]] {{goal|62}}
+*[[Jon Bautista|Bautista]] {{goal|98||112}}
+|stadium=[[Estadio Reino de León|Reino de León]]
+|location=[[León, Spain|León]]
+|attendance=
+|referee=José Antonio López Toca
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=20:00
+|team1=[[Sporting de Gijón|Sporting Gijón]] (2)
+|score= 2–1
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/real-sporting-de-gijon/agrupacion-deportiva-alcorcon/3705474/
+|team2='''[[AD Alcorcón|Alcorcón]] (2)'''
+|goals1=
+*[[Nacho Méndez|Méndez]] {{goal|42}}
+*[[Uroš Đurđević|Đurđević]] {{goal|99}}
+|goals2=
+*[[Abdel Al Badaoui|Al Badaoui]] {{goal|57}}
+|stadium=[[El Molinón]]
+|location=[[Gijón]]
+|attendance=7,300
+|referee=Jon Ander González Esteban
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=20:00
+|team1=[[SD Ponferradina|Ponferradina]] (2)
+|score= 2–1
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/sociedad-deportiva-ponferradina/ud-ibiza/3705475/
+|team2='''[[UD Ibiza|Ibiza]] (2)'''
+|goals1=
+*[[Dani Ojeda|Ojeda]] {{goal|48}}
+*[[Dani Romera|Romera]] {{goal|93}}
+|goals2=[[Miguel Villar Alonso|Villar]] {{goal|68}}
+|stadium=[[Estadio El Toralín|El Toralín]]
+|location=[[Ponferrada]]
+|attendance=
+|referee=Javier Iglesias Villanueva
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=20:00
+|team1=[[Real Valladolid|Valladolid]] (2)
+|score=3–1
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/real-valladolid-club-de-futbol/union-deportiva-las-palmas/3705478/
+|team2='''[[UD Las Palmas|Las Palmas]] (2)'''
+|goals1=
+*[[Anuar Tuhami|Anuar]] {{goal|45+2}}
+*[[Shon Weissman|Weissman]] {{goal|63}}
+*[[Cristo González|González]] {{goal|68}}
+|goals2=
+*[[Armando Sadiku|Sadiku]] {{goal|22}}
+|stadium=[[Estadio José Zorrilla|José Zorrilla]]
+|location=[[Valladolid]]
+|attendance=
+|referee=Francisco Hernández Maeso
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=20:00
+|team1='''[[CD Castellón|Castellón]] (3)'''
+|score=1–2
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/club-deportivo-castellon/futbol-club-cartagena/3705471/
+|team2=[[FC Cartagena|Cartagena]] (2)
+|goals1=[[Kevin Sibille|Sibille]] {{goal|48}}
+|goals2=
+*[[Alfredo Ortuño|Ortuño]] {{goal|28}}
+*[[Alberto Cayarga|Cayarga]] {{goal|90+3}}
+|stadium=[[Nou Estadi Castàlia|Castàlia]]
+|location=[[Castellón de la Plana]]
+|attendance=
+|referee=David Gálvez Rascón
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=21:00
+|team1='''[[Unionistas de Salamanca|Unionistas]] (3)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/unionistas-de-salamanca/elche-club-de-futbol/3705461/
+|team2=[[Elche CF|Elche]] (1)
+|goals1=
+|goals2=
+*[[Fernando Román (footballer, born 1993)|Román]] {{goal|90+3|o.g.}}
+|stadium=[[Campo de Fútbol Reina Sofía|Reina Sofía]]
+|location=[[Salamanca]]
+|attendance=
+|referee=[[Carlos del Cerro Grande]]
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=20:00 [[Western European Time|WET]]
+|team1='''[[CD Tenerife|Tenerife]] (2)'''
+|score= 1–2
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/club-deportivo-tenerife/sociedad-deportiva-eibar/3705477/
+|team2=[[SD Eibar|Eibar]] (2)
+|goals1=
+*[[Sergio González (footballer, born 1997)|González]] {{goal|74}}
+|goals2=
+*[[Quique González (footballer)|Quique]] {{goal|12}}
+*[[Edu Expósito|Expósito]] {{goal|83}}
+|stadium=[[Estadio Heliodoro Rodríguez López|Heliodoro Rodríguez López]]
+|location=[[Santa Cruz de Tenerife]]
+|attendance=
+|referee=Luis Milla Alvéndiz
+}}
+{{football box collapsible
+|date=15 December 2021
+|time=21:00
+|team1='''[[Atlético Sanluqueño CF|Atlético Sanluqueño]] (3)'''
+|score= 1–7
+|report=https://int.soccerway.com/matches/2021/12/15/spain/copa-del-rey/atletico-sanluqueno-club-de-futbol/villarreal-club-de-futbol/3705464/
+|team2=[[Villarreal CF|Villarreal]] (1)
+|goals1=
+*[[Adrián Armental|Armental]] {{goal|60}}
+|goals2=
+*[[Paco Alcácer|Alcácer]] {{goal|8||13}}
+*[[Javi Duro|Duro]] {{goal|27|o.g.}}
+*[[Samuel Chukwueze|Chukwueze]] {{goal|40}}
+*[[Moi Gómez|Gómez]] {{goal|42}}
+*[[Manu Trigueros|Trigueros]] {{goal|67}}
+*[[Dani Raba|Raba]] {{goal|79}}
+|stadium=[[Estadio El Palmar|El Palmar]]
+|location=[[Sanlúcar de Barrameda]]
+|attendance=
+|referee=[[Jesús Gil Manzano]]
+}}
+{{football box collapsible
+|date=16 December 2021
+|time=19:00
+|team1='''[[CF Talavera de la Reina|Talavera]] (3)'''
+|score= 2–4
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/16/spain/copa-del-rey/talavera-cf/real-betis/3705465/
+|team2=[[Real Betis]] (1)
+|goals1=
+*[[Juan Góngora|Góngora]] {{goal|7|pen.}}
+*[[Christian Perales|Perales]] {{goal|89}}
+|goals2=
+*[[Borja Iglesias|Iglesias]] {{goal|14}}
+*[[Joaquín (footballer, born 1981)|Joaquín]] {{goal|61|pen.}}
+*[[Diego Lainez|Lainez]] {{goal|116}}
+*[[Sergio Canales|Canales]] {{goal|119}}
+|stadium=[[Estadio El Prado|El Prado]]
+|location=[[Talavera de la Reina]]
+|attendance=
+|referee=[[Alejandro Hernández Hernández]]
+}}
+{{football box collapsible
+|date=16 December 2021
+|time=19:00
+|team1='''[[UD Llanera|Llanera]] (4)'''
+|score= 0–6
+|report=https://int.soccerway.com/matches/2021/12/16/spain/copa-del-rey/llanera/real-club-deportivo-mallorca/3705455/
+|team2=[[RCD Mallorca|Mallorca]] (1)
+|goals1=
+|goals2=
+*[[Aleksandar Sedlar|Sedlar]] {{goal|50||62}}
+*[[Jordi Mboula|Mboula]] {{goal|55}}
+*[[Josep Gayá|Gayá]] {{goal|74}}
+*[[Javier Llabrés|Llabrés]] {{goal|78}}
+*[[Ángel Rodríguez (footballer, born 1987)|Ángel]] {{goal|87}}
+|stadium=[[Estadio Ganzábal|Ganzábal]]
+|location=[[Langreo]]{{efn|Llanera played its game at Ganzábal, in [[Langreo]] instead of their regular stadium Pepe Quimarán in [[Llanera, Asturias|Posada de Llanera]] as it does not meet the requirements established by the Royal Spanish Football Federation.}}
+|attendance=
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|date=16 December 2021
+|time=19:00
+|team1='''[[CD Arenteiro|Arenteiro]] (4)'''
+|score= 1–3
+|aet=yes
+|report=https://int.soccerway.com/matches/2021/12/16/spain/copa-del-rey/arenteiro/valencia-club-de-futbol/3705457/
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+*[[Joni Magisano|Magisano]] {{goal|8}}
+|goals2=
+*[[Yunus Musah|Musah]] {{goal|1}}
+*[[Hugo Guillamón|Guillamón]] {{goal|99}}
+*[[Manu Vallejo|Vallejo]] {{goal|113}}
+|stadium=[[Estadio Espiñedo|Espiñedo]]
+|location=[[O Carballiño]]
+|attendance=
+|referee=José Luis Munuera Montero
+}}
+{{football box collapsible
+|date=16 December 2021
+|time=19:00
+|team1='''[[SD Amorebieta|Amorebieta]] (2)'''
+|score=1–2
+|report=https://int.soccerway.com/matches/2021/12/16/spain/copa-del-rey/sd-amorebieta/union-deportiva-almeria/3705473/
+|team2=[[UD Almería|Almería]] (2)
+|goals1=
+*[[Iñigo Orozco|Orozco]] {{goal|56}}
+|goals2=
+*[[Umar Sadiq|Sadiq]] {{goal|24}}
+*[[Arvin Appiah|Appiah]] {{goal|61}}
+|stadium=[[Urritxe]]
+|location=[[Amorebieta]]
+|attendance=
+|referee=Eduardo Prieto Iglesias
+}}
+{{football box collapsible
+|date=16 December 2021
+|time=20:00
+|team1='''[[CD Lugo|Lugo]] (2)'''
+|score= 1–2
+|report=https://int.soccerway.com/matches/2021/12/16/spain/copa-del-rey/club-deportivo-lugo/cd-mirandes/3705479/
+|team2=[[CD Mirandés|Mirandés]] (2)
+|goals1=
+*[[Joselu (footballer, born 1991)|Joselu]] {{goal|65}}
+|goals2=
+*[[Alejandro Marqués|Marqués]] {{goal|4}}
+*[[Rodrigo Riquelme (footballer, born 2000)|Riquelme]] {{goal|82}}
+|stadium=[[Estadio Anxo Carro|Anxo Carro]]
+|location=[[Lugo]]
+|attendance=
+|referee=Juan Pulido Santana
+}}
+{{football box collapsible
+|date=16 December 2021
+|time=21:00
+|team1='''[[Deportivo de La Coruña|Deportivo La Coruña]] (3)'''
+|score= 1–2
+|report=https://int.soccerway.com/matches/2021/12/16/spain/copa-del-rey/real-club-deportivo-de-la-coruna/club-atletico-osasuna/3705462/
+|team2=[[CA Osasuna|Osasuna]] (1)
+|goals1=
+*[[Carlos Doncel|Doncel]] {{goal|23}}
+|goals2=
+*[[Kike García (Spanish footballer)|Kike]] {{goal|45+3}}
+*[[Ante Budimir|Budimir]] {{goal|64}}
+|stadium=[[Riazor]]
+|location=[[A Coruña]]
+|attendance=
+|referee=Adrián Cordero Vega
+}}
+{{football box collapsible
+|date=16 December 2021
+|time=21:00
+|team1=[[Atlético Mancha Real]] (4)
+|score= 1–0
+|report=https://int.soccerway.com/matches/2021/12/16/spain/copa-del-rey/atletico-mancha-real-cf/granada-club-de-futbol/3705452/
+|team2='''[[Granada CF|Granada]] (1)'''
+|goals1=
+*Enrique {{goal|21}}
+|goals2=
+|stadium=[[Estadio Polideportivo Municipal de la Juventud|La Juventud]]
+|location=[[Mancha Real]]
+|attendance=
+|referee=César Soto Grado
+}}
+{{football box collapsible
+|date=16 December 2021
+|time=21:00
+|team1='''[[Albacete Balompié|Albacete]] (3)'''
+|score= 0–1
+|report=https://int.soccerway.com/matches/2021/12/16/spain/copa-del-rey/albacete-balompie/cadiz-club-de-futbol/3705458/
+|team2=[[Cádiz CF|Cádiz]] (1)
+|goals1=
+|goals2=
+*[[Florin Andone|Andone]] {{goal|20}}
+|stadium=[[Estadio Carlos Belmonte|Carlos Belmonte]]
+|location=[[Albacete]]
+|attendance=
+|referee=[[José María Sánchez Martínez]]
+}}
+{{football box collapsible
+|date=16 December 2021
+|time=21:00
+|team1=[[CD Atlético Baleares|Atlético Baleares]] (3)
+|score= 5–0
+|report=https://int.soccerway.com/matches/2021/12/16/spain/copa-del-rey/club-deportivo-atletico-baleares/getafe-club-de-futbol/3705459/
+|team2='''[[Getafe CF|Getafe]] (1)'''
+|goals1=
+*[[Pedro Orfila|Orfila]] {{goal|6||44}}
+*[[Dioni]] {{goal|68}}
+*[[Manel Martínez|Martínez]] {{goal|70}}
+*[[Vinicius Tanque]] {{goal|89}}
+|goals2=
+|stadium=[[Estadio Balear]]
+|location=[[Palma, Majorca|Palma]]
+|attendance=
+|referee=Javier Alberola Rojas
+}}
+;Notes
+{{notelist}}
+
+==Final phase==
+===Bracket===
+{{#invoke:RoundN|main|columns=5|boldwinner=high|score-boxes=2+sum|3rdplace=no|team-width=100|style=white-space:nowrap|flex_tree=yes
+|RD1=[[#Round of 32|Round of 32]]
+|RD2=[[#Round of 16|Round of 16]]
+|RD3=[[#Quarter-finals|Quarter-finals]]
+|RD4=[[#Semi-finals|Semi-finals]]
+|RD5=[[2022 Copa del Rey Final|Final]]
+
+||[[Girona FC|Girona]]|1||[[CA Osasuna|Osasuna]]|0|
+||[[CD Mirandés|Mirandés]]|0||[[Rayo Vallecano]]|2|
+||[[SD Eibar|Eibar]]|1||[[RCD Mallorca|Mallorca]]|2|
+||[[SD Ponferradina|Ponferradina]]|1 (1)||[[RCD Espanyol|Espanyol]] {{pso}}|1 (3)|
+||[[CD Leganés|Leganés]]|2||[[Real Sociedad]]|3|
+||[[CF Rayo Majadahonda|Rayo Majadahonda]]|0||[[Atlético Madrid]]|5|
+||[[Real Valladolid|Valladolid]]|0||[[Real Betis]]|3|
+||[[Real Zaragoza|Zaragoza]]|0||[[Sevilla FC|Sevilla]]|2|
+||[[Atlético Mancha Real]]|0||[[Athletic Bilbao]]|2|
+||[[Linares Deportivo|Linares]]|1||[[FC Barcelona|Barcelona]]|2|
+||[[UD Almería|Almería]]|1||[[Elche CF|Elche]]|2|
+||[[CD Alcoyano|Alcoyano]]|1||[[Real Madrid CF|Real Madrid]]|3|
+||[[CD Atlético Baleares|Atlético Baleares]]|2||[[RC Celta de Vigo|Celta Vigo]]|1|
+||[[FC Cartagena|Cartagena]]|1||[[Valencia CF|Valencia]]|2|
+||[[Sporting Gijón]]|2||[[Villarreal CF|Villarreal]]|1|
+||[[CF Fuenlabrada|Fuenlabrada]]|0||[[Cádiz CF|Cádiz]]|1|
+
+||[[Girona FC|Girona]]|1||[[Rayo Vallecano]]|2|
+||[[RCD Mallorca|Mallorca]]|2||[[RCD Espanyol|Espanyol]]|1|
+||[[Real Sociedad]]|2||[[Atlético Madrid]]|0|
+||[[Real Betis]]|2||[[Sevilla FC|Sevilla]]|1|
+||[[Athletic Bilbao]] {{aet}}|3||[[FC Barcelona|Barcelona]]|2|
+||[[Elche CF|Elche]]|1||[[Real Madrid CF|Real Madrid]] {{aet}}|2|
+||[[CD Atlético Baleares|Atlético Baleares]]|0||[[Valencia CF|Valencia]]|1|
+||[[Sporting Gijón]]|0 (2)||[[Cádiz CF|Cádiz]] {{pso}}|0 (4)|
+
+||[[Rayo Vallecano]]|1||[[RCD Mallorca|Mallorca]]|0|
+||[[Real Sociedad]]|0||[[Real Betis]]|4|
+||[[Athletic Bilbao]]|1||[[Real Madrid CF|Real Madrid]]|0|
+||[[Valencia CF|Valencia]]|2||[[Cádiz CF|Cádiz]]|1|
+
+||[[Rayo Vallecano]]|1|1|[[Real Betis]]|2|1
+||[[Athletic Bilbao]]|1|0|[[Valencia CF|Valencia]]|1|1
+
+||[[Real Betis]] {{pso}}|1 (5)||[[Valencia CF|Valencia]]|1 (4)|
+
+}}
+
+==Round of 32==
+===Draw===
+The draw was held on 17 December 2021 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]]. The four participant teams of the [[2022 Supercopa de España]] were drawn with the teams from the lowest category. After them, the remaining teams from the lowest categories faced the rest of La Liga teams. Matches were played at stadiums of lower-ranked teams.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|4 participants in [[2022 Supercopa de España]]}} || width=15%|'''Pot 2'''<br/>{{small|12 teams of [[2021-22 La Liga|La Liga]]}} || width=15%|'''Pot 3'''<br/>{{small|11 teams of [[2021-22 Segunda División|Segunda División]]}} || width=15%|'''Pot 4'''<br/>{{small|4 teams of [[2021–22 Primera División RFEF|Primera RFEF]]}} || width=15%|'''Pot 5'''<br/>{{small|1 team of [[2021-22 Segunda División RFEF|Segunda RFEF]]}}
+|- valign=top
+|
+[[Athletic Bilbao]]<br>
+[[Atlético Madrid]]<br>
+[[FC Barcelona|Barcelona]]<br>
+[[Real Madrid CF|Real Madrid]]
+|
+[[Cádiz CF|Cádiz]]<br>
+[[RC Celta de Vigo|Celta Vigo]]<br>
+[[Elche CF|Elche]]<br>
+[[RCD Espanyol|Espanyol]]<br>
+[[RCD Mallorca|Mallorca]]<br>
+[[CA Osasuna|Osasuna]]<br>
+[[Rayo Vallecano]]<br>
+[[Real Betis]]<br>
+[[Real Sociedad]]<br>
+[[Sevilla FC|Sevilla]]<br>
+[[Valencia CF|Valencia]]<br>
+[[Villarreal CF|Villarreal]]
+|
+[[UD Almería|Almería]]<br>
+[[FC Cartagena|Cartagena]]<br>
+[[SD Eibar|Eibar]]<br>
+[[CF Fuenlabrada|Fuenlabrada]]<br>
+[[Girona FC|Girona]]<br>
+[[CD Leganés|Leganés]]<br>
+[[CD Mirandés|Mirandés]]<br>
+[[SD Ponferradina|Ponferradina]]<br>
+[[Sporting de Gijón|Sporting Gijón]]<br>
+[[Real Valladolid|Valladolid]]<br>
+[[Real Zaragoza|Zaragoza]]
+|
+[[CD Alcoyano|Alcoyano]]<br>
+[[CD Atlético Baleares|Atlético Baleares]]<br>
+[[Linares Deportivo|Linares]]<br>
+[[CF Rayo Majadahonda|Rayo Majadahonda]]
+|
+[[Atlético Mancha Real]]
+|}
+
+===Matches===
+{{football box collapsible
+|date=4 January 2022
+|time= 21:00
+|team1='''[[SD Ponferradina|Ponferradina]] (2)'''
+|score= 1–1
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-sd-ponferradina-rcd-espanyol-de-barcelona-3
+|team2=[[RCD Espanyol|Espanyol]] (1)
+|goals1=
+*[[Yuri (footballer, born 1982)|Yuri]] {{goal|88|pen.}}
+|goals2 =
+*[[Adrià Pedrosa|Pedrosa]] {{goal|4}}
+|penalties1 =
+*[[Agus Medina|Medina]] {{pengoal}}
+*[[Kuki Zalazar|Zalazar]] {{penmiss}}
+*[[Saúl Crespo|Crespo]] {{penmiss}}
+*[[Kike Saverio|Saverio]] {{penmiss}}
+|penaltyscore = 1–3
+|penalties2 =
+*{{pengoal}} [[Adri Embarba|Embarba]]
+*{{pengoal}} [[Keidi Bare|Bare]]
+*{{pengoal}} [[Fran Mérida|Mérida]]
+|stadium=[[Estadio El Toralín|El Toralín]]
+|location=[[Ponferrada]]
+|attendance=
+|referee=[[Carlos del Cerro Grande]]
+}}
+{{football box collapsible
+|date=5 January 2022
+|time= 16:00
+|team1='''[[CD Leganés|Leganés]] (2)'''
+|score= 2–3
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-cd-leganes-real-sociedad-3
+|team2=[[Real Sociedad]] (1)
+|goals1=
+*[[Juan Muñoz (footballer, born 1995)|Muñoz]] {{goal|60||70}}
+|goals2=
+*[[Alexander Isak|Isak]] {{goal|8}}
+*[[Mikel Oyarzabal|Oyarzabal]] {{goal|43||74|pen.}}
+|stadium=[[Estadio Municipal de Butarque|Butarque]]
+|location=[[Leganés]]
+|attendance=
+|referee=[[Antonio Mateu Lahoz]]
+}}
+{{football box collapsible
+|date=5 January 2022
+|time= 16:00
+|team1='''[[SD Eibar|Eibar]] (2)'''
+|score= 1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-sd-eibar-rcd-mallorca-3
+|team2=[[RCD Mallorca|Mallorca]] (1)
+|goals1=
+*[[Gustavo Blanco|Blanco]] {{goal|45}}
+|goals2=
+*[[Josep Gayá|Gayá]] {{goal|69}}
+*[[Ángel Rodríguez (footballer, born 1987)|Ángel]] {{goal|82}}
+|stadium=[[Ipurua Municipal Stadium|Ipurua]]
+|location=[[Eibar]]
+|attendance=
+|referee=Miguel Ángel Ortiz Arias
+}}
+{{football box collapsible
+|date=5 January 2022
+|time= 16:00
+|team1='''[[FC Cartagena|Cartagena]] (2)'''
+|score= 1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-fc-cartagena-valencia-cf-3
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+*[[Alfredo Ortuño|Ortuño]] {{goal|75|pen.}}
+|goals2=
+*[[Carlos Soler (footballer)|Soler]] {{goal|35}}
+*[[Denis Cheryshev|Cheryshev]] {{goal|90+2}}
+|stadium=[[Estadio Cartagonova|Cartagonova]]
+|location=[[Cartagena, Spain|Cartagena]]
+|attendance=
+|referee=Pablo González Fuertes
+}}
+{{football box collapsible
+|date=5 January 2022
+|time= 19:30
+|team1='''[[Linares Deportivo|Linares]] (3)'''
+|score= 1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-linares-deportivo-fc-barcelona-3
+|team2=[[FC Barcelona|Barcelona]] (1)
+|goals1=
+*[[Hugo Díaz (footballer, born 1988)|Díaz]] {{goal|19}}
+|goals2=
+*[[Ousmane Dembélé|Dembélé]] {{goal|63}}
+*[[Ferran Jutglà|Jutglà]] {{goal|69}}
+|stadium=[[Estadio Municipal de Linarejos|Linarejos]]
+|location=[[Linares, Jaén|Linares]]
+|attendance=
+|referee=[[Guillermo Cuadra Fernández]]
+}}
+{{football box collapsible
+|date=5 January 2022
+|time= 20:00
+|team1=[[CD Atlético Baleares|Atlético Baleares]] (3)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-cd-atletico-baleares-rc-celta-3
+|team2='''[[RC Celta de Vigo|Celta Vigo]] (1)'''
+|goals1=
+*[[Manel Martínez|Martínez]] {{goal|17||76}}
+|goals2=
+*[[Brais Méndez|Méndez]] {{goal|67}}
+|stadium=[[Estadio Balear]]
+|location=[[Palma, Majorca|Palma]]
+|attendance=
+|referee=Mario Melero López
+}}
+{{football box collapsible
+|date=5 January 2022
+|time= 20:00
+|team1='''[[CD Mirandés|Mirandés]] (2)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-cd-mirandes-rayo-vallecano-3
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+|goals2=
+*[[Andrés Martín (footballer)|Martín]] {{goal|67}}
+|stadium=[[Estadio Municipal de Anduva|Anduva]]
+|location=[[Miranda de Ebro]]
+|attendance=
+|referee=[[José Luis Munuera Montero]]
+}}
+{{football box collapsible
+|date=5 January 2022
+|time= 20:00
+|team1='''[[Real Valladolid|Valladolid]] (2)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-real-valladolid-cf-real-betis-3
+|team2=[[Real Betis]] (1)
+|goals1=
+|goals2=
+*[[William Carvalho|Carvalho]] {{goal|24}}
+*[[Nabil Fekir|Fekir]] {{goal|27}}
+*[[Borja Iglesias|Iglesias]] {{goal|50}}
+|stadium=[[Estadio José Zorrilla|José Zorrilla]]
+|location=[[Valladolid]]
+|attendance=
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|date=5 January 2022
+|time= 21:30
+|team1='''[[CD Alcoyano|Alcoyano]] (3)'''
+|score= 1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-alcoyano-real-madrid-3
+|team2=[[Real Madrid CF|Real Madrid]] (1)
+|goals1=
+*[[Dani Vega|Vega]] {{goal|66}}
+|goals2=
+*[[Éder Militão|Militão]] {{goal|39}}
+*[[Marco Asensio|Asensio]] {{goal|76}}
+*[[José Juan (footballer, born 1979)|José Juan]] {{goal|78|o.g.}}
+|stadium=[[Estadio El Collao|El Collao]]
+|location=[[Alcoy]]
+|attendance=
+|referee=Adrián Cordero Vega
+}}
+{{football box collapsible
+|date=6 January 2022
+|time= 16:00
+|team1='''[[CF Fuenlabrada|Fuenlabrada]] (2)'''
+|score= 0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-cf-fuenlabrada-cadiz-cf-3
+|team2=[[Cádiz CF|Cádiz]] (1)
+|goals1=
+|goals2=
+*[[Tomás Alarcón|Alarcón]] {{goal|90+3}}
+|stadium=[[Estadio Fernando Torres|Fernando Torres]]
+|location=[[Fuenlabrada]]
+|attendance=
+|referee=[[Jesús Gil Manzano]]
+}}
+{{football box collapsible
+|date=6 January 2022
+|time= 16:00
+|team1=[[Girona FC|Girona]] (2)
+|score= 1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-girona-fc-ca-osasuna-3
+|team2='''[[CA Osasuna|Osasuna]] (1)'''
+|goals1=
+*[[David Juncà|Juncà]] {{goal|6}}
+|goals2=
+|stadium=[[Estadi Montilivi|Montilivi]]
+|location=[[Girona]]
+|attendance=
+|referee=Javier Alberola Rojas
+}}
+{{football box collapsible
+|date=6 January 2022
+|time= 18:00
+|team1=[[Sporting de Gijón|Sporting Gijón]] (2)
+|score= 2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-real-sporting-villarreal-cf-3
+|team2='''[[Villarreal CF|Villarreal]] (1)'''
+|goals1=
+*[[Uroš Đurđević|Đurđević]] {{goal|67}}
+*[[Bohdan Milovanov|Milovanov]] {{goal|88}}
+|goals2 =
+*[[Raúl Albiol|Albiol]] {{goal|48}}
+|stadium=[[El Molinón]]
+|location=[[Gijón]]
+|attendance=
+|referee=Alejandro Muñiz Ruiz
+}}
+{{football box collapsible
+|date=6 January 2022
+|time= 18:00
+|team1='''[[Real Zaragoza|Zaragoza]] (2)'''
+|score= 0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-real-zaragoza-sevilla-fc-3
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+|goals2=
+*[[Jules Koundé|Koundé]] {{goal|31}}
+*[[Rafa Mir|Mir]] {{goal|69}}
+|stadium=[[Estadio La Romareda|La Romareda]]
+|location=[[Zaragoza]]
+|attendance=
+|referee=Valentín Pizarro Gómez
+}}
+{{football box collapsible
+|date=6 January 2022
+|time= 20:00
+|team1='''[[Atlético Mancha Real]] (4)'''
+|score= 0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-atletico-mancha-real-athletic-club-3
+|team2=[[Athletic Bilbao]] (1)
+|goals1=
+|goals2=
+*[[Nico Williams|N. Williams]] {{goal|20||43}}
+|stadium=[[Estadio Polideportivo Municipal de la Juventud|La Juventud]]
+|location=[[Mancha Real]]
+|attendance=
+|referee=[[Juan Martínez Munuera]]
+}}
+{{football box collapsible
+|date=6 January 2022
+|time= 20:00
+|team1='''[[UD Almería|Almería]] (2)'''
+|score= 1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-ud-almeria-elche-cf-3
+|team2=[[Elche CF|Elche]] (1)
+|goals1=
+*[[Largie Ramazani|Ramazani]] {{goal|42}}
+|goals2=
+*[[Pablo Piatti|Piatti]] {{goal|52}}
+*[[Raúl Guti|Guti]] {{goal|84}}
+|stadium=[[Estadio de los Juegos Mediterráneos|Juegos Mediterráneos]]
+|location=[[Almería]]
+|attendance=
+|referee=[[Alejandro Hernández Hernández]]
+}}
+{{football box collapsible
+|date=6 January 2022
+|time= 21:30
+|team1='''[[CF Rayo Majadahonda|Rayo Majadahonda]] (3)'''
+|score= 0–5
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-cf-rayo-atletico-de-madrid-3
+|team2=[[Atlético Madrid]] (1)
+|goals1=
+|goals2=
+*[[Matheus Cunha|Cunha]] {{goal|17}}
+*[[Renan Lodi|Lodi]] {{goal|26}}
+*[[Luis Suárez (Uruguayan footballer)|Suárez]] {{goal|41}}
+*[[Antoine Griezmann|Griezmann]] {{goal|67}}
+*[[João Félix|Félix]] {{goal|79}}
+|stadium=[[Estadio Wanda Metropolitano|Wanda Metropolitano]]
+|location=[[Madrid]]{{efn|Rayo Majadahonda played its game at Wanda Metropolitano, in [[Madrid]] instead of their regular stadium Cerro del Espino in [[Majadahonda]] because the Royal Spanish Football Federation have granted permission for a ground change to facilitate more fans at the match.}}
+|attendance=
+|referee=Santiago Jaime Latre
+}}
+;Notes
+{{notelist}}
+
+==Round of 16==
+===Draw===
+The draw was held on 7 January 2022 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]]. Teams are divided into 3 pots according to their division in the 2021–22 season. When possible, matches will be played at the stadiums of lower-ranked teams. Otherwise, the first team drawn plays home. A total of 8 games will be played from 15 to 20 January 2022.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|13 teams of [[2021–22 La Liga|La Liga]]}} || width=15%|'''Pot 2'''<br/>{{small|2 teams of [[2021–22 Segunda División|Segunda División]]}} || width=15%|'''Pot 3'''<br/>{{small|1 team of [[2021–22 Primera División RFEF|Primera RFEF]]}}
+|- valign=top
+|
+[[Athletic Bilbao]]<br>
+[[Atlético Madrid]]<br>
+[[FC Barcelona|Barcelona]]<br>
+[[Cádiz CF|Cádiz]]<br>
+[[Elche CF|Elche]]<br>
+[[RCD Espanyol|Espanyol]]<br>
+[[RCD Mallorca|Mallorca]]<br>
+[[Rayo Vallecano]]<br>
+[[Real Betis]]<br>
+[[Real Madrid CF|Real Madrid]]<br>
+[[Real Sociedad]]<br>
+[[Sevilla FC|Sevilla]]<br>
+[[Valencia CF|Valencia]]
+|
+[[Girona FC|Girona]]<br>
+[[Sporting de Gijón|Sporting Gijón]]
+|
+[[CD Atlético Baleares|Atlético Baleares]]
+|}
+
+===Matches===
+{{football box collapsible
+|date=15 January 2022
+|time= 16:00
+|team1=[[RCD Mallorca|Mallorca]] (1)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-rcd-mallorca-rcd-espanyol-de-barcelona-4
+|team2='''[[RCD Espanyol|Espanyol]] (1)'''
+|goals1=
+*[[Takefusa Kubo|Kubo]] {{goal|32}}
+*[[Abdón Prats|Abdón]] {{goal|60}}
+|goals2=
+*[[Javi Puado|Puado]] {{goal|62}}
+|stadium=[[Visit Mallorca Stadium|Visit Mallorca Estadi]]
+|location=[[Palma, Majorca|Palma]]
+|attendance=
+|referee=Santiago Jaime Latre
+}}
+{{football box collapsible
+|date=15 January 2022
+|time= 18:30
+|team1='''[[Sporting de Gijón|Sporting Gijón]] (2)'''
+|score= 0–0
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-real-sporting-cadiz-cf-4
+|team2=[[Cádiz CF|Cádiz]] (1)
+|goals1=
+|goals2=
+|penalties1=
+*[[Fran Villalba|Villalba]] {{penmiss}}
+*[[Pedro Díaz (footballer, born 1998)|Díaz]] {{penmiss}}
+*[[Vasyl Kravets|Kravets]] {{pengoal}}
+*[[Víctor Campuzano|Campuzano]] {{pengoal}}
+|penaltyscore= 2–4
+|penalties2 =
+*{{pengoal}} [[Álex Fernández (footballer, born 1992)|Fernández]]
+*{{pengoal}} [[Álvaro Negredo|Negredo]]
+*{{pengoal}} [[Alberto Perea|Perea]]
+*{{pengoal}} [[Santiago Arzamendia|Arzamendia]]
+|stadium=[[El Molinón]]
+|location=[[Gijón]]
+|attendance=
+|referee=Miguel Ángel Ortiz Arias
+}}
+{{football box collapsible
+|date=15 January 2022
+|time= 18:30
+|team1='''[[Girona FC|Girona]] (2)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-girona-fc-rayo-vallecano-4
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+*[[Bernardo Espinosa|Espinosa]] {{goal|26}}
+|goals2=
+*[[Sergi Guardiola|Guardiola]] {{goal|45+1||48}}
+|stadium=[[Estadi Montilivi|Montilivi]]
+|location=[[Girona]]
+|attendance=
+|referee=Adrián Cordero Vega
+}}
+{{football box collapsible
+|date=16 January 2022
+|time= 12:00
+|team1='''[[CD Atlético Baleares|Atlético Baleares]] (3)'''
+|score= 0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-cd-atletico-baleares-valencia-cf-4
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+|goals2=
+*[[Marcos André]] {{goal|1}}
+|stadium=[[Estadio Balear]]
+|location=[[Palma, Majorca|Palma]]
+|attendance=
+|referee=Pablo González Fuertes
+}}
+{{football box collapsible
+|date=16 January 2022{{efn|The match was originally played on 15 January at 21:30, but was suspended in the 40th minute after Sevilla's [[Joan Jordán]] was hit in the head by an object thrown from the crowd. The match was resumed the next day at 16:00 behind closed doors.}}
+|time= 16:00
+|team1=[[Real Betis]] (1)
+|score= 2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-real-betis-sevilla-fc-4
+|team2='''[[Sevilla FC|Sevilla]] (1)'''
+|goals1=
+*[[Nabil Fekir|Fekir]] {{goal|39}}
+*[[Sergio Canales|Canales]] {{goal|73}}
+|goals2=
+*[[Papu Gómez|Gómez]] {{goal|35}}
+|stadium=[[Estadio Benito Villamarín|Benito Villamarín]]
+|location=[[Seville]]
+|attendance=
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|date=19 January 2022
+|time= 21:00
+|team1=[[Real Sociedad]] (1)
+|score= 2–0
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-real-sociedad-atletico-de-madrid-4
+|team2='''[[Atlético Madrid]] (1)'''
+|goals1=
+*[[Adnan Januzaj|Januzaj]] {{goal|33}}
+*[[Alexander Sørloth|Sørloth]] {{goal|47}}
+|goals2=
+|stadium=[[Anoeta Stadium|Anoeta]]
+|location=[[San Sebastián]]
+|attendance=
+|referee=Javier Alberola Rojas
+}}
+{{football box collapsible
+|date=20 January 2022
+|time= 19:00
+|team1='''[[Elche CF|Elche]] (1)'''
+|score= 1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-elche-cf-real-madrid-4
+|team2=[[Real Madrid CF|Real Madrid]] (1)
+|goals1=
+*[[Gonzalo Verdú|Verdú]] {{goal|103}}
+|goals2=
+*[[Isco]] {{goal|108}}
+*[[Eden Hazard|Hazard]] {{goal|116}}
+|stadium=[[Estadio Manuel Martínez Valero|Martínez Valero]]
+|location=[[Elche]]
+|attendance=
+|referee=Jorge Figueroa Vázquez
+}}
+{{football box collapsible
+|date=20 January 2022
+|time= 21:30
+|team1=[[Athletic Bilbao]] (1)
+|score= 3–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-athletic-club-fc-barcelona-4
+|team2='''[[FC Barcelona|Barcelona]] (1)'''
+|goals1=
+*[[Iker Muniain|Muniain]] {{goal|2||105+1|pen.}}
+*[[Iñigo Martínez|Martínez]] {{goal|86}}
+|goals2=
+*[[Ferran Torres|Torres]] {{goal|20}}
+*[[Pedri]] {{goal|90+3}}
+|stadium=[[San Mamés Stadium (2013)|San Mamés]]
+|location=[[Bilbao]]
+|attendance=
+|referee=[[José Luis Munuera Montero]]
+}}
+;Notes
+{{notelist}}
+
+==Quarter-finals==
+===Draw===
+The draw was held on 21 January 2022 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]]. As there are no teams from the lower divisions, home teams were selected by a draw.
+{|class="wikitable" style="font-size:90%" width=200
+|- bgcolor=#efefef align=center
+|'''Qualified teams'''<br/>{{small|8 teams of [[2021–22 La Liga|La Liga]]}} 
+|- valign=top
+|
+[[Athletic Bilbao]]<br>
+[[Cádiz CF|Cádiz]]<br>
+[[RCD Mallorca|Mallorca]]<br>
+[[Rayo Vallecano]]<br>
+[[Real Betis]]<br>
+[[Real Madrid CF|Real Madrid]]<br>
+[[Real Sociedad]]<br>
+[[Valencia CF|Valencia]]
+|}
+
+===Matches===
+{{football box collapsible
+|date=2 February 2022
+|time=20:00
+|team1=[[Rayo Vallecano]] (1)
+|score= 1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-rayo-vallecano-rcd-mallorca-5
+|team2='''[[RCD Mallorca|Mallorca]] (1)'''
+|goals1=
+*[[Óscar Trejo|Trejo]] {{goal|44|pen.}}
+|goals2=
+|stadium=[[Campo de Fútbol de Vallecas|Vallecas]]
+|location=[[Madrid]]
+|attendance=
+|referee=César Soto Grado
+}}
+{{football box collapsible
+|date=2 February 2022
+|time=21:00
+|team1=[[Valencia CF|Valencia]] (1)
+|score= 2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-valencia-cf-cadiz-cf-5
+|team2='''[[Cádiz CF|Cádiz]] (1)'''
+|goals1=
+*[[Gonçalo Guedes|Guedes]] {{goal|24}}
+*[[Hugo Duro|Duro]] {{goal|79}}
+|goals2=
+*[[Lucas Pérez|Pérez]] {{goal|54|pen.}}
+|stadium=[[Mestalla Stadium|Mestalla]]
+|location=[[Valencia]]
+|attendance=
+|referee=Javier Alberola Rojas
+}}
+{{football box collapsible
+|date=3 February 2022
+|time=20:00
+|team1='''[[Real Sociedad]] (1)'''
+|score= 0–4
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-real-sociedad-real-betis-5
+|team2=[[Real Betis]] (1)
+|goals1=
+|goals2=
+*[[Juanmi (footballer, born 1993)|Juanmi]] {{goal|12||57}}
+*[[Willian José]] {{goal|83|pen.}}
+*[[Aitor Ruibal|Ruibal]] {{goal|87}}
+|stadium=[[Anoeta Stadium|Anoeta]]
+|location=[[San Sebastián]]
+|attendance=
+|referee=[[Juan Martínez Munuera]]
+}}
+{{football box collapsible
+|date=3 February 2022
+|time=21:30
+|team1=[[Athletic Bilbao]] (1)
+|score= 1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-athletic-club-real-madrid-5
+|team2='''[[Real Madrid CF|Real Madrid]] (1)'''
+|goals1=
+*[[Álex Berenguer|Berenguer]] {{goal|89}}
+|goals2=
+|stadium=[[San Mamés Stadium (2013)|San Mamés]]
+|location=[[Bilbao]]
+|attendance=
+|referee=[[Jesús Gil Manzano]]
+}}
+;Notes
+{{notelist}}
+
+==Semi-finals==
+===Draw===
+The draw for the semi-finals was held on 4 February 2022 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]].
+{|class="wikitable" style="font-size:90%" width=200
+|- bgcolor=#efefef align=center
+|'''Qualified teams'''<br/>{{small|4 teams of [[2021–22 La Liga|La Liga]]}} 
+|- valign=top
+|
+[[Athletic Bilbao]]<br>
+[[Rayo Vallecano]]<br>
+[[Real Betis]]<br>
+[[Valencia CF|Valencia]]
+|}
+
+===Summary===
+{{TwoLegStart}}
+{{TwoLegResult|[[Rayo Vallecano]] (1)||2–3|'''[[Real Betis]] (1)'''||1–2|1–1}}
+{{TwoLegResult|[[Athletic Bilbao]] (1)||1–2|'''[[Valencia CF|Valencia]] (1)'''||1–1|0–1}}
+|}
+
+===Matches===
+{{Football box
+|id=
+|date=9 February 2022
+|time=21:00
+|team1=[[Rayo Vallecano]]
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-rayo-vallecano-real-betis-6
+|team2=[[Real Betis]]
+|goals1=
+*[[Álvaro García (footballer, born 1992)|Á. García]] {{goal|5}}
+|goals2=
+*[[Borja Iglesias|Iglesias]] {{goal|26}}
+*[[William Carvalho|Carvalho]] {{goal|68}}
+|stadium=[[Campo de Fútbol de Vallecas]], [[Madrid]]
+|attendance= 9,034
+|referee=[[José María Sánchez Martínez]]
+}}
+{{Football box
+|id=
+|date=3 March 2022 
+|time=21:00
+|team1=[[Real Betis]]
+|score=1–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-real-betis-rayo-vallecano-7
+|team2=[[Rayo Vallecano]]
+|goals1=
+*[[Borja Iglesias|Iglesias]] {{goal|90+2}}
+|goals2=
+*[[Bebé]] {{goal|80}}
+|stadium=[[Estadio Benito Villamarín|Benito Villamarín]], [[Seville]]
+|attendance= 50,916
+|referee=[[Juan Martínez Munuera]]
+}}
+''Real Betis won 3–2 on aggregate.''
+----
+{{Football box
+|id=
+|date=10 February 2022
+|time=21:30
+|team1=[[Athletic Bilbao]]
+|score=1–1
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-athletic-club-valencia-cf-6
+|team2=[[Valencia CF|Valencia]]
+|goals1=
+*[[Raúl García (footballer, born 1986)|R. García]] {{goal|37}}
+|goals2=
+*[[Hugo Duro|Duro]] {{goal|65}}
+|stadium=[[San Mamés Stadium (2013)|San Mamés]], [[Bilbao]]
+|attendance= 42,906
+|referee=[[José Luis Munuera Montero]]
+}}
+{{Football box
+|id=
+|date=2 March 2022
+|time=21:30
+|team1=[[Valencia CF|Valencia]]
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2021-2022-copa-del-rey-valencia-cf-athletic-club-7
+|team2=[[Athletic Bilbao]]
+|goals1=
+*[[Gonçalo Guedes|Guedes]] {{goal|43}}
+|goals2=
+|stadium=[[Mestalla Stadium|Mestalla]], [[Valencia]]
+|attendance= 41,731
+|referee=[[Jesús Gil Manzano]]
+}}
+''Valencia won 2–1 on aggregate.''
+
+==Final==
+{{Main|2022 Copa del Rey final}}
+{{:2022 Copa del Rey final}}
+
+==Top scorers==
+{| class="wikitable" style="text-align:center"
+|-
+! Rank
+! Player
+! Club
+! Goals
+|-
+|rowspan=1|1
+| align="left" |{{flagicon|ESP}} [[Borja Iglesias]]
+| align="left" | [[Real Betis]]
+|5
+|-
+|rowspan=3|2
+| align="left" |{{flagicon|ESP}} [[Ángel Rodríguez (footballer, born 1987)|Ángel Rodríguez]]
+| align="left" | [[RCD Mallorca|Mallorca]]
+|rowspan=3|4
+|-
+| align="left" |{{flagicon|ESP}} [[Alfredo Ortuño]]
+| align="left" | [[FC Cartagena|Cartagena]]
+|-
+| align="left"|{{flagicon|ESP}} [[Dani Gómez (footballer, born 1998)|Dani Gómez]]
+| align="left"| [[Levante UD|Levante]]
+|-
+|rowspan=12|5
+| align="left" |{{flagicon|ESP}} [[Mikel Oyarzabal]]
+| align="left" | [[Real Sociedad]]
+|rowspan=12|3
+|-
+| align="left" |{{flagicon|ESP}} [[Álvaro Negredo]]
+| align="left" | [[Cádiz CF|Cádiz]]
+|-
+| align="left" |{{flagicon|ESP}} [[Loren Morón (footballer, born 1993)|Loren Morón]]
+| align="left" | [[RCD Espanyol|Espanyol]]
+|-
+| align="left" |{{flagicon|ESP}} [[Manel Martínez]]
+| align="left" | [[CD Atlético Baleares|Atlético Baleares]]
+|-
+| align="left" |{{flagicon|ESP}} [[Alejandro Marqués]]
+| align="left" | [[CD Mirandés|Mirandés]]
+|-
+| align="left" |{{flagicon|ESP}} [[Paco Alcácer]]
+| align="left" | [[Villarreal CF|Villarreal]]
+|-
+| align="left" |{{flagicon|MAR}} [[Mourad Daoudi El Ghezouani|Mourad Daoudi]]
+| align="left" | [[CD Alcoyano|Alcoyano]]
+|-
+| align="left" |{{flagicon|ESP}} [[Ricardo Larrode "Riki"|Riki]]
+| align="left" | [[CF San Agustín del Guadalix|San Agustín del Guadalix]]
+|-
+| align="left" |{{flagicon|ESP}} [[Jaime Mata]]
+| align="left" | [[Getafe CF|Getafe]]
+|-
+| align="left" |{{flagicon|ESP}} [[Adrián Butzke]]
+| align="left" | [[Granada CF|Granada]]
+|-
+| align="left" |{{flagicon|ESP}} [[Alejandro Blesa]]
+| align="left" | [[Levante UD|Levante]]
+|-
+| align="left" |{{flagicon|ESP}} [[Roberto Soldado]]
+| align="left" | [[Levante UD|Levante]]
+|}
+
+==Notes==
+{{reflist|group=note}}
+
+==References==
+{{reflist}}
+
+==External links==
+{{commons category}}
+*[http://www.rfef.es/ Royal Spanish Football Federation official website]
+*[https://www.laliga.es/en/other-competitions/copa-del-rey Copa del Rey at LFP website]
+
+{{Copa del Rey seasons}}
+{{2021–22 in Spanish football}}
+{{2021–22 in European football (UEFA)}}
+
+{{DEFAULTSORT:Copa Del Rey 2021-22}}
+[[Category:Copa del Rey seasons|2021–22]]
+[[Category:2021–22 in Spanish football cups|1]]

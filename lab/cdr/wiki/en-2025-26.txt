@@ -1,0 +1,3079 @@
+{{Infobox football tournament season
+| title = [[Copa del Rey]]
+| year = 2025–26
+| image = File:SD Negreira - Real Sociedad, Copa do Rei 2025-26 19.jpg
+| caption = [[SD Negreira|Negreira]] v [[Real Sociedad]] on 28 October 2025
+| country = Spain
+| venue = 
+| date = 27 September 2025 – 18 April 2026
+| num_teams = 126
+| champions = [[Real Sociedad]]
+| count = 3
+| runner-up = [[Atlético Madrid]]
+| matches = 
+| goals = 
+| top goal scorer = [[Raúl García (footballer, born 2000)|Raúl García]]<br>(7 goals)
+| prevseason = [[2024–25 Copa del Rey|2024–25]]
+| nextseason = [[2026–27 Copa del Rey|2026–27]]
+}}
+
+The '''2025–26 Copa del Rey''' (branded as the '''Copa del Rey MAPFRE''' for sponsorship reasons) was the 124th staging of the [[Copa del Rey]] (including two seasons where two rival editions were played). The winners were assured a place in the [[2026–27 UEFA Europa League|2026–27 UEFA Europa League league stage]]. Both the winners and the runners-up would qualify for the four-team [[2027 Supercopa de España]].
+
+[[FC Barcelona|Barcelona]] were the defending champions, having beaten [[Real Madrid CF|Real Madrid]] in the [[2025 Copa del Rey final|final of the previous edition]],<ref>{{cite web|url=https://www.theguardian.com/football/2025/apr/27/barcelona-real-madrid-copa-del-rey-match-report|title=Barcelona win thrilling Copa del Rey and drive Madrid to red card fury|date=27 April 2025|work=The Guardian|access-date=1 May 2025}}</ref> but were eliminated by [[Atlético Madrid]] in the semi-finals.
+
+The final was held at [[Estadio de La Cartuja|La Cartuja]] in [[Seville]] on 18 April 2026. [[Real Sociedad]] defeated Atlético Madrid 4–3 on penalties to win their third Copa del Rey title.
+
+As across Spain, match times up to 26 October 2024 and from 30 March 2025 are [[Central European Summer Time|CEST]] ([[UTC+02:00|UTC+2]]). Times on interim ("winter") days are [[Central European Time|CET]] ([[UTC+01:00|UTC+1]]). Matches played in the Canary Islands use the [[Western European Time|WET]] ([[UTC±00:00]]).
+
+==Schedule and format==
+On 30 June 2025, the [[Royal Spanish Football Federation|RFEF]] introduced changes in the format of the competition, with the preliminary stage becoming a two-legged tie. The first and second rounds remained a single match, but a new criteria of geographical proximity was created to define which teams would face each other in these rounds.<ref>{{cite web|url=https://www.tribunasoria.com/noticias/410039/la-previa-de-la-copa-del-rey-se-jugara-a-ida-y-vuelta|title=La previa de la Copa del Rey se jugará a ida y vuelta|trans-title=The preliminary round of the Copa del Rey will be played in two legs|publisher=Tribuna Soria|language=es|date=30 June 2025|accessdate=11 July 2025}}</ref> In the round of 32 and in the round of 16, Supercopa de España teams were separated into a new pot, facing the teams from lowest divisions in both rounds.<ref>{{cite web|url=https://www.marca.com/futbol/2025/06/30/cambios-copa-rey-2025-2026-beneficiaran-equipos-supercopa.html|title=Los cambios en la Copa del Rey 2025/2026 que beneficiarán a los equipos de la Supercopa|trans-title=The changes in the 2025/2026 Copa del Rey which will benefit the Supercopa teams|publisher=[[Marca (newspaper)|Marca]]|language=es|date=30 June 2025|access-date=11 July 2025}}</ref>
+
+{|class="wikitable" style="font-size:90%"
+|-
+!Round
+!Draw date
+!Date
+!Fixtures
+!Clubs
+!Format details
+|-
+|rowspan=2|Preliminary round
+|rowspan=2 style="text-align:left;"|
+{{Nowrap|16 September 2025}}
+|style="text-align:left;"|{{Nowrap|27 September 2025}}
+|rowspan=2 style="text-align:center;"|20
+|rowspan=2 style="text-align:center;"|{{Nowrap|126 → 116}}
+|rowspan=2|'''New entries:''' Clubs qualify through the 2024–25 sixth tier.<br />'''[[Seed (sports)|Opponents seeding]]:''' Teams face each other according to proximity criteria.<br />'''[[Knock-out tournament]] type:''' [[Two-legged tie|Double match]].
+|-
+|style="text-align:left;"|{{Nowrap|4 October 2025}}
+|-
+|First round
+|style="text-align:left;"|{{Nowrap|6 October 2025}}
+|style="text-align:left;"|{{Nowrap|29 October 2025}}
+|style="text-align:center;"|56
+|style="text-align:center;"|116 → 60
+|'''New entries:''' All qualified teams except for the four participants in the [[2026 Supercopa de España|Supercopa de España]].<br />'''Opponents seeding:''' Teams from lowest divisions faced La Liga teams according to proximity criteria.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|{{Nowrap|Second round}}
+|style="text-align:left;"|{{Nowrap|11 November 2025}}
+|style="text-align:left;"|{{Nowrap|3 December 2025}}
+|style="text-align:center;"|28
+|style="text-align:center;"|60 → 32
+|'''Opponents seeding:''' Teams from lowest divisions faced La Liga teams.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br/>'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|Round of 32
+|style="text-align:left;"|{{Nowrap|9 December 2025}}
+|style="text-align:left;"|{{Nowrap|17 December 2025}}
+|style="text-align:center;"|16
+|style="text-align:center;"|32 → 16
+|'''New entries:''' Clubs participating in the [[2026 Supercopa de España|Supercopa de España]] entered at this stage.<br />'''Opponents seeding:''' Teams from lowest divisions faced Supercopa and La Liga teams, respectively.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|Round of 16
+|style="text-align:left;"|{{Nowrap|7 January 2026}}
+|style="text-align:left;"|{{Nowrap|14 January 2026}}
+|style="text-align:center;"|8
+|style="text-align:center;"|16 → 8
+|'''Opponents seeding:''' Teams from lowest divisions faced Supercopa and La Liga teams, respectively.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|Quarter-finals
+|style="text-align:left;"|{{Nowrap|19 January 2026}}
+|style="text-align:left;"|{{Nowrap|4 February 2026}}
+|style="text-align:center;"|4
+|style="text-align:center;"|8 → 4
+|'''Opponents seeding:''' Luck of the draw.<br />'''Local team seeding:''' Matches were played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|rowspan=2|Semi-finals
+|rowspan=3 style="text-align:left;"|{{Nowrap|6 February 2026}}
+|style="text-align:left;"|{{Nowrap|11 February 2026}}
+|rowspan=2 style="text-align:center;"|2
+|rowspan=2 style="text-align:center;"|4 → 2
+|rowspan=2|'''Opponents seeding:''' Luck of the draw.<br/>'''Local team seeding:''' Luck of the draw.<br />'''Knock-out tournament type:''' [[Two-legged tie|Double match]].
+|-
+|style="text-align:left;"|{{Nowrap|4 March 2026}}
+|-
+|'''[[2026 Copa del Rey final|Final]]'''
+|style="text-align:left;"|18 April 2026
+|style="text-align:center;"|1
+|style="text-align:center;"|2 → 1
+|[[Single-elimination tournament|Single match]] at [[Estadio de La Cartuja]], [[Seville]]. Both teams qualified for the [[2027 Supercopa de España]].<br />'''[[UEFA Europa League]] qualification:''' winners qualified for the [[2026–27 UEFA Europa League#Group stage|2026–27 UEFA Europa League group stage]].
+|}
+;Notes
+*Games ending in a draw were decided in extra time and, if still level, by a penalty shoot-out.
+
+==Qualified teams==
+The following teams qualified for the competition. Reserve teams were not allowed to enter.
+{| class="wikitable" style="font-size:90%"
+|- style="background-color:#d6e2b3; text-align:center; vertical-align:top"
+| style="width:14%" | '''La Liga'''<br /><small>All 20 teams of the [[2024–25 La Liga|2024–25 season]]</small>
+| style="width:14%" | '''Segunda División'''<br /><small>All 22 teams of the [[2024–25 Segunda División|2024–25 season]]</small>
+| style="width:14%" | '''Primera Federación'''<br /><small>Top five non-reserve teams of each group of the [[2024–25 Primera Federación|2024–25 season]]</small>
+| style="width:14%" | '''Segunda Federación'''<br /><small>Top five non-reserve teams of the five groups of the [[2024–25 Segunda Federación|2024–25 season]]</small>
+| style="width:14%" | '''Tercera Federación'''<ref>{{cite web|url=https://golsmedia.com/futbol/copa-del-rey/2025/05/13/25-equipos-tercera-federacion-clasificados-para-copa-rey-2025-26/|title=Los 25 equipos de Tercera Federación clasificados para la Copa del Rey 2025–26|trans-title=The 25 Tercera Federación teams qualified to the 2025–26 Copa del Rey|publisher=Golsmedia|language=es|date=13 May 2025|accessdate=3 June 2025|archive-url=https://web.archive.org/web/20250514123018/https://golsmedia.com/futbol/copa-del-rey/2025/05/13/25-equipos-tercera-federacion-clasificados-para-copa-rey-2025-26/|archive-date=14 May 2025|url-status=dead}}</ref><br /><small>The best non-reserve teams plus the best seven non-reserve runners-up of each one of the eighteen groups of the [[2024–25 Tercera Federación|2024–25 season]]</small>
+| style="width:14%" | '''Copa Federación'''<br /><small>The four semi-finalists of the [[2025 Copa Federación de España]]</small>
+| style="width:14%" | '''Regional leagues'''<br /><small>One team of each one of the twenty groups of the [[Divisiones Regionales de Fútbol|sixth tier]]</small>
+|- style="vertical-align:top"
+|
+* [[Deportivo Alavés|Alavés]]
+* [[Athletic Bilbao]]{{efn|name=SC|Athletic Bilbao, Atlético Madrid, Barcelona and Real Madrid joined the tournament in the round of 32 as participants of the [[2026 Supercopa de España|Supercopa de España]].}}
+* [[Atlético Madrid]]{{efn|name=SC}}
+* [[FC Barcelona|Barcelona]]<sup>[[2024–25 Copa del Rey|TH]]</sup>{{efn|name=SC}}
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[RCD Espanyol|Espanyol]]
+* [[Getafe CF|Getafe]]
+* [[Girona FC|Girona]]
+* [[UD Las Palmas|Las Palmas]]
+* [[CD Leganés|Leganés]]
+* [[RCD Mallorca|Mallorca]]
+* [[CA Osasuna|Osasuna]]
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Real Madrid CF|Real Madrid]]{{efn|name=SC}}
+* [[Real Sociedad]]
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Real Valladolid|Valladolid]]
+* [[Villarreal CF|Villarreal]]
+|
+* [[Albacete Balompié|Albacete]]
+* [[UD Almería|Almería]]
+* [[Burgos CF|Burgos]]
+* [[Cádiz CF|Cádiz]]
+* [[FC Cartagena|Cartagena]]
+* [[CD Castellón|Castellón]]
+* [[Córdoba CF|Córdoba]]
+* [[Deportivo de La Coruña|Deportivo La Coruña]]
+* [[SD Eibar|Eibar]]
+* [[Elche CF|Elche]]
+* [[CD Eldense|Eldense]]
+* [[Granada CF|Granada]]
+* [[SD Huesca|Huesca]]
+* [[Levante UD|Levante]]
+* [[Málaga CF|Málaga]]
+* [[CD Mirandés|Mirandés]]
+* [[Real Oviedo|Oviedo]]
+* [[Racing de Ferrol|Racing Ferrol]]
+* [[Racing de Santander|Racing Santander]]
+* [[Sporting de Gijón|Sporting Gijón]]
+* [[CD Tenerife|Tenerife]]
+* [[Real Zaragoza|Zaragoza]]
+|
+* [[FC Andorra|Andorra]]
+* [[Antequera CF|Antequera]]
+* [[AD Ceuta FC|Ceuta]]
+* [[Cultural y Deportiva Leonesa|Cultural Leonesa]]
+* [[Gimnàstic de Tarragona|Gimnàstic]]
+* [[UD Ibiza|Ibiza]]
+* [[Mérida AD|Mérida]]
+* [[Real Murcia CF|Murcia]]
+* [[SD Ponferradina|Ponferradina]]
+* [[SD Tarazona|Tarazona]]
+|
+* [[Arenas Club de Getxo|Arenas Getxo]]
+* [[CA Antoniano|Atlético Antoniano]]
+* [[CD Atlético Baleares|Atlético Baleares]]
+* [[Real Ávila CF|Ávila]]
+* [[Real Avilés Industrial CF|Avilés Industrial]]
+* [[CP Cacereño|Cacereño]]
+* [[CD Estepona FS|Estepona]]
+* [[CE Europa|Europa]]
+* [[CD Guadalajara (Spain)|Guadalajara]]
+* [[Juventud de Torremolinos CF|Juventud Torremolinos]]
+* [[UP Langreo|Langreo]]
+* [[FC La Unión Atlético|La Unión Atlético]]
+* [[SD Logroñés]]
+* [[UD Logroñés]]
+* [[CDA Navalcarnero|Navalcarnero]]
+* [[CD Numancia|Numancia]]
+* [[Pontevedra CF|Pontevedra]]
+* [[CF Rayo Majadahonda|Rayo Majadahonda]]
+* [[CE Sabadell FC|Sabadell]]
+* [[UE Sant Andreu|Sant Andreu]]
+* [[CF Talavera de la Reina|Talavera de la Reina]]
+* [[CD Teruel|Teruel]]
+* [[Torrent CF|Torrent]]
+* [[UCAM Murcia CF|UCAM Murcia]]
+* [[Utebo FC|Utebo]]
+|
+* [[RSD Alcalá|Alcalá]]
+* [[Atlético Astorga FC|Atlético Astorga]]
+* [[Atlético Tordesillas]]<!--2ND-->
+* [[CD Azuaga|Azuaga]]<!--2ND-->
+* [[Caudal Deportivo|Caudal]]
+* [[CD Cieza|Cieza]]<!--2ND-->
+* [[CD Ciudad de Lucena|Ciudad de Lucena]]<!--2ND-->
+* [[CE Constància|Constància]]<!--2ND-->
+* [[CD Ebro|Ebro]]
+* [[CD Extremadura|Extremadura]]
+* [[Real Jaén|Jaén]]
+* [[CF Lorca Deportiva|Lorca Deportiva]]
+* [[UD Mutilvera|Mutilvera]]
+* [[Náxara CD|Náxara]]
+* [[UD Ourense]]
+* [[UD Poblense|Poblense]]
+* [[Club Portugalete|Portugalete]]
+* [[Puente Genil FC|Puente Genil]]
+* [[CD Quintanar del Rey|Quintanar del Rey]]
+* [[Reus FC Reddis|Reus FCR]]
+* [[CD Roda|Roda]]
+* [[CD Tropezón|Tropezón]]<!--2ND-->
+* [[UD Sámano|Sámano]]
+* [[UD San Fernando|San Fernando]]
+* [[CD Valle de Egüés|Valle de Egüés]]<!--2ND-->
+|
+* [[CE Atlètic Lleida|Atlètic Lleida]]
+* [[Orihuela CF|Orihuela]] 
+* [[Ourense CF]] 
+* [[CD Toledo|Toledo]] 
+|
+* [[CCD Alberite|Alberite]]<ref>{{cite web|url=https://nuevecuatrouno.com/2025/05/25/deportes-san-marcial-villegas-ascienden-tercera/|title=El San Marcial y el Villegas ascienden a Tercera|trans-title=San Marcial and Villegas promote to ''Tercera''|publisher=Nueve Cuatro Uno|language=es|date=25 May 2025|accessdate=9 June 2025}}</ref>
+* [[Atlètic Sant Just FC|Atlètic Sant Just]]<ref>{{cite web|url=https://www.atsantjustfc.cat/index.php?controller=club&action=pjActionCronicas|title=La Copa del Rei com a premi final|trans-title=Copa del Rey as the final award|publisher=Atlètic Sant Just FC|language=ca|date=22 June 2025|accessdate=23 June 2025}}</ref>
+* [[Atlético Calatayud]]<ref>{{cite web|url=https://dukvitv.com/deportes/el-atletico-calatayud-no-asciende-a-tercera-division-pero-jugara-la-previa-de-la-copa-del-rey-podria-enfrentarse-a-un-equipo-de-primera-division/|title=El Atlético Calatayud no asciende a Tercera División pero jugará la previa de la Copa del Rey: podría enfrentarse a un equipo de Primera División|trans-title=Atlético Calatayud do not promote to Tercera División but will play the preliminary round of the Copa del Rey: they could face a Primera División team|publisher=Dukvi TV|language=es|date=22 June 2025|accessdate=23 June 2025}}</ref>
+* [[Atlético Melilla CF|Atlético Melilla]]<ref name=M>{{cite web|url=https://www.marca.com/futbol/copa-rey/2025/09/08/20-equipos-categoria-regional-lucharan-medirse-primera-copa-rey.html|title=20 equipos de categoría regional lucharán por medirse a un Primera en la Copa del Rey|trans-title=20 teams of regional level will fight to face a ''Primera'' in the Copa del Rey|publisher=[[Marca (newspaper)|Marca]]|language=es|date=8 September 2025|accessdate=16 September 2025}}</ref>
+* [[Atlético Palma del Río CF|Atlético Palma del Río]]<ref name=M/>
+* [[Betis CF|Betis Valladolid]]<ref>{{cite web|url=https://as.com/futbol/historico-tres-equipos-de-valladolid-jugaran-la-copa-del-rey-2025-26-n/|title=Histórico, tres equipos de Valladolid jugarán la Copa del Rey 2025–26|trans-title=Historic, three teams from Valladolid will play the 2025–26 Copa del Rey|publisher=[[Diario AS]]|language=es|date=9 June 2025|accessdate=18 August 2025|archive-url=https://web.archive.org/web/20250817022935/https://as.com/futbol/historico-tres-equipos-de-valladolid-jugaran-la-copa-del-rey-2025-26-n/|archive-date=17 August 2025|url-status=dead}}</ref>
+* [[CF Campanario|Campanario]]<ref>{{cite web|url=https://www.canalextremadura.es/audio/el-campanario-sera-el-representante-extremeno-en-la-fase-previa-de-la-copa-del-rey|title=El Campanario será el representante extremeño en la fase previa de la Copa del Rey|trans-title=Campanario will be the Extremaduran representative in the preliminary round of the Copa del Rey|publisher=[[Canal Extremadura Televisión]]|language=es|date=11 June 2025|accessdate=11 June 2025}}</ref>
+* [[CD Getxo|Getxo]]<ref>{{cite web|url=https://www.elcorreo.com/deportes/futbol/getxo-jugara-fase-previa-copa-rey-tras-20250616175348-nt.html|title=El Getxo jugará la fase previa de la Copa del Rey tras el varapalo para ascender|trans-title=Getxo will play the preliminary round of the Copa del Rey after the setback to promotion|publisher=[[El Correo]]|language=es|date=16 June 2025|accessdate=23 June 2025}}</ref>
+* [[CF Inter de Valdemoro|Inter de Valdemoro]]<ref>{{cite web|url=https://www.rffm.es/noticias/inter-de-valdemoro-vive-su-gran-noche-y-se-proclama-campeon-de-la-nueva-copa-rffm-de-aficionados-con-el-premio-de-jugar-la-copa-del-rey|title=Inter de Valdemoro vive su gran noche y se proclama campeón de la nueva Copa RFFM de Aficionados con el premio de jugar la Copa del Rey|trans-title=Inter de Valdemoro live their big night and become champions of the new Copa RFFM de Aficionados with the award to play in the Copa del Rey|publisher=[[Royal Madrid Football Federation]]|language=es|date=1 May 2025|accessdate=3 June 2025}}</ref>
+* [[UD Los Garres|Los Garres]]<ref>{{cite web|url=https://murciaplaza.com/murciaplaza/deportes-murcia/la-ud-los-garres-lesco-gana-la-supercopa-regional-y-jugara-la-copa-del-rey|title=La UD Los Garres Lesco gana la Supercopa regional y jugará la Copa del Rey|trans-title=UD Los Garres Lesco win the Supercopa Regional and will play the Copa del Rey|publisher=Murcia Plaza|language=es|date=29 June 2025|accessdate=1 July 2025}}</ref>
+* [[CD Lourdes|Lourdes]]<ref name=M/>
+* [[Manises CF|Manises]]<ref>{{cite web|url=https://7televalencia.com/manises-cf-nostra-copa-rey/|title=El Manises CF volverá a jugar la Copa del Rey|trans-title=Manises CF will play the Copa del Rey again|publisher=7TeleValencia|language=es|date=16 May 2025|accessdate=3 June 2025}}</ref>
+* [[UD Maracena|Maracena]]<ref name=M/>
+* [[SD Negreira|Negreira]]<ref name=M/>
+* [[Puerto de Vega CF|Puerto de Vega]]<ref name=M/>
+* [[CD Sant Jordi|Sant Jordi]]<ref name=M/>
+* [[Club Sporting de Ceuta|Sporting de Ceuta]]<ref>{{cite web|url=https://www.ceutatv.com/articulo/deportes/sporting-ceuta-levanta-titulo-campeon-regional-jugara-copa-rey/20250515140044211188.html|title=El Sporting de Ceuta levanta el título de campeón de la Regional y jugará la Copa del Rey|trans-title=Sporting de Ceuta lift the trophy of champion of the Regional and will play the Copa del Rey|publisher=Ceuta TV|language=es|date=15 May 2025|accessdate=3 June 2025}}</ref>
+* [[SD Textil Escudo|Textil Escudo]]<ref name=M/>
+* [[Universitario FC|Universitario]]<ref name=M/>
+* [[CD Yuncos|Yuncos]]<ref>{{cite web|url=https://www.latribunadetoledo.es/noticia/z78d080fd-21b8-424d-8cf142bd3e9ba0e1/202506/el-cd-yuncos-es-de-copa-del-rey|title=El CD Yuncos es de Copa del Rey|trans-title=CD Yuncos is of Copa del Rey|publisher=La Tribuna de Toledo|language=es|date=16 June 2025|accessdate=16 June 2025}}</ref>
+|}
+;Notes
+{{notelist}}
+
+==Preliminary round==
+===Draw===
+Teams were divided into four groups according to geographical criteria.<ref>{{cite web|url=https://rfef.es/es/noticias/configurada-la-eliminatoria-previa-de-la-copa-del-rey|publisher=RFEF|date=16 September 2025|language=es|title=Configurada la eliminatoria previa de la Copa del Rey
+}}</ref>
+{|class="wikitable"
+|-
+! Group 1 !! Group 2 !! Group 3 !! Group 4
+|- valign=top
+|
+* [[CCD Alberite|Alberite]]
+* [[Betis CF|Betis Valladolid]]
+* [[CD Getxo|Getxo]]
+* [[SD Negreira|Negreira]]
+* [[Puerto de Vega CF|Puerto de Vega]]
+* [[SD Textil Escudo|Textil Escudo]]
+|
+* [[Atlético Calatayud]]
+* [[Atlètic Sant Just FC|Atlètic Sant Just]]
+* [[CD Lourdes|Lourdes]]
+* [[CD Sant Jordi|Sant Jordi]]
+|
+* [[Atlético Melilla CF|Atlético Melilla]]
+* [[Atlético Palma del Río CF|Atlético Palma del Río]]
+* [[UD Los Garres|Los Garres]]
+* [[Manises CF|Manises]]
+* [[UD Maracena|Maracena]]
+* [[Club Sporting de Ceuta|Sporting de Ceuta]]
+|
+* [[CF Campanario|Campanario]]
+* [[CF Inter de Valdemoro|Inter de Valdemoro]]
+* [[Universitario FC|Universitario]]
+* [[CD Yuncos|Yuncos]]
+|}
+
+===Summary===
+{{#invoke:Sports series|main
+|[[SD Textil Escudo|Textil Escudo]]|| 2–5 |'''[[SD Negreira|Negreira]]'''||2–1|0–4
+|'''[[Puerto de Vega CF|Puerto de Vega]]'''|| 5–1 |[[CCD Alberite|Alberite]]||4–0|1–1
+|'''[[CD Getxo|Getxo]]'''|| 2–1 |[[Betis CF|Betis Valladolid]]||0–0|2–1
+|'''[[Atlètic Sant Just FC|Atlètic Sant Just]]'''|| 7–1 |[[Atlético Calatayud]]||3–0|4–1
+|'''[[CD Sant Jordi|Sant Jordi]]'''|| 4–1 |[[CD Lourdes|Lourdes]]||1–0|3–1
+|[[Manises CF|Manises]]|| 2–4 |'''[[UD Los Garres|Los Garres]]'''||2–0|0–4 {{aet}}
+|[[Atlético Melilla CF|Atlético Melilla]]|| 0–10 |'''[[Atlético Palma del Río CF|Atlético Palma del Río]]'''|| 0–5|0–5
+|[[Club Sporting de Ceuta|Sporting de Ceuta]]|| 1–3 |'''[[UD Maracena|Maracena]]'''||1–1|0–2
+|[[CF Campanario|Campanario]]|| 0–2 |'''[[CD Yuncos|Yuncos]]'''||0–0|0–2
+|'''[[CF Inter de Valdemoro|Inter de Valdemoro]]'''|| 4–2 |[[Universitario FC|Universitario]]||1–1|3–1 {{aet}}
+}}
+
+=== First leg ===
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=18:00
+|team1=[[SD Textil Escudo|Textil Escudo]]
+|score=2–1
+|report=
+|team2=[[SD Negreira|Negreira]]
+|goals1=
+|goals2=
+|stadium=Juan María Parés Serra
+|location=[[Cabezón de la Sal]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=17:15
+|team1=[[Puerto de Vega CF|Puerto de Vega]]
+|score=4–0
+|report=
+|team2=[[CCD Alberite|Alberite]]
+|goals1=
+|goals2=
+|stadium=El Campón
+|location=[[Puerto de Vega]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=17:00
+|team1=[[CD Getxo|Getxo]]
+|score=0–0
+|report=
+|team2=[[Betis CF|Betis Valladolid]]
+|goals1=
+|goals2=
+|stadium=Campo Municipal de Fadura
+|location=[[Getxo]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=16:30
+|team1=[[Atlètic Sant Just FC|Atlètic Sant Just]]
+|score=3–0
+|report=
+|team2=[[Atlético Calatayud]]
+|goals1=
+|goals2=
+|stadium=[[Camp Municipal Sant Just Desvern|Municipal]]
+|location=[[Sant Just Desvern]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=17:30
+|team1=[[CD Sant Jordi|Sant Jordi]]
+|score=1–0
+|report=
+|team2=[[CD Lourdes|Lourdes]]
+|goals1=
+|goals2=
+|stadium=Municipal
+|location=Sant Jordi, [[Palma de Mallorca|Palma]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=18:00
+|team1=[[Manises CF|Manises]]
+|score=2–0
+|report=
+|team2=[[UD Los Garres|Los Garres]]
+|goals1=
+|goals2=
+|stadium=[[Campo Vicente Martínez Catalá]]
+|location=[[Manises]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=20:00
+|team1=[[Atlético Melilla CF|Atlético Melilla]]
+|score=0–5
+|report=
+|team2=[[Atlético Palma del Río CF|Atlético Palma del Río]]
+|goals1=
+|goals2=
+|stadium=La Espiguera
+|location=[[Melilla]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=18:00
+|team1=[[Club Sporting de Ceuta|Sporting de Ceuta]]
+|score=1–1
+|report=
+|team2=[[UD Maracena|Maracena]]
+|goals1=
+|goals2=
+|stadium=[[José Martínez Pirri]]
+|location=[[Ceuta]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=18:45
+|team1=[[CF Campanario|Campanario]]
+|score=0–0
+|report=
+|team2=[[CD Yuncos|Yuncos]]
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal de Campanario|Municipal]]
+|location=[[Campanario, Badajoz|Campanario]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 September 2025
+|time=20:00
+|team1=[[CF Inter de Valdemoro|Inter de Valdemoro]]
+|score=1–1
+|report=
+|team2=[[Universitario FC|Universitario]]
+|goals1=
+|goals2=
+|stadium=[[Estadio Amelia del Castillo]]
+|location=[[Valdemoro]]
+|attendance=
+|referee=
+}}
+
+===Second leg===
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=17:30
+|team1=[[SD Negreira|Negreira]]
+|score=4–0
+|aggregatescore=5–2
+|report=
+|team2='''[[SD Textil Escudo|Textil Escudo]]'''
+|goals1=
+|goals2=
+|stadium=[[Estadio Jesús García Calvo|Jesús García Calvo]]
+|location=[[Negreira]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=16:45
+|team1='''[[CCD Alberite|Alberite]]'''
+|score=1–1
+|aggregatescore=1–5
+|report=
+|team2=[[Puerto de Vega CF|Puerto de Vega]]
+|goals1=
+|goals2=
+|stadium=Marino Sáenz
+|location=[[Alberite]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=17:00
+|team1='''[[Betis CF|Betis Valladolid]]'''
+|score=1–2
+|aggregatescore=1–2
+|report=
+|team2=[[CD Getxo|Getxo]]
+|goals1=
+|goals2=
+|stadium=[[Campo Municipal Finca de Canterac|Finca Canterac]]
+|location=[[Valladolid]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=17:30
+|team1='''[[Atlético Calatayud]]'''
+|score=1–4
+|aggregatescore=1–7
+|report=
+|team2=[[Atlètic Sant Just FC|Atlètic Sant Just]]
+|goals1=
+|goals2=
+|stadium=[[Estadio San Íñigo|San Íñigo]]
+|location=[[Calatayud]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=17:30
+|team1='''[[CD Lourdes|Lourdes]]'''
+|score=1–3
+|aggregatescore=1–4
+|report=
+|team2=[[CD Sant Jordi|Sant Jordi]]
+|goals1=
+|goals2=
+|stadium=[[CDM Clara Campoamor]]
+|location=[[Tudela, Navarre|Tudela]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=18:00
+|team1=[[UD Los Garres|Los Garres]]
+|score=4–0
+|aet=yes
+|aggregatescore=4–2
+|report=
+|team2='''[[Manises CF|Manises]]'''
+|goals1=
+|goals2=
+|stadium=[[Campo Municipal Las Tejeras|Las Tejeras]]
+|location=[[Murcia]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=18:00
+|team1=[[Atlético Palma del Río CF|Atlético Palma del Río]]
+|score=5–0
+|aggregatescore=10–0
+|report=
+|team2='''[[Atlético Melilla CF|Atlético Melilla]]'''
+|goals1=
+|goals2=
+|stadium=Estadio Sergio León
+|location=[[Palma del Río]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=18:30
+|team1=[[UD Maracena|Maracena]]
+|score=2–0
+|aggregatescore=3–1
+|report=
+|team2='''[[Club Sporting de Ceuta|Sporting de Ceuta]]'''
+|goals1=
+|goals2=
+|stadium=Ciudad Deportiva de Maracena
+|location=[[Maracena]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=18:00
+|team1=[[CD Yuncos|Yuncos]]
+|score=2–0
+|aggregatescore=2–0
+|report=
+|team2='''[[CF Campanario|Campanario]]'''
+|goals1=
+|goals2=
+|stadium=[[Complejo Deportivo Villa de Yuncos]]
+|location=[[Yuncos]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 October 2025
+|time=20:00 [[Western European Time|WET]]
+|team1='''[[Universitario FC|Universitario]]'''
+|score=1–3
+|aet=yes
+|aggregatescore=2–4
+|report=
+|team2=[[CF Inter de Valdemoro|Inter de Valdemoro]]
+|goals1=
+|goals2=
+|stadium=[[Campo Nicolás Sánchez Santana]]
+|location=[[Las Palmas]]
+|attendance=
+|referee=
+}}
+
+==First round==
+The first round was played by 112 of the 116 qualified teams, with the exceptions being the four participants of the [[2026 Supercopa de España]]. 
+
+This first round remained a single match, but a new criteria of geographical proximity was created to define which teams would face each other. 
+
+A total of 56 matches were played between 28 and 30 October 2025.
+
+===Draw===
+The draw for the first round was held on 6 October 2025. Teams were divided into four pots.<ref>{{cite news|url=https://rfef.es/es/noticias/112-equipos-conoceran-este-lunes-sus-emparejamientos-para-la-primera-eliminatoria-de-la|title=CAMPEONATO DE ESPAÑA / COPA DE S.M. EL REY Sorteo Primera Eliminatoria|publisher=RFEF|language=es|access-date=1 October 2025}}</ref>
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|Group 1}} || width=15%|'''Pot 2'''<br/>{{small|Group 2}} || width=15%|'''Pot 3'''<br/>{{small|Group 3}} || width=15%|'''Pot 4'''<br/>{{small|Group 4}}
+|- valign=top
+|
+* [[Deportivo Alavés|Alavés]]
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[Real Oviedo|Oviedo]]
+* [[Real Sociedad]]
+* [[Burgos CF|Burgos]]
+* [[Cultural y Deportiva Leonesa|Cultural Leonesa]]
+* [[Deportivo de La Coruña|Deportivo La Coruña]]
+* [[SD Eibar|Eibar]]
+* [[CD Mirandés|Mirandés]]
+* [[Racing de Santander|Racing Santander]]
+* [[Sporting de Gijón|Sporting Gijón]]
+* [[Real Valladolid|Valladolid]]
+* [[Arenas Club de Getxo|Arenas Getxo]]
+* [[Real Avilés Industrial CF|Avilés Industrial]]
+* [[SD Ponferradina|Ponferradina]]
+* [[Pontevedra CF|Pontevedra]]
+* [[Racing de Ferrol|Racing Ferrol]]
+* [[Atlético Astorga FC|Atlético Astorga]]
+* [[Real Ávila CF|Ávila]]
+* [[UP Langreo|Langreo]]
+* [[SD Logroñés]]
+* [[UD Logroñés]]
+* [[Náxara CD|Náxara]]
+* [[CD Numancia|Numancia]]
+* [[UD Ourense]]
+* [[UD Sámano|Sámano]]
+* [[Atlético Tordesillas]]
+* [[Caudal Deportivo|Caudal]]
+* [[Club Portugalete|Portugalete]]
+* [[CD Tropezón|Tropezón]]
+* [[Ourense CF]] 
+* [[CD Getxo|Getxo]]
+* [[SD Negreira|Negreira]]
+* [[Puerto de Vega CF|Puerto de Vega]]
+|
+* [[RCD Espanyol|Espanyol]]
+* [[Girona FC|Girona]]
+* [[RCD Mallorca|Mallorca]]
+* [[CA Osasuna|Osasuna]]
+* [[FC Andorra|Andorra]]
+* [[SD Huesca|Huesca]]
+* [[Real Zaragoza|Zaragoza]]
+* [[CE Europa|Europa]]
+* [[Gimnàstic de Tarragona|Gimnàstic]]
+* [[CE Sabadell FC|Sabadell]]
+* [[SD Tarazona|Tarazona]]
+* [[CD Teruel|Teruel]]
+* [[CD Atlético Baleares|Atlético Baleares]]
+* [[CD Ebro|Ebro]]
+* [[UD Mutilvera|Mutilvera]]
+* [[UD Poblense|Poblense]]
+* [[Reus FC Reddis|Reus FCR]]
+* [[UE Sant Andreu|Sant Andreu]]
+* [[Utebo FC|Utebo]]
+* [[CE Constància|Constància]]
+* [[CD Valle de Egüés|Valle de Egüés]]
+* [[CE Atlètic Lleida|Atlètic Lleida]]
+* [[Atlètic Sant Just FC|Atlètic Sant Just]]
+* [[CD Sant Jordi|Sant Jordi]]
+|
+* [[Elche CF|Elche]]
+* [[Levante UD|Levante]]
+* [[Real Betis]]
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Villarreal CF|Villarreal]]
+* [[UD Almería|Almería]]
+* [[Cádiz CF|Cádiz]]
+* [[CD Castellón|Castellón]]
+* [[AD Ceuta FC|Ceuta]]
+* [[Córdoba CF|Córdoba]]
+* [[Granada CF|Granada]]
+* [[Málaga CF|Málaga]]
+* [[Antequera CF|Antequera]]
+* [[FC Cartagena|Cartagena]]
+* [[CD Eldense|Eldense]]
+* [[Juventud de Torremolinos CF|Juventud Torremolinos]]
+* [[Real Murcia CF|Murcia]]
+* [[CA Antoniano|Atlético Antoniano]]
+* [[CD Estepona FS|Estepona]]
+* [[Real Jaén|Jaén]]
+* [[FC La Unión Atlético|La Unión Atlético]]
+* [[CF Lorca Deportiva|Lorca Deportiva]]
+* [[Puente Genil FC|Puente Genil]]
+* [[Torrent CF|Torrent]]
+* [[UCAM Murcia CF|UCAM Murcia]]
+* [[CD Cieza|Cieza]]
+* [[CD Ciudad de Lucena|Ciudad de Lucena]]
+* [[CD Roda|Roda]]
+* [[Orihuela CF|Orihuela]] 
+* [[CD Toledo|Toledo]] 
+* [[Atlético Palma del Río CF|Atlético Palma del Río]]
+* [[UD Los Garres|Los Garres]]
+* [[UD Maracena|Maracena]]
+|
+* [[Getafe CF|Getafe]]
+* [[Rayo Vallecano]]
+* [[Albacete Balompié|Albacete]]
+* [[UD Las Palmas|Las Palmas]]
+* [[CD Leganés|Leganés]]
+* [[CP Cacereño|Cacereño]]
+* [[CD Guadalajara (Spain)|Guadalajara]]
+* [[UD Ibiza|Ibiza]]
+* [[Mérida AD|Mérida]]
+* [[CF Talavera de la Reina|Talavera de la Reina]]
+* [[CD Tenerife|Tenerife]]
+* [[RSD Alcalá|Alcalá]]
+* [[CD Extremadura|Extremadura]]
+* [[CDA Navalcarnero|Navalcarnero]]
+* [[CD Quintanar del Rey|Quintanar del Rey]]
+* [[CF Rayo Majadahonda|Rayo Majadahonda]]
+* [[CD Azuaga|Azuaga]]
+* [[UD San Fernando|San Fernando]]
+* [[CF Inter de Valdemoro|Inter de Valdemoro]]
+* [[CD Yuncos|Yuncos]]
+|}
+
+===Group 1===
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=19:00
+|team1=[[Ourense CF]] (3)
+|score=4–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ourense-cf-real-oviedo-3
+|team2='''[[Real Oviedo|Oviedo]] (1)'''
+|goals1=
+*[[Jerin Ramos|Ramos]] {{goal|53}}
+*[[Aymane Jelbat|Jelbat]] {{goal|90+4}}
+*[[Omar Ouhdadi|Ouhdadi]] {{goal|98}}
+*[[Amin Bouzaig|Bouzaig]] {{goal|114}}
+|goals2=
+*[[Josip Brekalo|Brekalo]] {{goal|17|pen.}}
+*[[Luka Ilić|Ilić]] {{goal|61}}
+|stadium=[[Estadio O Couto|O Couto]]
+|location=[[Ourense]]
+|attendance=
+|referee=Adrián Cordero Vega
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=19:00
+|team1='''[[Atlético Tordesillas]] (5)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-atletico-tordesillas-burgos-cf-3
+|team2=[[Burgos CF|Burgos]] (2)
+|goals1=
+*[[Carlos Alonso Villacorta|Chatún]] {{goal|63}}
+|goals2=
+*[[Iván Martínez (footballer, born 2005)|I. Martínez]] {{goal|90+4}}
+*[[Álex Lizancos|Lizancos]] {{goal|116}}
+|stadium=Las Salinas
+|location=[[Tordesillas]]
+|attendance=
+|referee=Eder Mallo Fernández
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=19:30
+|team1='''[[SD Logroñés]] (4)'''
+|score=0–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-sd-logrones-r-racing-club-3
+|team2=[[Racing de Santander|Racing Santander]] (2)
+|goals1=
+|goals2=
+*[[Suleiman Camara|Camara]] {{goal|23}}
+*[[Yeray Cabanzón|Cabanzón]] {{goal|66||87}}
+*[[Izan Yurrieta|Yurrieta]] {{goal|89}}
+|stadium=[[Estadio Las Gaunas]]
+|location=[[Logroño]]
+|attendance=
+|referee= Alonso De Ena Wolf
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=19:30
+|team1='''[[UP Langreo|Langreo]] (4)'''
+|score=0–0
+|aet=yes
+|penaltyscore=3–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-up-langreo-racing-ferrol-3
+|team2=[[Racing de Ferrol|Racing Ferrol]] (3)
+|goals1=
+|goals2=
+|stadium=[[Estadio Ganzábal|Ganzábal]]
+|location=[[Langreo]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=20:00
+|team1='''[[CD Tropezón|Tropezón]] (5)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-tropezon-cultural-y-deportiva-leonesa-3
+|team2=[[Cultural y Deportiva Leonesa|Cultural Leonesa]] (2)
+|goals1=*[[Juan Madroño|Madroño]] {{goal|84}}
+|goals2=*[[Daniel Paraschiv|Paraschiv]] {{goal|17|pen}}
+*[[Tomás Ribeiro (footballer)|Ribeiro]] {{goal|55}}
+*[[Jordi Mboula|Mboula]] {{goal|90+4}}
+|stadium=[[Estadio Santa Ana|Santa Ana]]
+|location=Tanos, [[Torrelavega]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=21:00
+|team1='''[[SD Negreira|Negreira]] (6)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-sd-negreira-real-sociedad-3
+|team2=[[Real Sociedad]] (1)
+|goals1=
+|goals2=
+*[[Mikel Goti|Goti]] {{goal|12}}
+*[[Arsen Zakharyan|Zakharyan]] {{goal|54}}
+*[[Beñat Turrientes|Turrientes]] {{goal|82}}
+|stadium=[[Estadio Jesús García Calvo|Jesús García Calvo]]
+|location=[[Negreira]]
+|attendance=
+|referee=Isidro Díaz de Mera Escuderos
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1='''[[Atlético Astorga FC|Atlético Astorga]] (4)'''
+|score=1–1
+|aet=yes
+|penaltyscore=3–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-atl-astorga-cd-mirandes-3
+|team2=[[CD Mirandés|Mirandés]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio La Eragudina|La Eragudina]]
+|location=[[Astorga, Spain|Astorga]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1='''[[Náxara CD|Náxara]] (4)'''
+|score=2–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-naxara-sd-eibar-3
+|team2=[[SD Eibar|Eibar]] (2)
+|goals1=
+|goals2=
+|stadium=Municipal Luis de la Fuente
+|location=[[Haro, La Rioja|Haro]]{{efn|Náxara did not play the match in their main stadium [[La Salera]], [[Nájera]], as it did not meet the broadcasting requirements.<ref>[https://www.eldiadelarioja.es/noticia/z46a1fde4-e1cc-4550-9bb9a0a08946968d/202510/naxara---eibar-en-haro-el-28-o-29-de-octubre] El Día de la Rioja . 9 October 2025. (in Spanish)</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1='''[[Caudal Deportivo|Caudal]] (5)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-caudal-real-sporting-3
+|team2=[[Sporting de Gijón|Sporting Gijón]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Hermanos Antuña|Hermanos Antuña]]
+|location=[[Mieres, Asturias|Mieres]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1=[[CD Numancia|Numancia]] (4)
+|score=3–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-numancia-arenas-de-getxo-3
+|team2='''[[Arenas Club de Getxo|Arenas Getxo]] (3)'''
+|goals1=
+|goals2=
+|stadium=[[Nuevo Estadio Los Pajaritos|Los Pajaritos]]
+|location=[[Soria]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1=[[Club Portugalete|Portugalete]] (5)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-club-portugalete-real-valladolid-cf-3
+|team2='''[[Real Valladolid|Valladolid]] (2)'''
+|goals1=
+|goals2=
+|stadium=[[Estadio La Florida|La Florida]]
+|location=[[Portugalete]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:30
+|team1='''[[UD Ourense]] (4)'''
+|score=1–1
+|aet=y
+|penaltyscore=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ud-ourense-pontevedra-3
+|team2=[[Pontevedra CF|Pontevedra]] (3)
+|goals1=
+|goals2=
+|stadium=[[Estadio O Couto|O Couto]]
+|location=[[Ourense]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=19:00
+|team1='''[[Puerto de Vega CF|Puerto de Vega]] (6)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-puerto-de-vega-cf-celta-3
+|team2=[[RC Celta de Vigo|Celta Vigo]] (1)
+|goals1=
+|goals2=
+|stadium=El Pardo
+|location=[[Navia, Asturias|Navia]]{{efn|Puerto de Vega did not play the match in their main stadium El Campón, [[Puerto de Vega]], as it did not meet the broadcasting requirements.<ref>[https://www.lavozdegalicia.es/noticia/deportes/2025/10/11/puerto-vega-recibira-celta-jueves-30-navia/0003_202510X11C9992.htm] La Voz de Galicia . 10 October 2025. (in Spanish)</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=20:00
+|team1='''[[CD Getxo|Getxo]] (6)'''
+|score=0–7
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-getxo-deportivo-alaves-3
+|team2=[[Deportivo Alavés|Alavés]] (1)
+|goals1=
+|goals2=
+|stadium=[[Campo Municipal de Gobela|Gobela]]{{efn|Getxo did not play the match in their main stadium Campo Municipal de Fadura, [[Getxo]], as it did not meet the broadcasting requirements.<ref>[https://www.eitb.eus/es/deportes/futbol/detalle/10110901/el-cd-getxo-traslada-su-eliminatoria-de-copa-del-rey-frente-al-deportivo-alaves-al-campo-de-gobela/] Eitb . 21 October 2025. (in Spanish)</ref>}} 
+|location=[[Getxo]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=20:00
+|team1=[[Real Ávila CF|Ávila]] (4)
+|score=1–0
+|aet=y
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-avila-real-aviles-industrial-3
+|team2='''[[Real Avilés Industrial CF|Avilés Industrial]] (3)'''
+|goals1=
+|goals2=
+|stadium=[[Estadio Adolfo Suárez]]
+|location=[[Ávila, Spain|Ávila]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=20:00
+|team1='''[[UD Logroñés]] (4)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ud-logrones-ponferradina-3
+|team2=[[SD Ponferradina|Ponferradina]] (3)
+|goals1=
+|goals2=
+|stadium=[[Estadio Las Gaunas]]
+|location=[[Logroño]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=21:00
+|team1='''[[UD Sámano|Sámano]] (4)'''
+|score=1–5
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-samano-rc-deportivo-3
+|team2=[[Deportivo de La Coruña|Deportivo La Coruña]] (2)
+|goals1=
+|goals2=
+|stadium=Estadio Riomar
+|location=[[Castro Urdiales]]{{efn|Sámano did not play the match in their main stadium Estadio Vallegón, Sámano, as it did not meet the broadcasting requirements.<ref>[https://www.rcdeportivo.es/noticias/el-partido-copa-ante-la-ud-samano-se-jugara-el-30-de-octubre-a-las-2100-en-castro-urdiales] RC Deportivo. 10 October 2025. (in Spanish)</ref>}} 
+|attendance=
+|referee=
+}}
+
+===Group 2===
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=19:00
+|team1='''[[CE Constància|Constància]] (5)'''
+|score=2–3
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-constancia-girona-fc-3
+|team2=[[Girona FC|Girona]] (1)
+|goals1=
+|goals2=
+|stadium=[[Nou Camp d'Inca|Nou Camp]]
+|location=[[Inca, Spain|Inca]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=20:30
+|team1='''[[Utebo FC|Utebo]] (4)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-utebo-sd-huesca-3
+|team2=[[SD Huesca|Huesca]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Santa Ana|Santa Ana]]
+|location=[[Utebo]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=18:00
+|team1='''[[UD Poblense|Poblense]] (4)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ud-poblense-ce-sabadell-3
+|team2=[[CE Sabadell FC|Sabadell]] (3)
+|goals1=
+|goals2=
+|stadium=[[Nou Camp de Sa Pobla|Nou Camp]]
+|location=[[Sa Pobla]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=19:00
+|team1='''[[CD Sant Jordi|Sant Jordi]] (6)'''
+|score=0–5
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-sant-jordi-ca-osasuna-3
+|team2=[[CA Osasuna|Osasuna]] (1)
+|goals1=
+|goals2=
+|stadium=[[Camp de Son Malferit]]
+|location=[[Palma de Mallorca|Palma]]{{efn|Sant Jordi did not play the match in their main stadium Municipal, Sant Jordi, [[Palma de Mallorca|Palma]], as it did not meet the broadcasting requirements.<ref>[https://www.marca.com/futbol/copa-rey/2025/10/16/sant-jordi-mallorca-podra-recibir-osasuna-campo.html] MARCA . 16 October 2025. (in Spanish)</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=19:00
+|team1='''[[UD Mutilvera|Mutilvera]] (4)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ud-mutilvera-real-zaragoza-3
+|team2=[[Real Zaragoza|Zaragoza]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Valle Araguren|Valle Araguren]]
+|location=Mutilva Baja, [[Aranguren]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=19:00
+|team1=[[CD Ebro|Ebro]] (4)
+|score=1–1
+|aet=yes
+|penaltyscore=4–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ebro-sd-tarazona-3
+|team2='''[[SD Tarazona|Tarazona]] (3)'''
+|goals1=
+|goals2=
+|stadium=Estadio Pedro Sancho{{efn|Ebro did not play the match in their main stadium [[Campo Municipal de Fútbol La Almozara]], [[Zaragoza]], as it did not meet the broadcasting requirements.}} 
+|location=[[Zaragoza]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1='''[[Atlètic Sant Just FC|Atlètic Sant Just]] (6)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-sant-just-rcd-mallorca-3
+|team2=[[RCD Mallorca|Mallorca]] (1)
+|goals1=
+|goals2=
+|stadium=[[Estadi Municipal de Futbol de L'Hospitalet|Municipal de L'Hospitalet]]
+|location=[[L'Hospitalet de Llobregat|L'Hospitalet]]{{efn|Atlètic Sant Just did not play the match in their main stadium [[Camp Municipal Sant Just Desvern|Municipal]], [[Sant Just Desvern]], as it did not meet the broadcasting requirements.<ref>[https://www.3cat.cat/esport3/latletic-sant-just-no-podra-jugar-a-casa-el-partit-contra-el-mallorca-nou-escenari-a-la-vista/noticia/3374378/] 3cat.cat . 11 October 2025. (in Catalan)</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1=[[UE Sant Andreu|Sant Andreu]] (4)
+|score=2–1
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-sant-andreu-cd-teruel-3
+|team2='''[[CD Teruel|Teruel]] (3)'''
+|goals1=
+|goals2=
+|stadium=[[Camp Municipal Narcís Sala|Narcís Sala]]
+|location=[[Barcelona]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:30
+|team1=[[Reus FC Reddis|Reus FCR]] (4)
+|score=2–2
+|aet=y
+|penaltyscore=4–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-reus-fc-reddis-ce-europa-3
+|team2='''[[CE Europa|Europa]] (3)'''
+|goals1=
+|goals2=
+|stadium=[[Estadi Municipal de Reus]]
+|location=[[Reus]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=19:30
+|team1='''[[CD Valle de Egüés|Valle de Egüés]] (5)'''
+|score=1–5
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-valle-de-egues-fc-andorra-3
+|team2=[[FC Andorra|Andorra]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Sarriguren|Sarriguren]]
+|location=[[Egüés]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=20:00
+|team1=[[CD Atlético Baleares|Atlético Baleares]] (4)
+|score=2–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-atletico-baleares-gimnastic-tarragona-3
+|team2='''[[Gimnàstic de Tarragona|Gimnàstic]] (3)'''
+|goals1=
+|goals2=
+|stadium=[[Estadi Balear]]
+|location=[[Palma de Mallorca|Palma]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=21:00
+|team1='''[[CE Atlètic Lleida|Atlètic Lleida]] (4)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-atletic-lleida-rcd-espanyol-de-barcelona-3
+|team2=[[RCD Espanyol|Espanyol]] (1)
+|goals1=
+|goals2=
+|stadium=[[Camp d'Esports]]
+|location=[[Lleida]]
+|attendance=
+|referee=
+}}
+
+===Group 3===
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=19:30
+|team1='''[[UCAM Murcia CF|UCAM Murcia]] (4)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ucam-murcia-cf-cadiz-cf-3
+|team2=[[Cádiz CF|Cádiz]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio de La Condomina|La Condomina]]
+|location=[[Murcia]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=20:00
+|team1='''[[UD Maracena|Maracena]] (6)'''
+|score=0–5
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ud-maracena-valencia-cf-3
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+|goals2=
+*[[Hugo Duro|Duro]] {{goal|55}}
+*[[Dani Raba|Raba]] {{goal|60}}
+*[[Diego López (footballer, born May 2002)|López]] {{goal|67}}
+*[[Luis Rioja|Rioja]] {{goal|75}}
+*[[Arnaut Danjuma|Danjuma]] {{goal|80}}
+|stadium=[[Estadio Nuevo Los Cármenes]]
+|location=[[Granada]]{{efn|Maracena did not play the match in their main stadium Ciudad Deportiva, [[Maracena]], as it did not meet the broadcasting requirements.<ref>[https://www.granadacf.es/noticias/comunicado-oficial-or-ud-maracena-valencia-cf] Granada CF . 17 October 2025. (in Spanish)</ref>}} 
+|attendance=
+|referee=Francisco José Hernández Maeso
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=20:00
+|team1='''[[CD Roda|Roda]] (5)'''
+|score=1–5
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-roda-granada-cf-3
+|team2=[[Granada CF|Granada]] (2)
+|goals1=
+|goals2=
+|stadium=[[Ciudad Deportiva Villarreal CF|Ciutat Esportiva Pamesa Ceràmica]]
+|location=[[Villarreal]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=21:00
+|team1='''[[CD Toledo|Toledo]] (5)'''
+|score=1–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-toledo-sevilla-fc-3
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+|goals2=
+|stadium=[[Estadio Salto del Caballo|Salto del Caballo]]
+|location=[[Toledo, Spain|Toledo]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=19:00
+|team1='''[[UD Los Garres|Los Garres]] (6)'''
+|score=0–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ud-los-garres-elche-cf-3
+|team2=[[Elche CF|Elche]] (1)
+|goals1=
+|goals2=
+*[[Adam Boayar|Adam]] {{goal|18}}
+*[[Martim Neto|Neto]] {{goal|45+1}}
+*[[Rodri Mendoza|Mendoza]] {{goal|45+4}}
+*[[Federico Redondo|Redondo]] {{goal|76}}
+|stadium=[[Estadio Nueva Condomina]]
+|location=[[Murcia]]{{efn|Los Garres did not play the match in their main stadium [[Campo Municipal Las Tejeras|Las Tejeras]], [[Los Garres]], as it did not meet the broadcasting requirements.<ref>[https://www.realmurcia.es/el-real-murcia-abre-las-puertas-del-estadio-enrique-roca-de-murcia-a-la-u-d-los-garres-para-su-partido-de-copa-del-rey-ante-el-elche-c-f/] Real Murcia . 8 October 2025. (in Spanish)</ref>}} 
+|attendance=8,000
+|referee=Mateo Busquets Ferrer
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=19:30
+|team1='''[[FC La Unión Atlético|La Unión Atlético]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-union-atletico-ad-ceuta-fc-3
+|team2=[[AD Ceuta FC|Ceuta]] (2)
+|goals1=
+|goals2=
+|stadium=Juan Cayuela
+|location=[[Totana]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1=[[Torrent CF|Torrent]] (4)
+|score=3–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-torrent-juventud-torremolinos-3
+|team2='''[[Juventud de Torremolinos CF|Juventud Torremolinos]] (3)'''
+|goals1=
+|goals2=
+|stadium=[[Estadio San Gregorio|San Gregorio]]
+|location=[[Torrent, Valencia|Torrent]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1='''[[CF Lorca Deportiva|Lorca Deportiva]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cf-lorca-dep-ud-almeria-3
+|team2=[[UD Almería|Almería]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Francisco Artés Carrasco|Francisco Artés Carrasco]]
+|location=[[Lorca, Spain|Lorca]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1=[[CD Cieza|Cieza]] (5)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cieza-cordoba-cf-3
+|team2='''[[Córdoba CF|Córdoba]] (2)'''
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal La Arboleja|La Arboleja]]
+|location=[[Cieza, Murcia|Cieza]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:30
+|team1='''[[Puente Genil FC|Puente Genil]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-puente-genil-fc-cartagena-3
+|team2=[[FC Cartagena|Cartagena]] (3)
+|goals1=
+|goals2=
+|stadium=[[Estadio Manuel Polinario|Manuel Polinario "Poli"]]
+|location=[[Puente Genil]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=21:00
+|team1='''[[CD Ciudad de Lucena|Ciudad de Lucena]] (5)'''
+|score=0–6
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-lucena-villarreal-cf-3
+|team2=[[Villarreal CF|Villarreal]] (1)
+|goals1=
+|goals2=
+|stadium=[[Estadio Ciudad de Lucena|Ciudad de Lucena]]
+|location=[[Lucena, Córdoba|Lucena]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=21:00
+|team1='''[[Real Jaén|Jaén]] (4)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-jaen-eldense-3
+|team2=[[CD Eldense|Eldense]] (3)
+|goals1=
+|goals2=
+|stadium=[[Nuevo Estadio de La Victoria|Nuevo La Victoria]]
+|location=[[Jaén, Spain|Jaén]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=19:00
+|team1='''[[Orihuela CF|Orihuela]] (4)'''
+|score=3–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-orihuela-cf-levante-ud-3
+|team2=[[Levante UD|Levante]] (1)
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal Los Arcos|Los Arcos]]
+|location=[[Orihuela]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=20:00
+|team1=[[CA Antoniano|Atlético Antoniano]] (4)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-club-atletico-antoniano-cd-castellon-3
+|team2='''[[CD Castellón|Castellón]] (2)'''
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal de Lebrija|Municipal de Lebrija]]
+|location=[[Lebrija]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=21:00
+|team1='''[[CD Estepona FS|Estepona]] (4)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-estepona-malaga-cf-3
+|team2=[[Málaga CF|Málaga]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal Francisco Muñoz Pérez|Francisco Muñoz Pérez]]
+|location=[[Estepona]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=21:00
+|team1='''[[Atlético Palma del Río CF|Atlético Palma del Río]] (6)'''
+|score=1–7
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-palma-del-rio-real-betis-3
+|team2=[[Real Betis]] (1)
+|goals1=
+|goals2=
+|stadium=Estadio Sergio León
+|location=[[Palma del Río]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=30 October 2025
+|time=21:00
+|team1=[[Real Murcia CF|Murcia]] (3)
+|score=1–1
+|aet=y
+|penaltyscore=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-murcia-antequera-cf-3
+|team2='''[[Antequera CF|Antequera]] (3)'''
+|goals1=
+|goals2=
+|stadium=[[Estadio Nueva Condomina|Nueva Condomina]]
+|location=[[Murcia]]
+|attendance=
+|referee=
+}}
+
+===Group 4===
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=20:00
+|team1='''[[CF Inter de Valdemoro|Inter de Valdemoro]] (6)'''
+|score=0–11
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-int-valdemoro-getafe-cf-3
+|team2=[[Getafe CF|Getafe]] (1)
+|goals1=
+|goals2=
+*[[Mario Martín|Martín]] {{goal|21}}
+*[[Juanmi (footballer, born 1993)|Juanmi]] {{goal|26|pen.|36||45||48}}
+*[[Javier Muñoz (Spanish footballer)|Muñoz]] {{goal|52||66}}
+*[[Yvan Neyou|Neyou]] {{goal|56}}
+*[[Joselu (footballer, born 2004)|Joselu]] {{goal|70}}
+*[[Borja Mayoral|Mayoral]] {{goal|72||76}}
+|stadium=[[Estadio Coliseum]]
+|location=[[Getafe]]{{efn|Inter de Valdemoro did not play the match in their main stadium El Restón, [[Valdemoro]], as it did not meet the broadcasting requirements.<ref>[https://www.marca.com/futbol/getafe/2025/10/10/inter-valdemoro-getafe-podria-jugarse-coliseum.html] MARCA . 10 October 2025. (in Spanish)</ref>}} 
+|attendance=
+|referee=Iosu Galech Apezteguía
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=20:00
+|team1=[[CD Guadalajara (Spain)|Guadalajara]] (3)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-guadalajara-cp-cacereno-3
+|team2='''[[CP Cacereño|Cacereño]] (3)'''
+|goals1=
+*[[Neskes]] {{goal|41|pen.}}
+*Mayo {{goal|83}}
+|goals2=Berlanga {{goal|90+4}}
+|stadium=[[Estadio Pedro Escartín]]
+|location=[[Guadalajara, Spain|Guadalajara]]
+|attendance=
+|referee=Luis Enrique Morona del Campo
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=20:00
+|team1='''[[CF Rayo Majadahonda|Rayo Majadahonda]] (4)'''
+|score=1–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cf-rayo-cf-talavera-3
+|team2=[[CF Talavera de la Reina|Talavera de la Reina]] (3)
+|goals1=
+|goals2=
+|stadium=[[Estadio Cerro del Espino]]
+|location=[[Majadahonda]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=20:00 [[Western European Time|WET]]
+|team1='''[[UD San Fernando|San Fernando]] (5)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ud-san-fernando-albacete-bp-3
+|team2=[[Albacete Balompié|Albacete]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Gran Canaria]]
+|location=[[Las Palmas]]{{efn|UD San Fernando did not play the match in their main stadium [[Ciudad Deportiva de Maspalomas|Ciudad Deportiva]], [[Maspalomas]], as it did not meet the broadcasting requirements.<ref>[https://www.5maseldescuento.es/2025/10/el-ud-san-fernando-albacete-de-copa-del-rey-se-jugara-el-martes-28-de-octubre-a-las-20-horas-en-el-estadio-de-gran-canaria/] 5maseldescuento.es . 10 October 2025. (in Spanish)</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=20:30
+|team1='''[[RSD Alcalá|Alcalá]] (4)'''
+|score=0–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-alcala-tenerife-3
+|team2=[[CD Tenerife|Tenerife]] (3)
+|goals1=
+|goals2=
+|stadium=Municipal del Val
+|location=[[Alcalá de Henares]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=28 October 2025
+|time=21:00
+|team1=[[CD Extremadura|Extremadura]] (4)
+|score=3–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-extremadura-ud-las-palmas-3
+|team2='''[[UD Las Palmas|Las Palmas]] (2)'''
+|goals1=
+|goals2=
+|stadium=[[Estadio Francisco de la Hera]]
+|location=[[Almendralejo]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1=[[CDA Navalcarnero|Navalcarnero]] (4)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cda-navalcarnero-ad-merida-3
+|team2='''[[Mérida AD|Mérida]] (3)'''
+|goals1=
+|goals2=
+|stadium=[[Estadio Mariano González|Mariano González]]
+|location=[[Navalcarnero]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=20:00
+|team1='''[[CD Azuaga|Azuaga]] (5)'''
+|score=1–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-azuaga-cd-leganes-3
+|team2=[[CD Leganés|Leganés]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal de Deportes de Azuaga|Municipal]]
+|location=[[Azuaga]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=21:00
+|team1='''[[CD Yuncos|Yuncos]] (6)'''
+|score=1–6
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-yuncos-rayo-vallecano-3
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+|goals2=
+|stadium=[[Complejo Deportivo Villa de Yuncos]]
+|location=[[Yuncos]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2025
+|time=21:00
+|team1=[[CD Quintanar del Rey|Quintanar del Rey]] (4)
+|score=1–1
+|aet=y
+|penaltyscore=4–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-quintanar-del-rey-ud-ibiza-3
+|team2='''[[UD Ibiza|Ibiza]] (3)'''
+|goals1=
+|goals2=
+|stadium=[[Campo Municipal San Marcos|San Marcos]]
+|location=[[Quintanar del Rey]]
+|attendance=
+|referee=
+}}
+;Notes
+{{notelist}}
+
+==Second round==
+
+===Draw===
+The draw for the second round was held on 11 November 2025. Teams were divided in two groups.<ref>{{cite news|url=https://rfef.es/es/noticias/56-equipos-en-los-bombos-para-estrenar-diciembre-lo-grande|title=CAMPEONATO DE ESPAÑA / COPA DE S.M. EL REY Sorteo Segunda Eliminatoria|publisher=RFEF|language=es|access-date=10 November 2025}}</ref>
+
+This second round maintains the criteria of geographical proximity. 
+
+A total of 28 matches were played between 2 and 4 December 2025.
+
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|Group 1}} || width=15%|'''Pot 2'''<br/>{{small|Group 2}}
+|- valign=top
+|
+* [[Deportivo Alavés|Alavés]]
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[RCD Espanyol|Espanyol]]
+* [[Girona FC|Girona]]
+* [[RCD Mallorca|Mallorca]]
+* [[CA Osasuna|Osasuna]]
+* [[Real Sociedad]]
+
+* [[FC Andorra|Andorra]]
+* [[Burgos CF|Burgos]]
+* [[Cultural y Deportiva Leonesa|Cultural Leonesa]]
+* [[Deportivo de La Coruña|Deportivo La Coruña]]
+* [[SD Eibar|Eibar]]
+* [[SD Huesca|Huesca]]
+* [[CD Mirandés|Mirandés]]
+* [[Racing de Santander|Racing Santander]]
+* [[Sporting de Gijón|Sporting Gijón]]
+* [[Real Zaragoza|Zaragoza]]
+
+* [[SD Ponferradina|Ponferradina]]
+* [[Pontevedra CF|Pontevedra]]
+* [[Racing de Ferrol|Racing Ferrol]]
+* [[CE Sabadell|Sabadell]]
+
+* [[Atlético Baleares]]
+* [[CD Ebro|Ebro]]
+* [[CD Numancia|Numancia]]
+* [[Reus FC Reddis|Reus FCR]]
+* [[UE Sant Andreu|Sant Andreu]]
+
+* [[Club Portugalete|Portugalete]]
+
+* [[Ourense CF]]
+|
+* [[Elche CF|Elche]]
+* [[Getafe CF|Getafe]]
+* [[Levante UD|Levante]]
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Villarreal CF|Villarreal]]
+
+* [[Albacete Balompié|Albacete]]
+* [[UD Almería|Almería]]
+* [[Cádiz CF|Cádiz]]
+* [[AD Ceuta FC|Ceuta]]
+* [[Granada CF|Granada]]
+* [[CD Leganés|Leganés]]
+* [[Málaga CF|Málaga]]
+
+* [[FC Cartagena|Cartagena]]
+* [[CD Eldense|Eldense]]
+* [[CD Guadalajara (Spain)|Guadalajara]]
+* [[Real Murcia|Murcia]]
+* [[CF Talavera de la Reina|Talavera de la Reina]]
+* [[CD Tenerife|Tenerife]]
+
+* [[CA Antoniano|Atlético Antoniano]]
+* [[Real Ávila CF|Ávila]]
+* [[CD Extremadura|Extremadura]]
+* [[CDA Navalcarnero|Navalcarnero]]
+* [[CD Quintanar del Rey|Quintanar del Rey]]
+* [[Torrent CF|Torrent]]
+
+* [[CD Cieza|Cieza]]
+|}
+
+===Group 1===
+{{football box collapsible
+|id=
+|date=2 December 2025
+|time=19:00
+|team1='''[[CD Numancia|Numancia]] (4)'''
+|score=2–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-numancia-rcd-mallorca-4
+|team2=[[RCD Mallorca|Mallorca]] (1)
+|goals1=
+*González {{goal|54}}
+*[[Fabrizio Danese|Danese]] {{goal|75}}
+|goals2=
+*[[Javi Llabrés|Llabrés]] {{goal|7}}
+*[[Abdón Prats|Prats]] {{goal|24||64|pen.}}
+|stadium=[[Nuevo Estadio Los Pajaritos|Los Pajaritos]]
+|location=[[Soria]]
+|attendance=3,654
+|referee=[[César Soto Grado]]
+}}
+{{football box collapsible
+|id=
+|date=2 December 2025
+|time=19:00
+|team1='''[[Racing de Ferrol|Racing Ferrol]] (3)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-racing-club-ferrol-sd-huesca-4
+|team2=[[SD Huesca|Huesca]] (2)
+|goals1=
+|goals2=
+*[[Ángel Pérez (footballer, born 2002)|Pérez]] {{goal|15}}
+*[[Samuel Ntamack|Ntamack]] {{goal|72}}
+|stadium=[[Estadio Municipal da Malata|Estadio Municipal de A Malata]]
+|location=[[Ferrol, Galicia|Ferrol]]
+|attendance=1,100
+|referee=Germán Cid Camacho
+}}
+{{football box collapsible
+|id=
+|date=2 December 2025
+|time=21:00
+|team1='''[[Club Portugalete|Portugalete]] (5)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-club-portugalete-deportivo-alaves-4
+|team2=[[Deportivo Alavés|Alavés]] (1)
+|goals1=
+|goals2=
+*[[Carlos Vicente (footballer)|Vicente]] {{goal|3}}
+*Tapiador {{goal|71|o.g.}}
+*[[Toni Martínez|Martínez]] {{goal|90+1}}
+|stadium=[[Estadio La Florida|La Florida]]
+|location=[[Portugalete]]
+|attendance=3,050
+|referee=Alejandro Muñiz Ruiz
+}}
+{{football box collapsible
+|id=
+|date=2 December 2025
+|time=19:00
+|team1='''[[CD Ebro|Ebro]] (4)'''
+|score=3–5
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ebro-ca-osasuna-4
+|team2=[[CA Osasuna|Osasuna]] (1)
+|goals1=
+*Soeiro {{goal|45+1}}
+*Prat {{goal|80}}
+*Charlez {{goal|90+3|pen.}}
+|goals2=
+*[[Raúl García (footballer, born 2000)|García]] {{goal|49|pen.|78}}
+*[[Moi Gómez|Gómez]] {{goal|84}}
+*[[Sheraldo Becker|Becker]] {{goal|88}}
+*[[Víctor Muñoz (footballer, born 2003)|Muñoz]] {{goal|90+7}}
+|stadium=[[Ibercaja Stadium]]
+|location=[[Zaragoza]]{{efn|Ebro did not play the match in their main stadium [[Campo Municipal de Fútbol La Almozara]], [[Zaragoza]], as it did not meet the broadcasting requirements.}} 
+|attendance=
+|referee=Miguel Sesma Espinosa
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=20:00
+|team1='''[[CD Mirandés|Mirandés]] (2)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-mirandes-real-sporting-4
+|team2=[[Sporting de Gijón|Sporting Gijón]] (2)
+|goals1=
+|goals2=
+*[[Amadou Coundoul|Coundoul]] {{goal|14}}
+*[[Manu Rodríguez (footballer)|Rodríguez]] {{goal|19}}
+|stadium=[[Mendizorrotza Stadium|Campo de fútbol de Mendizorroza]]
+|location=[[Vitoria-Gasteiz]]{{efn|Mirandés did not play the match in their main stadium [[Estadio Municipal de Anduva]], [[Miranda de Ebro]]. Alavés and the Vitoria City Council reached an agreement for Mirandés to use their stadium as an alternative venue while the renovation and adaptation of the new stand at the Anduva stadium was carried out.<ref>[https://www.cdmirandes.com/noticias/el-cd-mirandes-jugara-en-mendizorrotza-en-el-inicio-de-la-temporada-25-26] CD Mirandés . 16 June 2025. (in Spanish)</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=20:00
+|team1=[[Cultural y Deportiva Leonesa|Cultural Leonesa]] (2)
+|score=4–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cultural-y-deportiva-leonesa-fc-andorra-4
+|team2='''[[FC Andorra|Andorra]] (2)'''
+|goals1=
+*[[Pibe|Pastoriza]] {{goal|29}}
+*[[Paco Cortés|Cortés]] {{goal|51}}
+*[[Quique Fornos|Fornos]] {{goal|69}}
+*[[Lucas Ribeiro (footballer, born 1998)|Ribeiro]] {{goal|89}}
+|goals2=
+*[[Jastin García|Jastin]] {{goal|42}}
+*[[Théo Le Normand|Le Normand]] {{goal|65}}
+|stadium=[[Estadio Reino de León]]
+|location=[[León, Spain|León]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=21:00
+|team1=[[Ourense CF]] (3)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ourense-cf-girona-fc-4
+|team2='''[[Girona FC|Girona]] (1)'''
+|goals1=
+*Yuste {{goal|1}}
+*Ouhdadi {{goal|64}}
+|goals2=
+*[[Yáser Asprilla|Asprilla]] {{goal|25}}
+|stadium=[[Estadio O Couto|O Couto]]
+|location=[[Ourense]]
+|attendance=
+|referee=[[Alejandro Hernández Hernández]]
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=21:00
+|team1='''[[Reus FC Reddis|Reus FCR]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-reus-fc-reddis-real-sociedad-4
+|team2=[[Real Sociedad]] (1)
+|goals1=
+|goals2=
+*[[Mikel Goti|Goti]] {{goal|49}}
+*[[Umar Sadiq|Sadiq]] {{goal|90+3|pen.}}
+|stadium=[[Estadi Municipal de Reus]]
+|location=[[Reus]]
+|attendance=
+|referee=[[Juan Martínez Munuera]]
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=21:00
+|team1='''[[Pontevedra CF|Pontevedra]] (3)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-pontevedra-cf-sd-eibar-4
+|team2=[[SD Eibar|Eibar]] (2)
+|goals1=
+|goals2=
+*[[Javier Martón|Martón]] {{goal|30}}
+*[[José Corpas|Corpas]] {{goal|65}}
+*[[Jon Magunacelaya|Magunacelaya]] {{goal|77}}
+|stadium=[[Estadio Municipal de Pasarón|Pasarón]]
+|location=[[Pontevedra]]
+|attendance=
+|referee= Miguel González Díaz
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=19:00
+|team1=[[Atlético Baleares]] (4)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-atletico-baleares-rcd-espanyol-de-barcelona-4
+|team2='''[[RCD Espanyol|Espanyol]] (1)'''
+|goals1=
+*Tovar {{goal|54}}
+|goals2=
+|stadium=[[Estadi Balear]]
+|location=[[Palma de Mallorca|Palma]]
+|attendance=
+|referee=Alejandro Quintero González
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=19:00
+|team1='''[[CE Sabadell|Sabadell]] (3)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ce-sabadell-fc-rc-deportivo-4
+|team2=[[Deportivo de La Coruña|Deportivo La Coruña]] (2)
+|goals1=
+|goals2=
+*[[Cristian Herrera|Herrera]] {{goal|54}}
+*[[Rubén López (footballer, born 2004)|Rubén]] {{goal|80}}
+|stadium=[[Estadi de la Nova Creu Alta|Nova Creu Alta]]
+|location=[[Sabadell]]
+|attendance= 7,651
+|referee= Alonso De Ena Wolf
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=20:00
+|team1='''[[SD Ponferradina|Ponferradina]] (3)'''
+|score=1–2
+|aet= yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-sd-ponferradina-r-racing-club-4
+|team2=[[Racing de Santander|Racing Santander]] (2)
+|goals1=
+*Pau {{goal|69}}
+|goals2=
+*[[Juan Carlos Arana|Carlos Arana]] {{goal|53}}
+*[[Aritz Aldasoro|Aldasoro]] {{goal|119}}
+|stadium=[[Estadio El Toralín]]
+|location=[[Ponferrada]]
+|attendance=
+|referee=Daniel Palencia Caballero
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=21:00
+|team1='''[[UE Sant Andreu|Sant Andreu]] (4)'''
+|score=1–1
+|aet=yes
+|penaltyscore=6–7
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-sant-andreu-celta-4
+|team2=[[RC Celta de Vigo|Celta Vigo]] (1)
+|goals1=
+*García {{goal|103}}
+|goals2=
+*[[Borja Iglesias|Iglesias]] {{goal|105}}
+|penalties1=
+*García {{pengoal}}
+*Marcet {{pengoal}}
+*[[Carlos Blanco (footballer, born 1996)|Blanco]] {{pengoal}}
+*Naranjo {{pengoal}}
+*Lucas Viña {{pengoal}}
+*Torices {{pengoal}}
+*Serrano {{penmiss}}
+|penalties2=
+*{{pengoal}} [[Óscar Mingueza|Mingueza]]
+*{{pengoal}} [[Borja Iglesias|Iglesias]]
+*{{pengoal}} [[Iago Aspas|Aspas]]
+*{{pengoal}} [[Hugo Álvarez (footballer, born 2003)|Álvarez]]
+*{{pengoal}} [[Fran Beltrán|Beltrán]]
+*{{pengoal}} [[Pablo Durán|Durán]]
+*{{pengoal}} [[Yoel Lago|Lago]]
+|stadium=[[Camp Municipal Narcís Sala|Narcís Sala]]
+|location=[[Barcelona]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=21:00
+|team1='''[[Real Zaragoza|Zaragoza]] (2)'''
+|score=0–1
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-zaragoza-burgos-cf-4
+|team2=[[Burgos CF|Burgos]] (2)
+|goals1=
+|goals2=
+*[[Mario González (footballer, born 1996)|González]] {{goal|116}}
+|stadium=[[Ibercaja Stadium]]
+|location=[[Zaragoza]]
+|attendance=
+|referee=Gorka Etayo Herrera
+}}
+
+===Group 2===
+{{football box collapsible
+|id=
+|date=2 December 2025
+|time=20:00
+|team1=[[CD Guadalajara (Spain)|Guadalajara]] (3)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-guadalajara-ad-ceuta-fc-4
+|team2='''[[AD Ceuta FC|Ceuta]] (2)'''
+|goals1=
+*Cañizo {{goal|44}}
+|goals2=
+|stadium=[[Estadio Pedro Escartín]]
+|location=[[Guadalajara, Spain|Guadalajara]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=2 December 2025
+|time=21:00
+|team1='''[[CDA Navalcarnero|Navalcarnero]] (4)'''
+|score=2–3
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cda-navalcarnero-getafe-cf-4
+|team2=[[Getafe CF|Getafe]] (1)
+|goals1=
+*Perera {{goal|6}}
+*Pérez {{goal|14}}
+|goals2=
+*Calado {{goal|69|o.g.}}
+*[[Mario Martín|Martín]] {{goal|88}}
+*Montes {{goal|111}}
+|stadium=[[Estadio Mariano González|Mariano González]]
+|location=[[Navalcarnero]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=20:00
+|team1=[[CD Eldense|Eldense]] (3)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-eldense-ud-almeria-4
+|team2='''[[UD Almería|Almería]] (2)'''
+|goals1=
+*[[Hamza Bellari|Bellari]] {{goal|54}}
+*[[Nacho Quintana|Quintana]] {{goal|65}}
+|goals2=
+*[[Patrick Soko|Soko]] {{goal|30}}
+|stadium=[[Estadio Municipal Nuevo Pepico Amat]]
+|location=[[Elda]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=20:00
+|team1=[[CF Talavera de la Reina|Talavera de la Reina]] (3)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cf-talavera-de-la-reina-malaga-cf-4
+|team2='''[[Málaga CF|Málaga]] (2)'''
+|goals1=
+*[[Sergio Montero|Montero]] {{goal|55||65}}
+|goals2=
+*[[Adrián Niño|Niño]] {{goal|88}}
+|stadium=[[Estadio El Prado]]
+|location=[[Talavera de la Reina]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=20:00
+|team1=[[Real Murcia|Murcia]] (3)
+|score=3–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-murcia-cf-cadiz-cf-4
+|team2='''[[Cádiz CF|Cádiz]] (2)'''
+|goals1=
+*[[Alex Schalk|Schalk]] {{goal|14}}
+*[[Pedro Benito|Benito]] {{goal|21}}
+*[[David Vicente|Vicente]] {{goal|48}}
+|goals2=
+*[[Youssouf Diarra|Diarra]] {{goal|53}}
+*[[Dawda Camara|Dawda]] {{goal|77}}
+|stadium=[[Estadio Nueva Condomina|Nueva Condomina]]
+|location=[[Murcia]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=21:00
+|team1='''[[CD Cieza|Cieza]] (5)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cieza-levante-ud-4
+|team2=[[Levante UD|Levante]] (1)
+|goals1=
+|goals2=
+*[[Goduine Koyalipou|Koyalipou]] {{goal|57}}
+|stadium=[[Estadio Municipal La Arboleja|La Arboleja]]
+|location=[[Cieza, Murcia|Cieza]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=21:00
+|team1='''[[CA Antoniano|Atlético Antoniano]] (4)'''
+|score=1–1
+|aet=yes
+|penaltyscore=3–5
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-club-atletico-antoniano-villarreal-cf-4
+|team2=[[Villarreal CF|Villarreal]] (1)
+|goals1=
+*García {{goal|109}}
+|goals2=
+*[[Ayoze Pérez|Pérez]] {{goal|102}}
+|penalties1=
+*Pedraza {{pengoal}}
+*Pana {{pengoal}}
+*Durán {{penmiss}}
+*Arreola {{pengoal}}
+|penalties2=
+*{{pengoal}} [[Dani Parejo|Parejo]]
+*{{pengoal}} [[Pape Gueye|Gueye]]
+*{{pengoal}} [[Georges Mikautadze|Mikautadze]]
+*{{pengoal}} [[Ayoze Pérez|Pérez]]
+*{{pengoal}} [[Ilias Akhomach|Akhomach]]
+|stadium=[[Estadio Municipal de Lebrija|Municipal de Lebrija]]
+|location=[[Lebrija]]
+|attendance=
+|referee=Francisco José Hernández Maeso
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=21:00
+|team1='''[[CD Quintanar del Rey|Quintanar del Rey]] (4)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-quintanar-del-rey-elche-cf-4
+|team2=[[Elche CF|Elche]] (1)
+|goals1=
+*Iglesias {{goal|70}}
+|goals2=
+*[[Ali Houary|Houary]] {{goal|48}}
+*[[Héctor Fort|Fort]] {{goal|117}}
+|stadium=[[Campo Municipal San Marcos|San Marcos]]
+|location=[[Quintanar del Rey]]
+|attendance=3,000
+|referee=José Luis Guzmán Mansilla
+}}
+{{football box collapsible
+|id=
+|date=3 December 2025
+|time=21:00
+|team1='''[[Torrent CF|Torrent]] (4)'''
+|score=1–4
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-torrent-real-betis-4
+|team2=[[Real Betis]] (1)
+|goals1=
+*Corbalán {{goal|85}}
+|goals2=
+*[[Rodrigo Riquelme (footballer, born 2000)|Riquelme]] {{goal|11||43||75}}
+*[[Ángel Ortiz (footballer, born 2004)|Ortiz]] {{goal|90}}
+|stadium=[[Estadio Ciutat de València]]
+|location=[[Valencia]]{{efn|Torrent did not play the match in their main stadium [[Estadio San Gregorio]], [[Torrent, Valencia|Torrent]], due to problems with the stadium renovation work.<ref>[https://www.marca.com/futbol/copa-rey/2025/11/20/torrent-betis-copa-rey-jugara-finalmente-ciutat-valencia.html?_appid=da429c2a13c9aa3e67c4ff379091d3ba&cid=TRFCOAPP0002&s_kw=marca&appLoader=android] MARCA . 20 November 2025. (in Spanish)</ref> }}
+|attendance= 6,680
+|referee= José María Sánchez Santos
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=19:00
+|team1='''[[CD Leganés|Leganés]] (2)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-leganes-albacete-bp-4
+|team2=[[Albacete Balompié|Albacete]] (2)
+|goals1=
+*[[Naim García|García]] {{goal|90+2}}
+|goals2=
+*[[Marvel (footballer)|Marvel]] {{goal|51|o.g.}}
+*[[José Carlos Lazo|Lazo]] {{goal|61}}
+|stadium=[[Estadio Municipal de Butarque|Estadio Ontime Butarque]]
+|location=[[Leganés]]
+|attendance=
+|referee=Luis Bestard Servera
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=19:00
+|team1='''[[Real Ávila CF|Ávila]] (4)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-avila-rayo-vallecano-4
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+*Pascual {{goal|50}}
+|goals2=
+*[[Isi Palazón|Palazón]] {{goal|90+4}}
+*[[Álvaro García (footballer, born 1992)|García]] {{goal|120}}
+|stadium=[[Estadio Adolfo Suárez]]
+|location=[[Ávila, Spain|Ávila]]
+|attendance=
+|referee=Adrián Cordero Vega
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=21:00
+|team1='''[[FC Cartagena|Cartagena]] (3)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-fc-cartagena-valencia-cf-4
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+*[[Alfredo Ortuño|Ortuño]] {{goal|21}}
+|goals2=
+*[[Lucas Beltrán|Beltrán]] {{goal|79}}
+*[[Jesús Vázquez (footballer, born 2003)|Jesús Vázquez]] {{goal|120+1}}
+|stadium=[[Estadio Cartagonova|Estadio Municipal Cartagonova]]
+|location=[[Cartagena, Spain|Cartagena]]
+|attendance=
+|referee=Isidro Díaz De Mera Escuderos
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=21:00
+|team1='''[[CD Extremadura|Extremadura]] (4)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-extremadura-sevilla-fc-4
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+*[[Giovanni Zarfino|Zarfino]] {{goal|48}}
+|goals2=
+*[[Alfon (footballer)|Alfon]] {{goal|31}}
+*[[Isaac Romero|Romero]] {{goal|38}}
+|stadium=[[Estadio Francisco de la Hera]]
+|location=[[Almendralejo]]
+|attendance=
+|referee=Javier Alberola Rojas
+}}
+{{football box collapsible
+|id=
+|date=4 December 2025
+|time=22:00 [[Western European Time|WET]]
+|team1='''[[CD Tenerife|Tenerife]] (3)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-tenerife-granada-cf-4
+|team2=[[Granada CF|Granada]] (2)
+|goals1=
+|goals2=
+*[[Rubén Alcaraz|Alcaraz]] {{goal|61}}
+|stadium=[[Estadio Heliodoro Rodríguez López]]
+|location=[[Santa Cruz de Tenerife]]
+|attendance=
+|referee=Manuel Ángel Pérez Hernández
+}}
+;Notes
+{{notelist}}
+
+==Round of 32==
+===Draw===
+The draw for the round of 32 was held on 9 December 2025 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]]. The four participant teams of the [[2026 Supercopa de España]] were drawn with the teams from the lowest category. The remaining teams from the lowest categories faced the rest of La Liga teams. Matches were played at stadiums of lower-ranked teams.<ref>{{cite news|url=https://rfef.es/es/noticias/9-de-diciembre-sorteo-de-los-dieciseisavos-de-final-de-la-copa-del-rey-mapfre|title=9 de diciembre, sorteo de los dieciseisavos de final de la Copa del Rey Mapfre|publisher=RFEF|language=es|access-date=27 November 2025}}</ref>
+
+A total of 16 matches were played between 16 December 2025 and 6 January 2026. The match involving Rayo Vallecano was played during the week of 5 January due to a clash with the [[2025–26 UEFA Conference League league phase|UEFA Conference League league phase]] during the same week.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|4 participants in [[2026 Supercopa de España]]}} || width=15%|'''Pot 2'''<br/>{{small|13 teams of [[2025–26 La Liga|La Liga]]}} || width=15%|'''Pot 3'''<br/>{{small|9 teams of [[2025–26 Segunda División|Segunda División]]}}|| width="15%" |'''Pot 4'''<br/>{{small|4 teams of [[2025–26 Primera Federación|Primera Federación]]}} || width="15%" |'''Pot 5'''<br/>{{small|1 team of [[2025–26 Segunda Federación|Segunda Federación]]}} || width=15%|'''Pot 6'''<br/>{{small|1 team of [[2025 Copa Federación de España|Copa Federación]]}}
+|- valign=top 
+|
+* [[Athletic Bilbao]]
+* [[Atlético Madrid]]
+* [[FC Barcelona|Barcelona]]
+* [[Real Madrid CF|Real Madrid]]
+|
+* [[Deportivo Alavés|Alavés]]
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[Elche CF|Elche]]
+* [[Getafe CF|Getafe]]
+* [[Levante UD|Levante]]
+* [[RCD Mallorca|Mallorca]]
+* [[CA Osasuna|Osasuna]]
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Real Sociedad]]
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Villarreal CF|Villarreal]]
+|
+* [[Albacete Balompié|Albacete]]
+* [[Burgos CF|Burgos]]
+* [[Cultural y Deportiva Leonesa|Cultural Leonesa]]
+* [[Deportivo de La Coruña|Deportivo La Coruña]]
+* [[SD Eibar|Eibar]]
+* [[Granada CF|Granada]]
+* [[SD Huesca|Huesca]]
+* [[Racing de Santander|Racing Santander]]
+* [[Sporting de Gijón|Sporting Gijón]]
+|
+* [[CD Eldense|Eldense]]
+* [[CD Guadalajara (Spain)|Guadalajara]]
+* [[Real Murcia|Murcia]]
+* [[CF Talavera de la Reina|Talavera de la Reina]]
+|
+* [[Atlético Baleares]]
+|
+* [[Ourense CF]]
+|}
+
+===Matches===
+{{football box collapsible
+|id=
+|date=16 December 2025
+|time=19:00
+|team1='''[[SD Eibar|Eibar]] (2)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-sd-eibar-elche-cf-5
+|team2=[[Elche CF|Elche]] (1)
+|goals1=
+|goals2=
+*[[Adam Boayar|Boayar]] {{goal|27}}
+|stadium=[[Ipurua Municipal Stadium|Ipurúa]]
+|location=[[Eibar]]
+|attendance=2,426
+|referee=Alejandro Quintero González
+}}
+{{football box collapsible
+|id=
+|date=16 December 2025
+|time=19:00
+|team1=[[Deportivo de La Coruña|Deportivo La Coruña]] (2)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-rc-deportivo-rcd-mallorca-5
+|team2='''[[RCD Mallorca|Mallorca]] (1)'''
+|goals1=
+*[[Noé Carrillo|Carrillo]] {{goal|85}}
+|goals2=
+|stadium=[[Estadio Riazor|Riazor]]
+|location=[[A Coruña]]
+|attendance=17,873
+|referee=Miguel Ángel Ortiz Arias
+}}
+{{football box collapsible
+|id=
+|date=16 December 2025
+|time=21:00
+|team1='''[[CD Eldense|Eldense]] (3)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-eldense-real-sociedad-5
+|team2=[[Real Sociedad]] (1)
+|goals1=
+*[[Nacho Quintana|Quintana]] {{goal|81}}
+|goals2=
+*[[Luka Sučić|Sučić]] {{goal|79}}
+*[[Pablo Marín (footballer, born 2003)|Marín]] {{goal|90+6}}
+|stadium=[[Estadio Municipal Nuevo Pepico Amat|Nuevo Pepico Amat]]
+|location=[[Elda]]
+|attendance=3,392
+|referee=Francisco José Hernández Maeso
+}}
+{{football box collapsible
+|id=
+|date=16 December 2025
+|time=21:00
+|team1='''[[Sporting de Gijón|Sporting Gijón]] (2)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-sporting-valencia-cf-5
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+|goals2=
+*[[Lucas Beltrán|Beltrán]] {{goal|4}}
+*[[Dani Raba|Raba]] {{goal|48}}
+|stadium=[[El Molinón|El Molinón – Enrique Castro "Quini"]]
+|location=[[Gijón]]
+|attendance=16,275
+|referee=Alejandro Muñiz Ruiz
+}}
+{{football box collapsible
+|id=
+|date=16 December 2025
+|time=21:30
+|team1='''[[CD Guadalajara (Spain)|Guadalajara]] (3)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-guadalajara-fc-barcelona-5
+|team2=[[FC Barcelona|Barcelona]] (1)
+|goals1=
+|goals2=
+*[[Andreas Christensen|Christensen]] {{goal|76}}
+*[[Marcus Rashford|Rashford]] {{goal|90}}
+|stadium=[[Estadio Pedro Escartín|Pedro Escartín]]
+|location=[[Guadalajara, Spain|Guadalajara]]
+|attendance=
+|referee=[[César Soto Grado]]
+}}
+{{football box collapsible
+|id=
+|date=17 December 2025
+|time=18:00
+|team1=[[Cultural y Deportiva Leonesa|Cultural Leonesa]] (2)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cultural-y-deportiva-leonesa-levante-ud-5
+|team2='''[[Levante UD|Levante]] (1)'''
+|goals1=
+*[[Rafa Tresaco|Tresaco]] {{goal|12}}
+|goals2=
+|stadium=[[Estadio Reino de León|Reino de León]]
+|location=[[León, Spain|León]]
+|attendance=5,542
+|referee=[[Jesús Gil Manzano]]
+}}
+{{football box collapsible
+|id=
+|date=17 December 2025
+|time=19:00
+|team1='''[[Atlético Baleares]] (4)'''
+|score=2–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cd-atletico-baleares-atletico-de-madrid-5
+|team2=[[Atlético Madrid]] (1)
+|goals1=
+*Bonet {{goal|28}}
+*Keita {{goal|90|pen.}}
+|goals2=
+*[[Antoine Griezmann|Griezmann]] {{goal|16||72}}
+*[[Giacomo Raspadori|Raspadori]] {{goal|20}}
+|stadium=[[Estadi Balear]]
+|location=[[Palma de Mallorca|Palma]]
+|attendance=5,080
+|referee=[[Alejandro Hernández Hernández]]
+}}
+{{football box collapsible
+|id=
+|date=17 December 2025
+|time=19:00
+|team1=[[Albacete Balompié|Albacete]] (2)
+|score=2–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-albacete-bp-celta-5
+|team2='''[[RC Celta de Vigo|Celta Vigo]] (1)'''
+|goals1=
+*[[Jefté Betancor|Jefté]] {{goal|18}}
+*[[Jesús Vallejo|Vallejo]] {{goal|90+3}}
+|goals2=
+*[[Yoel Lago|Lago]] {{goal|64}}
+*[[Borja Iglesias|Iglesias]] {{goal|75}}
+|penalties1=
+*[[Antonio Puertas|Puertas]] {{pengoal}}
+*[[Riki (footballer, born 1997)|Riki]] {{pengoal}}
+*[[Jesús Vallejo|Vallejo]] {{pengoal}}
+|penaltyscore=3–0
+|penalties2=
+*{{penmiss}} [[Óscar Mingueza|Mingueza]]
+*{{penmiss}} [[Hugo Álvarez (footballer, born 2003)|Álvarez]]
+*{{penmiss}} [[Iago Aspas|Aspas]]
+|stadium=[[Estadio Carlos Belmonte|Carlos Belmonte]]
+|location=[[Albacete]]
+|attendance=12,106
+|referee=José Luis Guzmán Mansilla
+}}
+{{football box collapsible
+|id=
+|date=17 December 2025
+|time=19:00
+|team1=[[Racing de Santander|Racing Santander]] (2)
+|score=2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-r-racing-club-villarreal-cf-5
+|team2='''[[Villarreal CF|Villarreal]] (1)'''
+|goals1=
+*[[Juan Carlos Arana|Arana]] {{goal|6||28}}
+|goals2=
+*[[Ayoze Pérez|Pérez]] {{goal|86}}
+|stadium=[[Campos de Sport de El Sardinero|El Sardinero]]
+|location=[[Santander, Spain|Santander]]
+|attendance=20,768
+|referee=Isidro Díaz De Mera Escuderos
+}}
+{{football box collapsible
+|id=
+|date=17 December 2025
+|time=19:00
+|team1='''[[SD Huesca|Huesca]] (2)'''
+|score=2–4
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-sd-huesca-ca-osasuna-5
+|team2=[[CA Osasuna|Osasuna]] (1)
+|goals1=
+*[[Daniel Luna|Luna]] {{goal|35}}
+*[[Iker Kortajarena|Kortajarena]] {{goal|105+1}}
+|goals2=
+*[[Raúl García (footballer, born 2000)|Ra. García]] {{goal|45+1||95}}
+*[[Asier Osambela|Osambela]] {{goal|111}}
+*[[Ante Budimir|Budimir]] {{goal|118}}
+|stadium=[[Estadio El Alcoraz|El Alcoraz]]
+|location=[[Huesca]]
+|attendance=6,413
+|referee=Víctor García Acosta
+}}
+{{football box collapsible
+|id=
+|date=17 December 2025
+|time=21:00
+|team1='''[[CF Talavera de la Reina|Talavera de la Reina]] (3)'''
+|score=2–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cf-talavera-de-la-reina-real-madrid-5
+|team2=[[Real Madrid CF|Real Madrid]] (1)
+|goals1=
+*[[Nahuel Arroyo|Arroyo]] {{goal|80}}
+*[[Gonzalo Di Renzo|Di Renzo]] {{goal|90+1}}
+|goals2=
+*[[Kylian Mbappé|Mbappé]] {{goal|41|pen.|88}}
+*Farrando {{goal|45+1|o.g.}}
+|stadium=[[Estadio El Prado|El Prado]]
+|location=[[Talavera de la Reina]]
+|attendance=4,200
+|referee=[[Guillermo Cuadra Fernández]]
+}}
+{{football box collapsible
+|id=
+|date=17 December 2025
+|time=21:00
+|team1=[[Deportivo Alavés|Alavés]] (1)
+|score=1–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-deportivo-alaves-sevilla-fc-5
+|team2='''[[Sevilla FC|Sevilla]] (1)'''
+|goals1=
+*[[Carlos Vicente (footballer)|Vicente]] {{goal|79|pen.}}
+|goals2=
+|stadium=[[Mendizorrotza Stadium|Mendizorroza]]
+|location=[[Vitoria-Gasteiz]]
+|attendance=9,766
+|referee=Miguel Sesma Espinosa
+}}
+{{football box collapsible
+|id=
+|date=18 December 2025
+|time=19:00
+|team1=[[Burgos CF|Burgos]] (2)
+|score=3–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-burgos-cf-getafe-cf-5
+|team2='''[[Getafe CF|Getafe]] (1)'''
+|goals1=
+*[[David González (footballer, born 2002)|González]] {{goal|45+4|pen.}}
+*[[Iñigo Córdoba|Córdoba]] {{goal|57||73}}
+|goals2=
+*[[Álex Sancris|Sancris]] {{goal|32}}
+|stadium=[[Estadio El Plantío|El Plantío]]
+|location=[[Burgos]]
+|attendance=7,987
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|id=
+|date=18 December 2025
+|time=19:00
+|team1='''[[Ourense CF]] (3)'''
+|score=0–1
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-ourense-cf-athletic-club-5
+|team2=[[Athletic Bilbao]] (1)
+|goals1=
+|goals2=
+*[[Mikel Jauregizar|Jauregizar]] {{goal|105+1}}
+|stadium=[[Estadio O Couto|O Couto]] 
+|location=[[Ourense]] 
+|attendance=
+|referee=[[José Luis Munuera Montero]]
+}}
+{{football box collapsible
+|id=
+|date=18 December 2025
+|time=21:00
+|team1='''[[Real Murcia|Murcia]] (3)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-murcia-cf-real-betis-5
+|team2=[[Real Betis]] (1)
+|goals1=
+|goals2=
+*[[Cucho Hernández|Hernández]] {{goal|30|pen.}}
+*[[Diego Piñeiro|Piñeiro]] {{goal|85|o.g.}}
+|stadium=[[Estadio Nueva Condomina|Nueva Condomina]]
+|location=[[Murcia]]
+|attendance=
+|referee=[[Juan Martínez Munuera]]
+}}
+{{football box collapsible
+|id=
+|date=6 January 2026
+|time=19:00
+|team1='''[[Granada CF|Granada]] (2)'''
+|score= 1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-granada-cf-rayo-vallecano-5
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+*[[Pablo Sáenz|Sáenz]] {{goal|9}}
+|goals2=
+*[[Álvaro García (footballer, born 1992)|García]] {{goal|49}}
+*[[Pedro Díaz (footballer, born 1998)|Díaz]] {{goal|74}}
+*[[Juanjo Flores|Flores]] {{goal|90+2|o.g.}}
+|stadium=[[Nuevo Estadio de Los Cármenes|Nuevo Los Cármenes]]
+|location=[[Granada]]
+|attendance= 4,468
+|referee= [[César Soto Grado]]
+}}
+
+==Round of 16==
+
+=== Draw ===
+The draw for the round of 16 was held on 7 January 2026 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]]. The four teams participating in the [[2026 Supercopa de España]] were drawn with the Segunda División teams. The remaining Segunda División team was drawn against a La Liga team. Matches were played at the stadiums of the lower-ranked teams, otherwise the first team drawn played at home. 
+
+A total of eight matches were played between 13 and 15 January 2026.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| '''Pot 1'''<br/>{{small|4 participants in [[2026 Supercopa de España]]}} || '''Pot 2'''<br/>{{small|7 teams of [[2025–26 La Liga|La Liga]]}} || '''Pot 3'''<br/>{{small|5 teams of [[2025–26 Segunda División|Segunda División]]}}
+|- valign=top 
+|
+* [[Athletic Bilbao]]
+* [[Atlético Madrid]]
+* [[FC Barcelona|Barcelona]]
+* [[Real Madrid CF|Real Madrid]]
+|
+* [[Deportivo Alavés|Alavés]]
+* [[Elche CF|Elche]]
+* [[CA Osasuna|Osasuna]]
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Real Sociedad]]
+* [[Valencia CF|Valencia]]
+|
+* [[Albacete Balompié|Albacete]]
+* [[Burgos CF|Burgos]]
+* [[Cultural y Deportiva Leonesa|Cultural Leonesa]]
+* [[Deportivo de La Coruña|Deportivo La Coruña]]
+* [[Racing de Santander|Racing Santander]]
+|}
+
+===Matches===
+{{football box collapsible
+|date=13 January 2026
+|time=21:00
+|team1='''[[Cultural y Deportiva Leonesa|Cultural Leonesa]] (2)'''
+|score= 3–4
+|aet= yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-cultural-y-deportiva-leonesa-athletic-club-6
+|team2=[[Athletic Bilbao]] (1)
+|goals1=
+*[[Iván Calero|Calero]] {{goal|16||27}}
+*[[Rubén Sobrino|Sobrino]] {{goal|41|pen.}}
+|goals2=
+*[[Gorka Guruzeta|Guruzeta]] {{goal|26||38}}
+*[[Oihan Sancet|Sancet]] {{goal|45+3|pen.}}
+*[[Unai Gómez|Gómez]] {{goal|104|pen.}}
+|stadium=[[Estadio Reino de León|Reino de León]]
+|location=[[León, Spain|León]]
+|attendance= 11,004
+|referee= [[Alejandro Hernández Hernández]]
+}}
+{{football box collapsible
+|date=13 January 2026
+|time=21:00
+|team1=[[Real Sociedad]] (1)
+|score= 2–2
+|aet= yes
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-sociedad-ca-osasuna-6
+|team2='''[[CA Osasuna|Osasuna]] (1)'''
+|goals1=
+*[[Beñat Turrientes|Turrientes]] {{goal|75}}
+*[[Igor Zubeldia|Zubeldia]] {{goal|90+2}}
+|goals2=
+*[[Jon Moncayola|Moncayola]] {{goal|4}}
+*[[Mikel Oyarzabal|Oyarzabal]] {{goal|17|o.g.}}
+|penalties1=
+*[[Mikel Oyarzabal|Oyarzabal]] {{pengoal}}
+*[[Gonçalo Guedes|Guedes]] {{pengoal}}
+*[[Carlos Soler|Soler]] {{pengoal}}
+*[[Sergio Gómez (footballer, born 2000)|Gómez]] {{pengoal}}
+*[[Arsen Zakharyan|Zakharyan]] {{penmiss}}
+|penaltyscore= 4–3
+|penalties2=
+*{{pengoal}} [[Ante Budimir|Budimir]]
+*{{penmiss}} [[Jon Moncayola|Moncayola]]
+*{{pengoal}} [[Lucas Torró|Torró]]
+*{{pengoal}} [[Javi Galán|Galán]]
+*{{penmiss}} [[Alejandro Catena|Catena]]
+|stadium=[[Reale Arena]]
+|location=[[San Sebastián]]
+|attendance= 30,147
+|referee=[[César Soto Grado]]
+}}
+{{football box collapsible
+|date=13 January 2026
+|time=21:00
+|team1='''[[Deportivo de La Coruña|Deportivo La Coruña]] (2)'''
+|score= 0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-rc-deportivo-atletico-de-madrid-6
+|team2=[[Atlético Madrid]] (1)
+|goals1=
+|goals2=
+*[[Antoine Griezmann|Griezmann]] {{goal|61}}
+|stadium=[[Estadio Riazor|Riazor]]
+|location=[[A Coruña]]
+|attendance=28,577
+|referee=[[Ricardo de Burgos Bengoetxea]]
+}}
+{{football box collapsible
+|date=14 January 2026
+|time=21:00
+|team1=[[Albacete Balompié|Albacete]] (2)
+|score=3–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-albacete-bp-real-madrid-6
+|team2='''[[Real Madrid CF|Real Madrid]] (1)'''
+|goals1=
+*[[Javi Villar|Villar]] {{goal|42}}
+*[[Jefté Betancor|Betancor]] {{goal|82||90+4}}
+|goals2=
+*[[Franco Mastantuono|Mastantuono]] {{goal|48}}
+*[[Gonzalo García (footballer, born 2004)|G. García]] {{goal|90+1}}
+|stadium=[[Estadio Carlos Belmonte|Carlos Belmonte]]
+|location=[[Albacete]]
+|attendance=16,800
+|referee=Victor García Verdura
+}}
+{{football box collapsible
+|date=14 January 2026
+|time=21:00
+|team1=[[Real Betis]] (1)
+|score= 2–1
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-betis-elche-cf-6
+|team2='''[[Elche CF|Elche]] (1)'''
+|goals1=
+*[[Chimy Ávila|Ávila]] {{goal|68||80}}
+|goals2=
+*[[Léo Pétrot|Pétrot]] {{goal|58}}
+|stadium=[[Estadio de La Cartuja|La Cartuja]]
+|location=[[Seville]]
+|attendance=37,635
+|referee=[[Jesús Gil Manzano]]
+}}
+{{football box collapsible
+|date=14 January 2026
+|time=21:00
+|team1=[[Deportivo Alavés|Alavés]] (1)
+|score= 2–0
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-deportivo-alaves-rayo-vallecano-6
+|team2='''[[Rayo Vallecano]] (1)'''
+|goals1=
+*[[Toni Martínez|Martínez]] {{goal|49}}
+*[[Carlos Vicente (footballer)|Vicente]] {{goal|89}}
+|goals2=
+|stadium=[[Mendizorrotza Stadium|Mendizorroza]]
+|location=[[Vitoria-Gasteiz]]
+|attendance=10,634
+|referee=Francisco José Hernández Maeso
+}}
+{{football box collapsible
+|date=15 January 2026
+|time=21:00
+|team1='''[[Racing de Santander|Racing Santander]] (2)'''
+|score= 0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-r-racing-club-fc-barcelona-6
+|team2=[[FC Barcelona|Barcelona]] (1)
+|goals1=
+|goals2=
+*[[Ferran Torres|Torres]] {{goal|66}}
+*[[Lamine Yamal|Yamal]] {{goal|90+5}}
+|stadium=[[Campos de Sport de El Sardinero|El Sardinero]]
+|location=[[Santander, Spain|Santander]]
+|attendance=22,481
+|referee=[[José María Sánchez Martínez]]
+}}
+{{football box collapsible
+|date=15 January 2026
+|time=21:00
+|team1='''[[Burgos CF|Burgos]] (2)'''
+|score= 0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-burgos-cf-valencia-cf-6
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+|goals2=
+*[[Rubén Iranzo|Iranzo]] {{goal|10}}
+*[[Umar Sadiq|Sadiq]] {{goal|50}}
+|stadium=[[Estadio El Plantío|El Plantío]]
+|location=[[Burgos]]
+|attendance=9,405
+|referee=[[José Luis Munuera Montero]]
+}}
+
+==Quarter-finals==
+
+===Draw===
+The draw for the quarter-finals was held on 19 January 2026 in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]]. When possible, matches were played at the stadiums of the lower-ranked teams, otherwise the first team drawn played at home.
+
+A total of four matches were played between 3 and 5 February 2026.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+|'''Pot 1'''<br/> {{small|7 teams of [[2025–26 La Liga|La Liga]]}} || '''Pot 2'''<br/>{{small|1 team of [[2025–26 Segunda División|Segunda División]]}}
+|- valign=top
+|
+* [[Deportivo Alavés|Alavés]]
+* [[Athletic Bilbao]]
+* [[Atlético Madrid]]
+* [[FC Barcelona|Barcelona]]
+* [[Real Betis]]
+* [[Real Sociedad]]
+* [[Valencia CF|Valencia]]
+|
+* [[Albacete Balompié|Albacete]]
+|}
+
+===Matches===
+{{football box collapsible
+|date=3 February 2026
+|time=21:00
+|team1='''[[Albacete Balompié|Albacete]] (2)'''
+|score= 1–2
+|team2=[[FC Barcelona|Barcelona]] (1)
+|report= https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-albacete-bp-fc-barcelona-7
+|goals1=
+*[[Javi Moreno (footballer, born 2000)|Moreno]] {{goal|87}}
+|goals2=
+*[[Lamine Yamal|Yamal]] {{goal|39}}
+*[[Ronald Araújo|Araújo]] {{goal|56}}
+|stadium=[[Estadio Carlos Belmonte|Carlos Belmonte]]
+|location=[[Albacete]]
+|attendance=16,745
+|referee=[[José Luis Munuera Montero]]
+}}
+{{football box collapsible
+|date=4 February 2026
+|time=21:00
+|team1='''[[Deportivo Alavés|Alavés]] (1)'''
+|score= 2–3
+|team2=[[Real Sociedad]] (1)
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-deportivo-alaves-real-sociedad-7
+|goals1=
+*[[Abde Rebbach|Abde]] {{goal|8}}
+*[[Toni Martínez|Martínez]] {{goal|29|pen.}}
+|goals2=
+*[[Mikel Oyarzabal|Oyarzabal]] {{goal|15}}
+*[[Gonçalo Guedes|Guedes]] {{goal|76}}
+*[[Orri Óskarsson|Óskarsson]] {{goal|80}}
+|stadium=[[Mendizorrotza Stadium|Mendizorroza]]
+|location=[[Vitoria-Gasteiz]]
+|attendance=18,874
+|referee=Alejandro Quintero González
+}}
+{{football box collapsible
+|date=4 February 2026
+|time=21:00
+|team1='''[[Valencia CF|Valencia]] (1)'''
+|score= 1–2
+|team2=[[Athletic Bilbao]] (1)
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-valencia-cf-athletic-club-7
+|goals1=
+*[[Umar Sadiq|Sadiq]] {{goal|35}}
+|goals2=
+*[[Umar Sadiq|Sadiq]] {{goal|26|o.g.}}
+*[[Iñaki Williams|I. Williams]] {{goal|90+6}}
+|stadium=[[Mestalla Stadium|Mestalla]]
+|location=[[Valencia]]
+|attendance=46,931
+|referee=Victor García Verdura
+}}
+{{football box collapsible
+|date=5 February 2026
+|time=21:00
+|team1='''[[Real Betis]] (1)'''
+|score= 0–5
+|team2=[[Atlético Madrid]] (1)
+|report=https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-betis-atletico-de-madrid-7
+|goals1=
+|goals2=
+*[[Dávid Hancko|Hancko]] {{goal|12}}
+*[[Giuliano Simeone|Simeone]] {{goal|30}}
+*[[Ademola Lookman|Lookman]] {{goal|37}}
+*[[Antoine Griezmann|Griezmann]] {{goal|62}}
+*[[Thiago Almada|Almada]] {{goal|83}}
+|stadium=[[Estadio de La Cartuja|La Cartuja]]
+|location=[[Seville]]
+|attendance=66,810
+|referee=[[César Soto Grado]]
+}}
+;Notes
+{{notelist}}
+
+==Semi-finals==
+===Draw===
+The draw for the semi-finals was held on 6 February 2026 at 13:00 CET, in the RFEF headquarters in [[La Ciudad del Fútbol|Las Rozas]].
+
+First leg matches were played on 11 and 12 February, and second leg matches were played on 3 and 4 March 2026.
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+|'''Qualified teams'''<br/>{{small|4 teams of [[2025–26 La Liga|La Liga]]}}
+|- valign=top
+|
+* [[Athletic Bilbao]]
+* [[Atlético Madrid]]
+* [[FC Barcelona|Barcelona]]
+* [[Real Sociedad]]
+|}
+
+===Summary===
+{{#invoke:Sports series|main
+|[[Atlético Madrid]] (1)||4–3|[[FC Barcelona|Barcelona]] (1)||4–0|0–3
+|[[Athletic Bilbao]] (1)||0–2|[[Real Sociedad]] (1)||0–1|0–1
+}}
+
+===Matches===
+{{Football box
+| id = 
+| date = 12 February 2026
+| time = 21:00
+| team1 = [[Atlético Madrid]]
+| score = 4–0
+| report = https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-atletico-de-madrid-fc-barcelona-8
+| team2 = [[FC Barcelona|Barcelona]]
+| goals1 =
+*[[Eric García (footballer, born 2001)|E. García]] {{goal|6|o.g.}}
+*[[Antoine Griezmann|Griezmann]] {{goal|14}}
+*[[Ademola Lookman|Lookman]] {{goal|33}}
+*[[Julián Alvarez|Alvarez]] {{goal|45+2}}
+| goals2 =
+| stadium = [[Metropolitano Stadium|Metropolitano]]
+| location = [[Madrid]]
+| attendance = 69,200
+| referee = [[Juan Martínez Munuera]]
+}}
+{{Football box
+| id = 
+| date = 3 March 2026
+| time = 21:00
+| team1 = [[FC Barcelona|Barcelona]]
+| score = 3–0
+| report = https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-fc-barcelona-atletico-de-madrid-9
+| team2 = [[Atlético Madrid]]
+| goals1 =
+*[[Marc Bernal|Bernal]] {{goal|29||72}}
+*[[Raphinha]] {{goal|45+5|pen.}}
+| goals2 =
+| location = [[Barcelona]]
+| stadium = [[Camp Nou]]
+| attendance = 45,398
+| referee = [[Ricardo de Burgos Bengoetxea]]
+}}
+'' Atlético Madrid won 4–3 on aggregate.''
+----
+{{Football box
+| id = 
+| date = 11 February 2026
+| time = 21:00
+| team1 = [[Athletic Bilbao]]
+| score = 0–1
+| report = https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-athletic-club-real-sociedad-8
+| team2 = [[Real Sociedad]]
+| goals1 =
+| goals2 =
+*[[Beñat Turrientes|Turrientes]] {{goal|62}}
+| stadium = [[San Mamés Stadium (2013)|San Mamés]]
+| location = [[Bilbao]]
+| attendance = 51,281
+| referee = [[José María Sánchez Martínez]]
+}}
+{{Football box
+| id = 
+| date = 4 March 2026
+| time = 21:00
+| team1 = [[Real Sociedad]]
+| score = 1–0
+| report = https://www.laliga.com/en-GB/match/temporada-2025-2026-copa-del-rey-real-sociedad-athletic-club-9
+| team2 = [[Athletic Bilbao]]
+| goals1 =
+*[[Mikel Oyarzabal|Oyarzabal]] {{goal|87|pen.}}
+| goals2 =
+| stadium = [[Anoeta Stadium|Anoeta]]
+| location = [[San Sebastián]]
+| attendance = 38,738
+| referee = [[César Soto Grado]]
+}}
+'' Real Sociedad won 2–0 on aggregate.''
+
+==Final==
+{{Main|2026 Copa del Rey final}}
+{{:2026 Copa del Rey final}}
+
+==Top scorers==
+{|class="wikitable"
+!Rank 
+!Player 
+!Club 
+!Goals
+|-
+|{{center|1}}
+|{{flagicon|ESP}} [[Raúl García (footballer, born 2000)|Raúl García]]
+|[[CA Osasuna|Osasuna]]
+|{{center|7}}
+|-
+|rowspan=3|{{center|2}}
+|{{flagicon|FRA}} [[Antoine Griezmann]]
+|[[Atlético Madrid]]
+|rowspan=3|{{center|5}}
+|-
+|{{flagicon|ESP}} [[Rodrigo Riquelme (footballer, born 2000)|Rodrigo Riquelme]]
+|[[Real Betis]]
+|-
+|{{flagicon|ESP}} [[Carlos Vicente (footballer)|Carlos Vicente]]
+|[[Deportivo Alavés|Alavés]]
+|-
+|rowspan=5|{{center|5}}
+|{{flagicon|ESP}} [[Abdón Prats|Abdón]]
+|[[RCD Mallorca|Mallorca]]
+|rowspan=5|{{center|4}}
+|-
+|{{flagicon|ESP}} [[Jefté Betancor]]
+|[[Albacete Balompié|Albacete]]
+|-
+|{{flagicon|ESP}} [[Jan González]]
+|[[Atlètic Sant Just FC|Atlètic Sant Just]]
+|-
+|{{flagicon|ESP}} [[Juanmi (footballer, born 1993)|Juanmi]]
+|[[Getafe CF|Getafe]]
+|-
+|{{flagicon|ESP}} [[Toni Martínez]]
+|[[Deportivo Alavés|Alavés]]
+|-
+|rowspan=10|{{center|10}}
+|{{flagicon|ESP}} [[Juan Carlos Arana]]
+|[[Racing de Santander|Racing Santander]]
+|rowspan=10|{{center|3}}
+|-
+|{{flagicon|ARG}} [[Gonzalo Di Renzo]]
+|[[CF Talavera de la Reina|Talavera de la Reina]]
+|-
+|{{flagicon|ESP}} [[Cristian Herrera]]
+|[[Deportivo de La Coruña|Deportivo La Coruña]]
+|-
+|{{flagicon|NGA}} [[Ademola Lookman]]
+|[[Atlético Madrid]]
+|-
+|{{flagicon|DOM}} [[Mariano Díaz|Mariano]]
+|[[Deportivo Alavés|Alavés]]
+|-
+|{{flagicon|CAN}} [[Tani Oluwaseyi]]
+|[[Villarreal CF|Villarreal]]
+|-
+|{{flagicon|ESP}} [[Mikel Oyarzabal]]
+|[[Real Sociedad de Fútbol|Real Sociedad]]
+|-
+|{{flagicon|ESP}} [[Fran Pérez (footballer, born 2002)|Fran Pérez]]
+|[[Rayo Vallecano]]
+|-
+|{{flagicon|NGA}} [[Umar Sadiq]]
+|[[Valencia CF|Valencia]]
+|-
+|{{flagicon|ESP}} [[Beñat Turrientes]]
+|[[Real Sociedad de Fútbol|Real Sociedad]]
+|}
+
+== References ==
+{{reflist}}
+
+{{Copa del Rey seasons}}
+{{2025–26 in Spanish football}}
+{{2025–26 in European football (UEFA)}}
+
+{{DEFAULTSORT:Copa Del Rey 2025-26}}
+[[Category:Copa del Rey seasons|2025-26]]
+[[Category:2025–26 in Spanish football cups|1]]

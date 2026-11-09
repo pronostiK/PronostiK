@@ -1,0 +1,2387 @@
+{{Infobox football tournament season
+| title = [[Copa del Rey]]
+| year = 2026–27
+| image = 
+| country = Spain
+| venue = 
+| date = 26 September 2026 – 24 April 2027<ref>{{cite web|url=https://rfef.es/es/noticias/la-temporada-202627-ya-tiene-establecidas-sus-fechas-clave|title=La temporada 2026/27 ya tiene establecidas sus fechas clave|trans-title=The 2026/27 season already have their key dates set|publisher=Royal Spanish Football Federation|language=es|date=30 June 2026|access-date=12 September 2026}}</ref>
+| num_teams = 126
+| champions = 
+| count =
+| runner-up = 
+| matches = 
+| goals = 
+| top goal scorer = 
+| prevseason = [[2025–26 Copa del Rey|2025–26]]
+| nextseason = 2027–28
+}}
+
+The '''2026–27 Copa del Rey''' is the 125th staging of the [[Copa del Rey]] (including two seasons where two rival editions were played). The winners are assured a place in the [[2027–28 UEFA Europa League#League Phase|2027–28 UEFA Europa League league phase]]. Both the winners and the runners-up will qualify for the four-team [[2028 Supercopa de España]].
+
+[[Real Sociedad]] are the defending champions, having beaten [[Atlético Madrid]] in the [[2026 Copa del Rey final|final of the previous edition]].<ref>{{cite web|url=https://www.espn.com/soccer/report/_/gameId/401859852|title=Real Sociedad upset Atlético Madrid to win 4th Copa del Rey|website=ESPN|date=18 April 2026|access-date=14 May 2026}}</ref>
+
+The final will be held at [[Estadio de La Cartuja|La Cartuja]] in [[Seville]] in April 2027.
+
+As across Spain, match times up to 25 October 2026 and from 29 March 2027 are [[Central European Summer Time|CEST]] ([[UTC+02:00|UTC+2]]). Times on interim ("winter") days are [[Central European Time|CET]] ([[UTC+01:00|UTC+1]]). Matches played in the Canary Islands use the [[Western European Time|WET]] ([[UTC±00:00]]).
+
+==Schedule and format==
+{|class="wikitable" style="font-size:90%"
+|-
+!Round
+!Draw date
+!Date
+!Fixtures
+!Clubs
+!Format details
+|-
+|rowspan=2|Preliminary round
+|rowspan=2 style="text-align:left;"|
+{{Nowrap|10 September 2026}}
+|style="text-align:left;"|{{Nowrap|26–27 September 2026}}
+|rowspan=2 style="text-align:center;"|20
+|rowspan=2 style="text-align:center;"|{{Nowrap|126 → 116}}
+|rowspan=2|'''New entries:''' Clubs qualified through the 2025–26 sixth tier.<br />'''[[Seed (sports)|Opponents seeding]]:''' Teams faced each other according to proximity criteria.<br />'''[[Knock-out tournament]] type:''' [[Two-legged tie|Double match]].
+|-
+|style="text-align:left;"|{{Nowrap|3–4 October 2026}}
+|-
+|First round
+|style="text-align:left;"|{{Nowrap|5 October 2026}}
+|style="text-align:left;"|27 October – <br/>18 November 2026
+|style="text-align:center;"|56
+|style="text-align:center;"|116 → 60
+|'''New entries:''' All qualified teams except for the four participants in the [[2027 Supercopa de España|Supercopa de España]].<br />'''Opponents seeding:''' Teams from lowest divisions face La Liga teams according to proximity criteria.<br />'''Local team seeding:''' Matches are played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|{{Nowrap|Second round}}
+|style="text-align:left;"|{{Nowrap|23 November 2026}}
+|style="text-align:left;"|{{Nowrap|2 December 2026}}
+|style="text-align:center;"|28
+|style="text-align:center;"|60 → 32
+|'''Opponents seeding:''' Teams from lowest divisions face La Liga teams.<br />'''Local team seeding:''' Matches are played at home stadiums of teams in lower divisions.<br/>'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|Round of 32
+|style="text-align:left;"|{{Nowrap|December 2026}}
+|style="text-align:left;"|{{Nowrap|16 December 2026}}
+|style="text-align:center;"|16
+|style="text-align:center;"|32 → 16
+|'''New entries:''' Clubs participating in the [[2027 Supercopa de España|Supercopa de España]] enter at this stage.<br />'''Opponents seeding:''' Teams from lowest divisions face Supercopa and La Liga teams, respectively.<br />'''Local team seeding:''' Matches are played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|Round of 16
+|style="text-align:left;"|{{Nowrap|December 2026}}
+|style="text-align:left;"|{{Nowrap|6 January 2027}}
+|style="text-align:center;"|8
+|style="text-align:center;"|16 → 8
+|'''Opponents seeding:''' Teams from lowest divisions face Supercopa and La Liga teams, respectively.<br />'''Local team seeding:''' Matches are played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|Quarter-finals
+|style="text-align:left;"|{{Nowrap|January 2027}}
+|style="text-align:left;"|{{Nowrap|13 January 2027}}
+|style="text-align:center;"|4
+|style="text-align:center;"|8 → 4
+|'''Opponents seeding:''' Luck of the draw.<br />'''Local team seeding:''' Matches are played at home stadiums of teams in lower divisions.<br />'''Knock-out tournament type:''' [[Single-elimination tournament|Single match]].
+|-
+|rowspan=2|Semi-finals
+|rowspan=3 style="text-align:left;"|{{Nowrap|January 2027}}
+|style="text-align:left;"|{{Nowrap|10 February 2027}}
+|rowspan=2 style="text-align:center;"|2
+|rowspan=2 style="text-align:center;"|4 → 2
+|rowspan=2|'''Opponents seeding:''' Luck of the draw.<br/>'''Local team seeding:''' Luck of the draw.<br />'''Knock-out tournament type:''' [[Two-legged tie|Double match]].
+|-
+|style="text-align:left;"|{{Nowrap|3 March 2027}}
+|-
+|'''[[2027 Copa del Rey final|Final]]'''
+|style="text-align:left;"|24 April 2027
+|style="text-align:center;"|1
+|style="text-align:center;"|2 → 1
+|[[Single-elimination tournament|Single match]] at [[Estadio de La Cartuja]], [[Seville]]. Both teams qualify for the [[2028 Supercopa de España]].<br />'''[[UEFA Europa League]] qualification:''' winners qualify for the [[2027–28 UEFA Europa League#Group stage|2027–28 UEFA Europa League group stage]].
+|}
+;Notes
+*Matches/ties ending in a draw will be decided in [[Overtime (sports)#Association football|extra time]] and, if still level, by a [[Penalty shoot-out (association football)|penalty shoot-out]].
+
+==Qualified teams==
+The following teams qualified for the competition. Reserve teams were not allowed to enter.
+{| class="wikitable" style="font-size:90%"
+|- style="background-color:#d6e2b3; text-align:center; vertical-align:top"
+| style="width:14%" | '''La Liga'''<br /><small>All 20 teams of the [[2025–26 La Liga|2025–26 season]]</small>
+| style="width:14%" | '''Segunda División'''<br /><small>All 21 non-reserve teams of the [[2025–26 Segunda División|2025–26 season]]</small>
+| style="width:14%" | '''Primera Federación'''<br /><small>Top five non-reserve teams of each group of the [[2025–26 Primera Federación|2025–26 season]], plus the non-reserve team with the best coefficient not already qualified</small>
+| style="width:14%" | '''Segunda Federación'''<br /><small>Top five non-reserve teams of the five groups of the [[2025–26 Segunda Federación|2025–26 season]]</small>
+| style="width:14%" | '''Tercera Federación'''<br /><small>The best non-reserve teams plus the best seven non-reserve runners-up of each one of the eighteen groups of the [[2025–26 Tercera Federación|2025–26 season]]</small>
+| style="width:14%" | '''Copa Federación'''<br /><small>The four semi-finalists of the [[2026 Copa Federación de España]]</small>
+| style="width:14%" | '''Regional leagues'''<br /><small>The best non-promoted teams of the twenty groups of the [[Divisiones Regionales de Fútbol|sixth tier]] in the 2025–26 season </small>
+|- style="vertical-align:top"
+|
+* [[Deportivo Alavés|Alavés]]
+* [[Athletic Bilbao]]
+* [[Atlético Madrid]]{{efn|name=SC|Atlético Madrid, Real Sociedad, Barcelona and Real Madrid will join the tournament in the round of 32 as participants of the [[2027 Supercopa de España|Supercopa de España]].}}
+* [[FC Barcelona|Barcelona]]{{efn|name=SC}}
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[Elche CF|Elche]]
+* [[RCD Espanyol|Espanyol]]
+* [[Getafe CF|Getafe]]
+* [[Girona FC|Girona]]
+* [[Levante UD|Levante]]
+* [[RCD Mallorca|Mallorca]]
+* [[CA Osasuna|Osasuna]]
+* [[Real Oviedo|Oviedo]]
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Real Madrid CF|Real Madrid]]{{efn|name=SC}}
+* [[Real Sociedad]]<sup>[[2025–26 Copa del Rey|TH]]</sup>{{efn|name=SC}}
+* [[Sevilla FC|Sevilla]]
+* [[Valencia CF|Valencia]]
+* [[Villarreal CF|Villarreal]]
+|
+* [[Albacete Balompié|Albacete]]
+* [[UD Almería|Almería]]
+* [[FC Andorra|Andorra]]
+* [[Burgos CF|Burgos]]
+* [[Cádiz CF|Cádiz]]
+* [[CD Castellón|Castellón]]
+* [[AD Ceuta FC|Ceuta]]
+* [[Córdoba CF|Córdoba]]
+* [[Cultural y Deportiva Leonesa|Cultural Leonesa]]
+* [[Deportivo de A Coruña|Deportivo A Coruña]]
+* [[SD Eibar|Eibar]]
+* [[Granada CF|Granada]]
+* [[SD Huesca|Huesca]]
+* [[UD Las Palmas|Las Palmas]]
+* [[CD Leganés|Leganés]]
+* [[Málaga CF|Málaga]]
+* [[CD Mirandés|Mirandés]]
+* [[Racing de Santander|Racing Santander]]
+* [[Sporting de Gijón|Sporting Gijón]]
+* [[Real Valladolid|Valladolid]]
+* [[Real Zaragoza|Zaragoza]]
+|
+* [[Antequera CF|Antequera]]
+* [[Barakaldo CF|Barakaldo]]
+* [[FC Cartagena|Cartagena]]
+* [[CD Eldense|Eldense]]
+* [[CE Europa|Europa]]
+* [[CE Sabadell FC|Sabadell]]
+* [[CD Tenerife|Tenerife]]
+* [[SD Ponferradina|Ponferradina]]
+* [[Pontevedra CF|Pontevedra]]
+* [[Unionistas de Salamanca CF|Unionistas]]{{efn|Qualified as the club with the best coefficient in the league not already qualified, as [[Real Sociedad B]] were unable to compete in the cup.}}
+* [[Zamora CF|Zamora]]
+|
+* [[Águilas FC|Águilas]]
+* [[RSD Alcalá|Alcalá]]
+* [[CD Alcoyano|Alcoyano]]
+* [[SD Amorebieta|Amorebieta]]
+* [[CD Atlético Baleares|Atlético Baleares]]
+* [[Real Ávila CF|Ávila]]
+* [[UB Conquense|Conquense]]
+* [[CD Coria|Coria]]
+* [[Coruxo FC|Coruxo]]
+* [[CD Extremadura|Extremadura]]
+* [[Gimnástica Segoviana CF|Gimnástica Segoviana]]
+* [[Real Jaén|Jaén]]
+* [[UD Logroñés]]
+* [[CD Minera|Minera]]
+* [[CD Numancia|Numancia]]
+* [[UD Ourense]]
+* [[UD Poblense|Poblense]]
+* [[CF Rayo Majadahonda|Rayo Majadahonda]]
+* [[Real Unión]]
+* [[Reus FC Reddis|Reus FCR]]
+* [[UD San Sebastián de los Reyes|San Sebastián de los Reyes]]
+* [[UE Sant Andreu|Sant Andreu]]
+* [[CD Tudelano|Tudelano]]
+* [[Utebo FC|Utebo]]
+* [[Xerez CD|Xerez]]
+|
+* [[Arosa SC|Arosa]]
+* [[CD Atlético Paso|Atlético Paso]]
+* [[Atlético Tordesillas]]
+* [[CD Badajoz|Badajoz]]
+* [[CF Calamocha|Calamocha]]
+* [[Calvo Sotelo Puertollano CF|Calvo Sotelo]]
+* [[UD Castellonense|Castellonense]]
+* [[CD Cieza|Cieza]]
+* [[CD Ciudad de Lucena|Ciudad de Lucena]]
+* [[CD Covadonga|Covadonga]]
+* [[CD Cuarte|Cuarte]]
+* [[CD Don Benito|Don Benito]]
+* [[Gimnástica de Torrelavega|Gimnástica Torrelavega]]
+* [[CD Guijuelo|Guijuelo]]
+* [[CD Laredo|Laredo]]
+* [[UD Llanera|Llanera]]
+* [[CE Manacor|Manacor]]
+* [[CE Manresa|Manresa]]
+* [[CP Mijas-Las Lagunas|Mijas-Las Lagunas]]
+* [[CD Pamplona|Pamplona]]
+* [[Peña Sport FC|Peña Sport]]
+* [[Club Portugalete|Portugalete]]
+* [[CF Trival Valderas|Trival Valderas]]
+* [[CD Tarancón|Tarancón]]
+* [[CD Varea|Varea]]
+|
+* [[CDA Navalcarnero|Navalcarnero]]
+* [[Recreativo de Huelva|Recreativo]]
+* [[Salamanca CF UDS|Salamanca]]
+* [[Sestao River Club|Sestao River]]
+|
+* [[CD Anaitasuna|Anaitasuna]]<!--4: BASQUE COUNTRY: División de Honor promotion play-offs runners-up--><ref name=M>{{cite web|url=https://www.marca.com/futbol/copa-rey/2026/09/10/copa-rey-pone-marcha-20-sonadores.html|title=La Copa del Rey se pone en marcha con 20 soñadores|trans-title=Copa del Rey is up and running with 20 dreamers|newspaper=Marca|language=es|date=10 September 2026|access-date=12 September 2026}}</ref>
+* [[Atlético Calatayud]]<!--17: ARAGON: worst second place of both Preferente groups--><ref>{{cite web|url=https://www.calatayudnoticias.com/deporte/23-futbol/17373-el-atletico-calatayud-despide-la-temporada-en-el-san-inigo-celebrando-su-clasificacion-para-la-copa-del-rey|title=El Atlético Calatayud despide la temporada en el San Íñigo celebrando su clasificación para la Copa del Rey|trans-title=Atlético Calatayud bid farewell to the season at San Íñigo celebrating their qualification to the Copa del Rey|publisher=Calatayud Noticias|language=es|date=20 May 2026|access-date=26 May 2026}}</ref>
+* [[Atlético Melilla CF|Atlético Melilla]]<!--9: MELILLA: Primera Autonómica winners--><ref name=M/>
+* [[EMF Atlético Unión Güímar|Atlético Unión Güímar]]<!--12: CANARY ISLANDS: winners of the Canarian play-offs to the cup: qualified through Copa Heliodoro v qualified through Copa José Antonio Ruiz Caballero--><ref>{{cite web|url=https://deporpress.com/el-au-guimar-mas-cerca-de-la-copa-del-rey/|title=EL AU Güímar, más cerca de la Copa del Rey|trans-title=AU Güímar, closer to the Copa del Rey|publisher=DeporPress|language=es|date=16 August 2026|access-date=16 August 2026}}</ref>
+* [[Auriense CA|Auriense]]<!--1: GALICIA: Supercopa Galicia winners--><ref>{{cite web|url=https://www.laregion.es/deporte-local/auriense-supercampeon-gallego-derrotar-negreira-futbol_1_20260830-4396934.html|title=El Auriense, nuevo campeón tras golear al Negreira (4–1)|trans-title=Auriense, new champion after thrashing Negreira (4–1)|publisher=La Región|language=es|date=30 August 2026|access-date=12 September 2026}}</ref>
+* [[CD Baztán|Baztán]]<!--15: NAVARRE: Supercopa Navarra winners--><ref>{{cite web|url=https://www.noticiasdenavarra.com/futbol/2026/08/29/baztan-remonta-gana-supercopa-11483010.html|title=El Baztan remonta y gana la Supercopa|trans-title=Baztan complete a comeback and win the Supercopa|publisher=Noticias de Navarra|language=es|date=29 August 2026|access-date=12 September 2026}}</ref>
+* [[CD Ceuta 6 de Junio|Ceuta 6 de Junio]]<!--10: CEUTA: Preferente winners--><ref>{{cite web|url=https://www.rtvce.es/articulo/deportes/ceuta-6-junio-proclama-campeon-regional-preferente/20260621133020100711.html|title=El Ceuta 6 de Junio se proclama campeón de la Regional Preferente|trans-title=Ceuta 6 de Junio become champions of the Regional Preferente|publisher=Radio Televisión Ceuta|language=es|date=21 June 2026|access-date=21 June 2026}}</ref>
+* [[UB Lebrijana|Lebrijana]]<!--9: EASTERN ANDALUSIA: Copa de Andalucía - Occidental winners--><ref name=RFAF>{{cite web|url=https://www.rfaf.es/pnfg/NNws_ShwNewDup?codigo=63751&cod_primaria=140&cod_secundaria=140|title=La UD Maracena y la Unión Balompédica Lebrijana, campeones de la Copa de Andalucía Sénior Masculina|trans-title=UD Maracena and Unión Balompédica Lebrijana, champions of the Copa de Andalucía Sénior Masculina|publisher=Royal Andalusian Football Federation|language=es|date=6 September 2026|access-date=12 September 2026}}</ref>
+* [[UD Maracena|Maracena]]<!--10: WESTERN ANDALUSIA: Copa de Andalucía - Oriental winners--><ref name=RFAF/>
+* [[SD Noja|Noja]]<!--3: CANTABRIA: Copa RFCF - Vicente Pérez Soberón winners--><ref>{{cite web|url=https://galernapress.es/noja-copa-rfcf-copa-del-rey/|title=El Noja conquista la Copa RFCF Vicente Pérez Soberón y se gana el billete para la Copa del Rey|trans-title=Noja win the Copa RFCF Vicente Pérez Soberón and get the ticket for the Copa del Rey|publisher=Galerna Press|language=es|date=30 August 2026|access-date=12 September 2026}}</ref>
+* [[UD Pinatar|Pinatar]]<!--13: REGION OF MURCIA: Supercopa Territorial winners--><ref>{{cite web|url=https://www.ffrm.es/pnfg/NNws_ShwNewDup?codigo=1060630&cod_primaria=1000057&cod_secundaria=1000057|title=El Atlético Pinatarense, campeón de la Supercopa representará a la FFRM en la Copa del Rey|trans-title=Atlético Pinatarense, champions of the Supercopa, will represent the FFRM in the Copa del Rey|publisher=Football Federation of the Region of Murcia|language=es|date=28 June 2026|access-date=16 July 2026}}</ref>
+* [[AE Prat|Prat]]<!--5: CATALONIA: Lliga Elit best-placed team not promoted--><ref name=M/>
+* [[Ribadesella CF|Ribadesella]]<!--2: ASTURIAS: Copa Asturfutbol winners--><ref>{{cite web|url=https://www.lne.es/deportes/deporte-astur/2026/09/06/ribadesella-golea-titanico-1-4-134015588.html|title=El Ribadesella golea al Titánico (1–4), gana la Copa Asturfútbol y sueña con ver en Oreyana a un Primera División|trans-title=Ribadesella thrash Titánico (1–4), win the Copa Asturfútbol and dream of seeing Oreyana with a Primera División|publisher=La Nueva España|language=es|date=6 September 2026|access-date=12 September 2026}}</ref>
+* [[CD San José|San José]]<!--8: CASTILE AND LEÓN: Preferente promotion play-offs finalist (not promoted)--><ref>{{cite web|url=https://www.heraldodiariodesoria.es/deportes/260607/209611/san-jose-empata-dos-turegano-queda-puertas-ascenso.html|title=El San José empata a dos con el Turégano y se queda a las puertas del ascenso|trans-title=San José draw 2–2 with Turégano and fall short of promotion|publisher=Heraldo-Diario de Soria|language=es|date=7 June 2026|access-date=7 June 2026}}</ref>
+* [[CF Sant Rafel|Sant Rafel]]<!--11: BALEARIC ISLANDS: Copa Illes Balears winners--><ref>{{cite web|url=https://www.diariodemallorca.es/deportes/2026/09/07/pilotades-sant-rafel-eivissa-campeon-134014157.html|title=El Sant Rafel de Eivissa, campeón de la Copa Illes Balears|trans-title=Sant Rafel from Ibiza, champion of the Copa Illes Balears|publisher=Diario de Mallorca|language=es|date=7 September 2026|access-date=12 September 2026}}</ref>
+* [[Sporting de Alcázar CF|Sporting de Alcázar]]<!--18: CASTILLA-LA MANCHA: Preferente Copa del Rey play-offs winners--><ref>{{cite web|url=https://www.elsemanaldelamancha.com/articulo/deportes/emers-sporting-alcazar-lleva-premio-copa-sm-rey-frente-manzanares-cf/20260621161811250591.html|title=El EMERS Sporting de Alcázar se lleva el premio de la Copa SM El Rey frente al Manzanares CF|trans-title=EMERS Sporting de Alcázar get the award of Copa SM El Rey against Manzanares CF|publisher=El Semanal de la Mancha|language=es|date=21 June 2026|access-date=21 June 2026}}</ref>
+* [[AD Sporting Hortaleza|Sporting Hortaleza]]<!--7: COMMUNITY OF MADRID: Copa RFFM de Aficionados winners--><ref>{{cite news|url=https://www.rffm.es/noticias/sporting-hortaleza-campeon-de-la-copa-rffm-de-aficionados-en-una-gran-final-de-juego-y-espectaculo-ante-atletico-valdeiglesias|title=Sporting Hortaleza, campeón de la Copa RFFM de Aficionados en una gran final de juego y espectáculo ante Atlético Valdeiglesias|trans-title=Sporting Hortaleza, champions of the Copa RFFM de Aficionados in a great ending of the match and spectacle against Atlético Valdeiglesias|publisher=Royal Madrid Football Federation|language=es|date=12 June 2026|access-date=12 June 2026}}</ref>
+* [[CP Talayuela|Talayuela]]<!--14: EXTREMADURA: best-placed Primera Extremeña team not promoted--><ref>{{cite web|url=https://www.elperiodicoextremadura.com/deportes/2026/06/14/sss-peleno-suben-131397429.html|title=Guadiana y Quintana ascienden a Tercera Federación|trans-title=Guadiana and Quintana promote to Tercera Federación|publisher=El Periódico Extremadura|language=es|date=14 June 2026|access-date=14 June 2026}}</ref>
+* [[CF UE Tavernes de la Valldigna|Tavernes de la Valldigna]]<!--6: VALENCIAN COMMUNITY: La Nostra Copa winners--><ref>{{cite web|url=https://cadenaser.com/comunitat-valenciana/2026/05/04/la-ue-tavernes-hace-historia-radio-gandia/|title=La UE Tavernes hace historia|trans-title=UE Tavernes make history|publisher=Cadena SER|language=es|date=4 May 2026|access-date=16 July 2026}}</ref>
+* [[CD Tedeón|Tedeón]]<!--16: LA RIOJA: Preferente 6th place (Calahorra B was 5th)--><ref>{{cite web|url=https://nuevecuatrouno.com/2026/06/23/deportes-copa-rey-udlogrones-varea-tedeon-jugaran-proxima-copa/|title=La UD Logroñés, el Varea y el Tedeón jugarán la próxima Copa del Rey|trans-title=UD Logroñés, Varea and Tedeón will play the following Copa del Rey|publisher=Nueve Cuatro Uno|language=es|date=23 June 2026|access-date=25 June 2026}}</ref>
+|}
+;Notes
+{{notelist}}
+
+==Preliminary round==
+{{Location map+ |Spain |width=275 |caption=Location of teams in '''preliminary round'''<br/>[[File:Red pog.svg|8px]] Red: Group 1<br/>[[File:Green pog.svg|8px]] Green: Group 2<br/>[[File:Purple 8000ff pog.svg|8px]] Purple: Group 3<br/>[[File:Orange pog.svg|8px]] Orange: Group 4
+|places=
+{{Location map~ |Spain |lat=42.3547 |long=-7.8538 |marksize=5 |label={{small|[[Auriense CA|Auriense]]}} |position=top}}
+{{Location map~ |Spain | lat_deg=43|lat_min=10|lat_sec=45|lat_dir=N|lon_deg=2|lon_min=18|lon_sec=38|lon_dir=W|marksize=5 | label=<div style="font-size:80%;position:relative;top:4px;left:2px;">[[CD Anaitasuna|Anaitasuna]]</div>|position=left}}
+{{Location map~ |Spain |lat=43.481389|long=-3.518611|marksize=5 | label={{small|[[SD Noja|Noja]]}}|position=top}}
+{{Location map~ |Spain |lat=43.45808 |long=-5.047634|marksize=5 | label={{small|[[Ribadesella CF|Ribadesella]]}}|position=left}}
+{{Location map~ |Spain |lat=41.817835|long=-2.449472|marksize=5 | label={{small|[[CD San José|San José]]}}|position=right}}
+{{Location map~ |Spain | lat_deg=42|lat_min=26 |lat_dir=N |lon_deg=2|lon_min=33|lon_dir=W|marksize=5 |label={{small|[[CD Tedeón|Tedeón]]}}| position=right}}
+{{Location map~ |Spain |lat=41.352117|long=-1.624038|marksize=5 | label={{small|[[Atlético Calatayud|At. Calatayud]]}}|position=left|mark=Green pog.svg}}
+{{Location map~ |Spain | lat_deg=43|lat_min=12|lat_dir=N |lon_deg=1|lon_min=28|lon_dir=W|marksize=5 |label={{small|[[CD Baztán|Baztán]]}}| position=right|mark=Green pog.svg}}
+{{Location map~ |Spain |lat=41.3203 |long=2.0835 |marksize=5 |label={{small|[[AE Prat|Prat]]}} |position=left|mark=Green pog.svg}}
+{{Location map~ |Spain |lat_deg=38|lat_min=57|lat_dir=N|lon_deg=1|lon_min=23|lon_dir=E|marksize=5 | label={{small|[[CF Sant Rafel|Sant Rafel]]}}| position=right|mark=Green pog.svg}}
+{{Location map~ |Spain |lat=35.293462 |long=-2.937567 |marksize=5 |label={{small|[[Atlético Melilla CF|At. Melilla]]}} |position=top|mark=Purple 8000ff pog.svg}}
+{{Location map~ |Spain |lat=37.818068 |long=-0.791632 |marksize=5 |label={{small|[[UD Pinatar|Pinatar]]}} |position=right|mark=Purple 8000ff pog.svg}}
+{{Location map~ |Spain |lat=35.891829 |long=-5.299392 |marksize=5 |label={{small|[[CD Ceuta 6 de Junio|Ceuta 6 Junio]]}} |position=left|mark=Purple 8000ff pog.svg}}
+{{Location map~ |Spain | lat_deg=36|lat_min=55|lat_sec=10 |lat_dir=N |lon_deg=6|lon_min=4|lon_sec=41|lon_dir=W|marksize=5 | label={{small|[[UB Lebrijana|Lebrijana]]}}|position=left|mark=Purple 8000ff pog.svg}}
+{{Location map~ |Spain |lat_deg=37|lat_min=12|lat_dir=N|lon_deg=3|lon_min=38|lon_dir=W|marksize=5 | label={{small|[[UD Maracena|Maracena]]}}| position=right|mark=Purple 8000ff pog.svg}}
+{{Location map~ |Spain |lat=39.074595 |long=-0.268671 |marksize=5 |label={{small|[[CF UE Tavernes de la Valldigna|Tavernes]]}} |position=top|mark=Purple 8000ff pog.svg}}
+{{Location map~ |Spain |lat_deg=28|lat_min=18|lat_sec=54|lat_dir=N|lon_deg=16|lon_min=24|lon_sec=36|lon_dir=W|marksize=5 | label={{small|[[Atlético Unión Güímar|AU Güímar]]}}|position=bottom|mark=Orange pog.svg}}
+{{Location map~ |Spain |lat=39.388631 |long=-3.222309 |marksize=5 |label={{small|[[Sporting de Alcázar CF|Sp. Alcázar]]}} |position=bottom|mark=Orange pog.svg}}
+{{Location map~ |Spain |lat=40.478378 |long=-3.656281 |marksize=5 |label={{small|[[AD Sporting Hortaleza|Sp. Hortaleza]]}} |position=right|mark=Orange pog.svg}}
+{{Location map~ |Spain |lat=39.990499 |long=-5.617751 |marksize=5 |label={{small|[[CP Talayuela|Talayuela]]}} |position=bottom|mark=Orange pog.svg}}
+}}
+===Draw===
+Teams were divided into four groups according to geographical criteria.<ref>{{cite news|url=https://rfef.es/es/noticias/la-eliminatoria-previa-ya-tiene-emparejamientos|title=La eliminatoria previa ya tiene emparejamientos|trans-title=The preliminary round already have their fixtures|publisher=Royal Spanish Football Federation|language=es|date=10 September 2026|access-date=12 September 2026}}</ref>
+{|class="wikitable"
+|-
+! Group 1 !! Group 2 !! Group 3 !! Group 4
+|- valign=top
+|
+* [[CD Anaitasuna|Anaitasuna]]
+* [[Auriense CA|Auriense]]
+* [[SD Noja|Noja]]
+* [[Ribadesella CF|Ribadesella]]
+* [[CD San José|San José]]
+* [[CD Tedeón|Tedeón]]
+|
+* [[Atlético Calatayud]]
+* [[CD Baztán|Baztán]]
+* [[AE Prat|Prat]]
+* [[CF Sant Rafel|Sant Rafel]]
+|
+* [[Atlético Melilla CF|Atlético Melilla]]
+* [[CD Ceuta 6 de Junio|Ceuta 6 de Junio]]
+* [[UB Lebrijana|Lebrijana]]
+* [[UD Maracena|Maracena]]
+* [[UD Pinatar|Pinatar]]
+* [[CF UE Tavernes de la Valldigna|Tavernes de la Valldigna]]
+|
+* [[EMF Atlético Unión Güímar|Atlético Unión Güímar]]
+* [[Sporting de Alcázar CF|Sporting de Alcázar]]
+* [[AD Sporting Hortaleza|Sporting Hortaleza]]
+* [[CP Talayuela|Talayuela]]
+|}
+
+===Summary===
+{{#invoke:Sports series|main
+|'''[[CD Anaitasuna|Anaitasuna]]'''|| 10–2 |[[CD Tedeón|Tedeón]]||5–0|5–2
+|'''[[Auriense CA|Auriense]]'''|| 2–1 |[[CD San José|San José]]||2–0|0–1
+|'''[[Ribadesella CF|Ribadesella]]'''|| 2–1 |[[SD Noja|Noja]]||1–0|1–1
+|'''[[Atlético Calatayud]]'''|| 4-1 |[[CD Baztán|Baztán]]||2–0|2–1
+|[[CF Sant Rafel|Sant Rafel]]|| 1–10 |'''[[AE Prat|Prat]]'''||1–5|0–5
+|[[UD Maracena|Maracena]]|| 1–1 {{pso|2–4}}|'''[[CF UE Tavernes de la Valldigna|Tavernes de la Valldigna]]'''||1–1|0–0 {{aet}}
+|'''[[UB Lebrijana|Lebrijana]]'''|| 7–1 |[[CD Ceuta 6 de Junio|Ceuta 6 de Junio]]||5–0|2–1
+|'''[[UD Pinatar|Pinatar]]'''|| 11–0 |[[Atlético Melilla CF|Atlético Melilla]]||8–0|3–0
+|'''[[AD Sporting Hortaleza|Sporting Hortaleza]]'''|| 4–3 |[[EMF Atlético Unión Güímar|Atlético Unión Güímar]]||1–0|3–3 {{aet}}
+|[[CP Talayuela|Talayuela]]|| 1–3 |'''[[Sporting de Alcázar CF|Sporting de Alcázar]]'''||1–2|0–1
+}}
+
+=== First leg ===
+{{football box collapsible
+|id=
+|date=26 September 2026
+|time=18:00
+|team1=[[CD Anaitasuna|Anaitasuna]]
+|score= 5–0
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704803
+|team2='''[[CD Tedeón|Tedeón]]'''
+|goals1=
+*[[Ander Pastrian Soraluze|Pastri]] {{goal|25||70}}
+*[[Hazim Hicham|Hicham]] {{goal|45+2||52}}
+*[[Julen Aramendi Agirre|Aramendi]] {{goal|56}}
+|goals2=
+|stadium=Txerloia
+|location=[[Azkoitia]]
+|attendance=
+|referee=Juan Velasco Fuentes
+}}
+{{football box collapsible
+|id=
+|date=26 September 2026
+|time=18:00
+|team1=[[Atlético Calatayud]]
+|score= 2–0
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704806
+|team2='''[[CD Baztán|Baztán]]'''
+|goals1=
+*[[Francisco Blasco Álvarez|Blasco]] {{goal|4||80}}
+|goals2=
+|stadium=[[Estadio San Íñigo|San Íñigo]]
+|location=[[Calatayud]]
+|attendance=
+|referee=José Jareño Gil
+}}
+{{football box collapsible
+|id=
+|date=26 September 2026
+|time=18:00
+|team1=[[UB Lebrijana|Lebrijana]]
+|score= 5–0
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704809
+|team2='''[[CD Ceuta 6 de Junio|Ceuta 6 de Junio]]'''
+|goals1=
+*[[José Miguel Santos Marín|Josemi]] {{goal|9||35||40}}
+*[[Manuel Jesús Parrales Román|Parrales]] {{goal|50}}
+*[[Matías Valdez (footballer)|Valdez]] {{goal|72}}
+|goals2=
+|stadium=[[Estadio Municipal de Lebrija|Municipal]]
+|location=[[Lebrija]]
+|attendance=
+|referee=Mario Carlos García Sosa
+}}
+{{football box collapsible
+|id=
+|date=26 September 2026
+|time=19:00
+|team1=[[Ribadesella CF|Ribadesella]]
+|score= 1–0
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704805
+|team2='''[[SD Noja|Noja]]'''
+|goals1=
+*[[Pelayo Santoveña Coro|Santoveña]] {{goal|90+4}}
+|goals2=
+|stadium=[[Estadio Oreyana|Oreyana]]
+|location=[[Ribadesella]]
+|attendance=
+|referee=Iván Carrillo Checkhov
+}}
+{{football box collapsible
+|id=
+|date=26 September 2026
+|time=20:00
+|team1=[[UD Pinatar|Pinatar]]
+|score= 8–0
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704810
+|team2='''[[Atlético Melilla CF|Atlético Melilla]]'''
+|goals1=
+*[[Mohammed Benhallou El Farh|Moha]] {{goal|15|pen.|90|pen.}}
+*[[Iván Vilches González|Vilches]] {{goal|22}}
+*[[Gabriel Sánchez Hernández|Chipi]] {{goal|34}}
+*[[Alejandro Martínez Kerruish|Kerru]] {{goal|40}}
+*[[Max Brian Webb|Webb]] {{goal|59||80}}
+|goals2=
+|stadium=[[Estadio José Antonio Pérez|José Antonio Pérez]]
+|location=[[San Pedro del Pinatar]]
+|attendance=
+|referee=Miguel Díaz-Portales Ruiz
+}}
+{{football box collapsible
+|id=
+|date=27 September 2026
+|time=12:00
+|team1=[[Auriense CA|Auriense]]
+|score= 2–0
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704804
+|team2='''[[CD San José|San José]]'''
+|goals1=
+*[[Fernando Méndez González|Méndez]] {{goal|34}}
+*[[Adrián Fernández Merino|Fernández]] {{goal|87}}
+|goals2=
+|stadium=[[Campo Municipal de Oira|Campo de Oira]]
+|location=[[Ourense]]
+|attendance=
+|referee=Jaime Ruiz Álvarez
+}}
+{{football box collapsible
+|id=
+|date=27 September 2026
+|time=12:00
+|team1=[[AD Sporting Hortaleza|Sporting Hortaleza]]
+|score= 1–0
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704811
+|team2='''[[EMF Atlético Unión Güímar|Atlético Unión Güímar]]'''
+|goals1=
+*[[Alfredo Alhambra Gallego|Alfredo]] {{goal|80}}
+|goals2=
+|stadium=Polideportivo Municipal Sporting de Hortaleza
+|location=[[Madrid]]
+|attendance=
+|referee=Nicolas Suárez Larrén
+}}
+{{football box collapsible
+|id=
+|date=27 September 2026
+|time=16:00
+|team1='''[[CF Sant Rafel|Sant Rafel]]'''
+|score= 1–5
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704807
+|team2=[[AE Prat|Prat]]
+|goals1=
+*[[Brandon Martínez Moreno|Martínez]] {{goal|26}}
+|goals2=
+*[[Kim Keon-woo]] {{goal|15}}
+*[[Gustavo Reinke Gonçalves|Reinke]] {{goal|39||52}}
+*[[Alex Plaza Cremades|Plaza]] {{goal|42|pen.}}
+*[[Raúl Inocencio Romero|Ino]] {{goal|84}}
+|stadium=[[Camp Municipal d'Esports Sant Rafel|Municipal]]
+|location=[[Sant Rafel de sa Creu]]
+|attendance=
+|referee=Adrián Goñi Muiños
+}}
+{{football box collapsible
+|id=
+|date=27 September 2026
+|time=17:30
+|team1='''[[CP Talayuela|Talayuela]]'''
+|score= 1–2
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704812
+|team2=[[Sporting de Alcázar CF|Sporting de Alcázar]]
+|goals1=
+*[[Zogbo Yann-Aymar Junior Kore|Yann Junior]] {{goal|35}}
+|goals2=
+*[[Ángel Contento Garcia|Contento]] {{goal|21}}
+*[[Alberto Abengózar|Abengózar]] {{goal|75|pen.}}
+|stadium=Ciudad Deportiva Rodrigo Sánchez
+|location=[[Talayuela]]
+|attendance=
+|referee=Alejandro Torrano López
+}}
+{{football box collapsible
+|id=
+|date=27 September 2026
+|time=18:00
+|team1=[[UD Maracena|Maracena]]
+|score= 1–1
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704808
+|team2=[[CF UE Tavernes de la Valldigna|Tavernes de la Valldigna]]
+|goals1=
+*[[Rafael Moreno Lucena|Falin]] {{goal|45+1|pen.}}
+|goals2=
+*[[Jesús Prats Pausa|Prats]] {{goal|17}}
+|stadium=Ciudad Deportiva de Maracena
+|location=[[Maracena]]
+|attendance=
+|referee=Antonio Pozo Fernández
+}}
+
+===Second leg===
+{{football box collapsible
+|id=
+|date=3 October 2026
+|time=17:30
+|team1='''[[CD Baztán|Baztán]]'''
+|score=1–2
+|aggregatescore=1–4
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704816
+|team2=[[Atlético Calatayud]]
+|goals1=
+*[[Imanol Zoco Argain|Zoko]] {{goal|11}}
+|goals2=
+*[[José Antonio Vinuesa Sánchez|Vinuesa]] {{goal|1}}
+*[[Víctor Miguel Martínez Zueco|Martínez]] {{goal|20}}
+|stadium=Giltxaurdi
+|location=[[Elizondo, Navarre|Elizondo]]
+|attendance=
+|referee=Javier Gutierrez Ruiz
+}}
+{{football box collapsible
+|id=
+|date=3 October 2026
+|time=18:00
+|team1='''[[CD Tedeón|Tedeón]]'''
+|score=2–5
+|aggregatescore=2–10
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704813
+|team2=[[CD Anaitasuna|Anaitasuna]]
+|goals1=
+*[[David Sánchez García|Sánchez]] {{goal|31}}
+*[[Raúl Dávila Cuesta|Dávila]] {{goal|39}}
+|goals2=
+*[[Jokin Errazu Tolosa|Errazu]] {{goal|29}}
+*[[Julen Aramendi Agirre|Aramendi]] {{goal|45+2}}
+*[[Mikel Zubizarreta Aizpurua|Zubizarreta]] {{goal|50}}
+*[[Jakes Díaz Etxaniz|Díaz]] {{goal|73}}
+*[[Luis Juaristi Badiola|Juaristi]] {{goal|75}}
+|stadium=San Miguel
+|location=[[Navarrete, La Rioja|Navarrete]]
+|attendance=
+|referee=Andrea López Méndez
+}}
+{{football box collapsible
+|id=
+|date=3 October 2026
+|time=18:00
+|team1='''[[CD Ceuta 6 de Junio|Ceuta 6 de Junio]]'''
+|score=1–2
+|aggregatescore=1–7
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704819
+|team2=[[UB Lebrijana|Lebrijana]]
+|goals1=
+*[[Monthaser Boumedian Ahmed|Boumedian]] {{goal|70}}
+|goals2=
+*[[José Miguel Santos Marín|Josemi]] {{goal|14||38}}
+|stadium=[[Estadio José Martínez Pirri|José Martínez Pirri]]
+|location=[[Ceuta]]
+|attendance=
+|referee=Jose Manuel Sabido Serrano
+}}
+{{football box collapsible
+|id=
+|date=4 October 2026
+|time=16:00
+|team1='''[[CD San José|San José]]'''
+|score=1–0
+|aggregatescore=1–2
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704814
+|team2=[[Auriense CA|Auriense]]
+|goals1=
+*[[Álvaro Antolín Antón|Antolín]] {{goal|55}}
+|goals2=
+|stadium=[[Estadio San Juan de Garray|San Juan de Garray]]
+|location=[[Soria]]
+|attendance=
+|referee=David Martinez Bachiller
+}}
+{{football box collapsible
+|id=
+|date=4 October 2026
+|time=16:00
+|team1='''[[SD Noja|Noja]]'''
+|score=1–1
+|aggregatescore=1–2
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704815
+|team2=[[Ribadesella CF|Ribadesella]]
+|goals1=
+*[[Javier Miguel Macías|Miguel]] {{goal|41}}
+|goals2=
+*[[Jandro Fernández|Jandro]] {{goal|4}}
+|stadium=[[Estadio La Caseta|La Caseta]]
+|location=[[Noja]]
+|attendance=
+|referee=Izaskun Muñoz Echeverria
+}}
+{{football box collapsible
+|id=
+|date=4 October 2026
+|time=17:30
+|team1=[[Sporting de Alcázar CF|Sporting de Alcázar]]
+|score=1–0
+|aggregatescore=3–1
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704822
+|team2='''[[CP Talayuela|Talayuela]]'''
+|goals1=
+*[[Alberto Abengózar|Abengózar]] {{goal|45|pen.}}
+|goals2=
+|stadium=Campo de Fútbol Manuel Delgado Meco
+|location=[[Alcázar de San Juan]]
+|attendance=
+|referee=Javier Clemente Martinez
+}}
+{{football box collapsible
+|id=
+|date=4 October 2026
+|time=18:00
+|team1=[[CF UE Tavernes de la Valldigna|Tavernes de la Valldigna]]
+|score=0–0
+|aet=yes
+|aggregatescore=1–1
+|penaltyscore=4–2
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704818
+|team2='''[[UD Maracena|Maracena]]'''
+|goals1=
+|penalties1=
+*[[Erik Martínez Martí|Martínez]] {{pengoal}}
+*[[Jorge Seral Galindo|Seral]] {{pengoal}}
+*[[Eduard Alberola Pineda|Alberola]] {{pengoal}}
+*[[Jordi Melo Clar|Jordi]] {{penmiss}}
+*[[Artur Hayrapetyan|Hayrapetyan]] {{pengoal}}
+|goals2=
+|penalties2=
+*{{pengoal}} [[José Francisco Domingo Gómez|Neskes]]
+*{{penmiss}} [[Rubén Osuna Sánchez|Osuna]]
+*{{pengoal}} [[Pau Sellés Doménech|Sellés]]
+*{{penmiss}} [[Samuel Román Tovar|Román]]
+|stadium=[[Camp Municipal Tavernes de la Valldigna|Municipal]]
+|location=[[Tavernes de la Valldigna]]
+|attendance=
+|referee=Adrian Corbelle Huelin
+}}
+{{football box collapsible
+|id=
+|date=4 October 2026
+|time=19:00
+|team1='''[[Atlético Melilla CF|Atlético Melilla]]'''
+|score=0–3
+|aggregatescore=0–11
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70704820
+|team2=[[UD Pinatar|Pinatar]]
+|goals1=
+|goals2=
+*[[Hicham Khaloua|Hicham]] {{goal|13||53}}
+*[[Iván Vilches González|Vilches]] {{goal|76}}
+|stadium=La Espiguera
+|location=[[Melilla]]
+|attendance=
+|referee=Manuel Canton Martos
+}}
+{{football box collapsible
+|id=
+|date=11 October 2026
+|time=13:00 [[Western European Time|WET]]
+|team1='''[[EMF Atlético Unión Güímar|Atlético Unión Güímar]]'''
+|score=3–3
+|aet=yes
+|aggregatescore=3–4
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70705247&cod_acta=70705247
+|team2=[[AD Sporting Hortaleza|Sporting Hortaleza]]
+|goals1=
+*[[Said Derfoufi Benderfouf|Said]] {{goal|18||32}}
+*[[Denzel Gómez Méndez|Denzel]] {{goal|50}}
+|goals2=
+*[[Alfredo Alhambra Gallego|Alhambra]] {{goal|47||104|pen.}}
+*[[Ayman El Moudden|El Moudden]] {{goal|72}}
+|stadium=[[Estadio del Peñón]]
+|location=[[Puerto de la Cruz]]
+|attendance=
+|referee=Rafael Aguilar Prat
+|note=Originally scheduled to 4 October 2026, the match was postponed due to incidents before the match.<ref>{{cite news|url=https://rfef.es/es/noticias/comunicado-oficial-atletico-union-guimar-sporting-hortaleza|title=Comunicado oficial: Atlético Unión Güímar - Sporting Hortaleza|trans-title=Official statement: Atlético Unión Güímar - Sporting Hortaleza|publisher=Royal Spanish Football Federation|language=es|date=6 October 2026|access-date=6 October 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=11 October 2026
+|time=16:00
+|team1=[[AE Prat|Prat]]
+|score=5–0
+|aggregatescore=10–1
+|report=https://marcadores.rfef.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=70705246&cod_acta=70705246
+|team2='''[[CF Sant Rafel|Sant Rafel]]'''
+|goals1=
+*[[Adrián Rivas Sánchez|Rivas]] {{goal|10}}
+*[[Jordi Buyreu Alias|Buyreu]] {{goal|13}}
+*[[Kim Keon-woo]] {{goal|14}}
+*[[Alejandro Archs Hortigón|Archs]] {{goal|48}}
+*[[David Adán Delgado|Adán]] {{goal|73}}
+|goals2=
+|stadium=CEM Sagnier
+|location=[[El Prat de Llobregat]]
+|attendance=
+|referee=Ignacio Garcia Reyes
+|note=Originally scheduled to 4 October 2026, the match was postponed due to the visitors' "inability to travel" due to weather conditions.<ref>{{cite news|url=https://www.sport.es/es/noticias/futbol/copa-rey/aplazado-prat-san-rafael-imposibilidad-134990800|title=Aplazado el Prat-San Rafael por “la imposibilidad de viajar por cuestiones meteorológicas”|trans-title=Prat vs. San Rafael match postponed due to "inability to travel due to weather conditions"|publisher=Sport|language=es|date=4 October 2026|access-date=6 October 2026}}</ref>
+}}
+
+==First round==
+The first round will be played by 112 of the 116 qualified teams, with the exceptions being the four participants of the [[2027 Supercopa de España]]. 
+
+This first round remains a single match, but a new criteria of geographical proximity was created to define which teams would face each other. 
+
+A total of 56 matches will be played between 27 October and 18 November 2026. All matches scheduled to occur on 28 October were postponed due to a [[2026 Toledo train collision|train collision]] in [[Urda, Toledo]].<ref name=M2810>{{cite web|url=https://www.marca.com/futbol/copa-rey/2026/10/28/suspendida-jornada-copa-tragico-accidente-urda.html|title=Suspendida la jornada de Copa por el trágico accidente en Urda|trans-title=Cup round suspended due to the tragic accident in Urda|publisher=[[Marca (newspaper)|Marca]]|language=es|date=28 October 2026|accessdate=28 October 2026}}</ref> The matches originally scheduled for between 3 and 5 November were postponed once again as a mark of mourning for the passing of Tenerife player [[Jesús de Miguel]].<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-suspende-la-jornada-de-futbol-de-este-3-de-noviembre-tras-el-fallecimiento-de|title=La RFEF suspende la jornada de fútbol de este 3 de noviembre tras el fallecimiento de Jesús de Miguel, jugador del CD Tenerife|trans-title=The RFEF suspends this November 3rd's round of football matches following the death of CD Tenerife player Jesús de Miguel|publisher=[[Royal Spanish Football Federation]]|language=es|date=3 November 2026}}</ref><ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until 6 November|publisher=[[Royal Spanish Football Federation]]|language=es|date=3 November 2026}}</ref>
+
+===Draw===
+The draw for the first round was held on 5 October 2026. Teams were divided into four pots.<ref>{{cite news|url=https://rfef.es/es/noticias/112-equipos-56-cruces-la-primera-eliminatoria-de-la-copa-del-rey-mapfre-se-sortea-el-5-de|title=112 equipos, 56 cruces: la primera eliminatoria de la Copa del Rey Mapfre se sortea el 5 de octubre|publisher=Royal Spanish Football Federation|language=es|access-date=29 September 2026}}</ref>
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|Group 1}} || width=15%|'''Pot 2'''<br/>{{small|Group 2}} || width=15%|'''Pot 3'''<br/>{{small|Group 3}} || width=15%|'''Pot 4'''<br/>{{small|Group 4}}
+|- valign=top
+|
+* [[RC Celta de Vigo|Celta Vigo]]
+* [[Deportivo de A Coruña|Deportivo A Coruña]]
+* [[Racing de Santander|Racing Santander]]
+* [[Burgos CF|Burgos]]
+* [[Real Oviedo|Oviedo]]
+* [[Sporting de Gijón|Sporting Gijón]]
+* [[Real Valladolid|Valladolid]]
+* [[Cultural y Deportiva Leonesa|Cultural Leonesa]]
+* [[CD Mirandés|Mirandés]]
+* [[UD Ourense]]
+* [[SD Ponferradina|Ponferradina]]
+* [[Pontevedra CF|Pontevedra]]
+* [[Unionistas de Salamanca CF|Unionistas]]
+* [[Zamora CF|Zamora]]
+* [[Arosa SC|Arosa]]
+* [[Atlético Tordesillas]]
+* [[Real Ávila CF|Ávila]]
+* [[Coruxo FC|Coruxo]]
+* [[Gimnástica Segoviana CF|Gimnástica Segoviana]]
+* [[Gimnástica de Torrelavega|Gimnástica Torrelavega]]
+* [[UD Llanera|Llanera]]
+* [[CD Numancia|Numancia]]
+* [[CD Covadonga|Covadonga]]
+* [[CD Guijuelo|Guijuelo]]
+* [[CD Laredo|Laredo]]
+* [[Salamanca CF UDS|Salamanca]]
+* [[Auriense CA|Auriense]]
+* [[Ribadesella CF|Ribadesella]]
+|
+* [[Deportivo Alavés|Alavés]]
+* [[Athletic Bilbao]]
+* [[RCD Espanyol|Espanyol]]
+* [[CA Osasuna|Osasuna]]
+* [[FC Andorra|Andorra]]
+* [[SD Eibar|Eibar]]
+* [[Girona FC|Girona]]
+* [[CE Sabadell FC|Sabadell]]
+* [[Barakaldo CF|Barakaldo]]
+* [[CE Europa|Europa]]
+* [[SD Huesca|Huesca]]
+* [[UD Logroñés]]
+* [[Real Unión]]
+* [[UE Sant Andreu|Sant Andreu]]
+* [[Real Zaragoza|Zaragoza]]
+* [[SD Amorebieta|Amorebieta]]
+* [[CF Calamocha|Calamocha]]
+* [[CE Manresa|Manresa]]
+* [[Peña Sport FC|Peña Sport]]
+* [[Club Portugalete|Portugalete]]
+* [[Reus FC Reddis|Reus FCR]]
+* [[CD Tudelano|Tudelano]]
+* [[Utebo FC|Utebo]]
+* [[CD Cuarte|Cuarte]]
+* [[CD Pamplona|Pamplona]]
+* [[CD Varea|Varea]]
+* [[Sestao River Club|Sestao River]]
+* [[CD Anaitasuna|Anaitasuna]]
+* [[Atlético Calatayud]]
+* [[AE Prat|Prat]]
+|
+* [[Elche CF|Elche]]
+* [[Levante UD|Levante]]
+* [[Málaga CF|Málaga]]
+* [[Valencia CF|Valencia]]
+* [[Villarreal CF|Villarreal]]
+* [[Albacete Balompié|Albacete]]
+* [[UD Almería|Almería]]
+* [[CD Castellón|Castellón]]
+* [[AD Ceuta FC|Ceuta]]
+* [[CD Eldense|Eldense]]
+* [[Granada CF|Granada]]
+* [[RCD Mallorca|Mallorca]]
+* [[Águilas FC|Águilas]]
+* [[Antequera CF|Antequera]]
+* [[FC Cartagena|Cartagena]]
+* [[Real Jaén|Jaén]]
+* [[CD Alcoyano|Alcoyano]]
+* [[CD Atlético Baleares|Atlético Baleares]]
+* [[Calvo Sotelo Puertollano CF|Calvo Sotelo]]
+* [[UD Castellonense|Castellonense]]
+* [[CD Cieza|Cieza]]
+* [[UB Conquense|Conquense]]
+* [[CP Mijas-Las Lagunas|Mijas-Las Lagunas]]
+* [[CD Minera|Minera]]
+* [[UD Poblense|Poblense]]
+* [[CE Manacor|Manacor]]
+* [[CD Tarancón|Tarancón]]
+* [[UD Pinatar|Pinatar]]
+* [[Sporting de Alcázar CF|Sporting de Alcázar]]
+* [[CF UE Tavernes de la Valldigna|Tavernes de la Valldigna]]
+|
+* [[Getafe CF|Getafe]]
+* [[Rayo Vallecano]]
+* [[Real Betis]]
+* [[Sevilla FC|Sevilla]]
+* [[Cádiz CF|Cádiz]]
+* [[Córdoba CF|Córdoba]]
+* [[UD Las Palmas|Las Palmas]]
+* [[CD Leganés|Leganés]]
+* [[CD Tenerife|Tenerife]]
+* [[CD Coria|Coria]]
+* [[CD Extremadura|Extremadura]]
+* [[CF Rayo Majadahonda|Rayo Majadahonda]]
+* [[RSD Alcalá|Alcalá]]
+* [[CD Atlético Paso|Atlético Paso]]
+* [[CD Badajoz|Badajoz]]
+* [[CD Don Benito|Don Benito]]
+* [[CD Ciudad de Lucena|Ciudad de Lucena]]
+* [[UD San Sebastián de los Reyes|San Sebastián de los Reyes]]
+* [[Xerez CD|Xerez]]
+* [[CF Trival Valderas|Trival Valderas]]
+* [[CDA Navalcarnero|Navalcarnero]]
+* [[Recreativo de Huelva|Recreativo]]
+* [[UB Lebrijana|Lebrijana]]
+* [[AD Sporting Hortaleza|Sporting Hortaleza]]
+|}
+
+===Group 1===
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=20:00
+|team1='''[[Atlético Tordesillas]] (4)'''
+|score=3–3
+|aet=yes
+|penaltyscore=2–4
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-atletico-tordesillas-cd-mirandes-3
+|team2=[[CD Mirandés|Mirandés]] (3)
+|goals1=
+*[[Chatún]] {{goal|5||29}}
+*[[Abel Conejo|Conejo]] {{goal|48}}
+|goals2=
+*[[Said Ricardo de Moraes de Morais|Riki]] {{goal|69}}
+*[[Aritz Arambarri|Arambarri]] {{goal|81}}
+*[[Jorge González Méndez|González]] {{goal|90+5}}
+|penalties1=
+*[[Javi Bueno|Bueno]] {{pengoal}}
+*[[Fran Manja|Manja]] {{penmiss}}
+*[[Joan Castaño|Castaño]] {{penmiss}}
+*[[Abel Conejo|Conejo]] {{pengoal}}
+|penalties2=
+*{{pengoal}} [[Verde (footballer, born 2002)|Verde]]
+*{{pengoal}} [[Jorge González (footballer)|González]]
+*{{penmiss}} [[Peru Rodríguez|Rodríguez]]
+*{{pengoal}} [[Carlos Navarro (footballer)|Navarro]]
+*{{pengoal}} [[David Dela|Dela]]
+|stadium=Las Salinas
+|location=[[Tordesillas]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=20:00
+|team1='''[[Gimnástica Segoviana CF|Gimnástica Segoviana]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-gimnastica-segoviana-cf-cultural-y-deportiva-leonesa-3
+|team2=[[Cultural y Deportiva Leonesa|Cultural Leonesa]] (3)
+|goals1=
+|goals2=
+*[[Samba Gnamadio|Gnamadio]] {{goal|31|o.g.}}
+|stadium=[[Estadio La Albuera|La Albuera]]
+|location=[[Segovia]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=20:00
+|team1='''[[UD Llanera|Llanera]] (4)'''
+|score=1–1
+|aet=yes
+|penaltyscore=3–5
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-ud-llanera-sd-ponferradina-3
+|team2=[[SD Ponferradina|Ponferradina]] (3)
+|goals1=
+*[[Pablo Longo|Longo]] {{goal|82}}
+|goals2=
+*[[Serigne Faye|Faye]] {{goal|39}}
+|penalties1=
+*[[Pablo Calvo|Calvo]] {{pengoal}}
+*[[Mathieu Mvondo|Mvondo]] {{penmiss}}
+*[[Mikel Busto|Busto]] {{pengoal}}
+*[[Adrián Turmo|Turmo]] {{pengoal}}
+|penalties2=
+*{{pengoal}} [[Pablo Muñoz (footballer)|Muñoz]]
+*{{pengoal}} [[José Luis Aranda|Aranda]]
+*{{pengoal}} [[David Andújar|Andújar]]
+*{{pengoal}} [[Slavy]]
+*{{pengoal}} [[Borja Valle|Valle]]
+|stadium=[[Estadio Hermanos Antuña|Hermanos Antuña]]
+|location=[[Mieres, Asturias|Mieres]]{{efn|Llanera did not play the match in their main stadium Pepe Quimarán, [[Llanera, Asturias|Posada de Llanera]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://www.bierzodiario.es/?p=195596|title=La Ponferradina se enfrentará al Llanera en la primera ronda de la Copa el martes 27|trans-title=Ponferradina will face Llanera in the first round of the cup on Tuesday 27|publisher=Bierzo Diario |language=es|date=7 October 2026}}</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=21:00
+|team1=[[Arosa SC|Arosa]] (4)
+|score=2–0
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-arosa-pontevedra-cf-3
+|team2='''[[Pontevedra CF|Pontevedra]] (3)'''
+|goals1=
+*[[Marcos Remeseiro|Remeseiro]] {{goal|55}}
+*[[Gabriel Palmás|Palmás]] {{goal|66}}
+|goals2=
+|stadium=[[Estadio A Lomba|A Lomba]]
+|location=[[Vilagarcía de Arousa]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=18:00
+|team1=[[CD Numancia|Numancia]] (4)
+|score=3–3
+|aet=yes
+|penaltyscore=4–2
+|report=
+|team2='''[[Real Oviedo|Oviedo]] (2)'''
+|goals1=
+*[[Aitor Aranzabe|Aranzabe]] {{goal|42}}
+*[[Iker León|León]] {{goal|57}}
+*[[Jony]] {{goal|86}}
+|goals2=
+*[[Alexandru Ișfan|Ișfan]] {{goal|74}}
+*[[Mikel Goti|Goti]] {{goal|76||89}}
+|penalties1=
+*[[Rafa Roldán|Roldán]] {{pengoal}}
+*[[Jony]] {{pengoal}}
+*[[Víctor Charlez|Charlez]] {{pengoal}}
+*[[Sébastien Lauture|Lauture]] {{pengoal}}
+|penalties2=
+*{{penmiss}} [[Pablo Sáenz|Sáenz]]
+*{{penmiss}} [[Alberto Reina|Reina]]
+*{{pengoal}} [[José Luis Morales (footballer, born 1987)|Morales]]
+*{{pengoal}} [[Dani Villahermosa|Villahermosa]]
+|stadium=[[Nuevo Estadio Los Pajaritos|Los Pajaritos]]
+|location=[[Soria]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=19:00
+|team1='''[[Coruxo FC|Coruxo]] (4)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-coruxo-fc-zamora-cf-3
+|team2=[[Zamora CF|Zamora]] (3)
+|goals1=
+|goals2=
+*[[Pau Mascaró|Mascaró]] {{goal|8}}
+*[[Alexander Hidalgo|Hidalgo]] {{goal|90}}
+|stadium=[[:es:Campo do Vao|O Vao]]
+|location=[[Vigo]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=20:00
+|team1='''[[CD Covadonga|Covadonga]] (5)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cd-covadonga-real-valladolid-cf-3
+|team2=[[Real Valladolid|Valladolid]] (2)
+|goals1=
+|goals2=
+*[[Robin van Duiven|Van Duiven]] {{goal|12}}
+|stadium=[[Estadio El Bayu|El Bayu]]
+|location=[[Siero|Pola de Siero]]{{efn|Covadonga did not play the match in their main stadium Estadio Álvarez Rabanal, [[Oviedo]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://as.com/futbol/segunda/el-estadio-de-el-bayu-acogera-la-eliminatoria-de-copa-ante-el-covadonga-f202610-n/|title=El estadio de El Bayu acogerá la eliminatoria de Copa ante el Covadonga|trans-title=The El Bayu stadium will host the Cup match against Covadonga|publisher=[[Diario AS]]|language=es|date=6 October 2026}}</ref>}} 
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=20:00
+|team1='''[[CD Guijuelo|Guijuelo]] (5)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cd-guijuelo-real-sporting-3
+|team2=[[Sporting de Gijón|Sporting Gijón]] (2)
+|goals1=
+*[[Pablo Vázquez (footballer, born 1994)|Vázquez]] {{goal|38|o.g.}}
+|goals2=
+*[[Juan Otero|Otero]] {{goal|62}}
+*[[Enol Prendes|Prendes]] {{goal|63}}
+*[[Miguel Conde (footballer)|Conde]] {{goal|90+3}}
+|stadium=[[Estadio Municipal de Guijuelo|Estadio Municipal]]
+|location=[[Guijuelo]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=20:00
+|team1='''[[CD Laredo|Laredo]] (5)'''
+|score=2–4
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cd-laredo-burgos-cf-3
+|team2=[[Burgos CF|Burgos]] (2)
+|goals1=
+*[[Andrés Carral|Carral]] {{goal|48}}
+*[[Primo]] {{goal|72}}
+|goals2=
+*[[José Gragera|Gragera]] {{goal|21}}
+*[[Alberto Dadie|Dadie]] {{goal|67||90+3}}
+*[[Iván Martínez (footballer, born 2005)|Martínez]] {{goal|86}}
+|stadium=[[Estadio de El Paloma|El Paloma]]
+|location=[[Santoña]]{{efn|Laredo did not play the match in their main stadium Campo de Fútbol San Lorenzo, [[Laredo, Cantabria|Laredo]], due to problems with the stadium renovation works.<ref>{{cite web|url=https://www.elcorreodeburgos.com/deportes/261005/246088/burgos-cf-comenzara-andadura-copa-rey-laredo.html|title=El Burgos CF comenzará su andadura en la Copa del Rey ante el Laredo|trans-title=Burgos CF will start their path in the Copa del Rey against Laredo|publisher=El Correo de Burgos|language=es|date=5 October 2026}}</ref>}}
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=20:00
+|team1=[[Real Ávila CF|Ávila]] (4)
+|score=1–0
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-real-avila-unionistas-de-salamanca-cf-3
+|team2='''[[Unionistas de Salamanca CF|Unionistas]] (3)'''
+|goals1=
+*[[Álex Millán|Millán]] {{goal|110}}
+|goals2=
+|stadium=[[Estadio Adolfo Suárez]]
+|location=[[Ávila, Spain|Ávila]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=20:30
+|team1=[[Gimnástica de Torrelavega|Gimnástica Torrelavega]] (4)
+|score=3–1
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-gimnastica-de-torrelavega-ud-ourense-3
+|team2='''[[UD Ourense]] (3)'''
+|goals1=
+*[[Joselu Friaza|Friaza]] {{goal|10}}
+*[[Saza]] {{goal|96}}
+*[[Alberto Gómez (footballer, born 1996)|Gómez]] {{goal|115}}
+|goals2=
+*[[Javier Labrada|Labrada]] {{goal|90+3}}
+|stadium=[[Campos del Malecón|El Malecón]]
+|location=[[Torrelavega]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=21:00
+|team1='''[[Ribadesella CF|Ribadesella]] (6)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-ribadesella-r-racing-club-3
+|team2=[[Racing de Santander|Racing Santander]] (1)
+|goals1=
+|goals2=
+*[[Asier Villalibre|Villalibre]] {{goal|48||63}}
+|stadium=[[Estadio Oreyana|Oreyana]]
+|location=[[Ribadesella]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=21:00
+|team1='''[[Auriense CA|Auriense]] (6)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-auriense-rc-deportivo-3
+|team2=[[Deportivo de A Coruña|Deportivo A Coruña]] (1)
+|goals1=
+|goals2=
+*[[Jonathan Asp Jensen|Jensen]] {{goal|45||57}}
+*[[Luismi Cruz|Cruz]] {{goal|85}}
+|stadium=O Couto
+|location=[[Ourense]]{{efn|Auriense did not play the match in their main stadium [[Campo Municipal de Oira|Campo de Oira]], [[Ourense]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://www.riazor.org/o-couto-acogera-auriense-deportivo-copa/|title=O Couto acogerá el Auriense – Deportivo de Copa del Rey|trans-title=O Couto will host Auriense – Deportivo of the Copa del Rey|publisher=Riazor|language=es|date=6 October 2026}}</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=13 November 2026
+|time=21:00
+|team1=[[Salamanca CF UDS|Salamanca]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-salamanca-uds-celta-3
+|team2=[[RC Celta de Vigo|Celta Vigo]] (1)
+|goals1=
+|goals2=
+|stadium=[[Helmántico Stadium|Estadio Helmántico]]
+|location=[[Salamanca]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+
+===Group 2===
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=18:30
+|team1='''[[CD Cuarte|Cuarte]] (5)'''
+|score=0–2
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cd-cuarte-girona-fc-3
+|team2=[[Girona FC|Girona]] (2)
+|goals1=
+|goals2=
+*[[Abel Ruiz|Ruiz]] {{goal|23}}
+*[[Oleksandr Pyshchur (footballer, born 2005)|Pyshchur]] {{goal|60}}
+|stadium=Nuevo Municipal
+|location=[[Cuarte de Huerva]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=19:00
+|team1=[[Sestao River Club|Sestao River]] (4)
+|score=4–3
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-sestao-rcd-espanyol-de-barcelona-3
+|team2='''[[RCD Espanyol|Espanyol]] (1)'''
+|goals1=
+*[[Adrián Carrión|Carrión]] {{goal|18}}
+*[[Andoni Ugarte|Ugarte]] {{goal|40}}
+*[[Ander Laka|Laka]] {{goal|98}}
+*[[Jon Rojo|Rojo]] {{goal|120+1}}
+|goals2=
+*[[Marcos Fernández (footballer, born May 2003)|M. Fernández]] {{goal|6|pen.}}
+*[[Roberto Fernández (footballer, born 2002)|R. Fernández]] {{goal|90|pen.}}
+*[[Gabriel Moscardo|Moscardo]] {{goal|96}}
+|stadium=[[Las Llanas Stadium|Las Llanas]]
+|location=[[Sestao]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=19:00
+|team1='''[[CF Calamocha|Calamocha]] (4)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-calamocha-ce-europa-3
+|team2=[[CE Europa|Europa]] (3)
+|goals1=
+|goals2=
+*[[Youssef Zayzoun|Zayzoun]] {{goal|24}}
+*[[Khalid Noureddine|Noureddine]] {{goal|73||81}}
+|stadium=[[Polideportivo Jumaya]]
+|location=[[Calamocha]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=20:30
+|team1='''[[CE Manresa|Manresa]] (4)'''
+|score=2–2
+|aet=yes
+|penaltyscore=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-manresa-sant-andreu-3
+|team2=[[UE Sant Andreu|Sant Andreu]] (3)
+|goals1=
+*[[David Momoh (footballer)|Momoh]] {{goal|116|pen.}}
+*[[Roger Munells|Munells]] {{goal|119}}
+|goals2=
+*[[Pablo Agudín|Agudín]] {{goal|93}}
+*[[Alexis García (footballer, born 1997)|García]] {{goal|105}}
+|stadium=Nou Estadi Municipal
+|location=[[Manresa]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=21:00
+|team1='''[[CD Tudelano|Tudelano]] (4)'''
+|score=0–4
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-tudelano-real-zaragoza-3
+|team2=[[Real Zaragoza|Zaragoza]] (3)
+|goals1=
+|goals2=
+*[[Joaquín Delgado|Delgado]] {{goal|12}}
+*[[Pau Sans|Sans]] {{goal|20|pen.|37}}
+*[[Hugo Pinilla|Pinilla]] {{goal|41}}
+|stadium=[[Estadio Ciudad de Tudela|Ciudad de Tudela]]
+|location=[[Tudela, Navarre|Tudela]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=18:00
+|team1='''[[Peña Sport FC|Peña Sport]] (4)'''
+|score=1–5
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-pena-sport-fc-sd-huesca-3
+|team2=[[SD Huesca|Huesca]] (3)
+|goals1=
+*[[Joaquín Recalde|Recalde]] {{goal|66}}
+|goals2=
+*[[Marc Aznar|Aznar]] {{goal|22}}
+*[[Diego Collado (footballer)|Collado]] {{goal|31}}
+*[[Mario García (footballer, born 1997)|García]] {{goal|55}}
+*[[Luismi Redondo|Redondo]] {{goal|68}}
+*[[Ander Gorostidi|Gorostidi]] {{goal|89}}
+|stadium=[[Campo de San Francisco|San Francisco]]
+|location=[[Tafalla]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=19:00
+|team1='''[[Atlético Calatayud]] (6)'''
+|score=0–6
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-calatayud-ca-osasuna-3
+|team2=[[CA Osasuna|Osasuna]] (1)
+|goals1=
+|goals2=
+*[[Raúl García (footballer, born 2000)|Ra. García]] {{goal|13||39||59}}
+*[[Kike Barja|Barja]] {{goal|29}}
+*[[Jonathan Dubasin|Dubasin]] {{goal|52}}
+*[[Asier Bonel|Bonel]] {{goal|82}}
+|stadium=[[Estadio San Íñigo|San Íñigo]]
+|location=[[Calatayud]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=20:00
+|team1='''[[CD Varea|Varea]] (5)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cd-varea-fc-andorra-3
+|team2=[[FC Andorra|Andorra]] (2)
+|goals1=
+|goals2=
+*[[Diego Díaz (footballer, born 2005)|Díaz]] {{goal|32}}
+*[[Julian Rijkhoff|Rijkhoff]] {{goal|49}}
+*[[Nacho Quintana|Quintana]] {{goal|71}}
+|stadium=[[Estadio Las Gaunas]]
+|location=[[Logroño]]{{efn|Varea did not play the match in their main stadium [[Estadio Municipal de Varea|Municipal de Varea]], [[Varea, La Rioja|Varea]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://nuevecuatrouno.com/2026/10/05/el-varea-trae-a-logrono-al-andorra-de-segunda-copa-rey/|title=El Varea trae a Logroño al Andorra de Segunda|trans-title=Varea bring ''Segunda''{{'}}s Andorra to Logroño|publisher=NueveCuatroUno|language=es|date=5 October 2026}}</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=21:00
+|team1='''[[AE Prat|Prat]] (6)'''
+|score=1–6
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-por-determinar-athletic-club-3
+|team2=[[Athletic Bilbao]] (1)
+|goals1=
+*[[Gustavo Reinke|Reinke]] {{goal|33}}
+|goals2=
+*[[Maroan Sannadi|Sannadi]] {{goal|29}}
+*[[Robert Navarro (footballer)|Navarro]] {{goal|31}}
+*[[Nico Serrano|Serrano]] {{goal|36}}
+*[[Txus Vizcay|Vizcay]] {{goal|84}}
+*[[Christian Imga|Imga]] {{goal|87}}
+*[[Selton Sánchez|Sánchez]] {{goal|88}}
+|stadium=[[Estadi Municipal de Futbol de L'Hospitalet|Municipal de L'Hospitalet]]
+|location=[[L'Hospitalet de Llobregat|L'Hospitalet]]{{efn|Prat did not play the match in their main stadium Sagnier, [[El Prat de Llobregat|El Prat]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://www.mundodeportivo.com/futbol/athletic-bilbao/20261011/1004237536/partido-copa-prat-jugara-municipal-l-hospitalet.html|title=El partido de Copa Prat-Athletic se jugará en el Municipal de L'Hospitalet|trans-title=The Cup match Prat-Athletic will be played at the Municipal de L'Hospitalet|publisher=[[Mundo Deportivo]]|language=es|date=11 October 2026}}</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=10 November 2026
+|time=19:00
+|team1=[[CD Pamplona|Pamplona]] (5)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cd-pamplona-sd-eibar-3
+|team2=[[SD Eibar|Eibar]] (2)
+|goals1=
+|goals2=
+|stadium=Estadio Valle Araguren|Valle Araguren
+|location=[[Mutilva Baja]], [[Aranguren]]{{efn|Pamplona will not play the match in their main stadium Beitikuntzea - Lizasoáin, [[Pamplona]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://www.sdeibar.com/noticias/la-sd-eibar-se-medira-al-cd-pamplona-en-la-primera-ronda-de-la-copa-del-rey|title=La SD Eibar se medirá al CD Pamplona en la primera ronda de la Copa del Rey|trans-title=SD Eibar will face CD Pamplona in the first round of the Copa del Rey|publisher=SD Eibar|language=es|date=5 October 2026}}</ref>}} 
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=10 November 2026
+|time=19:00
+|team1=[[CD Anaitasuna|Anaitasuna]] (6)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-anaitasuna-ft-deportivo-alaves-3
+|team2=[[Deportivo Alavés|Alavés]] (1)
+|goals1=
+|goals2=
+|stadium=Txerloia
+|location=[[Azkoitia]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=10 November 2026
+|time=20:00
+|team1=[[SD Amorebieta|Amorebieta]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-sd-amorebieta-ud-logrones-3
+|team2=[[UD Logroñés]] (3)
+|goals1=
+|goals2=
+|stadium=[[Urritxe]]
+|location=[[Amorebieta-Etxano]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=18 November 2026
+|time=19:00
+|team1=[[Club Portugalete|Portugalete]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-club-portugalete-real-union-3
+|team2=[[Real Unión]] (3)
+|goals1=
+|goals2=
+|stadium=[[Estadio La Florida|La Florida]]
+|location=[[Portugalete]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=18 November 2026
+|time=19:00
+|team1=[[Utebo FC|Utebo]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-utebo-ce-sabadell-3
+|team2=[[CE Sabadell FC|Sabadell]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Santa Ana|Santa Ana]]
+|location=[[Utebo]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=18 November 2026
+|time=20:30
+|team1=[[Reus FC Reddis|Reus FCR]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-reus-fc-reddis-barakaldo-cf-3
+|team2=[[Barakaldo CF|Barakaldo]] (3)
+|goals1=
+|goals2=
+|stadium=[[Estadi Municipal de Reus]]
+|location=[[Reus]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+
+===Group 3===
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=19:00
+|team1='''[[UD Pinatar|Pinatar]] (6)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-pinatar-elche-cf-3
+|team2=[[Elche CF|Elche]] (1)
+|goals1=
+*[[Mohammed Benhallou|Benhallou]] {{goal|18}}
+|goals2=
+*[[Ezequiel Ponce|Ponce]] {{goal|32||54}}
+*[[Ali Houary|Houary]] {{goal|81}}
+|stadium=[[Estadio José Antonio Pérez|José Antonio Pérez]]
+|location=[[San Pedro del Pinatar]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=19:45
+|team1='''[[UD Castellonense|Castellonense]] (4)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-ud-castellonense-ud-almeria-3
+|team2=[[UD Almería|Almería]] (2)
+|goals1=
+*[[Agustín Murillo Sala|Murillo]] {{goal|93}}
+|goals2=
+*[[Thalys (footballer)|Thalys]] {{goal|112}}
+*[[Sergio Arribas (footballer, born 2001)|Arribas]] {{goal|120+2|pen.}}
+|stadium=[[Camp Poliesportiu Municipal Antonio Escuriet|Antonio Escuriet]]
+|location=[[Castelló, Valencia|Castelló]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=21:00
+|team1='''[[CE Manacor|Manacor]] (5)'''
+|score=0–5
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-manacor-villarreal-cf-3
+|team2=[[Villarreal CF|Villarreal]] (1)
+|goals1=
+|goals2=
+*[[Alassane Diatta|Diatta]] {{goal|13}}
+*[[Tani Oluwaseyi|Oluwaseyi]] {{goal|26}}
+*[[Sergi Cardona|Cardona]] {{goal|47}}
+*[[Nizar El Jmili|Nizar]] {{goal|55}}
+*[[Nicolas Pépé|Pépé]] {{goal|68}}
+|stadium=[[Estadi de Na Capellera|Na Capellera]]
+|location=[[Manacor]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=21:00
+|team1='''[[Sporting de Alcázar CF|Sporting de Alcázar]] (6)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-alcazar-malaga-cf-3
+|team2=[[Málaga CF|Málaga]] (1)
+|goals1=
+|goals2=
+*[[Chupete|Chupe]] {{goal|71|pen.|80}}
+*[[Dani Lorenzo|Lorenzo]] {{goal|88}}
+|stadium=[[Estadio Municipal de Alcázar de San Juan|Estadio Municipal]]
+|location=[[Alcázar de San Juan]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=19:00
+|team1='''[[UD Poblense|Poblense]] (4)'''
+|score=1–2
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-ud-poblense-ad-ceuta-fc-3
+|team2=[[AD Ceuta FC|Ceuta]] (2)
+|goals1=
+*[[Santiago Riveron|Riveron]] {{goal|17}}
+|goals2=
+*[[Adrián Lapeña|Lapeña]] {{goal|78}}
+*[[Jordi Escobar|Escobar]] {{goal|90}}
+|stadium=[[Nou Camp de Sa Pobla|Nou Camp]]
+|location=[[Sa Pobla]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=19:00
+|team1='''[[CD Atlético Baleares|Atlético Baleares]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cd-atletico-baleares-cd-eldense-3
+|team2=[[CD Eldense|Eldense]] (2)
+|goals1=
+|goals2=
+*[[Iker Recio|Recio]] {{goal|58}}
+|stadium=[[Estadi Balear]]
+|location=[[Palma de Mallorca|Palma]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=19:30
+|team1='''[[CD Cieza|Cieza]] (4)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cieza-granada-cf-3
+|team2=[[Granada CF|Granada]] (2)
+|goals1=
+|goals2=
+*[[Diego Hormigo|Hormigo]] {{goal|10}}
+*[[Benedikt Gimber|Gimber]] {{goal|61}}
+*[[Jorge Pascual|Pascual]] {{goal|84}}
+|stadium=[[Estadio Municipal La Arboleja|La Arboleja]]
+|location=[[Cieza, Murcia|Cieza]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=20:00
+|team1='''[[UB Conquense|Conquense]] (4)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-ub-conquense-cd-castellon-3
+|team2=[[CD Castellón|Castellón]] (2)
+|goals1=
+|goals2=
+*[[Álvaro García (footballer, born 1999)|García]] {{goal|33||62}}
+*[[Antonio Gala (footballer)|Gala]] {{goal|37}}
+|stadium=[[Estadio La Fuensanta|La Fuensanta]]
+|location=[[Cuenca, Spain|Cuenca]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=20:00
+|team1=[[Antequera CF|Antequera]] (3)
+|score=2–0
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-antequera-cf-aguilas-3
+|team2='''[[Águilas FC|Águilas]] (3)'''
+|goals1=
+*[[Isra Domínguez|Domínguez]] {{goal|21}}
+*[[Alberto Quintana (footballer, born 2001)|Quintana]] {{goal|69}}
+|goals2=
+|stadium=[[Estadio El Maulí|El Maulí]]
+|location=[[Antequera]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=10 November 2026
+|time=20:00
+|team1=[[CP Mijas-Las Lagunas|Mijas-Las Lagunas]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cp-mijas-las-lagunas-jaen-3
+|team2=[[Real Jaén|Jaén]] (3)
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal Francisco Muñoz Pérez|Francisco Muñoz Pérez]]
+|location=[[Estepona]]{{efn|Mijas-Las Lagunas will not play the match in their main stadium Juan Gambero Culebra, [[Mijas]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://www.malagahoy.es/deportes/copa-rey-mijas-lagunas-jugara_0_2008158952.html|title=Copa del Rey: El Mijas Las Lagunas jugará en Estepona contra el Jaén|trans-title=Copa del Rey: El Mijas Las Lagunas will play in Estepona against Jaén|publisher=Málaga Hoy|language=es|date=5 October 2026}}</ref>}}
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The following day, it was postponed once again due to the closure of the stadium where it was supposed to be played.<ref>{{cite web|url=https://www.jaenhoy.es/deportes/rfef-fija-nueva-fecha-eliminatoria-copa-rey-mijas-lagunas-real-jaen_0_2008390290.html|title=La RFEF fija la nueva fecha de la eliminatoria de Copa de Rey entre Mijas Las Lagunas y Real Jaén|trans-title=The RFEF sets the new date for the Copa del Rey tie between Mijas Las Lagunas and Real Jaén|publisher=Jaen Hoy|language=es|date=31 October 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=10 November 2026
+|time=21:00
+|team1=[[CF UE Tavernes de la Valldigna|Tavernes de la Valldigna]] (6)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-tavernes-valencia-cf-3
+|team2=[[Valencia CF|Valencia]] (1)
+|goals1=
+|goals2=
+|stadium=[[Mestalla Stadium|Mestalla]]
+|location=[[Valencia]]{{efn|Tavernes de la Valldigna will not play the match in their main stadium [[Camp Municipal Tavernes de la Valldigna|Municipal]], [[Tavernes de la Valldigna]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://www.superdeporte.es/valencia-cf/2026/10/13/valencia-cf-ue-tavernes-copa-135301634.html|title=Oficial: el UE Tavernes - Valencia CF de la Copa del Rey ya tiene estadio|trans-title=Official: UE Tavernes - Valencia CF of the Copa del Rey already has a stadium|publisher=[[Super Deporte]]|language=es|date=13 October 2026}}</ref>}}
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=12 November 2026
+|time=18:30
+|team1=[[Calvo Sotelo Puertollano CF|Calvo Sotelo]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-calvo-sotelo-albacete-bp-3
+|team2=[[Albacete Balompié|Albacete]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Ciudad de Puertollano|Ciudad de Puertollano]]
+|location=[[Puertollano]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=12 November 2026
+|time=19:00
+|team1=[[CD Tarancón|Tarancón]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-tarancon-levante-ud-3
+|team2=[[Levante UD|Levante]] (1)
+|goals1=
+|goals2=
+|stadium=Estadio Municipal Tarancón
+|location=[[Tarancón]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=18 November 2026
+|time=20:00
+|team1=[[CD Alcoyano|Alcoyano]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-alcoyano-rcd-mallorca-3
+|team2=[[RCD Mallorca|Mallorca]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio El Collao|El Collao]]
+|location=[[Alcoy (Spain)|Alcoy]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+{{football box collapsible
+|id=
+|date=18 November 2026
+|time=20:30
+|team1=[[CD Minera|Minera]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-deportiva-minera-fc-cartagena-3
+|team2=[[FC Cartagena|Cartagena]] (3)
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal Ángel Celdrán|Ángel Celdrán]]
+|location=[[Llano del Beal]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>The match was suspended once again following the death of CD Tenerife player Jesús de Miguel, as the RFEF declared a period of mourning.<ref>{{cite web|url=https://rfef.es/es/noticias/la-rfef-acuerda-ampliar-la-suspension-de-sus-competiciones-hasta-el-6-de-noviembre|title=La RFEF acuerda ampliar la suspensión de sus competiciones hasta el 6 de noviembre|trans-title=The RFEF agrees to extend the suspension of its competitions until November 6|publisher=[[RFEF]]|language=es|date=3 November 2026}}</ref>
+}}
+
+===Group 4===
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=20:00 [[Western European Time|WET]]
+|team1=[[CD Atlético Paso|Atlético Paso]] (4)
+|score=3–1
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-atletico-paso-cordoba-cf-3
+|team2='''[[Córdoba CF|Córdoba]] (2)'''
+|goals1=
+*[[Iván Villoslada|Villoslada]] {{goal|64}}
+*[[Aythami Perera|Perera]] {{goal|76||95}}
+|goals2=
+*[[Ibai Sanz|Sanz]] {{goal|30}}
+|stadium=[[Campo Municipal de El Paso|Municipal]]
+|location=[[El Paso, La Palma]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=20:00
+|team1='''[[RSD Alcalá|Alcalá]] (4)'''
+|score=1–3
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-alcala-ud-las-palmas-3
+|team2=[[UD Las Palmas|Las Palmas]] (2)
+|goals1=
+*[[Luis Simón|Simón]] {{goal|68}}
+|goals2=
+*[[Kirian Rodríguez|Kirian]] {{goal|49||95}}
+*[[Manu Fuster|Fuster]] {{goal|105}}
+|stadium=Estadio Municipal del Val
+|location=[[Alcalá de Henares]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=20:00
+|team1='''[[CD Ciudad de Lucena|Ciudad de Lucena]] (4)'''
+|score=0–1
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-lucena-cf-rayo-3
+|team2=[[CF Rayo Majadahonda|Rayo Majadahonda]] (3)
+|goals1=
+|goals2=
+*[[David del Pozo|Del Pozo]] {{goal|90+2}}
+|stadium=[[Estadio Ciudad de Lucena|Ciudad de Lucena]]
+|location=[[Lucena, Córdoba|Lucena]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=20:30
+|team1='''[[CD Don Benito|Don Benito]] (4)'''
+|score=2–4
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-don-benito-cd-extremadura-3
+|team2=[[CD Extremadura|Extremadura]] (3)
+|goals1=
+*[[David del Pozo|Del Pozo]] {{goal|35||44}}
+|goals2=
+*[[Diego Díaz (footballer, born 1995)|Díaz]] {{goal|75|pen.}}
+*[[Luis Morcillo|Morcillo]] {{goal|81}}
+*[[Iker Burgos|Burgos]] {{goal|97}}
+*[[Nordin Al-Lal|Al-Lal]] {{goal|120+2}}
+|stadium=Estadio Vicente Sanz
+|location=[[Don Benito]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=27 October 2026
+|time=21:00
+|team1='''[[Recreativo de Huelva|Recreativo]] (4)'''
+|score=2–3
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-recreativo-rayo-vallecano-3
+|team2=[[Rayo Vallecano]] (1)
+|goals1=
+*[[Ale Marín|Marín]] {{goal|23}}
+*[[Paolo Romero|Romero]] {{goal|109|pen.}}
+|goals2=
+*[[Alemão (footballer, born 1998)|Alemão]] {{goal|43|pen.|97}}
+*[[Jorge de Frutos|De Frutos]] {{goal|99}}
+|stadium=[[Estadio Nuevo Colombino|Nuevo Colombino]]
+|location=[[Huelva]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=19:00
+|team1='''[[UB Lebrijana|Lebrijana]] (6)'''
+|score=2–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-lebrijana-getafe-cf-3
+|team2=[[Getafe CF|Getafe]] (1)
+|goals1=
+*[[Pepe Tejero Gómez|Gómez]] {{goal|10}}
+*[[Yuyo]] {{goal|23}}
+|goals2=
+*[[Abdel Abqar|Abqar]] {{goal|45}}
+*[[Borja Mayoral|Mayoral]] {{goal|45+2}}
+*[[Orel Mangala|Mangala]] {{goal|68}}
+|stadium=[[Estadio Municipal de Lebrija|Municipal]]
+|location=[[Lebrija]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=19:00
+|team1='''[[UD San Sebastián de los Reyes|San Sebastián de los Reyes]] (4)'''
+|score=1–2
+|aet=yes
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-ud-san-sebastian-de-los-reyes-cd-coria-3
+|team2=[[CD Coria|Coria]] (3)
+|goals1=
+*[[Kevin de la Llave|De la Llave]] {{goal|63}}
+|goals2=
+*[[Álex Toper|Toper]] {{goal|34}}
+*[[Benji (footballer)|Benji]] {{goal|119}}
+|stadium=[[Municipal Nuevo Matapiñonera|Nuevo Matapiñonera]]
+|location=[[San Sebastián de los Reyes]]
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=21:00
+|team1='''[[Xerez CD|Xerez]] (4)'''
+|score=1–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-xerez-cadiz-cf-3
+|team2=[[Cádiz CF|Cádiz]] (2)
+|goals1=
+*[[Jaime López (footballer)|López]] {{goal|2}}
+|goals2=
+*[[Cristian Gutiérrez (footballer, born 2000)|Gutiérrez]] {{goal|34}}
+*[[Álvaro García Pascual|Pascual]] {{goal|59}}
+*[[Borja Vázquez|Vázquez]] {{goal|83}}
+|stadium=[[Estadio Municipal de Chapín|Municipal de Chapín]]
+|location=[[Jerez de la Frontera]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=29 October 2026
+|time=21:00
+|team1='''[[AD Sporting Hortaleza|Sporting Hortaleza]] (6)'''
+|score=0–3
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-por-determinar-sevilla-fc-3
+|team2=[[Sevilla FC|Sevilla]] (1)
+|goals1=
+|goals2=
+*[[Robbie Ure|Ure]] {{goal|24}}
+*[[Peque Fernández|Peque]] {{goal|40|pen.}}
+*[[Rubén Vargas|Vargas]] {{goal|56}}
+|stadium=Estadio Municipal del Val 
+|location=[[Alcalá de Henares]]{{efn|Sporting Hortaleza did not play the match in their main stadium [[Polideportivo Municipal Sporting Hortaleza|Municipal Sporting Hortaleza]], [[Madrid]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://www.diariodesevilla.es/sevillafc/sporting-hortaleza-sevilla-fc-copa_0_2008228976.html|title=El Sporting de Hortaleza-Sevilla FC de la Copa del Rey se jugará en El Val|trans-title=The Sporting de Hortaleza-Sevilla FC of the Copa del Rey will be played at the El Val|publisher=[[Diario de Sevilla]]|language=es|date=14 October 2026}}</ref>}} 
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=10 November 2026
+|time=20:00
+|team1=[[CF Trival Valderas|Trival Valderas]] (5)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-trival-valderas-cd-leganes-3
+|team2=[[CD Leganés|Leganés]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal de Butarque|Estadio Ontime Butarque]]
+|location=[[Leganés]]{{efn|Trival Valderas will not play the match in their main stadium [[Estadio La Canaleja|La Canaleja]], [[Alcorcón]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://www.cdleganes.com/en/17913794070615440|title=The Trival Valderas-Leganés Copa del Rey match will be played at Ontime Butarque|publisher=CD Leganés|date=7 October 2026}}</ref>}}
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=12 November 2026
+|time=19:00
+|team1=[[CDA Navalcarnero|Navalcarnero]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cda-navalcarnero-real-betis-3
+|team2=[[Real Betis]] (1)
+|goals1=
+|goals2=
+|stadium=[[Estadio Municipal de Santo Domingo|Santo Domingo]]
+|location=[[Alcorcón]]{{efn|Navalcarnero will not play the match in their main stadium [[Estadio Mariano González|Mariano González]], [[Navalcarnero]], as it did not meet the broadcasting requirements.<ref>{{cite web|url=https://cdanavalcarnero.es/comunicado-oficial|title=Comunicado oficial|trans-title=Official statement|publisher=CD Navalcarnero|language=es|date=9 October 2026}}</ref>}}
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/>
+}}
+{{football box collapsible
+|id=
+|date=18 November 2026
+|time=20:00
+|team1=[[CD Badajoz|Badajoz]] (4)
+|score=
+|report=https://www.laliga.com/en-GB/match/temporada-2026-2027-copa-del-rey-cd-badajoz-cd-tenerife-3
+|team2=[[CD Tenerife|Tenerife]] (2)
+|goals1=
+|goals2=
+|stadium=[[Estadio Nuevo Vivero|Nuevo Vivero]]
+|location=[[Badajoz]]
+|attendance=
+|referee=
+|note=Originally scheduled to 28 October 2026, the match was postponed due to a [[2026 Toledo train collision|train collision in Urda]].<ref name=M2810/> A few days later, the match has been postponed once again, because they played a league match between Andorra, following the postponement of their original fixture—due to a weather alert caused by a severe storm on the island.<ref>{{cite web|url=https://www.marca.com/futbol/tenerife/2026/11/02/badajoz-tenerife-copa-aplaza-martes-10-noviembre.html|title=The Badajoz-Tenerife cup match is postponed to Tuesday, November 10|publisher=MARCA|date=2 November 2026}}</ref>It was postponed for a third time at the request of CD Tenerife as a gesture of mourning for their player Jesús de Miguel.<ref>{{cite web|url=https://rfef.es/sites/default/files/sanciones/Aplazamiento_BAD_TFE_CR.pdf?cb=a2afbc9d|title=New postponement|publisher=RFEF|date=4 November 2026}}</ref>
+}}
+;Notes
+{{notelist}}
+
+==Second round==
+
+===Draw===
+The draw for the second round will be held on 23 November 2026. Teams will be divided in two groups.
+
+This second round maintains the criteria of geographical proximity. 
+
+A total of 28 matches will be played in December 2026.
+
+{|class="wikitable" style="font-size:90%"
+|- bgcolor=#efefef align=center
+| width=15%|'''Pot 1'''<br/>{{small|Group 1}} || width=15%|'''Pot 2'''<br/>{{small|Group 2}}
+|- valign=top
+|
+* [[Athletic Bilbao]]
+* [[Deportivo A Coruña]]
+* [[CA Osasuna|Osasuna]]
+* [[Racing Santander]]
+
+
+* [[FC Andorra|Andorra]]
+* [[Burgos CF|Burgos]]
+* [[Girona FC|Girona]]
+* [[Sporting Gijón]]
+* [[Real Valladolid|Valladolid]]
+
+
+* [[Cultural Leonesa]]
+* [[CE Europa|Europa]]
+* [[SD Huesca|Huesca]]
+* [[CD Mirandés|Mirandés]]
+* [[SD Ponferradina|Ponferradina]]
+* [[UE Sant Andreu|Sant Andreu]]
+* [[Zamora CF|Zamora]]
+* [[Real Zaragoza|Zaragoza]]
+
+
+* [[Arosa SC|Arosa]]
+* [[Real Ávila CF|Ávila]]
+* [[Gimnástica de Torrelavega|Gimnástica Torrelavega]]
+* [[CD Numancia|Numancia]]
+* [[Sestao River Club|Sestao River]]
+
+|
+* [[Elche CF|Elche]]
+* [[Getafe CF|Getafe]]
+* [[Málaga CF|Málaga]]
+* [[Rayo Vallecano]]
+* [[Sevilla FC|Sevilla]]
+* [[Villarreal CF|Villarreal]]
+
+
+* [[UD Almería|Almería]]
+* [[Cádiz CF|Cádiz]]
+* [[CD Castellón|Castellón]]
+* [[AD Ceuta|Ceuta]]
+* [[CD Eldense|Eldense]]
+* [[Granada CF|Granada]]
+* [[UD Las Palmas|Las Palmas]]
+
+
+* [[Antequera CF|Antequera]]
+* [[CD Coria|Coria]]
+* [[CD Extremadura|Extremadura]]
+* [[Rayo Majadahonda]]
+
+
+* [[CD Atlético Paso|Atlético Paso]]
+
+|}
+
+===Group 1===
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+
+===Group 2===
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+{{football box collapsible
+|id=
+|date=December 2026
+|time=
+|team1=
+|score=
+|report=
+|team2=
+|goals1=
+|goals2=
+|stadium=
+|location=
+|attendance=
+|referee=
+}}
+
+== References ==
+{{reflist}}
+
+{{Copa del Rey seasons}}
+{{2026–27 in Spanish football}}
+{{2026–27 in European football (UEFA)}}
+
+{{DEFAULTSORT:Copa Del Rey 2026-27}}
+[[Category:Copa del Rey seasons|2026-27]]
+[[Category:2026–27 in Spanish football cups|1]]
