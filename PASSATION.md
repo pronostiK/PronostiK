@@ -30,6 +30,8 @@ Absences (lab/RAPPORT-ABSENCES.md), Dixon-Coles (lab/RAPPORT-DIXON.md), xG (lab/
    Facultatif : désactiver GitHub Pages dans les réglages du dépôt ;
    enregistrements mail non importés (DKIM key-amfr001/002, SRV _autodiscover, pim) à ajouter si une boîte mail est créée chez Amen.
 2. Applications (Android / autres) : à discuter avec l'utilisateur.
-3. Idée en attente : afficher la liste des absents (ESPN) sur la page match, à titre d'info.
+3. Absents sur la page match : EN PAUSE (16 nov. 2026). Sondage lab/absents/probe.json : ESPN ne donne pas les blessés en foot (listes vides) ;
+   API-Football gratuit bloqué aux saisons 2022-2024 (saison en cours = offre Pro payante, ~19 $/mois, couverture faible petits clubs CDR et sélections).
+   L'utilisateur reporte jusqu'à ce que les abonnements couvrent le coût. Rappel : les absences n'améliorent pas les pronos (lab/RAPPORT-ABSENCES.md).
 4. Rapport hybride Elo prévu le 4 janvier 2027.
 5. Coupe du Roi : suivre les vrais résultats (favoris annoncés contre gagnants) ; refaire le test en fin d'édition (été 2027).
