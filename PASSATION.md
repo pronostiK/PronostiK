@@ -1,5 +1,5 @@
 # PronostiK — note de passation (à lire en début de nouvelle conversation)
-Mise à jour : 9 nov. 2026 (soir).
+Mise à jour : 16 nov. 2026.
 
 ## Utilisateur
 Débutant, francophone. Réponses courtes, claires, sans jargon. A des clients : le site doit être automatique et fiable.
@@ -26,7 +26,8 @@ Absences (lab/RAPPORT-ABSENCES.md), Dixon-Coles (lab/RAPPORT-DIXON.md), xG (lab/
 1. (FAIT 9 nov. 2026) Hébergement migré sur Cloudflare Pages : projet « pronostik », domaines pronostikapp.fr + www (zone DNS chez Cloudflare,
    serveurs armando/veda.ns.cloudflare.com, domaine toujours acheté chez Amen). Publication par wrangler dans update.yml (job deploy), GitHub Pages retiré.
    Vérifié : site, data, assetlinks, APK, version.json, CORS du chat, certificat. Contrôle : workflow verif-domaine.yml (rapport lab/cf/verif.txt).
-   Facultatif : réactiver DNSSEC (Cloudflare → DNS → DNSSEC, puis DS chez Amen) ; désactiver GitHub Pages dans les réglages du dépôt ;
+   DNSSEC réactivé le 16 nov. 2026 (Cloudflare + DS chez Amen, key tag 2371, algo 13, digest type 2) ; validé par 1.1.1.1, 8.8.8.8, 9.9.9.9 (lab/cf/dnssec.txt).
+   Facultatif : désactiver GitHub Pages dans les réglages du dépôt ;
    enregistrements mail non importés (DKIM key-amfr001/002, SRV _autodiscover, pim) à ajouter si une boîte mail est créée chez Amen.
 2. Applications (Android / autres) : à discuter avec l'utilisateur.
 3. Idée en attente : afficher la liste des absents (ESPN) sur la page match, à titre d'info.
