@@ -1,0 +1,128 @@
+{
+ "at": "2026-11-16T13:54:01.960Z",
+ "espn": {
+  "eng.1": {
+   "match": "Fulham at Manchester City",
+   "id": "401879233",
+   "summaryKeys": [
+    "boxscore",
+    "format",
+    "gameInfo",
+    "lastFiveGames",
+    "leaders",
+    "broadcasts",
+    "pickcenter",
+    "odds",
+    "hasOdds",
+    "rosters",
+    "news",
+    "ticketsInfo",
+    "header",
+    "wallclockAvailable",
+    "seasonseries",
+    "meta",
+    "standings"
+   ],
+   "injuriesSummary": null,
+   "team": "Manchester City",
+   "siteTeamInjuries": {
+    "http": 200,
+    "keys": [],
+    "sample": "\"\""
+   },
+   "coreTeamInjuries": {
+    "http": 200,
+    "keys": [
+     "count",
+     "pageIndex",
+     "pageSize",
+     "pageCount",
+     "items"
+    ],
+    "sample": "[]"
+   },
+   "siteTeamEnable": {
+    "http": 200,
+    "keys": [
+     "team"
+    ],
+    "sample": "\"\""
+   }
+  },
+  "fra.1": {
+   "match": "Le Havre AC at Troyes",
+   "id": "401876395",
+   "summaryKeys": [
+    "boxscore",
+    "format",
+    "gameInfo",
+    "lastFiveGames",
+    "leaders",
+    "broadcasts",
+    "pickcenter",
+    "odds",
+    "hasOdds",
+    "rosters",
+    "news",
+    "header",
+    "wallclockAvailable",
+    "meta",
+    "seasonseries",
+    "standings"
+   ],
+   "injuriesSummary": null,
+   "team": "Troyes",
+   "siteTeamInjuries": {
+    "http": 200,
+    "keys": [],
+    "sample": "\"\""
+   },
+   "coreTeamInjuries": {
+    "http": 200,
+    "keys": [
+     "count",
+     "pageIndex",
+     "pageSize",
+     "pageCount",
+     "items"
+    ],
+    "sample": "[]"
+   },
+   "siteTeamEnable": {
+    "http": 200,
+    "keys": [
+     "team"
+    ],
+    "sample": "\"\""
+   }
+  },
+  "uefa.champions": {
+   "err": "pas de match à venir"
+  }
+ },
+ "apif": {
+  "status": {
+   "plan": "Free",
+   "requests": {
+    "current": 0,
+    "limit_day": 100
+   }
+  },
+  "injuriesToday": {
+   "errors": [],
+   "results": 0,
+   "paging": {
+    "current": 1,
+    "total": 1
+   },
+   "sample": []
+  },
+  "pl2026": {
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "results": 0,
+   "sample": []
+  }
+ }
+}
