@@ -1,0 +1,7 @@
+Mon Nov 16 12:21:30 UTC 2026
+DS publié au registre (.fr) : AUCUN après 40 min
+DNSKEY Cloudflare (KSK) : 257 3 13 mdsswUyr3DPW132mOi8V9xESWE8jTo0...
+résolveur 1.1.1.1 : status: NOERROR | flags: qr rd ra ad => SIGNATURE VALIDÉE
+résolveur 8.8.8.8 : status: NOERROR | flags: qr rd ra ad => SIGNATURE VALIDÉE
+résolveur 9.9.9.9 : status: NOERROR | flags: qr rd ra ad => SIGNATURE VALIDÉE
+site : 200 | www : 200
