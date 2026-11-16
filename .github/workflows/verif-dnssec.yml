@@ -1,0 +1,40 @@
+name: Vérification DNSSEC
+
+# Vérifie que la signature DNSSEC de pronostikapp.fr est valide (le site doit rester accessible). Rapport : lab/cf/dnssec.txt
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verif-dnssec.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verif:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - name: Contrôler
+        run: |
+          mkdir -p lab/cf; R=lab/cf/dnssec.txt; date -u > $R
+          for i in $(seq 1 80); do
+            DS=$(dig +short DS pronostikapp.fr @d.nic.fr)
+            [ -n "$DS" ] && break; sleep 30
+          done
+          echo "DS publié au registre (.fr) : ${DS:-AUCUN après 40 min}" >> $R
+          echo "DNSKEY Cloudflare (KSK) : $(dig +short DNSKEY pronostikapp.fr @armando.ns.cloudflare.com | grep '^257' | cut -c1-40)..." >> $R
+          sleep 60
+          for res in 1.1.1.1 8.8.8.8 9.9.9.9; do
+            out=$(dig +dnssec +time=5 pronostikapp.fr A @$res)
+            st=$(echo "$out" | grep -o 'status: [A-Z]*'); fl=$(echo "$out" | grep -o 'flags:[^;]*' | head -1)
+            echo "résolveur $res : $st | $fl $(echo "$fl" | grep -qw ad && echo '=> SIGNATURE VALIDÉE' || echo '=> non validée')" >> $R
+          done
+          echo "site : $(curl -s -o /dev/null -w '%{http_code}' https://pronostikapp.fr/) | www : $(curl -s -o /dev/null -w '%{http_code}' https://www.pronostikapp.fr/)" >> $R
+      - name: Enregistrer
+        if: always()
+        run: |
+          git config user.name "pronostik-bot"; git config user.email "pronostik-bot@users.noreply.github.com"
+          git add lab/cf
+          if ! git diff --cached --quiet; then git commit -m "Vérification DNSSEC : rapport"; for i in 1 2 3; do git pull --rebase -X theirs && git push && break; git rebase --abort 2>/dev/null; sleep 5; done; fi
