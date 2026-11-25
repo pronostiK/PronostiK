@@ -2,7 +2,7 @@ name: lab-logo
 on:
   push:
     paths: ['.github/workflows/lab-logo.yml']
-# retry 4
+# retry 5
   workflow_dispatch:
 permissions:
   contents: write
@@ -19,18 +19,16 @@ jobs:
           H={'User-Agent':'PronostiK-lab/1.0'}
           def g(q):
               return json.load(urllib.request.urlopen(urllib.request.Request('https://en.wikipedia.org/w/api.php?'+urllib.parse.urlencode(q),headers=H)))
-          imgs=g({'action':'parse','page':'ŠK Slovan Bratislava','prop':'images','format':'json'})['parse']['images']
-          c=[i for i in imgs if 'slovan' in i.lower() or 'logo' in i.lower()] or imgs
-          r=g({'action':'query','titles':'File:'+c[0],'prop':'imageinfo','iiprop':'url','iiurlwidth':'400','format':'json'})
-          ii=list(r['query']['pages'].values())[0]['imageinfo'][0]
-          print(ii.get('thumburl') or ii['url'])
+          r=g({'action':'query','titles':'ŠK Slovan Bratislava','prop':'pageimages','piprop':'thumbnail|name','pithumbsize':'400','redirects':1,'format':'json'})
+          pg=list(r['query']['pages'].values())[0]
+          print(pg['thumbnail']['source'])
           PY
           )
           echo "$U"
-          curl -sL -A "PronostiK-lab/1.0" "$U" -o "lab/logos/slovan.${U##*.}"
+          curl -sL -A "PronostiK-lab/1.0" "$U" -o lab/logos/slovan.png
           ls -la lab/logos
       - name: Commit
         run: |
           git config user.name "github-actions"; git config user.email "actions@github.com"
-          git add lab/logos; git commit -m "lab: Slovan crest" || exit 0
+          git add lab/logos; git commit -m "lab: Slovan crest v2" || exit 0
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
