@@ -1,0 +1,24 @@
+name: lab-logo
+on:
+  push:
+    paths: ['.github/workflows/lab-logo.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  get:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch Sabah crest
+        run: |
+          mkdir -p lab/logos
+          U=$(curl -s -A "PronostiK-lab/1.0" "https://en.wikipedia.org/w/api.php?action=query&titles=Sabah_FK_(Azerbaijan)&prop=pageimages&piprop=original&format=json" | python3 -c "import sys,json;p=json.load(sys.stdin)['query']['pages'];print(list(p.values())[0]['original']['source'])")
+          echo "$U"
+          curl -sL -A "PronostiK-lab/1.0" "$U" -o "lab/logos/sabah.${U##*.}"
+          ls -la lab/logos
+      - name: Commit
+        run: |
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add lab/logos; git commit -m "lab: Sabah crest" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
