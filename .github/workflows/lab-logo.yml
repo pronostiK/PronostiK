@@ -2,7 +2,7 @@ name: lab-logo
 on:
   push:
     paths: ['.github/workflows/lab-logo.yml']
-# retry 2
+# retry 3
   workflow_dispatch:
 permissions:
   contents: write
@@ -14,9 +14,18 @@ jobs:
       - name: Fetch Sabah crest
         run: |
           mkdir -p lab/logos
-          U=$(curl -s -A "PronostiK-lab/1.0" "https://en.wikipedia.org/wiki/Sabah_FK_(Azerbaijan)" | grep -oE '//upload\.wikimedia\.org/[^" ]+\.(png|svg\.png|jpg)' | grep -i sabah | head -1)
-          U="https:${U}"
-          U=$(echo "$U" | sed -E 's#/thumb(/.*)/[0-9]+px-[^/]+$#\1#')
+          U=$(python3 - <<'PY'
+          import json,urllib.request,urllib.parse
+          H={'User-Agent':'PronostiK-lab/1.0'}
+          def g(q):
+              return json.load(urllib.request.urlopen(urllib.request.Request('https://en.wikipedia.org/w/api.php?'+urllib.parse.urlencode(q),headers=H)))
+          imgs=g({'action':'parse','page':'Sabah FK (Azerbaijan)','prop':'images','format':'json'})['parse']['images']
+          c=[i for i in imgs if 'sabah' in i.lower() or 'logo' in i.lower()] or imgs
+          r=g({'action':'query','titles':'File:'+c[0],'prop':'imageinfo','iiprop':'url','iiurlwidth':'400','format':'json'})
+          ii=list(r['query']['pages'].values())[0]['imageinfo'][0]
+          print(ii.get('thumburl') or ii['url'])
+          PY
+          )
           echo "$U"
           curl -sL -A "PronostiK-lab/1.0" "$U" -o "lab/logos/sabah.${U##*.}"
           ls -la lab/logos
